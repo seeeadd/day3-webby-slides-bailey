@@ -90,7 +90,33 @@ font-family: 'Satoshi Variable', sans-serif;  /* wrong name */
 ```
 
 ---
+**## COLORS**
 
+DAY 3 COLOR PALETTE (Full Range + Day 1 & Day 2 Variations)
+Primary Warms — THE MAIN CHARACTERS (Lead Day 3):
+ColorHexUsageWarm Gold#C9A227Headers, key emphasis, framework cardsRich Amber#B8860BSecondary emphasis, energyDeep Bronze#5C4827Section headers, dark backgroundsHoney#D4A84BSofter gold moments, highlightsChampagne Gold#D4AF37Premium moments, price revealsAntique Gold#CFB53BSubtle gold variationYellow Accent#F7E16CDay 1 callback — bright energy moments
+Backgrounds:
+ColorHexUsageCream/Champagne#FDF6E3Primary content slidesWarm White#FFFEF5Text on dark, clean momentsPale Gold#FAF3E0Quote slides, special calloutsLight Tan#F5E6D3Variation, warmthBailey Cream#FDF8F3Day 1 callback — original creamBailey Blush#FEF0EADay 1 callback — warm blush bgBlush Cream#FDF8F6Day 2 callback — cream with blush undertoneSoft Rose White#FFFBFADay 2 callback — almost white with pink warmth
+Text:
+ColorHexUsageEspresso#3D2B1FPrimary body copyCharcoal#2D2D2DAlternative dark textSoft Black#1A1A1AMaximum contrast when neededText Dark#2D3436Day 1 callback — original darkText Muted#636E72Day 1/2 callback — secondary textRose Dark#5C3341Day 2 callback — warm dark with rose undertone
+Day 1 Teal/Coral Accents (Use for callbacks & contrast):
+ColorHexUsageBailey Teal#1B8A8ADay 1 callbacks, "old way" contrast, cool momentsTeal Light#2BA5A3Softer teal, gradientsBailey Coral#E07B6CDay 1 callbacks, warnings, energyCoral Soft#F4A89ASofter coral, gradientsPink Soft#FADADDDay 1 callback — soft feminine accent
+Accent - Positive:
+ColorHexUsageSage Green#6B8E6BCheckmarks, wins, SCALE bucketOlive#7D8B6ASofter success momentsForest#4A5D4ADeeper green emphasisBailey Green#7CB87CDay 1 callback — original success greenSage Muted#8BA88BDay 2 callback — softer success
+Accent - Warning/Negative:
+ColorHexUsageBurnt Coral#E07A5FX marks, warningsTerracotta#C9705FSofter warningRust#B54A32Strong negative emphasisCoral Warning#D4685ADay 2 callback — X marks
+Day 2 Pink/Rose Accents (Use sparingly for callbacks/variety):
+ColorHexUsagePink Primary#D4727AStory slides, emotional momentsPink Rose#C76B73Deeper rose accentPink Blush#E8A5ABSofter highlights, feminine energyDusty Rose#B8848BMuted subtle accentsPink Coral#E07B6CDay 1-2 crossover
+Dark Backgrounds (Section headers, special moments):
+ColorHexUsageDeep Bronze#5C4827Primary Day 3 darkDark Deep#1E1E26Day 1 callback — rich darkDark Charcoal#141418Day 1 callback — deepest darkRose Dark#8B4D5CDay 2 callback — alternative section headerWine/Burgundy#5C3341Day 2 callback — gradient end optionMauve Dark#6B4F5CDay 2 callback — alternative dark
+Neutrals:
+ColorHexUsageWarm Gray#8B8178Borders, secondary textTaupe#A69B8DDividers, subtle elementsStone#D4CCC4Backgrounds, soft separation
+Card Tints (Subtle backgrounds for cards/containers):
+ColorHexUsageCard Gold Tint#FAF6E8White + hint of goldCard Blush Tint#FEF5F4Day 2 — white + hint of blushCard Rose Tint#FDF0EEDay 2 — white + hint of roseCard Sage Tint#F5F9F5White + hint of sageCard Warm Tint#FAF6F4White + warm undertone
+Typography: OGG Bold (headers), Satoshi (body)
+NO emojis — use arrows (→), custom icons, or visual elements
+
+____
 ## REQUIRED CSS CLASSES (Include in every HTML file)
 
 ```css
@@ -726,7 +752,7 @@ Slide 79b: The big "$1,000,000+" appears
 
 **The difference between "fine" and "premium" is in the DETAILS:**
 
-1. Shadow color matches element color
+1. Dont include shadow because it doesnt look good converted to pdf
 2. Backgrounds are gradients, not flat
 3. Shapes are subtle (0.02-0.1 opacity), not obvious
 4. Icons are custom SVG, not library
