@@ -48,19 +48,20 @@
 }
 
 
+
         /* ====== PREMIUM DESIGN SYSTEM ====== */
         
-        /* Color Palette */
         :root {
-            --blush: #FAF7F2;
-            --mauve: #8B6B61;
+            --teal: #4A8B8B;
+            --teal-dark: #3D7575;
+            --cream: #FAF7F2;
             --coral: #C4706A;
-            --sage: #5C7C5C;
-            --gold: #B8963E;
-            --cream: #F5F0E8;
-            --deep-mauve: #6B4F47;
-            --soft-coral: #E8A39B;
+            --coral-light: #E8A39B;
+            --white: #FFFFFF;
+            --white-muted: rgba(255, 255, 255, 0.7);
             --charcoal: #3D3D3D;
+            --teal-light: rgba(74, 139, 139, 0.1);
+            --coral-bg: rgba(196, 112, 106, 0.08);
         }
         
         * {
@@ -71,781 +72,880 @@
         
         body {
             font-family: 'Satoshi', sans-serif;
-            background: var(--blush);
+            background: var(--cream);
             color: var(--charcoal);
-            overflow-x: hidden;
         }
         
         .slide {
             width: 1920px;
             height: 1080px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             padding: 80px 120px;
             position: relative;
             overflow: hidden;
             page-break-after: always;
         }
         
-        /* Background Variations */
-        .bg-blush { background: var(--blush); }
-        .bg-cream { background: var(--cream); }
-        .bg-mauve { background: var(--mauve); color: white; }
-        .bg-coral { background: var(--coral); color: white; }
-        .bg-deep-mauve { background: var(--deep-mauve); color: white; }
+        /* Backgrounds */
+        .bg-teal { background: var(--teal); color: var(--white); }
+        .bg-cream { background: var(--cream); color: var(--charcoal); }
         
         /* Typography */
-        .headline {
+        .ogg-bold {
             font-family: 'Ogg', serif;
-            font-size: 84px;
-            line-height: 1.1;
+            font-weight: 700;
+        }
+        
+        .satoshi {
+            font-family: 'Satoshi', sans-serif;
+        }
+        
+        .satoshi-medium {
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 500;
+        }
+        
+        .satoshi-bold {
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Colors */
+        .text-teal { color: var(--teal); }
+        .text-coral { color: var(--coral); }
+        .text-white { color: var(--white); }
+        .text-white-muted { color: var(--white-muted); }
+        .text-charcoal { color: var(--charcoal); }
+        
+        /* Centered Layout */
+        .centered {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
             text-align: center;
-            margin-bottom: 48px;
-            letter-spacing: -0.02em;
+        }
+        
+        /* Left Aligned Layout */
+        .left-aligned {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 100%;
+            padding-top: 100px;
+        }
+        
+        /* Headlines */
+        .headline-xl {
+            font-size: 88px;
+            line-height: 1.1;
+            margin-bottom: 40px;
         }
         
         .headline-lg {
-            font-size: 96px;
+            font-size: 72px;
+            line-height: 1.15;
+            margin-bottom: 32px;
         }
         
-        .headline-sm {
-            font-size: 64px;
+        .headline-md {
+            font-size: 56px;
+            line-height: 1.2;
+            margin-bottom: 28px;
         }
         
-        .subheadline {
-            font-family: 'Satoshi', sans-serif;
-            font-size: 32px;
-            text-align: center;
-            max-width: 1000px;
+        /* Body Text */
+        .body-lg {
+            font-size: 36px;
             line-height: 1.5;
-            opacity: 0.85;
-        }
-        
-        .accent-text {
-            color: var(--coral);
-        }
-        
-        .bg-mauve .accent-text,
-        .bg-coral .accent-text,
-        .bg-deep-mauve .accent-text {
-            color: var(--gold);
-        }
-        
-        /* Card System */
-        .card-container {
-            display: flex;
-            gap: 40px;
-            justify-content: center;
-            align-items: stretch;
-            flex-wrap: wrap;
-            margin-top: 60px;
-        }
-        
-        .card {
-            background: white;
-            border-radius: 24px;
-            padding: 48px 40px;
-            box-shadow: 0 4px 40px rgba(139, 107, 97, 0.08);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            min-width: 280px;
-            max-width: 380px;
-        }
-        
-        .card-dark {
-            background: var(--charcoal);
-            color: white;
-        }
-        
-        .card-title {
-            font-family: 'Ogg', serif;
-            font-size: 28px;
-            margin-bottom: 16px;
-        }
-        
-        .card-text {
-            font-size: 18px;
-            line-height: 1.6;
-            opacity: 0.8;
-        }
-        
-        /* Icon Boxes */
-        .icon-box {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin-bottom: 24px;
         }
         
-        .icon-box svg {
-            width: 40px;
-            height: 40px;
+        .body-md {
+            font-size: 28px;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
         
-        .icon-teal { background: #4A8B8B; }
-        .icon-coral { background: var(--coral); }
-        .icon-gold { background: var(--gold); }
-        .icon-sage { background: var(--sage); }
-        .icon-mauve { background: var(--mauve); }
-        
-        .icon-teal svg,
-        .icon-coral svg,
-        .icon-gold svg,
-        .icon-sage svg,
-        .icon-mauve svg {
-            fill: white;
+        .body-sm {
+            font-size: 22px;
+            line-height: 1.6;
         }
         
-        /* Flow Arrows */
-        .flow-arrow {
-            color: var(--mauve);
-            font-size: 32px;
-            opacity: 0.4;
-            margin: 0 -8px;
-            align-self: center;
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+        }
+        
+        .card-teal {
+            background: linear-gradient(135deg, rgba(74, 139, 139, 0.08) 0%, rgba(74, 139, 139, 0.04) 100%);
+            border: 2px solid rgba(74, 139, 139, 0.15);
+        }
+        
+        .card-coral {
+            background: linear-gradient(135deg, rgba(196, 112, 106, 0.08) 0%, rgba(196, 112, 106, 0.04) 100%);
+            border: 2px solid rgba(196, 112, 106, 0.15);
+        }
+        
+        .card-coral-border {
+            background: var(--white);
+            border: 3px solid var(--coral);
+        }
+        
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            width: 100%;
+            margin-top: 48px;
+        }
+        
+        /* Three Column Layout */
+        .three-col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            width: 100%;
+            margin-top: 48px;
+        }
+        
+        /* Stacked Cards */
+        .stacked-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 48px;
+        }
+        
+        /* Quote Styling */
+        .quote-large {
+            font-size: 52px;
+            line-height: 1.4;
+            max-width: 1100px;
+        }
+        
+        /* Accent Underline */
+        .underline-coral {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .underline-coral::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--coral);
+            border-radius: 3px;
+        }
+        
+        /* Number Badge */
+        .number-badge {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Ogg', serif;
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+        
+        /* Teal Callout Box */
+        .callout-teal {
+            background: var(--teal);
+            color: var(--white);
+            padding: 32px 48px;
+            border-radius: 16px;
+            margin-top: 48px;
+        }
+        
+        /* Coral Callout Box */
+        .callout-coral {
+            background: var(--coral);
+            color: var(--white);
+            padding: 32px 48px;
+            border-radius: 16px;
+            margin-top: 32px;
+        }
+        
+        /* Quote Block */
+        .quote-block {
+            background: rgba(74, 139, 139, 0.06);
+            padding: 24px 32px;
+            border-left: 4px solid var(--teal);
+            border-radius: 0 12px 12px 0;
+            margin: 16px 0;
+            font-style: italic;
+        }
+        
+        /* Arrow List */
+        .arrow-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .arrow-list li {
+            font-size: 26px;
+            line-height: 1.8;
+            padding-left: 36px;
+            position: relative;
+        }
+        
+        .arrow-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+        }
+        
+        /* Numbered Steps with Teal Bar */
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 28px;
+        }
+        
+        .step-bar {
+            width: 8px;
+            height: 100%;
+            min-height: 80px;
+            background: var(--teal);
+            border-radius: 4px;
+        }
+        
+        .step-number {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Ogg', serif;
+            font-size: 22px;
+        }
+        
+        /* Custom Graphics Container */
+        .graphic-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         /* Decorative Elements */
-        .deco-plus {
+        .deco-circle {
             position: absolute;
-            font-family: 'Ogg', serif;
-            font-size: 200px;
-            color: var(--mauve);
-            opacity: 0.05;
+            border-radius: 50%;
+            opacity: 0.1;
         }
         
         .deco-dots {
             display: flex;
-            gap: 8px;
-            margin-top: 40px;
+            gap: 12px;
+            margin-top: 48px;
         }
         
         .deco-dots span {
-            width: 8px;
-            height: 8px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            background: var(--mauve);
+            background: currentColor;
             opacity: 0.3;
         }
         
-        /* Comparison Layout */
-        .comparison-container {
-            display: flex;
-            gap: 60px;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .vs-badge {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--charcoal);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Ogg', serif;
-            font-size: 24px;
-        }
-        
-        .comparison-card {
-            width: 520px;
-            background: white;
-            border-radius: 32px;
-            padding: 60px 50px;
-            box-shadow: 0 8px 60px rgba(139, 107, 97, 0.1);
-        }
-        
-        .comparison-card.flop {
-            border: 3px solid #E57373;
-        }
-        
-        .comparison-card.winner {
-            border: 3px solid var(--sage);
-        }
-        
-        .comparison-label {
-            font-family: 'Satoshi', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            padding: 8px 20px;
-            border-radius: 30px;
-            display: inline-block;
-            margin-bottom: 24px;
-        }
-        
-        .comparison-card.flop .comparison-label {
-            background: #FFEBEE;
-            color: #C62828;
-        }
-        
-        .comparison-card.winner .comparison-label {
-            background: #E8F5E9;
-            color: #2E7D32;
-        }
-        
-        /* List Styles */
-        .premium-list {
-            list-style: none;
-            text-align: left;
-            width: 100%;
-        }
-        
-        .premium-list li {
-            font-size: 22px;
-            line-height: 1.8;
-            padding-left: 40px;
-            position: relative;
-            margin-bottom: 12px;
-        }
-        
-        .premium-list li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-        }
-        
-        .comparison-card.flop .premium-list li::before {
-            background: #FFCDD2;
-        }
-        
-        .comparison-card.winner .premium-list li::before {
-            background: #C8E6C9;
-        }
-        
-        /* Phone Mockup */
-        .phone-mockup-container {
-            display: flex;
-            gap: 80px;
-            align-items: center;
-            justify-content: center;
-            margin-top: 60px;
-        }
-        
-        .phone-mockup {
-            width: 280px;
-            height: 560px;
-            background: #1a1a1a;
-            border-radius: 40px;
-            padding: 12px;
-            box-shadow: 0 20px 80px rgba(0,0,0,0.3);
-            position: relative;
-        }
-        
-        .phone-screen {
-            width: 100%;
-            height: 100%;
-            background: white;
-            border-radius: 30px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .phone-label {
-            font-family: 'Satoshi', sans-serif;
-            font-weight: 700;
-            font-size: 18px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-top: 32px;
-            color: white;
-            opacity: 0.9;
-        }
-        
-        /* Lightbulb Icon */
-        .lightbulb-icon {
-            width: 180px;
-            height: 180px;
-            margin-bottom: 48px;
-        }
-        
-        /* Stats */
-        .stat-number {
-            font-family: 'Ogg', serif;
-            font-size: 120px;
-            line-height: 1;
-            color: var(--coral);
-        }
-        
-        .stat-label {
-            font-size: 28px;
-            margin-top: 16px;
-            opacity: 0.7;
-        }
-        
-        /* Section Divider */
-        .section-badge {
-            font-family: 'Satoshi', sans-serif;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            padding: 12px 32px;
-            border-radius: 40px;
-            background: rgba(139, 107, 97, 0.1);
-            color: var(--mauve);
-            margin-bottom: 40px;
-        }
-        
-        .bg-mauve .section-badge,
-        .bg-coral .section-badge,
-        .bg-deep-mauve .section-badge {
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
-        }
-        
-        /* Quote Style */
-        .quote-container {
-            max-width: 1100px;
+        /* Feature Card with Icon */
+        .feature-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px 32px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
             text-align: center;
         }
         
-        .quote-mark {
+        .feature-card h3 {
             font-family: 'Ogg', serif;
-            font-size: 180px;
-            line-height: 0.5;
-            color: var(--coral);
-            opacity: 0.3;
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--teal);
         }
         
-        .quote-text {
-            font-family: 'Ogg', serif;
-            font-size: 52px;
-            line-height: 1.4;
-            font-style: italic;
+        .feature-card p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--charcoal);
+            opacity: 0.8;
         }
         
-        /* Framework Step */
-        .framework-step {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            background: white;
-            padding: 32px 48px;
+        /* Tool Section */
+        .tool-section {
+            margin-bottom: 32px;
+        }
+        
+        .tool-name {
+            font-family: 'Satoshi', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            color: var(--teal);
+            margin-bottom: 12px;
+        }
+        
+        /* Visual Placeholder */
+        .visual-placeholder {
+            background: linear-gradient(135deg, var(--teal-light) 0%, rgba(74, 139, 139, 0.05) 100%);
             border-radius: 20px;
-            box-shadow: 0 4px 30px rgba(139, 107, 97, 0.06);
-            margin-bottom: 20px;
-            width: 100%;
-            max-width: 900px;
-        }
-        
-        .step-number {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: var(--coral);
-            color: white;
+            padding: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Ogg', serif;
-            font-size: 24px;
-            flex-shrink: 0;
-        }
-        
-        .step-content {
-            text-align: left;
-        }
-        
-        .step-title {
-            font-family: 'Ogg', serif;
-            font-size: 26px;
-            margin-bottom: 8px;
-        }
-        
-        .step-desc {
-            font-size: 18px;
-            opacity: 0.7;
+            min-height: 400px;
         }
 
-        /* Grid Layout */
-        .grid-2x2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            margin-top: 60px;
+        /* Custom SVG Graphics Styles */
+        .custom-graphic {
+            max-width: 100%;
+            height: auto;
         }
         
-        .grid-card {
-            background: white;
-            border-radius: 24px;
-            padding: 48px;
-            box-shadow: 0 4px 40px rgba(139, 107, 97, 0.08);
+        /* Premium Illustration Styles */
+        .illustration-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .grid-card-title {
-            font-family: 'Ogg', serif;
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: var(--deep-mauve);
-        }
-        
-        .grid-card-text {
-            font-size: 20px;
-            line-height: 1.6;
-            opacity: 0.8;
-        }
     </style>
 </head>
 <body>
 
-<!-- SLIDE 71: Title Slide - DAY TWO -->
-<div class="slide bg-deep-mauve">
-    <div class="deco-plus" style="top: -50px; right: -50px;">+</div>
-    <span class="section-badge">DAY TWO</span>
-    <h1 class="headline headline-lg">Content That<br><span class="accent-text">Converts</span></h1>
-    <p class="subheadline">The strategic framework for turning followers into paying clients</p>
-    <div class="deco-dots">
-        <span></span><span></span><span></span>
+<!-- SLIDE 71 — Section Title -->
+<div class="slide bg-teal centered">
+    <!-- Decorative background elements -->
+    <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border: 3px solid rgba(255,255,255,0.1); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -150px; left: -150px; width: 500px; height: 500px; border: 3px solid rgba(255,255,255,0.08); border-radius: 50%;"></div>
+    <div style="position: absolute; top: 50%; left: 10%; width: 20px; height: 20px; background: rgba(255,255,255,0.15); border-radius: 50%;"></div>
+    <div style="position: absolute; top: 30%; right: 15%; width: 12px; height: 12px; background: rgba(255,255,255,0.2); border-radius: 50%;"></div>
+    
+    <h1 class="ogg-bold headline-xl text-white">Before You Open Canva...</h1>
+    <p class="satoshi-medium body-lg text-white" style="max-width: 900px;">You need to know WHO you're selling to.</p>
+    <p class="satoshi body-md text-white-muted" style="max-width: 800px; margin-top: 20px;">Pretty designs can't fix a bad audience choice.</p>
+    
+    <div class="deco-dots" style="margin-top: 60px;">
+        <span style="background: white;"></span>
+        <span style="background: white;"></span>
+        <span style="background: white;"></span>
     </div>
 </div>
 
-<!-- SLIDE 72: The 4 M's Framework -->
-<div class="slide bg-blush">
-    <span class="section-badge">THE FRAMEWORK</span>
-    <h1 class="headline">The 4 M's of<br><span class="accent-text">Magnetic Content</span></h1>
-    <div class="card-container">
-        <div class="card">
-            <div class="icon-box icon-teal">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
-            </div>
-            <h3 class="card-title">MINE</h3>
-            <p class="card-text">Extract your unique stories and experiences</p>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="card">
-            <div class="icon-box icon-coral">
-                <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-            </div>
-            <h3 class="card-title">MATCH</h3>
-            <p class="card-text">Align stories with audience pain points</p>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="card">
-            <div class="icon-box icon-gold">
-                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-            </div>
-            <h3 class="card-title">MAKE</h3>
-            <p class="card-text">Create content with strategic intent</p>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="card">
-            <div class="icon-box icon-sage">
-                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
-            </div>
-            <h3 class="card-title">MEASURE</h3>
-            <p class="card-text">Track what resonates and refine</p>
-        </div>
-    </div>
-</div>
-
-<!-- SLIDE 73: Key Insight with Lightbulb -->
-<div class="slide bg-cream">
-    <svg class="lightbulb-icon" viewBox="0 0 100 100">
-        <circle cx="50" cy="40" r="30" fill="none" stroke="#B8963E" stroke-width="3"/>
-        <path d="M40 65 L40 80 Q40 85 45 85 L55 85 Q60 85 60 80 L60 65" fill="none" stroke="#B8963E" stroke-width="3"/>
-        <line x1="45" y1="72" x2="55" y2="72" stroke="#B8963E" stroke-width="2"/>
-        <line x1="45" y1="78" x2="55" y2="78" stroke="#B8963E" stroke-width="2"/>
-        <path d="M50 20 L50 10" stroke="#B8963E" stroke-width="2"/>
-        <path d="M30 25 L22 17" stroke="#B8963E" stroke-width="2"/>
-        <path d="M70 25 L78 17" stroke="#B8963E" stroke-width="2"/>
-        <path d="M20 40 L10 40" stroke="#B8963E" stroke-width="2"/>
-        <path d="M80 40 L90 40" stroke="#B8963E" stroke-width="2"/>
-    </svg>
-    <h1 class="headline">Key <span class="accent-text">Insight</span></h1>
-    <p class="subheadline">Your content isn't about you.<br>It's about the transformation you provide.</p>
-</div>
-
-<!-- SLIDE 74: FLOP vs WINNER Comparison -->
-<div class="slide bg-blush">
-    <h1 class="headline headline-sm">What <span class="accent-text">Flops</span> vs What <span style="color: var(--sage);">Wins</span></h1>
-    <div class="comparison-container" style="margin-top: 60px;">
-        <div class="comparison-card flop">
-            <span class="comparison-label">FLOP</span>
-            <ul class="premium-list">
-                <li>Generic motivational quotes</li>
-                <li>Posting without strategy</li>
-                <li>Copying competitor content</li>
-                <li>No clear call to action</li>
-                <li>Inconsistent messaging</li>
-            </ul>
-        </div>
-        <div class="vs-badge">VS</div>
-        <div class="comparison-card winner">
-            <span class="comparison-label">WINNER</span>
-            <ul class="premium-list">
-                <li>Personal stories with lessons</li>
-                <li>Content tied to offers</li>
-                <li>Unique perspective and voice</li>
-                <li>Clear next steps for audience</li>
-                <li>Consistent brand identity</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<!-- SLIDE 75: Before/After Phone Mockups -->
-<div class="slide bg-mauve">
-    <h1 class="headline">The <span class="accent-text">Transformation</span></h1>
-    <div class="phone-mockup-container">
-        <div style="text-align: center;">
-            <div class="phone-mockup">
-                <div class="phone-screen" style="background: #f5f5f5;">
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="#ccc">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                    <p style="color: #999; font-size: 14px; margin-top: 16px;">Generic Content</p>
-                    <p style="color: #ccc; font-size: 12px; margin-top: 8px;">No engagement</p>
-                </div>
-            </div>
-            <p class="phone-label">BEFORE</p>
-        </div>
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="rgba(255,255,255,0.5)">
-            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+<!-- SLIDE 72 — The Problem Setup -->
+<div class="slide bg-cream left-aligned">
+    <!-- Decorative corner element -->
+    <div style="position: absolute; top: 60px; right: 60px;">
+        <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="55" fill="none" stroke="#4A8B8B" stroke-width="2" opacity="0.2"/>
+            <circle cx="60" cy="60" r="40" fill="none" stroke="#C4706A" stroke-width="2" opacity="0.15"/>
+            <circle cx="60" cy="60" r="25" fill="none" stroke="#4A8B8B" stroke-width="2" opacity="0.1"/>
         </svg>
-        <div style="text-align: center;">
-            <div class="phone-mockup">
-                <div class="phone-screen" style="background: linear-gradient(135deg, #FAF7F2, #F5F0E8);">
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="#C4706A">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </div>
+    
+    <h1 class="ogg-bold headline-lg text-teal">Most struggling shops skip this step</h1>
+    
+    <p class="satoshi body-md text-charcoal" style="margin-bottom: 32px; margin-top: 20px;">They jump straight into creating:</p>
+    
+    <div style="margin-left: 40px; margin-bottom: 40px;">
+        <div class="quote-block" style="margin-bottom: 16px;">
+            <p class="satoshi body-md">"I want to sell planners."</p>
+        </div>
+        <div class="quote-block" style="margin-bottom: 16px;">
+            <p class="satoshi body-md">"I want to sell SVGs."</p>
+        </div>
+        <div class="quote-block">
+            <p class="satoshi body-md">"I'll just make what I feel like making."</p>
+        </div>
+    </div>
+    
+    <p class="satoshi-medium body-lg text-charcoal" style="margin-top: 40px;">
+        Then they wonder why nothing <span class="text-coral" style="font-weight: 700;">consistently</span> sells.
+    </p>
+</div>
+
+<!-- SLIDE 73 — Product-First vs Audience-First -->
+<div class="slide bg-cream">
+    <h1 class="ogg-bold headline-lg text-teal" style="text-align: center; margin-bottom: 48px;">Product-First vs Audience-First</h1>
+    
+    <div class="two-col" style="height: calc(100% - 180px);">
+        <!-- Left Column - Product First -->
+        <div class="card card-coral" style="height: 100%;">
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px;">
+                <svg width="48" height="48" viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="22" fill="#C4706A" opacity="0.2"/>
+                    <path d="M16 24 L22 30 L32 18" stroke="#C4706A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="rotate(45 24 24)"/>
+                </svg>
+                <h2 class="ogg-bold text-coral" style="font-size: 32px;">PRODUCT-FIRST</h2>
+            </div>
+            <p class="satoshi-medium body-md" style="color: var(--coral); margin-bottom: 24px;">(The Struggle)</p>
+            
+            <ul class="arrow-list" style="margin-top: 24px;">
+                <li style="color: var(--charcoal);">"I want to sell stickers"</li>
+                <li style="color: var(--charcoal);">"I want to sell tumblers"</li>
+                <li style="color: var(--charcoal);">Create first, hope the right person shows up</li>
+            </ul>
+        </div>
+        
+        <!-- Right Column - Audience First -->
+        <div class="card card-teal" style="height: 100%;">
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px;">
+                <svg width="48" height="48" viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="22" fill="#4A8B8B" opacity="0.2"/>
+                    <path d="M16 24 L22 30 L32 18" stroke="#4A8B8B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h2 class="ogg-bold text-teal" style="font-size: 32px;">AUDIENCE-FIRST</h2>
+            </div>
+            <p class="satoshi-medium body-md" style="color: var(--teal); margin-bottom: 24px;">(The Win)</p>
+            
+            <ul class="arrow-list" style="margin-top: 24px;">
+                <li style="color: var(--charcoal);">"I help sublimation crafters find fresh designs"</li>
+                <li style="color: var(--charcoal);">"I help book lovers track their reading"</li>
+                <li style="color: var(--charcoal);">Start with a person, then build a lineup that serves them</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 74 — Income Goal Check -->
+<div class="slide bg-cream centered">
+    <!-- Decorative elements -->
+    <div style="position: absolute; top: 80px; left: 80px;">
+        <svg width="80" height="80" viewBox="0 0 80 80">
+            <rect x="10" y="10" width="60" height="60" rx="12" fill="none" stroke="#4A8B8B" stroke-width="2" opacity="0.15"/>
+        </svg>
+    </div>
+    <div style="position: absolute; bottom: 80px; right: 80px;">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="#C4706A" stroke-width="2" opacity="0.12"/>
+        </svg>
+    </div>
+    
+    <h1 class="ogg-bold headline-lg text-teal">
+        <span class="underline-coral">Step 1:</span> Know Your Income Target
+    </h1>
+    
+    <p class="satoshi body-lg text-charcoal" style="margin-top: 40px; margin-bottom: 24px;">
+        Do you want <span class="text-coral satoshi-bold">$1K</span> months? <span class="text-coral satoshi-bold">$5K</span>? <span class="text-coral satoshi-bold">$10K+</span>?
+    </p>
+    
+    <p class="satoshi body-md text-charcoal" style="max-width: 800px; opacity: 0.85;">
+        Be honest — because not every niche<br>can realistically support every goal.
+    </p>
+    
+    <p class="satoshi body-sm text-charcoal" style="margin-top: 48px; opacity: 0.7; max-width: 700px;">
+        We'll use this later to test if your niche can carry that goal.
+    </p>
+</div>
+
+<!-- SLIDE 75 — The Core Question -->
+<div class="slide bg-cream centered">
+    <!-- Large quote marks decoration -->
+    <div style="position: absolute; top: 120px; left: 150px; font-family: 'Ogg', serif; font-size: 300px; color: var(--teal); opacity: 0.06; line-height: 0.8;">"</div>
+    
+    <h1 class="ogg-bold headline-md text-teal" style="margin-bottom: 60px;">The Question That Changes Everything</h1>
+    
+    <p class="ogg-bold quote-large text-charcoal" style="margin-bottom: 48px;">
+        "Who do I want to help...<br>
+        <span class="text-coral">and what problem or obsession do they have?</span>"
+    </p>
+    
+    <p class="satoshi body-md text-charcoal" style="max-width: 800px; opacity: 0.8; margin-top: 40px;">
+        When you start with a specific person,<br>it's easy to build products they buy again and again.
+    </p>
+</div>
+
+<!-- SLIDE 76 — Niche Definition -->
+<div class="slide bg-cream centered">
+    <h1 class="ogg-bold headline-lg text-teal" style="margin-bottom: 16px;">Niche = Products + Audience</h1>
+    
+    <div class="stacked-cards" style="margin-top: 40px;">
+        <!-- Products Card -->
+        <div class="card card-teal" style="padding: 36px 48px;">
+            <div style="display: flex; align-items: center; gap: 24px;">
+                <div style="width: 60px; height: 60px; background: var(--teal); border-radius: 14px; display: flex; align-items: center; justify-content: center;">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
+                        <rect x="6" y="4" width="20" height="24" rx="2" fill="none" stroke="white" stroke-width="2"/>
+                        <line x1="10" y1="10" x2="22" y2="10" stroke="white" stroke-width="2"/>
+                        <line x1="10" y1="16" x2="22" y2="16" stroke="white" stroke-width="2"/>
+                        <line x1="10" y1="22" x2="18" y2="22" stroke="white" stroke-width="2"/>
                     </svg>
-                    <p style="color: #3D3D3D; font-size: 14px; margin-top: 16px; font-weight: 600;">Strategic Content</p>
-                    <p style="color: #8B6B61; font-size: 12px; margin-top: 8px;">High engagement</p>
+                </div>
+                <div style="text-align: left;">
+                    <h3 class="ogg-bold text-teal" style="font-size: 28px; margin-bottom: 8px;">Products = WHAT you sell</h3>
+                    <p class="satoshi body-sm text-charcoal" style="opacity: 0.8;">(eBooks, planners, templates, SVGs, clipart...)</p>
                 </div>
             </div>
-            <p class="phone-label">AFTER</p>
+        </div>
+        
+        <!-- Audience Card -->
+        <div class="card card-teal" style="padding: 36px 48px;">
+            <div style="display: flex; align-items: center; gap: 24px;">
+                <div style="width: 60px; height: 60px; background: var(--teal); border-radius: 14px; display: flex; align-items: center; justify-content: center;">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
+                        <circle cx="16" cy="10" r="5" fill="none" stroke="white" stroke-width="2"/>
+                        <path d="M6 26 C6 20 10 17 16 17 C22 17 26 20 26 26" fill="none" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div style="text-align: left;">
+                    <h3 class="ogg-bold text-teal" style="font-size: 28px; margin-bottom: 8px;">Audience = WHO you sell to</h3>
+                    <p class="satoshi body-sm text-charcoal" style="opacity: 0.8;">(Busy moms, teachers, crafters, readers, homesteaders...)</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Examples Card -->
+        <div class="card card-coral-border" style="padding: 36px 48px; margin-top: 16px;">
+            <p class="satoshi-medium body-md text-charcoal" style="margin-bottom: 12px;">
+                <span class="text-coral satoshi-bold">Niche Example:</span> "Reading journals for busy moms"
+            </p>
+            <p class="satoshi-medium body-md text-charcoal">
+                <span class="text-coral satoshi-bold">Niche Example:</span> "SVG bundles for sublimation crafters"
+            </p>
         </div>
     </div>
 </div>
 
-<!-- SLIDE 76: Your Story = Your Superpower -->
-<div class="slide bg-blush">
-    <div class="deco-plus" style="bottom: -80px; left: -80px;">+</div>
-    <h1 class="headline headline-lg">Your Story Is Your<br><span class="accent-text">Superpower</span></h1>
-    <p class="subheadline">Nobody else has lived your life. That's your competitive advantage.</p>
-    <div class="deco-dots">
-        <span></span><span></span><span></span>
+<!-- SLIDE 77 — 3 Traits of Profitable Audiences -->
+<div class="slide bg-cream">
+    <h1 class="ogg-bold headline-lg text-teal" style="text-align: center; margin-bottom: 48px;">3 Traits of Profitable Audiences</h1>
+    
+    <div class="three-col" style="margin-top: 32px;">
+        <!-- Trait 1 -->
+        <div class="feature-card">
+            <div class="number-badge">1</div>
+            <h3 class="ogg-bold text-teal" style="font-size: 28px; margin-bottom: 20px;">Recurring Need</h3>
+            <p class="satoshi body-sm text-charcoal" style="opacity: 0.8; line-height: 1.7;">
+                Hobbies, routines, lifestyles, beliefs — they keep coming back
+            </p>
+        </div>
+        
+        <!-- Trait 2 -->
+        <div class="feature-card">
+            <div class="number-badge">2</div>
+            <h3 class="ogg-bold text-teal" style="font-size: 28px; margin-bottom: 20px;">Seasonal Hooks</h3>
+            <p class="satoshi body-sm text-charcoal" style="opacity: 0.8; line-height: 1.7;">
+                Christmas, back-to-school, graduations, New Year goals
+            </p>
+        </div>
+        
+        <!-- Trait 3 -->
+        <div class="feature-card">
+            <div class="number-badge">3</div>
+            <h3 class="ogg-bold text-teal" style="font-size: 28px; margin-bottom: 20px;">Multiple Product Types</h3>
+            <p class="satoshi body-sm text-charcoal" style="opacity: 0.8; line-height: 1.7;">
+                At least 3-5 different formats they'd buy from you
+            </p>
+        </div>
+    </div>
+    
+    <p class="satoshi body-md text-charcoal" style="text-align: center; margin-top: 60px; opacity: 0.85;">
+        If they only ever need one tiny product from you, big income goals become a <span class="text-coral satoshi-bold">grind</span>.
+    </p>
+</div>
+
+<!-- SLIDE 78 — Example: Sublimation Crafters -->
+<div class="slide bg-cream">
+    <h1 class="ogg-bold headline-lg text-teal" style="margin-bottom: 48px;">Example: Sublimation Crafters</h1>
+    
+    <div class="two-col" style="align-items: start;">
+        <!-- Left Content -->
+        <div>
+            <div style="margin-bottom: 40px;">
+                <h3 class="ogg-bold text-teal" style="font-size: 26px; margin-bottom: 16px;">Who they are:</h3>
+                <p class="satoshi body-md text-charcoal">Sellers making tumblers, mugs, shirts, bookmarks</p>
+            </div>
+            
+            <div style="margin-bottom: 40px;">
+                <h3 class="ogg-bold text-teal" style="font-size: 26px; margin-bottom: 16px;">What they need from you:</h3>
+                <ul class="arrow-list">
+                    <li>Fresh tumbler designs</li>
+                    <li>Mug templates</li>
+                    <li>Bookmark bundles</li>
+                    <li>Seasonal packs</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="ogg-bold text-teal" style="font-size: 26px; margin-bottom: 16px;">Why they're a great audience:</h3>
+                <ul class="arrow-list">
+                    <li>Constant need for new designs</li>
+                    <li>Follow holidays and trends</li>
+                    <li>Buy from you over and over</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Right Visual -->
+        <div class="visual-placeholder">
+            <svg width="300" height="350" viewBox="0 0 300 350">
+                <!-- Tumbler illustration -->
+                <defs>
+                    <linearGradient id="tumblerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.3"/>
+                        <stop offset="100%" style="stop-color:#4A8B8B;stop-opacity:0.1"/>
+                    </linearGradient>
+                </defs>
+                <ellipse cx="150" cy="50" rx="60" ry="20" fill="url(#tumblerGrad)" stroke="#4A8B8B" stroke-width="2"/>
+                <path d="M90 50 L100 300 Q150 320 200 300 L210 50" fill="url(#tumblerGrad)" stroke="#4A8B8B" stroke-width="2"/>
+                <ellipse cx="150" cy="300" rx="50" ry="15" fill="none" stroke="#4A8B8B" stroke-width="2"/>
+                <!-- Design elements on tumbler -->
+                <circle cx="130" cy="150" r="20" fill="#C4706A" opacity="0.4"/>
+                <circle cx="170" cy="180" r="15" fill="#4A8B8B" opacity="0.3"/>
+                <rect x="120" y="220" width="60" height="30" rx="5" fill="#C4706A" opacity="0.3"/>
+            </svg>
+        </div>
     </div>
 </div>
 
-<!-- SLIDE 77: The Story Mining Process -->
+<!-- SLIDE 79 — Example: Book Lovers -->
 <div class="slide bg-cream">
-    <span class="section-badge">STEP 1: MINE</span>
-    <h1 class="headline headline-sm">The Story <span class="accent-text">Mining</span> Process</h1>
-    <div style="margin-top: 48px;">
-        <div class="framework-step">
+    <h1 class="ogg-bold headline-lg text-teal" style="margin-bottom: 24px;">Example: Book Lovers</h1>
+    <p class="satoshi body-md text-charcoal" style="margin-bottom: 40px;">If your audience = readers, you could sell:</p>
+    
+    <div class="two-col" style="gap: 40px;">
+        <div>
+            <ul class="arrow-list">
+                <li style="margin-bottom: 16px;">Reading trackers and planners</li>
+                <li style="margin-bottom: 16px;">TBR (To Be Read) list printables</li>
+                <li style="margin-bottom: 16px;">Reading challenge templates</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="arrow-list">
+                <li style="margin-bottom: 16px;">Bookshelf art and quote prints</li>
+                <li style="margin-bottom: 16px;">Printable bookmarks</li>
+                <li style="margin-bottom: 16px;">POD bookmarks, totes, stickers</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="callout-coral" style="text-align: center; margin-top: 60px;">
+        <p class="satoshi-bold body-lg text-white">One audience. Lots of product angles.</p>
+    </div>
+</div>
+
+<!-- SLIDE 80 — More Niche Ideas -->
+<div class="slide bg-cream">
+    <h1 class="ogg-bold headline-lg text-teal" style="text-align: center; margin-bottom: 48px;">More Profitable Audience Ideas</h1>
+    
+    <div class="three-col">
+        <!-- Column 1 -->
+        <div class="card" style="text-align: center;">
+            <div style="width: 70px; height: 70px; background: var(--teal); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="white">
+                    <path d="M8 8 L18 4 L28 8 L28 28 L18 32 L8 28 Z" fill="none" stroke="white" stroke-width="2"/>
+                    <path d="M18 4 L18 32" stroke="white" stroke-width="2"/>
+                </svg>
+            </div>
+            <h3 class="ogg-bold text-teal" style="font-size: 26px; margin-bottom: 16px;">SVGers & Crafters</h3>
+            <p class="satoshi body-sm text-charcoal" style="opacity: 0.8;">Need SVGs, clipart bundles, graphics</p>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="card" style="text-align: center;">
+            <div style="width: 70px; height: 70px; background: var(--coral); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="white">
+                    <circle cx="18" cy="12" r="6" fill="none" stroke="white" stroke-width="2"/>
+                    <path d="M8 30 C8 22 12 18 18 18 C24 18 28 22 28 30" fill="none" stroke="white" stroke-width="2"/>
+                </svg>
+            </div>
+            <h3 class="ogg-bold text-coral" style="font-size: 26px; margin-bottom: 16px;">Identity Niches</h3>
+            <p class="satoshi body-sm text-charcoal" style="opacity: 0.8;">"Homeschool moms," "Cat moms," "Nurses," "Teachers"</p>
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="card" style="text-align: center;">
+            <div style="width: 70px; height: 70px; background: var(--teal); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="white">
+                    <circle cx="18" cy="18" r="12" fill="none" stroke="white" stroke-width="2"/>
+                    <path d="M18 10 L18 18 L24 22" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h3 class="ogg-bold text-teal" style="font-size: 26px; margin-bottom: 16px;">Interest Niches</h3>
+            <p class="satoshi body-sm text-charcoal" style="opacity: 0.8;">Gardening, gaming, neurodiversity, wellness</p>
+        </div>
+    </div>
+    
+    <p class="satoshi body-md text-charcoal" style="text-align: center; margin-top: 60px; opacity: 0.8;">
+        These audiences use multiple products across the whole year.
+    </p>
+</div>
+
+<!-- SLIDE 81 — Brainstorm with Tools -->
+<div class="slide bg-cream">
+    <h1 class="ogg-bold headline-lg text-teal" style="margin-bottom: 48px;">Stuck? Let Data Brainstorm With You</h1>
+    
+    <div style="max-width: 1000px;">
+        <div class="tool-section">
+            <p class="tool-name">On Etsy:</p>
+            <p class="satoshi body-md text-charcoal">Search "digital download [your niche]" — see what already sells</p>
+        </div>
+        
+        <div class="tool-section">
+            <p class="tool-name">In ChatGPT:</p>
+            <p class="satoshi body-md text-charcoal">"Give me 10 digital products I could sell to [audience] on Etsy"</p>
+        </div>
+        
+        <div class="tool-section">
+            <p class="tool-name">In eRank:</p>
+            <p class="satoshi body-md text-charcoal">Check related keywords — what formats keep showing up?</p>
+        </div>
+    </div>
+    
+    <div class="callout-teal" style="max-width: 700px; text-align: center; margin-top: 48px;">
+        <p class="satoshi-bold body-lg text-white">You're not guessing. You're using data.</p>
+    </div>
+</div>
+
+<!-- SLIDE 82 — Validation -->
+<div class="slide bg-cream">
+    <h1 class="ogg-bold headline-lg text-teal" style="margin-bottom: 48px;">Validate Before You Create</h1>
+    
+    <div class="two-col" style="align-items: start;">
+        <div>
+            <div style="margin-bottom: 36px;">
+                <p class="tool-name" style="margin-bottom: 16px;">On Etsy:</p>
+                <ul class="arrow-list">
+                    <li>Search your niche + product idea</li>
+                    <li>Filter by digital downloads</li>
+                    <li>Sort by bestsellers</li>
+                </ul>
+            </div>
+            
+            <div>
+                <p class="tool-name" style="margin-bottom: 16px;">Look for:</p>
+                <ul class="arrow-list">
+                    <li>Multiple sellers making sales</li>
+                    <li>Recent listings (not 7+ years old)</li>
+                    <li>Proof of real, current demand</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div>
+            <div class="card card-teal" style="height: 100%;">
+                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                    <svg width="48" height="48" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20" fill="#4A8B8B" opacity="0.2"/>
+                        <path d="M16 24 L22 30 L32 18" stroke="#4A8B8B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="tool-name" style="margin: 0;">With ProfitTree:</p>
+                </div>
+                <ul class="arrow-list">
+                    <li style="margin-bottom: 12px;">Filter by revenue</li>
+                    <li>Check monthly sales and listing age</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 83 — The Math Check -->
+<div class="slide bg-cream centered">
+    <h1 class="ogg-bold headline-lg text-teal" style="margin-bottom: 48px;">Does This Match Your Goal?</h1>
+    
+    <p class="satoshi body-lg text-charcoal" style="margin-bottom: 24px;">Go back to your income target.</p>
+    
+    <p class="satoshi body-lg text-charcoal" style="margin-bottom: 24px;">
+        Ask: "Does this niche have enough demand to support <span class="text-coral satoshi-bold">$X/month</span>?"
+    </p>
+    
+    <p class="satoshi body-md text-charcoal" style="opacity: 0.8; margin-bottom: 48px;">
+        If not — repeat with a different product + audience combo.
+    </p>
+    
+    <div class="callout-coral" style="max-width: 900px;">
+        <p class="satoshi body-md text-white" style="margin-bottom: 16px;">
+            A <strong>$3 digital file</strong> niche hits different than a <strong>$175 template</strong> niche.
+        </p>
+        <p class="satoshi-bold body-md text-white">
+            Same "digital product" — very different earning potential.
+        </p>
+    </div>
+</div>
+
+<!-- SLIDE 84 — What's Next -->
+<div class="slide bg-cream">
+    <h1 class="ogg-bold headline-lg text-teal" style="margin-bottom: 56px;">Once Your Niche Is Validated...</h1>
+    
+    <div style="max-width: 1000px;">
+        <div class="step-item">
             <div class="step-number">1</div>
-            <div class="step-content">
-                <h4 class="step-title">List Your Pivotal Moments</h4>
-                <p class="step-desc">Failures, breakthroughs, decisions that changed everything</p>
+            <div>
+                <p class="satoshi body-lg text-charcoal">Create products that clearly serve THAT specific audience</p>
             </div>
         </div>
-        <div class="framework-step">
+        
+        <div class="step-item">
             <div class="step-number">2</div>
-            <div class="step-content">
-                <h4 class="step-title">Identify The Lessons</h4>
-                <p class="step-desc">What did you learn? What would you tell your past self?</p>
+            <div>
+                <p class="satoshi body-lg text-charcoal">Use proven SEO to get found</p>
             </div>
         </div>
-        <div class="framework-step">
+        
+        <div class="step-item">
             <div class="step-number">3</div>
-            <div class="step-content">
-                <h4 class="step-title">Connect To Your Audience</h4>
-                <p class="step-desc">How does this lesson help them on their journey?</p>
+            <div>
+                <p class="satoshi body-lg text-charcoal">Keep a list of future product ideas for the same person</p>
+            </div>
+        </div>
+        
+        <div class="step-item">
+            <div class="step-number">4</div>
+            <div>
+                <p class="satoshi body-lg text-charcoal">Sell, email your buyers, and give them reasons to come back</p>
             </div>
         </div>
     </div>
+    
+    <p class="satoshi body-md text-charcoal" style="margin-top: 48px; max-width: 900px;">
+        This is how you build a shop with <span class="text-coral satoshi-bold">repeat customers</span> — not random one-off sales.
+    </p>
 </div>
 
-<!-- SLIDE 78: Quote Slide -->
-<div class="slide bg-coral">
-    <div class="quote-container">
-        <span class="quote-mark" style="color: rgba(255,255,255,0.2);">"</span>
-        <p class="quote-text">People don't buy what you do.<br>They buy why you do it.</p>
-        <p style="font-size: 24px; margin-top: 40px; opacity: 0.8;">— Simon Sinek</p>
-    </div>
-</div>
-
-<!-- SLIDE 79: Match - Audience Pain Points -->
-<div class="slide bg-blush">
-    <span class="section-badge">STEP 2: MATCH</span>
-    <h1 class="headline headline-sm">Know Their <span class="accent-text">Pain Points</span></h1>
-    <div class="grid-2x2" style="max-width: 1200px;">
-        <div class="grid-card">
-            <div class="icon-box icon-coral" style="margin-bottom: 20px;">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-            </div>
-            <h3 class="grid-card-title">Frustrations</h3>
-            <p class="grid-card-text">What keeps them up at night? What have they tried that didn't work?</p>
-        </div>
-        <div class="grid-card">
-            <div class="icon-box icon-gold" style="margin-bottom: 20px;">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            </div>
-            <h3 class="grid-card-title">Desires</h3>
-            <p class="grid-card-text">What do they dream about? What does success look like to them?</p>
-        </div>
-        <div class="grid-card">
-            <div class="icon-box icon-sage" style="margin-bottom: 20px;">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-            </div>
-            <h3 class="grid-card-title">Fears</h3>
-            <p class="grid-card-text">What are they afraid of? What's the worst case scenario they imagine?</p>
-        </div>
-        <div class="grid-card">
-            <div class="icon-box icon-mauve" style="margin-bottom: 20px;">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
-            </div>
-            <h3 class="grid-card-title">Aspirations</h3>
-            <p class="grid-card-text">Who do they want to become? What identity are they stepping into?</p>
-        </div>
-    </div>
-</div>
-
-<!-- SLIDE 80: Make - Content Types -->
-<div class="slide bg-cream">
-    <span class="section-badge">STEP 3: MAKE</span>
-    <h1 class="headline headline-sm">Content That <span class="accent-text">Converts</span></h1>
-    <div class="card-container">
-        <div class="card" style="flex: 1; max-width: 350px;">
-            <div class="icon-box icon-teal">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            </div>
-            <h3 class="card-title">Educate</h3>
-            <p class="card-text">Teach something valuable. Position yourself as the expert.</p>
-        </div>
-        <div class="card" style="flex: 1; max-width: 350px;">
-            <div class="icon-box icon-coral">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-            </div>
-            <h3 class="card-title">Inspire</h3>
-            <p class="card-text">Share transformation stories. Show what's possible.</p>
-        </div>
-        <div class="card" style="flex: 1; max-width: 350px;">
-            <div class="icon-box icon-gold">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-            </div>
-            <h3 class="card-title">Engage</h3>
-            <p class="card-text">Ask questions. Start conversations. Build community.</p>
-        </div>
-        <div class="card" style="flex: 1; max-width: 350px;">
-            <div class="icon-box icon-sage">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            </div>
-            <h3 class="card-title">Sell</h3>
-            <p class="card-text">Direct offers. Clear calls to action. Make it easy to buy.</p>
-        </div>
-    </div>
-</div>
-
-<!-- SLIDE 81: The Content Mix -->
-<div class="slide bg-blush">
-    <h1 class="headline">The Perfect <span class="accent-text">Content Mix</span></h1>
-    <div class="card-container" style="margin-top: 60px;">
-        <div class="card" style="background: var(--deep-mauve); color: white; padding: 60px;">
-            <p class="stat-number" style="color: white;">40%</p>
-            <p class="stat-label" style="color: rgba(255,255,255,0.8);">Value Content</p>
-            <p style="margin-top: 16px; font-size: 16px; opacity: 0.7;">Education and insights</p>
-        </div>
-        <div class="card" style="background: var(--coral); color: white; padding: 60px;">
-            <p class="stat-number" style="color: white;">30%</p>
-            <p class="stat-label" style="color: rgba(255,255,255,0.8);">Story Content</p>
-            <p style="margin-top: 16px; font-size: 16px; opacity: 0.7;">Personal and client stories</p>
-        </div>
-        <div class="card" style="background: var(--sage); color: white; padding: 60px;">
-            <p class="stat-number" style="color: white;">20%</p>
-            <p class="stat-label" style="color: rgba(255,255,255,0.8);">Engagement</p>
-            <p style="margin-top: 16px; font-size: 16px; opacity: 0.7;">Questions and community</p>
-        </div>
-        <div class="card" style="background: var(--gold); color: white; padding: 60px;">
-            <p class="stat-number" style="color: white;">10%</p>
-            <p class="stat-label" style="color: rgba(255,255,255,0.8);">Promo Content</p>
-            <p style="margin-top: 16px; font-size: 16px; opacity: 0.7;">Direct offers</p>
-        </div>
-    </div>
-</div>
-
-<!-- SLIDE 82: Measure - What to Track -->
-<div class="slide bg-cream">
-    <span class="section-badge">STEP 4: MEASURE</span>
-    <h1 class="headline headline-sm">Track What <span class="accent-text">Matters</span></h1>
-    <div class="card-container" style="margin-top: 48px;">
-        <div class="card" style="flex: 1; max-width: 400px;">
-            <div class="icon-box icon-coral">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-            </div>
-            <h3 class="card-title">Engagement Rate</h3>
-            <p class="card-text">Likes, comments, shares relative to followers</p>
-        </div>
-        <div class="card" style="flex: 1; max-width: 400px;">
-            <div class="icon-box icon-gold">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
-            </div>
-            <h3 class="card-title">Saves & Shares</h3>
-            <p class="card-text">Indicates truly valuable content worth keeping</p>
-        </div>
-        <div class="card" style="flex: 1; max-width: 400px;">
-            <div class="icon-box icon-sage">
-                <svg viewBox="0 0 24 24" fill="white"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            </div>
-            <h3 class="card-title">DMs & Replies</h3>
-            <p class="card-text">Direct conversations that lead to sales</p>
-        </div>
-    </div>
-</div>
-
-<!-- SLIDE 83: Action Step -->
-<div class="slide bg-mauve">
-    <span class="section-badge">YOUR ACTION STEP</span>
-    <h1 class="headline headline-lg">Write Down<br><span class="accent-text">10 Stories</span></h1>
-    <p class="subheadline">Pivotal moments from your journey that shaped who you are today. These become your content goldmine.</p>
-    <div class="deco-dots">
-        <span style="background: white;"></span>
-        <span style="background: white;"></span>
-        <span style="background: white;"></span>
-    </div>
-</div>
-
-<!-- SLIDE 84: Remember This -->
-<div class="slide bg-blush">
-    <svg class="lightbulb-icon" viewBox="0 0 100 100">
-        <circle cx="50" cy="40" r="30" fill="none" stroke="#C4706A" stroke-width="3"/>
-        <path d="M40 65 L40 80 Q40 85 45 85 L55 85 Q60 85 60 80 L60 65" fill="none" stroke="#C4706A" stroke-width="3"/>
-        <line x1="45" y1="72" x2="55" y2="72" stroke="#C4706A" stroke-width="2"/>
-        <line x1="45" y1="78" x2="55" y2="78" stroke="#C4706A" stroke-width="2"/>
-        <path d="M50 20 L50 10" stroke="#C4706A" stroke-width="2"/>
-        <path d="M30 25 L22 17" stroke="#C4706A" stroke-width="2"/>
-        <path d="M70 25 L78 17" stroke="#C4706A" stroke-width="2"/>
-    </svg>
-    <h1 class="headline">Remember <span class="accent-text">This</span></h1>
-    <p class="subheadline">Content is a conversation, not a broadcast.<br>Listen. Respond. Evolve.</p>
-</div>
-
-<!-- SLIDE 85: Coming Up Next -->
-<div class="slide bg-deep-mauve">
-    <div class="deco-plus" style="top: -50px; left: -50px;">+</div>
-    <span class="section-badge">UP NEXT</span>
-    <h1 class="headline headline-lg">Day Three:<br><span class="accent-text">The Empire System</span></h1>
-    <p class="subheadline">Building sustainable systems that scale your business without burning out</p>
-    <div class="deco-dots">
+<!-- SLIDE 85 — Bridge to 4Ms Framework -->
+<div class="slide bg-teal centered">
+    <!-- Decorative elements -->
+    <div style="position: absolute; top: -80px; right: -80px; width: 300px; height: 300px; border: 3px solid rgba(255,255,255,0.1); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; border: 3px solid rgba(255,255,255,0.08); border-radius: 50%;"></div>
+    
+    <h1 class="ogg-bold headline-xl text-white" style="margin-bottom: 48px;">Now You See Why Audience Matters</h1>
+    
+    <p class="satoshi-medium body-lg text-white" style="max-width: 900px; margin-bottom: 32px;">
+        Next, I'll show you how to <strong>MINE</strong> real demand on Etsy<br>
+        so you're never guessing what to design again.
+    </p>
+    
+    <p class="satoshi body-md text-white-muted" style="max-width: 800px;">
+        Tonight I'm walking you through the manual version — let's start with <strong style="color: white;">MINE</strong>.
+    </p>
+    
+    <div class="deco-dots" style="margin-top: 60px;">
         <span style="background: white;"></span>
         <span style="background: white;"></span>
         <span style="background: white;"></span>
