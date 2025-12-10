@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1920, height=1080">
-    <title>Bailey Vann - Day 2 Continuation (Slides 71-85)</title>
+    <title>Bailey Vann - Day 3 Slides 71-85</title>
+    <style>
     <style>
 @font-face {
     font-family: 'Ogg Bold';
@@ -48,46 +49,24 @@
 }
 
 
+/* === BASE STYLES === */
 
-/* ====== PREMIUM DESIGN SYSTEM - MAUVE/PINK PALETTE ====== */
-:root {
-    /* Primary - Mauve/Pink (from inspiration) */
-    --mauve: #8B6B61;
-    --mauve-dark: #6B4F47;
-    --mauve-deep: #5C3341;
-    --rose: #C76B73;
-    --rose-soft: #D4727A;
-    --blush: #E8A5AB;
-    --pink-soft: #FAF7F2;
-    
-    /* Accent Colors */
-    --teal: #4A8B8B;
-    --teal-light: #5A9E9E;
-    --coral: #C4706A;
-    --gold: #B8963E;
-    
-    /* Backgrounds */
-    --cream: #FAF7F2;
-    --cream-warm: #FDF8F3;
-    --blush-bg: #FEF0EA;
-    --rose-tint: #FDF0EE;
-    
-    /* Text */
-    --text-dark: #3D3D3D;
-    --text-muted: #636E72;
-    --white: #FFFFFF;
-    --white-warm: #FFFEF5;
+/* === BASE STYLES === */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Satoshi', sans-serif;
-    background: var(--cream);
-    color: var(--text-dark);
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    width: 1920px;
+    margin: 0;
+    padding: 0;
+    background: #FFFBFA;
+    color: #2D3436;
 }
 
-/* ====== SLIDE BASE ====== */
 .slide {
     width: 1920px;
     height: 1080px;
@@ -98,809 +77,1108 @@ body {
     flex-direction: column;
 }
 
-/* ====== BACKGROUNDS ====== */
-.bg-teal {
-    background: linear-gradient(145deg, #4A8B8B 0%, #3D7575 100%);
+h1, h2, h3 {
+    font-family: 'Ogg Bold', serif;
+    font-weight: normal;
+    line-height: 1.2;
 }
 
-.bg-cream {
-    background: var(--cream);
-}
-
-.bg-mauve {
-    background: linear-gradient(145deg, var(--mauve-dark) 0%, var(--mauve-deep) 100%);
-}
-
-/* ====== TYPOGRAPHY ====== */
-.display {
-    font-family: 'Ogg', serif;
-    font-weight: bold;
-    line-height: 1.15;
-}
-
-.body-text {
+p {
     font-family: 'Satoshi', sans-serif;
-    font-weight: 500;
     line-height: 1.6;
 }
 
-/* ====== LAYOUT ====== */
-.content {
-    position: relative;
-    z-index: 1;
-    padding: 80px 100px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
+/* === SLIDE-SPECIFIC STYLES === */
 
-.flex-center {
-    display: flex;
-    align-items: center;
+.slide-71 {
+    background: linear-gradient(135deg, #5C3341 0%, #6B4F5C 100%);
     justify-content: center;
-    height: 100%;
+    padding-left: 180px;
 }
 
-.bg-shapes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+.slide-71 h1 {
+    font-size: 120px;
+    color: #FFFEF5;
+    margin-bottom: 40px;
+    line-height: 1.1;
 }
 
-/* ====== CARDS ====== */
-.card {
-    background: linear-gradient(145deg, #FFFFFF 0%, var(--rose-tint) 100%);
-    border-radius: 20px;
-    padding: 32px 40px;
-    border: 1px solid rgba(139, 107, 97, 0.08);
+.slide-71 .subheading {
+    font-size: 52px;
+    color: #E8A5AB;
+    margin-bottom: 60px;
+    font-family: 'Satoshi', sans-serif;
 }
 
-.card-teal {
-    background: linear-gradient(145deg, #FFFFFF 0%, rgba(74, 139, 139, 0.08) 100%);
-    border: 1px solid rgba(74, 139, 139, 0.12);
-}
-
-.card-coral {
-    background: linear-gradient(145deg, #FFFFFF 0%, rgba(196, 112, 106, 0.1) 100%);
-    border: 1px solid rgba(196, 112, 106, 0.15);
-}
-
-/* ====== QUOTE BLOCK ====== */
-.quote-block {
-    background: linear-gradient(145deg, rgba(74, 139, 139, 0.06) 0%, rgba(74, 139, 139, 0.02) 100%);
-    padding: 24px 32px;
-    border-left: 4px solid var(--teal);
-    border-radius: 0 16px 16px 0;
+.slide-71 .small-text {
+    font-size: 32px;
+    color: #D4727A;
     font-style: italic;
 }
 
-/* ====== ARROW LIST ====== */
-.arrow-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 16px;
-    font-family: 'Satoshi', sans-serif;
-    font-size: 24px;
-    color: var(--text-dark);
+.slide-72 {
+    background: #FFFBFA;
+    padding: 100px 180px;
 }
 
-.arrow-item::before {
-    content: '→';
-    color: var(--teal);
+.slide-72 h2 {
+    font-size: 72px;
+    color: #5C3341;
+    margin-bottom: 80px;
+}
+
+.comparison-container {
+    display: flex;
+    gap: 60px;
+    align-items: stretch;
+}
+
+.comparison-card {
+    flex: 1;
+    padding: 60px;
+    border-radius: 24px;
+    position: relative;
+}
+
+.card-left {
+    background: linear-gradient(135deg, rgba(212, 114, 122, 0.08) 0%, rgba(253, 248, 246, 0.4) 100%);
+}
+
+.card-right {
+    background: linear-gradient(135deg, rgba(27, 138, 138, 0.08) 0%, rgba(253, 248, 246, 0.4) 100%);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.comparison-card h3 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.card-left h3 {
+    color: #C76B73;
+}
+
+.card-right h3 {
+    color: #1B8A8A;
+}
+
+.card-subtitle {
+    font-size: 24px;
+    color: #6B4F5C;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.comparison-card p {
+    font-size: 28px;
+    line-height: 1.8;
+    color: #2D3436;
+    margin-bottom: 20px;
+}
+
+.slide-73 {
+    background: linear-gradient(135deg, #6B4F5C 0%, #5C3341 100%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 200px;
+}
+
+.slide-73 h2 {
+    font-size: 56px;
+    color: #E8A5AB;
+    margin-bottom: 80px;
+}
+
+.slide-73 .large-text {
+    font-size: 72px;
+    color: #FFFEF5;
+    font-family: 'Ogg Bold', serif;
+    line-height: 1.3;
+}
+
+.slide-74 {
+    background: #FDF8F6;
+    padding: 100px 180px;
+    justify-content: center;
+}
+
+.slide-74 h2 {
+    font-size: 72px;
+    color: #5C3341;
+    margin-bottom: 60px;
+}
+
+.slide-74 .content {
+    font-size: 44px;
+    line-height: 1.7;
+    color: #2D3436;
+    max-width: 1400px;
+}
+
+.slide-74 .highlight {
+    color: #C76B73;
     font-weight: 600;
+}
+
+.slide-75 {
+    background: #FFFBFA;
+    padding: 100px 180px;
+}
+
+.slide-75 h2 {
+    font-size: 72px;
+    color: #5C3341;
+    margin-bottom: 80px;
+}
+
+.income-cards {
+    display: flex;
+    gap: 60px;
+}
+
+.income-card {
+    flex: 1;
+    padding: 70px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(212, 114, 122, 0.06) 0%, rgba(253, 248, 246, 0.3) 100%);
+}
+
+.income-card .amount {
+    font-size: 64px;
+    font-family: 'Ogg Bold', serif;
+    color: #D4727A;
+    margin-bottom: 30px;
+}
+
+.income-card .description {
+    font-size: 32px;
+    line-height: 1.7;
+    color: #2D3436;
+}
+
+.slide-76 {
+    background: linear-gradient(135deg, #5C3341 0%, #6B4F5C 100%);
+    justify-content: center;
+    align-items: center;
+    padding: 0 240px;
+    text-align: center;
+}
+
+.slide-76 .quote {
+    font-size: 80px;
+    font-family: 'Ogg Bold', serif;
+    color: #FFFEF5;
+    line-height: 1.3;
+}
+
+.slide-76 .em {
+    color: #E8A5AB;
+    font-style: italic;
+}
+
+.slide-77 {
+    background: #FDF8F6;
+    padding: 100px 180px;
+}
+
+.slide-77 h2 {
+    font-size: 72px;
+    color: #5C3341;
+    margin-bottom: 80px;
+}
+
+.stats-container {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.stat-box {
+    flex: 1;
+    text-align: center;
+    padding: 50px 40px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(212, 114, 122, 0.05) 0%, rgba(253, 248, 246, 0.4) 100%);
+}
+
+.stat-number {
+    font-size: 96px;
+    font-family: 'Ogg Bold', serif;
+    color: #D4727A;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 24px;
+    color: #6B4F5C;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.stat-description {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #2D3436;
+}
+
+.slide-78 {
+    background: #FFFBFA;
+    padding: 100px 180px;
+}
+
+.slide-78 h2 {
+    font-size: 72px;
+    color: #5C3341;
+    margin-bottom: 80px;
+}
+
+.framework-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.flow-step {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.step-number {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #D4727A 0%, #C76B73 100%);
+    color: #FFFEF5;
+    font-size: 48px;
+    font-family: 'Ogg Bold', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
 }
 
+.step-content {
+    flex: 1;
+    padding: 40px 50px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(212, 114, 122, 0.04) 0%, rgba(253, 248, 246, 0.3) 100%);
+}
+
+.step-content h3 {
+    font-size: 40px;
+    color: #5C3341;
+    margin-bottom: 15px;
+}
+
+.step-content p {
+    font-size: 26px;
+    color: #2D3436;
+    line-height: 1.6;
+}
+
+.slide-79 {
+    background: #FDF8F6;
+    padding: 100px 180px;
+}
+
+.slide-79 h2 {
+    font-size: 72px;
+    color: #5C3341;
+    margin-bottom: 80px;
+}
+
+.transformation-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.before-after {
+    flex: 1;
+}
+
+.before-after h3 {
+    font-size: 44px;
+    margin-bottom: 40px;
+}
+
+.before-after.before h3 {
+    color: #C76B73;
+}
+
+.before-after.after h3 {
+    color: #1B8A8A;
+}
+
+.before-after ul {
+    list-style: none;
+}
+
+.before-after li {
+    font-size: 28px;
+    line-height: 1.9;
+    padding-left: 50px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.before-after.before li:before {
+    content: "×";
+    position: absolute;
+    left: 0;
+    font-size: 40px;
+    color: #C76B73;
+}
+
+.before-after.after li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-size: 36px;
+    color: #1B8A8A;
+}
+
+.arrow-separator {
+    font-size: 80px;
+    color: #D4727A;
+    flex-shrink: 0;
+}
+
+.slide-80 {
+    background: #FFFBFA;
+    padding: 100px 180px;
+}
+
+.slide-80 h2 {
+    font-size: 72px;
+    color: #5C3341;
+    margin-bottom: 80px;
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1400px;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(212, 114, 122, 0.04) 0%, rgba(253, 248, 246, 0.3) 100%);
+}
+
+.check-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1B8A8A;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.checklist-item p {
+    font-size: 32px;
+    line-height: 1.6;
+    color: #2D3436;
+}
+
+.slide-81 {
+    background: linear-gradient(135deg, #6B4F5C 0%, #5C3341 100%);
+    padding: 100px 180px;
+    justify-content: center;
+}
+
+.slide-81 h2 {
+    font-size: 72px;
+    color: #FFFEF5;
+    margin-bottom: 100px;
+}
+
+.questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.question-item {
+    padding: 50px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 6px solid #D4727A;
+}
+
+.question-item p {
+    font-size: 40px;
+    color: #FFFEF5;
+    line-height: 1.5;
+}
+
+.question-item .highlight {
+    color: #E8A5AB;
+    font-weight: 600;
+}
+
+.slide-82 {
+    background: #FDF8F6;
+    padding: 100px 180px;
+}
+
+.slide-82 h2 {
+    font-size: 72px;
+    color: #5C3341;
+    margin-bottom: 80px;
+}
+
+.ecosystem-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.ecosystem-center {
+    padding: 50px 80px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #D4727A 0%, #C76B73 100%);
+    text-align: center;
+}
+
+.ecosystem-center h3 {
+    font-size: 56px;
+    color: #FFFEF5;
+}
+
+.ecosystem-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+
+.ecosystem-item {
+    padding: 40px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(212, 114, 122, 0.06) 0%, rgba(253, 248, 246, 0.4) 100%);
+    text-align: center;
+    border: 2px solid rgba(212, 114, 122, 0.2);
+}
+
+.ecosystem-item h4 {
+    font-size: 32px;
+    color: #5C3341;
+    margin-bottom: 15px;
+    font-family: 'Ogg Bold', serif;
+}
+
+.ecosystem-item p {
+    font-size: 22px;
+    color: #2D3436;
+    line-height: 1.5;
+}
+
+.slide-83 {
+    background: linear-gradient(135deg, #5C3341 0%, #6B4F5C 100%);
+    justify-content: center;
+    align-items: center;
+    padding: 0 240px;
+    text-align: center;
+}
+
+.slide-83 .insight {
+    font-size: 68px;
+    font-family: 'Ogg Bold', serif;
+    color: #FFFEF5;
+    line-height: 1.4;
+    margin-bottom: 50px;
+}
+
+.slide-83 .attribution {
+    font-size: 32px;
+    color: #E8A5AB;
+    font-style: italic;
+}
+
+.slide-84 {
+    background: #FFFBFA;
+    padding: 100px 180px;
+}
+
+.slide-84 h2 {
+    font-size: 72px;
+    color: #5C3341;
+    margin-bottom: 80px;
+}
+
+.action-items {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.action-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.action-number {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #D4727A 0%, #C76B73 100%);
+    color: #FFFEF5;
+    font-size: 44px;
+    font-family: 'Ogg Bold', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.action-content {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.action-content h3 {
+    font-size: 44px;
+    color: #5C3341;
+    margin-bottom: 20px;
+}
+
+.action-content p {
+    font-size: 28px;
+    color: #2D3436;
+    line-height: 1.7;
+}
+
+.slide-85 {
+    background: linear-gradient(135deg, #6B4F5C 0%, #5C3341 100%);
+    justify-content: center;
+    padding-left: 180px;
+}
+
+.slide-85 h2 {
+    font-size: 88px;
+    color: #E8A5AB;
+    margin-bottom: 60px;
+}
+
+.slide-85 .key-takeaway {
+    font-size: 52px;
+    color: #FFFEF5;
+    line-height: 1.5;
+    margin-bottom: 80px;
+    max-width: 1400px;
+}
+
+.slide-85 .transition {
+    font-size: 36px;
+    color: #D4727A;
+    font-style: italic;
+}
+
+@media print {
+    body {
+        width: 1920px;
+    }
+    .slide {
+        page-break-after: always;
+    }
+}
     </style>
 </head>
 <body>
 
-<!-- ==================== SLIDE 71 ==================== -->
-<div class="slide bg-teal">
-    <!-- Premium SVG background shapes -->
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 71 -->
+<div class="slide slide-71">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
-            <linearGradient id="grad71a" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.08"/>
-                <stop offset="100%" style="stop-color:#4A8B8B;stop-opacity:0"/>
+            <linearGradient id="grad71-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.08"/>
+                <stop offset="100%" style="stop-color:#E8A5AB;stop-opacity:0.03"/>
             </linearGradient>
-            <linearGradient id="grad71b" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.05"/>
-                <stop offset="100%" style="stop-color:#4A8B8B;stop-opacity:0"/>
+            <linearGradient id="grad71-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#FDF8F6;stop-opacity:0.05"/>
+                <stop offset="100%" style="stop-color:#D4727A;stop-opacity:0.04"/>
             </linearGradient>
         </defs>
-        <ellipse cx="1650" cy="280" rx="450" ry="380" fill="url(#grad71a)"/>
-        <ellipse cx="250" cy="850" rx="380" ry="320" fill="url(#grad71b)"/>
-        <circle cx="1750" cy="750" r="180" fill="url(#grad71a)"/>
+        <ellipse cx="1600" cy="300" rx="600" ry="500" fill="url(#grad71-1)"/>
+        <ellipse cx="300" cy="800" rx="500" ry="400" fill="url(#grad71-2)"/>
     </svg>
-    
-    <div class="content flex-center" style="text-align: center;">
-        <div style="max-width: 1200px;">
-            <h1 class="display" style="font-size: 92px; color: var(--white); margin-bottom: 48px; letter-spacing: -0.02em;">
-                Before You Open Canva...
-            </h1>
-            <p class="body-text" style="font-size: 38px; color: var(--white); margin-bottom: 28px; font-weight: 500;">
-                You need to know WHO you're selling to.
-            </p>
-            <p class="body-text" style="font-size: 28px; color: rgba(255,255,255,0.7);">
-                Pretty designs can't fix a bad audience choice.
-            </p>
-        </div>
+    <div style="position:relative;z-index:1;">
+        <h1>Before You<br>Open Canva...</h1>
+        <p class="subheading">You need to know WHO you're selling to.</p>
+        <p class="small-text">Pretty designs can't fix a bad audience choice.</p>
     </div>
 </div>
 
-<!-- ==================== SLIDE 72 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 72 -->
+<div class="slide slide-72">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
-            <linearGradient id="grad72" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.06"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
+            <linearGradient id="grad72" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FDF8F6;stop-opacity:0.06"/>
+                <stop offset="100%" style="stop-color:#E8A5AB;stop-opacity:0.02"/>
             </linearGradient>
         </defs>
-        <ellipse cx="1700" cy="200" rx="400" ry="350" fill="url(#grad72)"/>
-        <circle cx="1800" cy="600" r="150" fill="url(#grad72)"/>
+        <ellipse cx="960" cy="540" rx="700" ry="600" fill="url(#grad72)"/>
     </svg>
-    
-    <div class="content">
-        <h1 class="display" style="font-size: 68px; color: var(--teal); margin-bottom: 48px;">
-            Most struggling shops skip this step
-        </h1>
-        
-        <p class="body-text" style="font-size: 28px; color: var(--text-dark); margin-bottom: 40px;">
-            They jump straight into creating:
-        </p>
-        
-        <div style="display: flex; flex-direction: column; gap: 20px; margin-left: 40px; max-width: 700px;">
-            <div class="quote-block">
-                <p style="font-size: 26px; color: var(--text-dark);">"I want to sell planners."</p>
+    <div style="position:relative;z-index:1;">
+        <h2>Product-First vs Audience-First</h2>
+        <div class="comparison-container">
+            <div class="comparison-card card-left">
+                <svg class="card-icon" viewBox="0 0 60 60" fill="none">
+                    <circle cx="30" cy="30" r="28" stroke="#C76B73" stroke-width="3"/>
+                    <line x1="15" y1="15" x2="45" y2="45" stroke="#C76B73" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="45" y1="15" x2="15" y2="45" stroke="#C76B73" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <h3>PRODUCT-FIRST</h3>
+                <p class="card-subtitle">(The Struggle)</p>
+                <p>"I want to sell stickers"</p>
+                <p>"I want to sell tumblers"</p>
+                <p style="margin-top:30px;font-style:italic;color:#C76B73;">Create first, hope the right person shows up</p>
             </div>
-            <div class="quote-block">
-                <p style="font-size: 26px; color: var(--text-dark);">"I want to sell SVGs."</p>
-            </div>
-            <div class="quote-block">
-                <p style="font-size: 26px; color: var(--text-dark);">"I'll just make what I feel like making."</p>
-            </div>
-        </div>
-        
-        <p class="body-text" style="font-size: 32px; color: var(--text-dark); margin-top: 56px;">
-            Then they wonder why nothing <span style="color: var(--coral); font-weight: 700;">consistently</span> sells.
-        </p>
-    </div>
-</div>
-
-<!-- ==================== SLIDE 73 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <linearGradient id="grad73a" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#C4706A;stop-opacity:0.04"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
-            </linearGradient>
-            <linearGradient id="grad73b" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.04"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
-            </linearGradient>
-        </defs>
-        <ellipse cx="300" cy="800" rx="350" ry="300" fill="url(#grad73a)"/>
-        <ellipse cx="1650" cy="250" rx="320" ry="280" fill="url(#grad73b)"/>
-    </svg>
-    
-    <div class="content">
-        <h1 class="display" style="font-size: 64px; color: var(--teal); text-align: center; margin-bottom: 60px;">
-            Product-First vs Audience-First
-        </h1>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; flex: 1; align-items: center;">
-            <!-- Product-First Card -->
-            <div class="card-coral" style="padding: 48px; border-radius: 24px; height: fit-content;">
-                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-                    <div style="width: 48px; height: 48px; background: var(--coral); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M6 6 L18 18 M18 6 L6 18" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h2 class="display" style="font-size: 32px; color: var(--coral);">PRODUCT-FIRST</h2>
-                </div>
-                <p style="font-size: 20px; color: var(--coral); margin-bottom: 28px; font-weight: 500;">(The Struggle)</p>
-                
-                <div style="display: flex; flex-direction: column; gap: 16px;">
-                    <div class="arrow-item" style="color: var(--text-dark);">→ "I want to sell stickers"</div>
-                    <div class="arrow-item" style="color: var(--text-dark);">→ "I want to sell tumblers"</div>
-                    <div class="arrow-item" style="color: var(--text-dark);">→ Create first, hope the right person shows up</div>
-                </div>
-            </div>
-            
-            <!-- Audience-First Card -->
-            <div class="card-teal" style="padding: 48px; border-radius: 24px; height: fit-content;">
-                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h2 class="display" style="font-size: 32px; color: var(--teal);">AUDIENCE-FIRST</h2>
-                </div>
-                <p style="font-size: 20px; color: var(--teal); margin-bottom: 28px; font-weight: 500;">(The Win)</p>
-                
-                <div style="display: flex; flex-direction: column; gap: 16px;">
-                    <div class="arrow-item" style="color: var(--text-dark);">→ "I help sublimation crafters find fresh designs"</div>
-                    <div class="arrow-item" style="color: var(--text-dark);">→ "I help book lovers track their reading"</div>
-                    <div class="arrow-item" style="color: var(--text-dark);">→ Start with a person, then build a lineup that serves them</div>
-                </div>
+            <div class="comparison-card card-right">
+                <svg class="card-icon" viewBox="0 0 60 60" fill="none">
+                    <circle cx="30" cy="30" r="28" stroke="#1B8A8A" stroke-width="3"/>
+                    <path d="M15 30 L25 40 L45 20" stroke="#1B8A8A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+                <h3>AUDIENCE-FIRST</h3>
+                <p class="card-subtitle">(The Win)</p>
+                <p>"I help sublimation crafters find fresh designs"</p>
+                <p>"I help book lovers track their reading"</p>
+                <p style="margin-top:30px;font-style:italic;color:#1B8A8A;">Start with a person, then build a lineup that serves them</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- ==================== SLIDE 74 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 73 -->
+<div class="slide slide-73">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
-            <linearGradient id="grad74" x1="50%" y1="0%" x2="50%" y2="100%">
-                <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.05"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
+            <linearGradient id="grad73-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.06"/>
+                <stop offset="100%" style="stop-color:#FDF8F6;stop-opacity:0.02"/>
+            </linearGradient>
+            <linearGradient id="grad73-2" x1="100%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:#E8A5AB;stop-opacity:0.05"/>
+                <stop offset="100%" style="stop-color:#6B4F5C;stop-opacity:0.02"/>
             </linearGradient>
         </defs>
-        <ellipse cx="960" cy="150" rx="600" ry="350" fill="url(#grad74)"/>
+        <ellipse cx="400" cy="300" rx="500" ry="450" fill="url(#grad73-1)"/>
+        <ellipse cx="1520" cy="780" rx="550" ry="450" fill="url(#grad73-2)"/>
     </svg>
-    
-    <div class="content flex-center" style="text-align: center;">
-        <div style="max-width: 1000px;">
-            <h1 class="display" style="font-size: 64px; color: var(--teal); margin-bottom: 16px;">
-                <span style="position: relative;">Step 1:<span style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 6px; background: var(--coral); border-radius: 3px;"></span></span> Know Your Income Target
-            </h1>
-            
-            <p class="body-text" style="font-size: 36px; color: var(--text-dark); margin-top: 56px; margin-bottom: 32px;">
-                Do you want <span style="color: var(--coral); font-weight: 700;">$1K</span> months? <span style="color: var(--coral); font-weight: 700;">$5K</span>? <span style="color: var(--coral); font-weight: 700;">$10K+</span>?
-            </p>
-            
-            <p class="body-text" style="font-size: 28px; color: var(--text-dark); opacity: 0.85; margin-bottom: 48px;">
-                Be honest — because not every niche<br>can realistically support every goal.
-            </p>
-            
-            <p class="body-text" style="font-size: 24px; color: var(--text-muted);">
-                We'll use this later to test if your niche can carry that goal.
-            </p>
+    <div style="position:relative;z-index:1;">
+        <h2>Before You Pick a Niche<br>Ask Yourself...</h2>
+        <p class="large-text">Do I actually want to serve<br>this person for the<br>next 5 years?</p>
+    </div>
+</div>
+
+<!-- SLIDE 74 -->
+<div class="slide slide-74">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
+        <defs>
+            <linearGradient id="grad74" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#E8A5AB;stop-opacity:0.04"/>
+                <stop offset="100%" style="stop-color:#FDF8F6;stop-opacity:0.03"/>
+            </linearGradient>
+        </defs>
+        <ellipse cx="1400" cy="600" rx="600" ry="500" fill="url(#grad74)"/>
+    </svg>
+    <div style="position:relative;z-index:1;">
+        <h2>Start With a Person<br>You Understand</h2>
+        <div class="content">
+            <p><span class="highlight">Not just a trend.</span> Not just a product type.</p>
+            <p style="margin-top:40px;">Someone whose <span class="highlight">problems, goals, and buying habits</span> you get because you've lived it or studied it.</p>
         </div>
     </div>
 </div>
 
-<!-- ==================== SLIDE 75 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 75 -->
+<div class="slide slide-75">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
             <linearGradient id="grad75" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#C4706A;stop-opacity:0.04"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.04"/>
+                <stop offset="100%" style="stop-color:#FDF8F6;stop-opacity:0.02"/>
             </linearGradient>
         </defs>
-        <ellipse cx="200" cy="200" rx="300" ry="250" fill="url(#grad75)"/>
+        <ellipse cx="960" cy="540" rx="750" ry="600" fill="url(#grad75)"/>
     </svg>
-    
-    <!-- Large decorative quote mark -->
-    <div style="position: absolute; top: 100px; left: 120px; font-family: 'Ogg', serif; font-size: 400px; color: var(--teal); opacity: 0.06; line-height: 0.6;">"</div>
-    
-    <div class="content flex-center" style="text-align: center;">
-        <div style="max-width: 1200px;">
-            <h2 class="display" style="font-size: 52px; color: var(--teal); margin-bottom: 56px;">
-                The Question That Changes Everything
-            </h2>
-            
-            <p class="display" style="font-size: 56px; color: var(--text-dark); line-height: 1.35; margin-bottom: 48px;">
-                "Who do I want to help...<br>
-                <span style="color: var(--coral);">and what problem or obsession do they have?</span>"
-            </p>
-            
-            <p class="body-text" style="font-size: 28px; color: var(--text-dark); opacity: 0.8;">
-                When you start with a specific person,<br>it's easy to build products they buy again and again.
-            </p>
-        </div>
-    </div>
-</div>
-
-<!-- ==================== SLIDE 76 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <linearGradient id="grad76" x1="100%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.05"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
-            </linearGradient>
-        </defs>
-        <ellipse cx="1700" cy="900" rx="350" ry="280" fill="url(#grad76)"/>
-    </svg>
-    
-    <div class="content flex-center">
-        <div style="width: 100%; max-width: 1100px;">
-            <h1 class="display" style="font-size: 64px; color: var(--teal); text-align: center; margin-bottom: 56px;">
-                Niche = Products + Audience
-            </h1>
-            
-            <div style="display: flex; flex-direction: column; gap: 28px;">
-                <!-- Products Card -->
-                <div class="card-teal" style="padding: 36px 48px; border-radius: 20px; display: flex; align-items: center; gap: 28px;">
-                    <div style="width: 64px; height: 64px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
-                            <rect x="6" y="4" width="20" height="24" rx="2" fill="none" stroke="white" stroke-width="2"/>
-                            <line x1="10" y1="10" x2="22" y2="10" stroke="white" stroke-width="2"/>
-                            <line x1="10" y1="16" x2="22" y2="16" stroke="white" stroke-width="2"/>
-                            <line x1="10" y1="22" x2="18" y2="22" stroke="white" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="display" style="font-size: 30px; color: var(--teal); margin-bottom: 8px;">Products = WHAT you sell</h3>
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark); opacity: 0.8;">(eBooks, planners, templates, SVGs, clipart...)</p>
-                    </div>
-                </div>
-                
-                <!-- Audience Card -->
-                <div class="card-teal" style="padding: 36px 48px; border-radius: 20px; display: flex; align-items: center; gap: 28px;">
-                    <div style="width: 64px; height: 64px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
-                            <circle cx="16" cy="10" r="5" fill="none" stroke="white" stroke-width="2"/>
-                            <path d="M6 28 C6 20 10 16 16 16 C22 16 26 20 26 28" fill="none" stroke="white" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="display" style="font-size: 30px; color: var(--teal); margin-bottom: 8px;">Audience = WHO you sell to</h3>
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark); opacity: 0.8;">(Busy moms, teachers, crafters, readers, homesteaders...)</p>
-                    </div>
-                </div>
-                
-                <!-- Examples Card -->
-                <div style="background: var(--white); padding: 36px 48px; border-radius: 20px; border: 3px solid var(--coral); margin-top: 12px;">
-                    <p class="body-text" style="font-size: 24px; color: var(--text-dark); margin-bottom: 16px;">
-                        <span style="color: var(--coral); font-weight: 700;">Niche Example:</span> "Reading journals for busy moms"
-                    </p>
-                    <p class="body-text" style="font-size: 24px; color: var(--text-dark);">
-                        <span style="color: var(--coral); font-weight: 700;">Niche Example:</span> "SVG bundles for sublimation crafters"
-                    </p>
-                </div>
+    <div style="position:relative;z-index:1;">
+        <h2>Income Target<br>Shapes Everything</h2>
+        <div class="income-cards">
+            <div class="income-card">
+                <div class="amount">$1K/month</div>
+                <p class="description">You can sell lower-ticket items with light marketing</p>
+            </div>
+            <div class="income-card">
+                <div class="amount">$10K+/month</div>
+                <p class="description">You need systems, bundles, and audience trust working together</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- ==================== SLIDE 77 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 76 -->
+<div class="slide slide-76">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
+        <defs>
+            <linearGradient id="grad76-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#E8A5AB;stop-opacity:0.07"/>
+                <stop offset="100%" style="stop-color:#FDF8F6;stop-opacity:0.03"/>
+            </linearGradient>
+            <linearGradient id="grad76-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.06"/>
+                <stop offset="100%" style="stop-color:#6B4F5C;stop-opacity:0.02"/>
+            </linearGradient>
+        </defs>
+        <ellipse cx="300" cy="540" rx="550" ry="600" fill="url(#grad76-1)"/>
+        <ellipse cx="1620" cy="540" rx="550" ry="600" fill="url(#grad76-2)"/>
+    </svg>
+    <div style="position:relative;z-index:1;">
+        <p class="quote">Your niche isn't just <span class="em">who</span> you sell to — it's the <span class="em">ecosystem</span> you build around them.</p>
+    </div>
+</div>
+
+<!-- SLIDE 77 -->
+<div class="slide slide-77">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
             <linearGradient id="grad77" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.04"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
+                <stop offset="0%" style="stop-color:#FDF8F6;stop-opacity:0.05"/>
+                <stop offset="100%" style="stop-color:#E8A5AB;stop-opacity:0.03"/>
             </linearGradient>
         </defs>
-        <ellipse cx="150" cy="150" rx="280" ry="240" fill="url(#grad77)"/>
-        <ellipse cx="1800" cy="950" rx="250" ry="200" fill="url(#grad77)"/>
+        <ellipse cx="960" cy="540" rx="700" ry="550" fill="url(#grad77)"/>
     </svg>
-    
-    <div class="content">
-        <h1 class="display" style="font-size: 60px; color: var(--teal); text-align: center; margin-bottom: 56px;">
-            3 Traits of Profitable Audiences
-        </h1>
-        
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; flex: 1; align-items: center;">
-            <!-- Trait 1 -->
-            <div class="card" style="text-align: center; padding: 48px 36px; height: fit-content;">
-                <div style="width: 72px; height: 72px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px; font-family: 'Ogg', serif; font-size: 32px; color: white;">1</div>
-                <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 20px;">Recurring Need</h3>
-                <p class="body-text" style="font-size: 20px; color: var(--text-dark); opacity: 0.8; line-height: 1.6;">Hobbies, routines, lifestyles, beliefs — they keep coming back</p>
+    <div style="position:relative;z-index:1;">
+        <h2>The Math Behind<br>Niche Selection</h2>
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-number">3x</div>
+                <div class="stat-label">CONVERSION BOOST</div>
+                <p class="stat-description">When you speak directly to one specific person vs. trying to appeal to everyone</p>
             </div>
-            
-            <!-- Trait 2 -->
-            <div class="card" style="text-align: center; padding: 48px 36px; height: fit-content;">
-                <div style="width: 72px; height: 72px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px; font-family: 'Ogg', serif; font-size: 32px; color: white;">2</div>
-                <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 20px;">Seasonal Hooks</h3>
-                <p class="body-text" style="font-size: 20px; color: var(--text-dark); opacity: 0.8; line-height: 1.6;">Christmas, back-to-school, graduations, New Year goals</p>
+            <div class="stat-box">
+                <div class="stat-number">70%</div>
+                <div class="stat-label">LESS COMPETITION</div>
+                <p class="stat-description">Narrowing your niche makes you the obvious choice instead of one of many options</p>
             </div>
-            
-            <!-- Trait 3 -->
-            <div class="card" style="text-align: center; padding: 48px 36px; height: fit-content;">
-                <div style="width: 72px; height: 72px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px; font-family: 'Ogg', serif; font-size: 32px; color: white;">3</div>
-                <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 20px;">Multiple Product Types</h3>
-                <p class="body-text" style="font-size: 20px; color: var(--text-dark); opacity: 0.8; line-height: 1.6;">At least 3-5 different formats they'd buy from you</p>
+            <div class="stat-box">
+                <div class="stat-number">2x</div>
+                <div class="stat-label">HIGHER PRICES</div>
+                <p class="stat-description">Specialized solutions command premium pricing compared to generic products</p>
             </div>
         </div>
-        
-        <p class="body-text" style="font-size: 26px; color: var(--text-dark); text-align: center; margin-top: 48px;">
-            If they only ever need one tiny product from you, big income goals become a <span style="color: var(--coral); font-weight: 700;">grind</span>.
-        </p>
     </div>
 </div>
 
-<!-- ==================== SLIDE 78 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 78 -->
+<div class="slide slide-78">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
-            <linearGradient id="grad78" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.05"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
+            <linearGradient id="grad78" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.04"/>
+                <stop offset="100%" style="stop-color:#FDF8F6;stop-opacity:0.02"/>
             </linearGradient>
         </defs>
-        <ellipse cx="1650" cy="540" rx="400" ry="500" fill="url(#grad78)"/>
+        <ellipse cx="1500" cy="540" rx="600" ry="650" fill="url(#grad78)"/>
     </svg>
-    
-    <div class="content">
-        <h1 class="display" style="font-size: 56px; color: var(--teal); margin-bottom: 48px;">
-            Example: Sublimation Crafters
-        </h1>
-        
-        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start;">
-            <div>
-                <div style="margin-bottom: 40px;">
-                    <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 16px;">Who they are:</h3>
-                    <p class="body-text" style="font-size: 24px; color: var(--text-dark);">Sellers making tumblers, mugs, shirts, bookmarks</p>
-                </div>
-                
-                <div style="margin-bottom: 40px;">
-                    <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 20px;">What they need from you:</h3>
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Fresh tumbler designs</p>
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Mug templates</p>
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Bookmark bundles</p>
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Seasonal packs</p>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 20px;">Why they're a great audience:</h3>
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Constant need for new designs</p>
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Follow holidays and trends</p>
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Buy from you over and over</p>
-                    </div>
+    <div style="position:relative;z-index:1;">
+        <h2>The Audience-First<br>Framework</h2>
+        <div class="framework-flow">
+            <div class="flow-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Identify Your Person</h3>
+                    <p>Who do you understand deeply? What community are you already part of or fascinated by?</p>
                 </div>
             </div>
-            
-            <!-- Custom Tumbler Illustration -->
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <svg width="320" height="500" viewBox="0 0 320 500">
-                    <defs>
-                        <linearGradient id="tumblerBody" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.25"/>
-                            <stop offset="50%" style="stop-color:#4A8B8B;stop-opacity:0.15"/>
-                            <stop offset="100%" style="stop-color:#4A8B8B;stop-opacity:0.25"/>
-                        </linearGradient>
-                        <linearGradient id="tumblerAccent" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#C4706A;stop-opacity:0.4"/>
-                            <stop offset="100%" style="stop-color:#C4706A;stop-opacity:0.2"/>
-                        </linearGradient>
-                    </defs>
-                    <!-- Tumbler body -->
-                    <ellipse cx="160" cy="60" rx="80" ry="25" fill="url(#tumblerBody)" stroke="#4A8B8B" stroke-width="2"/>
-                    <path d="M80 60 L95 420 Q160 450 225 420 L240 60" fill="url(#tumblerBody)" stroke="#4A8B8B" stroke-width="2"/>
-                    <ellipse cx="160" cy="420" rx="65" ry="20" fill="none" stroke="#4A8B8B" stroke-width="2"/>
-                    <!-- Design elements -->
-                    <rect x="110" y="150" width="100" height="120" rx="8" fill="url(#tumblerAccent)"/>
-                    <circle cx="160" cy="320" r="35" fill="#4A8B8B" opacity="0.2"/>
-                    <path d="M140 320 L160 340 L180 300" stroke="#4A8B8B" stroke-width="3" fill="none" stroke-linecap="round"/>
-                </svg>
+            <div class="flow-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Map Their Pain Points</h3>
+                    <p>What frustrates them? What do they wish existed? What gaps can you fill?</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Design Solutions</h3>
+                    <p>Create products that solve real problems, not just pretty things you hope will sell</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Build Your Ecosystem</h3>
+                    <p>Develop a product lineup that serves the same person at different price points and needs</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- ==================== SLIDE 79 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 79 -->
+<div class="slide slide-79">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
-            <linearGradient id="grad79" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#C4706A;stop-opacity:0.05"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
+            <linearGradient id="grad79" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#E8A5AB;stop-opacity:0.05"/>
+                <stop offset="100%" style="stop-color:#FDF8F6;stop-opacity:0.03"/>
             </linearGradient>
         </defs>
-        <ellipse cx="200" cy="900" rx="350" ry="280" fill="url(#grad79)"/>
+        <ellipse cx="960" cy="540" rx="800" ry="600" fill="url(#grad79)"/>
     </svg>
-    
-    <div class="content">
-        <h1 class="display" style="font-size: 56px; color: var(--teal); margin-bottom: 20px;">
-            Example: Book Lovers
-        </h1>
-        <p class="body-text" style="font-size: 26px; color: var(--text-dark); margin-bottom: 48px;">
-            If your audience = readers, you could sell:
-        </p>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px 80px; max-width: 1100px;">
-            <p class="body-text" style="font-size: 24px; color: var(--text-dark);">→ Reading trackers and planners</p>
-            <p class="body-text" style="font-size: 24px; color: var(--text-dark);">→ Bookshelf art and quote prints</p>
-            <p class="body-text" style="font-size: 24px; color: var(--text-dark);">→ TBR (To Be Read) list printables</p>
-            <p class="body-text" style="font-size: 24px; color: var(--text-dark);">→ Printable bookmarks</p>
-            <p class="body-text" style="font-size: 24px; color: var(--text-dark);">→ Reading challenge templates</p>
-            <p class="body-text" style="font-size: 24px; color: var(--text-dark);">→ POD bookmarks, totes, stickers</p>
-        </div>
-        
-        <div style="background: linear-gradient(135deg, var(--coral), #D88A84); padding: 32px 48px; border-radius: 20px; margin-top: 56px; text-align: center; max-width: 700px;">
-            <p class="body-text" style="font-size: 28px; color: white; font-weight: 600;">
-                One audience. Lots of product angles.
-            </p>
+    <div style="position:relative;z-index:1;">
+        <h2>What Changes When<br>You Go Audience-First</h2>
+        <div class="transformation-container">
+            <div class="before-after before">
+                <h3>BEFORE</h3>
+                <ul>
+                    <li>Random product ideas</li>
+                    <li>Hoping someone buys</li>
+                    <li>Competing on price</li>
+                    <li>Inconsistent sales</li>
+                    <li>No brand loyalty</li>
+                </ul>
+            </div>
+            <div class="arrow-separator">→</div>
+            <div class="before-after after">
+                <h3>AFTER</h3>
+                <ul>
+                    <li>Strategic product lineup</li>
+                    <li>Solving real problems</li>
+                    <li>Commanding premium prices</li>
+                    <li>Predictable revenue</li>
+                    <li>Repeat customers</li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- ==================== SLIDE 80 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 80 -->
+<div class="slide slide-80">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
-            <linearGradient id="grad80" x1="50%" y1="0%" x2="50%" y2="100%">
-                <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.04"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
+            <linearGradient id="grad80" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.04"/>
+                <stop offset="100%" style="stop-color:#FDF8F6;stop-opacity:0.02"/>
             </linearGradient>
         </defs>
-        <ellipse cx="960" cy="100" rx="500" ry="300" fill="url(#grad80)"/>
+        <ellipse cx="400" cy="540" rx="550" ry="600" fill="url(#grad80)"/>
     </svg>
-    
-    <div class="content">
-        <h1 class="display" style="font-size: 56px; color: var(--teal); text-align: center; margin-bottom: 56px;">
-            More Profitable Audience Ideas
-        </h1>
-        
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; flex: 1; align-items: start;">
-            <!-- SVGers Card -->
-            <div class="card" style="text-align: center; padding: 48px 36px;">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px;">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="white">
-                        <path d="M8 8 L20 4 L32 8 L32 32 L20 36 L8 32 Z" fill="none" stroke="white" stroke-width="2"/>
-                        <path d="M20 4 L20 36" stroke="white" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 16px;">SVGers & Crafters</h3>
-                <p class="body-text" style="font-size: 20px; color: var(--text-dark); opacity: 0.8;">Need SVGs, clipart bundles, graphics</p>
+    <div style="position:relative;z-index:1;">
+        <h2>Finding Your Person</h2>
+        <div class="checklist">
+            <div class="checklist-item">
+                <div class="check-icon">✓</div>
+                <p>Look at communities you're already part of — your best niche might be hiding in plain sight</p>
             </div>
-            
-            <!-- Identity Niches Card -->
-            <div class="card" style="text-align: center; padding: 48px 36px;">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--coral), #D88A84); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px;">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="white">
-                        <circle cx="20" cy="14" r="7" fill="none" stroke="white" stroke-width="2"/>
-                        <path d="M8 36 C8 26 13 22 20 22 C27 22 32 26 32 36" fill="none" stroke="white" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3 class="display" style="font-size: 28px; color: var(--coral); margin-bottom: 16px;">Identity Niches</h3>
-                <p class="body-text" style="font-size: 20px; color: var(--text-dark); opacity: 0.8;">"Homeschool moms," "Cat moms," "Nurses," "Teachers"</p>
+            <div class="checklist-item">
+                <div class="check-icon">✓</div>
+                <p>Think about problems you've solved for yourself — you understand the pain point intimately</p>
             </div>
-            
-            <!-- Interest Niches Card -->
-            <div class="card" style="text-align: center; padding: 48px 36px;">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px;">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="white">
-                        <circle cx="20" cy="20" r="14" fill="none" stroke="white" stroke-width="2"/>
-                        <path d="M20 10 L20 20 L28 26" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 16px;">Interest Niches</h3>
-                <p class="body-text" style="font-size: 20px; color: var(--text-dark); opacity: 0.8;">Gardening, gaming, neurodiversity, wellness</p>
+            <div class="checklist-item">
+                <div class="check-icon">✓</div>
+                <p>Consider who you'd genuinely enjoy serving — passion shows up in your work and marketing</p>
+            </div>
+            <div class="checklist-item">
+                <div class="check-icon">✓</div>
+                <p>Test if they have buying power — the best niche is one that can and will pay for solutions</p>
+            </div>
+            <div class="checklist-item">
+                <div class="check-icon">✓</div>
+                <p>Ask if you can sustain interest — you'll be creating for this person for years, not months</p>
             </div>
         </div>
-        
-        <p class="body-text" style="font-size: 24px; color: var(--text-dark); text-align: center; margin-top: 40px; opacity: 0.8;">
-            These audiences use multiple products across the whole year.
-        </p>
     </div>
 </div>
 
-<!-- ==================== SLIDE 81 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 81 -->
+<div class="slide slide-81">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
-            <linearGradient id="grad81" x1="100%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.06"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
+            <linearGradient id="grad81-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.07"/>
+                <stop offset="100%" style="stop-color:#E8A5AB;stop-opacity:0.03"/>
+            </linearGradient>
+            <linearGradient id="grad81-2" x1="100%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:#FDF8F6;stop-opacity:0.06"/>
+                <stop offset="100%" style="stop-color:#6B4F5C;stop-opacity:0.02"/>
             </linearGradient>
         </defs>
-        <ellipse cx="1700" cy="850" rx="380" ry="320" fill="url(#grad81)"/>
+        <ellipse cx="1600" cy="300" rx="550" ry="500" fill="url(#grad81-1)"/>
+        <ellipse cx="320" cy="780" rx="500" ry="450" fill="url(#grad81-2)"/>
     </svg>
-    
-    <div class="content">
-        <h1 class="display" style="font-size: 56px; color: var(--teal); margin-bottom: 56px;">
-            Stuck? Let Data Brainstorm With You
-        </h1>
-        
-        <div style="display: flex; flex-direction: column; gap: 36px; max-width: 900px;">
-            <div>
-                <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 12px;">On Etsy:</h3>
-                <p class="body-text" style="font-size: 24px; color: var(--text-dark);">Search "digital download [your niche]" — see what already sells</p>
+    <div style="position:relative;z-index:1;">
+        <h2>The Questions<br>That Matter</h2>
+        <div class="questions-list">
+            <div class="question-item">
+                <p>What does this person <span class="highlight">struggle with daily</span> that I could solve?</p>
             </div>
-            
-            <div>
-                <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 12px;">In ChatGPT:</h3>
-                <p class="body-text" style="font-size: 24px; color: var(--text-dark);">"Give me 10 digital products I could sell to [audience] on Etsy"</p>
+            <div class="question-item">
+                <p>Where do they <span class="highlight">already spend money</span> — and why?</p>
             </div>
-            
-            <div>
-                <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 12px;">In eRank:</h3>
-                <p class="body-text" style="font-size: 24px; color: var(--text-dark);">Check related keywords — what formats keep showing up?</p>
+            <div class="question-item">
+                <p>What would make them say <span class="highlight">"This was made for me"</span>?</p>
             </div>
-        </div>
-        
-        <div style="background: linear-gradient(135deg, var(--teal), var(--teal-light)); padding: 36px 56px; border-radius: 20px; margin-top: 56px; text-align: center; max-width: 700px;">
-            <p class="body-text" style="font-size: 28px; color: white; font-weight: 600;">
-                You're not guessing. You're using data.
-            </p>
+            <div class="question-item">
+                <p>Can I create multiple products that <span class="highlight">serve different needs</span> for this same person?</p>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- ==================== SLIDE 82 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 82 -->
+<div class="slide slide-82">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
             <linearGradient id="grad82" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.04"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
+                <stop offset="0%" style="stop-color:#FDF8F6;stop-opacity:0.05"/>
+                <stop offset="100%" style="stop-color:#E8A5AB;stop-opacity:0.03"/>
             </linearGradient>
         </defs>
-        <ellipse cx="200" cy="200" rx="300" ry="250" fill="url(#grad82)"/>
+        <ellipse cx="960" cy="540" rx="750" ry="600" fill="url(#grad82)"/>
     </svg>
-    
-    <div class="content">
-        <h1 class="display" style="font-size: 56px; color: var(--teal); margin-bottom: 56px;">
-            Validate Before You Create
-        </h1>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
-            <div>
-                <div style="margin-bottom: 40px;">
-                    <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 20px;">On Etsy:</h3>
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Search your niche + product idea</p>
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Filter by digital downloads</p>
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Sort by bestsellers</p>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="display" style="font-size: 28px; color: var(--teal); margin-bottom: 20px;">Look for:</h3>
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Multiple sellers making sales</p>
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Recent listings (not 7+ years old)</p>
-                        <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Proof of real, current demand</p>
-                    </div>
-                </div>
+    <div style="position:relative;z-index:1;">
+        <h2>Building Your<br>Product Ecosystem</h2>
+        <div class="ecosystem-diagram">
+            <div class="ecosystem-center">
+                <h3>Your Ideal Customer</h3>
             </div>
-            
-            <div class="card-teal" style="padding: 40px; border-radius: 24px;">
-                <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 28px;">
-                    <div style="width: 52px; height: 52px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 14px; display: flex; align-items: center; justify-content: center;">
-                        <svg width="28" height="28" viewBox="0 0 28 28">
-                            <path d="M6 14 L12 20 L22 8" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="display" style="font-size: 28px; color: var(--teal);">With ProfitTree:</h3>
+            <div class="ecosystem-items">
+                <div class="ecosystem-item">
+                    <h4>Entry Offer</h4>
+                    <p>Low-risk product that introduces them to your brand</p>
                 </div>
-                <div style="display: flex; flex-direction: column; gap: 16px;">
-                    <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Filter by revenue</p>
-                    <p class="body-text" style="font-size: 22px; color: var(--text-dark);">→ Check monthly sales and listing age</p>
+                <div class="ecosystem-item">
+                    <h4>Core Product</h4>
+                    <p>Your main solution that solves their primary problem</p>
+                </div>
+                <div class="ecosystem-item">
+                    <h4>Premium Offer</h4>
+                    <p>High-value bundle or specialized solution</p>
+                </div>
+                <div class="ecosystem-item">
+                    <h4>Complementary</h4>
+                    <p>Products that enhance or work with your core offering</p>
+                </div>
+                <div class="ecosystem-item">
+                    <h4>Seasonal</h4>
+                    <p>Timely products that keep them engaged year-round</p>
+                </div>
+                <div class="ecosystem-item">
+                    <h4>Recurring</h4>
+                    <p>Subscriptions or memberships for ongoing value</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- ==================== SLIDE 83 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 83 -->
+<div class="slide slide-83">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
-            <linearGradient id="grad83" x1="50%" y1="100%" x2="50%" y2="0%">
-                <stop offset="0%" style="stop-color:#C4706A;stop-opacity:0.05"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
+            <linearGradient id="grad83-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.08"/>
+                <stop offset="100%" style="stop-color:#E8A5AB;stop-opacity:0.03"/>
+            </linearGradient>
+            <linearGradient id="grad83-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#FDF8F6;stop-opacity:0.06"/>
+                <stop offset="100%" style="stop-color:#6B4F5C;stop-opacity:0.02"/>
             </linearGradient>
         </defs>
-        <ellipse cx="960" cy="950" rx="600" ry="300" fill="url(#grad83)"/>
+        <ellipse cx="400" cy="540" rx="600" ry="600" fill="url(#grad83-1)"/>
+        <ellipse cx="1520" cy="540" rx="600" ry="600" fill="url(#grad83-2)"/>
     </svg>
-    
-    <div class="content flex-center" style="text-align: center;">
-        <div style="max-width: 1000px;">
-            <h1 class="display" style="font-size: 60px; color: var(--teal); margin-bottom: 48px;">
-                Does This Match Your Goal?
-            </h1>
-            
-            <p class="body-text" style="font-size: 30px; color: var(--text-dark); margin-bottom: 28px;">
-                Go back to your income target.
-            </p>
-            
-            <p class="body-text" style="font-size: 30px; color: var(--text-dark); margin-bottom: 28px;">
-                Ask: "Does this niche have enough demand to support <span style="color: var(--coral); font-weight: 700;">$X/month</span>?"
-            </p>
-            
-            <p class="body-text" style="font-size: 26px; color: var(--text-dark); opacity: 0.8; margin-bottom: 48px;">
-                If not — repeat with a different product + audience combo.
-            </p>
-            
-            <div style="background: linear-gradient(135deg, var(--coral), #D88A84); padding: 40px 56px; border-radius: 24px; text-align: center;">
-                <p class="body-text" style="font-size: 26px; color: white; margin-bottom: 16px;">
-                    A <strong>$3 digital file</strong> niche hits different than a <strong>$175 template</strong> niche.
-                </p>
-                <p class="body-text" style="font-size: 26px; color: white; font-weight: 600;">
-                    Same "digital product" — very different earning potential.
-                </p>
-            </div>
-        </div>
+    <div style="position:relative;z-index:1;">
+        <p class="insight">The riches are in the niches —<br>but only if you choose a niche<br>you're willing to serve<br>with excellence.</p>
+        <p class="attribution">— Not just a catchy phrase, a business strategy</p>
     </div>
 </div>
 
-<!-- ==================== SLIDE 84 ==================== -->
-<div class="slide bg-cream">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 84 -->
+<div class="slide slide-84">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
             <linearGradient id="grad84" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#4A8B8B;stop-opacity:0.05"/>
-                <stop offset="100%" style="stop-color:#FAF7F2;stop-opacity:0"/>
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.04"/>
+                <stop offset="100%" style="stop-color:#FDF8F6;stop-opacity:0.02"/>
             </linearGradient>
         </defs>
-        <ellipse cx="1750" cy="300" rx="300" ry="280" fill="url(#grad84)"/>
+        <ellipse cx="1500" cy="540" rx="650" ry="600" fill="url(#grad84)"/>
     </svg>
-    
-    <div class="content">
-        <h1 class="display" style="font-size: 56px; color: var(--teal); margin-bottom: 56px;">
-            Once Your Niche Is Validated...
-        </h1>
-        
-        <div style="display: flex; flex-direction: column; gap: 28px; max-width: 1000px;">
-            <div style="display: flex; align-items: flex-start; gap: 24px;">
-                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Ogg', serif; font-size: 24px; color: white;">1</div>
-                <p class="body-text" style="font-size: 26px; color: var(--text-dark); padding-top: 12px;">Create products that clearly serve THAT specific audience</p>
+    <div style="position:relative;z-index:1;">
+        <h2>Your Next Steps</h2>
+        <div class="action-items">
+            <div class="action-item">
+                <div class="action-number">1</div>
+                <div class="action-content">
+                    <h3>Identify 3 Potential Niches</h3>
+                    <p>Write down three audiences you understand deeply. Don't overthink it — just brain dump who comes to mind first.</p>
+                </div>
             </div>
-            
-            <div style="display: flex; align-items: flex-start; gap: 24px;">
-                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Ogg', serif; font-size: 24px; color: white;">2</div>
-                <p class="body-text" style="font-size: 26px; color: var(--text-dark); padding-top: 12px;">Use proven SEO to get found</p>
+            <div class="action-item">
+                <div class="action-number">2</div>
+                <div class="action-content">
+                    <h3>Research Their Pain Points</h3>
+                    <p>Spend 30 minutes in their online spaces (Facebook groups, Reddit, forums). What problems do they complain about? What solutions are they asking for?</p>
+                </div>
             </div>
-            
-            <div style="display: flex; align-items: flex-start; gap: 24px;">
-                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Ogg', serif; font-size: 24px; color: white;">3</div>
-                <p class="body-text" style="font-size: 26px; color: var(--text-dark); padding-top: 12px;">Keep a list of future product ideas for the same person</p>
-            </div>
-            
-            <div style="display: flex; align-items: flex-start; gap: 24px;">
-                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Ogg', serif; font-size: 24px; color: white;">4</div>
-                <p class="body-text" style="font-size: 26px; color: var(--text-dark); padding-top: 12px;">Sell, email your buyers, and give them reasons to come back</p>
+            <div class="action-item">
+                <div class="action-number">3</div>
+                <div class="action-content">
+                    <h3>Map Your Product Ecosystem</h3>
+                    <p>For your top niche choice, sketch out 5-7 products that could serve this person at different price points and solve different problems.</p>
+                </div>
             </div>
         </div>
-        
-        <p class="body-text" style="font-size: 28px; color: var(--text-dark); margin-top: 56px; max-width: 900px;">
-            This is how you build a shop with <span style="color: var(--coral); font-weight: 700;">repeat customers</span> — not random one-off sales.
-        </p>
     </div>
 </div>
 
-<!-- ==================== SLIDE 85 ==================== -->
-<div class="slide bg-teal">
-    <svg class="bg-shapes" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- SLIDE 85 -->
+<div class="slide slide-85">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" viewBox="0 0 1920 1080">
         <defs>
-            <linearGradient id="grad85a" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.1"/>
-                <stop offset="100%" style="stop-color:#4A8B8B;stop-opacity:0"/>
+            <linearGradient id="grad85-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#E8A5AB;stop-opacity:0.08"/>
+                <stop offset="100%" style="stop-color:#FDF8F6;stop-opacity:0.03"/>
             </linearGradient>
-            <linearGradient id="grad85b" x1="100%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.06"/>
-                <stop offset="100%" style="stop-color:#4A8B8B;stop-opacity:0"/>
+            <linearGradient id="grad85-2" x1="100%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.06"/>
+                <stop offset="100%" style="stop-color:#6B4F5C;stop-opacity:0.02"/>
             </linearGradient>
         </defs>
-        <ellipse cx="1600" cy="300" rx="450" ry="400" fill="url(#grad85a)"/>
-        <ellipse cx="300" cy="800" rx="400" ry="350" fill="url(#grad85b)"/>
-        <circle cx="1750" cy="700" r="150" fill="url(#grad85a)"/>
+        <ellipse cx="1600" cy="400" rx="600" ry="550" fill="url(#grad85-1)"/>
+        <ellipse cx="300" cy="700" rx="500" ry="500" fill="url(#grad85-2)"/>
     </svg>
-    
-    <div class="content flex-center" style="text-align: center;">
-        <div style="max-width: 1100px;">
-            <h1 class="display" style="font-size: 80px; color: var(--white); margin-bottom: 48px; letter-spacing: -0.02em;">
-                Now You See Why Audience Matters
-            </h1>
-            
-            <p class="body-text" style="font-size: 34px; color: var(--white); margin-bottom: 32px; font-weight: 500;">
-                Next, I'll show you how to <strong style="font-weight: 700;">MINE</strong> real demand on Etsy<br>
-                so you're never guessing what to design again.
-            </p>
-            
-            <p class="body-text" style="font-size: 28px; color: rgba(255,255,255,0.75);">
-                Tonight I'm walking you through the manual version — let's start with <strong style="color: white; font-weight: 700;">MINE</strong>.
-            </p>
-        </div>
+    <div style="position:relative;z-index:1;">
+        <h2>Remember...</h2>
+        <p class="key-takeaway">The strongest digital product businesses aren't built on what you want to make — they're built on who you want to serve.</p>
+        <p class="transition">Next up: How to validate your niche before you invest months building products →</p>
     </div>
 </div>
 
