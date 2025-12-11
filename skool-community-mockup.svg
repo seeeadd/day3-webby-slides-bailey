@@ -22,14 +22,150 @@
       .upcoming-time { font-family: 'Inter', sans-serif; font-size: 12px; fill: #10B981; font-weight: 500; }
     </style>
 
-    <!-- Drop shadow -->
+    <!-- Drop shadows -->
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="1" stdDeviation="3" flood-opacity="0.08"/>
     </filter>
-
     <filter id="shadow-sm" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.06"/>
     </filter>
+    <filter id="glow-teal" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#4DA6A6" flood-opacity="0.3"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4DA6A6"/>
+      <stop offset="100%" style="stop-color:#3D8B8B"/>
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1"/>
+      <stop offset="100%" style="stop-color:#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="coralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F87171"/>
+      <stop offset="100%" style="stop-color:#EF4444"/>
+    </linearGradient>
+    <linearGradient id="amberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FBBF24"/>
+      <stop offset="100%" style="stop-color:#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34D399"/>
+      <stop offset="100%" style="stop-color:#10B981"/>
+    </linearGradient>
+    <linearGradient id="avatarGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C4B5FD"/>
+      <stop offset="100%" style="stop-color:#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="avatarGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDA4AF"/>
+      <stop offset="100%" style="stop-color:#FB7185"/>
+    </linearGradient>
+    <linearGradient id="avatarGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A5F3FC"/>
+      <stop offset="100%" style="stop-color:#67E8F9"/>
+    </linearGradient>
+    <linearGradient id="avatarGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDE68A"/>
+      <stop offset="100%" style="stop-color:#FCD34D"/>
+    </linearGradient>
+    <linearGradient id="avatarGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#BBF7D0"/>
+      <stop offset="100%" style="stop-color:#86EFAC"/>
+    </linearGradient>
+
+    <!-- Custom Icons -->
+    <!-- Star icon -->
+    <symbol id="icon-star" viewBox="0 0 20 20">
+      <path d="M10 1l2.39 6.26L19 8.27l-5 4.87 1.18 6.88L10 16.77l-5.18 3.25L6 13.14 1 8.27l6.61-1.01L10 1z" fill="url(#amberGradient)"/>
+    </symbol>
+
+    <!-- Flexed arm / strength icon -->
+    <symbol id="icon-strength" viewBox="0 0 24 24">
+      <path d="M4 17c0 1 .5 2 2 2h3c1 0 2-.5 2.5-1.5l2-4c.3-.6.5-1.2.5-1.8V9c0-1.5-1-2.5-2-3l-3-1.5c-.5-.3-1-.5-1.5-.5H6c-1 0-2 1-2 2v11z" fill="url(#coralGradient)"/>
+      <path d="M9 7c1.5 0 3 1 3.5 2.5.5 1.5 0 3-1 4l-2 2" stroke="#FFF" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <circle cx="17" cy="8" r="3" fill="url(#amberGradient)"/>
+      <path d="M15 11l2 2m0 0l2-2m-2 2v4" stroke="url(#amberGradient)" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Fire / trending icon -->
+    <symbol id="icon-fire" viewBox="0 0 24 24">
+      <path d="M12 2c0 4-3 6-3 10 0 3 2 5 5 5s5-2 5-5c0-6-4-8-4-8s0 2-2 2c0-2-1-4-1-4z" fill="url(#coralGradient)"/>
+      <path d="M12 22c-2 0-4-1.5-4-4 0-2 1-3 2-4 1 1 2 2 2 4 0-2 1-3 2-4 1 1 2 2 2 4 0 2.5-2 4-4 4z" fill="url(#amberGradient)"/>
+    </symbol>
+
+    <!-- Comment bubble icon -->
+    <symbol id="icon-comment" viewBox="0 0 24 24">
+      <path d="M21 12c0 4-4 7-9 7-1.5 0-3-.3-4.2-.8L3 20l1.5-4C3.5 14.5 3 13.3 3 12c0-4 4-7 9-7s9 3 9 7z" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1.5"/>
+      <circle cx="8" cy="12" r="1" fill="#9CA3AF"/>
+      <circle cx="12" cy="12" r="1" fill="#9CA3AF"/>
+      <circle cx="16" cy="12" r="1" fill="#9CA3AF"/>
+    </symbol>
+
+    <!-- Heart icon -->
+    <symbol id="icon-heart" viewBox="0 0 24 24">
+      <path d="M12 21l-1.5-1.3C5 15 2 12.3 2 8.5 2 5.4 4.4 3 7.5 3c1.7 0 3.4.8 4.5 2.1C13.1 3.8 14.8 3 16.5 3 19.6 3 22 5.4 22 8.5c0 3.8-3 6.5-8.5 11.2L12 21z" fill="url(#coralGradient)"/>
+    </symbol>
+
+    <!-- Thought bubble icon -->
+    <symbol id="icon-thought" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="11" rx="8" ry="6" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1.5"/>
+      <circle cx="6" cy="19" r="2" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+      <circle cx="3" cy="21" r="1" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="0.75"/>
+    </symbol>
+
+    <!-- Calendar icon -->
+    <symbol id="icon-calendar" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="18" rx="3" fill="url(#brandGradient)"/>
+      <rect x="3" y="4" width="18" height="6" rx="3" fill="#3D8B8B"/>
+      <line x1="7" y1="2" x2="7" y2="6" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
+      <line x1="17" y1="2" x2="17" y2="6" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
+      <rect x="6" y="13" width="3" height="3" rx="0.5" fill="#FFF"/>
+      <rect x="10.5" y="13" width="3" height="3" rx="0.5" fill="#FFF"/>
+      <rect x="15" y="13" width="3" height="3" rx="0.5" fill="#FFF" opacity="0.5"/>
+      <rect x="6" y="17.5" width="3" height="3" rx="0.5" fill="#FFF" opacity="0.5"/>
+    </symbol>
+
+    <!-- Book / course icon -->
+    <symbol id="icon-book" viewBox="0 0 24 24">
+      <path d="M4 4h5c2 0 3 1 3 2v14c0-1-1-2-3-2H4V4z" fill="url(#purpleGradient)"/>
+      <path d="M20 4h-5c-2 0-3 1-3 2v14c0-1 1-2 3-2h5V4z" fill="url(#brandGradient)"/>
+      <line x1="12" y1="6" x2="12" y2="18" stroke="#FFF" stroke-width="0.5" opacity="0.5"/>
+    </symbol>
+
+    <!-- Video call icon -->
+    <symbol id="icon-video" viewBox="0 0 24 24">
+      <rect x="2" y="5" width="14" height="14" rx="3" fill="url(#brandGradient)"/>
+      <path d="M16 9l5-3v12l-5-3V9z" fill="url(#greenGradient)"/>
+    </symbol>
+
+    <!-- Trophy icon -->
+    <symbol id="icon-trophy" viewBox="0 0 24 24">
+      <path d="M6 4h12v6c0 3-2.5 5.5-6 5.5S6 13 6 10V4z" fill="url(#amberGradient)"/>
+      <path d="M6 6H3c0 3 1.5 5 3 5V6zM18 6h3c0 3-1.5 5-3 5V6z" fill="url(#amberGradient)" opacity="0.7"/>
+      <rect x="9" y="15" width="6" height="3" fill="url(#amberGradient)"/>
+      <rect x="7" y="18" width="10" height="3" rx="1" fill="url(#amberGradient)" opacity="0.8"/>
+    </symbol>
+
+    <!-- Pen / write icon -->
+    <symbol id="icon-write" viewBox="0 0 24 24">
+      <path d="M16 3l5 5-12 12H4v-5L16 3z" fill="url(#purpleGradient)"/>
+      <path d="M14 5l5 5" stroke="#FFF" stroke-width="1.5"/>
+    </symbol>
+
+    <!-- Checkmark icon -->
+    <symbol id="icon-check" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="10" fill="url(#greenGradient)"/>
+      <path d="M6 10l3 3 5-6" stroke="#FFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
   </defs>
 
   <!-- Background -->
@@ -38,58 +174,53 @@
   <!-- ==================== TOP BAR ==================== -->
   <rect width="1400" height="64" fill="#FFFFFF" filter="url(#shadow)"/>
 
-  <!-- Skool logo placeholder -->
-  <g transform="translate(24, 18)">
-    <rect width="32" height="32" rx="8" fill="#5865F2"/>
-    <text x="16" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">S</text>
+  <!-- Skool logo -->
+  <g transform="translate(24, 16)">
+    <rect width="36" height="36" rx="10" fill="url(#purpleGradient)"/>
+    <text x="18" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">S</text>
   </g>
 
   <!-- Community name and member count -->
-  <text x="72" y="34" class="header-title">Etsy Accelerator Community</text>
-  <text x="72" y="52" class="member-count">247 members</text>
+  <text x="76" y="34" class="header-title">Etsy Accelerator Community</text>
+  <g transform="translate(76, 42)">
+    <circle cx="4" cy="4" r="3" fill="#10B981"/>
+    <text x="12" y="8" class="member-count">247 members</text>
+  </g>
 
   <!-- Navigation tabs -->
   <g transform="translate(700, 0)">
     <text x="0" y="38" class="nav-tab">Classroom</text>
-
-    <!-- Community tab (active) -->
     <g transform="translate(100, 0)">
       <text x="0" y="38" class="nav-tab-active">Community</text>
-      <rect x="-5" y="52" width="90" height="3" rx="1.5" fill="#5865F2"/>
+      <rect x="-5" y="52" width="90" height="3" rx="1.5" fill="url(#purpleGradient)"/>
     </g>
-
     <text x="200" y="38" class="nav-tab">Calendar</text>
     <text x="300" y="38" class="nav-tab">Leaderboard</text>
   </g>
 
-  <!-- ==================== LEFT SIDEBAR (20% = 280px) ==================== -->
+  <!-- ==================== LEFT SIDEBAR ==================== -->
   <g transform="translate(24, 84)">
     <rect width="250" height="420" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
 
-    <!-- Online Now header -->
     <text x="20" y="32" class="sidebar-header">Online Now</text>
 
-    <!-- Member list -->
     <g transform="translate(20, 50)">
 
       <!-- Bailey V. (host, online) -->
       <g transform="translate(0, 0)">
-        <circle cx="18" cy="18" r="18" fill="#E5E7EB"/>
-        <circle cx="18" cy="18" r="18" fill="#4DA6A6" opacity="0.3"/>
-        <text x="18" y="23" text-anchor="middle" font-size="14" fill="#4DA6A6">B</text>
-        <!-- Online dot -->
+        <circle cx="18" cy="18" r="18" fill="url(#brandGradient)"/>
+        <text x="18" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">B</text>
         <circle cx="30" cy="28" r="5" fill="#FFFFFF"/>
         <circle cx="30" cy="28" r="4" fill="#10B981"/>
-        <!-- Name with star badge -->
         <text x="44" y="15" class="member-name-host">Bailey V.</text>
-        <text x="102" y="15" font-size="12">⭐</text>
-        <text x="44" y="30" font-family="Inter, sans-serif" font-size="11" fill="#5865F2">Host</text>
+        <use href="#icon-star" x="100" y="4" width="14" height="14"/>
+        <text x="44" y="30" font-family="Inter, sans-serif" font-size="11" fill="#6366F1">Host</text>
       </g>
 
       <!-- Sarah M. (online) -->
       <g transform="translate(0, 48)">
-        <circle cx="18" cy="18" r="18" fill="#E5E7EB"/>
-        <text x="18" y="23" text-anchor="middle" font-size="14" fill="#9CA3AF">S</text>
+        <circle cx="18" cy="18" r="18" fill="url(#avatarGradient1)"/>
+        <text x="18" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#5B21B6">S</text>
         <circle cx="30" cy="28" r="5" fill="#FFFFFF"/>
         <circle cx="30" cy="28" r="4" fill="#10B981"/>
         <text x="44" y="22" class="member-name">Sarah M.</text>
@@ -97,8 +228,8 @@
 
       <!-- Jessica T. (online) -->
       <g transform="translate(0, 96)">
-        <circle cx="18" cy="18" r="18" fill="#E5E7EB"/>
-        <text x="18" y="23" text-anchor="middle" font-size="14" fill="#9CA3AF">J</text>
+        <circle cx="18" cy="18" r="18" fill="url(#avatarGradient2)"/>
+        <text x="18" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#9F1239">J</text>
         <circle cx="30" cy="28" r="5" fill="#FFFFFF"/>
         <circle cx="30" cy="28" r="4" fill="#10B981"/>
         <text x="44" y="22" class="member-name">Jessica T.</text>
@@ -106,8 +237,8 @@
 
       <!-- Michelle L. (online) -->
       <g transform="translate(0, 144)">
-        <circle cx="18" cy="18" r="18" fill="#E5E7EB"/>
-        <text x="18" y="23" text-anchor="middle" font-size="14" fill="#9CA3AF">M</text>
+        <circle cx="18" cy="18" r="18" fill="url(#avatarGradient3)"/>
+        <text x="18" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#0E7490">M</text>
         <circle cx="30" cy="28" r="5" fill="#FFFFFF"/>
         <circle cx="30" cy="28" r="4" fill="#10B981"/>
         <text x="44" y="22" class="member-name">Michelle L.</text>
@@ -115,8 +246,8 @@
 
       <!-- Amanda K. (online) -->
       <g transform="translate(0, 192)">
-        <circle cx="18" cy="18" r="18" fill="#E5E7EB"/>
-        <text x="18" y="23" text-anchor="middle" font-size="14" fill="#9CA3AF">A</text>
+        <circle cx="18" cy="18" r="18" fill="url(#avatarGradient4)"/>
+        <text x="18" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#A16207">A</text>
         <circle cx="30" cy="28" r="5" fill="#FFFFFF"/>
         <circle cx="30" cy="28" r="4" fill="#10B981"/>
         <text x="44" y="22" class="member-name">Amanda K.</text>
@@ -124,22 +255,22 @@
 
       <!-- Rachel B. (offline) -->
       <g transform="translate(0, 240)">
-        <circle cx="18" cy="18" r="18" fill="#E5E7EB"/>
-        <text x="18" y="23" text-anchor="middle" font-size="14" fill="#9CA3AF">R</text>
+        <circle cx="18" cy="18" r="18" fill="url(#avatarGradient5)"/>
+        <text x="18" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#166534">R</text>
         <text x="44" y="22" class="member-name">Rachel B.</text>
       </g>
 
       <!-- Lauren P. (offline) -->
       <g transform="translate(0, 288)">
-        <circle cx="18" cy="18" r="18" fill="#E5E7EB"/>
-        <text x="18" y="23" text-anchor="middle" font-size="14" fill="#9CA3AF">L</text>
+        <circle cx="18" cy="18" r="18" fill="url(#avatarGradient1)" opacity="0.6"/>
+        <text x="18" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#5B21B6">L</text>
         <text x="44" y="22" class="member-name">Lauren P.</text>
       </g>
 
       <!-- Christina H. (offline) -->
       <g transform="translate(0, 336)">
-        <circle cx="18" cy="18" r="18" fill="#E5E7EB"/>
-        <text x="18" y="23" text-anchor="middle" font-size="14" fill="#9CA3AF">C</text>
+        <circle cx="18" cy="18" r="18" fill="url(#avatarGradient2)" opacity="0.6"/>
+        <text x="18" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#9F1239">C</text>
         <text x="44" y="22" class="member-name">Christina H.</text>
       </g>
 
@@ -150,10 +281,9 @@
       <circle cx="6" cy="-3" r="4" fill="#10B981"/>
       <text x="16" y="0" class="online-count">5 online now</text>
     </g>
-
   </g>
 
-  <!-- ==================== MAIN FEED (60% = 840px) ==================== -->
+  <!-- ==================== MAIN FEED ==================== -->
   <g transform="translate(294, 84)">
 
     <!-- POST 1 -->
@@ -161,49 +291,51 @@
       <rect width="780" height="280" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
 
       <!-- Avatar -->
-      <circle cx="40" cy="40" r="22" fill="#E5E7EB"/>
-      <text x="40" y="46" text-anchor="middle" font-size="18" fill="#9CA3AF">M</text>
+      <circle cx="40" cy="40" r="22" fill="url(#avatarGradient3)"/>
+      <text x="40" y="47" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#0E7490">M</text>
 
       <!-- Author & time -->
       <text x="72" y="34" class="post-author">Michelle L.</text>
-      <text x="150" y="34" class="post-time">• 2 hours ago</text>
+      <circle cx="152" cy="30" r="2" fill="#D1D5DB"/>
+      <text x="162" y="34" class="post-time">2 hours ago</text>
 
       <!-- Post text -->
-      <text x="72" y="58" class="post-text">Just deleted 47 listings and I feel FREE 🙌</text>
-      <text x="72" y="80" class="post-text">My shop already looks so much cleaner. The ones left are actually</text>
-      <text x="72" y="102" class="post-text">my best work. Week 1 DELETE phase = complete!</text>
+      <text x="72" y="60" class="post-text">Just deleted 47 listings and I feel FREE! My shop already looks so</text>
+      <text x="72" y="82" class="post-text">much cleaner. The ones left are actually my best work.</text>
+      <text x="72" y="104" class="post-text">Week 1 DELETE phase = complete!</text>
 
       <!-- Engagement -->
-      <g transform="translate(72, 130)">
-        <text x="0" y="0" font-size="16">💪</text>
-        <text x="24" y="0" class="engagement">23</text>
-        <text x="70" y="0" font-size="16">💬</text>
-        <text x="94" y="0" class="engagement">12 comments</text>
+      <g transform="translate(72, 122)">
+        <g transform="translate(0, 0)">
+          <use href="#icon-strength" x="0" y="0" width="20" height="20"/>
+          <text x="26" y="15" class="engagement">23</text>
+        </g>
+        <g transform="translate(70, 0)">
+          <use href="#icon-comment" x="0" y="0" width="20" height="20"/>
+          <text x="26" y="15" class="engagement">12 comments</text>
+        </g>
       </g>
 
       <!-- Divider -->
-      <rect x="20" y="150" width="740" height="1" fill="#F3F4F6"/>
+      <rect x="20" y="155" width="740" height="1" fill="#F3F4F6"/>
 
       <!-- Bailey's reply -->
-      <g transform="translate(30, 165)">
-        <!-- Bailey avatar -->
-        <circle cx="18" cy="18" r="16" fill="#4DA6A6" opacity="0.3"/>
-        <circle cx="18" cy="18" r="16" fill="#E5E7EB"/>
-        <text x="18" y="23" text-anchor="middle" font-size="12" fill="#4DA6A6">B</text>
+      <g transform="translate(30, 170)">
+        <circle cx="18" cy="18" r="16" fill="url(#brandGradient)"/>
+        <text x="18" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">B</text>
 
-        <!-- Reply author with badge -->
         <text x="44" y="15" class="reply-author">Bailey Vann</text>
-        <rect x="118" y="3" width="40" height="16" rx="4" fill="#5865F2"/>
+        <rect x="118" y="3" width="40" height="16" rx="4" fill="url(#purpleGradient)"/>
         <text x="138" y="14" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#FFFFFF">HOST</text>
 
-        <!-- Reply text -->
         <text x="44" y="40" class="reply-text">This is EXACTLY what's supposed to happen! Your shop can finally</text>
         <text x="44" y="58" class="reply-text">breathe. Watch what happens to your views this week — the algorithm</text>
-        <text x="44" y="76" class="reply-text">rewards focus. Keep going! 💛</text>
+        <text x="44" y="76" class="reply-text">rewards focus. Keep going!</text>
 
-        <!-- Reply engagement -->
-        <text x="44" y="100" font-size="14">❤️</text>
-        <text x="64" y="100" class="engagement">8</text>
+        <g transform="translate(44, 88)">
+          <use href="#icon-heart" x="0" y="0" width="16" height="16"/>
+          <text x="22" y="13" class="engagement">8</text>
+        </g>
       </g>
     </g>
 
@@ -211,89 +343,79 @@
     <g transform="translate(0, 300)">
       <rect width="780" height="160" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
 
-      <!-- Avatar -->
-      <circle cx="40" cy="40" r="22" fill="#E5E7EB"/>
-      <text x="40" y="46" text-anchor="middle" font-size="18" fill="#9CA3AF">R</text>
+      <circle cx="40" cy="40" r="22" fill="url(#avatarGradient5)"/>
+      <text x="40" y="47" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#166534">R</text>
 
-      <!-- Author & time -->
       <text x="72" y="34" class="post-author">Rachel B.</text>
-      <text x="142" y="34" class="post-time">• 5 hours ago</text>
+      <circle cx="142" cy="30" r="2" fill="#D1D5DB"/>
+      <text x="152" y="34" class="post-time">5 hours ago</text>
 
-      <!-- Post text -->
       <text x="72" y="60" class="post-text">Week 2 check-in: Already seeing traffic increase on my remaining</text>
-      <text x="72" y="82" class="post-text">listings! The DELETE phase actually works 😭 My views are up 34%</text>
-      <text x="72" y="104" class="post-text">and I literally have FEWER products</text>
+      <text x="72" y="82" class="post-text">listings! The DELETE phase actually works. My views are up 34%</text>
+      <text x="72" y="104" class="post-text">and I literally have FEWER products.</text>
 
-      <!-- Engagement -->
-      <g transform="translate(72, 135)">
-        <text x="0" y="0" font-size="16">🔥</text>
-        <text x="24" y="0" class="engagement">31</text>
-        <text x="70" y="0" font-size="16">💬</text>
-        <text x="94" y="0" class="engagement">8 comments</text>
+      <g transform="translate(72, 122)">
+        <g transform="translate(0, 0)">
+          <use href="#icon-fire" x="0" y="0" width="20" height="20"/>
+          <text x="26" y="15" class="engagement">31</text>
+        </g>
+        <g transform="translate(70, 0)">
+          <use href="#icon-comment" x="0" y="0" width="20" height="20"/>
+          <text x="26" y="15" class="engagement">8 comments</text>
+        </g>
       </g>
     </g>
 
-    <!-- POST 3 (partial, cut off) -->
+    <!-- POST 3 (partial) -->
     <g transform="translate(0, 480)">
       <rect width="780" height="140" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
 
-      <!-- Avatar -->
-      <circle cx="40" cy="40" r="22" fill="#E5E7EB"/>
-      <text x="40" y="46" text-anchor="middle" font-size="18" fill="#9CA3AF">A</text>
+      <circle cx="40" cy="40" r="22" fill="url(#avatarGradient4)"/>
+      <text x="40" y="47" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#A16207">A</text>
 
-      <!-- Author & time -->
       <text x="72" y="34" class="post-author">Amanda K.</text>
-      <text x="154" y="34" class="post-time">• Yesterday</text>
+      <circle cx="154" cy="30" r="2" fill="#D1D5DB"/>
+      <text x="164" y="34" class="post-time">Yesterday</text>
 
-      <!-- Post text (partial) -->
       <text x="72" y="60" class="post-text">Question for everyone — when you did the SEO framework on your</text>
       <text x="72" y="82" class="post-text">listings, did you change all of them at once or spread it out over a</text>
       <text x="72" y="104" class="post-text">few days? I'm trying to figure out the best approach for my shop...</text>
 
-      <!-- Engagement -->
-      <g transform="translate(72, 128)">
-        <text x="0" y="0" font-size="16">💭</text>
-        <text x="24" y="0" class="engagement">15</text>
-        <text x="70" y="0" font-size="16">💬</text>
-        <text x="94" y="0" class="engagement">22 comments</text>
+      <g transform="translate(72, 118)">
+        <g transform="translate(0, 0)">
+          <use href="#icon-thought" x="0" y="0" width="20" height="20"/>
+          <text x="26" y="15" class="engagement">15</text>
+        </g>
+        <g transform="translate(70, 0)">
+          <use href="#icon-comment" x="0" y="0" width="20" height="20"/>
+          <text x="26" y="15" class="engagement">22 comments</text>
+        </g>
       </g>
-
-      <!-- Fade overlay to show content continues -->
-      <defs>
-        <linearGradient id="fadeOut" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="70%" style="stop-color:#FFFFFF;stop-opacity:0"/>
-          <stop offset="100%" style="stop-color:#F3F4F6;stop-opacity:1"/>
-        </linearGradient>
-      </defs>
     </g>
 
     <!-- Scroll indicator -->
-    <g transform="translate(780, 640)">
-      <rect x="-60" y="0" width="60" height="24" rx="12" fill="#E5E7EB"/>
-      <text x="-30" y="16" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6B7280">↓ More</text>
+    <g transform="translate(720, 640)">
+      <rect x="0" y="0" width="60" height="28" rx="14" fill="#E5E7EB"/>
+      <path d="M22 10l8 8 8-8" stroke="#6B7280" stroke-width="2" fill="none" stroke-linecap="round"/>
     </g>
-
   </g>
 
-  <!-- ==================== RIGHT SIDEBAR (20% = 280px) ==================== -->
+  <!-- ==================== RIGHT SIDEBAR ==================== -->
   <g transform="translate(1094, 84)">
 
     <!-- About card -->
     <g transform="translate(0, 0)">
       <rect width="280" height="140" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
-
       <text x="20" y="32" class="card-title">About</text>
-
       <text x="20" y="60" class="card-text">Private community for Accelerator</text>
       <text x="20" y="78" class="card-text">members. Share wins, get feedback,</text>
       <text x="20" y="96" class="card-text">connect with fellow sellers.</text>
 
-      <!-- Member avatars stack -->
       <g transform="translate(20, 110)">
-        <circle cx="0" cy="0" r="12" fill="#E5E7EB" stroke="#FFFFFF" stroke-width="2"/>
-        <circle cx="18" cy="0" r="12" fill="#E5E7EB" stroke="#FFFFFF" stroke-width="2"/>
-        <circle cx="36" cy="0" r="12" fill="#E5E7EB" stroke="#FFFFFF" stroke-width="2"/>
-        <circle cx="54" cy="0" r="12" fill="#E5E7EB" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="0" cy="0" r="12" fill="url(#avatarGradient1)" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="18" cy="0" r="12" fill="url(#avatarGradient2)" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="36" cy="0" r="12" fill="url(#avatarGradient3)" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="54" cy="0" r="12" fill="url(#avatarGradient4)" stroke="#FFFFFF" stroke-width="2"/>
         <text x="80" y="4" font-family="Inter, sans-serif" font-size="12" fill="#6B7280">+243 more</text>
       </g>
     </g>
@@ -301,16 +423,13 @@
     <!-- Upcoming card -->
     <g transform="translate(0, 160)">
       <rect width="280" height="120" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
-
       <text x="20" y="32" class="card-title">Upcoming</text>
 
-      <!-- Calendar icon -->
       <g transform="translate(20, 48)">
-        <rect width="44" height="44" rx="8" fill="#F0FDF4"/>
-        <text x="22" y="30" text-anchor="middle" font-size="22">📅</text>
+        <rect width="44" height="44" rx="10" fill="#F0FDF4"/>
+        <use href="#icon-calendar" x="10" y="10" width="24" height="24"/>
       </g>
 
-      <!-- Event details -->
       <text x="76" y="64" class="upcoming-title">Weekly Call — Thursday 11am CT</text>
       <text x="76" y="84" class="upcoming-time">3 days away</text>
     </g>
@@ -318,37 +437,35 @@
     <!-- Quick links card -->
     <g transform="translate(0, 300)">
       <rect width="280" height="180" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
-
       <text x="20" y="32" class="card-title">Quick Links</text>
 
       <g transform="translate(20, 50)">
-        <rect width="240" height="36" rx="6" fill="#F9FAFB"/>
-        <text x="12" y="24" font-size="14">📚</text>
-        <text x="36" y="24" font-family="Inter, sans-serif" font-size="13" fill="#374151">Course Materials</text>
+        <rect width="240" height="36" rx="8" fill="#F9FAFB"/>
+        <use href="#icon-book" x="8" y="6" width="24" height="24"/>
+        <text x="40" y="24" font-family="Inter, sans-serif" font-size="13" fill="#374151">Course Materials</text>
       </g>
 
       <g transform="translate(20, 94)">
-        <rect width="240" height="36" rx="6" fill="#F9FAFB"/>
-        <text x="12" y="24" font-size="14">🗓️</text>
-        <text x="36" y="24" font-family="Inter, sans-serif" font-size="13" fill="#374151">Book 1:1 Call</text>
+        <rect width="240" height="36" rx="8" fill="#F9FAFB"/>
+        <use href="#icon-video" x="8" y="6" width="24" height="24"/>
+        <text x="40" y="24" font-family="Inter, sans-serif" font-size="13" fill="#374151">Book 1:1 Call</text>
       </g>
 
       <g transform="translate(20, 138)">
-        <rect width="240" height="36" rx="6" fill="#F9FAFB"/>
-        <text x="12" y="24" font-size="14">🏆</text>
-        <text x="36" y="24" font-family="Inter, sans-serif" font-size="13" fill="#374151">Wins &amp; Celebrations</text>
+        <rect width="240" height="36" rx="8" fill="#F9FAFB"/>
+        <use href="#icon-trophy" x="8" y="6" width="24" height="24"/>
+        <text x="40" y="24" font-family="Inter, sans-serif" font-size="13" fill="#374151">Wins and Celebrations</text>
       </g>
     </g>
 
     <!-- Community stats card -->
     <g transform="translate(0, 500)">
       <rect width="280" height="100" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
-
       <text x="20" y="32" class="card-title">This Week</text>
 
       <g transform="translate(20, 50)">
         <g transform="translate(0, 0)">
-          <text x="0" y="18" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#5865F2">47</text>
+          <text x="0" y="18" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#6366F1">47</text>
           <text x="0" y="36" font-family="Inter, sans-serif" font-size="11" fill="#6B7280">New posts</text>
         </g>
         <g transform="translate(80, 0)">
@@ -361,14 +478,13 @@
         </g>
       </g>
     </g>
-
   </g>
 
   <!-- New post button (floating) -->
   <g transform="translate(640, 820)">
-    <rect x="0" y="0" width="160" height="48" rx="24" fill="#5865F2" filter="url(#shadow)"/>
-    <text x="30" y="30" font-size="18">✍️</text>
-    <text x="56" y="32" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">New Post</text>
+    <rect x="0" y="0" width="160" height="48" rx="24" fill="url(#purpleGradient)" filter="url(#shadow)"/>
+    <use href="#icon-write" x="24" y="12" width="24" height="24"/>
+    <text x="94" y="32" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">New Post</text>
   </g>
 
 </svg>
