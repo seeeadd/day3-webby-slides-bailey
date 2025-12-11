@@ -1,0 +1,452 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" width="1400" height="800">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+      .header-title { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; fill: #37352F; }
+      .zoom-header { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; fill: #FFFFFF; }
+      .participant-name { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; fill: #FFFFFF; }
+      .etsy-header { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; fill: #F56400; }
+      .stats-text { font-family: 'Inter', sans-serif; font-size: 12px; fill: #37352F; }
+      .stats-number { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; fill: #37352F; }
+      .conversion-label { font-family: 'Inter', sans-serif; font-size: 11px; fill: #666; }
+      .conversion-value { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; fill: #2D8C5F; }
+      .price-tag { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; fill: #37352F; }
+      .annotation { font-family: 'Caveat', 'Comic Sans MS', cursive; font-size: 16px; fill: #E85A4F; }
+      .annotation-lg { font-family: 'Caveat', 'Comic Sans MS', cursive; font-size: 18px; fill: #E85A4F; }
+      .calendar-title { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; fill: #37352F; }
+      .calendar-month { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; fill: #37352F; }
+      .calendar-day-header { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 500; fill: #9B9A97; }
+      .calendar-day { font-family: 'Inter', sans-serif; font-size: 11px; fill: #37352F; }
+      .calendar-day-highlight { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; fill: #FFFFFF; }
+      .calendar-day-muted { font-family: 'Inter', sans-serif; font-size: 11px; fill: #C4C4C4; }
+      .calendar-info { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; fill: #37352F; }
+      .calendar-small { font-family: 'Inter', sans-serif; font-size: 12px; fill: #9B9A97; }
+      .btn-text { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; fill: #FFFFFF; }
+      .placeholder-text { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; fill: rgba(255,255,255,0.7); }
+    </style>
+
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
+    </filter>
+
+    <!-- Annotation arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E85A4F"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="800" fill="#FAFAFA"/>
+
+  <!-- Main Header -->
+  <text x="700" y="45" text-anchor="middle" class="header-title">12 Weekly Implementation &amp; Shop Review Calls</text>
+
+  <!-- ==================== LEFT SIDE: ZOOM CALL (60%) ==================== -->
+  <g transform="translate(40, 70)">
+    <!-- Zoom window frame -->
+    <rect width="780" height="680" rx="12" fill="#1A1A1A" filter="url(#shadow)"/>
+
+    <!-- Zoom top bar -->
+    <rect width="780" height="44" rx="12" fill="#2D2D2D"/>
+    <rect y="32" width="780" height="12" fill="#2D2D2D"/>
+
+    <!-- Window controls -->
+    <circle cx="24" cy="22" r="6" fill="#FF5F56"/>
+    <circle cx="44" cy="22" r="6" fill="#FFBD2E"/>
+    <circle cx="64" cy="22" r="6" fill="#27CA3F"/>
+
+    <!-- Meeting title -->
+    <text x="390" y="27" text-anchor="middle" class="zoom-header">Weekly Implementation Call</text>
+
+    <!-- Zoom content area -->
+    <g transform="translate(12, 52)">
+
+      <!-- LEFT: Bailey webcam (40% of content = ~300px) -->
+      <g transform="translate(0, 0)">
+        <rect width="295" height="540" rx="8" fill="#2A2A2A"/>
+
+        <!-- Placeholder gradient background -->
+        <defs>
+          <linearGradient id="baileyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4DA6A6;stop-opacity:0.3"/>
+            <stop offset="100%" style="stop-color:#3D8B8B;stop-opacity:0.5"/>
+          </linearGradient>
+        </defs>
+        <rect x="10" y="10" width="275" height="480" rx="4" fill="url(#baileyBg)"/>
+
+        <!-- Placeholder icon -->
+        <circle cx="147" cy="220" r="50" fill="rgba(255,255,255,0.2)"/>
+        <circle cx="147" cy="200" r="25" fill="rgba(255,255,255,0.3)"/>
+        <ellipse cx="147" cy="260" rx="35" ry="25" fill="rgba(255,255,255,0.3)"/>
+
+        <!-- Placeholder text -->
+        <text x="147" y="320" text-anchor="middle" class="placeholder-text">BAILEY GOES HERE</text>
+
+        <!-- Name tag -->
+        <rect x="10" y="500" width="275" height="30" rx="0 0 4 4" fill="rgba(0,0,0,0.6)"/>
+        <text x="20" y="520" class="participant-name">Bailey Vann</text>
+
+        <!-- Mic indicator -->
+        <rect x="245" y="507" width="30" height="16" rx="3" fill="rgba(39,202,63,0.9)"/>
+      </g>
+
+      <!-- RIGHT: Screen share - Etsy Dashboard (60% of content = ~450px) -->
+      <g transform="translate(305, 0)">
+        <rect width="450" height="540" rx="8" fill="#FFFFFF"/>
+
+        <!-- Etsy header bar -->
+        <rect width="450" height="50" rx="8" fill="#FFFFFF"/>
+        <rect y="42" width="450" height="8" fill="#FFFFFF"/>
+
+        <!-- Etsy logo (simplified) -->
+        <rect x="15" y="12" width="60" height="26" rx="4" fill="#F56400"/>
+        <text x="45" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#FFFFFF">Etsy</text>
+
+        <text x="90" y="32" class="etsy-header">Shop Manager</text>
+
+        <!-- Gray divider -->
+        <rect y="50" width="450" height="1" fill="#E5E5E5"/>
+
+        <!-- Stats row -->
+        <g transform="translate(15, 65)">
+          <g transform="translate(0, 0)">
+            <text y="0" class="stats-text">Views</text>
+            <text y="18" class="stats-number">1,247</text>
+          </g>
+          <g transform="translate(80, 0)">
+            <text y="0" class="stats-text">Visits</text>
+            <text y="18" class="stats-number">892</text>
+          </g>
+          <g transform="translate(150, 0)">
+            <text y="0" class="stats-text">Orders</text>
+            <text y="18" class="stats-number">23</text>
+          </g>
+          <g transform="translate(220, 0)">
+            <text y="0" class="stats-text">Revenue</text>
+            <text y="18" class="stats-number">$892</text>
+          </g>
+        </g>
+
+        <!-- Conversion Rate Callout Box -->
+        <g transform="translate(310, 60)">
+          <rect width="120" height="50" rx="6" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+          <text x="60" y="18" text-anchor="middle" class="conversion-label">Conversion Rate</text>
+          <text x="60" y="42" text-anchor="middle" class="conversion-value">2.6%</text>
+        </g>
+
+        <!-- Divider -->
+        <rect x="15" y="120" width="420" height="1" fill="#E5E5E5"/>
+
+        <!-- Listings section header -->
+        <text x="15" y="145" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">Active Listings</text>
+
+        <!-- Listing thumbnails grid (2x2) -->
+        <g transform="translate(15, 160)">
+          <!-- Listing 1 -->
+          <g transform="translate(0, 0)">
+            <rect width="100" height="100" rx="6" fill="#F3F3F3"/>
+            <rect width="100" height="70" rx="6" fill="#E8E8E8"/>
+            <text x="50" y="45" text-anchor="middle" font-size="20" fill="#C4C4C4">📦</text>
+            <text x="5" y="88" class="price-tag">$24.99</text>
+          </g>
+
+          <!-- Listing 2 -->
+          <g transform="translate(110, 0)">
+            <rect width="100" height="100" rx="6" fill="#F3F3F3"/>
+            <rect width="100" height="70" rx="6" fill="#E8E8E8"/>
+            <text x="50" y="45" text-anchor="middle" font-size="20" fill="#C4C4C4">🎨</text>
+            <text x="5" y="88" class="price-tag">$34.99</text>
+          </g>
+
+          <!-- Listing 3 (circled - underperforming) -->
+          <g transform="translate(0, 115)">
+            <rect width="100" height="100" rx="6" fill="#F3F3F3"/>
+            <rect width="100" height="70" rx="6" fill="#E8E8E8"/>
+            <text x="50" y="45" text-anchor="middle" font-size="20" fill="#C4C4C4">✨</text>
+            <text x="5" y="88" class="price-tag">$18.99</text>
+
+            <!-- Red circle annotation -->
+            <ellipse cx="50" cy="50" rx="58" ry="58" fill="none" stroke="#E85A4F" stroke-width="3" stroke-dasharray="8 4"/>
+          </g>
+
+          <!-- Listing 4 -->
+          <g transform="translate(110, 115)">
+            <rect width="100" height="100" rx="6" fill="#F3F3F3"/>
+            <rect width="100" height="70" rx="6" fill="#E8E8E8"/>
+            <text x="50" y="45" text-anchor="middle" font-size="20" fill="#C4C4C4">🌸</text>
+            <text x="5" y="88" class="price-tag">$29.99</text>
+          </g>
+        </g>
+
+        <!-- ===== HAND-DRAWN ANNOTATIONS ===== -->
+
+        <!-- Arrow pointing to conversion rate -->
+        <path d="M 280 95 Q 260 85 310 75" stroke="#E85A4F" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+        <text x="230" y="110" class="annotation-lg" transform="rotate(-8, 230, 110)">Here's your opportunity!</text>
+
+        <!-- Arrow + annotation for underperforming listing -->
+        <path d="M 180 340 Q 200 360 130 360" stroke="#E85A4F" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+        <g transform="translate(185, 310)">
+          <text x="0" y="0" class="annotation">This one's underperforming</text>
+          <text x="0" y="20" class="annotation">— let's fix the title</text>
+        </g>
+
+        <!-- Small highlight marks -->
+        <path d="M 425 70 L 435 65 L 430 75" stroke="#E85A4F" stroke-width="2" fill="none"/>
+
+      </g>
+    </g>
+
+    <!-- Zoom bottom toolbar -->
+    <g transform="translate(0, 608)">
+      <rect y="0" width="780" height="72" rx="0 0 12 12" fill="#1A1A1A"/>
+
+      <!-- Toolbar icons -->
+      <g transform="translate(280, 20)">
+        <!-- Mute button -->
+        <g transform="translate(0, 0)">
+          <rect width="44" height="44" rx="22" fill="#3D3D3D"/>
+          <text x="22" y="30" text-anchor="middle" font-size="20">🎤</text>
+        </g>
+
+        <!-- Video button -->
+        <g transform="translate(55, 0)">
+          <rect width="44" height="44" rx="22" fill="#3D3D3D"/>
+          <text x="22" y="30" text-anchor="middle" font-size="18">📹</text>
+        </g>
+
+        <!-- Share button (active) -->
+        <g transform="translate(110, 0)">
+          <rect width="44" height="44" rx="22" fill="#27CA3F"/>
+          <text x="22" y="30" text-anchor="middle" font-size="16">📤</text>
+        </g>
+
+        <!-- Participants -->
+        <g transform="translate(165, 0)">
+          <rect width="44" height="44" rx="22" fill="#3D3D3D"/>
+          <text x="22" y="30" text-anchor="middle" font-size="16">👥</text>
+        </g>
+
+        <!-- End call -->
+        <g transform="translate(220, 0)">
+          <rect width="60" height="44" rx="22" fill="#E85A4F"/>
+          <text x="30" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">End</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Subtle divider between sections -->
+  <rect x="840" y="70" width="1" height="680" fill="#E5E5E5"/>
+
+  <!-- ==================== RIGHT SIDE: CALENDAR (40%) ==================== -->
+  <g transform="translate(870, 70)">
+    <!-- Calendar card -->
+    <rect width="490" height="680" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+
+    <!-- Calendar header -->
+    <text x="245" y="40" text-anchor="middle" class="calendar-title">Your Weekly Slot</text>
+
+    <!-- Divider -->
+    <rect x="20" y="55" width="450" height="1" fill="#F0F0F0"/>
+
+    <!-- ===== DECEMBER 2024 MINI CALENDAR ===== -->
+    <g transform="translate(30, 75)">
+      <text x="100" y="0" text-anchor="middle" class="calendar-month">December 2024</text>
+
+      <!-- Day headers -->
+      <g transform="translate(0, 20)">
+        <text x="14" y="0" text-anchor="middle" class="calendar-day-header">S</text>
+        <text x="42" y="0" text-anchor="middle" class="calendar-day-header">M</text>
+        <text x="70" y="0" text-anchor="middle" class="calendar-day-header">T</text>
+        <text x="98" y="0" text-anchor="middle" class="calendar-day-header">W</text>
+        <text x="126" y="0" text-anchor="middle" class="calendar-day-header">T</text>
+        <text x="154" y="0" text-anchor="middle" class="calendar-day-header">F</text>
+        <text x="182" y="0" text-anchor="middle" class="calendar-day-header">S</text>
+      </g>
+
+      <!-- Week 1 -->
+      <g transform="translate(0, 42)">
+        <text x="14" y="0" text-anchor="middle" class="calendar-day">1</text>
+        <text x="42" y="0" text-anchor="middle" class="calendar-day">2</text>
+        <text x="70" y="0" text-anchor="middle" class="calendar-day">3</text>
+        <text x="98" y="0" text-anchor="middle" class="calendar-day">4</text>
+        <!-- Thursday 5 - highlighted -->
+        <circle cx="126" cy="-4" r="12" fill="#4DA6A6"/>
+        <text x="126" y="0" text-anchor="middle" class="calendar-day-highlight">5</text>
+        <text x="154" y="0" text-anchor="middle" class="calendar-day">6</text>
+        <text x="182" y="0" text-anchor="middle" class="calendar-day">7</text>
+      </g>
+
+      <!-- Week 2 -->
+      <g transform="translate(0, 66)">
+        <text x="14" y="0" text-anchor="middle" class="calendar-day">8</text>
+        <text x="42" y="0" text-anchor="middle" class="calendar-day">9</text>
+        <text x="70" y="0" text-anchor="middle" class="calendar-day">10</text>
+        <text x="98" y="0" text-anchor="middle" class="calendar-day">11</text>
+        <!-- Thursday 12 - highlighted -->
+        <circle cx="126" cy="-4" r="12" fill="#4DA6A6"/>
+        <text x="126" y="0" text-anchor="middle" class="calendar-day-highlight">12</text>
+        <text x="154" y="0" text-anchor="middle" class="calendar-day">13</text>
+        <text x="182" y="0" text-anchor="middle" class="calendar-day">14</text>
+      </g>
+
+      <!-- Week 3 -->
+      <g transform="translate(0, 90)">
+        <text x="14" y="0" text-anchor="middle" class="calendar-day">15</text>
+        <text x="42" y="0" text-anchor="middle" class="calendar-day">16</text>
+        <text x="70" y="0" text-anchor="middle" class="calendar-day">17</text>
+        <text x="98" y="0" text-anchor="middle" class="calendar-day">18</text>
+        <!-- Thursday 19 - highlighted -->
+        <circle cx="126" cy="-4" r="12" fill="#4DA6A6"/>
+        <text x="126" y="0" text-anchor="middle" class="calendar-day-highlight">19</text>
+        <text x="154" y="0" text-anchor="middle" class="calendar-day">20</text>
+        <text x="182" y="0" text-anchor="middle" class="calendar-day">21</text>
+      </g>
+
+      <!-- Week 4 -->
+      <g transform="translate(0, 114)">
+        <text x="14" y="0" text-anchor="middle" class="calendar-day">22</text>
+        <text x="42" y="0" text-anchor="middle" class="calendar-day">23</text>
+        <text x="70" y="0" text-anchor="middle" class="calendar-day">24</text>
+        <text x="98" y="0" text-anchor="middle" class="calendar-day">25</text>
+        <!-- Thursday 26 - highlighted -->
+        <circle cx="126" cy="-4" r="12" fill="#4DA6A6"/>
+        <text x="126" y="0" text-anchor="middle" class="calendar-day-highlight">26</text>
+        <text x="154" y="0" text-anchor="middle" class="calendar-day">27</text>
+        <text x="182" y="0" text-anchor="middle" class="calendar-day">28</text>
+      </g>
+
+      <!-- Week 5 -->
+      <g transform="translate(0, 138)">
+        <text x="14" y="0" text-anchor="middle" class="calendar-day">29</text>
+        <text x="42" y="0" text-anchor="middle" class="calendar-day">30</text>
+        <text x="70" y="0" text-anchor="middle" class="calendar-day">31</text>
+      </g>
+    </g>
+
+    <!-- ===== JANUARY 2025 MINI CALENDAR ===== -->
+    <g transform="translate(255, 75)">
+      <text x="100" y="0" text-anchor="middle" class="calendar-month">January 2025</text>
+
+      <!-- Day headers -->
+      <g transform="translate(0, 20)">
+        <text x="14" y="0" text-anchor="middle" class="calendar-day-header">S</text>
+        <text x="42" y="0" text-anchor="middle" class="calendar-day-header">M</text>
+        <text x="70" y="0" text-anchor="middle" class="calendar-day-header">T</text>
+        <text x="98" y="0" text-anchor="middle" class="calendar-day-header">W</text>
+        <text x="126" y="0" text-anchor="middle" class="calendar-day-header">T</text>
+        <text x="154" y="0" text-anchor="middle" class="calendar-day-header">F</text>
+        <text x="182" y="0" text-anchor="middle" class="calendar-day-header">S</text>
+      </g>
+
+      <!-- Week 1 -->
+      <g transform="translate(0, 42)">
+        <text x="98" y="0" text-anchor="middle" class="calendar-day">1</text>
+        <!-- Thursday 2 - highlighted -->
+        <circle cx="126" cy="-4" r="12" fill="#4DA6A6"/>
+        <text x="126" y="0" text-anchor="middle" class="calendar-day-highlight">2</text>
+        <text x="154" y="0" text-anchor="middle" class="calendar-day">3</text>
+        <text x="182" y="0" text-anchor="middle" class="calendar-day">4</text>
+      </g>
+
+      <!-- Week 2 -->
+      <g transform="translate(0, 66)">
+        <text x="14" y="0" text-anchor="middle" class="calendar-day">5</text>
+        <text x="42" y="0" text-anchor="middle" class="calendar-day">6</text>
+        <text x="70" y="0" text-anchor="middle" class="calendar-day">7</text>
+        <text x="98" y="0" text-anchor="middle" class="calendar-day">8</text>
+        <!-- Thursday 9 - highlighted -->
+        <circle cx="126" cy="-4" r="12" fill="#4DA6A6"/>
+        <text x="126" y="0" text-anchor="middle" class="calendar-day-highlight">9</text>
+        <text x="154" y="0" text-anchor="middle" class="calendar-day">10</text>
+        <text x="182" y="0" text-anchor="middle" class="calendar-day">11</text>
+      </g>
+
+      <!-- Week 3 -->
+      <g transform="translate(0, 90)">
+        <text x="14" y="0" text-anchor="middle" class="calendar-day">12</text>
+        <text x="42" y="0" text-anchor="middle" class="calendar-day">13</text>
+        <text x="70" y="0" text-anchor="middle" class="calendar-day">14</text>
+        <text x="98" y="0" text-anchor="middle" class="calendar-day">15</text>
+        <!-- Thursday 16 - highlighted -->
+        <circle cx="126" cy="-4" r="12" fill="#4DA6A6"/>
+        <text x="126" y="0" text-anchor="middle" class="calendar-day-highlight">16</text>
+        <text x="154" y="0" text-anchor="middle" class="calendar-day">17</text>
+        <text x="182" y="0" text-anchor="middle" class="calendar-day">18</text>
+      </g>
+
+      <!-- Week 4 -->
+      <g transform="translate(0, 114)">
+        <text x="14" y="0" text-anchor="middle" class="calendar-day">19</text>
+        <text x="42" y="0" text-anchor="middle" class="calendar-day">20</text>
+        <text x="70" y="0" text-anchor="middle" class="calendar-day">21</text>
+        <text x="98" y="0" text-anchor="middle" class="calendar-day">22</text>
+        <!-- Thursday 23 - highlighted -->
+        <circle cx="126" cy="-4" r="12" fill="#4DA6A6"/>
+        <text x="126" y="0" text-anchor="middle" class="calendar-day-highlight">23</text>
+        <text x="154" y="0" text-anchor="middle" class="calendar-day">24</text>
+        <text x="182" y="0" text-anchor="middle" class="calendar-day">25</text>
+      </g>
+
+      <!-- Week 5 -->
+      <g transform="translate(0, 138)">
+        <text x="14" y="0" text-anchor="middle" class="calendar-day">26</text>
+        <text x="42" y="0" text-anchor="middle" class="calendar-day">27</text>
+        <text x="70" y="0" text-anchor="middle" class="calendar-day">28</text>
+        <text x="98" y="0" text-anchor="middle" class="calendar-day">29</text>
+        <!-- Thursday 30 - highlighted -->
+        <circle cx="126" cy="-4" r="12" fill="#4DA6A6"/>
+        <text x="126" y="0" text-anchor="middle" class="calendar-day-highlight">30</text>
+        <text x="154" y="0" text-anchor="middle" class="calendar-day">31</text>
+      </g>
+    </g>
+
+    <!-- Divider -->
+    <rect x="20" y="250" width="450" height="1" fill="#F0F0F0"/>
+
+    <!-- Legend -->
+    <g transform="translate(30, 275)">
+      <circle cx="8" cy="-4" r="8" fill="#4DA6A6"/>
+      <text x="24" y="0" font-family="Inter, sans-serif" font-size="13" fill="#37352F">= Your call days (every Thursday)</text>
+    </g>
+
+    <!-- Call time info -->
+    <g transform="translate(245, 330)">
+      <text x="0" y="0" text-anchor="middle" font-size="48">🗓️</text>
+      <text x="0" y="55" text-anchor="middle" class="calendar-info">Every Thursday at 11am CT</text>
+
+      <!-- Add to Calendar button -->
+      <rect x="-90" y="75" width="180" height="48" rx="8" fill="#4DA6A6"/>
+      <text x="0" y="105" text-anchor="middle" class="btn-text">Add to Calendar 📅</text>
+    </g>
+
+    <!-- Small text -->
+    <text x="245" y="470" text-anchor="middle" class="calendar-small">12 calls included in your Accelerator</text>
+
+    <!-- What to expect section -->
+    <g transform="translate(30, 500)">
+      <rect x="-10" y="-15" width="450" height="160" rx="8" fill="#F7F6F3"/>
+      <text x="0" y="5" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">What to expect each week:</text>
+
+      <g transform="translate(0, 30)">
+        <text x="0" y="0" font-size="14">✅</text>
+        <text x="24" y="0" font-family="Inter, sans-serif" font-size="13" fill="#37352F">Live shop review with screen share</text>
+      </g>
+      <g transform="translate(0, 55)">
+        <text x="0" y="0" font-size="14">✅</text>
+        <text x="24" y="0" font-family="Inter, sans-serif" font-size="13" fill="#37352F">Real-time feedback on your listings</text>
+      </g>
+      <g transform="translate(0, 80)">
+        <text x="0" y="0" font-size="14">✅</text>
+        <text x="24" y="0" font-family="Inter, sans-serif" font-size="13" fill="#37352F">Q&amp;A and implementation support</text>
+      </g>
+      <g transform="translate(0, 105)">
+        <text x="0" y="0" font-size="14">✅</text>
+        <text x="24" y="0" font-family="Inter, sans-serif" font-size="13" fill="#37352F">Action items for the week ahead</text>
+      </g>
+    </g>
+  </g>
+
+</svg>
