@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F5F5F5"/>
+
+  <!-- ==================== BROWSER FRAME ==================== -->
+  <rect x="40" y="30" width="1120" height="740" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- Browser Chrome -->
+  <rect x="40" y="30" width="1120" height="44" rx="12 12 0 0" fill="#F9FAFB"/>
+  <rect x="40" y="73" width="1120" height="1" fill="#E5E7EB"/>
+
+  <!-- Traffic lights -->
+  <circle cx="68" cy="52" r="6" fill="#FF5F57"/>
+  <circle cx="88" cy="52" r="6" fill="#FFBD2E"/>
+  <circle cx="108" cy="52" r="6" fill="#28CA41"/>
+
+  <!-- URL Bar -->
+  <rect x="200" y="40" width="600" height="28" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- Lock icon -->
+  <rect x="216" y="49" width="8" height="7" rx="1" fill="none" stroke="#10B981" stroke-width="1.5"/>
+  <path d="M218 49v-2a4 4 0 1 1 8 0v2" stroke="#10B981" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- URL text -->
+  <text x="236" y="58" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#374151">baileyvann.com/vault/revenue-plan</text>
+
+  <!-- ==================== VIDEO PLAYER CONTAINER ==================== -->
+  <rect x="80" y="95" width="1040" height="600" rx="8" fill="#1A1A1A"/>
+
+  <!-- ==================== VIDEO THUMBNAIL AREA ==================== -->
+  <rect x="100" y="115" width="1000" height="480" rx="6" fill="#FFFFFF"/>
+
+  <!-- ==================== SPREADSHEET CONTENT ==================== -->
+
+  <!-- Header bar -->
+  <rect x="100" y="115" width="1000" height="50" fill="#4DA6A6"/>
+  <text x="130" y="148" font-family="Inter, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">2026 Revenue Planner</text>
+
+  <!-- Spreadsheet icon -->
+  <rect x="1040" y="130" width="40" height="24" rx="4" fill="#FFFFFF"/>
+  <rect x="1048" y="136" width="8" height="3" rx="1" fill="#4DA6A6"/>
+  <rect x="1058" y="136" width="8" height="3" rx="1" fill="#4DA6A6"/>
+  <rect x="1068" y="136" width="8" height="3" rx="1" fill="#4DA6A6"/>
+  <rect x="1048" y="142" width="8" height="3" rx="1" fill="#4DA6A6"/>
+  <rect x="1058" y="142" width="8" height="3" rx="1" fill="#4DA6A6"/>
+  <rect x="1068" y="142" width="8" height="3" rx="1" fill="#4DA6A6"/>
+  <rect x="1048" y="148" width="8" height="3" rx="1" fill="#4DA6A6"/>
+  <rect x="1058" y="148" width="8" height="3" rx="1" fill="#4DA6A6"/>
+  <rect x="1068" y="148" width="8" height="3" rx="1" fill="#4DA6A6"/>
+
+  <!-- Column headers -->
+  <rect x="100" y="165" width="1000" height="40" fill="#F3F4F6"/>
+  <rect x="100" y="204" width="1000" height="1" fill="#E5E7EB"/>
+
+  <text x="130" y="192" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#374151">Category</text>
+  <text x="300" y="192" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#374151">Q1</text>
+  <text x="430" y="192" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#374151">Q2</text>
+  <text x="560" y="192" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#374151">Q3</text>
+  <text x="690" y="192" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#374151">Q4</text>
+  <text x="820" y="192" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#111827">Year Total</text>
+
+  <!-- Vertical dividers -->
+  <rect x="260" y="165" width="1" height="140" fill="#E5E7EB"/>
+  <rect x="390" y="165" width="1" height="140" fill="#E5E7EB"/>
+  <rect x="520" y="165" width="1" height="140" fill="#E5E7EB"/>
+  <rect x="650" y="165" width="1" height="140" fill="#E5E7EB"/>
+  <rect x="780" y="165" width="1" height="140" fill="#E5E7EB"/>
+
+  <!-- Row 1: Revenue Targets -->
+  <rect x="100" y="205" width="1000" height="50" fill="#FFFFFF"/>
+  <rect x="100" y="254" width="1000" height="1" fill="#E5E7EB"/>
+
+  <text x="130" y="238" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#111827">Revenue Targets</text>
+
+  <rect x="280" y="218" width="90" height="28" rx="4" fill="#D1FAE5"/>
+  <text x="325" y="238" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#059669">$3,000</text>
+
+  <rect x="410" y="218" width="90" height="28" rx="4" fill="#D1FAE5"/>
+  <text x="455" y="238" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#059669">$5,000</text>
+
+  <rect x="540" y="218" width="90" height="28" rx="4" fill="#D1FAE5"/>
+  <text x="585" y="238" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#059669">$7,500</text>
+
+  <rect x="670" y="218" width="90" height="28" rx="4" fill="#D1FAE5"/>
+  <text x="715" y="238" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#059669">$10,000</text>
+
+  <rect x="810" y="218" width="100" height="28" rx="4" fill="#10B981"/>
+  <text x="860" y="238" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">$25,500</text>
+
+  <!-- Row 2: Products to Launch -->
+  <rect x="100" y="255" width="1000" height="50" fill="#F9FAFB"/>
+  <rect x="100" y="304" width="1000" height="1" fill="#E5E7EB"/>
+
+  <text x="130" y="288" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#111827">Products to Launch</text>
+
+  <rect x="280" y="268" width="90" height="28" rx="4" fill="#DBEAFE"/>
+  <text x="325" y="288" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#2563EB">2</text>
+
+  <rect x="410" y="268" width="90" height="28" rx="4" fill="#DBEAFE"/>
+  <text x="455" y="288" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#2563EB">2</text>
+
+  <rect x="540" y="268" width="90" height="28" rx="4" fill="#DBEAFE"/>
+  <text x="585" y="288" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#2563EB">3</text>
+
+  <rect x="670" y="268" width="90" height="28" rx="4" fill="#DBEAFE"/>
+  <text x="715" y="288" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#2563EB">3</text>
+
+  <rect x="810" y="268" width="100" height="28" rx="4" fill="#2563EB"/>
+  <text x="860" y="288" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">10</text>
+
+  <!-- ==================== SEASONAL CALENDAR BAR ==================== -->
+  <rect x="100" y="320" width="1000" height="90" fill="#FEFCE8"/>
+  <text x="130" y="348" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#A16207">SEASONAL OPPORTUNITIES</text>
+
+  <!-- Timeline bar -->
+  <rect x="130" y="365" width="940" height="30" rx="6" fill="#FEF3C7"/>
+
+  <!-- Valentine's - Feb -->
+  <rect x="180" y="360" width="100" height="40" rx="6" fill="#FCA5A5"/>
+  <!-- Heart icon -->
+  <path d="M210 373l-1-1c-4-3-6-5-6-8 0-2 2-4 4-4 1 0 2 .5 3 1.5.8-1 2-1.5 3-1.5 2 0 4 2 4 4 0 3-2 5-6 8l-1 1z" fill="#DC2626"/>
+  <text x="230" y="390" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#7F1D1D">Valentine's</text>
+
+  <!-- Mother's Day - May -->
+  <rect x="320" y="360" width="100" height="40" rx="6" fill="#FBCFE8"/>
+  <!-- Flower icon -->
+  <circle cx="350" cy="375" r="6" fill="#EC4899"/>
+  <circle cx="356" cy="370" r="4" fill="#F472B6"/>
+  <circle cx="362" cy="375" r="4" fill="#F472B6"/>
+  <circle cx="356" cy="380" r="4" fill="#F472B6"/>
+  <text x="370" y="390" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#831843">Mother's Day</text>
+
+  <!-- Back to School - Aug -->
+  <rect x="480" y="360" width="110" height="40" rx="6" fill="#BFDBFE"/>
+  <!-- Book icon -->
+  <rect x="508" y="368" width="14" height="16" rx="2" fill="#2563EB"/>
+  <rect x="512" y="368" width="2" height="16" fill="#1E40AF"/>
+  <text x="535" y="390" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#1E3A8A">Back to School</text>
+
+  <!-- Fall/Halloween - Oct-Nov -->
+  <rect x="640" y="360" width="110" height="40" rx="6" fill="#FED7AA"/>
+  <!-- Pumpkin icon -->
+  <ellipse cx="673" cy="378" rx="10" ry="9" fill="#EA580C"/>
+  <rect x="671" y="368" width="4" height="5" rx="1" fill="#65A30D"/>
+  <text x="695" y="390" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#9A3412">Fall / Halloween</text>
+
+  <!-- Holiday Season - Nov-Dec -->
+  <rect x="800" y="360" width="130" height="40" rx="6" fill="#BBF7D0"/>
+  <!-- Gift icon -->
+  <rect x="828" y="373" width="16" height="14" rx="2" fill="#DC2626"/>
+  <rect x="828" y="373" width="16" height="4" fill="#B91C1C"/>
+  <rect x="835" y="373" width="2" height="14" fill="#FBBF24"/>
+  <rect x="828" y="378" width="16" height="2" fill="#FBBF24"/>
+  <text x="865" y="390" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#166534">Holiday Season</text>
+
+  <!-- ==================== DOWNLOAD ICONS (floating right) ==================== -->
+  <rect x="940" y="430" width="150" height="150" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="1015" y="455" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#6B7280">Included downloads</text>
+
+  <!-- PDF icon -->
+  <rect x="955" y="470" width="35" height="40" rx="4" fill="#EF4444"/>
+  <text x="972" y="497" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">PDF</text>
+  <text x="972" y="520" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="8" fill="#6B7280">Guide</text>
+
+  <!-- Sheets icon -->
+  <rect x="1000" y="470" width="35" height="40" rx="4" fill="#10B981"/>
+  <rect x="1008" y="478" width="20" height="3" rx="1" fill="#FFFFFF"/>
+  <rect x="1008" y="484" width="20" height="3" rx="1" fill="#FFFFFF"/>
+  <rect x="1008" y="490" width="20" height="3" rx="1" fill="#FFFFFF"/>
+  <rect x="1008" y="496" width="20" height="3" rx="1" fill="#FFFFFF"/>
+  <text x="1017" y="520" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="8" fill="#6B7280">Planner</text>
+
+  <!-- Calendar icon -->
+  <rect x="1045" y="470" width="35" height="40" rx="4" fill="#6366F1"/>
+  <rect x="1045" y="470" width="35" height="12" fill="#4F46E5"/>
+  <text x="1062" y="500" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">12</text>
+  <text x="1062" y="520" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="8" fill="#6B7280">Calendar</text>
+
+  <!-- Download arrow -->
+  <rect x="990" y="540" width="50" height="24" rx="4" fill="#4DA6A6"/>
+  <rect x="1010" y="547" width="8" height="8" rx="1" fill="#FFFFFF"/>
+  <path d="M1008 555l6 6 6-6" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- ==================== WEBCAM BUBBLE (bottom left) ==================== -->
+  <circle cx="210" cy="500" r="70" fill="#4DA6A6"/>
+  <circle cx="210" cy="500" r="67" fill="#3D9494"/>
+
+  <!-- Bailey placeholder -->
+  <circle cx="210" cy="485" r="28" fill="#F5D0C5"/>
+  <ellipse cx="210" cy="540" rx="38" ry="28" fill="#F5D0C5"/>
+
+  <!-- Simple face -->
+  <circle cx="202" cy="480" r="3" fill="#374151"/>
+  <circle cx="218" cy="480" r="3" fill="#374151"/>
+  <path d="M202 494 Q210 500 218 494" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Hair -->
+  <ellipse cx="210" cy="462" rx="30" ry="16" fill="#8B5A2B"/>
+  <ellipse cx="182" cy="480" rx="10" ry="22" fill="#8B5A2B"/>
+  <ellipse cx="238" cy="480" rx="10" ry="22" fill="#8B5A2B"/>
+
+  <!-- BAILEY GOES HERE -->
+  <text x="210" y="575" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="8" fill="#FFFFFF">BAILEY GOES HERE</text>
+
+  <!-- Border ring -->
+  <circle cx="210" cy="500" r="70" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+
+  <!-- Name label -->
+  <rect x="140" y="555" width="90" height="22" rx="4" fill="rgba(0,0,0,0.6)"/>
+  <text x="185" y="570" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#FFFFFF">Bailey Vann</text>
+
+  <!-- ==================== VIDEO PLAYER CONTROLS ==================== -->
+  <rect x="100" y="605" width="1000" height="45" fill="#1A1A1A"/>
+
+  <!-- Progress bar -->
+  <rect x="120" y="612" width="960" height="4" rx="2" fill="#4B5563"/>
+  <circle cx="120" cy="614" r="5" fill="#FFFFFF"/>
+
+  <!-- Play button -->
+  <path d="M125 635l12 8-12 8z" fill="#FFFFFF"/>
+
+  <!-- Time -->
+  <text x="155" y="644" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#FFFFFF">0:00 / 24:15</text>
+
+  <!-- Volume -->
+  <rect x="240" y="639" width="4" height="10" rx="1" fill="#FFFFFF"/>
+  <path d="M244 639l6-4v18l-6-4z" fill="#FFFFFF"/>
+  <rect x="260" y="642" width="50" height="4" rx="2" fill="#4B5563"/>
+  <rect x="260" y="642" width="35" height="4" rx="2" fill="#FFFFFF"/>
+
+  <!-- HD badge -->
+  <rect x="1040" y="632" width="24" height="16" rx="2" fill="#4B5563"/>
+  <text x="1052" y="644" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#FFFFFF">HD</text>
+
+  <!-- Fullscreen -->
+  <rect x="1074" y="632" width="16" height="16" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+
+  <!-- ==================== VIDEO TITLE & DESCRIPTION ==================== -->
+  <rect x="80" y="660" width="1040" height="90" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="100" y="690" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111827">Map Your 2026 Digital Product Revenue</text>
+
+  <!-- Vault badge -->
+  <rect x="480" y="673" width="100" height="24" rx="4" fill="#4DA6A6"/>
+  <text x="530" y="690" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Vault Exclusive</text>
+
+  <!-- Duration -->
+  <rect x="1040" y="673" width="60" height="24" rx="4" fill="#F3F4F6"/>
+  <text x="1070" y="690" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#374151">24:15</text>
+
+  <!-- Description -->
+  <text x="100" y="725" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">Leave with your entire 2026 planned. Includes downloadable spreadsheet, seasonal calendar, and planning framework.</text>
+
+</svg>
