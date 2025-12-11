@@ -72,6 +72,15 @@ async def convert_html_to_pdf(html_path: str, pdf_path: str):
         # Inject CSS to ensure print styles don't override screen styles
         # and to set up proper page breaks
         await page.add_style_tag(content='''
+            /* Quick shadow kill switch */
+            *,
+            *::before,
+            *::after {
+                box-shadow: none !important;
+                text-shadow: none !important;
+                filter: none !important; /* kills drop-shadow() etc */
+            }
+
             /* Force screen media styles for PDF */
             @media print {
                 * {
