@@ -75,85 +75,98 @@
     </style>
 </head>
 <body>
-/* Base styles */
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
-.slide {
-    width: 1920px;
-    height: 1080px;
-    position: relative;
-    overflow: hidden;
-    page-break-after: always;
-}
-    </style>
-</head>
-<body>
-
-<!-- ===================== SLIDE 81 - 30-Day Clarity Guarantee ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%); position: relative;">
-    <!-- Elegant background shapes -->
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 81 — 30-DAY CLARITY GUARANTEE
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%);">
+    <!-- Background decorative elements -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <linearGradient id="gold-grad-81" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.06" />
-                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0.02" />
+            <linearGradient id="shieldGrad81" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.12" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0.03" />
             </linearGradient>
+            <radialGradient id="glowGold81" cx="25%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
         </defs>
-        <ellipse cx="1700" cy="200" rx="500" ry="400" fill="url(#gold-grad-81)"/>
-        <ellipse cx="150" cy="900" rx="400" ry="300" fill="url(#gold-grad-81)"/>
+        <!-- Large shield shape behind content -->
+        <path d="M960 80 L1150 130 L1150 500 Q1150 700 960 820 Q770 700 770 500 L770 130 Z" fill="url(#shieldGrad81)" />
+        <!-- Decorative circles -->
+        <circle cx="150" cy="900" r="180" fill="url(#glowGold81)" />
+        <circle cx="1800" cy="200" r="120" fill="url(#glowGold81)" />
+        <!-- Sparkle elements -->
+        <g fill="#C9A227" opacity="0.4">
+            <path d="M1700 850 L1708 870 L1728 878 L1708 886 L1700 906 L1692 886 L1672 878 L1692 870 Z" />
+            <path d="M200 180 L205 192 L217 197 L205 202 L200 214 L195 202 L183 197 L195 192 Z" />
+        </g>
     </svg>
-    
-    <div style="position: relative; z-index: 1; padding: 80px 100px; height: 100%; display: flex;">
-        <!-- Left content -->
-        <div style="flex: 1.1; display: flex; flex-direction: column; justify-content: center; padding-right: 80px;">
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; padding: 70px 100px;">
+        <!-- Left side - Guarantee info -->
+        <div style="flex: 1.1; display: flex; flex-direction: column; justify-content: center; padding-right: 60px;">
             <!-- Badge -->
-            <div style="display: inline-flex; align-items: center; gap: 16px; margin-bottom: 32px;">
-                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 14px; display: flex; align-items: center; justify-content: center;">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 2L9 9H2L7 14L5 22L12 17L19 22L17 14L22 9H15L12 2Z" fill="white"/>
+            <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 30px;">
+                <div style="width: 50px; height: 50px; background: linear-gradient(145deg, #C9A227, #D4AF37); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(201, 162, 39, 0.35);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="white"/>
                     </svg>
                 </div>
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; font-weight: 600; color: #C9A227; text-transform: uppercase; letter-spacing: 3px;">Guarantee #1</span>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 3px; color: #C9A227; text-transform: uppercase;">Guarantee #1</span>
             </div>
-            
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 72px; color: #5C4827; line-height: 1.1; margin-bottom: 40px;">
+
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 72px; color: #3D2B1F; line-height: 1.1; margin-bottom: 45px;">
                 30-Day Clarity<br>Guarantee
             </h1>
-            
-            <!-- Promise list -->
-            <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div style="display: flex; align-items: center; gap: 18px;">
-                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #6B8E6B, #7D8B6A); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                        <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+            <!-- Benefit cards -->
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <div style="background: white; border-radius: 16px; padding: 20px 26px; display: flex; align-items: center; gap: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid #6B8E6B;">
+                    <div style="width: 36px; height: 36px; background: #6B8E6B; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436;">Try my entire system for 30 days</span>
+                    <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #3D2B1F; font-weight: 500;">Try my entire system for 30 days</span>
                 </div>
-                <div style="display: flex; align-items: center; gap: 18px;">
-                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #6B8E6B, #7D8B6A); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                        <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+                <div style="background: white; border-radius: 16px; padding: 20px 26px; display: flex; align-items: center; gap: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid #6B8E6B;">
+                    <div style="width: 36px; height: 36px; background: #6B8E6B; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436;">Go through all the modules at your own pace</span>
+                    <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #3D2B1F; font-weight: 500;">Go through all the modules at your own pace</span>
                 </div>
-                <div style="display: flex; align-items: center; gap: 18px;">
-                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #6B8E6B, #7D8B6A); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                        <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+                <div style="background: white; border-radius: 16px; padding: 20px 26px; display: flex; align-items: center; gap: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid #6B8E6B;">
+                    <div style="width: 36px; height: 36px; background: #6B8E6B; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436;">Get your Offer Built, Funnel Built, AI Tools Set Up</span>
+                    <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #3D2B1F; font-weight: 500;">Get your Offer Built, Funnel Built, AI Tools Set Up</span>
                 </div>
             </div>
         </div>
-        
-        <!-- Right card -->
-        <div style="flex: 0.9; display: flex; align-items: center;">
-            <div style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); border-radius: 32px; padding: 50px; width: 100%;">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #FFFFFF; line-height: 1.7; margin-bottom: 32px;">
-                    If you don't have <span style="color: #D4AF37; font-weight: 700;">Clarity</span> on exactly what business model you're building, how you're going to get clients, or what your next steps are...
+
+        <!-- Right side - Promise card -->
+        <div style="flex: 0.9; display: flex; align-items: center; justify-content: center;">
+            <div style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); border-radius: 32px; padding: 50px; max-width: 480px; position: relative; box-shadow: 0 20px 60px rgba(61, 43, 31, 0.4);">
+                <!-- Shield icon at top -->
+                <div style="position: absolute; top: -35px; left: 50%; transform: translateX(-50%); width: 70px; height: 70px; background: linear-gradient(145deg, #C9A227, #D4AF37); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(201, 162, 39, 0.4);">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2L3 7V12C3 17.25 6.93 22 12 23C17.07 22 21 17.25 21 12V7L12 2ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/>
+                    </svg>
+                </div>
+
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #FFFEF5; line-height: 1.6; margin-top: 30px; margin-bottom: 25px;">
+                    If you don't have <span style="color: #C9A227; font-weight: 700;">Clarity</span> on exactly what business model you're building, how you're going to get clients, or what your next steps are...
                 </p>
-                <div style="width: 80px; height: 3px; background: linear-gradient(90deg, #D4AF37, transparent); margin-bottom: 28px;"></div>
-                <p style="font-family: 'Ogg Bold', serif; font-size: 42px; color: #D4AF37; margin: 0;">
+
+                <div style="width: 60px; height: 3px; background: #C9A227; margin-bottom: 25px;"></div>
+
+                <p style="font-family: 'Ogg Bold', serif; font-size: 38px; color: #C9A227; line-height: 1.2; margin-bottom: 18px;">
                     I'll refund every penny.
                 </p>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: rgba(255,255,255,0.7); margin-top: 20px;">
+
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.7);">
                     No questions asked. No hard feelings.
                 </p>
             </div>
@@ -161,489 +174,491 @@
     </div>
 </div>
 
-<!-- ===================== SLIDE 81b-1 - This Is Not Another Course (Part 1) ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 81b-1 — BUT WAIT...
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="glow-81b1" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.08" />
-                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            <radialGradient id="centerGlow81b" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.2" />
+                <stop offset="100%" style="stop-color:#3D2B1F;stop-opacity:0" />
             </radialGradient>
         </defs>
-        <ellipse cx="960" cy="540" rx="800" ry="600" fill="url(#glow-81b1)"/>
+        <ellipse cx="960" cy="540" rx="700" ry="400" fill="url(#centerGlow81b)"/>
+        <!-- Decorative rays -->
+        <g opacity="0.15">
+            <line x1="960" y1="540" x2="960" y2="0" stroke="#C9A227" stroke-width="2"/>
+            <line x1="960" y1="540" x2="1920" y2="540" stroke="#C9A227" stroke-width="2"/>
+            <line x1="960" y1="540" x2="960" y2="1080" stroke="#C9A227" stroke-width="2"/>
+            <line x1="960" y1="540" x2="0" y2="540" stroke="#C9A227" stroke-width="2"/>
+            <line x1="960" y1="540" x2="1600" y2="100" stroke="#C9A227" stroke-width="1"/>
+            <line x1="960" y1="540" x2="320" y2="100" stroke="#C9A227" stroke-width="1"/>
+            <line x1="960" y1="540" x2="1600" y2="980" stroke="#C9A227" stroke-width="1"/>
+            <line x1="960" y1="540" x2="320" y2="980" stroke="#C9A227" stroke-width="1"/>
+        </g>
     </svg>
-    
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <h1 style="font-family: 'Ogg Bold', serif; font-size: 108px; color: #FFFFFF; text-align: center; line-height: 1.15;">
-            This Is Not<br>Another Course
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; letter-spacing: 5px; color: #C9A227; text-transform: uppercase; margin-bottom: 30px;">That's Not All...</p>
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 110px; color: #FFFEF5; line-height: 1;">
+            There's More
         </h1>
     </div>
 </div>
 
-<!-- ===================== SLIDE 81b-2 - This Is Not Another Course (Part 2 - Reveal) ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 82 — SECOND GUARANTEE HEADER
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="glow-81b2" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.1" />
-                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
-            </radialGradient>
+            <linearGradient id="accentGrad82" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0" />
+                <stop offset="50%" style="stop-color:#C9A227;stop-opacity:0.15" />
+                <stop offset="100%" style="stop-color:#C9A227;stop-opacity:0" />
+            </linearGradient>
         </defs>
-        <ellipse cx="960" cy="540" rx="800" ry="600" fill="url(#glow-81b2)"/>
+        <rect x="0" y="480" width="1920" height="120" fill="url(#accentGrad82)"/>
+        <!-- Decorative shield silhouettes -->
+        <path d="M180 200 L280 230 L280 380 Q280 480 180 530 Q80 480 80 380 L80 230 Z" fill="#C9A227" opacity="0.05"/>
+        <path d="M1640 550 L1770 590 L1770 780 Q1770 900 1640 970 Q1510 900 1510 780 L1510 590 Z" fill="#C9A227" opacity="0.05"/>
     </svg>
-    
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <h1 style="font-family: 'Ogg Bold', serif; font-size: 108px; color: #FFFFFF; text-align: center; line-height: 1.15; margin-bottom: 50px;">
-            This Is Not<br>Another Course
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+        <!-- Number badge -->
+        <div style="width: 80px; height: 80px; background: linear-gradient(145deg, #C9A227, #D4AF37); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 40px; box-shadow: 0 8px 30px rgba(201, 162, 39, 0.35);">
+            <span style="font-family: 'Ogg Bold', serif; font-size: 40px; color: white;">2</span>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 30px;">
+            <div style="width: 80px; height: 2px; background: linear-gradient(90deg, transparent, #C9A227);"></div>
+            <span style="font-family: 'Satoshi', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 5px; color: #C9A227; text-transform: uppercase;">Guarantee</span>
+            <div style="width: 80px; height: 2px; background: linear-gradient(90deg, #C9A227, transparent);"></div>
+        </div>
+
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 100px; color: #3D2B1F; line-height: 1;">
+            <span style="color: #C9A227;">Second</span> Guarantee
         </h1>
-        <div style="position: relative;">
-            <p style="font-family: 'Ogg Bold', serif; font-size: 64px; color: #D4AF37; text-align: center;">
-                You'll Leave with a Real Business
-            </p>
-            <div style="position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); width: 70%; height: 4px; background: linear-gradient(90deg, transparent, #D4AF37, transparent); border-radius: 2px;"></div>
-        </div>
     </div>
 </div>
 
-<!-- ===================== SLIDE 82 - Guarantee #2 Header ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%); position: relative;">
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 83 — 90-DAY EXTENSION GUARANTEE
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <linearGradient id="gold-grad-82" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.05" />
-                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0.02" />
-            </linearGradient>
-        </defs>
-        <ellipse cx="960" cy="540" rx="750" ry="550" fill="url(#gold-grad-82)"/>
-    </svg>
-    
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px;">
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #636E72; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 30px;">
-            But wait...
-        </p>
-        <h1 style="font-family: 'Ogg Bold', serif; font-size: 96px; color: #5C4827; text-align: center; line-height: 1.15;">
-            I've Got a<br><span style="color: #C9A227;">SECOND</span> Guarantee
-        </h1>
-        <div style="display: flex; align-items: center; gap: 16px; margin-top: 50px;">
-            <div style="width: 80px; height: 3px; background: linear-gradient(90deg, transparent, #C9A227);"></div>
-            <div style="width: 14px; height: 14px; background: #C9A227; border-radius: 50%;"></div>
-            <div style="width: 80px; height: 3px; background: linear-gradient(90deg, #C9A227, transparent);"></div>
-        </div>
-    </div>
-</div>
-
-<!-- ===================== SLIDE 83 - 90-Day Extension Details ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%); position: relative;">
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <linearGradient id="gold-grad-83" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.06" />
-                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0.02" />
-            </linearGradient>
-        </defs>
-        <ellipse cx="1650" cy="280" rx="420" ry="340" fill="url(#gold-grad-83)"/>
-        <ellipse cx="220" cy="880" rx="380" ry="300" fill="url(#gold-grad-83)"/>
-    </svg>
-    
-    <div style="position: relative; z-index: 1; padding: 80px 100px; height: 100%; display: flex; flex-direction: column;">
-        <!-- Header -->
-        <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 60px;">
-            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 18px; display: flex; align-items: center; justify-content: center;">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2"/>
-                    <path d="M12 6V12L16 14" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </div>
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 68px; color: #5C4827; line-height: 1.1;">
-                Guarantee #2: 90-Day Extension
-            </h1>
-        </div>
-        
-        <!-- Timeline steps -->
-        <div style="flex: 1; display: flex; flex-direction: column; gap: 0; max-width: 1400px;">
-            <div style="display: flex; align-items: stretch;">
-                <!-- Step 1 -->
-                <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
-                    <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 2;">
-                        <span style="font-family: 'Ogg Bold', serif; font-size: 28px; color: white;">1</span>
-                    </div>
-                    <div style="width: 4px; height: 40px; background: linear-gradient(180deg, #C9A227, #D4A84B);"></div>
-                    <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 20px; padding: 32px; text-align: center; border: 1px solid rgba(201, 162, 39, 0.15); flex: 1; width: 90%;">
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436; line-height: 1.5;">If you're implementing & putting in the work...</p>
-                    </div>
-                </div>
-                
-                <!-- Arrow -->
-                <div style="display: flex; align-items: center; padding: 0 20px; margin-top: 30px;">
-                    <svg width="60" height="24" viewBox="0 0 60 24"><path d="M0 12H50M40 4L52 12L40 20" stroke="#C9A227" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                
-                <!-- Step 2 -->
-                <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
-                    <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 2;">
-                        <span style="font-family: 'Ogg Bold', serif; font-size: 28px; color: white;">2</span>
-                    </div>
-                    <div style="width: 4px; height: 40px; background: linear-gradient(180deg, #C9A227, #D4A84B);"></div>
-                    <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 20px; padding: 32px; text-align: center; border: 1px solid rgba(201, 162, 39, 0.15); flex: 1; width: 90%;">
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436; line-height: 1.5;">And you don't see results in 90 days...</p>
-                    </div>
-                </div>
-                
-                <!-- Arrow -->
-                <div style="display: flex; align-items: center; padding: 0 20px; margin-top: 30px;">
-                    <svg width="60" height="24" viewBox="0 0 60 24"><path d="M0 12H50M40 4L52 12L40 20" stroke="#C9A227" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                
-                <!-- Step 3 -->
-                <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
-                    <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #D4AF37, #F7E16C); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 2;">
-                        <span style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #5C4827;">3</span>
-                    </div>
-                    <div style="width: 4px; height: 40px; background: linear-gradient(180deg, #D4AF37, #5C4827);"></div>
-                    <div style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); border-radius: 20px; padding: 32px; text-align: center; flex: 1; width: 90%;">
-                        <p style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #D4AF37; line-height: 1.4; margin-bottom: 12px;">I'll personally work with you one-on-one</p>
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #FFFFFF;">for free — until you do.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===================== SLIDE 84 - Double Guarantee Summary ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%); position: relative;">
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <linearGradient id="gold-grad-84" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.05" />
-                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0.02" />
-            </linearGradient>
-        </defs>
-        <ellipse cx="960" cy="150" rx="800" ry="300" fill="url(#gold-grad-84)"/>
-    </svg>
-    
-    <div style="position: relative; z-index: 1; padding: 70px 100px; height: 100%; display: flex; flex-direction: column;">
-        <!-- Header with shield icon -->
-        <div style="text-align: center; margin-bottom: 50px;">
-            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, #D4AF37, #F7E16C); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px;">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="#5C4827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9 12L11 14L15 10" stroke="#5C4827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 76px; color: #5C4827;">
-                You're Protected <span style="color: #C9A227;">Twice</span>
-            </h1>
-        </div>
-        
-        <!-- Two guarantee cards -->
-        <div style="flex: 1; display: flex; gap: 50px; align-items: stretch;">
-            <!-- Guarantee 1 -->
-            <div style="flex: 1; background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 28px; padding: 44px; border: 2px solid rgba(201, 162, 39, 0.15); display: flex; flex-direction: column;">
-                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #6B8E6B, #7D8B6A); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px;">
-                    <span style="font-family: 'Ogg Bold', serif; font-size: 28px; color: white;">1</span>
-                </div>
-                <h2 style="font-family: 'Ogg Bold', serif; font-size: 40px; color: #5C4827; margin-bottom: 20px;">
-                    30-Day Clarity Guarantee
-                </h2>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #2D3436; line-height: 1.6; flex: 1;">
-                    No clarity on your business model, client acquisition, or next steps? <strong>Full refund.</strong>
-                </p>
-                <div style="margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(201, 162, 39, 0.2);">
-                    <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">No questions asked</span>
-                </div>
-            </div>
-            
-            <!-- Plus sign -->
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                    <span style="font-family: 'Ogg Bold', serif; font-size: 40px; color: white;">+</span>
-                </div>
-            </div>
-            
-            <!-- Guarantee 2 -->
-            <div style="flex: 1; background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 28px; padding: 44px; border: 2px solid rgba(201, 162, 39, 0.15); display: flex; flex-direction: column;">
-                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 28px;">
-                    <span style="font-family: 'Ogg Bold', serif; font-size: 28px; color: white;">2</span>
-                </div>
-                <h2 style="font-family: 'Ogg Bold', serif; font-size: 40px; color: #5C4827; margin-bottom: 20px;">
-                    90-Day Extension
-                </h2>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #2D3436; line-height: 1.6; flex: 1;">
-                    Implementing but not seeing results? <strong>Free 1:1 support</strong> until you do.
-                </p>
-                <div style="margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(201, 162, 39, 0.2);">
-                    <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">Personal commitment</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===================== SLIDE 85 - Who This Isn't For ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FEF0EA 100%); position: relative;">
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <linearGradient id="coral-grad-85" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#E07B6C;stop-opacity:0.05" />
-                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0.02" />
-            </linearGradient>
-        </defs>
-        <ellipse cx="1700" cy="220" rx="480" ry="380" fill="url(#coral-grad-85)"/>
-        <ellipse cx="180" cy="880" rx="380" ry="300" fill="url(#coral-grad-85)"/>
-    </svg>
-    
-    <div style="position: relative; z-index: 1; padding: 80px 100px; height: 100%; display: flex;">
-        <!-- Left side - text -->
-        <div style="flex: 0.5; display: flex; flex-direction: column; justify-content: center; padding-right: 60px;">
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #636E72; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 20px;">
-                Honest Truth
-            </p>
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 80px; color: #5C4827; line-height: 1.1; margin-bottom: 40px;">
-                Who This<br><span style="color: #E07B6C;">Isn't</span> For
-            </h1>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #636E72; line-height: 1.6;">
-                And that's okay — this simply isn't the right fit for everyone.
-            </p>
-        </div>
-        
-        <!-- Right side - cards -->
-        <div style="flex: 0.5; display: flex; flex-direction: column; justify-content: center; gap: 24px;">
-            <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FEF0EA 100%); border-radius: 20px; padding: 32px 36px; display: flex; align-items: center; gap: 24px; border: 1px solid rgba(224, 123, 108, 0.12);">
-                <div style="width: 56px; height: 56px; background: #E07B6C; border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <svg width="26" height="26" viewBox="0 0 24 24"><path d="M6 6 L18 18 M18 6 L6 18" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
-                </div>
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436;">People looking for a get-rich-quick scheme</span>
-            </div>
-            
-            <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FEF0EA 100%); border-radius: 20px; padding: 32px 36px; display: flex; align-items: center; gap: 24px; border: 1px solid rgba(224, 123, 108, 0.12);">
-                <div style="width: 56px; height: 56px; background: #E07B6C; border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <svg width="26" height="26" viewBox="0 0 24 24"><path d="M6 6 L18 18 M18 6 L6 18" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
-                </div>
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436;">Anyone who won't put in the work</span>
-            </div>
-            
-            <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FEF0EA 100%); border-radius: 20px; padding: 32px 36px; display: flex; align-items: center; gap: 24px; border: 1px solid rgba(224, 123, 108, 0.12);">
-                <div style="width: 56px; height: 56px; background: #E07B6C; border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <svg width="26" height="26" viewBox="0 0 24 24"><path d="M6 6 L18 18 M18 6 L6 18" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
-                </div>
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436;">Those who just want to consume content, not implement</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===================== SLIDE 86 - Who This Is For ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #F5F9F5 100%); position: relative;">
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <linearGradient id="sage-grad-86" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#6B8E6B;stop-opacity:0.06" />
-                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0.02" />
-            </linearGradient>
-        </defs>
-        <ellipse cx="180" cy="220" rx="480" ry="380" fill="url(#sage-grad-86)"/>
-        <ellipse cx="1700" cy="880" rx="380" ry="300" fill="url(#sage-grad-86)"/>
-    </svg>
-    
-    <div style="position: relative; z-index: 1; padding: 80px 100px; height: 100%; display: flex;">
-        <!-- Left side - cards -->
-        <div style="flex: 0.55; display: flex; flex-direction: column; justify-content: center; gap: 24px; padding-right: 60px;">
-            <div style="background: linear-gradient(145deg, #FFFFFF 0%, #F5F9F5 100%); border-radius: 20px; padding: 32px 36px; display: flex; align-items: center; gap: 24px; border: 1px solid rgba(107, 142, 107, 0.12);">
-                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #6B8E6B, #7D8B6A); border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <svg width="28" height="28" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436;">Coaches who know their stuff, but need help with the business side</span>
-            </div>
-            
-            <div style="background: linear-gradient(145deg, #FFFFFF 0%, #F5F9F5 100%); border-radius: 20px; padding: 32px 36px; display: flex; align-items: center; gap: 24px; border: 1px solid rgba(107, 142, 107, 0.12);">
-                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #6B8E6B, #7D8B6A); border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <svg width="28" height="28" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436;">Anyone ready to stop "winging it"</span>
-            </div>
-            
-            <div style="background: linear-gradient(145deg, #FFFFFF 0%, #F5F9F5 100%); border-radius: 20px; padding: 32px 36px; display: flex; align-items: center; gap: 24px; border: 1px solid rgba(107, 142, 107, 0.12);">
-                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #6B8E6B, #7D8B6A); border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                    <svg width="28" height="28" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436;">Experts who want a clear path to premium clients</span>
-            </div>
-        </div>
-        
-        <!-- Right side - text -->
-        <div style="flex: 0.45; display: flex; flex-direction: column; justify-content: center;">
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #636E72; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 20px;">
-                Perfect Fit
-            </p>
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 80px; color: #5C4827; line-height: 1.1; margin-bottom: 50px;">
-                Who This<br><span style="color: #6B8E6B;">Is</span> For
-            </h1>
-            
-            <!-- CTA card -->
-            <div style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); border-radius: 24px; padding: 36px 44px; text-align: center;">
-                <p style="font-family: 'Ogg Bold', serif; font-size: 36px; color: #D4AF37;">
-                    If that's you — let's go.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===================== SLIDE 87 - Link Is Live (Transition) ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <radialGradient id="glow-87" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.18" />
-                <stop offset="70%" style="stop-color:#D4AF37;stop-opacity:0.05" />
-                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
-            </radialGradient>
-        </defs>
-        <ellipse cx="960" cy="540" rx="750" ry="550" fill="url(#glow-87)"/>
-    </svg>
-    
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px;">
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 6px; margin-bottom: 40px;">
-            Right Now
-        </p>
-        <h1 style="font-family: 'Ogg Bold', serif; font-size: 100px; color: #FFFFFF; text-align: center; line-height: 1.15;">
-            The Link Is Now<br><span style="color: #D4AF37;">Live</span> in the Chat
-        </h1>
-        <div style="display: flex; align-items: center; gap: 20px; margin-top: 60px;">
-            <div style="width: 100px; height: 3px; background: linear-gradient(90deg, transparent, #D4AF37);"></div>
-            <div style="width: 12px; height: 12px; background: #D4AF37; border-radius: 50%;"></div>
-            <div style="width: 100px; height: 3px; background: linear-gradient(90deg, #D4AF37, transparent);"></div>
-        </div>
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: rgba(255,255,255,0.8); margin-top: 50px;">
-            Click it now to secure your spot
-        </p>
-    </div>
-</div>
-
-<!-- ===================== SLIDE 88 - Fast Action Tease ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%); position: relative;">
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <radialGradient id="gold-glow-88" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.08" />
+            <radialGradient id="topGlow83" cx="50%" cy="15%" r="40%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
                 <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
             </radialGradient>
         </defs>
-        <ellipse cx="960" cy="540" rx="700" ry="500" fill="url(#gold-glow-88)"/>
+        <rect x="0" y="0" width="1920" height="600" fill="url(#topGlow83)"/>
+        <!-- Connecting line -->
+        <path d="M300 540 L1620 540" stroke="#C9A227" stroke-width="4" stroke-dasharray="0" opacity="0.2"/>
     </svg>
-    
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px;">
-        <!-- Lightning icon -->
-        <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 28px; display: flex; align-items: center; justify-content: center; margin-bottom: 50px; transform: rotate(-5deg);">
-            <svg width="52" height="52" viewBox="0 0 24 24" fill="none">
-                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="white"/>
-            </svg>
-        </div>
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #636E72; margin-bottom: 24px;">
-            For those who move quickly...
-        </p>
-        <h1 style="font-family: 'Ogg Bold', serif; font-size: 92px; color: #5C4827; text-align: center; line-height: 1.15;">
-            I've Got Something<br><span style="color: #C9A227;">Special</span>
-        </h1>
-    </div>
-</div>
 
-<!-- ===================== SLIDE 89 - Personal Time Reveal ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <radialGradient id="glow-89" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.15" />
-                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
-            </radialGradient>
-        </defs>
-        <ellipse cx="960" cy="540" rx="700" ry="520" fill="url(#glow-89)"/>
-    </svg>
-    
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px;">
-        <!-- Fast Action Badge -->
-        <div style="background: linear-gradient(135deg, #D4AF37, #F7E16C); border-radius: 50px; padding: 18px 50px; margin-bottom: 50px;">
-            <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; font-weight: 700; color: #5C4827; text-transform: uppercase; letter-spacing: 4px;">Fast Action Bonus</span>
+    <div style="position: relative; z-index: 1; height: 100%; padding: 60px 100px; display: flex; flex-direction: column;">
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 50px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 4px; color: #C9A227; text-transform: uppercase; margin-bottom: 15px;">90-Day Extension</p>
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 64px; color: #3D2B1F;">The Results Guarantee</h1>
         </div>
-        
-        <h1 style="font-family: 'Ogg Bold', serif; font-size: 160px; color: #FFFFFF; text-align: center; line-height: 0.9;">
-            1 Hour
-        </h1>
-        <p style="font-family: 'Ogg Bold', serif; font-size: 60px; color: #D4AF37; text-align: center; margin-top: 20px;">
-            Of My Time
-        </p>
-        
-        <div style="width: 180px; height: 2px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); margin: 50px 0;"></div>
-        
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: rgba(255,255,255,0.8); text-align: center;">
-            A private 1:1 strategy call with me personally
-        </p>
-    </div>
-</div>
 
-<!-- ===================== SLIDE 90 - Fast Action Part 1 ===================== -->
-<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%); position: relative;">
-    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <linearGradient id="gold-grad-90" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.06" />
-                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0.02" />
-            </linearGradient>
-        </defs>
-        <ellipse cx="1680" cy="280" rx="420" ry="340" fill="url(#gold-grad-90)"/>
-        <ellipse cx="220" cy="850" rx="380" ry="300" fill="url(#gold-grad-90)"/>
-    </svg>
-    
-    <div style="position: relative; z-index: 1; padding: 80px 100px; height: 100%; display: flex; gap: 80px;">
-        <!-- Left side - Header and badge -->
-        <div style="flex: 0.45; display: flex; flex-direction: column; justify-content: center;">
-            <!-- Fast Action Badge -->
-            <div style="display: inline-flex; align-items: center; gap: 16px; margin-bottom: 32px;">
-                <div style="background: linear-gradient(135deg, #D4AF37, #F7E16C); border-radius: 14px; padding: 14px 28px;">
-                    <span style="font-family: 'Satoshi', sans-serif; font-size: 16px; font-weight: 700; color: #5C4827; text-transform: uppercase; letter-spacing: 2px;">Fast Action Bonus #1</span>
+        <!-- Timeline steps -->
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 20px; padding: 0 50px;">
+            <!-- Step 1 -->
+            <div style="flex: 1; max-width: 400px;">
+                <div style="background: white; border-radius: 24px; padding: 35px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); position: relative; border: 2px solid rgba(201, 162, 39, 0.2);">
+                    <div style="position: absolute; top: -25px; left: 30px; width: 50px; height: 50px; background: linear-gradient(145deg, #C9A227, #D4AF37); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);">
+                        <span style="font-family: 'Ogg Bold', serif; font-size: 24px; color: white;">1</span>
+                    </div>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; line-height: 1.5; margin-top: 15px;">If you're implementing & putting in the work...</p>
                 </div>
             </div>
-            
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 64px; color: #5C4827; line-height: 1.15; margin-bottom: 20px;">
-                Private 1:1<br>Strategy Call
-            </h1>
-            <p style="font-family: 'Ogg Bold', serif; font-size: 44px; color: #C9A227;">
-                (Worth $500)
-            </p>
-            
-            <!-- Urgency note -->
-            <div style="margin-top: 50px; padding: 24px 32px; background: rgba(201, 162, 39, 0.1); border-radius: 16px; border-left: 4px solid #C9A227;">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #5C4827;">
-                    Only for the first <span style="color: #C9A227; font-weight: 700;">10 action-takers</span> who enroll today
-                </p>
+
+            <!-- Arrow -->
+            <svg width="60" height="30" viewBox="0 0 60 30" style="flex-shrink: 0;">
+                <path d="M0 15H50M40 5L55 15L40 25" stroke="#C9A227" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <!-- Step 2 -->
+            <div style="flex: 1; max-width: 400px;">
+                <div style="background: white; border-radius: 24px; padding: 35px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); position: relative; border: 2px solid rgba(201, 162, 39, 0.2);">
+                    <div style="position: absolute; top: -25px; left: 30px; width: 50px; height: 50px; background: linear-gradient(145deg, #C9A227, #D4AF37); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);">
+                        <span style="font-family: 'Ogg Bold', serif; font-size: 24px; color: white;">2</span>
+                    </div>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; line-height: 1.5; margin-top: 15px;">And you don't see results in 90 days...</p>
+                </div>
+            </div>
+
+            <!-- Arrow -->
+            <svg width="60" height="30" viewBox="0 0 60 30" style="flex-shrink: 0;">
+                <path d="M0 15H50M40 5L55 15L40 25" stroke="#C9A227" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <!-- Step 3 -->
+            <div style="flex: 1; max-width: 400px;">
+                <div style="background: linear-gradient(145deg, #5C4827, #3D2B1F); border-radius: 24px; padding: 35px; box-shadow: 0 10px 40px rgba(61, 43, 31, 0.3); position: relative;">
+                    <div style="position: absolute; top: -25px; left: 30px; width: 50px; height: 50px; background: linear-gradient(145deg, #C9A227, #D4AF37); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);">
+                        <span style="font-family: 'Ogg Bold', serif; font-size: 24px; color: white;">3</span>
+                    </div>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #FFFEF5; line-height: 1.5; margin-top: 15px;">
+                        I'll personally work with you <span style="color: #C9A227; font-weight: 700;">one-on-one</span><br>for free — until you do.
+                    </p>
+                </div>
             </div>
         </div>
-        
-        <!-- Right side - Benefits card -->
-        <div style="flex: 0.55; display: flex; align-items: center;">
-            <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 28px; padding: 50px; border: 1px solid rgba(201, 162, 39, 0.12); width: 100%;">
-                <div style="display: flex; flex-direction: column; gap: 32px;">
-                    <div style="display: flex; align-items: flex-start; gap: 22px;">
-                        <div style="width: 52px; height: 52px; background: linear-gradient(135deg, #6B8E6B, #7D8B6A); border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <svg width="26" height="26" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436; line-height: 1.5;">Personalized audit of your current business or idea</span>
-                    </div>
-                    
-                    <div style="display: flex; align-items: flex-start; gap: 22px;">
-                        <div style="width: 52px; height: 52px; background: linear-gradient(135deg, #6B8E6B, #7D8B6A); border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <svg width="26" height="26" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436; line-height: 1.5;">Custom roadmap tailored to your specific situation</span>
-                    </div>
-                    
-                    <div style="display: flex; align-items: flex-start; gap: 22px;">
-                        <div style="width: 52px; height: 52px; background: linear-gradient(135deg, #6B8E6B, #7D8B6A); border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <svg width="26" height="26" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </div>
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; font-weight: 500; color: #2D3436; line-height: 1.5;">Direct access to ask me anything for 60 minutes</span>
-                    </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 84 — DOUBLE GUARANTEE SUMMARY
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="shieldGlow84" cx="50%" cy="30%" r="45%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.15" />
+                <stop offset="100%" style="stop-color:#3D2B1F;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="350" rx="750" ry="400" fill="url(#shieldGlow84)"/>
+        <!-- Double shield background -->
+        <g opacity="0.08" fill="#C9A227">
+            <path d="M720 180 L850 210 L850 420 Q850 550 720 620 Q590 550 590 420 L590 210 Z"/>
+            <path d="M1200 180 L1330 210 L1330 420 Q1330 550 1200 620 Q1070 550 1070 420 L1070 210 Z"/>
+        </g>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px;">
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 60px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; letter-spacing: 4px; color: #C9A227; text-transform: uppercase; margin-bottom: 15px;">You're Protected</p>
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 90px; color: #C9A227;">Twice</h1>
+        </div>
+
+        <!-- Two guarantee cards -->
+        <div style="display: flex; gap: 60px; align-items: center;">
+            <!-- Card 1 -->
+            <div style="background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(201, 162, 39, 0.3); border-radius: 28px; padding: 45px; width: 400px; text-align: center; backdrop-filter: blur(10px);">
+                <div style="width: 70px; height: 70px; background: linear-gradient(145deg, #6B8E6B, #5A7D5A); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 8px 25px rgba(107, 142, 107, 0.3);">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </div>
+                <div style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #C9A227; margin-bottom: 10px;">1</div>
+                <h3 style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #FFFEF5; margin-bottom: 12px;">Full refund.</h3>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.7);">No questions asked</p>
+            </div>
+
+            <!-- Plus sign -->
+            <div style="width: 60px; height: 60px; background: rgba(201, 162, 39, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <span style="font-family: 'Ogg Bold', serif; font-size: 40px; color: #C9A227;">+</span>
+            </div>
+
+            <!-- Card 2 -->
+            <div style="background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(201, 162, 39, 0.3); border-radius: 28px; padding: 45px; width: 400px; text-align: center; backdrop-filter: blur(10px);">
+                <div style="width: 70px; height: 70px; background: linear-gradient(145deg, #C9A227, #D4AF37); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 8px 25px rgba(201, 162, 39, 0.3);">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                </div>
+                <div style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #C9A227; margin-bottom: 10px;">2</div>
+                <h3 style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #FFFEF5; margin-bottom: 12px;">Free 1:1 support</h3>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.7);">Personal commitment</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 85 — WHO THIS ISN'T FOR
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FEF0EA 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="coralGlow85" cx="75%" cy="50%" r="45%">
+                <stop offset="0%" style="stop-color:#E07B6C;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <rect x="0" y="0" width="1920" height="1080" fill="url(#coralGlow85)"/>
+        <!-- Large X background -->
+        <g opacity="0.04" stroke="#E07B6C" stroke-width="80" stroke-linecap="round">
+            <line x1="1200" y1="150" x2="1750" y2="900"/>
+            <line x1="1750" y1="150" x2="1200" y2="900"/>
+        </g>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; padding: 80px 100px;">
+        <!-- Left side - Title -->
+        <div style="flex: 0.8; display: flex; flex-direction: column; justify-content: center; padding-right: 80px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 4px; color: #E07B6C; text-transform: uppercase; margin-bottom: 20px;">Fair Warning</p>
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 72px; color: #3D2B1F; line-height: 1.1;">
+                Who This <span style="color: #E07B6C;">Isn't</span> For
+            </h1>
+        </div>
+
+        <!-- Right side - Cards -->
+        <div style="flex: 1.2; display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+            <div style="background: white; border-radius: 20px; padding: 28px 35px; display: flex; align-items: center; gap: 22px; box-shadow: 0 8px 30px rgba(224, 123, 108, 0.12); border: 2px solid rgba(224, 123, 108, 0.2);">
+                <div style="width: 50px; height: 50px; background: linear-gradient(145deg, #E07B6C, #D96A5B); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(224, 123, 108, 0.3);">
+                    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 6 L18 18 M18 6 L6 18" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
+                </div>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; font-weight: 500;">People looking for a get-rich-quick scheme</span>
+            </div>
+
+            <div style="background: white; border-radius: 20px; padding: 28px 35px; display: flex; align-items: center; gap: 22px; box-shadow: 0 8px 30px rgba(224, 123, 108, 0.12); border: 2px solid rgba(224, 123, 108, 0.2);">
+                <div style="width: 50px; height: 50px; background: linear-gradient(145deg, #E07B6C, #D96A5B); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(224, 123, 108, 0.3);">
+                    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 6 L18 18 M18 6 L6 18" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
+                </div>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; font-weight: 500;">Anyone who won't put in the work</span>
+            </div>
+
+            <div style="background: white; border-radius: 20px; padding: 28px 35px; display: flex; align-items: center; gap: 22px; box-shadow: 0 8px 30px rgba(224, 123, 108, 0.12); border: 2px solid rgba(224, 123, 108, 0.2);">
+                <div style="width: 50px; height: 50px; background: linear-gradient(145deg, #E07B6C, #D96A5B); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(224, 123, 108, 0.3);">
+                    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M6 6 L18 18 M18 6 L6 18" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
+                </div>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; font-weight: 500;">Those who just want to consume content, not implement</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 86 — WHO THIS IS FOR
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #F5F9F5 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="sageGlow86" cx="25%" cy="50%" r="45%">
+                <stop offset="0%" style="stop-color:#6B8E6B;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <rect x="0" y="0" width="1920" height="1080" fill="url(#sageGlow86)"/>
+        <!-- Large checkmark background -->
+        <path d="M120 520 L280 700 L550 350" stroke="#6B8E6B" stroke-width="70" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.06"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; padding: 80px 100px;">
+        <!-- Left side - Cards -->
+        <div style="flex: 1.2; display: flex; flex-direction: column; justify-content: center; gap: 22px; padding-right: 80px;">
+            <div style="background: white; border-radius: 20px; padding: 28px 35px; display: flex; align-items: center; gap: 22px; box-shadow: 0 8px 30px rgba(107, 142, 107, 0.12); border: 2px solid rgba(107, 142, 107, 0.2);">
+                <div style="width: 50px; height: 50px; background: linear-gradient(145deg, #6B8E6B, #5A7D5A); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(107, 142, 107, 0.3);">
+                    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; font-weight: 500;">Coaches who know their stuff, but need help with the business side</span>
+            </div>
+
+            <div style="background: white; border-radius: 20px; padding: 28px 35px; display: flex; align-items: center; gap: 22px; box-shadow: 0 8px 30px rgba(107, 142, 107, 0.12); border: 2px solid rgba(107, 142, 107, 0.2);">
+                <div style="width: 50px; height: 50px; background: linear-gradient(145deg, #6B8E6B, #5A7D5A); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(107, 142, 107, 0.3);">
+                    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; font-weight: 500;">Anyone ready to stop "winging it"</span>
+            </div>
+
+            <div style="background: white; border-radius: 20px; padding: 28px 35px; display: flex; align-items: center; gap: 22px; box-shadow: 0 8px 30px rgba(107, 142, 107, 0.12); border: 2px solid rgba(107, 142, 107, 0.2);">
+                <div style="width: 50px; height: 50px; background: linear-gradient(145deg, #6B8E6B, #5A7D5A); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(107, 142, 107, 0.3);">
+                    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; font-weight: 500;">Experts who want a clear path to premium clients</span>
+            </div>
+        </div>
+
+        <!-- Right side - Title -->
+        <div style="flex: 0.8; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; text-align: right;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 4px; color: #6B8E6B; text-transform: uppercase; margin-bottom: 20px;">This Is For You</p>
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 72px; color: #3D2B1F; line-height: 1.1;">
+                Who This <span style="color: #6B8E6B;">Is</span> For
+            </h1>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 87 — THE LINK IS LIVE
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="pulseGlow87" cx="50%" cy="50%" r="40%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.25" />
+                <stop offset="70%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#3D2B1F;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="600" ry="350" fill="url(#pulseGlow87)"/>
+        <!-- Sparkle effects -->
+        <g fill="#C9A227">
+            <circle cx="500" cy="300" r="4" opacity="0.6"/>
+            <circle cx="1400" cy="250" r="5" opacity="0.5"/>
+            <circle cx="300" cy="700" r="3" opacity="0.4"/>
+            <circle cx="1600" cy="800" r="4" opacity="0.5"/>
+            <path d="M1500 400 L1506 415 L1521 421 L1506 427 L1500 442 L1494 427 L1479 421 L1494 415 Z" opacity="0.5"/>
+            <path d="M400 600 L404 610 L414 614 L404 618 L400 628 L396 618 L386 614 L396 610 Z" opacity="0.4"/>
+        </g>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+        <!-- Live pulse indicator -->
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 40px;">
+            <div style="width: 14px; height: 14px; background: #6B8E6B; border-radius: 50%; box-shadow: 0 0 20px #6B8E6B, 0 0 40px #6B8E6B;"></div>
+            <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 4px; color: #6B8E6B; text-transform: uppercase;">Now Open</span>
+        </div>
+
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 120px; color: #FFFEF5; line-height: 1; margin-bottom: 30px;">
+            The Link Is <span style="color: #D4AF37;">Live</span>
+        </h1>
+
+        <div style="width: 100px; height: 3px; background: linear-gradient(90deg, transparent, #C9A227, transparent); margin-bottom: 40px;"></div>
+
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: rgba(255,254,245,0.8);">
+            Your spot is waiting...
+        </p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 88 — FAST ACTION BONUS TEASE
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="boltGrad88" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <!-- Lightning bolt background -->
+        <path d="M1100 0 L900 450 L1050 450 L750 1080 L950 550 L800 550 L1100 0" fill="url(#boltGrad88)" opacity="0.5"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+        <!-- Special badge -->
+        <div style="background: linear-gradient(145deg, #C9A227, #D4AF37); border-radius: 30px; padding: 12px 30px; margin-bottom: 40px; box-shadow: 0 8px 30px rgba(201, 162, 39, 0.35);">
+            <span style="font-family: 'Satoshi', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 3px; color: white; text-transform: uppercase;">
+                ⚡ <span style="color: #C9A227;">Special</span> For Fast Action Takers
+            </span>
+        </div>
+
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 100px; color: #3D2B1F; line-height: 1; margin-bottom: 30px;">
+            Fast Action Bonus
+        </h1>
+
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div style="width: 60px; height: 2px; background: linear-gradient(90deg, transparent, #C9A227);"></div>
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #5C4827;">Limited availability</p>
+            <div style="width: 60px; height: 2px; background: linear-gradient(90deg, #C9A227, transparent);"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 89 — PERSONAL TIME REVEAL (1 HOUR)
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="timeGlow89" cx="50%" cy="50%" r="35%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.3" />
+                <stop offset="100%" style="stop-color:#3D2B1F;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="500" ry="350" fill="url(#timeGlow89)"/>
+        <!-- Clock circles -->
+        <circle cx="960" cy="480" r="250" stroke="#C9A227" stroke-width="2" fill="none" opacity="0.15"/>
+        <circle cx="960" cy="480" r="280" stroke="#C9A227" stroke-width="1" fill="none" opacity="0.08"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+        <!-- Badge -->
+        <div style="background: rgba(201, 162, 39, 0.2); border: 2px solid #C9A227; border-radius: 30px; padding: 12px 28px; margin-bottom: 50px;">
+            <span style="font-family: 'Satoshi', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 3px; color: #C9A227; text-transform: uppercase;">Fast Action Bonus</span>
+        </div>
+
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 180px; color: #C9A227; line-height: 1; margin-bottom: 20px; text-shadow: 0 0 60px rgba(201, 162, 39, 0.4);">
+            1 Hour
+        </h1>
+
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #FFFEF5; margin-bottom: 30px;">
+            of my personal time — <span style="color: #C9A227; font-weight: 600;">just for you</span>
+        </p>
+
+        <div style="width: 80px; height: 3px; background: #C9A227;"></div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 90 — FAST ACTION BONUS #1 DETAILS
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="bonusGlow90" cx="30%" cy="40%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <rect x="0" y="0" width="1920" height="1080" fill="url(#bonusGlow90)"/>
+        <!-- Decorative lightning bolts -->
+        <path d="M1650 100 L1600 250 L1660 250 L1550 450" stroke="#C9A227" stroke-width="3" fill="none" opacity="0.15" stroke-linecap="round"/>
+        <path d="M1720 200 L1680 320 L1730 320 L1640 480" stroke="#C9A227" stroke-width="2" fill="none" opacity="0.1" stroke-linecap="round"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; padding: 80px 100px;">
+        <!-- Left side - Header -->
+        <div style="flex: 0.9; display: flex; flex-direction: column; justify-content: center; padding-right: 60px;">
+            <!-- Badge -->
+            <div style="display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(145deg, #C9A227, #D4AF37); border-radius: 25px; padding: 10px 24px; margin-bottom: 30px; box-shadow: 0 6px 20px rgba(201, 162, 39, 0.3); width: fit-content;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                </svg>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; color: white; text-transform: uppercase;">Fast Action Bonus #1</span>
+            </div>
+
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 56px; color: #3D2B1F; line-height: 1.15; margin-bottom: 30px;">
+                1-Hour Strategy Call<br><span style="color: #C9A227;">With Me</span>
+            </h1>
+
+            <!-- Limited spots indicator -->
+            <div style="display: flex; align-items: center; gap: 15px; background: rgba(224, 123, 108, 0.1); border-radius: 12px; padding: 15px 22px; width: fit-content;">
+                <div style="width: 12px; height: 12px; background: #E07B6C; border-radius: 50%;"></div>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #E07B6C; font-weight: 600;">For the first 10 action-takers only</span>
+            </div>
+        </div>
+
+        <!-- Right side - Benefits -->
+        <div style="flex: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 20px;">
+            <div style="background: white; border-radius: 20px; padding: 30px 35px; display: flex; align-items: flex-start; gap: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border: 2px solid rgba(201, 162, 39, 0.15);">
+                <div style="width: 46px; height: 46px; background: linear-gradient(145deg, #6B8E6B, #5A7D5A); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(107, 142, 107, 0.3);">
+                    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                    <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #3D2B1F; font-weight: 600; display: block; margin-bottom: 6px;">Personalized Business Audit</span>
+                    <span style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #8B8178;">Full review of your current business or idea</span>
+                </div>
+            </div>
+
+            <div style="background: white; border-radius: 20px; padding: 30px 35px; display: flex; align-items: flex-start; gap: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border: 2px solid rgba(201, 162, 39, 0.15);">
+                <div style="width: 46px; height: 46px; background: linear-gradient(145deg, #6B8E6B, #5A7D5A); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(107, 142, 107, 0.3);">
+                    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                    <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #3D2B1F; font-weight: 600; display: block; margin-bottom: 6px;">Custom Roadmap</span>
+                    <span style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #8B8178;">Tailored to your specific situation</span>
+                </div>
+            </div>
+
+            <div style="background: white; border-radius: 20px; padding: 30px 35px; display: flex; align-items: flex-start; gap: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border: 2px solid rgba(201, 162, 39, 0.15);">
+                <div style="width: 46px; height: 46px; background: linear-gradient(145deg, #6B8E6B, #5A7D5A); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 15px rgba(107, 142, 107, 0.3);">
+                    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M5 12 L10 17 L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                    <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #3D2B1F; font-weight: 600; display: block; margin-bottom: 6px;">Direct Access</span>
+                    <span style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #8B8178;">Ask me anything for 60 minutes</span>
                 </div>
             </div>
         </div>
