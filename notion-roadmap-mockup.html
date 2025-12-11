@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah's 90-Day Accelerator Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #FFFFFF;
+            min-height: 100vh;
+            color: #37352F;
+            line-height: 1.5;
+        }
+
+        .notion-page {
+            width: 800px;
+            min-height: 1200px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            padding: 96px 96px 60px 96px;
+            position: relative;
+        }
+
+        /* Page Icon */
+        .page-icon {
+            font-size: 78px;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        /* Page Title */
+        .page-title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #37352F;
+            margin-bottom: 4px;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        /* Page Description */
+        .page-description {
+            font-size: 16px;
+            color: #37352F;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        /* Metadata */
+        .page-metadata {
+            font-size: 12px;
+            color: #9B9A97;
+            margin-bottom: 40px;
+        }
+
+        /* Main Content Layout */
+        .content-layout {
+            display: flex;
+            gap: 24px;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .sidebar-card {
+            background: #F7F6F3;
+            border-radius: 4px;
+            padding: 16px;
+            border: 1px solid rgba(55, 53, 47, 0.09);
+        }
+
+        .sidebar-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #37352F;
+            margin-bottom: 12px;
+        }
+
+        .sidebar-item {
+            font-size: 13px;
+            color: #37352F;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
+        .sidebar-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar-label {
+            color: #9B9A97;
+            font-size: 12px;
+        }
+
+        .sidebar-value {
+            font-weight: 500;
+        }
+
+        .sidebar-icon {
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        /* Phase Boxes */
+        .phase-box {
+            background: #FFFFFF;
+            border: 1px solid rgba(55, 53, 47, 0.09);
+            border-radius: 4px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .phase-inner {
+            padding: 20px 20px 20px 16px;
+            border-left: 4px solid;
+        }
+
+        .phase-1 .phase-inner {
+            border-left-color: #E9967A;
+        }
+
+        .phase-2 .phase-inner {
+            border-left-color: #D4A574;
+        }
+
+        .phase-3 .phase-inner {
+            border-left-color: #4DA6A6;
+        }
+
+        .phase-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .phase-icon {
+            font-size: 18px;
+        }
+
+        .phase-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #37352F;
+            letter-spacing: -0.01em;
+        }
+
+        .phase-subheader {
+            font-size: 13px;
+            color: #787774;
+            margin-bottom: 16px;
+            margin-left: 26px;
+        }
+
+        /* Checklist */
+        .checklist {
+            margin-bottom: 16px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: #37352F;
+        }
+
+        .checklist-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .checkbox {
+            width: 16px;
+            height: 16px;
+            border: 1.5px solid #C4C4C4;
+            border-radius: 3px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FFFFFF;
+        }
+
+        .checkbox.checked {
+            background: #2EAADC;
+            border-color: #2EAADC;
+        }
+
+        .checkbox.checked::after {
+            content: '';
+            width: 8px;
+            height: 5px;
+            border: 2px solid #FFFFFF;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+            margin-top: -2px;
+        }
+
+        .checklist-text {
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .checklist-text.completed {
+            text-decoration: line-through;
+            color: #9B9A97;
+        }
+
+        /* Progress Indicator */
+        .progress-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .progress-text {
+            font-size: 12px;
+            color: #9B9A97;
+            flex-shrink: 0;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background: #EBEBEA;
+            border-radius: 3px;
+            overflow: hidden;
+            max-width: 120px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .phase-1 .progress-fill {
+            background: #E9967A;
+        }
+
+        .phase-2 .progress-fill {
+            background: #D4A574;
+        }
+
+        .phase-3 .progress-fill {
+            background: #4DA6A6;
+        }
+
+        /* Responsive for export */
+        @media print {
+            body {
+                background: #FFFFFF;
+            }
+            .notion-page {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="notion-page">
+        <!-- Page Header -->
+        <div class="page-icon">🗺️</div>
+        <h1 class="page-title">Sarah's 90-Day Accelerator Roadmap</h1>
+        <p class="page-description">Your personalized path to $5K/month on Etsy</p>
+        <p class="page-metadata">Created by Bailey Vann • Last edited Dec 2, 2024</p>
+
+        <!-- Content Layout -->
+        <div class="content-layout">
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Phase 1: DELETE -->
+                <div class="phase-box phase-1">
+                    <div class="phase-inner">
+                        <div class="phase-header">
+                            <span class="phase-icon">✂️</span>
+                            <span class="phase-title">PHASE 1: DELETE — Weeks 1-3</span>
+                        </div>
+                        <p class="phase-subheader">Clear the dead weight so your shop can breathe</p>
+
+                        <div class="checklist">
+                            <div class="checklist-item">
+                                <div class="checkbox checked"></div>
+                                <span class="checklist-text completed">Complete shop audit questionnaire</span>
+                            </div>
+                            <div class="checklist-item">
+                                <div class="checkbox checked"></div>
+                                <span class="checklist-text completed">Identify bottom 20% performing listings</span>
+                            </div>
+                            <div class="checklist-item">
+                                <div class="checkbox"></div>
+                                <span class="checklist-text">Archive or delete dead listings</span>
+                            </div>
+                            <div class="checklist-item">
+                                <div class="checkbox"></div>
+                                <span class="checklist-text">Document what you're removing and why</span>
+                            </div>
+                        </div>
+
+                        <div class="progress-section">
+                            <span class="progress-text">2 of 4 complete</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2: OPTIMIZE -->
+                <div class="phase-box phase-2">
+                    <div class="phase-inner">
+                        <div class="phase-header">
+                            <span class="phase-icon">⚡</span>
+                            <span class="phase-title">PHASE 2: OPTIMIZE — Weeks 4-8</span>
+                        </div>
+                        <p class="phase-subheader">Make your remaining listings work harder</p>
+
+                        <div class="checklist">
+                            <div class="checklist-item">
+                                <div class="checkbox"></div>
+                                <span class="checklist-text">Implement new SEO framework on top 10 listings</span>
+                            </div>
+                            <div class="checklist-item">
+                                <div class="checkbox"></div>
+                                <span class="checklist-text">Update photos using "Scroll-Stopper" method</span>
+                            </div>
+                            <div class="checklist-item">
+                                <div class="checkbox"></div>
+                                <span class="checklist-text">Revise pricing using value-based formula</span>
+                            </div>
+                            <div class="checklist-item">
+                                <div class="checkbox"></div>
+                                <span class="checklist-text">Set up automated email sequences</span>
+                            </div>
+                        </div>
+
+                        <div class="progress-section">
+                            <span class="progress-text">0 of 4 complete</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3: SCALE -->
+                <div class="phase-box phase-3">
+                    <div class="phase-inner">
+                        <div class="phase-header">
+                            <span class="phase-icon">🚀</span>
+                            <span class="phase-title">PHASE 3: SCALE — Weeks 9-12</span>
+                        </div>
+                        <p class="phase-subheader">Strategic growth with your optimized foundation</p>
+
+                        <div class="checklist">
+                            <div class="checklist-item">
+                                <div class="checkbox"></div>
+                                <span class="checklist-text">Launch 2-3 new optimized products</span>
+                            </div>
+                            <div class="checklist-item">
+                                <div class="checkbox"></div>
+                                <span class="checklist-text">Implement "Second Harvest" backend strategy</span>
+                            </div>
+                            <div class="checklist-item">
+                                <div class="checkbox"></div>
+                                <span class="checklist-text">Set up passive traffic systems</span>
+                            </div>
+                            <div class="checklist-item">
+                                <div class="checkbox"></div>
+                                <span class="checklist-text">Plan Q1 2026 product calendar</span>
+                            </div>
+                        </div>
+
+                        <div class="progress-section">
+                            <span class="progress-text">0 of 4 complete</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <div class="sidebar-title">Your Details</div>
+
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📅</span>
+                        <div>
+                            <div class="sidebar-label">Start Date</div>
+                            <div class="sidebar-value">December 1, 2024</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">🎯</span>
+                        <div>
+                            <div class="sidebar-label">Target</div>
+                            <div class="sidebar-value">$5,000/month</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">📊</span>
+                        <div>
+                            <div class="sidebar-label">Current</div>
+                            <div class="sidebar-value">$1,200/month</div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-item">
+                        <span class="sidebar-icon">🗓️</span>
+                        <div>
+                            <div class="sidebar-label">Weekly Call</div>
+                            <div class="sidebar-value">Thursdays 11am CT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
