@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1000" viewBox="0 0 1280 1000">
+
+  <!-- Background -->
+  <rect width="1280" height="1000" fill="#F5F5F5"/>
+
+  <!-- iPad Shadow -->
+  <ellipse cx="640" cy="970" rx="500" ry="15" fill="#D0D0D0"/>
+
+  <!-- iPad Body -->
+  <rect x="90" y="30" width="1100" height="920" rx="40" fill="#1A1A1A"/>
+
+  <!-- iPad Inner Bezel -->
+  <rect x="98" y="38" width="1084" height="904" rx="36" fill="#2D2D2D"/>
+
+  <!-- Screen Area - matches course library aspect ratio -->
+  <rect id="screen-area" x="130" y="70" width="1020" height="840" rx="4" fill="#F9FAFB"/>
+
+  <!-- ==================== SCREEN CONTENT ==================== -->
+
+  <!-- HEADER -->
+  <rect x="130" y="70" width="1020" height="102" fill="#FFFFFF"/>
+  <rect x="130" y="171" width="1020" height="1" fill="#E5E7EB"/>
+  <text x="170" y="112" font-family="Inter, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#111827">90 Day Etsy Accelerator</text>
+  <text x="170" y="140" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">Lifetime Access — All Current + Future Programs</text>
+
+  <!-- Search bar -->
+  <rect x="770" y="95" width="240" height="38" rx="8" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+  <circle cx="790" cy="114" r="7" stroke="#9CA3AF" stroke-width="2" fill="none"/>
+  <line x1="795" y1="119" x2="800" y2="124" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+  <text x="812" y="119" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#9CA3AF">Search courses...</text>
+
+  <!-- Filter dropdown -->
+  <rect x="1025" y="95" width="110" height="38" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="1040" y="119" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#374151">All Programs</text>
+  <path d="M1110 111l5 5 5-5" stroke="#6B7280" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- ==================== VIDEO SECTION ==================== -->
+
+  <text x="170" y="205" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#111827">Continue Watching</text>
+
+  <!-- Video container -->
+  <rect x="170" y="220" width="595" height="335" rx="10" fill="#1F2937"/>
+
+  <!-- Presentation screen behind person -->
+  <rect x="340" y="268" width="272" height="153" rx="5" fill="#4DA6A6"/>
+  <rect x="356" y="285" width="102" height="17" rx="3" fill="rgba(255,255,255,0.3)"/>
+  <rect x="356" y="310" width="170" height="7" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="356" y="323" width="136" height="7" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="356" y="343" width="68" height="51" rx="3" fill="rgba(255,255,255,0.15)"/>
+  <rect x="441" y="343" width="68" height="51" rx="3" fill="rgba(255,255,255,0.15)"/>
+  <rect x="526" y="343" width="68" height="51" rx="3" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Decorative sidebar element -->
+  <rect x="195" y="255" width="120" height="85" rx="6" fill="#374151"/>
+  <rect x="205" y="265" width="100" height="8" rx="2" fill="#4B5563"/>
+  <rect x="205" y="280" width="80" height="6" rx="2" fill="#4B5563"/>
+  <rect x="205" y="292" width="90" height="6" rx="2" fill="#4B5563"/>
+  <rect x="205" y="304" width="70" height="6" rx="2" fill="#4B5563"/>
+
+  <!-- Person silhouette -->
+  <circle cx="510" y="425" r="51" fill="#374151"/>
+  <ellipse cx="510" cy="518" rx="68" ry="51" fill="#374151"/>
+
+  <!-- Play button overlay -->
+  <circle cx="476" cy="380" r="34" fill="rgba(0,0,0,0.5)"/>
+  <circle cx="476" cy="380" r="32" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  <path d="M465 363l25 17-25 17z" fill="#FFFFFF"/>
+
+  <!-- Progress bar -->
+  <rect x="170" y="538" width="595" height="5" rx="2" fill="#374151"/>
+  <rect x="170" y="538" width="238" height="5" rx="2" fill="#4DA6A6"/>
+  <circle cx="408" cy="540" r="7" fill="#4DA6A6"/>
+
+  <!-- Video controls bar -->
+  <rect x="170" y="545" width="595" height="10" fill="#111827"/>
+
+  <!-- Video info panel on right -->
+  <rect x="780" y="220" width="355" height="335" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- Currently playing label -->
+  <rect x="798" y="238" width="102" height="24" rx="5" fill="#4DA6A6"/>
+  <text x="849" y="255" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF">NOW PLAYING</text>
+
+  <!-- Video title -->
+  <text x="798" y="290" font-family="Inter, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#111827">Module 3: AI Design</text>
+  <text x="798" y="312" font-family="Inter, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#111827">Mastery</text>
+
+  <!-- Lesson info -->
+  <text x="798" y="342" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6B7280">Lesson 5 of 12</text>
+
+  <!-- Progress indicator -->
+  <rect x="798" y="358" width="320" height="7" rx="3" fill="#E5E7EB"/>
+  <rect x="798" y="358" width="134" height="7" rx="3" fill="#F87171"/>
+  <text x="798" y="385" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">42% complete</text>
+
+  <!-- Duration -->
+  <rect x="798" y="405" width="136" height="38" rx="7" fill="#F3F4F6"/>
+  <circle cx="818" cy="424" r="9" stroke="#6B7280" stroke-width="2" fill="none"/>
+  <line x1="818" y1="419" x2="818" y2="424" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+  <line x1="818" y1="424" x2="822" y2="426" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+  <text x="835" y="429" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#374151">12:34 / 28:15</text>
+
+  <!-- Next lesson preview -->
+  <rect x="798" y="460" width="320" height="1" fill="#E5E7EB"/>
+  <text x="798" y="485" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#9CA3AF">UP NEXT</text>
+
+  <rect x="798" y="498" width="320" height="51" rx="7" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="807" y="505" width="68" height="38" rx="4" fill="#F87171"/>
+  <path d="M835 519l10 7-10 7z" fill="rgba(255,255,255,0.8)"/>
+  <text x="885" y="520" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#111827">Lesson 6: Creating</text>
+  <text x="885" y="536" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#111827">Custom Templates</text>
+
+  <!-- ==================== COURSE GRID ==================== -->
+
+  <text x="170" y="590" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#111827">All Courses</text>
+
+  <!-- Card 1: Digital Product Secrets -->
+  <rect x="170" y="605" width="300" height="204" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="170" y="605" width="4" height="204" rx="2" fill="#4DA6A6"/>
+  <rect x="180" y="615" width="280" height="110" rx="7" fill="#4DA6A6"/>
+  <!-- File icons -->
+  <rect x="210" y="635" width="42" height="55" rx="3" fill="#3D9494"/>
+  <rect x="215" y="640" width="34" height="7" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <rect x="215" y="650" width="28" height="4" rx="1" fill="rgba(255,255,255,0.3)"/>
+  <rect x="215" y="657" width="24" height="4" rx="1" fill="rgba(255,255,255,0.3)"/>
+  <!-- PDF -->
+  <rect x="268" y="643" width="38" height="47" rx="3" fill="#2D7A7A"/>
+  <text x="287" y="672" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF">PDF</text>
+  <!-- Download -->
+  <circle cx="340" cy="665" r="24" fill="rgba(255,255,255,0.2)"/>
+  <rect x="335" y="652" width="10" height="17" rx="2" fill="#FFFFFF"/>
+  <path d="M331 669l9 9 9-9" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Dollar signs -->
+  <text x="395" y="645" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="rgba(255,255,255,0.5)">$</text>
+  <text x="410" y="668" font-family="Inter, sans-serif" font-size="17" font-weight="700" fill="rgba(255,255,255,0.4)">$</text>
+  <text x="388" y="690" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="rgba(255,255,255,0.3)">$</text>
+  <!-- Complete badge -->
+  <rect x="418" y="622" width="38" height="21" rx="4" fill="#10B981"/>
+  <path d="M430 632l3 3 7-7" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="184" y="745" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#111827">Digital Product Secrets</text>
+  <rect x="184" y="758" width="272" height="5" rx="2" fill="#E5E7EB"/>
+  <rect x="184" y="758" width="272" height="5" rx="2" fill="#4DA6A6"/>
+  <circle cx="192" y="783" r="8" fill="#10B981"/>
+  <path d="M188 783l3 3 5-5" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="206" y="787" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#10B981">Complete</text>
+
+  <!-- Card 2: AI Design Mastery -->
+  <rect x="490" y="605" width="300" height="204" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="490" y="605" width="4" height="204" rx="2" fill="#F87171"/>
+  <rect x="500" y="615" width="280" height="110" rx="7" fill="#F87171"/>
+  <!-- Robot head -->
+  <rect x="605" y="630" width="60" height="68" rx="7" fill="#DC2626"/>
+  <rect x="614" y="643" width="17" height="10" rx="2" fill="#FFFFFF"/>
+  <rect x="640" y="643" width="17" height="10" rx="2" fill="#FFFFFF"/>
+  <circle cx="622" cy="648" r="3" fill="#F87171"/>
+  <circle cx="648" cy="648" r="3" fill="#F87171"/>
+  <rect x="622" y="663" width="26" height="5" rx="2" fill="rgba(255,255,255,0.5)"/>
+  <!-- Antenna -->
+  <rect x="632" y="620" width="5" height="13" rx="2" fill="#DC2626"/>
+  <circle cx="635" cy="618" r="4" fill="#FBBF24"/>
+  <!-- Neural dots -->
+  <circle cx="540" cy="645" r="5" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="557" cy="668" r="3" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="532" cy="685" r="4" fill="rgba(255,255,255,0.25)"/>
+  <line x1="540" y1="645" x2="557" y2="668" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <line x1="557" y1="668" x2="532" y2="685" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <circle cx="720" cy="640" r="4" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="735" cy="660" r="3" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="710" cy="688" r="5" fill="rgba(255,255,255,0.25)"/>
+  <line x1="720" y1="640" x2="735" y2="660" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <line x1="735" y1="660" x2="710" y2="688" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+  <text x="504" y="745" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#111827">AI Design Mastery</text>
+  <rect x="504" y="758" width="272" height="5" rx="2" fill="#E5E7EB"/>
+  <rect x="504" y="758" width="177" height="5" rx="2" fill="#F87171"/>
+  <text x="504" y="787" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">65% complete</text>
+
+  <!-- Card 3: Etsy SEO Deep Dive -->
+  <rect x="810" y="605" width="300" height="204" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="810" y="605" width="4" height="204" rx="2" fill="#FBBF24"/>
+  <rect x="820" y="615" width="280" height="110" rx="7" fill="#FBBF24"/>
+  <!-- Magnifying glass -->
+  <circle cx="890" cy="665" r="30" stroke="#FFFFFF" stroke-width="5" fill="none"/>
+  <line x1="910" y1="688" x2="932" y2="710" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+  <rect x="865" y="657" width="51" height="17" rx="3" fill="rgba(255,255,255,0.4)"/>
+  <!-- Keywords -->
+  <rect x="950" y="630" width="68" height="19" rx="3" fill="#D97706"/>
+  <text x="984" y="644" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#FFFFFF">keywords</text>
+  <rect x="965" y="655" width="51" height="17" rx="3" fill="rgba(255,255,255,0.3)"/>
+  <text x="990" y="667" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#FFFFFF">tags</text>
+  <rect x="958" y="678" width="60" height="17" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <text x="988" y="690" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#FFFFFF">ranking</text>
+  <!-- Bar chart -->
+  <rect x="838" y="685" width="10" height="26" rx="2" fill="rgba(255,255,255,0.3)"/>
+  <rect x="853" y="668" width="10" height="43" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <rect x="868" y="651" width="10" height="60" rx="2" fill="rgba(255,255,255,0.5)"/>
+
+  <text x="824" y="745" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#111827">Etsy SEO Deep Dive</text>
+  <rect x="824" y="758" width="272" height="5" rx="2" fill="#E5E7EB"/>
+  <rect x="824" y="758" width="82" height="5" rx="2" fill="#FBBF24"/>
+  <text x="824" y="787" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">30% complete</text>
+
+  <!-- ==================== IPAD HARDWARE ==================== -->
+
+  <!-- Camera (top center when landscape) -->
+  <circle cx="640" cy="50" r="6" fill="#1A1A1A"/>
+  <circle cx="640" cy="50" r="4" fill="#2D2D2D"/>
+  <circle cx="640" cy="50" r="2" fill="#1A1A1A"/>
+
+  <!-- Home indicator (bottom) -->
+  <rect x="540" y="935" width="200" height="5" rx="2" fill="#4A4A4A"/>
+
+</svg>

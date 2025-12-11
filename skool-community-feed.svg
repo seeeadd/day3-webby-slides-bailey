@@ -1,408 +1,320 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
-  <defs>
-    <!-- Drop shadows -->
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="1" stdDeviation="3" flood-opacity="0.08"/>
-    </filter>
-    <filter id="shadow-sm" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.05"/>
-    </filter>
-    <filter id="shadow-lg" x="-10%" y="-10%" width="120%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.12"/>
-    </filter>
-
-    <!-- Gradients -->
-    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4DA6A6"/>
-      <stop offset="100%" style="stop-color:#3D8B8B"/>
-    </linearGradient>
-    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6366F1"/>
-      <stop offset="100%" style="stop-color:#4F46E5"/>
-    </linearGradient>
-    <linearGradient id="coralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#F87171"/>
-      <stop offset="100%" style="stop-color:#EF4444"/>
-    </linearGradient>
-    <linearGradient id="amberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FBBF24"/>
-      <stop offset="100%" style="stop-color:#F59E0B"/>
-    </linearGradient>
-    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#34D399"/>
-      <stop offset="100%" style="stop-color:#10B981"/>
-    </linearGradient>
-
-    <!-- Avatar gradients -->
-    <linearGradient id="avatar1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#C4B5FD"/>
-      <stop offset="100%" style="stop-color:#A78BFA"/>
-    </linearGradient>
-    <linearGradient id="avatar2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FDA4AF"/>
-      <stop offset="100%" style="stop-color:#FB7185"/>
-    </linearGradient>
-    <linearGradient id="avatar3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#A5F3FC"/>
-      <stop offset="100%" style="stop-color:#67E8F9"/>
-    </linearGradient>
-    <linearGradient id="avatar4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FDE68A"/>
-      <stop offset="100%" style="stop-color:#FCD34D"/>
-    </linearGradient>
-    <linearGradient id="avatar5" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#BBF7D0"/>
-      <stop offset="100%" style="stop-color:#86EFAC"/>
-    </linearGradient>
-
-    <!-- Custom Icons as symbols -->
-    <symbol id="icon-star" viewBox="0 0 20 20">
-      <path d="M10 1l2.39 6.26L19 8.27l-5 4.87 1.18 6.88L10 16.77l-5.18 3.25L6 13.14 1 8.27l6.61-1.01L10 1z" fill="url(#amberGradient)"/>
-    </symbol>
-
-    <symbol id="icon-hands-up" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="11" fill="#FEF3C7"/>
-      <circle cx="8" cy="10" r="1.5" fill="#92400E"/>
-      <circle cx="16" cy="10" r="1.5" fill="#92400E"/>
-      <path d="M8 15c0 0 2 3 4 3s4-3 4-3" stroke="#92400E" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <path d="M5 4 L3 1" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
-      <path d="M19 4 L21 1" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
-      <path d="M5 2 L6 5" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
-      <path d="M19 2 L18 5" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
-    </symbol>
-
-    <symbol id="icon-heart-full" viewBox="0 0 24 24">
-      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="url(#coralGradient)"/>
-    </symbol>
-
-    <symbol id="icon-fire" viewBox="0 0 24 24">
-      <path d="M12 23c4.97 0 9-4.03 9-9 0-5.5-4.5-8.5-6-11 0 0-1 3-3 3-1 0-2-1-2-3 0 0-7 5-7 11 0 4.97 4.03 9 9 9z" fill="url(#coralGradient)"/>
-      <path d="M12 23c2.76 0 5-2.24 5-5 0-3-2.5-4.5-3-6 0 0-.5 1.5-1.5 1.5-.75 0-1-1-1-1.5 0 0-3.5 2.5-3.5 6 0 2.76 2.24 5 5 5z" fill="url(#amberGradient)"/>
-    </symbol>
-
-    <symbol id="icon-comment" viewBox="0 0 24 24">
-      <path d="M21 12c0 4.418-4.03 8-9 8-1.5 0-2.91-.32-4.15-.88L3 21l1.65-4.12C3.62 15.42 3 13.78 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1.5"/>
-      <circle cx="8" cy="12" r="1.2" fill="#9CA3AF"/>
-      <circle cx="12" cy="12" r="1.2" fill="#9CA3AF"/>
-      <circle cx="16" cy="12" r="1.2" fill="#9CA3AF"/>
-    </symbol>
-
-    <symbol id="icon-thought" viewBox="0 0 24 24">
-      <ellipse cx="12" cy="10" rx="9" ry="7" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1.5"/>
-      <circle cx="6" cy="19" r="2" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
-      <circle cx="3.5" cy="21.5" r="1.2" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="0.75"/>
-    </symbol>
-
-    <symbol id="icon-calendar" viewBox="0 0 24 24">
-      <rect x="3" y="4" width="18" height="18" rx="3" fill="url(#brandGradient)"/>
-      <rect x="3" y="4" width="18" height="6" fill="#3D8B8B"/>
-      <line x1="7" y1="2" x2="7" y2="6" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
-      <line x1="17" y1="2" x2="17" y2="6" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
-      <rect x="6" y="13" width="3" height="3" rx="0.5" fill="#FFF"/>
-      <rect x="10.5" y="13" width="3" height="3" rx="0.5" fill="#FFF"/>
-      <rect x="15" y="13" width="3" height="3" rx="0.5" fill="#FFF" opacity="0.5"/>
-    </symbol>
-
-    <symbol id="icon-write" viewBox="0 0 24 24">
-      <path d="M16.5 3.5L20.5 7.5L7.5 20.5H3.5V16.5L16.5 3.5Z" fill="url(#purpleGradient)"/>
-      <path d="M14.5 5.5L18.5 9.5" stroke="#FFF" stroke-width="1.5"/>
-    </symbol>
-
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1100" width="1400" height="1100">
 
   <!-- Background -->
-  <rect width="1400" height="900" fill="#F3F4F6"/>
+  <rect width="1400" height="1100" fill="#F3F4F6"/>
 
   <!-- ==================== TOP BAR ==================== -->
-  <rect width="1400" height="64" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect width="1400" height="64" fill="#FFFFFF"/>
+  <rect y="63" width="1400" height="1" fill="#E5E7EB"/>
 
   <!-- Skool logo -->
-  <g transform="translate(24, 14)">
-    <rect width="36" height="36" rx="10" fill="url(#purpleGradient)"/>
-    <text x="18" y="26" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">S</text>
-  </g>
+  <rect x="24" y="14" width="36" height="36" rx="10" fill="#6366F1"/>
+  <text x="42" y="40" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">S</text>
 
-  <!-- Community name and member count -->
-  <text x="76" y="32" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1A1A1A">Etsy Accelerator Community</text>
-  <g transform="translate(76, 40)">
-    <circle cx="5" cy="5" r="4" fill="#10B981"/>
-    <text x="14" y="9" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#6B7280">247 members</text>
-  </g>
+  <!-- Community name -->
+  <text x="76" y="32" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1A1A1A">Etsy Accelerator Community</text>
+  <circle cx="81" y="50" r="4" fill="#10B981"/>
+  <text x="92" y="54" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">247 members online</text>
 
   <!-- Navigation tabs -->
-  <g transform="translate(650, 0)">
-    <text x="0" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Classroom</text>
-    <g transform="translate(100, 0)">
-      <text x="0" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Community</text>
-      <rect x="-5" y="52" width="90" height="3" rx="1.5" fill="url(#purpleGradient)"/>
-    </g>
-    <text x="210" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Calendar</text>
-    <text x="310" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Leaderboard</text>
+  <text x="550" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Classroom</text>
+  <text x="650" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Community</text>
+  <rect x="645" y="52" width="80" height="3" rx="1.5" fill="#6366F1"/>
+  <text x="760" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Calendar</text>
+  <text x="860" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Leaderboard</text>
+  <text x="980" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Members</text>
+
+  <!-- Search -->
+  <rect x="1100" y="16" width="180" height="32" rx="8" fill="#F3F4F6"/>
+  <circle cx="1120" y="32" r="8" stroke="#9CA3AF" stroke-width="2" fill="none"/>
+  <line x1="1126" y1="38" x2="1132" y2="44" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+  <text x="1145" y="37" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">Search</text>
+
+  <!-- User avatar top right -->
+  <circle cx="1360" cy="32" r="16" fill="#4DA6A6"/>
+  <text x="1360" y="38" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">ME</text>
+
+  <!-- ==================== LEFT SIDEBAR ==================== -->
+  <rect x="24" y="84" width="260" height="700" rx="12" fill="#FFFFFF"/>
+
+  <text x="44" y="116" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#6B7280" letter-spacing="0.5">ONLINE NOW</text>
+
+  <!-- Bailey V. (host) with avatar -->
+  <g transform="translate(44, 136)">
+    <circle cx="20" cy="20" r="20" fill="#4DA6A6"/>
+    <!-- Simple face -->
+    <circle cx="14" cy="16" r="2" fill="#FFFFFF"/>
+    <circle cx="26" cy="16" r="2" fill="#FFFFFF"/>
+    <path d="M14 26 Q20 30 26 26" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Online indicator -->
+    <circle cx="34" cy="34" r="6" fill="#FFFFFF"/>
+    <circle cx="34" cy="34" r="5" fill="#10B981"/>
+    <text x="52" y="16" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Bailey V.</text>
+    <!-- Star badge -->
+    <path d="M148 8l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z" fill="#FBBF24"/>
+    <text x="52" y="34" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6366F1" font-weight="500">Host</text>
   </g>
 
-  <!-- ==================== LEFT SIDEBAR (20%) ==================== -->
-  <g transform="translate(24, 84)">
-    <rect width="240" height="520" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
-
-    <!-- Header -->
-    <text x="20" y="32" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#6B7280" letter-spacing="0.5">ONLINE NOW</text>
-
-    <!-- Member list - tighter spacing -->
-    <g transform="translate(20, 48)">
-
-      <!-- Bailey V. (host, online) -->
-      <g transform="translate(0, 0)">
-        <circle cx="18" cy="18" r="18" fill="url(#brandGradient)"/>
-        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">B</text>
-        <circle cx="30" cy="30" r="5" fill="#FFFFFF"/>
-        <circle cx="30" cy="30" r="4" fill="#10B981"/>
-        <text x="44" y="14" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1A1A1A">Bailey V.</text>
-        <use href="#icon-star" x="108" y="3" width="14" height="14"/>
-        <text x="44" y="30" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6366F1">Host</text>
-      </g>
-
-      <!-- Sarah M. (online) -->
-      <g transform="translate(0, 48)">
-        <circle cx="18" cy="18" r="18" fill="url(#avatar1)"/>
-        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#5B21B6">S</text>
-        <circle cx="30" cy="30" r="5" fill="#FFFFFF"/>
-        <circle cx="30" cy="30" r="4" fill="#10B981"/>
-        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Sarah M.</text>
-      </g>
-
-      <!-- Jessica T. (online) -->
-      <g transform="translate(0, 96)">
-        <circle cx="18" cy="18" r="18" fill="url(#avatar2)"/>
-        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#9F1239">J</text>
-        <circle cx="30" cy="30" r="5" fill="#FFFFFF"/>
-        <circle cx="30" cy="30" r="4" fill="#10B981"/>
-        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Jessica T.</text>
-      </g>
-
-      <!-- Michelle L. (online) -->
-      <g transform="translate(0, 144)">
-        <circle cx="18" cy="18" r="18" fill="url(#avatar3)"/>
-        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#0E7490">M</text>
-        <circle cx="30" cy="30" r="5" fill="#FFFFFF"/>
-        <circle cx="30" cy="30" r="4" fill="#10B981"/>
-        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Michelle L.</text>
-      </g>
-
-      <!-- Amanda K. (online) -->
-      <g transform="translate(0, 192)">
-        <circle cx="18" cy="18" r="18" fill="url(#avatar4)"/>
-        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#A16207">A</text>
-        <circle cx="30" cy="30" r="5" fill="#FFFFFF"/>
-        <circle cx="30" cy="30" r="4" fill="#10B981"/>
-        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Amanda K.</text>
-      </g>
-
-      <!-- Rachel B. (offline) -->
-      <g transform="translate(0, 240)">
-        <circle cx="18" cy="18" r="18" fill="url(#avatar5)"/>
-        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#166534">R</text>
-        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Rachel B.</text>
-      </g>
-
-      <!-- Lauren P. (offline) -->
-      <g transform="translate(0, 288)">
-        <circle cx="18" cy="18" r="18" fill="url(#avatar1)" opacity="0.5"/>
-        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#5B21B6" opacity="0.7">L</text>
-        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#9CA3AF">Lauren P.</text>
-      </g>
-
-      <!-- Christina H. (offline) -->
-      <g transform="translate(0, 336)">
-        <circle cx="18" cy="18" r="18" fill="url(#avatar2)" opacity="0.5"/>
-        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#9F1239" opacity="0.7">C</text>
-        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#9CA3AF">Christina H.</text>
-      </g>
-
-    </g>
-
-    <!-- Online count -->
-    <g transform="translate(20, 420)">
-      <circle cx="6" cy="6" r="5" fill="#10B981"/>
-      <text x="18" y="10" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6B7280">5 online now</text>
-    </g>
-
+  <!-- Sarah M. with avatar -->
+  <g transform="translate(44, 192)">
+    <circle cx="20" cy="20" r="20" fill="#A78BFA"/>
+    <circle cx="14" cy="16" r="2" fill="#FFFFFF"/>
+    <circle cx="26" cy="16" r="2" fill="#FFFFFF"/>
+    <path d="M14 24 Q20 28 26 24" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="34" cy="34" r="6" fill="#FFFFFF"/>
+    <circle cx="34" cy="34" r="5" fill="#10B981"/>
+    <text x="52" y="24" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Sarah M.</text>
   </g>
 
-  <!-- ==================== MAIN FEED (60%) ==================== -->
-  <g transform="translate(284, 84)">
-
-    <!-- POST 1 -->
-    <g transform="translate(0, 0)">
-      <rect width="760" height="290" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
-
-      <!-- Avatar -->
-      <circle cx="40" cy="40" r="22" fill="url(#avatar3)"/>
-      <text x="40" y="47" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#0E7490">M</text>
-
-      <!-- Author & time -->
-      <text x="74" y="32" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Michelle L.</text>
-      <circle cx="154" cy="28" r="2" fill="#D1D5DB"/>
-      <text x="164" y="32" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">2 hours ago</text>
-
-      <!-- Post text -->
-      <text x="74" y="58" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">Just deleted 47 listings and I feel FREE!</text>
-      <use href="#icon-hands-up" x="330" y="42" width="22" height="22"/>
-      <text x="74" y="80" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">My shop already looks so much cleaner. The ones left are actually</text>
-      <text x="74" y="102" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">my best work. Week 1 DELETE phase = complete!</text>
-
-      <!-- Engagement -->
-      <g transform="translate(74, 120)">
-        <use href="#icon-heart-full" x="0" y="0" width="20" height="20"/>
-        <text x="26" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">23</text>
-        <use href="#icon-comment" x="60" y="0" width="20" height="20"/>
-        <text x="86" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">12 comments</text>
-      </g>
-
-      <!-- Divider -->
-      <rect x="20" y="155" width="720" height="1" fill="#F3F4F6"/>
-
-      <!-- Bailey's reply -->
-      <g transform="translate(32, 170)">
-        <circle cx="18" cy="18" r="18" fill="url(#brandGradient)"/>
-        <text x="18" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">B</text>
-
-        <text x="46" y="14" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Bailey Vann</text>
-        <rect x="126" y="2" width="42" height="16" rx="4" fill="url(#purpleGradient)"/>
-        <text x="147" y="13" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#FFFFFF">HOST</text>
-
-        <text x="46" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">This is EXACTLY what's supposed to happen! Your shop can finally</text>
-        <text x="46" y="58" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">breathe. Watch what happens to your views this week — the</text>
-        <text x="46" y="78" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">algorithm rewards focus. Keep going!</text>
-
-        <g transform="translate(46, 92)">
-          <use href="#icon-heart-full" x="0" y="0" width="16" height="16"/>
-          <text x="22" y="12" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6B7280">8</text>
-        </g>
-      </g>
-    </g>
-
-    <!-- POST 2 -->
-    <g transform="translate(0, 310)">
-      <rect width="760" height="165" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
-
-      <circle cx="40" cy="40" r="22" fill="url(#avatar5)"/>
-      <text x="40" y="47" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#166534">R</text>
-
-      <text x="74" y="32" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Rachel B.</text>
-      <circle cx="148" cy="28" r="2" fill="#D1D5DB"/>
-      <text x="158" y="32" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">5 hours ago</text>
-
-      <text x="74" y="58" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">Week 2 check-in: Already seeing traffic increase on my remaining</text>
-      <text x="74" y="80" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">listings! The DELETE phase actually works. My views are up 34%</text>
-      <text x="74" y="102" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">and I literally have FEWER products.</text>
-
-      <g transform="translate(74, 122)">
-        <use href="#icon-fire" x="0" y="0" width="20" height="20"/>
-        <text x="26" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">31</text>
-        <use href="#icon-comment" x="60" y="0" width="20" height="20"/>
-        <text x="86" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">8 comments</text>
-      </g>
-    </g>
-
-    <!-- POST 3 -->
-    <g transform="translate(0, 495)">
-      <rect width="760" height="165" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
-
-      <circle cx="40" cy="40" r="22" fill="url(#avatar4)"/>
-      <text x="40" y="47" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#A16207">A</text>
-
-      <text x="74" y="32" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Amanda K.</text>
-      <circle cx="158" cy="28" r="2" fill="#D1D5DB"/>
-      <text x="168" y="32" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">Yesterday</text>
-
-      <text x="74" y="58" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">Question for everyone — when you did the SEO framework on your</text>
-      <text x="74" y="80" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">listings, did you change all of them at once or spread it out over a</text>
-      <text x="74" y="102" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">few days? I'm trying to figure out the best approach...</text>
-
-      <g transform="translate(74, 122)">
-        <use href="#icon-thought" x="0" y="0" width="20" height="20"/>
-        <text x="26" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">15</text>
-        <use href="#icon-comment" x="60" y="0" width="20" height="20"/>
-        <text x="86" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">22 comments</text>
-      </g>
-    </g>
-
-    <!-- Scroll indicator -->
-    <g transform="translate(700, 680)">
-      <rect x="0" y="0" width="50" height="26" rx="13" fill="#E5E7EB"/>
-      <path d="M18 9L25 16L32 9" stroke="#6B7280" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-
+  <!-- Jessica T. with avatar -->
+  <g transform="translate(44, 248)">
+    <circle cx="20" cy="20" r="20" fill="#FB7185"/>
+    <circle cx="14" cy="16" r="2" fill="#FFFFFF"/>
+    <circle cx="26" cy="16" r="2" fill="#FFFFFF"/>
+    <path d="M14 24 Q20 28 26 24" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="34" cy="34" r="6" fill="#FFFFFF"/>
+    <circle cx="34" cy="34" r="5" fill="#10B981"/>
+    <text x="52" y="24" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Jessica T.</text>
   </g>
 
-  <!-- ==================== RIGHT SIDEBAR (20%) ==================== -->
-  <g transform="translate(1064, 84)">
-
-    <!-- About card -->
-    <g transform="translate(0, 0)">
-      <rect width="312" height="150" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
-
-      <text x="20" y="30" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">About</text>
-
-      <text x="20" y="56" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">Private community for Accelerator</text>
-      <text x="20" y="74" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">members. Share wins, get feedback,</text>
-      <text x="20" y="92" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">connect with fellow sellers.</text>
-
-      <!-- Member avatars -->
-      <g transform="translate(20, 112)">
-        <circle cx="0" cy="0" r="12" fill="url(#avatar1)" stroke="#FFFFFF" stroke-width="2"/>
-        <circle cx="20" cy="0" r="12" fill="url(#avatar2)" stroke="#FFFFFF" stroke-width="2"/>
-        <circle cx="40" cy="0" r="12" fill="url(#avatar3)" stroke="#FFFFFF" stroke-width="2"/>
-        <circle cx="60" cy="0" r="12" fill="url(#avatar4)" stroke="#FFFFFF" stroke-width="2"/>
-        <circle cx="80" cy="0" r="12" fill="url(#avatar5)" stroke="#FFFFFF" stroke-width="2"/>
-        <text x="104" y="4" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6B7280">+242 more</text>
-      </g>
-    </g>
-
-    <!-- Upcoming card -->
-    <g transform="translate(0, 170)">
-      <rect width="312" height="110" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
-
-      <text x="20" y="30" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Upcoming</text>
-
-      <g transform="translate(20, 46)">
-        <rect width="44" height="44" rx="10" fill="#F0FDF4"/>
-        <use href="#icon-calendar" x="10" y="10" width="24" height="24"/>
-      </g>
-
-      <text x="76" y="62" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Weekly Call — Thursday 11am CT</text>
-      <text x="76" y="82" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#10B981">3 days away</text>
-    </g>
-
-    <!-- This Week stats card -->
-    <g transform="translate(0, 300)">
-      <rect width="312" height="105" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
-
-      <text x="20" y="30" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">This Week</text>
-
-      <g transform="translate(20, 50)">
-        <g transform="translate(0, 0)">
-          <text x="0" y="18" font-family="Inter, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#6366F1">47</text>
-          <text x="0" y="38" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">Posts</text>
-        </g>
-        <g transform="translate(90, 0)">
-          <text x="0" y="18" font-family="Inter, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#10B981">156</text>
-          <text x="0" y="38" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">Comments</text>
-        </g>
-        <g transform="translate(190, 0)">
-          <text x="0" y="18" font-family="Inter, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#F59E0B">12</text>
-          <text x="0" y="38" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">Wins</text>
-        </g>
-      </g>
-    </g>
-
+  <!-- Michelle L. with avatar -->
+  <g transform="translate(44, 304)">
+    <circle cx="20" cy="20" r="20" fill="#67E8F9"/>
+    <circle cx="14" cy="16" r="2" fill="#0E7490"/>
+    <circle cx="26" cy="16" r="2" fill="#0E7490"/>
+    <path d="M14 24 Q20 28 26 24" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="34" cy="34" r="6" fill="#FFFFFF"/>
+    <circle cx="34" cy="34" r="5" fill="#10B981"/>
+    <text x="52" y="24" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Michelle L.</text>
   </g>
+
+  <!-- Amanda K. with avatar -->
+  <g transform="translate(44, 360)">
+    <circle cx="20" cy="20" r="20" fill="#FCD34D"/>
+    <circle cx="14" cy="16" r="2" fill="#A16207"/>
+    <circle cx="26" cy="16" r="2" fill="#A16207"/>
+    <path d="M14 24 Q20 28 26 24" stroke="#A16207" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="34" cy="34" r="6" fill="#FFFFFF"/>
+    <circle cx="34" cy="34" r="5" fill="#10B981"/>
+    <text x="52" y="24" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Amanda K.</text>
+  </g>
+
+  <!-- Rachel B. (offline) -->
+  <g transform="translate(44, 416)">
+    <circle cx="20" cy="20" r="20" fill="#86EFAC"/>
+    <circle cx="14" cy="16" r="2" fill="#166534"/>
+    <circle cx="26" cy="16" r="2" fill="#166534"/>
+    <path d="M14 24 Q20 28 26 24" stroke="#166534" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="52" y="24" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#9CA3AF">Rachel B.</text>
+  </g>
+
+  <!-- Lauren P. (offline) -->
+  <g transform="translate(44, 472)">
+    <circle cx="20" cy="20" r="20" fill="#E9D5FF"/>
+    <circle cx="14" cy="16" r="2" fill="#7C3AED"/>
+    <circle cx="26" cy="16" r="2" fill="#7C3AED"/>
+    <path d="M14 24 Q20 28 26 24" stroke="#7C3AED" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="52" y="24" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#9CA3AF">Lauren P.</text>
+  </g>
+
+  <!-- Christina H. (offline) -->
+  <g transform="translate(44, 528)">
+    <circle cx="20" cy="20" r="20" fill="#FECACA"/>
+    <circle cx="14" cy="16" r="2" fill="#DC2626"/>
+    <circle cx="26" cy="16" r="2" fill="#DC2626"/>
+    <path d="M14 24 Q20 28 26 24" stroke="#DC2626" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="52" y="24" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#9CA3AF">Christina H.</text>
+  </g>
+
+  <!-- Online count -->
+  <circle cx="50" y="610" r="5" fill="#10B981"/>
+  <text x="62" y="614" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6B7280">5 online now</text>
+
+  <!-- View all members link -->
+  <text x="44" y="660" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#6366F1">View all 247 members</text>
+
+  <!-- ==================== MAIN FEED ==================== -->
+
+  <!-- Create post box -->
+  <rect x="304" y="84" width="740" height="70" rx="12" fill="#FFFFFF"/>
+  <circle cx="344" cy="119" r="20" fill="#4DA6A6"/>
+  <text x="344" y="125" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">ME</text>
+  <rect x="380" y="99" width="600" height="40" rx="20" fill="#F3F4F6"/>
+  <text x="410" y="125" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#9CA3AF">Write something...</text>
+
+  <!-- POST 1: Michelle's WIN post -->
+  <rect x="304" y="174" width="740" height="290" rx="12" fill="#FFFFFF"/>
+
+  <!-- Michelle avatar with face -->
+  <circle cx="344" cy="214" r="22" fill="#67E8F9"/>
+  <circle cx="337" cy="210" r="2.5" fill="#0E7490"/>
+  <circle cx="351" cy="210" r="2.5" fill="#0E7490"/>
+  <path d="M337 220 Q344 225 351 220" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <text x="380" y="206" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Michelle L.</text>
+  <text x="462" y="206" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">2 hours ago</text>
+  <rect x="380" y="214" width="38" height="18" rx="4" fill="#10B981"/>
+  <text x="399" y="227" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF">WIN</text>
+
+  <text x="380" y="260" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">Just deleted 47 listings and I feel FREE!</text>
+  <text x="380" y="284" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">My shop already looks so much cleaner. The ones left are actually my best</text>
+  <text x="380" y="308" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">work. Week 1 DELETE phase = complete!</text>
+
+  <!-- Reactions -->
+  <rect x="380" y="328" width="70" height="28" rx="14" fill="#FEF3C7"/>
+  <text x="395" y="347" font-family="Inter, sans-serif" font-size="14">raised hands icon</text>
+  <text x="428" y="347" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#A16207">23</text>
+
+  <!-- Comment count -->
+  <text x="470" y="347" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">12 comments</text>
+
+  <!-- Divider -->
+  <rect x="324" y="370" width="700" height="1" fill="#F3F4F6"/>
+
+  <!-- Bailey's reply -->
+  <circle cx="344" cy="405" r="18" fill="#4DA6A6"/>
+  <circle cx="338" cy="401" r="2" fill="#FFFFFF"/>
+  <circle cx="350" cy="401" r="2" fill="#FFFFFF"/>
+  <path d="M338 409 Q344 413 350 409" stroke="#FFFFFF" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <text x="374" y="393" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Bailey Vann</text>
+  <rect x="462" y="379" width="42" height="18" rx="4" fill="#6366F1"/>
+  <text x="483" y="392" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#FFFFFF">HOST</text>
+  <text x="374" y="420" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">This is EXACTLY what's supposed to happen! Watch what happens to</text>
+  <text x="374" y="440" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">your views this week. The algorithm rewards focus!</text>
+
+  <!-- POST 2: Rachel's progress -->
+  <rect x="304" y="484" width="740" height="175" rx="12" fill="#FFFFFF"/>
+
+  <circle cx="344" cy="524" r="22" fill="#86EFAC"/>
+  <circle cx="337" cy="520" r="2.5" fill="#166534"/>
+  <circle cx="351" cy="520" r="2.5" fill="#166534"/>
+  <path d="M337 530 Q344 535 351 530" stroke="#166534" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <text x="380" y="516" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Rachel B.</text>
+  <text x="455" y="516" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">5 hours ago</text>
+
+  <text x="380" y="556" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">Week 2 check-in: Already seeing traffic increase on my remaining listings!</text>
+  <text x="380" y="580" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">The DELETE phase actually works. My views are up 34% and I literally</text>
+  <text x="380" y="604" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">have FEWER products. Mind = blown.</text>
+
+  <!-- Fire reaction -->
+  <rect x="380" y="624" width="60" height="28" rx="14" fill="#FEE2E2"/>
+  <circle cx="396" cy="638" r="8" fill="#F87171"/>
+  <text x="420" y="643" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#DC2626">31</text>
+  <text x="460" y="643" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">8 comments</text>
+
+  <!-- POST 3: Amanda's question -->
+  <rect x="304" y="679" width="740" height="160" rx="12" fill="#FFFFFF"/>
+
+  <circle cx="344" cy="719" r="22" fill="#FCD34D"/>
+  <circle cx="337" cy="715" r="2.5" fill="#A16207"/>
+  <circle cx="351" cy="715" r="2.5" fill="#A16207"/>
+  <path d="M337 725 Q344 730 351 725" stroke="#A16207" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <text x="380" y="711" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Amanda K.</text>
+  <text x="468" y="711" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">Yesterday</text>
+  <rect x="380" y="719" width="70" height="18" rx="4" fill="#DBEAFE"/>
+  <text x="415" y="732" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#2563EB">QUESTION</text>
+
+  <text x="380" y="760" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">When you did the SEO framework on your listings, did you change all of</text>
+  <text x="380" y="784" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">them at once or spread it out over a few days?</text>
+
+  <text x="380" y="820" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">22 comments</text>
+
+  <!-- POST 4: Jessica's first sale -->
+  <rect x="304" y="859" width="740" height="160" rx="12" fill="#FFFFFF"/>
+
+  <circle cx="344" cy="899" r="22" fill="#FB7185"/>
+  <circle cx="337" cy="895" r="2.5" fill="#FFFFFF"/>
+  <circle cx="351" cy="895" r="2.5" fill="#FFFFFF"/>
+  <path d="M337 905 Q344 910 351 905" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <text x="380" y="891" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Jessica T.</text>
+  <text x="456" y="891" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">Yesterday</text>
+  <rect x="380" y="899" width="38" height="18" rx="4" fill="#10B981"/>
+  <text x="399" y="912" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF">WIN</text>
+
+  <text x="380" y="940" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">FIRST SALE since implementing Bailey's pricing strategy! Sold a bundle</text>
+  <text x="380" y="964" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">for $47 that I was originally selling for $12. Thank you so much!</text>
+
+  <!-- Heart reaction -->
+  <rect x="380" y="984" width="60" height="28" rx="14" fill="#FEE2E2"/>
+  <path d="M390 998l-1-1C386 994 384 992 384 989.5c0-2 1.5-3.5 3.5-3.5 1.1 0 2.1.5 2.5 1.3.4-.8 1.4-1.3 2.5-1.3 2 0 3.5 1.5 3.5 3.5 0 2.5-2 4.5-5 7l-1 1z" fill="#F87171"/>
+  <text x="420" y="1003" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#DC2626">45</text>
+  <text x="460" y="1003" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">18 comments</text>
+
+  <!-- ==================== RIGHT SIDEBAR ==================== -->
+
+  <!-- About card -->
+  <rect x="1064" y="84" width="312" height="160" rx="12" fill="#FFFFFF"/>
+  <text x="1084" y="116" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">About</text>
+  <text x="1084" y="144" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">Private community for Accelerator</text>
+  <text x="1084" y="164" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">members. Share wins, get feedback,</text>
+  <text x="1084" y="184" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">and connect with fellow sellers.</text>
+
+  <!-- Stacked avatars -->
+  <circle cx="1084" cy="218" r="14" fill="#A78BFA" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="1106" cy="218" r="14" fill="#FB7185" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="1128" cy="218" r="14" fill="#67E8F9" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="1150" cy="218" r="14" fill="#FCD34D" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="1172" cy="218" r="14" fill="#86EFAC" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="1198" y="222" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6B7280">+242 more</text>
+
+  <!-- Upcoming Events -->
+  <rect x="1064" y="264" width="312" height="130" rx="12" fill="#FFFFFF"/>
+  <text x="1084" y="296" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Upcoming</text>
+
+  <rect x="1084" y="312" width="50" height="50" rx="10" fill="#F0FDF4"/>
+  <rect x="1094" y="320" width="30" height="30" rx="4" fill="#4DA6A6"/>
+  <rect x="1094" y="320" width="30" height="8" fill="#3D8B8B"/>
+  <text x="1109" y="342" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">12</text>
+
+  <text x="1148" y="336" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Weekly Call</text>
+  <text x="1148" y="356" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">Thursday 11am CT</text>
+  <text x="1148" y="376" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#10B981">3 days away</text>
+
+  <!-- This Week Stats -->
+  <rect x="1064" y="414" width="312" height="120" rx="12" fill="#FFFFFF"/>
+  <text x="1084" y="446" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">This Week</text>
+
+  <text x="1084" y="490" font-family="Inter, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#6366F1">47</text>
+  <text x="1084" y="510" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">Posts</text>
+
+  <text x="1164" y="490" font-family="Inter, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#10B981">156</text>
+  <text x="1164" y="510" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">Comments</text>
+
+  <text x="1264" y="490" font-family="Inter, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#F59E0B">12</text>
+  <text x="1264" y="510" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">Wins</text>
+
+  <!-- Top Contributors -->
+  <rect x="1064" y="554" width="312" height="180" rx="12" fill="#FFFFFF"/>
+  <text x="1084" y="586" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Top Contributors</text>
+
+  <!-- Contributor 1 -->
+  <circle cx="1102" cy="624" r="16" fill="#A78BFA"/>
+  <circle cx="1097" cy="621" r="1.5" fill="#FFFFFF"/>
+  <circle cx="1107" cy="621" r="1.5" fill="#FFFFFF"/>
+  <text x="1130" y="620" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Sarah M.</text>
+  <text x="1130" y="636" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">47 contributions</text>
+
+  <!-- Contributor 2 -->
+  <circle cx="1102" cy="668" r="16" fill="#67E8F9"/>
+  <circle cx="1097" cy="665" r="1.5" fill="#0E7490"/>
+  <circle cx="1107" cy="665" r="1.5" fill="#0E7490"/>
+  <text x="1130" y="664" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Michelle L.</text>
+  <text x="1130" y="680" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">38 contributions</text>
+
+  <!-- Contributor 3 -->
+  <circle cx="1102" cy="712" r="16" fill="#86EFAC"/>
+  <circle cx="1097" cy="709" r="1.5" fill="#166534"/>
+  <circle cx="1107" cy="709" r="1.5" fill="#166534"/>
+  <text x="1130" y="708" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Rachel B.</text>
+  <text x="1130" y="724" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">34 contributions</text>
 
   <!-- Floating New Post button -->
-  <g transform="translate(620, 800)">
-    <rect x="0" y="0" width="160" height="50" rx="25" fill="url(#purpleGradient)" filter="url(#shadow-lg)"/>
-    <use href="#icon-write" x="30" y="13" width="24" height="24"/>
-    <text x="100" y="32" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">New Post</text>
-  </g>
+  <rect x="620" y="1040" width="160" height="50" rx="25" fill="#6366F1"/>
+  <path d="M670 1055l12 12m0-12l-12 12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" transform="rotate(45 676 1061)"/>
+  <text x="720" y="1071" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">New Post</text>
 
 </svg>
