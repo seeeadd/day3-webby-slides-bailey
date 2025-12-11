@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>Bailey Vann - Day 3 Testimonial Placeholders (Slides 162-169)</title>
+    <style>
+@font-face {
+    font-family: 'Ogg Bold';
+    src: url('https://seanthea.github.io/bailey-fonts/Ogg-Bold.woff2') format('woff2'),
+         url('https://seanthea.github.io/bailey-fonts/Ogg-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('https://seanthea.github.io/bailey-fonts/Satoshi-Variable.woff2') format('woff2'),
+         url('https://seanthea.github.io/bailey-fonts/Satoshi-Variable.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* === BASE === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.slide {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+}
+
+/* === TYPOGRAPHY === */
+.display {
+    font-family: 'Ogg Bold', Georgia, serif;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.body {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 162 — TESTIMONIAL PLACEHOLDER: BRAND NEW / FIRST SALES
+     Layout A: Testimonial Card — [REGULAR]
+
+     WARNING: BAILEY MUST REPLACE WITH REAL TESTIMONIAL BEFORE PRESENTING
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(165deg, #FDF8F3 0%, #FAF3E0 100%); position: relative;">
+    <!-- Subtle background shape -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s162bg" cx="85%" cy="75%" r="45%">
+                <stop offset="0%" style="stop-color:#1B8A8A;stop-opacity:0.04" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="1600" cy="800" rx="600" ry="450" fill="url(#s162bg)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+
+        <!-- Category Label -->
+        <div style="background: linear-gradient(135deg, #1B8A8A 0%, #2BA5A3 100%); border-radius: 50px; padding: 12px 32px; margin-bottom: 40px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
+                Brand New / First Sales
+            </p>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 24px; padding: 50px 70px; max-width: 1100px; border: 2px dashed #E07A5F; position: relative;">
+
+            <!-- Warning Badge -->
+            <div style="position: absolute; top: -16px; right: 40px; background: #E07A5F; border-radius: 8px; padding: 8px 20px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 12px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">
+                    Replace Before Presenting
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 50px; align-items: center;">
+
+                <!-- Photo Placeholder -->
+                <div style="flex-shrink: 0;">
+                    <div style="width: 180px; height: 180px; border-radius: 50%; background: linear-gradient(145deg, #E8F5F3 0%, #D4E8E6 100%); border: 3px solid #1B8A8A; display: flex; align-items: center; justify-content: center;">
+                        <svg width="70" height="70" viewBox="0 0 70 70">
+                            <circle cx="35" cy="25" r="14" fill="#1B8A8A" opacity="0.4"/>
+                            <ellipse cx="35" cy="55" rx="22" ry="16" fill="#1B8A8A" opacity="0.4"/>
+                            <text x="35" y="72" font-family="Satoshi, sans-serif" font-size="8" fill="#1B8A8A" text-anchor="middle">PHOTO</text>
+                        </svg>
+                    </div>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #636E72; text-align: center; margin-top: 12px;">
+                        [REAL STUDENT NAME]
+                    </p>
+                </div>
+
+                <!-- Quote Content -->
+                <div style="flex: 1;">
+                    <!-- Quote marks -->
+                    <svg width="40" height="30" viewBox="0 0 40 30" style="margin-bottom: 16px; opacity: 0.2;">
+                        <path d="M0 20 Q0 10 10 10 L15 10 L15 0 Q0 0 0 15 L0 30 L15 30 L15 20 Z M22 20 Q22 10 32 10 L37 10 L37 0 Q22 0 22 15 L22 30 L37 30 L37 20 Z" fill="#C9A227"/>
+                    </svg>
+
+                    <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 30px; color: #3D2B1F; line-height: 1.4; margin-bottom: 24px;">
+                        "I had zero sales and zero idea what I was doing.<br>
+                        [X] days after starting, I got my first [X] sales!"
+                    </p>
+
+                    <!-- Profile Details -->
+                    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Ideal Profile:</span> [Specific demographic/situation]
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Starting Point:</span> [Starting point]
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Challenge:</span> [Relatable challenge]
+                        </p>
+                    </div>
+
+                    <!-- Before/After Badge -->
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="background: rgba(224,122,95,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #E07A5F; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Before</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #E07A5F;">0 sales, overwhelmed</p>
+                        </div>
+                        <svg width="40" height="24" viewBox="0 0 40 24">
+                            <path d="M0 12 L28 12 M22 6 L32 12 L22 18" stroke="#C9A227" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div style="background: rgba(107,142,107,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #6B8E6B; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">After</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #6B8E6B;">First sales in [timeframe]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 163 — TESTIMONIAL PLACEHOLDER: PLATEAU BREAKTHROUGH
+     Layout A: Testimonial Card — [REGULAR]
+
+     WARNING: BAILEY MUST REPLACE WITH REAL TESTIMONIAL BEFORE PRESENTING
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%); position: relative;">
+    <!-- Subtle background shape -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s163bg" cx="15%" cy="25%" r="40%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="300" cy="280" rx="500" ry="400" fill="url(#s163bg)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+
+        <!-- Category Label -->
+        <div style="background: linear-gradient(135deg, #C9A227 0%, #B8860B 100%); border-radius: 50px; padding: 12px 32px; margin-bottom: 40px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
+                Plateau Breakthrough
+            </p>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FEF0EA 100%); border-radius: 24px; padding: 50px 70px; max-width: 1100px; border: 2px dashed #E07A5F; position: relative;">
+
+            <!-- Warning Badge -->
+            <div style="position: absolute; top: -16px; right: 40px; background: #E07A5F; border-radius: 8px; padding: 8px 20px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 12px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">
+                    Replace Before Presenting
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 50px; align-items: center;">
+
+                <!-- Photo Placeholder -->
+                <div style="flex-shrink: 0;">
+                    <div style="width: 180px; height: 180px; border-radius: 50%; background: linear-gradient(145deg, #FAF6E8 0%, #F0E8D4 100%); border: 3px solid #C9A227; display: flex; align-items: center; justify-content: center;">
+                        <svg width="70" height="70" viewBox="0 0 70 70">
+                            <circle cx="35" cy="25" r="14" fill="#C9A227" opacity="0.4"/>
+                            <ellipse cx="35" cy="55" rx="22" ry="16" fill="#C9A227" opacity="0.4"/>
+                            <text x="35" y="72" font-family="Satoshi, sans-serif" font-size="8" fill="#C9A227" text-anchor="middle">PHOTO</text>
+                        </svg>
+                    </div>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #636E72; text-align: center; margin-top: 12px;">
+                        [REAL STUDENT NAME]
+                    </p>
+                </div>
+
+                <!-- Quote Content -->
+                <div style="flex: 1;">
+                    <!-- Quote marks -->
+                    <svg width="40" height="30" viewBox="0 0 40 30" style="margin-bottom: 16px; opacity: 0.2;">
+                        <path d="M0 20 Q0 10 10 10 L15 10 L15 0 Q0 0 0 15 L0 30 L15 30 L15 20 Z M22 20 Q22 10 32 10 L37 10 L37 0 Q22 0 22 15 L22 30 L37 30 L37 20 Z" fill="#C9A227"/>
+                    </svg>
+
+                    <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 30px; color: #3D2B1F; line-height: 1.4; margin-bottom: 24px;">
+                        "I was stuck at [X] sales/month for [time].<br>
+                        After following the roadmap, I hit [Y] in [timeframe]."
+                    </p>
+
+                    <!-- Profile Details -->
+                    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Ideal Profile:</span> [Specific demographic/situation]
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Starting Point:</span> [Starting point]
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Challenge:</span> [Relatable challenge]
+                        </p>
+                    </div>
+
+                    <!-- Before/After Badge -->
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="background: rgba(224,122,95,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #E07A5F; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Before</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #E07A5F;">Stuck at [X]</p>
+                        </div>
+                        <svg width="40" height="24" viewBox="0 0 40 24">
+                            <path d="M0 12 L28 12 M22 6 L32 12 L22 18" stroke="#C9A227" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div style="background: rgba(107,142,107,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #6B8E6B; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">After</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #6B8E6B;">[Y] sales/revenue</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 164 — TESTIMONIAL PLACEHOLDER: BUSY MOM
+     Layout A: Testimonial Card — [REGULAR]
+
+     WARNING: BAILEY MUST REPLACE WITH REAL TESTIMONIAL BEFORE PRESENTING
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(135deg, #FDF8F3 0%, #FAF3E0 100%); position: relative;">
+    <!-- Subtle background shape -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s164bg" cx="80%" cy="20%" r="35%">
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.04" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="1500" cy="220" rx="450" ry="350" fill="url(#s164bg)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+
+        <!-- Category Label -->
+        <div style="background: linear-gradient(135deg, #D4727A 0%, #C76B73 100%); border-radius: 50px; padding: 12px 32px; margin-bottom: 40px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
+                Busy Mom
+            </p>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FDF0EE 100%); border-radius: 24px; padding: 50px 70px; max-width: 1100px; border: 2px dashed #E07A5F; position: relative;">
+
+            <!-- Warning Badge -->
+            <div style="position: absolute; top: -16px; right: 40px; background: #E07A5F; border-radius: 8px; padding: 8px 20px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 12px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">
+                    Replace Before Presenting
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 50px; align-items: center;">
+
+                <!-- Photo Placeholder -->
+                <div style="flex-shrink: 0;">
+                    <div style="width: 180px; height: 180px; border-radius: 50%; background: linear-gradient(145deg, #FDF0EE 0%, #F8E4E1 100%); border: 3px solid #D4727A; display: flex; align-items: center; justify-content: center;">
+                        <svg width="70" height="70" viewBox="0 0 70 70">
+                            <circle cx="35" cy="25" r="14" fill="#D4727A" opacity="0.4"/>
+                            <ellipse cx="35" cy="55" rx="22" ry="16" fill="#D4727A" opacity="0.4"/>
+                            <text x="35" y="72" font-family="Satoshi, sans-serif" font-size="8" fill="#D4727A" text-anchor="middle">PHOTO</text>
+                        </svg>
+                    </div>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #636E72; text-align: center; margin-top: 12px;">
+                        [REAL STUDENT NAME]
+                    </p>
+                </div>
+
+                <!-- Quote Content -->
+                <div style="flex: 1;">
+                    <!-- Quote marks -->
+                    <svg width="40" height="30" viewBox="0 0 40 30" style="margin-bottom: 16px; opacity: 0.2;">
+                        <path d="M0 20 Q0 10 10 10 L15 10 L15 0 Q0 0 0 15 L0 30 L15 30 L15 20 Z M22 20 Q22 10 32 10 L37 10 L37 0 Q22 0 22 15 L22 30 L37 30 L37 20 Z" fill="#C9A227"/>
+                    </svg>
+
+                    <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 30px; color: #3D2B1F; line-height: 1.4; margin-bottom: 24px;">
+                        "I'm a [role] with [X] kids. I only had [X] minutes a day.<br>
+                        Still hit [result] in [timeframe]."
+                    </p>
+
+                    <!-- Profile Details -->
+                    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Ideal Profile:</span> Busy mom with time constraints
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Starting Point:</span> [Starting point]
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Challenge:</span> [Relatable challenge]
+                        </p>
+                    </div>
+
+                    <!-- Before/After Badge -->
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="background: rgba(224,122,95,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #E07A5F; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Before</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #E07A5F;">No time, overwhelmed</p>
+                        </div>
+                        <svg width="40" height="24" viewBox="0 0 40 24">
+                            <path d="M0 12 L28 12 M22 6 L32 12 L22 18" stroke="#C9A227" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div style="background: rgba(107,142,107,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #6B8E6B; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">After</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #6B8E6B;">[Result] with limited time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 165 — TESTIMONIAL PLACEHOLDER: INCOME MILESTONE
+     Layout A: Testimonial Card — [HIGHLIGHT] — Gold-dominant palette
+
+     WARNING: BAILEY MUST REPLACE WITH REAL TESTIMONIAL BEFORE PRESENTING
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(160deg, #FDF8F3 0%, #FAF3E0 50%, #F5E6D3 100%); position: relative;">
+    <!-- Enhanced background shape for highlight slide -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s165bg1" cx="90%" cy="80%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+            <radialGradient id="s165bg2" cx="10%" cy="20%" r="30%">
+                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="1700" cy="850" rx="600" ry="450" fill="url(#s165bg1)"/>
+        <ellipse cx="200" cy="200" rx="350" ry="280" fill="url(#s165bg2)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+
+        <!-- Category Label with star accent -->
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 40px;">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 2 L14 9 L21 9 L15 14 L17 21 L12 17 L7 21 L9 14 L3 9 L10 9 Z" fill="#D4AF37"/>
+            </svg>
+            <div style="background: linear-gradient(135deg, #D4AF37 0%, #C9A227 100%); border-radius: 50px; padding: 12px 32px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
+                    Income Milestone
+                </p>
+            </div>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 2 L14 9 L21 9 L15 14 L17 21 L12 17 L7 21 L9 14 L3 9 L10 9 Z" fill="#D4AF37"/>
+            </svg>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 24px; padding: 50px 70px; max-width: 1100px; border: 2px dashed #E07A5F; position: relative;">
+
+            <!-- Warning Badge -->
+            <div style="position: absolute; top: -16px; right: 40px; background: #E07A5F; border-radius: 8px; padding: 8px 20px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 12px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">
+                    Replace Before Presenting
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 50px; align-items: center;">
+
+                <!-- Photo Placeholder with gold ring -->
+                <div style="flex-shrink: 0;">
+                    <div style="width: 180px; height: 180px; border-radius: 50%; background: linear-gradient(145deg, #FAF6E8 0%, #F0E8D4 100%); border: 4px solid #D4AF37; display: flex; align-items: center; justify-content: center; position: relative;">
+                        <!-- Gold shimmer effect -->
+                        <div style="position: absolute; inset: -4px; border-radius: 50%; border: 2px solid rgba(212,175,55,0.3);"></div>
+                        <svg width="70" height="70" viewBox="0 0 70 70">
+                            <circle cx="35" cy="25" r="14" fill="#D4AF37" opacity="0.4"/>
+                            <ellipse cx="35" cy="55" rx="22" ry="16" fill="#D4AF37" opacity="0.4"/>
+                            <text x="35" y="72" font-family="Satoshi, sans-serif" font-size="8" fill="#D4AF37" text-anchor="middle">PHOTO</text>
+                        </svg>
+                    </div>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #636E72; text-align: center; margin-top: 12px;">
+                        [REAL STUDENT NAME]
+                    </p>
+                </div>
+
+                <!-- Quote Content -->
+                <div style="flex: 1;">
+                    <!-- Quote marks -->
+                    <svg width="40" height="30" viewBox="0 0 40 30" style="margin-bottom: 16px; opacity: 0.3;">
+                        <path d="M0 20 Q0 10 10 10 L15 10 L15 0 Q0 0 0 15 L0 30 L15 30 L15 20 Z M22 20 Q22 10 32 10 L37 10 L37 0 Q22 0 22 15 L22 30 L37 30 L37 20 Z" fill="#D4AF37"/>
+                    </svg>
+
+                    <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 30px; color: #3D2B1F; line-height: 1.4; margin-bottom: 24px;">
+                        "I went from [X]/month to [Y]/month in [timeframe].<br>
+                        This system actually works."
+                    </p>
+
+                    <!-- Profile Details -->
+                    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Ideal Profile:</span> Significant income milestone ($1K-5K/month)
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Result:</span> [Specific achievement]
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Transformation:</span> [Income/outcome]
+                        </p>
+                    </div>
+
+                    <!-- Before/After Badge - Enhanced for income -->
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="background: rgba(224,122,95,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #E07A5F; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Before</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 28px; color: #E07A5F;">$[X]/month</p>
+                        </div>
+                        <svg width="50" height="30" viewBox="0 0 50 30">
+                            <path d="M0 15 L35 15 M28 7 L42 15 L28 23" stroke="#D4AF37" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div style="background: linear-gradient(135deg, rgba(107,142,107,0.15) 0%, rgba(107,142,107,0.08) 100%); border-radius: 12px; padding: 14px 24px; border: 1px solid rgba(107,142,107,0.2);">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #6B8E6B; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">After</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 28px; color: #6B8E6B;">$[Y]/month</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 166 — TESTIMONIAL PLACEHOLDER: RECENT JOINER / QUICK WINS
+     Layout A: Testimonial Card — [REGULAR]
+
+     WARNING: BAILEY MUST REPLACE WITH REAL TESTIMONIAL BEFORE PRESENTING
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF3E0 100%); position: relative;">
+    <!-- Subtle background shape -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s166bg" cx="20%" cy="80%" r="40%">
+                <stop offset="0%" style="stop-color:#6B8E6B;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="380" cy="850" rx="500" ry="400" fill="url(#s166bg)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+
+        <!-- Category Label -->
+        <div style="background: linear-gradient(135deg, #6B8E6B 0%, #7D8B6A 100%); border-radius: 50px; padding: 12px 32px; margin-bottom: 40px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
+                Recent Joiner / Quick Wins
+            </p>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div style="background: linear-gradient(145deg, #FFFFFF 0%, #F5F9F5 100%); border-radius: 24px; padding: 50px 70px; max-width: 1100px; border: 2px dashed #E07A5F; position: relative;">
+
+            <!-- Warning Badge -->
+            <div style="position: absolute; top: -16px; right: 40px; background: #E07A5F; border-radius: 8px; padding: 8px 20px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 12px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">
+                    Replace Before Presenting
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 50px; align-items: center;">
+
+                <!-- Photo Placeholder -->
+                <div style="flex-shrink: 0;">
+                    <div style="width: 180px; height: 180px; border-radius: 50%; background: linear-gradient(145deg, #F5F9F5 0%, #E8F0E8 100%); border: 3px solid #6B8E6B; display: flex; align-items: center; justify-content: center;">
+                        <svg width="70" height="70" viewBox="0 0 70 70">
+                            <circle cx="35" cy="25" r="14" fill="#6B8E6B" opacity="0.4"/>
+                            <ellipse cx="35" cy="55" rx="22" ry="16" fill="#6B8E6B" opacity="0.4"/>
+                            <text x="35" y="72" font-family="Satoshi, sans-serif" font-size="8" fill="#6B8E6B" text-anchor="middle">PHOTO</text>
+                        </svg>
+                    </div>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #636E72; text-align: center; margin-top: 12px;">
+                        [REAL STUDENT NAME]
+                    </p>
+                </div>
+
+                <!-- Quote Content -->
+                <div style="flex: 1;">
+                    <!-- Quote marks -->
+                    <svg width="40" height="30" viewBox="0 0 40 30" style="margin-bottom: 16px; opacity: 0.2;">
+                        <path d="M0 20 Q0 10 10 10 L15 10 L15 0 Q0 0 0 15 L0 30 L15 30 L15 20 Z M22 20 Q22 10 32 10 L37 10 L37 0 Q22 0 22 15 L22 30 L37 30 L37 20 Z" fill="#C9A227"/>
+                    </svg>
+
+                    <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 30px; color: #3D2B1F; line-height: 1.4; margin-bottom: 24px;">
+                        "I joined [X] months ago. Already seeing [results].<br>
+                        Wish I'd done this sooner."
+                    </p>
+
+                    <!-- Profile Details -->
+                    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Ideal Profile:</span> Recent joiner (2-3 months) with quick wins
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Starting Point:</span> Just started
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Challenge:</span> [Relatable challenge]
+                        </p>
+                    </div>
+
+                    <!-- Before/After Badge -->
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="background: rgba(224,122,95,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #E07A5F; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Before</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #E07A5F;">Just started</p>
+                        </div>
+                        <svg width="40" height="24" viewBox="0 0 40 24">
+                            <path d="M0 12 L28 12 M22 6 L32 12 L22 18" stroke="#C9A227" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div style="background: rgba(107,142,107,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #6B8E6B; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">After</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #6B8E6B;">[Quick wins] in [short timeframe]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 167 — TESTIMONIAL PLACEHOLDER: EMOTIONAL TRANSFORMATION
+     Layout A: Testimonial Card — [HIGHLIGHT] — Warmer coral/blush tones
+
+     WARNING: BAILEY MUST REPLACE WITH REAL TESTIMONIAL BEFORE PRESENTING
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(160deg, #FDF8F3 0%, #FEF0EA 50%, #FDF0EE 100%); position: relative;">
+    <!-- Enhanced background shape for emotional highlight -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s167bg1" cx="80%" cy="70%" r="45%">
+                <stop offset="0%" style="stop-color:#E8A5AB;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+            <radialGradient id="s167bg2" cx="15%" cy="30%" r="30%">
+                <stop offset="0%" style="stop-color:#D4727A;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="1550" cy="750" rx="550" ry="420" fill="url(#s167bg1)"/>
+        <ellipse cx="280" cy="320" rx="350" ry="280" fill="url(#s167bg2)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+
+        <!-- Category Label with heart accent -->
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 40px;">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#D4727A"/>
+            </svg>
+            <div style="background: linear-gradient(135deg, #D4727A 0%, #C76B73 100%); border-radius: 50px; padding: 12px 32px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
+                    Emotional Transformation
+                </p>
+            </div>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#D4727A"/>
+            </svg>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FDF0EE 100%); border-radius: 24px; padding: 50px 70px; max-width: 1100px; border: 2px dashed #E07A5F; position: relative;">
+
+            <!-- Warning Badge -->
+            <div style="position: absolute; top: -16px; right: 40px; background: #E07A5F; border-radius: 8px; padding: 8px 20px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 12px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">
+                    Replace Before Presenting
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 50px; align-items: center;">
+
+                <!-- Photo Placeholder with heart-tinted ring -->
+                <div style="flex-shrink: 0;">
+                    <div style="width: 180px; height: 180px; border-radius: 50%; background: linear-gradient(145deg, #FDF0EE 0%, #F8E4E1 100%); border: 4px solid #D4727A; display: flex; align-items: center; justify-content: center; position: relative;">
+                        <div style="position: absolute; inset: -4px; border-radius: 50%; border: 2px solid rgba(212,114,122,0.3);"></div>
+                        <svg width="70" height="70" viewBox="0 0 70 70">
+                            <circle cx="35" cy="25" r="14" fill="#D4727A" opacity="0.4"/>
+                            <ellipse cx="35" cy="55" rx="22" ry="16" fill="#D4727A" opacity="0.4"/>
+                            <text x="35" y="72" font-family="Satoshi, sans-serif" font-size="8" fill="#D4727A" text-anchor="middle">PHOTO</text>
+                        </svg>
+                    </div>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #636E72; text-align: center; margin-top: 12px;">
+                        [REAL STUDENT NAME]
+                    </p>
+                </div>
+
+                <!-- Quote Content -->
+                <div style="flex: 1;">
+                    <!-- Quote marks -->
+                    <svg width="40" height="30" viewBox="0 0 40 30" style="margin-bottom: 16px; opacity: 0.25;">
+                        <path d="M0 20 Q0 10 10 10 L15 10 L15 0 Q0 0 0 15 L0 30 L15 30 L15 20 Z M22 20 Q22 10 32 10 L37 10 L37 0 Q22 0 22 15 L22 30 L37 30 L37 20 Z" fill="#D4727A"/>
+                    </svg>
+
+                    <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 30px; color: #3D2B1F; line-height: 1.4; margin-bottom: 24px;">
+                        "I was ready to quit. Felt like nothing worked.<br>
+                        Now I actually believe this can work for me."
+                    </p>
+
+                    <!-- Profile Details -->
+                    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Ideal Profile:</span> Emotional transformation (hopeless to confident)
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Starting Point:</span> [Starting point]
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Challenge:</span> [Relatable challenge]
+                        </p>
+                    </div>
+
+                    <!-- Before/After Badge - Emotional version -->
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="background: rgba(224,122,95,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #E07A5F; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Before</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #E07A5F;">Hopeless, ready to quit</p>
+                        </div>
+                        <svg width="40" height="24" viewBox="0 0 40 24">
+                            <path d="M0 12 L28 12 M22 6 L32 12 L22 18" stroke="#D4727A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div style="background: linear-gradient(135deg, rgba(107,142,107,0.15) 0%, rgba(107,142,107,0.08) 100%); border-radius: 12px; padding: 14px 24px; border: 1px solid rgba(107,142,107,0.2);">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #6B8E6B; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">After</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #6B8E6B;">Confident, seeing progress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 168 — TESTIMONIAL PLACEHOLDER: CHALLENGE ATTENDEE
+     Layout A: Testimonial Card — [REGULAR]
+
+     WARNING: BAILEY MUST REPLACE WITH REAL TESTIMONIAL BEFORE PRESENTING
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(165deg, #FDF8F3 0%, #FAF3E0 100%); position: relative;">
+    <!-- Subtle background shape -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s168bg" cx="75%" cy="25%" r="40%">
+                <stop offset="0%" style="stop-color:#1B8A8A;stop-opacity:0.04" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="1450" cy="280" rx="500" ry="380" fill="url(#s168bg)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+
+        <!-- Category Label -->
+        <div style="background: linear-gradient(135deg, #1B8A8A 0%, #2BA5A3 100%); border-radius: 50px; padding: 12px 32px; margin-bottom: 40px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
+                Challenge Attendee
+            </p>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div style="background: linear-gradient(145deg, #FFFFFF 0%, #E8F5F3 100%); border-radius: 24px; padding: 50px 70px; max-width: 1100px; border: 2px dashed #E07A5F; position: relative;">
+
+            <!-- Warning Badge -->
+            <div style="position: absolute; top: -16px; right: 40px; background: #E07A5F; border-radius: 8px; padding: 8px 20px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 12px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">
+                    Replace Before Presenting
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 50px; align-items: center;">
+
+                <!-- Photo Placeholder -->
+                <div style="flex-shrink: 0;">
+                    <div style="width: 180px; height: 180px; border-radius: 50%; background: linear-gradient(145deg, #E8F5F3 0%, #D4E8E6 100%); border: 3px solid #1B8A8A; display: flex; align-items: center; justify-content: center;">
+                        <svg width="70" height="70" viewBox="0 0 70 70">
+                            <circle cx="35" cy="25" r="14" fill="#1B8A8A" opacity="0.4"/>
+                            <ellipse cx="35" cy="55" rx="22" ry="16" fill="#1B8A8A" opacity="0.4"/>
+                            <text x="35" y="72" font-family="Satoshi, sans-serif" font-size="8" fill="#1B8A8A" text-anchor="middle">PHOTO</text>
+                        </svg>
+                    </div>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #636E72; text-align: center; margin-top: 12px;">
+                        [REAL STUDENT NAME]
+                    </p>
+                </div>
+
+                <!-- Quote Content -->
+                <div style="flex: 1;">
+                    <!-- Quote marks -->
+                    <svg width="40" height="30" viewBox="0 0 40 30" style="margin-bottom: 16px; opacity: 0.2;">
+                        <path d="M0 20 Q0 10 10 10 L15 10 L15 0 Q0 0 0 15 L0 30 L15 30 L15 20 Z M22 20 Q22 10 32 10 L37 10 L37 0 Q22 0 22 15 L22 30 L37 30 L37 20 Z" fill="#C9A227"/>
+                    </svg>
+
+                    <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 30px; color: #3D2B1F; line-height: 1.4; margin-bottom: 24px;">
+                        "I implemented what Bailey taught in the challenge.<br>
+                        Got [result] before I even joined the full program!"
+                    </p>
+
+                    <!-- Profile Details -->
+                    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Ideal Profile:</span> Challenge attendee with quick win from free content
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Starting Point:</span> Just watching
+                        </p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #636E72;">
+                            <span style="font-weight: 600; color: #5C4827;">Challenge:</span> [Relatable challenge]
+                        </p>
+                    </div>
+
+                    <!-- Before/After Badge -->
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="background: rgba(224,122,95,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #E07A5F; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Before</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #E07A5F;">Just watching</p>
+                        </div>
+                        <svg width="40" height="24" viewBox="0 0 40 24">
+                            <path d="M0 12 L28 12 M22 6 L32 12 L22 18" stroke="#C9A227" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div style="background: rgba(107,142,107,0.1); border-radius: 12px; padding: 14px 24px;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #6B8E6B; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">After</p>
+                            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #6B8E6B;">[Quick win] from free content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 169 — PATTERN SUMMARY
+     Layout B: Pattern Summary Hero — [HIGHLIGHT]
+
+     "DO YOU SEE THE PATTERN?" — ties all testimonials together
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(160deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <!-- Subtle gold glow shapes -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s169bg1" cx="50%" cy="40%" r="45%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#3D2B1F;stop-opacity:0" />
+            </radialGradient>
+            <radialGradient id="s169bg2" cx="20%" cy="80%" r="30%">
+                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#3D2B1F;stop-opacity:0" />
+            </radialGradient>
+            <radialGradient id="s169bg3" cx="85%" cy="20%" r="25%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.04" />
+                <stop offset="100%" style="stop-color:#3D2B1F;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="430" rx="700" ry="500" fill="url(#s169bg1)"/>
+        <ellipse cx="350" cy="850" rx="400" ry="320" fill="url(#s169bg2)"/>
+        <ellipse cx="1600" cy="200" rx="300" ry="250" fill="url(#s169bg3)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+
+        <!-- Main Headline -->
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 72px; color: #D4AF37; text-align: center; margin-bottom: 60px; line-height: 1.1;">
+            DO YOU SEE THE PATTERN?
+        </h1>
+
+        <!-- "Different" lines stacked -->
+        <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 60px; text-align: center;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: rgba(255,254,245,0.7);">
+                Different starting points.
+            </p>
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: rgba(255,254,245,0.7);">
+                Different circumstances.
+            </p>
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: rgba(255,254,245,0.7);">
+                Different niches.
+            </p>
+        </div>
+
+        <!-- Emphasized result line -->
+        <div style="background: linear-gradient(135deg, rgba(201,162,39,0.15) 0%, rgba(212,175,55,0.08) 100%); border-radius: 20px; padding: 30px 60px; margin-bottom: 50px; border: 1px solid rgba(201,162,39,0.25);">
+            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 42px; color: #D4AF37; text-align: center;">
+                SAME RESULT: Progress. Growth. Momentum.
+            </p>
+        </div>
+
+        <!-- Final statement -->
+        <div style="text-align: center;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: rgba(255,254,245,0.85); margin-bottom: 16px;">
+                The people who follow the system and use the support...
+            </p>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+                <!-- Star -->
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                    <path d="M12 2 L14 9 L21 9 L15 14 L17 21 L12 17 L7 21 L9 14 L3 9 L10 9 Z" fill="#D4AF37"/>
+                </svg>
+                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #FFFEF5;">
+                    WIN.
+                </p>
+                <!-- Star -->
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                    <path d="M12 2 L14 9 L21 9 L15 14 L17 21 L12 17 L7 21 L9 14 L3 9 L10 9 Z" fill="#D4AF37"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
