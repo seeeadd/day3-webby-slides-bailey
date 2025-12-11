@@ -1,188 +1,123 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
-  <defs>
-    <!-- Simple solid colors instead of complex gradients -->
-    <linearGradient id="spaceGray" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#7A7A7F"/>
-      <stop offset="100%" stop-color="#5A5A5E"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
 
   <!-- Background -->
   <rect width="1200" height="800" fill="#FFFFFF"/>
 
-  <!-- ==================== DISPLAY SECTION ==================== -->
+  <!-- Shadow under laptop -->
+  <ellipse cx="600" cy="775" rx="450" ry="12" fill="#E0E0E0"/>
 
-  <!-- Display outer shell -->
+  <!-- DISPLAY LID -->
   <rect x="100" y="30" width="1000" height="580" rx="18" fill="#6D6D72"/>
-  <rect x="104" y="34" width="992" height="572" rx="15" fill="#1A1A1A"/>
+  <rect x="106" y="36" width="988" height="568" rx="14" fill="#1A1A1A"/>
+  <rect x="120" y="50" width="960" height="548" rx="6" fill="#0A0A0A"/>
 
-  <!-- Screen bezel (black frame) -->
-  <rect x="120" y="50" width="960" height="552" rx="8" fill="#0A0A0A"/>
+  <!-- Camera -->
+  <circle cx="600" cy="58" r="4" fill="#1F1F1F"/>
+  <circle cx="600" cy="58" r="2" fill="#0A0A0A"/>
+  <circle cx="610" cy="58" r="1.5" fill="#1A1A1A"/>
 
-  <!-- Camera notch -->
-  <rect x="540" y="50" width="120" height="14" rx="0" fill="#0A0A0A"/>
-  <circle cx="600" cy="57" r="4" fill="#1F1F1F"/>
-  <circle cx="600" cy="57" r="2.5" fill="#0D0D0D"/>
-  <circle cx="612" cy="57" r="2" fill="#1A1A1A"/>
+  <!-- SCREEN AREA -->
+  <rect id="screen-area" x="168" y="68" width="864" height="520" rx="2" fill="#F5F5F5"/>
 
-  <!-- ==================== SCREEN AREA ==================== -->
-  <rect
-    id="screen-area"
-    x="166"
-    y="66"
-    width="868"
-    height="530"
-    rx="2"
-    fill="#F5F5F5"
-  />
+  <!-- HINGE -->
+  <rect x="150" y="610" width="900" height="8" rx="2" fill="#4A4A4E"/>
 
-  <!-- ==================== HINGE ==================== -->
-  <rect x="150" y="608" width="900" height="10" rx="2" fill="#4A4A4E"/>
+  <!-- BODY BASE -->
+  <rect x="60" y="618" width="1080" height="142" rx="8" fill="#6D6D72"/>
+  <rect x="68" y="622" width="1064" height="130" rx="6" fill="#5A5A5E"/>
+  <rect x="60" y="752" width="1080" height="10" rx="3" fill="#4A4A4E"/>
 
-  <!-- ==================== BODY ==================== -->
+  <!-- KEYBOARD RECESS -->
+  <rect x="140" y="638" width="920" height="80" rx="4" fill="#2D2D32"/>
 
-  <!-- Main body shape -->
-  <path d="
-    M 80 618
-    L 1120 618
-    Q 1140 620 1140 635
-    L 1140 745
-    Q 1140 758 1125 760
-    L 75 760
-    Q 60 758 60 745
-    L 60 635
-    Q 60 620 80 618
-    Z
-  " fill="#6D6D72"/>
+  <!-- Function row keys -->
+  <rect x="148" y="644" width="36" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="190" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="248" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="306" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="364" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="422" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="480" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="538" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="596" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="654" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="712" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="770" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="828" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="886" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
+  <rect x="944" y="644" width="52" height="14" rx="2" fill="#1A1A1E"/>
 
-  <!-- Body top surface -->
-  <rect x="70" y="620" width="1060" height="135" rx="8" fill="#5A5A5E"/>
+  <!-- Number row -->
+  <rect x="148" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="188" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="228" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="268" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="308" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="348" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="388" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="428" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="468" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="508" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="548" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="588" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="628" y="662" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="668" y="662" width="60" height="18" rx="2" fill="#1A1A1E"/>
 
-  <!-- Body front edge -->
-  <rect x="60" y="755" width="1080" height="8" rx="4" fill="#4A4A4E"/>
+  <!-- QWERTY row -->
+  <rect x="148" y="684" width="50" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="202" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="242" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="282" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="322" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="362" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="402" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="442" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="482" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="522" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="562" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="602" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="642" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="682" y="684" width="46" height="18" rx="2" fill="#1A1A1E"/>
 
-  <!-- ==================== KEYBOARD AREA ==================== -->
-  <g transform="translate(140, 638)">
+  <!-- Arrow keys area -->
+  <rect x="740" y="662" width="80" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="740" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="780" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="820" y="684" width="36" height="18" rx="2" fill="#1A1A1E"/>
+  <rect x="860" y="662" width="80" height="40" rx="2" fill="#1A1A1E"/>
+  <rect x="944" y="662" width="52" height="40" rx="2" fill="#1A1A1E"/>
 
-    <!-- Keyboard recess -->
-    <rect x="0" y="0" width="920" height="82" rx="4" fill="#2D2D32"/>
+  <!-- TRACKPAD -->
+  <rect x="420" y="722" width="360" height="28" rx="4" fill="#5A5A5E"/>
 
-    <!-- Function row -->
-    <g transform="translate(8, 6)">
-      <rect x="0" y="0" width="38" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="46" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="106" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="166" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="226" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="290" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="350" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="410" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="470" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="530" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="590" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="650" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="710" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <!-- Touch ID -->
-      <rect x="770" y="0" width="54" height="16" rx="2" fill="#1A1A1E"/>
-      <rect x="785" y="3" width="24" height="10" rx="5" fill="#0D0D0D"/>
-    </g>
+  <!-- Speaker grilles left -->
+  <rect x="90" y="650" width="36" height="44" rx="2" fill="#3D3D42"/>
+  <circle cx="99" cy="659" r="2" fill="#2A2A2E"/>
+  <circle cx="108" cy="659" r="2" fill="#2A2A2E"/>
+  <circle cx="117" cy="659" r="2" fill="#2A2A2E"/>
+  <circle cx="99" cy="668" r="2" fill="#2A2A2E"/>
+  <circle cx="108" cy="668" r="2" fill="#2A2A2E"/>
+  <circle cx="117" cy="668" r="2" fill="#2A2A2E"/>
+  <circle cx="99" cy="677" r="2" fill="#2A2A2E"/>
+  <circle cx="108" cy="677" r="2" fill="#2A2A2E"/>
+  <circle cx="117" cy="677" r="2" fill="#2A2A2E"/>
+  <circle cx="99" cy="686" r="2" fill="#2A2A2E"/>
+  <circle cx="108" cy="686" r="2" fill="#2A2A2E"/>
+  <circle cx="117" cy="686" r="2" fill="#2A2A2E"/>
 
-    <!-- Number row -->
-    <g transform="translate(8, 26)">
-      <rect x="0" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="42" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="84" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="126" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="168" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="210" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="252" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="294" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="336" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="378" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="420" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="462" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="504" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="546" y="0" width="64" height="20" rx="2" fill="#1A1A1E"/>
-    </g>
-
-    <!-- QWERTY row -->
-    <g transform="translate(8, 50)">
-      <rect x="0" y="0" width="52" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="56" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="98" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="140" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="182" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="224" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="266" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="308" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="350" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="392" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="434" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="476" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="518" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="560" y="0" width="50" height="20" rx="2" fill="#1A1A1E"/>
-    </g>
-
-    <!-- Arrow keys -->
-    <g transform="translate(624, 26)">
-      <rect x="0" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="42" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="84" y="0" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <!-- Up -->
-      <rect x="42" y="24" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <!-- Left/Down/Right -->
-      <rect x="0" y="48" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="42" y="48" width="38" height="20" rx="2" fill="#1A1A1E"/>
-      <rect x="84" y="48" width="38" height="20" rx="2" fill="#1A1A1E"/>
-    </g>
-
-  </g>
-
-  <!-- ==================== TRACKPAD ==================== -->
-  <rect x="420" y="724" width="360" height="26" rx="4" fill="#4A4A4E"/>
-  <rect x="422" y="726" width="356" height="22" rx="3" fill="#5A5A5E"/>
-
-  <!-- ==================== SPEAKER GRILLES ==================== -->
-
-  <!-- Left speaker -->
-  <g transform="translate(90, 650)">
-    <rect x="0" y="0" width="36" height="45" rx="2" fill="#3D3D42"/>
-    <g fill="#2A2A2E">
-      <circle cx="9" cy="9" r="2"/>
-      <circle cx="18" cy="9" r="2"/>
-      <circle cx="27" cy="9" r="2"/>
-      <circle cx="9" cy="18" r="2"/>
-      <circle cx="18" cy="18" r="2"/>
-      <circle cx="27" cy="18" r="2"/>
-      <circle cx="9" cy="27" r="2"/>
-      <circle cx="18" cy="27" r="2"/>
-      <circle cx="27" cy="27" r="2"/>
-      <circle cx="9" cy="36" r="2"/>
-      <circle cx="18" cy="36" r="2"/>
-      <circle cx="27" cy="36" r="2"/>
-    </g>
-  </g>
-
-  <!-- Right speaker -->
-  <g transform="translate(1074, 650)">
-    <rect x="0" y="0" width="36" height="45" rx="2" fill="#3D3D42"/>
-    <g fill="#2A2A2E">
-      <circle cx="9" cy="9" r="2"/>
-      <circle cx="18" cy="9" r="2"/>
-      <circle cx="27" cy="9" r="2"/>
-      <circle cx="9" cy="18" r="2"/>
-      <circle cx="18" cy="18" r="2"/>
-      <circle cx="27" cy="18" r="2"/>
-      <circle cx="9" cy="27" r="2"/>
-      <circle cx="18" cy="27" r="2"/>
-      <circle cx="27" cy="27" r="2"/>
-      <circle cx="9" cy="36" r="2"/>
-      <circle cx="18" cy="36" r="2"/>
-      <circle cx="27" cy="36" r="2"/>
-    </g>
-  </g>
-
-  <!-- Simple shadow under laptop (no filter) -->
-  <ellipse cx="600" cy="775" rx="450" ry="15" fill="#E0E0E0"/>
+  <!-- Speaker grilles right -->
+  <rect x="1074" y="650" width="36" height="44" rx="2" fill="#3D3D42"/>
+  <circle cx="1083" cy="659" r="2" fill="#2A2A2E"/>
+  <circle cx="1092" cy="659" r="2" fill="#2A2A2E"/>
+  <circle cx="1101" cy="659" r="2" fill="#2A2A2E"/>
+  <circle cx="1083" cy="668" r="2" fill="#2A2A2E"/>
+  <circle cx="1092" cy="668" r="2" fill="#2A2A2E"/>
+  <circle cx="1101" cy="668" r="2" fill="#2A2A2E"/>
+  <circle cx="1083" cy="677" r="2" fill="#2A2A2E"/>
+  <circle cx="1092" cy="677" r="2" fill="#2A2A2E"/>
+  <circle cx="1101" cy="677" r="2" fill="#2A2A2E"/>
+  <circle cx="1083" cy="686" r="2" fill="#2A2A2E"/>
+  <circle cx="1092" cy="686" r="2" fill="#2A2A2E"/>
+  <circle cx="1101" cy="686" r="2" fill="#2A2A2E"/>
 
 </svg>
