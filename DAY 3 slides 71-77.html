@@ -636,74 +636,298 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 75 — PRICE REVEAL
-     Classic strikethrough progression with hero price moment
+     SLIDE 75a — PRICE REVEAL: NOT $11,570
+     First price drop - dramatic reveal
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
     <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="priceGlow" cx="50%" cy="55%" r="40%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.15" />
+            <radialGradient id="drop1Glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
                 <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
             </radialGradient>
-            <linearGradient id="priceShine" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
-                <stop offset="50%" style="stop-color:#C9A227;stop-opacity:1" />
-                <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
-            </linearGradient>
         </defs>
-        <ellipse cx="960" cy="580" rx="600" ry="400" fill="url(#priceGlow)"/>
-        <!-- Celebration elements -->
-        <g opacity="0.04">
-            <circle cx="300" cy="200" r="6" fill="#C9A227"/>
-            <circle cx="1650" cy="180" r="8" fill="#D4AF37"/>
-            <circle cx="200" cy="700" r="5" fill="#B8860B"/>
-            <circle cx="1750" cy="750" r="7" fill="#C9A227"/>
-            <rect x="400" y="900" width="12" height="12" rx="2" fill="#D4AF37" transform="rotate(20 406 906)"/>
-            <rect x="1500" y="150" width="15" height="15" rx="2" fill="#C9A227" transform="rotate(-15 1507 157)"/>
-        </g>
+        <ellipse cx="960" cy="540" rx="700" ry="500" fill="url(#drop1Glow)"/>
     </svg>
-    
+
     <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px;">
         <!-- Header -->
-        <h1 style="font-family: 'Ogg Bold', serif; font-size: 48px; color: #5C4827; text-align: center; margin-bottom: 50px; letter-spacing: 2px;">
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 52px; color: #5C4827; text-align: center; margin-bottom: 80px; letter-spacing: 2px;">
             YOUR INVESTMENT
         </h1>
-        
-        <!-- Strikethrough Prices -->
-        <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 50px; text-align: center;">
-            <div style="position: relative; display: inline-block;">
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 36px; color: #B8B8B8;">NOT $11,570</span>
-                <div style="position: absolute; top: 50%; left: -10px; right: -10px; height: 3px; background: #B8B8B8; transform: rotate(-3deg);"></div>
-            </div>
-            <div style="position: relative; display: inline-block;">
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 36px; color: #A0A0A0;">NOT $5,000</span>
-                <div style="position: absolute; top: 50%; left: -10px; right: -10px; height: 3px; background: #A0A0A0; transform: rotate(-2deg);"></div>
-            </div>
-            <div style="position: relative; display: inline-block;">
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 36px; color: #909090;">NOT $3,500</span>
-                <div style="position: absolute; top: 50%; left: -10px; right: -10px; height: 3px; background: #909090; transform: rotate(-1deg);"></div>
+
+        <!-- Big Price with X -->
+        <div style="position: relative; display: flex; align-items: center; gap: 40px;">
+            <!-- X mark -->
+            <svg width="80" height="80" viewBox="0 0 80 80" style="opacity: 0.8;">
+                <circle cx="40" cy="40" r="38" fill="none" stroke="#DC3545" stroke-width="4"/>
+                <path d="M25 25 L55 55 M55 25 L25 55" stroke="#DC3545" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+
+            <div style="position: relative;">
+                <span style="font-family: 'Ogg Bold', serif; font-size: 120px; color: #5C4827;">$11,570</span>
+                <!-- Strikethrough line -->
+                <div style="position: absolute; top: 50%; left: -20px; right: -20px; height: 6px; background: linear-gradient(90deg, #DC3545 0%, #B02A37 100%); transform: rotate(-5deg); border-radius: 3px;"></div>
             </div>
         </div>
-        
-        <!-- HERO PRICE -->
-        <div style="position: relative; margin-bottom: 40px;">
+
+        <!-- Down Arrow + LOWER! -->
+        <div style="display: flex; align-items: center; gap: 30px; margin-top: 60px;">
+            <svg width="60" height="80" viewBox="0 0 60 80">
+                <path d="M30 0 L30 60 M10 45 L30 70 L50 45" stroke="#C9A227" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-family: 'Ogg Bold', serif; font-size: 42px; color: #C9A227; letter-spacing: 4px;">
+                LOWER...
+            </span>
+            <svg width="60" height="80" viewBox="0 0 60 80">
+                <path d="M30 0 L30 60 M10 45 L30 70 L50 45" stroke="#C9A227" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 75b — PRICE REVEAL: NOT $5,000
+     Second price drop - building momentum
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="drop2Glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="700" ry="500" fill="url(#drop2Glow)"/>
+        <!-- Falling minus signs -->
+        <g opacity="0.15">
+            <text x="200" y="300" font-family="Satoshi" font-size="60" fill="#C9A227" transform="rotate(-15 200 300)">−</text>
+            <text x="1700" y="250" font-family="Satoshi" font-size="80" fill="#C9A227" transform="rotate(10 1700 250)">−</text>
+            <text x="300" y="800" font-family="Satoshi" font-size="50" fill="#C9A227" transform="rotate(-8 300 800)">−</text>
+            <text x="1600" y="850" font-family="Satoshi" font-size="70" fill="#C9A227" transform="rotate(12 1600 850)">−</text>
+        </g>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px;">
+        <!-- Header -->
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 52px; color: #5C4827; text-align: center; margin-bottom: 50px; letter-spacing: 2px;">
+            YOUR INVESTMENT
+        </h1>
+
+        <!-- Faded previous price -->
+        <div style="position: relative; margin-bottom: 30px; opacity: 0.4;">
+            <span style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #999;">NOT $11,570</span>
+            <div style="position: absolute; top: 50%; left: -10px; right: -10px; height: 2px; background: #999;"></div>
+        </div>
+
+        <!-- Current Big Price with X -->
+        <div style="position: relative; display: flex; align-items: center; gap: 40px;">
+            <!-- X mark -->
+            <svg width="80" height="80" viewBox="0 0 80 80" style="opacity: 0.8;">
+                <circle cx="40" cy="40" r="38" fill="none" stroke="#DC3545" stroke-width="4"/>
+                <path d="M25 25 L55 55 M55 25 L25 55" stroke="#DC3545" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+
+            <div style="position: relative;">
+                <span style="font-family: 'Ogg Bold', serif; font-size: 120px; color: #5C4827;">$5,000</span>
+                <!-- Strikethrough line -->
+                <div style="position: absolute; top: 50%; left: -20px; right: -20px; height: 6px; background: linear-gradient(90deg, #DC3545 0%, #B02A37 100%); transform: rotate(-5deg); border-radius: 3px;"></div>
+            </div>
+        </div>
+
+        <!-- Down Arrows + LOWER!! -->
+        <div style="display: flex; align-items: center; gap: 25px; margin-top: 50px;">
+            <svg width="50" height="70" viewBox="0 0 50 70">
+                <path d="M25 0 L25 50 M8 38 L25 58 L42 38" stroke="#C9A227" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="50" height="70" viewBox="0 0 50 70">
+                <path d="M25 0 L25 50 M8 38 L25 58 L42 38" stroke="#C9A227" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-family: 'Ogg Bold', serif; font-size: 48px; color: #C9A227; letter-spacing: 4px;">
+                LOWER!!
+            </span>
+            <svg width="50" height="70" viewBox="0 0 50 70">
+                <path d="M25 0 L25 50 M8 38 L25 58 L42 38" stroke="#C9A227" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="50" height="70" viewBox="0 0 50 70">
+                <path d="M25 0 L25 50 M8 38 L25 58 L42 38" stroke="#C9A227" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 75c — PRICE REVEAL: NOT $3,500
+     Third price drop - maximum anticipation
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="drop3Glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.12" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="700" ry="500" fill="url(#drop3Glow)"/>
+        <!-- More falling minus signs -->
+        <g opacity="0.2">
+            <text x="150" y="250" font-family="Satoshi" font-size="70" fill="#C9A227" transform="rotate(-20 150 250)">−</text>
+            <text x="1750" y="200" font-family="Satoshi" font-size="90" fill="#C9A227" transform="rotate(15 1750 200)">−</text>
+            <text x="250" y="750" font-family="Satoshi" font-size="60" fill="#C9A227" transform="rotate(-12 250 750)">−</text>
+            <text x="1650" y="800" font-family="Satoshi" font-size="80" fill="#C9A227" transform="rotate(18 1650 800)">−</text>
+            <text x="400" y="150" font-family="Satoshi" font-size="50" fill="#C9A227" transform="rotate(5 400 150)">−</text>
+            <text x="1500" y="900" font-family="Satoshi" font-size="55" fill="#C9A227" transform="rotate(-10 1500 900)">−</text>
+        </g>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px;">
+        <!-- Header -->
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 52px; color: #5C4827; text-align: center; margin-bottom: 40px; letter-spacing: 2px;">
+            YOUR INVESTMENT
+        </h1>
+
+        <!-- Faded previous prices -->
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; text-align: center;">
+            <div style="position: relative; opacity: 0.3;">
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #AAA;">NOT $11,570</span>
+                <div style="position: absolute; top: 50%; left: -10px; right: -10px; height: 2px; background: #AAA;"></div>
+            </div>
+            <div style="position: relative; opacity: 0.4;">
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #999;">NOT $5,000</span>
+                <div style="position: absolute; top: 50%; left: -10px; right: -10px; height: 2px; background: #999;"></div>
+            </div>
+        </div>
+
+        <!-- Current Big Price with X -->
+        <div style="position: relative; display: flex; align-items: center; gap: 40px;">
+            <!-- X mark -->
+            <svg width="80" height="80" viewBox="0 0 80 80" style="opacity: 0.8;">
+                <circle cx="40" cy="40" r="38" fill="none" stroke="#DC3545" stroke-width="4"/>
+                <path d="M25 25 L55 55 M55 25 L25 55" stroke="#DC3545" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+
+            <div style="position: relative;">
+                <span style="font-family: 'Ogg Bold', serif; font-size: 120px; color: #5C4827;">$3,500</span>
+                <!-- Strikethrough line -->
+                <div style="position: absolute; top: 50%; left: -20px; right: -20px; height: 6px; background: linear-gradient(90deg, #DC3545 0%, #B02A37 100%); transform: rotate(-5deg); border-radius: 3px;"></div>
+            </div>
+        </div>
+
+        <!-- Down Arrows + EVEN LOWER!!! -->
+        <div style="display: flex; align-items: center; gap: 20px; margin-top: 45px;">
+            <svg width="45" height="65" viewBox="0 0 45 65">
+                <path d="M22 0 L22 45 M7 33 L22 52 L37 33" stroke="#C9A227" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="45" height="65" viewBox="0 0 45 65">
+                <path d="M22 0 L22 45 M7 33 L22 52 L37 33" stroke="#C9A227" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="45" height="65" viewBox="0 0 45 65">
+                <path d="M22 0 L22 45 M7 33 L22 52 L37 33" stroke="#C9A227" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-family: 'Ogg Bold', serif; font-size: 52px; color: #C9A227; letter-spacing: 3px;">
+                EVEN LOWER!!!
+            </span>
+            <svg width="45" height="65" viewBox="0 0 45 65">
+                <path d="M22 0 L22 45 M7 33 L22 52 L37 33" stroke="#C9A227" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="45" height="65" viewBox="0 0 45 65">
+                <path d="M22 0 L22 45 M7 33 L22 52 L37 33" stroke="#C9A227" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="45" height="65" viewBox="0 0 45 65">
+                <path d="M22 0 L22 45 M7 33 L22 52 L37 33" stroke="#C9A227" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 75d — PRICE REVEAL: FINAL $2,497
+     The big reveal with celebration!
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="finalGlow" cx="50%" cy="55%" r="45%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.25" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+            <linearGradient id="confettiGold1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#D4AF37" />
+                <stop offset="100%" style="stop-color:#C9A227" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="960" cy="580" rx="650" ry="450" fill="url(#finalGlow)"/>
+
+        <!-- Celebration confetti -->
+        <g opacity="0.3">
+            <!-- Left side confetti -->
+            <rect x="120" y="180" width="18" height="18" rx="3" fill="#C9A227" transform="rotate(25 129 189)"/>
+            <rect x="200" y="320" width="14" height="14" rx="2" fill="#D4AF37" transform="rotate(-15 207 327)"/>
+            <rect x="80" y="500" width="16" height="16" rx="3" fill="#B8860B" transform="rotate(40 88 508)"/>
+            <rect x="250" y="700" width="12" height="12" rx="2" fill="#C9A227" transform="rotate(-30 256 706)"/>
+            <rect x="150" y="850" width="15" height="15" rx="2" fill="#D4AF37" transform="rotate(15 157 857)"/>
+            <circle cx="300" cy="250" r="8" fill="#C9A227"/>
+            <circle cx="180" cy="600" r="6" fill="#D4AF37"/>
+            <circle cx="280" cy="450" r="7" fill="#B8860B"/>
+
+            <!-- Right side confetti -->
+            <rect x="1700" y="200" width="18" height="18" rx="3" fill="#C9A227" transform="rotate(-20 1709 209)"/>
+            <rect x="1780" y="350" width="14" height="14" rx="2" fill="#D4AF37" transform="rotate(25 1787 357)"/>
+            <rect x="1650" y="550" width="16" height="16" rx="3" fill="#B8860B" transform="rotate(-35 1658 558)"/>
+            <rect x="1750" y="750" width="12" height="12" rx="2" fill="#C9A227" transform="rotate(20 1756 756)"/>
+            <rect x="1680" y="880" width="15" height="15" rx="2" fill="#D4AF37" transform="rotate(-10 1687 887)"/>
+            <circle cx="1620" cy="280" r="8" fill="#C9A227"/>
+            <circle cx="1720" cy="650" r="6" fill="#D4AF37"/>
+            <circle cx="1600" cy="480" r="7" fill="#B8860B"/>
+
+            <!-- Sparkle stars -->
+            <path d="M350 150 L355 165 L370 165 L358 175 L363 190 L350 180 L337 190 L342 175 L330 165 L345 165 Z" fill="#D4AF37"/>
+            <path d="M1570 130 L1575 145 L1590 145 L1578 155 L1583 170 L1570 160 L1557 170 L1562 155 L1550 145 L1565 145 Z" fill="#D4AF37"/>
+            <path d="M280 920 L285 935 L300 935 L288 945 L293 960 L280 950 L267 960 L272 945 L260 935 L275 935 Z" fill="#C9A227"/>
+            <path d="M1640 940 L1645 955 L1660 955 L1648 965 L1653 980 L1640 970 L1627 980 L1632 965 L1620 955 L1635 955 Z" fill="#C9A227"/>
+        </g>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px;">
+        <!-- Header -->
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 48px; color: #5C4827; text-align: center; margin-bottom: 35px; letter-spacing: 2px;">
+            YOUR INVESTMENT
+        </h1>
+
+        <!-- All previous prices stacked and crossed -->
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 35px; text-align: center;">
+            <div style="position: relative; opacity: 0.35;">
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #AAA;">NOT $11,570</span>
+                <div style="position: absolute; top: 50%; left: -10px; right: -10px; height: 2px; background: #AAA;"></div>
+            </div>
+            <div style="position: relative; opacity: 0.4;">
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #999;">NOT $5,000</span>
+                <div style="position: absolute; top: 50%; left: -10px; right: -10px; height: 2px; background: #999;"></div>
+            </div>
+            <div style="position: relative; opacity: 0.45;">
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #888;">NOT $3,500</span>
+                <div style="position: absolute; top: 50%; left: -10px; right: -10px; height: 2px; background: #888;"></div>
+            </div>
+        </div>
+
+        <!-- HERO PRICE with glow -->
+        <div style="position: relative; margin-bottom: 35px;">
             <!-- Glow effect behind -->
-            <div style="position: absolute; inset: -20px; background: radial-gradient(ellipse at center, rgba(201,162,39,0.2) 0%, transparent 70%); filter: blur(15px);"></div>
-            <h2 style="font-family: 'Ogg Bold', serif; font-size: 140px; color: #C9A227; position: relative; text-shadow: 0 4px 30px rgba(201,162,39,0.3);">
+            <div style="position: absolute; inset: -30px; background: radial-gradient(ellipse at center, rgba(201,162,39,0.3) 0%, transparent 70%); filter: blur(20px);"></div>
+            <h2 style="font-family: 'Ogg Bold', serif; font-size: 160px; color: #C9A227; position: relative; text-shadow: 0 6px 40px rgba(201,162,39,0.4);">
                 $2,497
             </h2>
         </div>
-        
+
         <!-- Payment Plan -->
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827; margin-bottom: 40px;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827; margin-bottom: 35px;">
             Or <span style="font-weight: 700;">$897 × 3</span> monthly payments
         </p>
-        
+
         <!-- Daily Breakdown -->
-        <div style="background: linear-gradient(145deg, rgba(201,162,39,0.1) 0%, rgba(201,162,39,0.03) 100%); border-radius: 20px; padding: 30px 60px; border: 2px solid rgba(201,162,39,0.2);">
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #3D2B1F; text-align: center;">
-                That's approximately <span style="font-family: 'Ogg Bold', serif; font-size: 36px; color: #C9A227;">$27 per day</span><br>
+        <div style="background: linear-gradient(145deg, rgba(201,162,39,0.12) 0%, rgba(201,162,39,0.04) 100%); border-radius: 20px; padding: 28px 55px; border: 2px solid rgba(201,162,39,0.25);">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #3D2B1F; text-align: center;">
+                That's approximately <span style="font-family: 'Ogg Bold', serif; font-size: 34px; color: #C9A227;">$27 per day</span><br>
                 for 90 days of transformation.
             </p>
         </div>
