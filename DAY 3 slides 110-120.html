@@ -198,36 +198,54 @@
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      SLIDE 110 — SECTION OPENER: OBJECTIONS
-     Layout A: Centered Hero — [HIGHLIGHT]
+     Layout A: Centered Hero with Icon — [HIGHLIGHT]
 ═══════════════════════════════════════════════════════════════════════════ -->
-<div class="slide" style="background: linear-gradient(165deg, #FDF8F3 0%, #FAF3E0 100%); position: relative; overflow: hidden;">
-    <!-- Single subtle background glow -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative; overflow: hidden;">
+    <!-- Decorative background elements -->
     <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="s110bg" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
-                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            <radialGradient id="s110glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.15" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
             </radialGradient>
         </defs>
-        <ellipse cx="960" cy="540" rx="600" ry="450" fill="url(#s110bg)"/>
+        <ellipse cx="960" cy="540" rx="600" ry="450" fill="url(#s110glow)"/>
+        <!-- Decorative circles -->
+        <circle cx="200" cy="200" r="150" fill="none" stroke="#C9A227" stroke-width="1" opacity="0.1"/>
+        <circle cx="1720" cy="880" r="200" fill="none" stroke="#C9A227" stroke-width="1" opacity="0.1"/>
+        <circle cx="1650" cy="150" r="80" fill="none" stroke="#C9A227" stroke-width="1" opacity="0.08"/>
     </svg>
 
-    <div class="slide-inner" style="position: relative; z-index: 1;">
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px;">
+        
+        <!-- Icon badge -->
+        <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 40px; box-shadow: 0 15px 50px rgba(201,162,39,0.4);">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                <path d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        
         <!-- Section label -->
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #C9A227; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 24px; font-weight: 600;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #C9A227; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 24px; font-weight: 600;">
             Before You Decide
         </p>
         
-        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 68px; color: #3D2B1F; line-height: 1.15; margin-bottom: 32px;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 72px; color: #FFFEF5; line-height: 1.1; margin-bottom: 28px; text-shadow: 0 4px 30px rgba(0,0,0,0.3);">
             Let's Address What's<br>On Your Mind
         </h1>
         
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #636E72; line-height: 1.6; max-width: 700px; margin: 0 auto;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: rgba(255,254,245,0.8); line-height: 1.6; max-width: 650px;">
             I know you have questions. Let me answer them honestly.
         </p>
 
-        <!-- Simple decorative line -->
-        <div style="width: 100px; height: 3px; background: #C9A227; margin: 48px auto 0; border-radius: 2px;"></div>
+        <!-- Decorative divider -->
+        <div style="display: flex; align-items: center; gap: 20px; margin-top: 50px;">
+            <div style="width: 60px; height: 2px; background: rgba(201,162,39,0.4);"></div>
+            <svg width="20" height="20" viewBox="0 0 20 20">
+                <polygon points="10,0 20,10 10,20 0,10" fill="#C9A227" opacity="0.6"/>
+            </svg>
+            <div style="width: 60px; height: 2px; background: rgba(201,162,39,0.4);"></div>
+        </div>
     </div>
 </div>
 
@@ -237,69 +255,99 @@
      Layout A: Centered Hero — [REGULAR]
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(165deg, #FDF8F3 0%, #FAF3E0 100%); position: relative; overflow: hidden;">
+    <!-- Decorative background -->
     <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="s111bg" cx="50%" cy="45%" r="45%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.06" />
+            <radialGradient id="s111bg" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
                 <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
             </radialGradient>
         </defs>
-        <ellipse cx="960" cy="480" rx="550" ry="400" fill="url(#s111bg)"/>
+        <ellipse cx="960" cy="540" rx="700" ry="500" fill="url(#s111bg)"/>
+        <!-- Question mark decorations -->
+        <text x="150" y="280" font-family="'Ogg Bold', Georgia, serif" font-size="300" fill="#C9A227" opacity="0.06">?</text>
+        <text x="1550" y="900" font-family="'Ogg Bold', Georgia, serif" font-size="250" fill="#C9A227" opacity="0.05">?</text>
     </svg>
 
-    <div class="slide-inner" style="position: relative; z-index: 1;">
-        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 72px; color: #3D2B1F; line-height: 1.1; margin-bottom: 36px;">
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px;">
+        
+        <!-- Floating question icons -->
+        <div style="display: flex; gap: 30px; margin-bottom: 40px;">
+            <div style="width: 60px; height: 60px; background: #FFFFFF; border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: rotate(-5deg);">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #C9A227;">?</span>
+            </div>
+            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 18px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 40px rgba(201,162,39,0.3);">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 36px; color: #FFFEF5;">?</span>
+            </div>
+            <div style="width: 60px; height: 60px; background: #FFFFFF; border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: rotate(5deg);">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #C9A227;">?</span>
+            </div>
+        </div>
+        
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 80px; color: #3D2B1F; line-height: 1.1; margin-bottom: 32px;">
             Got Questions?
         </h1>
         
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; max-width: 750px; margin: 0 auto; line-height: 1.6;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; max-width: 700px; line-height: 1.6;">
             Let me address what might be running through your mind right now...
         </p>
-        
-        <!-- Decorative line -->
-        <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #C9A227, transparent); margin: 48px auto 0; border-radius: 2px;"></div>
     </div>
 </div>
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      SLIDE 112 — "I DON'T HAVE TIME" OBJECTION
-     Layout B: Left Text with Accent — [REGULAR]
+     Layout B: Split with Clock Visual — [HIGHLIGHT]
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(165deg, #FDF8F3 0%, #FAF3E0 100%); position: relative; overflow: hidden;">
-    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <radialGradient id="s112bg" cx="25%" cy="50%" r="45%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.05" />
-                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
-            </radialGradient>
-        </defs>
-        <ellipse cx="480" cy="540" rx="500" ry="400" fill="url(#s112bg)"/>
-    </svg>
+    <!-- Background accent -->
+    <div style="position: absolute; right: 0; top: 0; width: 45%; height: 100%; background: linear-gradient(145deg, rgba(201,162,39,0.08) 0%, rgba(253,248,243,0) 100%);"></div>
     
-    <div style="position: relative; z-index: 1; width: 100%; max-width: 1200px; padding: 80px 100px; display: flex; flex-direction: column; justify-content: center;">
-        <!-- Quote with objection -->
-        <div style="display: flex; align-items: flex-start; gap: 24px; margin-bottom: 40px;">
-            <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 80px; color: #C9A227; opacity: 0.4; line-height: 0.8;">"</span>
-            <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 56px; color: #3D2B1F; line-height: 1.2; margin-top: 12px;">
-                I don't have time.
-            </h1>
+    <div style="position: relative; z-index: 1; display: flex; align-items: center; width: 100%; max-width: 1500px; margin: 0 auto; padding: 80px 100px; gap: 80px;">
+        
+        <!-- Left: Text Content -->
+        <div style="flex: 1;">
+            <!-- Quote mark + heading -->
+            <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px;">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 120px; color: #C9A227; line-height: 0.7; opacity: 0.3;">"</span>
+                <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #3D2B1F; line-height: 1.15;">
+                    I don't have time.
+                </h1>
+            </div>
+            
+            <div style="margin-left: 20px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; line-height: 1.7; margin-bottom: 24px;">
+                    I hear you. Between family, your job, and everything else life throws at you, time feels impossibly tight.
+                </p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; line-height: 1.7;">
+                    But here's what I've discovered...
+                </p>
+            </div>
         </div>
         
-        <div style="max-width: 900px; margin-left: 50px;">
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #5C4827; line-height: 1.7; margin-bottom: 28px;">
-                I hear you. Between family, your job, and everything else life throws at you, time feels impossibly tight.
-            </p>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #5C4827; line-height: 1.7;">
-                But here's what I've discovered...
-            </p>
-        </div>
-        
-        <!-- Accent card -->
-        <div style="position: absolute; bottom: 100px; right: 120px; background: #FFFFFF; border-left: 4px solid #C9A227; padding: 28px 36px; border-radius: 0 16px 16px 0; box-shadow: 0 8px 30px rgba(0,0,0,0.06); max-width: 450px;">
-            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #3D2B1F; line-height: 1.5; margin: 0;">
-                It's not about finding time.<br>It's about making time <span style="color: #C9A227;">count</span>.
-            </p>
+        <!-- Right: Clock Visual + Key Insight -->
+        <div style="flex: 0 0 480px; display: flex; flex-direction: column; align-items: center; gap: 30px;">
+            <!-- Large Clock Icon -->
+            <div style="width: 200px; height: 200px; background: linear-gradient(145deg, #FFFFFF, #F5F0E8); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(0,0,0,0.1), inset 0 -5px 20px rgba(0,0,0,0.05);">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#C9A227" stroke-width="3"/>
+                    <circle cx="50" cy="50" r="4" fill="#3D2B1F"/>
+                    <line x1="50" y1="50" x2="50" y2="25" stroke="#3D2B1F" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="50" y1="50" x2="70" y2="50" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+                    <!-- Hour markers -->
+                    <circle cx="50" cy="12" r="3" fill="#C9A227"/>
+                    <circle cx="88" cy="50" r="3" fill="#C9A227"/>
+                    <circle cx="50" cy="88" r="3" fill="#C9A227"/>
+                    <circle cx="12" cy="50" r="3" fill="#C9A227"/>
+                </svg>
+            </div>
+            
+            <!-- Key Insight Card -->
+            <div style="background: linear-gradient(135deg, #C9A227, #B8860B); padding: 32px 40px; border-radius: 20px; box-shadow: 0 15px 50px rgba(201,162,39,0.35); text-align: center;">
+                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 26px; color: #FFFEF5; line-height: 1.4; margin: 0;">
+                    It's not about finding time.<br>It's about making time <span style="border-bottom: 2px solid rgba(255,255,255,0.5);">count</span>.
+                </p>
+            </div>
         </div>
     </div>
 </div>
@@ -307,97 +355,129 @@
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      SLIDE 113 — TIME MATH
-     Layout A: Centered with Visual — [HIGHLIGHT]
+     Layout A: Centered with Big Numbers — [HIGHLIGHT]
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(165deg, #FDF8F3 0%, #FAF3E0 100%); position: relative; overflow: hidden;">
     <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="s113bg" cx="50%" cy="55%" r="45%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.07" />
+            <radialGradient id="s113bg" cx="50%" cy="60%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
                 <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
             </radialGradient>
         </defs>
-        <ellipse cx="960" cy="600" rx="600" ry="450" fill="url(#s113bg)"/>
+        <ellipse cx="960" cy="650" rx="700" ry="500" fill="url(#s113bg)"/>
     </svg>
     
-    <div class="slide-inner" style="position: relative; z-index: 1; max-width: 1100px;">
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #636E72; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px;">The Time Math</p>
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 60px 80px; max-width: 1200px; margin: 0 auto;">
         
-        <!-- Visual equation -->
-        <div style="display: flex; align-items: center; justify-content: center; gap: 40px; margin-bottom: 48px;">
-            <!-- 3 Hours -->
-            <div style="background: linear-gradient(135deg, #C9A227, #D4A84B); padding: 36px 44px; border-radius: 20px; box-shadow: 0 12px 40px rgba(201,162,39,0.3);">
-                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #FFFEF5; display: block;">3</span>
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: rgba(255,254,245,0.9);">hours/week</span>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #C9A227; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 16px; font-weight: 600;">The Time Math</p>
+        
+        <!-- Big Number Equation -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 40px; margin-bottom: 50px; margin-top: 20px;">
+            <!-- 3 Hours Card -->
+            <div style="background: linear-gradient(145deg, #C9A227, #B8860B); padding: 50px 60px; border-radius: 28px; box-shadow: 0 20px 60px rgba(201,162,39,0.35); text-align: center; transform: rotate(-2deg);">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 96px; color: #FFFEF5; display: block; line-height: 1;">3</span>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: rgba(255,254,245,0.9); text-transform: uppercase; letter-spacing: 2px;">hours/week</span>
             </div>
             
             <!-- Equals Arrow -->
-            <svg width="70" height="35" viewBox="0 0 70 35">
-                <path d="M0 17.5 L50 17.5 M42 8 L54 17.5 L42 27" stroke="#C9A227" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <svg width="80" height="50" viewBox="0 0 80 50">
+                    <path d="M0 25 L55 25 M45 12 L60 25 L45 38" stroke="#3D2B1F" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #8B8178; text-transform: uppercase; letter-spacing: 2px;">equals</span>
+            </div>
             
-            <!-- 25 Minutes -->
-            <div style="background: linear-gradient(135deg, #5C4827, #3D2B1F); padding: 36px 44px; border-radius: 20px; box-shadow: 0 12px 40px rgba(61,43,31,0.25);">
-                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #D4AF37; display: block;">25</span>
-                <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: rgba(255,254,245,0.9);">min/day</span>
+            <!-- 25 Minutes Card -->
+            <div style="background: linear-gradient(145deg, #3D2B1F, #5C4827); padding: 50px 60px; border-radius: 28px; box-shadow: 0 20px 60px rgba(61,43,31,0.35); text-align: center; transform: rotate(2deg);">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 96px; color: #D4AF37; display: block; line-height: 1;">25</span>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: rgba(255,254,245,0.9); text-transform: uppercase; letter-spacing: 2px;">min/day</span>
             </div>
         </div>
         
-        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 42px; color: #3D2B1F; line-height: 1.35; margin-bottom: 24px;">
-            That's less than one Netflix episode.
-        </h1>
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #5C4827; line-height: 1.6;">
-            Less than your morning scroll. Less than waiting for your coffee to brew.
-        </p>
+        <!-- Context -->
+        <div style="background: #FFFFFF; padding: 36px 50px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.06); max-width: 800px;">
+            <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 38px; color: #3D2B1F; margin-bottom: 16px;">
+                That's less than one Netflix episode.
+            </h2>
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #5C4827; line-height: 1.6; margin: 0;">
+                Less than your morning scroll. Less than waiting for your coffee to brew.
+            </p>
+        </div>
     </div>
 </div>
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      SLIDE 114 — "I KNOW YOUR LIFE" EMPATHY
-     Layout C: Card Grid — [REGULAR]
+     Layout C: Icon Cards Grid — [REGULAR]
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(165deg, #FDF8F3 0%, #FAF3E0 100%); position: relative; overflow: hidden;">
     <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="s114bg" cx="50%" cy="60%" r="50%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.05" />
+            <radialGradient id="s114bg" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.06" />
                 <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
             </radialGradient>
         </defs>
-        <ellipse cx="960" cy="650" rx="650" ry="480" fill="url(#s114bg)"/>
+        <ellipse cx="960" cy="540" rx="700" ry="500" fill="url(#s114bg)"/>
     </svg>
 
-    <div class="slide-inner" style="position: relative; z-index: 1; max-width: 1200px;">
-        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 52px; color: #3D2B1F; text-align: center; margin-bottom: 48px; line-height: 1.25;">
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding: 60px 80px; max-width: 1300px; margin: 0 auto;">
+        
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 58px; color: #3D2B1F; text-align: center; margin-bottom: 50px;">
             I know your life.
         </h1>
         
-        <!-- Life moments grid -->
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 40px;">
-            <div style="background: #FFFFFF; border-radius: 18px; padding: 28px 32px; border: 1px solid rgba(201,162,39,0.12); box-shadow: 0 6px 24px rgba(0,0,0,0.05);">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 21px; color: #3D2B1F; line-height: 1.55; margin: 0;">
+        <!-- Life moments grid with icons -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; width: 100%; margin-bottom: 40px;">
+            
+            <div style="background: #FFFFFF; border-radius: 20px; padding: 28px 32px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 20px;">
+                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #E8DED0, #D4C9B8); border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #3D2B1F; line-height: 1.5; margin: 0;">
                     You're up before the kids, stealing 20 minutes of quiet before the chaos starts.
                 </p>
             </div>
-            <div style="background: #FFFFFF; border-radius: 18px; padding: 28px 32px; border: 1px solid rgba(201,162,39,0.12); box-shadow: 0 6px 24px rgba(0,0,0,0.05);">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 21px; color: #3D2B1F; line-height: 1.55; margin: 0;">
+            
+            <div style="background: #FFFFFF; border-radius: 20px; padding: 28px 32px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 20px;">
+                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #E8DED0, #D4C9B8); border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #3D2B1F; line-height: 1.5; margin: 0;">
                     You're working during nap time, lunch breaks, after bedtime.
                 </p>
             </div>
-            <div style="background: #FFFFFF; border-radius: 18px; padding: 28px 32px; border: 1px solid rgba(201,162,39,0.12); box-shadow: 0 6px 24px rgba(0,0,0,0.05);">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 21px; color: #3D2B1F; line-height: 1.55; margin: 0;">
+            
+            <div style="background: #FFFFFF; border-radius: 20px; padding: 28px 32px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 20px;">
+                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #E8DED0, #D4C9B8); border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                        <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #3D2B1F; line-height: 1.5; margin: 0;">
                     You're squeezing in Etsy between soccer practice and dinner prep.
                 </p>
             </div>
-            <div style="background: #FFFFFF; border-radius: 18px; padding: 28px 32px; border: 1px solid rgba(201,162,39,0.12); box-shadow: 0 6px 24px rgba(0,0,0,0.05);">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 21px; color: #3D2B1F; line-height: 1.55; margin: 0;">
-                    You don't have hours to spare. You have <span style="color: #C9A227; font-weight: 600;">pockets</span> of time.
+            
+            <div style="background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 20px; padding: 28px 32px; box-shadow: 0 8px 30px rgba(201,162,39,0.25); display: flex; align-items: center; gap: 20px;">
+                <div style="width: 56px; height: 56px; background: rgba(255,255,255,0.2); border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                        <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #FFFEF5; line-height: 1.5; margin: 0;">
+                    You don't have hours to spare. You have <strong>pockets</strong> of time.
                 </p>
             </div>
         </div>
         
-        <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #C9A227; text-align: center; margin: 0;">
+        <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 34px; color: #C9A227; text-align: center;">
             This program was built for those pockets.
         </p>
     </div>
@@ -406,33 +486,57 @@
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      SLIDE 115 — WORTH 25 MINUTES
-     Layout A: Dark Background with Testimonial — [HIGHLIGHT]
+     Layout A: Dark Hero with Testimonial — [HIGHLIGHT]
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative; overflow: hidden;">
     <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="s115bg" cx="50%" cy="50%" r="55%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
+            <radialGradient id="s115bg" cx="50%" cy="40%" r="55%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.12" />
                 <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
             </radialGradient>
         </defs>
-        <ellipse cx="960" cy="540" rx="700" ry="500" fill="url(#s115bg)"/>
+        <ellipse cx="960" cy="430" rx="750" ry="550" fill="url(#s115bg)"/>
+        <!-- Decorative elements -->
+        <circle cx="150" cy="900" r="100" fill="none" stroke="#C9A227" stroke-width="1" opacity="0.1"/>
+        <circle cx="1770" cy="180" r="120" fill="none" stroke="#C9A227" stroke-width="1" opacity="0.1"/>
     </svg>
 
-    <div class="slide-inner" style="position: relative; z-index: 1; max-width: 1000px;">
-        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 52px; color: #FFFEF5; margin-bottom: 48px; line-height: 1.3;">
-            Is it worth 25 minutes a day to change your entire business?
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 70px 80px; max-width: 1100px; margin: 0 auto;">
+        
+        <!-- Time badge -->
+        <div style="display: flex; align-items: center; gap: 16px; background: rgba(201,162,39,0.15); padding: 14px 28px; border-radius: 50px; margin-bottom: 40px; border: 1px solid rgba(201,162,39,0.3);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #C9A227; font-weight: 600;">25 MINUTES A DAY</span>
+        </div>
+        
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 54px; color: #FFFEF5; margin-bottom: 50px; line-height: 1.25;">
+            Is it worth 25 minutes a day<br>to change your entire business?
         </h1>
         
         <!-- Testimonial card -->
-        <div style="background: rgba(255,254,245,0.08); border: 1px solid rgba(201,162,39,0.25); border-radius: 20px; padding: 40px 48px;">
-            <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 60px; color: #C9A227; line-height: 0.6; opacity: 0.5; display: block; margin-bottom: 16px;">"</span>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #FFFEF5; line-height: 1.7; font-style: italic; margin-bottom: 24px;">
+        <div style="background: rgba(255,254,245,0.06); border: 1px solid rgba(201,162,39,0.2); border-radius: 24px; padding: 44px 52px; max-width: 900px; position: relative;">
+            <!-- Quote icon -->
+            <div style="position: absolute; top: -20px; left: 50px; width: 50px; height: 50px; background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(201,162,39,0.3);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+            </div>
+            
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #FFFEF5; line-height: 1.75; font-style: italic; margin-bottom: 28px; margin-top: 10px;">
                 I was skeptical about the time commitment. But once I started, I realized I was spending MORE time before—just spinning my wheels. Now 25 focused minutes gets me further than 3 confused hours ever did.
             </p>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.6); margin: 0;">
-                — Sarah M., Empire Builder
-            </p>
+            <div style="display: flex; align-items: center; gap: 16px; justify-content: flex-end;">
+                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #6B8E6B, #4A5D4A); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 20px; color: white;">S</span>
+                </div>
+                <div style="text-align: left;">
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFEF5; font-weight: 600; margin: 0;">Sarah M.</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: rgba(255,254,245,0.6); margin: 0;">Empire Builder</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -440,42 +544,47 @@
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      SLIDE 116 — "I CAN'T AFFORD IT" OBJECTION
-     Layout B: Left Text with Accent — [REGULAR]
+     Layout B: Split with Money Visual — [REGULAR]
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(165deg, #FDF8F3 0%, #FAF3E0 100%); position: relative; overflow: hidden;">
-    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-        <defs>
-            <radialGradient id="s116bg" cx="75%" cy="40%" r="40%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.05" />
-                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
-            </radialGradient>
-        </defs>
-        <ellipse cx="1440" cy="430" rx="450" ry="380" fill="url(#s116bg)"/>
-    </svg>
+    <!-- Background accent -->
+    <div style="position: absolute; left: 0; top: 0; width: 45%; height: 100%; background: linear-gradient(145deg, rgba(201,162,39,0.06) 0%, rgba(253,248,243,0) 100%);"></div>
     
-    <div style="position: relative; z-index: 1; width: 100%; max-width: 1200px; padding: 80px 100px; display: flex; flex-direction: column; justify-content: center;">
-        <!-- Quote with objection -->
-        <div style="display: flex; align-items: flex-start; gap: 24px; margin-bottom: 40px;">
-            <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 80px; color: #C9A227; opacity: 0.4; line-height: 0.8;">"</span>
-            <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 56px; color: #3D2B1F; line-height: 1.2; margin-top: 12px;">
-                I can't afford it.
-            </h1>
+    <div style="position: relative; z-index: 1; display: flex; align-items: center; width: 100%; max-width: 1500px; margin: 0 auto; padding: 80px 100px; gap: 80px;">
+        
+        <!-- Left: Visual -->
+        <div style="flex: 0 0 420px; display: flex; flex-direction: column; align-items: center; gap: 30px;">
+            <!-- Dollar visual -->
+            <div style="width: 180px; height: 180px; background: linear-gradient(145deg, #FFFFFF, #F5F0E8); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 100px; color: #C9A227;">$</span>
+            </div>
+            
+            <!-- Reframe Card -->
+            <div style="background: linear-gradient(135deg, #C9A227, #B8860B); padding: 32px 36px; border-radius: 20px; box-shadow: 0 15px 50px rgba(201,162,39,0.35); text-align: center;">
+                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #FFFEF5; line-height: 1.45; margin: 0;">
+                    The question isn't "Can I afford this?"<br>It's "<span style="border-bottom: 2px solid rgba(255,255,255,0.5);">Can I afford NOT to?</span>"
+                </p>
+            </div>
         </div>
         
-        <div style="max-width: 900px; margin-left: 50px;">
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #5C4827; line-height: 1.7; margin-bottom: 28px;">
-                I understand. Money is real, and this is a real investment.
-            </p>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #5C4827; line-height: 1.7;">
-                But let me reframe something for you...
-            </p>
-        </div>
-        
-        <!-- Accent card -->
-        <div style="position: absolute; bottom: 100px; right: 120px; background: #FFFFFF; border-left: 4px solid #C9A227; padding: 28px 36px; border-radius: 0 16px 16px 0; box-shadow: 0 8px 30px rgba(0,0,0,0.06); max-width: 480px;">
-            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #3D2B1F; line-height: 1.5; margin: 0;">
-                The question isn't "Can I afford this?"<br>It's "<span style="color: #C9A227;">Can I afford NOT to?</span>"
-            </p>
+        <!-- Right: Text Content -->
+        <div style="flex: 1;">
+            <!-- Quote mark + heading -->
+            <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px;">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 120px; color: #C9A227; line-height: 0.7; opacity: 0.3;">"</span>
+                <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #3D2B1F; line-height: 1.15;">
+                    I can't afford it.
+                </h1>
+            </div>
+            
+            <div style="margin-left: 20px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; line-height: 1.7; margin-bottom: 24px;">
+                    I understand. Money is real, and this is a real investment.
+                </p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; line-height: 1.7;">
+                    But let me reframe something for you...
+                </p>
+            </div>
         </div>
     </div>
 </div>
@@ -483,118 +592,157 @@
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      SLIDE 117 — INVESTMENT VS EXPENSE
-     Layout B: Two Column Comparison — [HIGHLIGHT]
+     Layout C: Side-by-Side Comparison — [HIGHLIGHT]
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(165deg, #FDF8F3 0%, #FAF3E0 100%); position: relative; overflow: hidden;">
     <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="s117bg" cx="50%" cy="40%" r="45%">
-                <stop offset="0%" style="stop-color:#6B8E6B;stop-opacity:0.06" />
+            <radialGradient id="s117bg" cx="70%" cy="50%" r="45%">
+                <stop offset="0%" style="stop-color:#6B8E6B;stop-opacity:0.08" />
                 <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
             </radialGradient>
         </defs>
-        <ellipse cx="960" cy="430" rx="550" ry="420" fill="url(#s117bg)"/>
+        <ellipse cx="1350" cy="540" rx="600" ry="500" fill="url(#s117bg)"/>
     </svg>
 
-    <div class="slide-inner" style="position: relative; z-index: 1; max-width: 1150px;">
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #636E72; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 16px;">Investment vs Expense</p>
-        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 48px; color: #3D2B1F; margin-bottom: 48px;">
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding: 60px 80px; max-width: 1250px; margin: 0 auto;">
+        
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #C9A227; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 12px; font-weight: 600;">Investment vs Expense</p>
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 52px; color: #3D2B1F; margin-bottom: 50px;">
             Let's do the math
         </h1>
         
-        <!-- ROI Comparison -->
-        <div style="display: flex; gap: 40px; align-items: stretch; justify-content: center;">
-            <!-- Expense Side (faded) -->
-            <div style="width: 340px; background: #FFFFFF; border: 2px solid rgba(224,122,95,0.25); border-radius: 20px; padding: 32px; opacity: 0.75; box-shadow: 0 6px 24px rgba(0,0,0,0.04);">
-                <h3 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #E07A5F; margin-bottom: 24px;">Expense Mindset</h3>
-                <div style="display: flex; flex-direction: column; gap: 14px;">
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #5C4827; margin: 0;">→ "That's $2,497 gone"</p>
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #5C4827; margin: 0;">→ "I could buy X instead"</p>
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #5C4827; margin: 0;">→ "What if it doesn't work?"</p>
+        <!-- Side by side comparison -->
+        <div style="display: flex; gap: 30px; align-items: stretch; width: 100%;">
+            
+            <!-- Expense Mindset -->
+            <div style="flex: 1; background: #FFFFFF; border: 2px solid rgba(224,122,95,0.2); border-radius: 24px; padding: 36px; opacity: 0.8;">
+                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 28px;">
+                    <div style="width: 48px; height: 48px; background: rgba(224,122,95,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 18L18 6M6 6l12 12" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 26px; color: #E07A5F; margin: 0;">Expense Mindset</h3>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 19px; color: #5C4827; margin: 0; padding-left: 20px; border-left: 3px solid rgba(224,122,95,0.3);">"That's $2,497 gone"</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 19px; color: #5C4827; margin: 0; padding-left: 20px; border-left: 3px solid rgba(224,122,95,0.3);">"I could buy X instead"</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 19px; color: #5C4827; margin: 0; padding-left: 20px; border-left: 3px solid rgba(224,122,95,0.3);">"What if it doesn't work?"</p>
                 </div>
             </div>
             
             <!-- Arrow -->
             <div style="display: flex; align-items: center;">
-                <svg width="50" height="50" viewBox="0 0 50 50">
-                    <path d="M8 25 L38 25 M30 17 L40 25 L30 33" stroke="#C9A227" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg width="60" height="60" viewBox="0 0 60 60">
+                    <circle cx="30" cy="30" r="28" fill="#C9A227"/>
+                    <path d="M22 30 L38 30 M32 22 L40 30 L32 38" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
             
-            <!-- Investment Side (highlighted) -->
-            <div style="width: 420px; background: linear-gradient(135deg, #6B8E6B, #4A5D4A); border-radius: 20px; padding: 32px; box-shadow: 0 12px 40px rgba(107,142,107,0.25);">
-                <h3 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #FFFEF5; margin-bottom: 24px;">Investment Mindset</h3>
+            <!-- Investment Mindset -->
+            <div style="flex: 1.2; background: linear-gradient(145deg, #6B8E6B, #4A5D4A); border-radius: 24px; padding: 36px; box-shadow: 0 20px 60px rgba(107,142,107,0.3);">
+                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 28px;">
+                    <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 26px; color: #FFFEF5; margin: 0;">Investment Mindset</h3>
+                </div>
                 <div style="display: flex; flex-direction: column; gap: 18px;">
                     <div style="display: flex; align-items: center; gap: 14px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="11" fill="rgba(255,254,245,0.2)"/>
-                            <path d="M7 12 L10 15 L17 8" stroke="#FFFEF5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="22" height="22" viewBox="0 0 22 22">
+                            <circle cx="11" cy="11" r="10" fill="rgba(255,255,255,0.15)"/>
+                            <path d="M7 11 L10 14 L15 8" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
                         </svg>
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #FFFEF5; margin: 0;">1 extra sale/month = $600/year</p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #FFFEF5; margin: 0;">1 extra sale/month = <strong>$600/year</strong></p>
                     </div>
                     <div style="display: flex; align-items: center; gap: 14px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="11" fill="rgba(255,254,245,0.2)"/>
-                            <path d="M7 12 L10 15 L17 8" stroke="#FFFEF5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="22" height="22" viewBox="0 0 22 22">
+                            <circle cx="11" cy="11" r="10" fill="rgba(255,255,255,0.15)"/>
+                            <path d="M7 11 L10 14 L15 8" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
                         </svg>
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #FFFEF5; margin: 0;">5 extra sales/month = $3,000/year</p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #FFFEF5; margin: 0;">5 extra sales/month = <strong>$3,000/year</strong></p>
                     </div>
                     <div style="display: flex; align-items: center; gap: 14px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="11" fill="rgba(255,254,245,0.2)"/>
-                            <path d="M7 12 L10 15 L17 8" stroke="#FFFEF5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="22" height="22" viewBox="0 0 22 22">
+                            <circle cx="11" cy="11" r="10" fill="rgba(255,255,255,0.15)"/>
+                            <path d="M7 11 L10 14 L15 8" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
                         </svg>
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #FFFEF5; margin: 0;">Skills that compound forever</p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #FFFEF5; margin: 0;">Skills that compound <strong>forever</strong></p>
                     </div>
                 </div>
             </div>
         </div>
         
-        <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 28px; color: #C9A227; margin-top: 44px;">
-            ROI pays for itself in months—not years.
-        </p>
+        <div style="background: #FFFFFF; padding: 24px 40px; border-radius: 16px; margin-top: 40px; box-shadow: 0 8px 30px rgba(0,0,0,0.06);">
+            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 28px; color: #3D2B1F; margin: 0;">
+                ROI pays for itself in <span style="color: #6B8E6B;">months</span>—not years.
+            </p>
+        </div>
     </div>
 </div>
 
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      SLIDE 118 — COST OF NOT INVESTING
-     Layout C: Card Grid on Dark — [HIGHLIGHT]
+     Layout A: Dark with Impact Cards — [HIGHLIGHT]
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative; overflow: hidden;">
     <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="s118bg" cx="50%" cy="55%" r="50%">
-                <stop offset="0%" style="stop-color:#E07A5F;stop-opacity:0.08" />
+            <radialGradient id="s118bg" cx="50%" cy="60%" r="55%">
+                <stop offset="0%" style="stop-color:#E07A5F;stop-opacity:0.1" />
                 <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
             </radialGradient>
         </defs>
-        <ellipse cx="960" cy="600" rx="650" ry="480" fill="url(#s118bg)"/>
+        <ellipse cx="960" cy="650" rx="750" ry="550" fill="url(#s118bg)"/>
     </svg>
 
-    <div class="slide-inner" style="position: relative; z-index: 1; max-width: 1200px;">
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: rgba(255,254,245,0.6); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 24px;">The Real Question</p>
-        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 52px; color: #FFFEF5; margin-bottom: 48px; line-height: 1.3;">
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 60px 80px; max-width: 1250px; margin: 0 auto;">
+        
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: rgba(255,254,245,0.5); text-transform: uppercase; letter-spacing: 4px; margin-bottom: 20px;">The Real Question</p>
+        
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 56px; color: #FFFEF5; margin-bottom: 50px; line-height: 1.25;">
             What's the cost of <span style="color: #E07A5F;">NOT</span> investing?
         </h1>
         
-        <!-- Cost items -->
-        <div style="display: flex; gap: 28px; justify-content: center; margin-bottom: 44px;">
-            <div style="background: rgba(224,122,95,0.12); border: 1px solid rgba(224,122,95,0.25); border-radius: 18px; padding: 28px 36px; width: 300px; text-align: center;">
-                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #E07A5F; margin-bottom: 8px;">6 more months</p>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.75); margin: 0;">of guessing what works</p>
+        <!-- Cost cards -->
+        <div style="display: flex; gap: 28px; margin-bottom: 50px;">
+            
+            <div style="flex: 1; background: rgba(224,122,95,0.12); border: 1px solid rgba(224,122,95,0.25); border-radius: 20px; padding: 36px 32px; text-align: center;">
+                <div style="width: 70px; height: 70px; background: rgba(224,122,95,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="#E07A5F" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 38px; color: #E07A5F; margin-bottom: 8px;">6 more months</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.7); margin: 0;">of guessing what works</p>
             </div>
-            <div style="background: rgba(224,122,95,0.12); border: 1px solid rgba(224,122,95,0.25); border-radius: 18px; padding: 28px 36px; width: 300px; text-align: center;">
-                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #E07A5F; margin-bottom: 8px;">$1,000s lost</p>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.75); margin: 0;">in missed sales opportunities</p>
+            
+            <div style="flex: 1; background: rgba(224,122,95,0.12); border: 1px solid rgba(224,122,95,0.25); border-radius: 20px; padding: 36px 32px; text-align: center;">
+                <div style="width: 70px; height: 70px; background: rgba(224,122,95,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#E07A5F" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 38px; color: #E07A5F; margin-bottom: 8px;">$1,000s lost</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.7); margin: 0;">in missed sales opportunities</p>
             </div>
-            <div style="background: rgba(224,122,95,0.12); border: 1px solid rgba(224,122,95,0.25); border-radius: 18px; padding: 28px 36px; width: 300px; text-align: center;">
-                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #E07A5F; margin-bottom: 8px;">Hours wasted</p>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.75); margin: 0;">on strategies that don't work</p>
+            
+            <div style="flex: 1; background: rgba(224,122,95,0.12); border: 1px solid rgba(224,122,95,0.25); border-radius: 20px; padding: 36px 32px; text-align: center;">
+                <div style="width: 70px; height: 70px; background: rgba(224,122,95,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#E07A5F" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 38px; color: #E07A5F; margin-bottom: 8px;">Hours wasted</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.7); margin: 0;">on strategies that don't work</p>
             </div>
         </div>
         
-        <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 30px; color: #D4AF37; line-height: 1.4;">
+        <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #D4AF37; line-height: 1.4;">
             Every day you wait is another day your competitors pull ahead.
         </p>
     </div>
@@ -603,47 +751,54 @@
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      SLIDE 119 — "WHAT IF IT DOESN'T WORK" - GUARANTEE
-     Layout A: Centered with Badge — [HIGHLIGHT]
+     Layout A: Centered with Shield — [HIGHLIGHT]
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(165deg, #FDF8F3 0%, #FAF3E0 100%); position: relative; overflow: hidden;">
     <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="s119bg" cx="50%" cy="55%" r="45%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+            <radialGradient id="s119bg" cx="50%" cy="55%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
                 <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
             </radialGradient>
         </defs>
-        <ellipse cx="960" cy="600" rx="600" ry="450" fill="url(#s119bg)"/>
+        <ellipse cx="960" cy="600" rx="700" ry="500" fill="url(#s119bg)"/>
     </svg>
 
-    <div class="slide-inner" style="position: relative; z-index: 1; max-width: 950px;">
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 60px 80px; max-width: 1000px; margin: 0 auto;">
+        
         <!-- Quote objection -->
-        <div style="display: flex; align-items: flex-start; justify-content: center; gap: 16px; margin-bottom: 44px;">
-            <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #C9A227; line-height: 0.8; opacity: 0.4;">"</span>
-            <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 48px; color: #3D2B1F; line-height: 1.2;">
+        <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 44px;">
+            <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 80px; color: #C9A227; line-height: 0.7; opacity: 0.35;">"</span>
+            <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 52px; color: #3D2B1F; line-height: 1.2;">
                 What if it doesn't work for me?
             </h1>
         </div>
         
-        <!-- Guarantee Badge -->
-        <div style="background: linear-gradient(135deg, #C9A227, #D4A84B); border-radius: 24px; padding: 44px 52px; box-shadow: 0 16px 60px rgba(201,162,39,0.3); position: relative;">
-            <!-- Shield icon -->
-            <div style="position: absolute; top: -28px; left: 50%; transform: translateX(-50%); background: #FDF8F3; border-radius: 50%; padding: 14px; box-shadow: 0 6px 24px rgba(201,162,39,0.25);">
-                <svg width="44" height="44" viewBox="0 0 44 44">
-                    <path d="M22 4 L40 10 L40 22 C40 34 22 42 22 42 C22 42 4 34 4 22 L4 10 L22 4Z" fill="#C9A227"/>
-                    <path d="M15 22 L20 27 L29 17" stroke="#FFFEF5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Guarantee Card with Shield -->
+        <div style="background: linear-gradient(145deg, #C9A227, #B8860B); border-radius: 28px; padding: 50px 60px; box-shadow: 0 25px 80px rgba(201,162,39,0.35); position: relative; max-width: 850px;">
+            
+            <!-- Shield badge -->
+            <div style="position: absolute; top: -35px; left: 50%; transform: translateX(-50%); width: 80px; height: 80px; background: #FDF8F3; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(201,162,39,0.3);">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#C9A227"/>
+                    <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
             
-            <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 36px; color: #FFFEF5; margin-bottom: 20px; margin-top: 16px;">
+            <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 38px; color: #FFFEF5; margin-bottom: 24px; margin-top: 20px;">
                 My Promise To You
             </h2>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: rgba(255,254,245,0.95); line-height: 1.7; margin-bottom: 20px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: rgba(255,254,245,0.95); line-height: 1.7; margin-bottom: 24px;">
                 Try the entire program. Do the work. If you don't see results, I'll work with you personally until you do—or give you a full refund.
             </p>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.75); font-style: italic; margin: 0;">
-                That's how confident I am this will work for you.
-            </p>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 12px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 2l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L10 2z" fill="white" opacity="0.6"/>
+                </svg>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.8); font-style: italic; margin: 0;">
+                    That's how confident I am this will work for you.
+                </p>
+            </div>
         </div>
     </div>
 </div>
@@ -651,99 +806,97 @@
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      SLIDE 120 — "TRIED OTHER COURSES" OBJECTION
-     Layout B: Two Column Comparison — [HIGHLIGHT]
+     Layout C: Side-by-Side Comparison — [HIGHLIGHT]
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(165deg, #FDF8F3 0%, #FAF3E0 100%); position: relative; overflow: hidden;">
     <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="s120bg" cx="70%" cy="65%" r="40%">
-                <stop offset="0%" style="stop-color:#6B8E6B;stop-opacity:0.05" />
+            <radialGradient id="s120bg" cx="70%" cy="60%" r="45%">
+                <stop offset="0%" style="stop-color:#6B8E6B;stop-opacity:0.08" />
                 <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
             </radialGradient>
         </defs>
-        <ellipse cx="1340" cy="700" rx="500" ry="400" fill="url(#s120bg)"/>
+        <ellipse cx="1350" cy="650" rx="600" ry="500" fill="url(#s120bg)"/>
     </svg>
 
-    <div style="position: relative; z-index: 1; width: 100%; max-width: 1250px; padding: 60px 80px; margin: 0 auto;">
+    <div style="position: relative; z-index: 1; padding: 60px 80px; max-width: 1300px; margin: 0 auto;">
+        
         <!-- Quote objection -->
         <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 44px;">
-            <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 72px; color: #C9A227; opacity: 0.35; line-height: 0.8;">"</span>
-            <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 48px; color: #3D2B1F; line-height: 1.2; margin-top: 10px;">
+            <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 90px; color: #C9A227; line-height: 0.7; opacity: 0.3;">"</span>
+            <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 52px; color: #3D2B1F; line-height: 1.2;">
                 I've tried other courses before...
             </h1>
         </div>
         
-        <div style="display: flex; gap: 36px; align-items: stretch;">
-            <!-- Other Courses (crossed out) -->
-            <div style="flex: 1; background: #FFFFFF; border: 2px solid rgba(224,122,95,0.2); border-radius: 20px; padding: 32px; box-shadow: 0 6px 24px rgba(0,0,0,0.04);">
-                <h3 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #E07A5F; margin-bottom: 24px;">Other Courses</h3>
-                <div style="display: flex; flex-direction: column; gap: 16px;">
-                    <div style="display: flex; align-items: center; gap: 12px; opacity: 0.7;">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                            <path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/>
+        <div style="display: flex; gap: 32px; align-items: stretch;">
+            
+            <!-- Other Courses -->
+            <div style="flex: 1; background: #FFFFFF; border: 2px solid rgba(224,122,95,0.15); border-radius: 24px; padding: 36px; box-shadow: 0 8px 30px rgba(0,0,0,0.05);">
+                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 2px solid rgba(224,122,95,0.1);">
+                    <div style="width: 48px; height: 48px; background: rgba(224,122,95,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#E07A5F" stroke-width="2" stroke-linecap="round"/>
                         </svg>
+                    </div>
+                    <h3 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 26px; color: #E07A5F; margin: 0;">Other Courses</h3>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <div style="display: flex; align-items: center; gap: 14px; opacity: 0.75;">
+                        <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2" stroke-linecap="round"/></svg>
                         <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #5C4827; text-decoration: line-through;">Generic advice for any platform</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 12px; opacity: 0.7;">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                            <path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/>
-                        </svg>
+                    <div style="display: flex; align-items: center; gap: 14px; opacity: 0.75;">
+                        <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2" stroke-linecap="round"/></svg>
                         <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #5C4827; text-decoration: line-through;">Theory without systems</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 12px; opacity: 0.7;">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                            <path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/>
-                        </svg>
+                    <div style="display: flex; align-items: center; gap: 14px; opacity: 0.75;">
+                        <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2" stroke-linecap="round"/></svg>
                         <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #5C4827; text-decoration: line-through;">"Figure it out yourself"</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 12px; opacity: 0.7;">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                            <path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/>
-                        </svg>
+                    <div style="display: flex; align-items: center; gap: 14px; opacity: 0.75;">
+                        <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2" stroke-linecap="round"/></svg>
                         <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #5C4827; text-decoration: line-through;">No real community support</span>
                     </div>
                 </div>
             </div>
             
-            <!-- This Program (highlighted) -->
-            <div style="flex: 1; background: linear-gradient(135deg, #6B8E6B, #4A5D4A); border-radius: 20px; padding: 32px; box-shadow: 0 12px 40px rgba(107,142,107,0.25);">
-                <h3 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 24px; color: #FFFEF5; margin-bottom: 24px;">This Program</h3>
-                <div style="display: flex; flex-direction: column; gap: 16px;">
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="9" fill="rgba(255,254,245,0.2)"/>
-                            <path d="M6 10 L9 13 L14 7" stroke="#FFFEF5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- This Program -->
+            <div style="flex: 1; background: linear-gradient(145deg, #6B8E6B, #4A5D4A); border-radius: 24px; padding: 36px; box-shadow: 0 20px 60px rgba(107,142,107,0.3);">
+                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 2px solid rgba(255,255,255,0.15);">
+                    <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="white" stroke-width="2" stroke-linecap="round"/>
                         </svg>
+                    </div>
+                    <h3 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 26px; color: #FFFEF5; margin: 0;">This Program</h3>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <div style="display: flex; align-items: center; gap: 14px;">
+                        <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="rgba(255,255,255,0.15)"/><path d="M7 11 L10 14 L15 8" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
                         <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #FFFEF5;">Etsy-specific strategies that work now</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="9" fill="rgba(255,254,245,0.2)"/>
-                            <path d="M6 10 L9 13 L14 7" stroke="#FFFEF5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                    <div style="display: flex; align-items: center; gap: 14px;">
+                        <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="rgba(255,255,255,0.15)"/><path d="M7 11 L10 14 L15 8" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
                         <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #FFFEF5;">Proven, repeatable system</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="9" fill="rgba(255,254,245,0.2)"/>
-                            <path d="M6 10 L9 13 L14 7" stroke="#FFFEF5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                    <div style="display: flex; align-items: center; gap: 14px;">
+                        <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="rgba(255,255,255,0.15)"/><path d="M7 11 L10 14 L15 8" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
                         <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #FFFEF5;">Step-by-step implementation</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                        <svg width="20" height="20" viewBox="0 0 20 20">
-                            <circle cx="10" cy="10" r="9" fill="rgba(255,254,245,0.2)"/>
-                            <path d="M6 10 L9 13 L14 7" stroke="#FFFEF5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                    <div style="display: flex; align-items: center; gap: 14px;">
+                        <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="10" fill="rgba(255,255,255,0.15)"/><path d="M7 11 L10 14 L15 8" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
                         <span style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #FFFEF5;">Active community + direct access</span>
                     </div>
                 </div>
             </div>
         </div>
         
-        <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 28px; color: #3D2B1F; text-align: center; margin-top: 40px;">
-            This isn't another course. It's a <span style="color: #6B8E6B;">complete system</span>.
-        </p>
+        <div style="text-align: center; margin-top: 40px;">
+            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #3D2B1F;">
+                This isn't another course. It's a <span style="color: #6B8E6B;">complete system</span>.
+            </p>
+        </div>
     </div>
 </div>
 
