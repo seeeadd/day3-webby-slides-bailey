@@ -1,0 +1,290 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <!-- Gradients for realistic metallic finish -->
+    <linearGradient id="screenBezelGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D2D2D"/>
+      <stop offset="50%" style="stop-color:#1A1A1A"/>
+      <stop offset="100%" style="stop-color:#0D0D0D"/>
+    </linearGradient>
+
+    <linearGradient id="spaceGrayTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8E8E93"/>
+      <stop offset="15%" style="stop-color:#6D6D72"/>
+      <stop offset="50%" style="stop-color:#5A5A5E"/>
+      <stop offset="85%" style="stop-color:#6D6D72"/>
+      <stop offset="100%" style="stop-color:#7A7A7F"/>
+    </linearGradient>
+
+    <linearGradient id="spaceGrayBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7A7A7F"/>
+      <stop offset="10%" style="stop-color:#6D6D72"/>
+      <stop offset="50%" style="stop-color:#5A5A5E"/>
+      <stop offset="90%" style="stop-color:#6D6D72"/>
+      <stop offset="100%" style="stop-color:#8E8E93"/>
+    </linearGradient>
+
+    <linearGradient id="spaceGrayEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A4A4E"/>
+      <stop offset="50%" style="stop-color:#5A5A5E"/>
+      <stop offset="100%" style="stop-color:#4A4A4E"/>
+    </linearGradient>
+
+    <linearGradient id="hingeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3D3D42"/>
+      <stop offset="50%" style="stop-color:#5A5A5E"/>
+      <stop offset="100%" style="stop-color:#3D3D42"/>
+    </linearGradient>
+
+    <linearGradient id="trackpadGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A4A4E"/>
+      <stop offset="50%" style="stop-color:#5A5A5E"/>
+      <stop offset="100%" style="stop-color:#4A4A4E"/>
+    </linearGradient>
+
+    <linearGradient id="keyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D2D32"/>
+      <stop offset="100%" style="stop-color:#1A1A1E"/>
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="laptopShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15" result="blur"/>
+      <feOffset in="blur" dx="0" dy="20" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.25"/>
+      <feComposite in2="offsetBlur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle inner shadow for screen recess -->
+    <filter id="screenRecess" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset in="blur" dx="0" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5"/>
+      <feComposite in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Clip path for screen content area -->
+    <clipPath id="screenClip">
+      <rect x="166" y="62" width="868" height="542" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#FFFFFF"/>
+
+  <!-- Main laptop group with shadow -->
+  <g filter="url(#laptopShadow)">
+
+    <!-- ==================== DISPLAY SECTION ==================== -->
+
+    <!-- Display outer shell (lid back) -->
+    <rect x="100" y="30" width="1000" height="580" rx="18" fill="url(#spaceGrayTop)"/>
+
+    <!-- Display inner bezel frame -->
+    <rect x="110" y="40" width="980" height="560" rx="14" fill="url(#screenBezelGradient)"/>
+
+    <!-- Screen bezel (black frame around screen) -->
+    <rect x="120" y="50" width="960" height="552" rx="10" fill="#0A0A0A"/>
+
+    <!-- Camera notch area -->
+    <rect x="540" y="50" width="120" height="12" fill="#0A0A0A"/>
+
+    <!-- Camera lens -->
+    <circle cx="600" cy="56" r="3" fill="#1A1A1A"/>
+    <circle cx="600" cy="56" r="2" fill="#0D0D0D"/>
+    <circle cx="600" cy="56" r="1" fill="#2A2A2A"/>
+
+    <!-- Camera indicator light (off) -->
+    <circle cx="612" cy="56" r="1.5" fill="#1A1A1A"/>
+
+    <!-- ==================== SCREEN AREA (EMPTY) ==================== -->
+
+    <!-- Screen background - this is the replaceable area -->
+    <rect
+      id="screen-area"
+      x="166"
+      y="62"
+      width="868"
+      height="542"
+      rx="4"
+      fill="#F5F5F5"
+    />
+
+    <!-- Optional: subtle screen edge highlight -->
+    <rect x="166" y="62" width="868" height="542" rx="4" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+
+    <!-- ==================== HINGE SECTION ==================== -->
+
+    <!-- Hinge -->
+    <rect x="150" y="608" width="900" height="8" rx="2" fill="url(#hingeGradient)"/>
+
+    <!-- ==================== BODY/KEYBOARD SECTION ==================== -->
+
+    <!-- Main body -->
+    <path d="
+      M 80 616
+      L 1120 616
+      L 1130 618
+      Q 1140 620 1140 630
+      L 1140 748
+      Q 1140 758 1130 760
+      L 70 760
+      Q 60 758 60 748
+      L 60 630
+      Q 60 620 70 618
+      L 80 616
+      Z
+    " fill="url(#spaceGrayBody)"/>
+
+    <!-- Body top edge highlight -->
+    <path d="M 80 616 L 1120 616" stroke="#9E9EA3" stroke-width="1" fill="none"/>
+
+    <!-- Body front edge -->
+    <rect x="60" y="756" width="1080" height="6" rx="3" fill="url(#spaceGrayEdge)"/>
+
+    <!-- ==================== KEYBOARD ==================== -->
+
+    <g transform="translate(140, 635)">
+      <!-- Keyboard background recess -->
+      <rect x="0" y="0" width="920" height="85" rx="6" fill="#1A1A1E" opacity="0.3"/>
+
+      <!-- Function row -->
+      <g transform="translate(10, 8)">
+        <!-- Esc key -->
+        <rect x="0" y="0" width="40" height="18" rx="3" fill="url(#keyGradient)"/>
+
+        <!-- F1-F12 keys -->
+        <rect x="50" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="112" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="174" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="236" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="302" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="364" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="426" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="488" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="550" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="612" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="674" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="736" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+
+        <!-- Touch ID -->
+        <rect x="802" y="0" width="56" height="18" rx="3" fill="url(#keyGradient)"/>
+        <rect x="818" y="4" width="24" height="10" rx="5" fill="#0D0D0D"/>
+      </g>
+
+      <!-- Number row -->
+      <g transform="translate(10, 30)">
+        <rect x="0" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="44" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="88" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="132" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="176" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="220" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="264" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="308" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="352" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="396" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="440" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="484" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="528" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="572" y="0" width="68" height="22" rx="3" fill="url(#keyGradient)"/>
+      </g>
+
+      <!-- QWERTY row -->
+      <g transform="translate(10, 56)">
+        <rect x="0" y="0" width="54" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="58" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="102" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="146" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="190" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="234" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="278" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="322" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="366" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="410" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="454" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="498" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="542" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="586" y="0" width="54" height="22" rx="3" fill="url(#keyGradient)"/>
+      </g>
+
+      <!-- Spacebar row (simplified) -->
+      <g transform="translate(654, 30)">
+        <!-- Arrow keys cluster -->
+        <rect x="0" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="44" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="88" y="0" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+
+        <!-- Up arrow -->
+        <rect x="44" y="26" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+
+        <!-- Left/Down/Right arrows -->
+        <rect x="0" y="52" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="44" y="52" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+        <rect x="88" y="52" width="40" height="22" rx="3" fill="url(#keyGradient)"/>
+      </g>
+    </g>
+
+    <!-- ==================== TRACKPAD ==================== -->
+
+    <rect x="420" y="725" width="360" height="28" rx="4" fill="url(#trackpadGradient)" opacity="0.6"/>
+    <rect x="420" y="725" width="360" height="28" rx="4" fill="none" stroke="#4A4A4E" stroke-width="1"/>
+
+    <!-- ==================== SPEAKER GRILLES ==================== -->
+
+    <!-- Left speaker -->
+    <g transform="translate(90, 650)">
+      <rect x="0" y="0" width="40" height="50" rx="3" fill="#2D2D32" opacity="0.5"/>
+      <g fill="#1A1A1E">
+        <circle cx="10" cy="10" r="1.5"/>
+        <circle cx="20" cy="10" r="1.5"/>
+        <circle cx="30" cy="10" r="1.5"/>
+        <circle cx="10" cy="20" r="1.5"/>
+        <circle cx="20" cy="20" r="1.5"/>
+        <circle cx="30" cy="20" r="1.5"/>
+        <circle cx="10" cy="30" r="1.5"/>
+        <circle cx="20" cy="30" r="1.5"/>
+        <circle cx="30" cy="30" r="1.5"/>
+        <circle cx="10" cy="40" r="1.5"/>
+        <circle cx="20" cy="40" r="1.5"/>
+        <circle cx="30" cy="40" r="1.5"/>
+      </g>
+    </g>
+
+    <!-- Right speaker -->
+    <g transform="translate(1070, 650)">
+      <rect x="0" y="0" width="40" height="50" rx="3" fill="#2D2D32" opacity="0.5"/>
+      <g fill="#1A1A1E">
+        <circle cx="10" cy="10" r="1.5"/>
+        <circle cx="20" cy="10" r="1.5"/>
+        <circle cx="30" cy="10" r="1.5"/>
+        <circle cx="10" cy="20" r="1.5"/>
+        <circle cx="20" cy="20" r="1.5"/>
+        <circle cx="30" cy="20" r="1.5"/>
+        <circle cx="10" cy="30" r="1.5"/>
+        <circle cx="20" cy="30" r="1.5"/>
+        <circle cx="30" cy="30" r="1.5"/>
+        <circle cx="10" cy="40" r="1.5"/>
+        <circle cx="20" cy="40" r="1.5"/>
+        <circle cx="30" cy="40" r="1.5"/>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- Screen bounds indicator (for reference - can be hidden) -->
+  <!--
+  <rect x="166" y="62" width="868" height="542" fill="none" stroke="#FF0000" stroke-width="2" stroke-dasharray="10 5"/>
+  <text x="600" y="333" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#999">
+    Screen Area: 868 x 542 (16:10 ratio)
+  </text>
+  -->
+
+</svg>
