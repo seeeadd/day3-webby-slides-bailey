@@ -1,278 +1,318 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
-  <defs>
-    <!-- Gradients for thumbnails -->
-    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5EEAD4"/>
-      <stop offset="50%" stop-color="#4DA6A6"/>
-      <stop offset="100%" stop-color="#2D7A7A"/>
-    </linearGradient>
-    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FDA4AF"/>
-      <stop offset="50%" stop-color="#F87171"/>
-      <stop offset="100%" stop-color="#DC2626"/>
-    </linearGradient>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FDE68A"/>
-      <stop offset="50%" stop-color="#FBBF24"/>
-      <stop offset="100%" stop-color="#D97706"/>
-    </linearGradient>
-    <linearGradient id="grayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D1D5DB"/>
-      <stop offset="50%" stop-color="#9CA3AF"/>
-      <stop offset="100%" stop-color="#6B7280"/>
-    </linearGradient>
-
-    <!-- Patterns for thumbnails -->
-    <pattern id="pattern1" patternUnits="userSpaceOnUse" width="40" height="40">
-      <circle cx="20" cy="20" r="15" fill="rgba(255,255,255,0.1)"/>
-    </pattern>
-    <pattern id="pattern2" patternUnits="userSpaceOnUse" width="30" height="30">
-      <rect x="0" y="0" width="15" height="15" fill="rgba(255,255,255,0.08)"/>
-      <rect x="15" y="15" width="15" height="15" fill="rgba(255,255,255,0.08)"/>
-    </pattern>
-    <pattern id="pattern3" patternUnits="userSpaceOnUse" width="50" height="50">
-      <path d="M0 25 L25 0 L50 25 L25 50 Z" fill="rgba(255,255,255,0.06)"/>
-    </pattern>
-
-    <!-- Icons -->
-    <symbol id="icon-check" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="11" fill="#10B981"/>
-      <path d="M7 12l3 3 7-7" stroke="#FFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-
-    <symbol id="icon-lock" viewBox="0 0 24 24">
-      <rect x="5" y="10" width="14" height="12" rx="2" fill="#6B7280"/>
-      <path d="M8 10V7a4 4 0 1 1 8 0v3" stroke="#6B7280" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-      <circle cx="12" cy="16" r="1.5" fill="#FFF"/>
-    </symbol>
-
-    <symbol id="icon-sparkle" viewBox="0 0 24 24">
-      <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z" fill="#FBBF24"/>
-      <path d="M19 14L19.75 16.25L22 17L19.75 17.75L19 20L18.25 17.75L16 17L18.25 16.25L19 14Z" fill="#FBBF24"/>
-    </symbol>
-
-    <symbol id="icon-search" viewBox="0 0 24 24">
-      <circle cx="10" cy="10" r="7" stroke="#9CA3AF" stroke-width="2" fill="none"/>
-      <path d="M15 15L21 21" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
-    </symbol>
-
-    <symbol id="icon-arrow" viewBox="0 0 24 24">
-      <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-
-    <symbol id="icon-chevron" viewBox="0 0 24 24">
-      <path d="M6 9l6 6 6-6" stroke="#6B7280" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1180" viewBox="0 0 1200 1180">
 
   <!-- Background -->
-  <rect width="1200" height="900" fill="#F9FAFB"/>
+  <rect width="1200" height="1180" fill="#F9FAFB"/>
 
-  <!-- ==================== HEADER ==================== -->
+  <!-- HEADER -->
   <rect width="1200" height="120" fill="#FFFFFF"/>
   <rect y="119" width="1200" height="1" fill="#E5E7EB"/>
-
-  <!-- Title and subtitle -->
   <text x="48" y="55" font-family="Inter, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#111827">90 Day Etsy Accelerator</text>
   <text x="48" y="85" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#6B7280">Lifetime Access — All Current + Future Programs</text>
 
   <!-- Search bar -->
-  <g transform="translate(750, 40)">
-    <rect width="280" height="44" rx="8" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
-    <use href="#icon-search" x="12" y="10" width="24" height="24"/>
-    <text x="44" y="28" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#9CA3AF">Search courses...</text>
-  </g>
+  <rect x="750" y="40" width="280" height="44" rx="8" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+  <circle cx="774" cy="62" r="8" stroke="#9CA3AF" stroke-width="2" fill="none"/>
+  <line x1="780" y1="68" x2="786" y2="74" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+  <text x="800" y="68" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#9CA3AF">Search courses...</text>
 
   <!-- Filter dropdown -->
-  <g transform="translate(1050, 40)">
-    <rect width="130" height="44" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-    <text x="16" y="28" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">All Programs</text>
-    <use href="#icon-chevron" x="98" y="10" width="24" height="24"/>
-  </g>
+  <rect x="1050" y="40" width="130" height="44" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="1066" y="68" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">All Programs</text>
+  <path d="M1156 58l6 6 6-6" stroke="#6B7280" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- ==================== VIDEO SECTION ==================== -->
+
+  <!-- Section title -->
+  <text x="48" y="160" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#111827">Continue Watching</text>
+
+  <!-- Video container -->
+  <rect x="48" y="180" width="700" height="394" rx="12" fill="#111827"/>
+
+  <!-- Video thumbnail background with gradient effect -->
+  <rect x="48" y="180" width="700" height="394" rx="12" fill="#1F2937"/>
+
+  <!-- Decorative elements on video -->
+  <rect x="80" y="220" width="180" height="100" rx="8" fill="#374151"/>
+  <rect x="90" y="230" width="160" height="10" rx="2" fill="#4B5563"/>
+  <rect x="90" y="248" width="120" height="8" rx="2" fill="#4B5563"/>
+  <rect x="90" y="264" width="140" height="8" rx="2" fill="#4B5563"/>
+  <rect x="90" y="280" width="100" height="8" rx="2" fill="#4B5563"/>
+
+  <!-- Person silhouette presenting -->
+  <circle cx="550" cy="420" r="60" fill="#374151"/>
+  <ellipse cx="550" cy="530" rx="80" ry="60" fill="#374151"/>
+
+  <!-- Screen/presentation behind person -->
+  <rect x="300" y="250" width="320" height="180" rx="6" fill="#4DA6A6"/>
+  <rect x="320" y="270" width="120" height="20" rx="4" fill="rgba(255,255,255,0.3)"/>
+  <rect x="320" y="300" width="200" height="8" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="320" y="316" width="160" height="8" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <rect x="320" y="340" width="80" height="60" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="420" y="340" width="80" height="60" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="520" y="340" width="80" height="60" rx="4" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Play button overlay -->
+  <circle cx="398" cy="377" r="40" fill="rgba(0,0,0,0.5)"/>
+  <circle cx="398" cy="377" r="38" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  <path d="M385 357l30 20-30 20z" fill="#FFFFFF"/>
+
+  <!-- Progress bar -->
+  <rect x="48" y="554" width="700" height="6" rx="3" fill="#374151"/>
+  <rect x="48" y="554" width="280" height="6" rx="3" fill="#4DA6A6"/>
+  <circle cx="328" cy="557" r="8" fill="#4DA6A6"/>
+
+  <!-- Video controls bar -->
+  <rect x="48" y="560" width="700" height="14" fill="#111827" rx="0 0 12 12"/>
+
+  <!-- Video info panel on right -->
+  <rect x="768" y="180" width="384" height="394" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- Currently playing label -->
+  <rect x="788" y="200" width="120" height="28" rx="6" fill="#4DA6A6"/>
+  <text x="848" y="219" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">NOW PLAYING</text>
+
+  <!-- Video title -->
+  <text x="788" y="260" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#111827">Module 3: AI Design</text>
+  <text x="788" y="285" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#111827">Mastery</text>
+
+  <!-- Lesson info -->
+  <text x="788" y="320" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#6B7280">Lesson 5 of 12</text>
+
+  <!-- Progress indicator -->
+  <rect x="788" y="340" width="344" height="8" rx="4" fill="#E5E7EB"/>
+  <rect x="788" y="340" width="143" height="8" rx="4" fill="#F87171"/>
+  <text x="788" y="370" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">42% complete</text>
+
+  <!-- Duration -->
+  <rect x="788" y="395" width="160" height="44" rx="8" fill="#F3F4F6"/>
+  <!-- Clock icon -->
+  <circle cx="812" cy="417" r="10" stroke="#6B7280" stroke-width="2" fill="none"/>
+  <line x1="812" y1="412" x2="812" y2="417" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+  <line x1="812" y1="417" x2="817" y2="419" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+  <text x="832" y="422" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">12:34 / 28:15</text>
+
+  <!-- Next lesson preview -->
+  <rect x="788" y="460" width="344" height="1" fill="#E5E7EB"/>
+  <text x="788" y="490" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">UP NEXT</text>
+
+  <rect x="788" y="505" width="344" height="60" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <!-- Thumbnail preview -->
+  <rect x="798" y="513" width="80" height="44" rx="4" fill="#F87171"/>
+  <path d="M830 530l12 8-12 8z" fill="rgba(255,255,255,0.8)"/>
+  <text x="890" y="533" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#111827">Lesson 6: Creating</text>
+  <text x="890" y="552" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#111827">Custom Templates</text>
 
   <!-- ==================== COURSE GRID ==================== -->
-  <g transform="translate(48, 145)">
 
-    <!-- ROW 1 -->
+  <!-- Section title -->
+  <text x="48" y="620" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#111827">All Courses</text>
 
-    <!-- Card 1: Digital Product Secrets (Complete) -->
-    <g transform="translate(0, 0)">
-      <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-      <!-- Left accent -->
-      <rect width="4" height="240" rx="2" fill="#4DA6A6"/>
-      <!-- Thumbnail -->
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#tealGrad)"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#pattern1)"/>
-      <!-- Abstract shapes -->
-      <circle cx="280" cy="60" r="40" fill="rgba(255,255,255,0.15)"/>
-      <circle cx="100" cy="100" r="30" fill="rgba(255,255,255,0.1)"/>
-      <!-- Complete badge -->
-      <g transform="translate(280, 22)">
-        <rect width="52" height="24" rx="4" fill="#10B981"/>
-        <use href="#icon-check" x="4" y="2" width="20" height="20"/>
-      </g>
-      <!-- Title -->
-      <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">Digital Product Secrets</text>
-      <!-- Progress bar -->
-      <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
-      <rect x="16" y="185" width="320" height="6" rx="3" fill="#4DA6A6"/>
-      <!-- Status -->
-      <g transform="translate(16, 205)">
-        <use href="#icon-check" x="0" y="0" width="18" height="18"/>
-        <text x="24" y="14" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#10B981">Complete</text>
-      </g>
-    </g>
+  <!-- ==================== ROW 1 ==================== -->
 
-    <!-- Card 2: AI Design Mastery (65%) -->
-    <g transform="translate(376, 0)">
-      <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-      <rect width="4" height="240" rx="2" fill="#F87171"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#coralGrad)"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#pattern2)"/>
-      <circle cx="60" cy="70" r="35" fill="rgba(255,255,255,0.12)"/>
-      <circle cx="270" cy="90" r="45" fill="rgba(255,255,255,0.1)"/>
-      <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">AI Design Mastery</text>
-      <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
-      <rect x="16" y="185" width="208" height="6" rx="3" fill="#F87171"/>
-      <text x="16" y="218" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">65% complete</text>
-    </g>
+  <!-- Card 1: Digital Product Secrets (Complete) -->
+  <g transform="translate(48, 640)">
+    <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="4" height="240" rx="2" fill="#4DA6A6"/>
 
-    <!-- Card 3: Etsy SEO Deep Dive (30%) -->
-    <g transform="translate(752, 0)">
-      <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-      <rect width="4" height="240" rx="2" fill="#FBBF24"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#goldGrad)"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#pattern3)"/>
-      <circle cx="170" cy="75" r="50" fill="rgba(255,255,255,0.1)"/>
-      <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">Etsy SEO Deep Dive</text>
-      <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
-      <rect x="16" y="185" width="96" height="6" rx="3" fill="#FBBF24"/>
-      <text x="16" y="218" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">30% complete</text>
-    </g>
+    <!-- Thumbnail with digital product theme -->
+    <rect x="12" y="12" width="328" height="130" rx="8" fill="#4DA6A6"/>
+    <!-- File/document icons -->
+    <rect x="60" y="35" width="50" height="65" rx="4" fill="#3D9494"/>
+    <rect x="65" y="40" width="40" height="8" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <rect x="65" y="52" width="35" height="4" rx="1" fill="rgba(255,255,255,0.3)"/>
+    <rect x="65" y="60" width="30" height="4" rx="1" fill="rgba(255,255,255,0.3)"/>
+    <rect x="65" y="68" width="35" height="4" rx="1" fill="rgba(255,255,255,0.3)"/>
+    <!-- PDF icon -->
+    <rect x="130" y="45" width="45" height="55" rx="4" fill="#2D7A7A"/>
+    <text x="152" y="78" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">PDF</text>
+    <!-- Download arrow -->
+    <circle cx="220" cy="70" r="28" fill="rgba(255,255,255,0.2)"/>
+    <rect x="214" y="55" width="12" height="20" rx="2" fill="#FFFFFF"/>
+    <path d="M210 75l10 10 10-10" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Dollar signs floating -->
+    <text x="280" y="50" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="rgba(255,255,255,0.5)">$</text>
+    <text x="300" y="75" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="rgba(255,255,255,0.4)">$</text>
+    <text x="270" y="95" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="rgba(255,255,255,0.3)">$</text>
 
-    <!-- ROW 2 -->
+    <!-- Complete badge -->
+    <rect x="288" y="22" width="44" height="24" rx="4" fill="#10B981"/>
+    <path d="M302 34l4 4 8-8" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-    <!-- Card 4: Pricing Psychology (Not Started) -->
-    <g transform="translate(0, 260)">
-      <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-      <rect width="4" height="240" rx="2" fill="#4DA6A6"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#tealGrad)"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#pattern2)"/>
-      <circle cx="300" cy="40" r="30" fill="rgba(255,255,255,0.12)"/>
-      <circle cx="80" cy="110" r="40" fill="rgba(255,255,255,0.08)"/>
-      <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">Pricing Psychology</text>
-      <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
-      <!-- Start button -->
-      <g transform="translate(16, 200)">
-        <rect width="130" height="32" rx="6" fill="#4DA6A6"/>
-        <text x="16" y="21" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">Start Course</text>
-        <path d="M100 12l8 4-8 4" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-    </g>
+    <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">Digital Product Secrets</text>
+    <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
+    <rect x="16" y="185" width="320" height="6" rx="3" fill="#4DA6A6"/>
+    <circle cx="26" cy="215" r="9" fill="#10B981"/>
+    <path d="M22 215l3 3 6-6" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="42" y="219" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#10B981">Complete</text>
+  </g>
 
-    <!-- Card 5: The $1K Week Blueprint (Not Started) -->
-    <g transform="translate(376, 260)">
-      <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-      <rect width="4" height="240" rx="2" fill="#F87171"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#coralGrad)"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#pattern1)"/>
-      <circle cx="170" cy="70" r="45" fill="rgba(255,255,255,0.12)"/>
-      <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">The $1K Week Blueprint</text>
-      <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
-      <g transform="translate(16, 200)">
-        <rect width="130" height="32" rx="6" fill="#F87171"/>
-        <text x="16" y="21" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">Start Course</text>
-        <path d="M100 12l8 4-8 4" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-    </g>
+  <!-- Card 2: AI Design Mastery (65%) -->
+  <g transform="translate(424, 640)">
+    <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="4" height="240" rx="2" fill="#F87171"/>
 
-    <!-- Card 6: Passive Traffic Systems (NEW) -->
-    <g transform="translate(752, 260)">
-      <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-      <rect width="4" height="240" rx="2" fill="#FBBF24"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#goldGrad)"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#pattern1)"/>
-      <circle cx="260" cy="50" r="35" fill="rgba(255,255,255,0.15)"/>
-      <circle cx="100" cy="100" r="25" fill="rgba(255,255,255,0.1)"/>
-      <!-- NEW badge -->
-      <g transform="translate(270, 22)">
-        <rect width="62" height="26" rx="5" fill="#FBBF24"/>
-        <use href="#icon-sparkle" x="2" y="1" width="24" height="24"/>
-        <text x="28" y="18" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">NEW</text>
-      </g>
-      <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">Passive Traffic Systems</text>
-      <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
-      <g transform="translate(16, 200)">
-        <rect width="130" height="32" rx="6" fill="#FBBF24"/>
-        <text x="16" y="21" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Start Course</text>
-        <path d="M100 12l8 4-8 4" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-    </g>
+    <!-- Thumbnail with AI theme -->
+    <rect x="12" y="12" width="328" height="130" rx="8" fill="#F87171"/>
+    <!-- Robot/AI head -->
+    <rect x="140" y="30" width="70" height="80" rx="8" fill="#DC2626"/>
+    <rect x="150" y="45" width="20" height="12" rx="3" fill="#FFFFFF"/>
+    <rect x="180" y="45" width="20" height="12" rx="3" fill="#FFFFFF"/>
+    <circle cx="160" cy="51" r="4" fill="#F87171"/>
+    <circle cx="190" cy="51" r="4" fill="#F87171"/>
+    <rect x="160" y="70" width="30" height="6" rx="2" fill="rgba(255,255,255,0.5)"/>
+    <rect x="155" y="82" width="40" height="4" rx="1" fill="rgba(255,255,255,0.3)"/>
+    <!-- Antenna -->
+    <rect x="172" y="20" width="6" height="15" rx="2" fill="#DC2626"/>
+    <circle cx="175" cy="18" r="5" fill="#FBBF24"/>
+    <!-- Neural network dots -->
+    <circle cx="70" cy="50" r="6" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="90" cy="75" r="4" fill="rgba(255,255,255,0.2)"/>
+    <circle cx="60" cy="90" r="5" fill="rgba(255,255,255,0.25)"/>
+    <line x1="70" y1="50" x2="90" y2="75" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="90" y1="75" x2="60" y2="90" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <circle cx="280" cy="45" r="5" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="300" cy="70" r="4" fill="rgba(255,255,255,0.2)"/>
+    <circle cx="270" cy="95" r="6" fill="rgba(255,255,255,0.25)"/>
+    <line x1="280" y1="45" x2="300" y2="70" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="300" y1="70" x2="270" y2="95" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <!-- Sparkles -->
+    <path d="M240 35l3-8 3 8-8-3 8 3z" fill="rgba(255,255,255,0.5)"/>
+    <path d="M100 40l2-5 2 5-5-2 5 2z" fill="rgba(255,255,255,0.4)"/>
 
-    <!-- ROW 3 -->
+    <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">AI Design Mastery</text>
+    <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
+    <rect x="16" y="185" width="208" height="6" rx="3" fill="#F87171"/>
+    <text x="16" y="218" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">65% complete</text>
+  </g>
 
-    <!-- Card 7: Q4 Holiday Masterclass (Complete) -->
-    <g transform="translate(0, 520)">
-      <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-      <rect width="4" height="240" rx="2" fill="#4DA6A6"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#tealGrad)"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#pattern3)"/>
-      <circle cx="80" cy="60" r="40" fill="rgba(255,255,255,0.12)"/>
-      <circle cx="280" cy="100" r="30" fill="rgba(255,255,255,0.08)"/>
-      <g transform="translate(280, 22)">
-        <rect width="52" height="24" rx="4" fill="#10B981"/>
-        <use href="#icon-check" x="4" y="2" width="20" height="20"/>
-      </g>
-      <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">Q4 Holiday Masterclass</text>
-      <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
-      <rect x="16" y="185" width="320" height="6" rx="3" fill="#4DA6A6"/>
-      <g transform="translate(16, 205)">
-        <use href="#icon-check" x="0" y="0" width="18" height="18"/>
-        <text x="24" y="14" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#10B981">Complete</text>
-      </g>
-    </g>
+  <!-- Card 3: Etsy SEO Deep Dive (30%) -->
+  <g transform="translate(800, 640)">
+    <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="4" height="240" rx="2" fill="#FBBF24"/>
 
-    <!-- Card 8: 2026 Trends Masterclass (Locked) -->
-    <g transform="translate(376, 520)">
-      <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-      <rect width="4" height="240" rx="2" fill="#9CA3AF"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#grayGrad)"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#pattern2)" opacity="0.5"/>
-      <!-- Lock overlay -->
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="rgba(255,255,255,0.3)"/>
-      <g transform="translate(140, 50)">
-        <circle cx="36" cy="36" r="30" fill="rgba(107,114,128,0.9)"/>
-        <use href="#icon-lock" x="18" y="16" width="36" height="36"/>
-      </g>
-      <!-- Coming soon badge -->
-      <g transform="translate(220, 22)">
-        <rect width="112" height="24" rx="4" fill="#6B7280"/>
-        <text x="10" y="16" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#FFFFFF">Coming Jan 2026</text>
-      </g>
-      <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#9CA3AF">2026 Trends Masterclass</text>
-      <text x="16" y="195" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">Available January 2026</text>
-    </g>
+    <!-- Thumbnail with SEO theme -->
+    <rect x="12" y="12" width="328" height="130" rx="8" fill="#FBBF24"/>
+    <!-- Magnifying glass -->
+    <circle cx="150" cy="70" r="35" stroke="#FFFFFF" stroke-width="6" fill="none"/>
+    <line x1="175" y1="95" x2="200" y2="120" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+    <!-- Search bar inside -->
+    <rect x="120" y="60" width="60" height="20" rx="4" fill="rgba(255,255,255,0.4)"/>
+    <!-- Keywords floating -->
+    <rect x="220" y="30" width="80" height="22" rx="4" fill="#D97706"/>
+    <text x="260" y="46" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF">keywords</text>
+    <rect x="240" y="60" width="60" height="20" rx="4" fill="rgba(255,255,255,0.3)"/>
+    <text x="270" y="74" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#FFFFFF">tags</text>
+    <rect x="230" y="88" width="70" height="20" rx="4" fill="rgba(255,255,255,0.25)"/>
+    <text x="265" y="102" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#FFFFFF">ranking</text>
+    <!-- Bar chart -->
+    <rect x="50" y="90" width="12" height="30" rx="2" fill="rgba(255,255,255,0.3)"/>
+    <rect x="68" y="70" width="12" height="50" rx="2" fill="rgba(255,255,255,0.4)"/>
+    <rect x="86" y="50" width="12" height="70" rx="2" fill="rgba(255,255,255,0.5)"/>
 
-    <!-- Card 9: Advanced Scaling Secrets (Locked) -->
-    <g transform="translate(752, 520)">
-      <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
-      <rect width="4" height="240" rx="2" fill="#9CA3AF"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#grayGrad)"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="url(#pattern3)" opacity="0.5"/>
-      <rect x="12" y="12" width="328" height="130" rx="8" fill="rgba(255,255,255,0.3)"/>
-      <g transform="translate(140, 50)">
-        <circle cx="36" cy="36" r="30" fill="rgba(107,114,128,0.9)"/>
-        <use href="#icon-lock" x="18" y="16" width="36" height="36"/>
-      </g>
-      <g transform="translate(212, 22)">
-        <rect width="120" height="24" rx="4" fill="#6B7280"/>
-        <text x="10" y="16" font-family="Inter, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#FFFFFF">Coming Mar 2026</text>
-      </g>
-      <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#9CA3AF">Advanced Scaling Secrets</text>
-      <text x="16" y="195" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">Available March 2026</text>
-    </g>
+    <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">Etsy SEO Deep Dive</text>
+    <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
+    <rect x="16" y="185" width="96" height="6" rx="3" fill="#FBBF24"/>
+    <text x="16" y="218" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">30% complete</text>
+  </g>
 
+  <!-- ==================== ROW 2 ==================== -->
+
+  <!-- Card 4: Pricing Psychology -->
+  <g transform="translate(48, 900)">
+    <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="4" height="240" rx="2" fill="#4DA6A6"/>
+
+    <!-- Thumbnail with pricing/brain theme -->
+    <rect x="12" y="12" width="328" height="130" rx="8" fill="#4DA6A6"/>
+    <!-- Brain outline -->
+    <ellipse cx="175" cy="70" rx="50" ry="45" fill="#3D9494"/>
+    <path d="M145 50 Q130 70 145 90 Q160 105 175 90 Q190 105 205 90 Q220 70 205 50 Q190 35 175 50 Q160 35 145 50" stroke="rgba(255,255,255,0.6)" stroke-width="3" fill="none"/>
+    <!-- Dollar signs in brain -->
+    <text x="160" y="65" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">$</text>
+    <text x="180" y="80" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">$</text>
+    <text x="165" y="92" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="rgba(255,255,255,0.7)">$</text>
+    <!-- Price tags -->
+    <rect x="60" y="40" width="40" height="25" rx="4" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="65" cy="52" r="4" fill="#4DA6A6"/>
+    <text x="80" y="58" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">$29</text>
+    <rect x="250" y="55" width="50" height="28" rx="4" fill="rgba(255,255,255,0.35)"/>
+    <circle cx="256" cy="69" r="4" fill="#4DA6A6"/>
+    <text x="278" y="74" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">$97</text>
+    <!-- Arrows suggesting psychology -->
+    <path d="M100 75l15-10" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M240 70l-15 5" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/>
+
+    <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">Pricing Psychology</text>
+    <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
+    <rect x="16" y="200" width="130" height="32" rx="6" fill="#4DA6A6"/>
+    <text x="32" y="221" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">Start Course</text>
+    <path d="M116 212l8 4-8 4" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Card 5: The $1K Week Blueprint -->
+  <g transform="translate(424, 900)">
+    <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="4" height="240" rx="2" fill="#F87171"/>
+
+    <!-- Thumbnail with money/growth theme -->
+    <rect x="12" y="12" width="328" height="130" rx="8" fill="#F87171"/>
+    <!-- Big $1K text -->
+    <text x="175" y="85" text-anchor="middle" font-family="Inter, sans-serif" font-size="48" font-weight="800" fill="rgba(255,255,255,0.9)">$1K</text>
+    <!-- Growth chart -->
+    <path d="M50 110 L90 90 L130 95 L170 60 L210 70 L250 40 L290 30" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Arrow up -->
+    <path d="M285 25l5-10 5 10" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Calendar icon -->
+    <rect x="60" y="35" width="35" height="30" rx="4" fill="rgba(255,255,255,0.3)"/>
+    <rect x="60" y="35" width="35" height="10" rx="4 4 0 0" fill="rgba(255,255,255,0.5)"/>
+    <text x="77" y="58" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#FFFFFF">7</text>
+    <!-- Week text -->
+    <text x="78" y="80" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.7)">WEEK</text>
+
+    <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">The $1K Week Blueprint</text>
+    <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
+    <rect x="16" y="200" width="130" height="32" rx="6" fill="#F87171"/>
+    <text x="32" y="221" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">Start Course</text>
+    <path d="M116 212l8 4-8 4" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Card 6: Passive Traffic Systems (NEW) -->
+  <g transform="translate(800, 900)">
+    <rect width="352" height="240" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <rect width="4" height="240" rx="2" fill="#FBBF24"/>
+
+    <!-- Thumbnail with traffic/automation theme -->
+    <rect x="12" y="12" width="328" height="130" rx="8" fill="#FBBF24"/>
+    <!-- Funnel shape -->
+    <path d="M130 30 L220 30 L195 70 L195 110 L155 110 L155 70 Z" fill="#D97706"/>
+    <!-- Arrows flowing in -->
+    <path d="M70 40 L120 50" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M60 60 L115 60" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M75 80 L125 70" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M280 40 L230 50" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M290 60 L235 60" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M275 80 L225 70" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/>
+    <!-- Users/dots going in -->
+    <circle cx="55" cy="40" r="6" fill="rgba(255,255,255,0.5)"/>
+    <circle cx="45" cy="60" r="5" fill="rgba(255,255,255,0.4)"/>
+    <circle cx="60" cy="80" r="4" fill="rgba(255,255,255,0.3)"/>
+    <circle cx="295" cy="40" r="6" fill="rgba(255,255,255,0.5)"/>
+    <circle cx="305" cy="60" r="5" fill="rgba(255,255,255,0.4)"/>
+    <circle cx="290" cy="80" r="4" fill="rgba(255,255,255,0.3)"/>
+    <!-- Dollar coming out -->
+    <text x="175" y="125" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">$$$</text>
+    <!-- Infinity/loop symbol for passive -->
+    <path d="M260 100 Q270 90 280 100 Q290 110 280 120 Q270 130 260 120 Q250 110 260 100" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"/>
+
+    <!-- NEW badge -->
+    <rect x="278" y="22" width="54" height="24" rx="5" fill="#FBBF24" stroke="#D97706" stroke-width="2"/>
+    <text x="305" y="39" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">NEW</text>
+
+    <text x="16" y="168" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#111827">Passive Traffic Systems</text>
+    <rect x="16" y="185" width="320" height="6" rx="3" fill="#E5E7EB"/>
+    <rect x="16" y="200" width="130" height="32" rx="6" fill="#FBBF24"/>
+    <text x="32" y="221" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Start Course</text>
+    <path d="M116 212l8 4-8 4" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
 </svg>
