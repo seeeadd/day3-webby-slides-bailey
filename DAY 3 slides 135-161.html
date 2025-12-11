@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>Bailey Vann - Day 3 Social Proof + Testimonials (Slides 135-161)</title>
+    <style>
+@font-face {
+    font-family: 'Ogg Bold';
+    src: url('https://seanthea.github.io/bailey-fonts/Ogg-Bold.woff2') format('woff2'),
+         url('https://seanthea.github.io/bailey-fonts/Ogg-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('https://seanthea.github.io/bailey-fonts/Satoshi-Variable.woff2') format('woff2'),
+         url('https://seanthea.github.io/bailey-fonts/Satoshi-Variable.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.slide {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+}
+
+.screenshot-placeholder {
+    background: linear-gradient(145deg, rgba(201,162,39,0.08) 0%, rgba(201,162,39,0.03) 100%);
+    border: 2px dashed rgba(201,162,39,0.3);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.screenshot-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 40%, rgba(201,162,39,0.05) 100%);
+}
+
+.screenshot-placeholder-dark {
+    background: linear-gradient(145deg, rgba(255,254,245,0.08) 0%, rgba(255,254,245,0.03) 100%);
+    border: 2px dashed rgba(255,254,245,0.25);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.placeholder-text {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 18px;
+    color: rgba(92,72,39,0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+.placeholder-text-dark {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 18px;
+    color: rgba(255,254,245,0.4);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 135 — SOCIAL PROOF TRANSITION
+     "But don't take my word for it..." - Transition to testimonials
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s135glow1" cx="30%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.12" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+            <radialGradient id="s135glow2" cx="80%" cy="70%" r="40%">
+                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="550" cy="540" rx="600" ry="500" fill="url(#s135glow1)"/>
+        <ellipse cx="1500" cy="750" rx="400" ry="350" fill="url(#s135glow2)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px;">
+        <!-- Main statement -->
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 72px; color: #FFFEF5; text-align: center; margin-bottom: 50px; line-height: 1.2;">
+            BUT DON'T TAKE MY WORD FOR IT...
+        </h1>
+
+        <!-- Supporting text -->
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 36px; color: rgba(255,254,245,0.9); text-align: center; line-height: 1.6; margin-bottom: 60px; max-width: 900px;">
+            Let me show you what people like you<br>have actually accomplished.
+        </p>
+
+        <!-- Three pillars -->
+        <div style="display: flex; gap: 40px;">
+            <div style="background: linear-gradient(145deg, rgba(201,162,39,0.2) 0%, rgba(201,162,39,0.08) 100%); border: 1px solid rgba(201,162,39,0.3); border-radius: 20px; padding: 35px 50px; text-align: center;">
+                <p style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #C9A227;">Real people.</p>
+            </div>
+            <div style="background: linear-gradient(145deg, rgba(201,162,39,0.2) 0%, rgba(201,162,39,0.08) 100%); border: 1px solid rgba(201,162,39,0.3); border-radius: 20px; padding: 35px 50px; text-align: center;">
+                <p style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #C9A227;">Real shops.</p>
+            </div>
+            <div style="background: linear-gradient(145deg, rgba(201,162,39,0.2) 0%, rgba(201,162,39,0.08) 100%); border: 1px solid rgba(201,162,39,0.3); border-radius: 20px; padding: 35px 50px; text-align: center;">
+                <p style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #C9A227;">Real results.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 136 — TESTIMONIAL GRID (2x2)
+     Four screenshot placeholders
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s136glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.06" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="800" ry="600" fill="url(#s136glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+        <!-- Grid of 4 screenshots -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; width: 100%; max-width: 1500px;">
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 3</span>
+            </div>
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 4</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 137 — SINGLE LARGE TESTIMONIAL
+     One prominent screenshot
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s137glow" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="900" ry="600" fill="url(#s137glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 80px 120px;">
+        <div class="screenshot-placeholder-dark" style="width: 1200px; height: 750px;">
+            <span class="placeholder-text-dark">Testimonial Screenshot</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 138 — TESTIMONIAL GRID (3 across)
+     Three screenshots in a row
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: #FDF8F3; position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="s138grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#1B8A8A;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </linearGradient>
+            <linearGradient id="s138grad2" x1="100%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.04" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="200" rx="350" ry="280" fill="url(#s138grad1)"/>
+        <ellipse cx="1700" cy="880" rx="300" ry="250" fill="url(#s138grad2)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 80px;">
+        <!-- Three screenshots -->
+        <div style="display: flex; gap: 35px; width: 100%; max-width: 1700px;">
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 3</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 139 — SINGLE LARGE TESTIMONIAL (Light)
+     One prominent screenshot on cream background
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s139glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#6B8E6B;stop-opacity:0.06" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="800" ry="550" fill="url(#s139glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 80px 120px;">
+        <div class="screenshot-placeholder" style="width: 1200px; height: 750px;">
+            <span class="placeholder-text">Testimonial Screenshot</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 140 — TESTIMONIAL GRID (2x3)
+     Six screenshot placeholders
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s140glow" cx="50%" cy="50%" r="60%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="1000" ry="700" fill="url(#s140glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 50px 80px;">
+        <!-- Grid of 6 screenshots -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; width: 100%; max-width: 1700px;">
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 3</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 4</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 5</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 6</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 141 — TWO LARGE TESTIMONIALS
+     Side by side screenshots
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: #FDF8F3; position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="s141grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="300" cy="300" rx="400" ry="350" fill="url(#s141grad)"/>
+        <ellipse cx="1600" cy="780" rx="350" ry="300" fill="url(#s141grad)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 70px 100px; gap: 40px;">
+        <div class="screenshot-placeholder" style="flex: 1; height: 800px; max-width: 820px;">
+            <span class="placeholder-text">Screenshot 1</span>
+        </div>
+        <div class="screenshot-placeholder" style="flex: 1; height: 800px; max-width: 820px;">
+            <span class="placeholder-text">Screenshot 2</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 142 — SINGLE LARGE TESTIMONIAL (Dark)
+     One prominent screenshot
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s142glow" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="900" ry="600" fill="url(#s142glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 80px 120px;">
+        <div class="screenshot-placeholder-dark" style="width: 1200px; height: 750px;">
+            <span class="placeholder-text-dark">Testimonial Screenshot</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 143 — TESTIMONIAL GRID (2x2) Light
+     Four screenshot placeholders
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s143glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#1B8A8A;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="800" ry="600" fill="url(#s143glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+        <!-- Grid of 4 screenshots -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; width: 100%; max-width: 1500px;">
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 3</span>
+            </div>
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 4</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 144 — THREE ACROSS (Dark)
+     Three screenshots in a row
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s144glow" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="900" ry="600" fill="url(#s144glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 80px;">
+        <!-- Three screenshots -->
+        <div style="display: flex; gap: 35px; width: 100%; max-width: 1700px;">
+            <div class="screenshot-placeholder-dark" style="flex: 1; height: 700px;">
+                <span class="placeholder-text-dark">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="flex: 1; height: 700px;">
+                <span class="placeholder-text-dark">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="flex: 1; height: 700px;">
+                <span class="placeholder-text-dark">Screenshot 3</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 145 — SINGLE LARGE TESTIMONIAL (Light/Teal accent)
+     One prominent screenshot
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: #FDF8F3; position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s145glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#1B8A8A;stop-opacity:0.06" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="800" ry="550" fill="url(#s145glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 80px 120px;">
+        <div class="screenshot-placeholder" style="width: 1200px; height: 750px;">
+            <span class="placeholder-text">Testimonial Screenshot</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 146 — TWO LARGE TESTIMONIALS (Dark)
+     Side by side screenshots
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s146glow" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="900" ry="600" fill="url(#s146glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 70px 100px; gap: 40px;">
+        <div class="screenshot-placeholder-dark" style="flex: 1; height: 800px; max-width: 820px;">
+            <span class="placeholder-text-dark">Screenshot 1</span>
+        </div>
+        <div class="screenshot-placeholder-dark" style="flex: 1; height: 800px; max-width: 820px;">
+            <span class="placeholder-text-dark">Screenshot 2</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 147 — TESTIMONIAL GRID (2x3) Light
+     Six screenshot placeholders
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s147glow" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.06" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="900" ry="650" fill="url(#s147glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 50px 80px;">
+        <!-- Grid of 6 screenshots -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; width: 100%; max-width: 1700px;">
+            <div class="screenshot-placeholder" style="height: 420px;">
+                <span class="placeholder-text">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder" style="height: 420px;">
+                <span class="placeholder-text">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder" style="height: 420px;">
+                <span class="placeholder-text">Screenshot 3</span>
+            </div>
+            <div class="screenshot-placeholder" style="height: 420px;">
+                <span class="placeholder-text">Screenshot 4</span>
+            </div>
+            <div class="screenshot-placeholder" style="height: 420px;">
+                <span class="placeholder-text">Screenshot 5</span>
+            </div>
+            <div class="screenshot-placeholder" style="height: 420px;">
+                <span class="placeholder-text">Screenshot 6</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 148 — SINGLE LARGE TESTIMONIAL (Dark)
+     One prominent screenshot
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s148glow" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="900" ry="600" fill="url(#s148glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 80px 120px;">
+        <div class="screenshot-placeholder-dark" style="width: 1200px; height: 750px;">
+            <span class="placeholder-text-dark">Testimonial Screenshot</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 149 — THREE ACROSS (Light)
+     Three screenshots in a row
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: #FDF8F3; position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="s149grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#6B8E6B;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </linearGradient>
+            <linearGradient id="s149grad2" x1="100%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.04" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="200" rx="350" ry="280" fill="url(#s149grad1)"/>
+        <ellipse cx="1700" cy="880" rx="300" ry="250" fill="url(#s149grad2)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 80px;">
+        <!-- Three screenshots -->
+        <div style="display: flex; gap: 35px; width: 100%; max-width: 1700px;">
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 3</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 150 — TESTIMONIAL GRID (2x2) Dark
+     Four screenshot placeholders
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s150glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="800" ry="600" fill="url(#s150glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+        <!-- Grid of 4 screenshots -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; width: 100%; max-width: 1500px;">
+            <div class="screenshot-placeholder-dark" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text-dark">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text-dark">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text-dark">Screenshot 3</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text-dark">Screenshot 4</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 151 — SINGLE LARGE TESTIMONIAL (Light)
+     One prominent screenshot
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s151glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.07" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="800" ry="550" fill="url(#s151glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 80px 120px;">
+        <div class="screenshot-placeholder" style="width: 1200px; height: 750px;">
+            <span class="placeholder-text">Testimonial Screenshot</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 152 — TWO LARGE TESTIMONIALS (Light)
+     Side by side screenshots
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: #FDF8F3; position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="s152grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#1B8A8A;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="300" cy="300" rx="400" ry="350" fill="url(#s152grad)"/>
+        <ellipse cx="1600" cy="780" rx="350" ry="300" fill="url(#s152grad)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 70px 100px; gap: 40px;">
+        <div class="screenshot-placeholder" style="flex: 1; height: 800px; max-width: 820px;">
+            <span class="placeholder-text">Screenshot 1</span>
+        </div>
+        <div class="screenshot-placeholder" style="flex: 1; height: 800px; max-width: 820px;">
+            <span class="placeholder-text">Screenshot 2</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 153 — SINGLE LARGE TESTIMONIAL (Dark)
+     One prominent screenshot
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s153glow" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="900" ry="600" fill="url(#s153glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 80px 120px;">
+        <div class="screenshot-placeholder-dark" style="width: 1200px; height: 750px;">
+            <span class="placeholder-text-dark">Testimonial Screenshot</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 154 — THREE ACROSS (Light)
+     Three screenshots in a row
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s154glow" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#6B8E6B;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="900" ry="600" fill="url(#s154glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 80px;">
+        <!-- Three screenshots -->
+        <div style="display: flex; gap: 35px; width: 100%; max-width: 1700px;">
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 3</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 155 — TESTIMONIAL GRID (2x3) Dark
+     Six screenshot placeholders
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s155glow" cx="50%" cy="50%" r="60%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="1000" ry="700" fill="url(#s155glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 50px 80px;">
+        <!-- Grid of 6 screenshots -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; width: 100%; max-width: 1700px;">
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 3</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 4</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 5</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 6</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 156 — SINGLE LARGE TESTIMONIAL (Light)
+     One prominent screenshot
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: #FDF8F3; position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s156glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.06" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="800" ry="550" fill="url(#s156glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 80px 120px;">
+        <div class="screenshot-placeholder" style="width: 1200px; height: 750px;">
+            <span class="placeholder-text">Testimonial Screenshot</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 157 — TWO LARGE TESTIMONIALS (Dark)
+     Side by side screenshots
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s157glow" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="900" ry="600" fill="url(#s157glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 70px 100px; gap: 40px;">
+        <div class="screenshot-placeholder-dark" style="flex: 1; height: 800px; max-width: 820px;">
+            <span class="placeholder-text-dark">Screenshot 1</span>
+        </div>
+        <div class="screenshot-placeholder-dark" style="flex: 1; height: 800px; max-width: 820px;">
+            <span class="placeholder-text-dark">Screenshot 2</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 158 — TESTIMONIAL GRID (2x2) Light
+     Four screenshot placeholders
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s158glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#1B8A8A;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="800" ry="600" fill="url(#s158glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 100px;">
+        <!-- Grid of 4 screenshots -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; width: 100%; max-width: 1500px;">
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 3</span>
+            </div>
+            <div class="screenshot-placeholder" style="aspect-ratio: 4/3; width: 100%;">
+                <span class="placeholder-text">Screenshot 4</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 159 — SINGLE LARGE TESTIMONIAL (Dark)
+     One prominent screenshot
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s159glow" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="900" ry="600" fill="url(#s159glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; padding: 80px 120px;">
+        <div class="screenshot-placeholder-dark" style="width: 1200px; height: 750px;">
+            <span class="placeholder-text-dark">Testimonial Screenshot</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 160 — THREE ACROSS (Light)
+     Three screenshots in a row
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: #FDF8F3; position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="s160grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </linearGradient>
+            <linearGradient id="s160grad2" x1="100%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:#6B8E6B;stop-opacity:0.04" />
+                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="200" rx="350" ry="280" fill="url(#s160grad1)"/>
+        <ellipse cx="1700" cy="880" rx="300" ry="250" fill="url(#s160grad2)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 80px;">
+        <!-- Three screenshots -->
+        <div style="display: flex; gap: 35px; width: 100%; max-width: 1700px;">
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder" style="flex: 1; height: 700px;">
+                <span class="placeholder-text">Screenshot 3</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 161 — TESTIMONIAL GRID (2x3) Dark - CLOSING WALL
+     Six screenshot placeholders - final testimonial display
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s161glow" cx="50%" cy="50%" r="60%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#5C4827;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="1000" ry="700" fill="url(#s161glow)"/>
+    </svg>
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 50px 80px;">
+        <!-- Grid of 6 screenshots -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; width: 100%; max-width: 1700px;">
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 1</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 2</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 3</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 4</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 5</span>
+            </div>
+            <div class="screenshot-placeholder-dark" style="height: 420px;">
+                <span class="placeholder-text-dark">Screenshot 6</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
