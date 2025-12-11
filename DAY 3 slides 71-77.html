@@ -713,52 +713,162 @@
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
      SLIDE 74 — WHAT'S THE INVESTMENT?
-     Anticipation builder - clean, breathing layout before price reveal
+     Premium value showcase with creative visuals and progression
 ═══════════════════════════════════════════════════════════════════════════ -->
-<div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
+<div class="slide" style="background: linear-gradient(165deg, #0F0A05 0%, #1A130A 40%, #251A0E 100%); position: relative; overflow: hidden;">
     <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
         <defs>
-            <radialGradient id="investGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
-                <stop offset="100%" style="stop-color:#FDF8F3;stop-opacity:0" />
+            <!-- Golden radial glows -->
+            <radialGradient id="investGlow74" cx="50%" cy="40%" r="60%">
+                <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.15" />
+                <stop offset="50%" style="stop-color:#B8860B;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#0F0A05;stop-opacity:0" />
             </radialGradient>
+            <radialGradient id="bottomGlow74" cx="50%" cy="100%" r="50%">
+                <stop offset="0%" style="stop-color:#F5D547;stop-opacity:0.12" />
+                <stop offset="100%" style="stop-color:#0F0A05;stop-opacity:0" />
+            </radialGradient>
+            <!-- Shimmer effect -->
+            <linearGradient id="shimmer74" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#F5D547;stop-opacity:0" />
+                <stop offset="50%" style="stop-color:#F5D547;stop-opacity:0.3" />
+                <stop offset="100%" style="stop-color:#F5D547;stop-opacity:0" />
+            </linearGradient>
         </defs>
-        <ellipse cx="960" cy="540" rx="700" ry="500" fill="url(#investGlow)"/>
-        <!-- Elegant corner accents -->
-        <g opacity="0.06">
-            <path d="M100 100 L100 200 M100 100 L200 100" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/>
-            <path d="M1820 100 L1820 200 M1820 100 L1720 100" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/>
-            <path d="M100 980 L100 880 M100 980 L200 980" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/>
-            <path d="M1820 980 L1820 880 M1820 980 L1720 980" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/>
+        <!-- Background glows -->
+        <ellipse cx="960" cy="400" rx="900" ry="600" fill="url(#investGlow74)"/>
+        <ellipse cx="960" cy="1100" rx="800" ry="400" fill="url(#bottomGlow74)"/>
+
+        <!-- Floating gold particles -->
+        <g opacity="0.6">
+            <circle cx="150" cy="200" r="3" fill="#D4AF37"/>
+            <circle cx="1770" cy="180" r="4" fill="#F5D547"/>
+            <circle cx="200" cy="800" r="2" fill="#B8860B"/>
+            <circle cx="1720" cy="850" r="3" fill="#D4AF37"/>
+            <circle cx="400" cy="150" r="2" fill="#F5D547"/>
+            <circle cx="1520" cy="120" r="3" fill="#D4AF37"/>
+            <circle cx="300" cy="950" r="2" fill="#B8860B"/>
+            <circle cx="1620" cy="920" r="2" fill="#F5D547"/>
+        </g>
+
+        <!-- Decorative star bursts -->
+        <g opacity="0.4">
+            <path d="M120 300 L123 310 L133 310 L125 317 L128 327 L120 320 L112 327 L115 317 L107 310 L117 310 Z" fill="#D4AF37"/>
+            <path d="M1800 250 L1803 260 L1813 260 L1805 267 L1808 277 L1800 270 L1792 277 L1795 267 L1787 260 L1797 260 Z" fill="#D4AF37"/>
+            <path d="M180 700 L183 710 L193 710 L185 717 L188 727 L180 720 L172 727 L175 717 L167 710 L177 710 Z" fill="#B8860B"/>
+            <path d="M1740 680 L1743 690 L1753 690 L1745 697 L1748 707 L1740 700 L1732 707 L1735 697 L1727 690 L1737 690 Z" fill="#B8860B"/>
+        </g>
+
+        <!-- Elegant corner flourishes -->
+        <g stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.25">
+            <path d="M60 60 Q60 120 120 120"/>
+            <path d="M60 60 Q120 60 120 120"/>
+            <path d="M1860 60 Q1860 120 1800 120"/>
+            <path d="M1860 60 Q1800 60 1800 120"/>
+            <path d="M60 1020 Q60 960 120 960"/>
+            <path d="M60 1020 Q120 1020 120 960"/>
+            <path d="M1860 1020 Q1860 960 1800 960"/>
+            <path d="M1860 1020 Q1800 1020 1800 960"/>
         </g>
     </svg>
-    
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px;">
-        <!-- Main Question -->
-        <h1 style="font-family: 'Ogg Bold', serif; font-size: 72px; color: #C9A227; text-align: center; margin-bottom: 70px;">
-            SO WHAT'S THE INVESTMENT?
-        </h1>
-        
-        <!-- Value Statements - Building weight -->
-        <div style="display: flex; flex-direction: column; gap: 25px; text-align: center; margin-bottom: 70px;">
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 34px; color: #3D2B1F;">
-                $11,570+ in value.
-            </p>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 34px; color: #3D2B1F;">
-                Personal guidance from a $1M+ seller.
-            </p>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 34px; color: #3D2B1F;">
-                90 days of intensive support.
-            </p>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 34px; color: #3D2B1F;">
-                Lifetime access to everything.
+
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 80px;">
+        <!-- Main Question with glow -->
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 68px; color: #D4AF37; text-shadow: 0 0 60px rgba(212,175,55,0.4), 0 0 120px rgba(212,175,55,0.2); letter-spacing: 2px;">
+                SO WHAT'S THE INVESTMENT?
+            </h1>
+        </div>
+
+        <!-- Value Cards Grid -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; max-width: 1200px; margin-bottom: 45px;">
+
+            <!-- Card 1: $11,570+ Value -->
+            <div style="background: linear-gradient(145deg, rgba(212,175,55,0.15) 0%, rgba(184,134,11,0.08) 100%); border: 2px solid rgba(212,175,55,0.3); border-radius: 20px; padding: 28px 35px; display: flex; align-items: center; gap: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(212,175,55,0.4);">
+                    <svg width="38" height="38" viewBox="0 0 38 38">
+                        <!-- Stacked coins icon -->
+                        <ellipse cx="19" cy="28" rx="12" ry="4" fill="#FFFFFF" opacity="0.3"/>
+                        <ellipse cx="19" cy="24" rx="12" ry="4" fill="#FFFFFF" opacity="0.5"/>
+                        <ellipse cx="19" cy="20" rx="12" ry="4" fill="#FFFFFF" opacity="0.7"/>
+                        <ellipse cx="19" cy="16" rx="12" ry="4" fill="#FFFFFF"/>
+                        <text x="19" y="19" text-anchor="middle" fill="#B8860B" font-size="8" font-weight="bold">$</text>
+                    </svg>
+                </div>
+                <div>
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 36px; color: #F5D547; margin-bottom: 4px;">$11,570+</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: rgba(255,255,255,0.7);">in real value</p>
+                </div>
+            </div>
+
+            <!-- Card 2: $1M+ Seller Guidance -->
+            <div style="background: linear-gradient(145deg, rgba(139,92,246,0.15) 0%, rgba(124,58,237,0.08) 100%); border: 2px solid rgba(139,92,246,0.3); border-radius: 20px; padding: 28px 35px; display: flex; align-items: center; gap: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(139,92,246,0.4);">
+                    <svg width="38" height="38" viewBox="0 0 38 38">
+                        <!-- Crown/Expert icon -->
+                        <path d="M8 28 L8 18 L14 22 L19 14 L24 22 L30 18 L30 28 Z" fill="#FFFFFF"/>
+                        <circle cx="8" cy="15" r="3" fill="#FFFFFF"/>
+                        <circle cx="19" cy="11" r="3" fill="#FFFFFF"/>
+                        <circle cx="30" cy="15" r="3" fill="#FFFFFF"/>
+                    </svg>
+                </div>
+                <div>
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #A78BFA; margin-bottom: 4px;">$1M+ Seller</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: rgba(255,255,255,0.7);">personal guidance</p>
+                </div>
+            </div>
+
+            <!-- Card 3: 90 Days Support -->
+            <div style="background: linear-gradient(145deg, rgba(245,158,11,0.15) 0%, rgba(217,119,6,0.08) 100%); border: 2px solid rgba(245,158,11,0.3); border-radius: 20px; padding: 28px 35px; display: flex; align-items: center; gap: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(245,158,11,0.4);">
+                    <svg width="38" height="38" viewBox="0 0 38 38">
+                        <!-- Calendar with fire/intensity icon -->
+                        <rect x="7" y="10" width="24" height="22" rx="3" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+                        <path d="M7 17 L31 17" stroke="#FFFFFF" stroke-width="2"/>
+                        <path d="M13 7 L13 13 M25 7 L25 13" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                        <text x="19" y="28" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="bold">90</text>
+                    </svg>
+                </div>
+                <div>
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #FBBF24; margin-bottom: 4px;">90 Days</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: rgba(255,255,255,0.7);">intensive support</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Lifetime Access -->
+            <div style="background: linear-gradient(145deg, rgba(16,185,129,0.15) 0%, rgba(5,150,105,0.08) 100%); border: 2px solid rgba(16,185,129,0.3); border-radius: 20px; padding: 28px 35px; display: flex; align-items: center; gap: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #10B981 0%, #059669 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(16,185,129,0.4);">
+                    <svg width="38" height="38" viewBox="0 0 38 38">
+                        <!-- Infinity symbol -->
+                        <path d="M10 19 C10 14 14 14 17 17 C20 20 21 20 24 19 C27 18 30 14 30 19 C30 24 27 24 24 21 C21 18 20 18 17 19 C14 20 10 24 10 19" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #34D399; margin-bottom: 4px;">Lifetime Access</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: rgba(255,255,255,0.7);">to everything</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Value Total Badge -->
+        <div style="position: relative; margin-bottom: 40px;">
+            <div style="background: linear-gradient(145deg, rgba(212,175,55,0.2) 0%, rgba(184,134,11,0.1) 100%); border: 2px solid rgba(212,175,55,0.4); border-radius: 50px; padding: 16px 50px; display: flex; align-items: center; gap: 15px;">
+                <svg width="28" height="28" viewBox="0 0 28 28">
+                    <path d="M14 2 L17 10 L26 10 L19 16 L22 25 L14 19 L6 25 L9 16 L2 10 L11 10 Z" fill="#F5D547"/>
+                </svg>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #F5D547; font-weight: 600; letter-spacing: 1px;">TOTAL VALUE: $11,570+</span>
+                <svg width="28" height="28" viewBox="0 0 28 28">
+                    <path d="M14 2 L17 10 L26 10 L19 16 L22 25 L14 19 L6 25 L9 16 L2 10 L11 10 Z" fill="#F5D547"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Open Loop Question -->
+        <div style="text-align: center;">
+            <p style="font-family: 'Ogg Bold', serif; font-size: 38px; color: rgba(255,255,255,0.9); text-shadow: 0 0 30px rgba(212,175,55,0.3);">
+                What would be a fair investment for all of this?
             </p>
         </div>
-        
-        <!-- Open Loop Question -->
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827;">
-            What would be a fair investment for all of this?
-        </p>
     </div>
 </div>
 
