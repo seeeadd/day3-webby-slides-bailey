@@ -1,9 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
   <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap');
-    </style>
-
     <!-- Drop shadows -->
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="1" stdDeviation="3" flood-opacity="0.08"/>
@@ -36,10 +32,6 @@
       <stop offset="0%" style="stop-color:#34D399"/>
       <stop offset="100%" style="stop-color:#10B981"/>
     </linearGradient>
-    <linearGradient id="roseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FDA4AF"/>
-      <stop offset="100%" style="stop-color:#FB7185"/>
-    </linearGradient>
 
     <!-- Avatar gradients -->
     <linearGradient id="avatar1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -63,41 +55,42 @@
       <stop offset="100%" style="stop-color:#86EFAC"/>
     </linearGradient>
 
-    <!-- Custom Icons -->
+    <!-- Custom Icons as symbols -->
     <symbol id="icon-star" viewBox="0 0 20 20">
       <path d="M10 1l2.39 6.26L19 8.27l-5 4.87 1.18 6.88L10 16.77l-5.18 3.25L6 13.14 1 8.27l6.61-1.01L10 1z" fill="url(#amberGradient)"/>
     </symbol>
 
-    <symbol id="icon-celebrate" viewBox="0 0 24 24">
-      <path d="M12 2C12 2 10 6 10 8C10 10 12 12 12 12C12 12 14 10 14 8C14 6 12 2 12 2Z" fill="url(#amberGradient)"/>
-      <path d="M7 8C7 8 4 10 4 12C4 14 7 15 7 15C7 15 8 13 8 12C8 10 7 8 7 8Z" fill="url(#coralGradient)"/>
-      <path d="M17 8C17 8 20 10 20 12C20 14 17 15 17 15C17 15 16 13 16 12C16 10 17 8 17 8Z" fill="url(#coralGradient)"/>
-      <path d="M12 14C9 14 6 16 6 19C6 21 8 22 12 22C16 22 18 21 18 19C18 16 15 14 12 14Z" fill="url(#brandGradient)"/>
-      <circle cx="9" cy="18" r="1.5" fill="#FFF" opacity="0.6"/>
-      <circle cx="15" cy="18" r="1.5" fill="#FFF" opacity="0.6"/>
+    <symbol id="icon-hands-up" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="11" fill="#FEF3C7"/>
+      <circle cx="8" cy="10" r="1.5" fill="#92400E"/>
+      <circle cx="16" cy="10" r="1.5" fill="#92400E"/>
+      <path d="M8 15c0 0 2 3 4 3s4-3 4-3" stroke="#92400E" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M5 4 L3 1" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+      <path d="M19 4 L21 1" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+      <path d="M5 2 L6 5" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+      <path d="M19 2 L18 5" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
     </symbol>
 
-    <symbol id="icon-muscle" viewBox="0 0 24 24">
-      <path d="M5 11C5 8 7 6 9 6C10 6 11 6.5 12 7.5C13 6.5 14 6 15 6C17 6 19 8 19 11C19 15 15 18 12 20C9 18 5 15 5 11Z" fill="url(#coralGradient)"/>
-      <ellipse cx="9" cy="11" rx="2" ry="3" fill="#FFF" opacity="0.3"/>
-      <ellipse cx="15" cy="11" rx="2" ry="3" fill="#FFF" opacity="0.3"/>
-      <path d="M8 14L10 12M14 12L16 14" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <symbol id="icon-heart-full" viewBox="0 0 24 24">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="url(#coralGradient)"/>
+    </symbol>
+
+    <symbol id="icon-fire" viewBox="0 0 24 24">
+      <path d="M12 23c4.97 0 9-4.03 9-9 0-5.5-4.5-8.5-6-11 0 0-1 3-3 3-1 0-2-1-2-3 0 0-7 5-7 11 0 4.97 4.03 9 9 9z" fill="url(#coralGradient)"/>
+      <path d="M12 23c2.76 0 5-2.24 5-5 0-3-2.5-4.5-3-6 0 0-.5 1.5-1.5 1.5-.75 0-1-1-1-1.5 0 0-3.5 2.5-3.5 6 0 2.76 2.24 5 5 5z" fill="url(#amberGradient)"/>
     </symbol>
 
     <symbol id="icon-comment" viewBox="0 0 24 24">
-      <path d="M21 12C21 16.4 16.97 20 12 20C10.46 20 9.01 19.68 7.72 19.12L3 21L4.5 16.97C3.56 15.57 3 13.85 3 12C3 7.58 7.03 4 12 4C16.97 4 21 7.58 21 12Z" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1.5"/>
+      <path d="M21 12c0 4.418-4.03 8-9 8-1.5 0-2.91-.32-4.15-.88L3 21l1.65-4.12C3.62 15.42 3 13.78 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1.5"/>
       <circle cx="8" cy="12" r="1.2" fill="#9CA3AF"/>
       <circle cx="12" cy="12" r="1.2" fill="#9CA3AF"/>
       <circle cx="16" cy="12" r="1.2" fill="#9CA3AF"/>
     </symbol>
 
-    <symbol id="icon-heart" viewBox="0 0 24 24">
-      <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.27 18.6 15.36 13.45 20.03L12 21.35Z" fill="url(#coralGradient)"/>
-    </symbol>
-
-    <symbol id="icon-fire" viewBox="0 0 24 24">
-      <path d="M12 23C16.5 23 20 19.5 20 15C20 10 16 7 14 4C14 4 13 8 11 8C11 6 10 2 10 2C10 2 4 8 4 15C4 19.5 7.5 23 12 23Z" fill="url(#coralGradient)"/>
-      <path d="M12 23C14.5 23 16 21 16 18.5C16 15.5 14 14 12 12C12 12 11 14 10 14C10 13 9 11 9 11C9 11 8 14 8 18.5C8 21 9.5 23 12 23Z" fill="url(#amberGradient)"/>
+    <symbol id="icon-thought" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="10" rx="9" ry="7" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1.5"/>
+      <circle cx="6" cy="19" r="2" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+      <circle cx="3.5" cy="21.5" r="1.2" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="0.75"/>
     </symbol>
 
     <symbol id="icon-calendar" viewBox="0 0 24 24">
@@ -108,13 +101,6 @@
       <rect x="6" y="13" width="3" height="3" rx="0.5" fill="#FFF"/>
       <rect x="10.5" y="13" width="3" height="3" rx="0.5" fill="#FFF"/>
       <rect x="15" y="13" width="3" height="3" rx="0.5" fill="#FFF" opacity="0.5"/>
-    </symbol>
-
-    <symbol id="icon-thought" viewBox="0 0 24 24">
-      <ellipse cx="12" cy="10" rx="9" ry="7" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1.5"/>
-      <circle cx="6" cy="19" r="2.5" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
-      <circle cx="3" cy="22" r="1.5" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="0.75"/>
-      <text x="12" y="12" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#9CA3AF">?</text>
     </symbol>
 
     <symbol id="icon-write" viewBox="0 0 24 24">
@@ -133,317 +119,279 @@
   <!-- Skool logo -->
   <g transform="translate(24, 14)">
     <rect width="36" height="36" rx="10" fill="url(#purpleGradient)"/>
-    <text x="18" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">S</text>
+    <text x="18" y="26" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">S</text>
   </g>
 
   <!-- Community name and member count -->
-  <text x="76" y="32" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#1A1A1A">Etsy Accelerator Community</text>
+  <text x="76" y="32" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#1A1A1A">Etsy Accelerator Community</text>
   <g transform="translate(76, 40)">
     <circle cx="5" cy="5" r="4" fill="#10B981"/>
-    <text x="14" y="9" font-family="Inter, sans-serif" font-size="14" fill="#6B7280">247 members</text>
+    <text x="14" y="9" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#6B7280">247 members</text>
   </g>
 
   <!-- Navigation tabs -->
   <g transform="translate(650, 0)">
-    <text x="0" y="38" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Classroom</text>
-
-    <!-- Community tab (active) -->
+    <text x="0" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Classroom</text>
     <g transform="translate(100, 0)">
-      <text x="0" y="38" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Community</text>
+      <text x="0" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Community</text>
       <rect x="-5" y="52" width="90" height="3" rx="1.5" fill="url(#purpleGradient)"/>
     </g>
-
-    <text x="210" y="38" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Calendar</text>
-    <text x="310" y="38" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Leaderboard</text>
+    <text x="210" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Calendar</text>
+    <text x="310" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6B7280">Leaderboard</text>
   </g>
 
   <!-- ==================== LEFT SIDEBAR (20%) ==================== -->
   <g transform="translate(24, 84)">
-    <rect width="260" height="450" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
+    <rect width="240" height="520" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
 
     <!-- Header -->
-    <text x="20" y="32" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#6B7280" letter-spacing="0.5" text-transform="uppercase">ONLINE NOW</text>
+    <text x="20" y="32" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#6B7280" letter-spacing="0.5">ONLINE NOW</text>
 
-    <!-- Member list -->
-    <g transform="translate(20, 52)">
+    <!-- Member list - tighter spacing -->
+    <g transform="translate(20, 48)">
 
       <!-- Bailey V. (host, online) -->
       <g transform="translate(0, 0)">
-        <circle cx="20" cy="20" r="20" fill="url(#brandGradient)"/>
-        <text x="20" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">B</text>
-        <circle cx="34" cy="32" r="6" fill="#FFFFFF"/>
-        <circle cx="34" cy="32" r="5" fill="#10B981"/>
-        <text x="50" y="16" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Bailey V.</text>
-        <use href="#icon-star" x="114" y="5" width="16" height="16"/>
-        <text x="50" y="32" font-family="Inter, sans-serif" font-size="12" fill="#6366F1">Host</text>
+        <circle cx="18" cy="18" r="18" fill="url(#brandGradient)"/>
+        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">B</text>
+        <circle cx="30" cy="30" r="5" fill="#FFFFFF"/>
+        <circle cx="30" cy="30" r="4" fill="#10B981"/>
+        <text x="44" y="14" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1A1A1A">Bailey V.</text>
+        <use href="#icon-star" x="108" y="3" width="14" height="14"/>
+        <text x="44" y="30" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6366F1">Host</text>
       </g>
 
       <!-- Sarah M. (online) -->
-      <g transform="translate(0, 52)">
-        <circle cx="20" cy="20" r="20" fill="url(#avatar1)"/>
-        <text x="20" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#5B21B6">S</text>
-        <circle cx="34" cy="32" r="6" fill="#FFFFFF"/>
-        <circle cx="34" cy="32" r="5" fill="#10B981"/>
-        <text x="50" y="24" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Sarah M.</text>
+      <g transform="translate(0, 48)">
+        <circle cx="18" cy="18" r="18" fill="url(#avatar1)"/>
+        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#5B21B6">S</text>
+        <circle cx="30" cy="30" r="5" fill="#FFFFFF"/>
+        <circle cx="30" cy="30" r="4" fill="#10B981"/>
+        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Sarah M.</text>
       </g>
 
       <!-- Jessica T. (online) -->
-      <g transform="translate(0, 104)">
-        <circle cx="20" cy="20" r="20" fill="url(#avatar2)"/>
-        <text x="20" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#9F1239">J</text>
-        <circle cx="34" cy="32" r="6" fill="#FFFFFF"/>
-        <circle cx="34" cy="32" r="5" fill="#10B981"/>
-        <text x="50" y="24" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Jessica T.</text>
+      <g transform="translate(0, 96)">
+        <circle cx="18" cy="18" r="18" fill="url(#avatar2)"/>
+        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#9F1239">J</text>
+        <circle cx="30" cy="30" r="5" fill="#FFFFFF"/>
+        <circle cx="30" cy="30" r="4" fill="#10B981"/>
+        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Jessica T.</text>
       </g>
 
       <!-- Michelle L. (online) -->
-      <g transform="translate(0, 156)">
-        <circle cx="20" cy="20" r="20" fill="url(#avatar3)"/>
-        <text x="20" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#0E7490">M</text>
-        <circle cx="34" cy="32" r="6" fill="#FFFFFF"/>
-        <circle cx="34" cy="32" r="5" fill="#10B981"/>
-        <text x="50" y="24" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Michelle L.</text>
+      <g transform="translate(0, 144)">
+        <circle cx="18" cy="18" r="18" fill="url(#avatar3)"/>
+        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#0E7490">M</text>
+        <circle cx="30" cy="30" r="5" fill="#FFFFFF"/>
+        <circle cx="30" cy="30" r="4" fill="#10B981"/>
+        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Michelle L.</text>
       </g>
 
       <!-- Amanda K. (online) -->
-      <g transform="translate(0, 208)">
-        <circle cx="20" cy="20" r="20" fill="url(#avatar4)"/>
-        <text x="20" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#A16207">A</text>
-        <circle cx="34" cy="32" r="6" fill="#FFFFFF"/>
-        <circle cx="34" cy="32" r="5" fill="#10B981"/>
-        <text x="50" y="24" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Amanda K.</text>
+      <g transform="translate(0, 192)">
+        <circle cx="18" cy="18" r="18" fill="url(#avatar4)"/>
+        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#A16207">A</text>
+        <circle cx="30" cy="30" r="5" fill="#FFFFFF"/>
+        <circle cx="30" cy="30" r="4" fill="#10B981"/>
+        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Amanda K.</text>
       </g>
 
       <!-- Rachel B. (offline) -->
-      <g transform="translate(0, 260)">
-        <circle cx="20" cy="20" r="20" fill="url(#avatar5)"/>
-        <text x="20" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#166534">R</text>
-        <text x="50" y="24" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Rachel B.</text>
+      <g transform="translate(0, 240)">
+        <circle cx="18" cy="18" r="18" fill="url(#avatar5)"/>
+        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#166534">R</text>
+        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#1A1A1A">Rachel B.</text>
       </g>
 
       <!-- Lauren P. (offline) -->
-      <g transform="translate(0, 312)">
-        <circle cx="20" cy="20" r="20" fill="url(#avatar1)" opacity="0.6"/>
-        <text x="20" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#5B21B6" opacity="0.8">L</text>
-        <text x="50" y="24" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#9CA3AF">Lauren P.</text>
+      <g transform="translate(0, 288)">
+        <circle cx="18" cy="18" r="18" fill="url(#avatar1)" opacity="0.5"/>
+        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#5B21B6" opacity="0.7">L</text>
+        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#9CA3AF">Lauren P.</text>
       </g>
 
       <!-- Christina H. (offline) -->
-      <g transform="translate(0, 364)">
-        <circle cx="20" cy="20" r="20" fill="url(#avatar2)" opacity="0.6"/>
-        <text x="20" y="26" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#9F1239" opacity="0.8">C</text>
-        <text x="50" y="24" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#9CA3AF">Christina H.</text>
+      <g transform="translate(0, 336)">
+        <circle cx="18" cy="18" r="18" fill="url(#avatar2)" opacity="0.5"/>
+        <text x="18" y="23" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#9F1239" opacity="0.7">C</text>
+        <text x="44" y="22" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#9CA3AF">Christina H.</text>
       </g>
 
     </g>
 
     <!-- Online count -->
-    <g transform="translate(20, 430)">
-      <circle cx="6" cy="0" r="5" fill="#10B981"/>
-      <text x="18" y="4" font-family="Inter, sans-serif" font-size="13" fill="#6B7280">5 online now</text>
+    <g transform="translate(20, 420)">
+      <circle cx="6" cy="6" r="5" fill="#10B981"/>
+      <text x="18" y="10" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6B7280">5 online now</text>
     </g>
 
   </g>
 
   <!-- ==================== MAIN FEED (60%) ==================== -->
-  <g transform="translate(304, 84)">
+  <g transform="translate(284, 84)">
 
     <!-- POST 1 -->
     <g transform="translate(0, 0)">
-      <rect width="760" height="300" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
+      <rect width="760" height="290" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
 
       <!-- Avatar -->
-      <circle cx="44" cy="44" r="24" fill="url(#avatar3)"/>
-      <text x="44" y="51" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#0E7490">M</text>
+      <circle cx="40" cy="40" r="22" fill="url(#avatar3)"/>
+      <text x="40" y="47" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#0E7490">M</text>
 
       <!-- Author & time -->
-      <text x="80" y="36" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Michelle L.</text>
-      <circle cx="166" cy="32" r="2" fill="#D1D5DB"/>
-      <text x="176" y="36" font-family="Inter, sans-serif" font-size="14" fill="#9CA3AF">2 hours ago</text>
+      <text x="74" y="32" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Michelle L.</text>
+      <circle cx="154" cy="28" r="2" fill="#D1D5DB"/>
+      <text x="164" y="32" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">2 hours ago</text>
 
       <!-- Post text -->
-      <text x="80" y="62" font-family="Inter, sans-serif" font-size="15" fill="#374151">Just deleted 47 listings and I feel FREE!</text>
-      <use href="#icon-celebrate" x="335" y="48" width="20" height="20"/>
-      <text x="80" y="84" font-family="Inter, sans-serif" font-size="15" fill="#374151">My shop already looks so much cleaner. The ones left are actually</text>
-      <text x="80" y="106" font-family="Inter, sans-serif" font-size="15" fill="#374151">my best work. Week 1 DELETE phase = complete!</text>
+      <text x="74" y="58" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">Just deleted 47 listings and I feel FREE!</text>
+      <use href="#icon-hands-up" x="330" y="42" width="22" height="22"/>
+      <text x="74" y="80" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">My shop already looks so much cleaner. The ones left are actually</text>
+      <text x="74" y="102" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">my best work. Week 1 DELETE phase = complete!</text>
 
       <!-- Engagement -->
-      <g transform="translate(80, 128)">
-        <g transform="translate(0, 0)">
-          <use href="#icon-muscle" x="0" y="0" width="22" height="22"/>
-          <text x="28" y="16" font-family="Inter, sans-serif" font-size="14" fill="#6B7280">23</text>
-        </g>
-        <g transform="translate(70, 0)">
-          <use href="#icon-comment" x="0" y="0" width="22" height="22"/>
-          <text x="28" y="16" font-family="Inter, sans-serif" font-size="14" fill="#6B7280">12 comments</text>
-        </g>
+      <g transform="translate(74, 120)">
+        <use href="#icon-heart-full" x="0" y="0" width="20" height="20"/>
+        <text x="26" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">23</text>
+        <use href="#icon-comment" x="60" y="0" width="20" height="20"/>
+        <text x="86" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">12 comments</text>
       </g>
 
       <!-- Divider -->
-      <rect x="24" y="165" width="712" height="1" fill="#F3F4F6"/>
+      <rect x="20" y="155" width="720" height="1" fill="#F3F4F6"/>
 
       <!-- Bailey's reply -->
-      <g transform="translate(36, 180)">
-        <!-- Bailey avatar -->
+      <g transform="translate(32, 170)">
         <circle cx="18" cy="18" r="18" fill="url(#brandGradient)"/>
         <text x="18" y="24" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">B</text>
 
-        <!-- Reply author with badge -->
-        <text x="46" y="14" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Bailey Vann</text>
-        <rect x="128" y="2" width="44" height="18" rx="4" fill="url(#purpleGradient)"/>
-        <text x="150" y="14" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF">HOST</text>
+        <text x="46" y="14" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1A1A1A">Bailey Vann</text>
+        <rect x="126" y="2" width="42" height="16" rx="4" fill="url(#purpleGradient)"/>
+        <text x="147" y="13" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#FFFFFF">HOST</text>
 
-        <!-- Reply text -->
-        <text x="46" y="40" font-family="Inter, sans-serif" font-size="14" fill="#374151">This is EXACTLY what's supposed to happen! Your shop can finally</text>
-        <text x="46" y="60" font-family="Inter, sans-serif" font-size="14" fill="#374151">breathe. Watch what happens to your views this week — the</text>
-        <text x="46" y="80" font-family="Inter, sans-serif" font-size="14" fill="#374151">algorithm rewards focus. Keep going!</text>
+        <text x="46" y="38" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">This is EXACTLY what's supposed to happen! Your shop can finally</text>
+        <text x="46" y="58" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">breathe. Watch what happens to your views this week — the</text>
+        <text x="46" y="78" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">algorithm rewards focus. Keep going!</text>
 
-        <!-- Reply engagement -->
-        <g transform="translate(46, 95)">
-          <use href="#icon-heart" x="0" y="0" width="18" height="18"/>
-          <text x="24" y="14" font-family="Inter, sans-serif" font-size="13" fill="#6B7280">8</text>
+        <g transform="translate(46, 92)">
+          <use href="#icon-heart-full" x="0" y="0" width="16" height="16"/>
+          <text x="22" y="12" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6B7280">8</text>
         </g>
       </g>
     </g>
 
     <!-- POST 2 -->
-    <g transform="translate(0, 320)">
-      <rect width="760" height="175" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
+    <g transform="translate(0, 310)">
+      <rect width="760" height="165" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
 
-      <!-- Avatar -->
-      <circle cx="44" cy="44" r="24" fill="url(#avatar5)"/>
-      <text x="44" y="51" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#166534">R</text>
+      <circle cx="40" cy="40" r="22" fill="url(#avatar5)"/>
+      <text x="40" y="47" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#166534">R</text>
 
-      <!-- Author & time -->
-      <text x="80" y="36" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Rachel B.</text>
-      <circle cx="156" cy="32" r="2" fill="#D1D5DB"/>
-      <text x="166" y="36" font-family="Inter, sans-serif" font-size="14" fill="#9CA3AF">5 hours ago</text>
+      <text x="74" y="32" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Rachel B.</text>
+      <circle cx="148" cy="28" r="2" fill="#D1D5DB"/>
+      <text x="158" y="32" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">5 hours ago</text>
 
-      <!-- Post text -->
-      <text x="80" y="62" font-family="Inter, sans-serif" font-size="15" fill="#374151">Week 2 check-in: Already seeing traffic increase on my remaining</text>
-      <text x="80" y="84" font-family="Inter, sans-serif" font-size="15" fill="#374151">listings! The DELETE phase actually works. My views are up 34%</text>
-      <text x="80" y="106" font-family="Inter, sans-serif" font-size="15" fill="#374151">and I literally have FEWER products.</text>
+      <text x="74" y="58" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">Week 2 check-in: Already seeing traffic increase on my remaining</text>
+      <text x="74" y="80" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">listings! The DELETE phase actually works. My views are up 34%</text>
+      <text x="74" y="102" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">and I literally have FEWER products.</text>
 
-      <!-- Engagement -->
-      <g transform="translate(80, 130)">
-        <g transform="translate(0, 0)">
-          <use href="#icon-fire" x="0" y="0" width="22" height="22"/>
-          <text x="28" y="16" font-family="Inter, sans-serif" font-size="14" fill="#6B7280">31</text>
-        </g>
-        <g transform="translate(70, 0)">
-          <use href="#icon-comment" x="0" y="0" width="22" height="22"/>
-          <text x="28" y="16" font-family="Inter, sans-serif" font-size="14" fill="#6B7280">8 comments</text>
-        </g>
+      <g transform="translate(74, 122)">
+        <use href="#icon-fire" x="0" y="0" width="20" height="20"/>
+        <text x="26" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">31</text>
+        <use href="#icon-comment" x="60" y="0" width="20" height="20"/>
+        <text x="86" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">8 comments</text>
       </g>
     </g>
 
-    <!-- POST 3 (partial, cut off) -->
-    <g transform="translate(0, 515)">
-      <rect width="760" height="160" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
+    <!-- POST 3 -->
+    <g transform="translate(0, 495)">
+      <rect width="760" height="165" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
 
-      <!-- Avatar -->
-      <circle cx="44" cy="44" r="24" fill="url(#avatar4)"/>
-      <text x="44" y="51" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#A16207">A</text>
+      <circle cx="40" cy="40" r="22" fill="url(#avatar4)"/>
+      <text x="40" y="47" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#A16207">A</text>
 
-      <!-- Author & time -->
-      <text x="80" y="36" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Amanda K.</text>
-      <circle cx="166" cy="32" r="2" fill="#D1D5DB"/>
-      <text x="176" y="36" font-family="Inter, sans-serif" font-size="14" fill="#9CA3AF">Yesterday</text>
+      <text x="74" y="32" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Amanda K.</text>
+      <circle cx="158" cy="28" r="2" fill="#D1D5DB"/>
+      <text x="168" y="32" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">Yesterday</text>
 
-      <!-- Post text -->
-      <text x="80" y="62" font-family="Inter, sans-serif" font-size="15" fill="#374151">Question for everyone — when you did the SEO framework on your</text>
-      <text x="80" y="84" font-family="Inter, sans-serif" font-size="15" fill="#374151">listings, did you change all of them at once or spread it out over a</text>
-      <text x="80" y="106" font-family="Inter, sans-serif" font-size="15" fill="#374151">few days? I'm trying to figure out the best approach...</text>
+      <text x="74" y="58" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">Question for everyone — when you did the SEO framework on your</text>
+      <text x="74" y="80" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">listings, did you change all of them at once or spread it out over a</text>
+      <text x="74" y="102" font-family="Inter, -apple-system, sans-serif" font-size="15" fill="#374151">few days? I'm trying to figure out the best approach...</text>
 
-      <!-- Engagement -->
-      <g transform="translate(80, 125)">
-        <g transform="translate(0, 0)">
-          <use href="#icon-thought" x="0" y="0" width="22" height="22"/>
-          <text x="28" y="16" font-family="Inter, sans-serif" font-size="14" fill="#6B7280">15</text>
-        </g>
-        <g transform="translate(70, 0)">
-          <use href="#icon-comment" x="0" y="0" width="22" height="22"/>
-          <text x="28" y="16" font-family="Inter, sans-serif" font-size="14" fill="#6B7280">22 comments</text>
-        </g>
+      <g transform="translate(74, 122)">
+        <use href="#icon-thought" x="0" y="0" width="20" height="20"/>
+        <text x="26" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">15</text>
+        <use href="#icon-comment" x="60" y="0" width="20" height="20"/>
+        <text x="86" y="15" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">22 comments</text>
       </g>
-
-      <!-- Fade overlay -->
-      <defs>
-        <linearGradient id="fadeOverlay" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="60%" style="stop-color:#FFFFFF;stop-opacity:0"/>
-          <stop offset="100%" style="stop-color:#F3F4F6;stop-opacity:1"/>
-        </linearGradient>
-      </defs>
-      <rect x="0" y="100" width="760" height="60" rx="0 0 12 12" fill="url(#fadeOverlay)"/>
     </g>
 
     <!-- Scroll indicator -->
-    <g transform="translate(700, 695)">
-      <rect x="0" y="0" width="56" height="28" rx="14" fill="#E5E7EB"/>
-      <path d="M20 10L28 18L36 10" stroke="#6B7280" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(700, 680)">
+      <rect x="0" y="0" width="50" height="26" rx="13" fill="#E5E7EB"/>
+      <path d="M18 9L25 16L32 9" stroke="#6B7280" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
 
   </g>
 
   <!-- ==================== RIGHT SIDEBAR (20%) ==================== -->
-  <g transform="translate(1084, 84)">
+  <g transform="translate(1064, 84)">
 
     <!-- About card -->
     <g transform="translate(0, 0)">
-      <rect width="292" height="160" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
+      <rect width="312" height="150" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
 
-      <text x="20" y="32" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">About</text>
+      <text x="20" y="30" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">About</text>
 
-      <text x="20" y="60" font-family="Inter, sans-serif" font-size="14" fill="#6B7280">Private community for Accelerator</text>
-      <text x="20" y="80" font-family="Inter, sans-serif" font-size="14" fill="#6B7280">members. Share wins, get feedback,</text>
-      <text x="20" y="100" font-family="Inter, sans-serif" font-size="14" fill="#6B7280">connect with fellow sellers.</text>
+      <text x="20" y="56" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">Private community for Accelerator</text>
+      <text x="20" y="74" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">members. Share wins, get feedback,</text>
+      <text x="20" y="92" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">connect with fellow sellers.</text>
 
       <!-- Member avatars -->
-      <g transform="translate(20, 120)">
-        <circle cx="0" cy="0" r="14" fill="url(#avatar1)" stroke="#FFFFFF" stroke-width="2"/>
-        <circle cx="22" cy="0" r="14" fill="url(#avatar2)" stroke="#FFFFFF" stroke-width="2"/>
-        <circle cx="44" cy="0" r="14" fill="url(#avatar3)" stroke="#FFFFFF" stroke-width="2"/>
-        <circle cx="66" cy="0" r="14" fill="url(#avatar4)" stroke="#FFFFFF" stroke-width="2"/>
-        <circle cx="88" cy="0" r="14" fill="url(#avatar5)" stroke="#FFFFFF" stroke-width="2"/>
-        <text x="116" y="5" font-family="Inter, sans-serif" font-size="13" fill="#6B7280">+242 more</text>
+      <g transform="translate(20, 112)">
+        <circle cx="0" cy="0" r="12" fill="url(#avatar1)" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="20" cy="0" r="12" fill="url(#avatar2)" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="40" cy="0" r="12" fill="url(#avatar3)" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="60" cy="0" r="12" fill="url(#avatar4)" stroke="#FFFFFF" stroke-width="2"/>
+        <circle cx="80" cy="0" r="12" fill="url(#avatar5)" stroke="#FFFFFF" stroke-width="2"/>
+        <text x="104" y="4" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6B7280">+242 more</text>
       </g>
     </g>
 
     <!-- Upcoming card -->
-    <g transform="translate(0, 180)">
-      <rect width="292" height="130" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
+    <g transform="translate(0, 170)">
+      <rect width="312" height="110" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
 
-      <text x="20" y="32" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Upcoming</text>
+      <text x="20" y="30" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">Upcoming</text>
 
-      <g transform="translate(20, 50)">
-        <!-- Calendar icon background -->
-        <rect width="50" height="50" rx="10" fill="#F0FDF4"/>
-        <use href="#icon-calendar" x="13" y="13" width="24" height="24"/>
+      <g transform="translate(20, 46)">
+        <rect width="44" height="44" rx="10" fill="#F0FDF4"/>
+        <use href="#icon-calendar" x="10" y="10" width="24" height="24"/>
       </g>
 
-      <text x="84" y="70" font-family="Inter, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Weekly Call — Thursday 11am CT</text>
-      <text x="84" y="90" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="#10B981">3 days away</text>
-
+      <text x="76" y="62" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#1A1A1A">Weekly Call — Thursday 11am CT</text>
+      <text x="76" y="82" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#10B981">3 days away</text>
     </g>
 
-    <!-- Quick stats card -->
-    <g transform="translate(0, 330)">
-      <rect width="292" height="110" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
+    <!-- This Week stats card -->
+    <g transform="translate(0, 300)">
+      <rect width="312" height="105" rx="12" fill="#FFFFFF" filter="url(#shadow-sm)"/>
 
-      <text x="20" y="32" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">This Week</text>
+      <text x="20" y="30" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1A1A1A">This Week</text>
 
-      <g transform="translate(20, 55)">
+      <g transform="translate(20, 50)">
         <g transform="translate(0, 0)">
-          <text x="0" y="18" font-family="Inter, sans-serif" font-size="26" font-weight="700" fill="#6366F1">47</text>
-          <text x="0" y="38" font-family="Inter, sans-serif" font-size="12" fill="#6B7280">Posts</text>
+          <text x="0" y="18" font-family="Inter, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#6366F1">47</text>
+          <text x="0" y="38" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">Posts</text>
         </g>
-        <g transform="translate(85, 0)">
-          <text x="0" y="18" font-family="Inter, sans-serif" font-size="26" font-weight="700" fill="#10B981">156</text>
-          <text x="0" y="38" font-family="Inter, sans-serif" font-size="12" fill="#6B7280">Comments</text>
+        <g transform="translate(90, 0)">
+          <text x="0" y="18" font-family="Inter, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#10B981">156</text>
+          <text x="0" y="38" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">Comments</text>
         </g>
-        <g transform="translate(180, 0)">
-          <text x="0" y="18" font-family="Inter, sans-serif" font-size="26" font-weight="700" fill="#F59E0B">12</text>
-          <text x="0" y="38" font-family="Inter, sans-serif" font-size="12" fill="#6B7280">Wins</text>
+        <g transform="translate(190, 0)">
+          <text x="0" y="18" font-family="Inter, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#F59E0B">12</text>
+          <text x="0" y="38" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#6B7280">Wins</text>
         </g>
       </g>
     </g>
@@ -451,10 +399,10 @@
   </g>
 
   <!-- Floating New Post button -->
-  <g transform="translate(620, 810)">
-    <rect x="0" y="0" width="160" height="52" rx="26" fill="url(#purpleGradient)" filter="url(#shadow-lg)"/>
-    <use href="#icon-write" x="28" y="14" width="24" height="24"/>
-    <text x="100" y="34" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">New Post</text>
+  <g transform="translate(620, 800)">
+    <rect x="0" y="0" width="160" height="50" rx="25" fill="url(#purpleGradient)" filter="url(#shadow-lg)"/>
+    <use href="#icon-write" x="30" y="13" width="24" height="24"/>
+    <text x="100" y="32" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">New Post</text>
   </g>
 
 </svg>
