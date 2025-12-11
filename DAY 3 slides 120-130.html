@@ -56,6 +56,9 @@
     position: relative;
     overflow: hidden;
     page-break-after: always;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bg-cream { background: #FDF8F3; }
@@ -75,10 +78,10 @@
     <div style="position: absolute; left: 0; top: 0; width: 50%; height: 100%; background: linear-gradient(180deg, rgba(224,122,95,0.08) 0%, rgba(224,122,95,0.03) 100%);"></div>
     <div style="position: absolute; right: 0; top: 0; width: 50%; height: 100%; background: linear-gradient(180deg, rgba(107,142,107,0.1) 0%, rgba(107,142,107,0.03) 100%);"></div>
     
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column;">
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center;">
         <!-- Header -->
         <div style="text-align: center; padding: 50px 80px 30px;">
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 72px; color: #3D2B1F; line-height: 1.1;">
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 76px; color: #3D2B1F; line-height: 1.1;">
                 "I'VE TRIED OTHER COURSES BEFORE."
             </h1>
         </div>
@@ -108,10 +111,10 @@
                     <path d="M185 160 L250 175" stroke="#E07A5F" stroke-width="2" opacity="0.5" stroke-dasharray="4,4"/>
                 </svg>
                 
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827; text-align: center; line-height: 1.5;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 36px; color: #5C4827; text-align: center; line-height: 1.5;">
                     Courses give you information.
                 </p>
-                <p style="font-family: 'Ogg Bold', serif; font-size: 36px; color: #E07A5F; text-align: center; margin-top: 15px;">
+                <p style="font-family: 'Ogg Bold', serif; font-size: 40px; color: #E07A5F; text-align: center; margin-top: 15px;">
                     Then they leave you alone.
                 </p>
             </div>
@@ -121,10 +124,10 @@
             
             <!-- RIGHT: This surrounds you -->
             <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px 50px;">
-                <p style="font-family: 'Ogg Bold', serif; font-size: 42px; color: #C9A227; margin-bottom: 30px;">
+                <p style="font-family: 'Ogg Bold', serif; font-size: 46px; color: #C9A227; margin-bottom: 30px;">
                     This isn't a course.
                 </p>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; margin-bottom: 25px;">This is:</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827; margin-bottom: 25px;">This is:</p>
                 
                 <!-- Visual: Support converging -->
                 <div style="position: relative; width: 380px; height: 320px;">
@@ -136,31 +139,31 @@
                     <!-- Support elements converging with arrows pointing IN -->
                     <!-- Top -->
                     <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #6B8E6B, #4A5D4A); border-radius: 12px; padding: 12px 20px;">
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFEF5; font-weight: 600;">→ Personalized guidance</span>
+                        <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #FFFEF5; font-weight: 600;">→ Personalized guidance</span>
                     </div>
                     <svg style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%);" width="20" height="40"><path d="M10 0 L10 30 M5 25 L10 32 L15 25" fill="none" stroke="#6B8E6B" stroke-width="2"/></svg>
                     
                     <!-- Top Right -->
                     <div style="position: absolute; top: 45px; right: 0; background: linear-gradient(135deg, #6B8E6B, #4A5D4A); border-radius: 12px; padding: 12px 18px;">
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFEF5; font-weight: 600;">→ Weekly accountability</span>
+                        <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #FFFEF5; font-weight: 600;">→ Weekly accountability</span>
                     </div>
                     <svg style="position: absolute; top: 95px; right: 90px;" width="50" height="50"><path d="M45 5 L15 35 M20 30 L12 38 L22 35" fill="none" stroke="#6B8E6B" stroke-width="2"/></svg>
                     
                     <!-- Bottom Right -->
                     <div style="position: absolute; bottom: 55px; right: 0; background: linear-gradient(135deg, #6B8E6B, #4A5D4A); border-radius: 12px; padding: 12px 18px;">
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFEF5; font-weight: 600;">→ Direct feedback</span>
+                        <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #FFFEF5; font-weight: 600;">→ Direct feedback</span>
                     </div>
                     <svg style="position: absolute; bottom: 105px; right: 100px;" width="50" height="50"><path d="M45 45 L15 15 M20 20 L12 12 L22 15" fill="none" stroke="#6B8E6B" stroke-width="2"/></svg>
                     
                     <!-- Bottom Left -->
                     <div style="position: absolute; bottom: 55px; left: 0; background: linear-gradient(135deg, #6B8E6B, #4A5D4A); border-radius: 12px; padding: 12px 18px;">
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #FFFEF5; font-weight: 600;">→ A community</span>
+                        <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #FFFEF5; font-weight: 600;">→ A community</span>
                     </div>
                     <svg style="position: absolute; bottom: 105px; left: 100px;" width="50" height="50"><path d="M5 45 L35 15 M30 20 L38 12 L28 15" fill="none" stroke="#6B8E6B" stroke-width="2"/></svg>
                     
                     <!-- Top Left -->
                     <div style="position: absolute; top: 45px; left: 0; background: linear-gradient(135deg, #C9A227, #B8860B); border-radius: 12px; padding: 12px 14px;">
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 15px; color: #FFFEF5; font-weight: 600;">→ Someone who won't let you quit</span>
+                        <span style="font-family: 'Satoshi', sans-serif; font-size: 19px; color: #FFFEF5; font-weight: 600;">→ Someone who won't let you quit</span>
                     </div>
                     <svg style="position: absolute; top: 95px; left: 95px;" width="50" height="50"><path d="M5 5 L35 35 M30 30 L38 38 L28 35" fill="none" stroke="#C9A227" stroke-width="2"/></svg>
                 </div>
@@ -184,18 +187,18 @@
         <ellipse cx="960" cy="200" rx="800" ry="350" fill="url(#s121grad)"/>
     </svg>
     
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; padding: 45px 80px;">
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 45px 80px;">
         <!-- Top Objection -->
         <div style="text-align: center; margin-bottom: 15px;">
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 68px; color: #3D2B1F;">
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 72px; color: #3D2B1F;">
                 "I NEED TO THINK ABOUT IT."
             </h1>
         </div>
         
         <!-- Fair + Question -->
         <div style="text-align: center; margin-bottom: 30px;">
-            <span style="font-family: 'Satoshi', sans-serif; font-size: 38px; color: #5C4827; font-weight: 600;">Fair.</span>
-            <span style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #636E72; margin-left: 20px;">But let me ask: What specifically are you unsure about?</span>
+            <span style="font-family: 'Satoshi', sans-serif; font-size: 42px; color: #5C4827; font-weight: 600;">Fair.</span>
+            <span style="font-family: 'Satoshi', sans-serif; font-size: 34px; color: #636E72; margin-left: 20px;">But let me ask: What specifically are you unsure about?</span>
         </div>
         
         <!-- Flowchart Diagnostic -->
@@ -204,11 +207,11 @@
             <div style="display: flex; flex-direction: column; align-items: center; width: 220px;">
                 <div style="width: 3px; height: 30px; background: #C9A227;"></div>
                 <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border: 2px solid rgba(201,162,39,0.3); border-radius: 16px; padding: 20px; text-align: center;">
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; font-weight: 600;">→ Is it the investment?</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #3D2B1F; font-weight: 600;">→ Is it the investment?</p>
                 </div>
                 <div style="width: 3px; height: 20px; background: #6B8E6B;"></div>
                 <div style="background: linear-gradient(135deg, #6B8E6B, #4A5D4A); border-radius: 12px; padding: 14px 20px;">
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #FFFEF5; font-weight: 600;">(There's a payment plan)</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #FFFEF5; font-weight: 600;">(There's a payment plan)</p>
                 </div>
             </div>
             
@@ -216,11 +219,11 @@
             <div style="display: flex; flex-direction: column; align-items: center; width: 220px;">
                 <div style="width: 3px; height: 30px; background: #C9A227;"></div>
                 <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border: 2px solid rgba(201,162,39,0.3); border-radius: 16px; padding: 20px; text-align: center;">
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; font-weight: 600;">→ Is it the time?</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #3D2B1F; font-weight: 600;">→ Is it the time?</p>
                 </div>
                 <div style="width: 3px; height: 20px; background: #6B8E6B;"></div>
                 <div style="background: linear-gradient(135deg, #6B8E6B, #4A5D4A); border-radius: 12px; padding: 14px 20px;">
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #FFFEF5; font-weight: 600;">(It's 25 min/day)</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #FFFEF5; font-weight: 600;">(It's 25 min/day)</p>
                 </div>
             </div>
             
@@ -228,11 +231,11 @@
             <div style="display: flex; flex-direction: column; align-items: center; width: 220px;">
                 <div style="width: 3px; height: 30px; background: #C9A227;"></div>
                 <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border: 2px solid rgba(201,162,39,0.3); border-radius: 16px; padding: 20px; text-align: center;">
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; font-weight: 600;">→ Is it whether it works?</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #3D2B1F; font-weight: 600;">→ Is it whether it works?</p>
                 </div>
                 <div style="width: 3px; height: 20px; background: #6B8E6B;"></div>
                 <div style="background: linear-gradient(135deg, #6B8E6B, #4A5D4A); border-radius: 12px; padding: 14px 20px;">
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #FFFEF5; font-weight: 600;">(There's a guarantee)</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #FFFEF5; font-weight: 600;">(There's a guarantee)</p>
                 </div>
             </div>
             
@@ -240,7 +243,7 @@
             <div style="display: flex; flex-direction: column; align-items: center; width: 220px;">
                 <div style="width: 3px; height: 30px; background: #C9A227;"></div>
                 <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border: 2px solid rgba(201,162,39,0.3); border-radius: 16px; padding: 20px; text-align: center;">
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #3D2B1F; font-weight: 600;">→ Is it something else?</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #3D2B1F; font-weight: 600;">→ Is it something else?</p>
                 </div>
                 <div style="width: 3px; height: 20px; background: transparent;"></div>
                 <div style="height: 48px;"></div>
@@ -254,14 +257,14 @@
                 <div style="position: absolute; inset: -20px; background: linear-gradient(135deg, rgba(224,122,95,0.1) 0%, rgba(201,162,39,0.1) 100%); border-radius: 24px; transform: skewY(-1deg);"></div>
                 
                 <div style="position: relative; background: linear-gradient(145deg, #FFFEF5 0%, #FAF6E8 100%); border-radius: 20px; padding: 35px 50px; border: 2px solid rgba(201,162,39,0.2);">
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; text-align: center; line-height: 1.5;">
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827; text-align: center; line-height: 1.5;">
                         "I need to think about it" usually means
                     </p>
-                    <p style="font-family: 'Ogg Bold', serif; font-size: 44px; color: #E07A5F; text-align: center; margin: 15px 0;">
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 48px; color: #E07A5F; text-align: center; margin: 15px 0;">
                         "I'm scared to commit."
                     </p>
                     <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #C9A227, transparent); margin: 25px auto;"></div>
-                    <p style="font-family: 'Ogg Bold', serif; font-size: 40px; color: #C9A227; text-align: center;">
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 44px; color: #C9A227; text-align: center;">
                         Waiting won't make you less scared. Action will.
                     </p>
                 </div>
@@ -285,27 +288,27 @@
         <ellipse cx="300" cy="900" rx="500" ry="400" fill="url(#s122grad)"/>
     </svg>
     
-    <div style="position: relative; z-index: 1; height: 100%; display: flex;">
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center;">
         <!-- LEFT: Big quote + subtitle -->
         <div style="width: 45%; display: flex; flex-direction: column; justify-content: center; padding: 60px 50px 60px 80px;">
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 52px; color: #3D2B1F; line-height: 1.15; margin-bottom: 25px;">
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 56px; color: #3D2B1F; line-height: 1.15; margin-bottom: 25px;">
                 "I NEED TO TALK TO MY HUSBAND/PARTNER."
             </h1>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #636E72; margin-bottom: 50px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #636E72; margin-bottom: 50px;">
                 I respect that. Truly. Here's what I'd suggest:
             </p>
             
             <!-- Bottom insight -->
             <div style="margin-top: auto;">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; line-height: 1.6;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #5C4827; line-height: 1.6;">
                     Most partners aren't against investing.
                 </p>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; line-height: 1.6;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #5C4827; line-height: 1.6;">
                     They're against investing <span style="color: #E07A5F; font-weight: 700;">WITHOUT A PLAN.</span>
                 </p>
                 <!-- Stamp -->
                 <div style="display: inline-block; margin-top: 25px; background: linear-gradient(135deg, #C9A227, #B8860B); border-radius: 8px; padding: 18px 35px; transform: rotate(-2deg);">
-                    <p style="font-family: 'Ogg Bold', serif; font-size: 36px; color: #FFFEF5;">This IS the plan.</p>
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 40px; color: #FFFEF5;">This IS the plan.</p>
                 </div>
             </div>
         </div>
@@ -319,8 +322,8 @@
                         <svg width="30" height="30" viewBox="0 0 30 30"><polygon points="15,5 15,20 25,12.5" fill="#FFFEF5"/><rect x="5" y="8" width="8" height="2" fill="#FFFEF5" rx="1"/><rect x="5" y="12" width="8" height="2" fill="#FFFEF5" rx="1"/><rect x="5" y="16" width="8" height="2" fill="#FFFEF5" rx="1"/></svg>
                     </div>
                     <div>
-                        <h3 style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #C9A227; margin-bottom: 12px;">SHARE THE REPLAY</h3>
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #5C4827; line-height: 1.5;">
+                        <h3 style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #C9A227; margin-bottom: 12px;">SHARE THE REPLAY</h3>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; line-height: 1.5;">
                             Let them see everything I showed you.
                         </p>
                     </div>
@@ -334,8 +337,8 @@
                         <svg width="30" height="30" viewBox="0 0 30 30"><path d="M15 4 L26 10 L26 18 C26 24 15 28 15 28 C15 28 4 24 4 18 L4 10 L15 4Z" fill="none" stroke="#FFFEF5" stroke-width="2.5"/><path d="M10 15 L14 19 L20 12" stroke="#FFFEF5" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                     <div>
-                        <h3 style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #C9A227; margin-bottom: 12px;">REMEMBER THE GUARANTEE</h3>
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #5C4827; line-height: 1.5;">
+                        <h3 style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #C9A227; margin-bottom: 12px;">REMEMBER THE GUARANTEE</h3>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; line-height: 1.5;">
                             This protects BOTH of you. No risk.
                         </p>
                     </div>
@@ -349,9 +352,9 @@
                         <svg width="30" height="30" viewBox="0 0 30 30"><path d="M5 22 Q5 26 9 26 L21 26 Q25 26 25 22 L25 10 Q25 6 21 6 L9 6 Q5 6 5 10 Z" fill="none" stroke="#FFFEF5" stroke-width="2.5"/><path d="M5 10 L15 17 L25 10" stroke="#FFFEF5" stroke-width="2" fill="none"/></svg>
                     </div>
                     <div>
-                        <h3 style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #C9A227; margin-bottom: 12px;">REFRAME THE CONVERSATION</h3>
+                        <h3 style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #C9A227; margin-bottom: 12px;">REFRAME THE CONVERSATION</h3>
                         <div style="background: rgba(201,162,39,0.1); border-radius: 12px; padding: 15px 20px; border-left: 4px solid #C9A227;">
-                            <p style="font-family: 'Satoshi', sans-serif; font-size: 21px; color: #3D2B1F; line-height: 1.5; font-style: italic;">
+                            <p style="font-family: 'Satoshi', sans-serif; font-size: 25px; color: #3D2B1F; line-height: 1.5; font-style: italic;">
                                 "Would you rather I keep struggling alone,<br>or invest in getting actual help?"
                             </p>
                         </div>
@@ -367,13 +370,13 @@
      Circular calendar wheel showing endless loop + breaking out
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); position: relative;">
-    <div style="position: relative; z-index: 1; height: 100%; display: flex;">
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center;">
         <!-- LEFT: Calendar Wheel -->
         <div style="width: 55%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px;">
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 48px; color: #FFFEF5; text-align: center; margin-bottom: 10px;">
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 52px; color: #FFFEF5; text-align: center; margin-bottom: 10px;">
                 "IT'S DECEMBER - BAD TIMING WITH THE HOLIDAYS."
             </h1>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: rgba(255,254,245,0.7); margin-bottom: 25px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: rgba(255,254,245,0.7); margin-bottom: 25px;">
                 Let me show you the calendar excuse pattern:
             </p>
             
@@ -418,21 +421,21 @@
                     </g>
                     
                     <!-- Center text -->
-                    <text x="225" y="220" text-anchor="middle" style="font-family: 'Ogg Bold', serif; font-size: 18px; fill: rgba(255,254,245,0.5);">ENDLESS</text>
-                    <text x="225" y="245" text-anchor="middle" style="font-family: 'Ogg Bold', serif; font-size: 18px; fill: rgba(255,254,245,0.5);">LOOP</text>
+                    <text x="225" y="220" text-anchor="middle" style="font-family: 'Ogg Bold', serif; font-size: 22px; fill: rgba(255,254,245,0.5);">ENDLESS</text>
+                    <text x="225" y="245" text-anchor="middle" style="font-family: 'Ogg Bold', serif; font-size: 22px; fill: rgba(255,254,245,0.5);">LOOP</text>
                 </svg>
             </div>
         </div>
         
         <!-- RIGHT: Breaking out - The truth -->
         <div style="width: 45%; display: flex; flex-direction: column; justify-content: center; padding: 50px 60px 50px 30px;">
-            <p style="font-family: 'Ogg Bold', serif; font-size: 46px; color: #FFFEF5; margin-bottom: 40px;">
+            <p style="font-family: 'Ogg Bold', serif; font-size: 50px; color: #FFFEF5; margin-bottom: 40px;">
                 There's never a "perfect" time.
             </p>
             
             <!-- Timeline breaking out -->
             <div style="background: linear-gradient(145deg, rgba(201,162,39,0.15) 0%, rgba(201,162,39,0.05) 100%); border: 1px solid rgba(201,162,39,0.3); border-radius: 24px; padding: 35px 40px;">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: rgba(255,254,245,0.9); margin-bottom: 25px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: rgba(255,254,245,0.9); margin-bottom: 25px;">
                     90 days from now is <span style="font-weight: 700; color: #D4AF37;">MARCH.</span>
                 </p>
                 
@@ -440,16 +443,16 @@
                 <div style="display: flex; gap: 30px; margin-top: 20px;">
                     <!-- Path A: Start in March -->
                     <div style="flex: 1; background: rgba(224,122,95,0.2); border-radius: 16px; padding: 25px; border: 1px solid rgba(224,122,95,0.3);">
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.7); margin-bottom: 10px;">OPTION A</p>
-                        <p style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #E07A5F;">START in March?</p>
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: rgba(255,254,245,0.6); margin-top: 10px;">Still at zero...</p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: rgba(255,254,245,0.7); margin-bottom: 10px;">OPTION A</p>
+                        <p style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #E07A5F;">START in March?</p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: rgba(255,254,245,0.6); margin-top: 10px;">Still at zero...</p>
                     </div>
                     
                     <!-- Path B: 90 days in -->
                     <div style="flex: 1; background: rgba(107,142,107,0.25); border-radius: 16px; padding: 25px; border: 2px solid rgba(107,142,107,0.5);">
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: rgba(255,254,245,0.7); margin-bottom: 10px;">OPTION B</p>
-                        <p style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #FFFEF5;">90 DAYS IN by March?</p>
-                        <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: #D4AF37; margin-top: 10px;">Transformed.</p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: rgba(255,254,245,0.7); margin-bottom: 10px;">OPTION B</p>
+                        <p style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #FFFEF5;">90 DAYS IN by March?</p>
+                        <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #D4AF37; margin-top: 10px;">Transformed.</p>
                     </div>
                 </div>
             </div>
@@ -472,13 +475,13 @@
         <ellipse cx="1600" cy="300" rx="500" ry="400" fill="url(#s124grad)"/>
     </svg>
     
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; padding: 50px 100px;">
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 50px 100px;">
         <!-- Header -->
-        <h1 style="font-family: 'Ogg Bold', serif; font-size: 72px; color: #3D2B1F; text-align: center; margin-bottom: 30px;">
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 76px; color: #3D2B1F; text-align: center; margin-bottom: 30px;">
             "I'M NOT TECH-SAVVY."
         </h1>
         
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #636E72; text-align: center; margin-bottom: 35px;">If you can:</p>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 34px; color: #636E72; text-align: center; margin-bottom: 35px;">If you can:</p>
         
         <!-- Three BIG skill checks -->
         <div style="display: flex; justify-content: center; gap: 50px; margin-bottom: 30px;">
@@ -487,7 +490,7 @@
                     <circle cx="27.5" cy="27.5" r="25" fill="#1B8A8A"/>
                     <path d="M17 27 L24 34 L38 20" stroke="#FFFEF5" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #3D2B1F; font-weight: 600;">→ Watch a YouTube video</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #3D2B1F; font-weight: 600;">→ Watch a YouTube video</p>
             </div>
             
             <div style="display: flex; align-items: center; gap: 20px; background: linear-gradient(145deg, #E8F5F3 0%, #FFFFFF 100%); border-radius: 20px; padding: 25px 40px; border: 2px solid rgba(27,138,138,0.2);">
@@ -495,7 +498,7 @@
                     <circle cx="27.5" cy="27.5" r="25" fill="#1B8A8A"/>
                     <path d="M17 27 L24 34 L38 20" stroke="#FFFEF5" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #3D2B1F; font-weight: 600;">→ Type in a search bar</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #3D2B1F; font-weight: 600;">→ Type in a search bar</p>
             </div>
             
             <div style="display: flex; align-items: center; gap: 20px; background: linear-gradient(145deg, #E8F5F3 0%, #FFFFFF 100%); border-radius: 20px; padding: 25px 40px; border: 2px solid rgba(27,138,138,0.2);">
@@ -503,15 +506,15 @@
                     <circle cx="27.5" cy="27.5" r="25" fill="#1B8A8A"/>
                     <path d="M17 27 L24 34 L38 20" stroke="#FFFEF5" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #3D2B1F; font-weight: 600;">→ Copy and paste text</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #3D2B1F; font-weight: 600;">→ Copy and paste text</p>
             </div>
         </div>
         
-        <p style="font-family: 'Ogg Bold', serif; font-size: 48px; color: #1B8A8A; text-align: center; margin-bottom: 20px;">
+        <p style="font-family: 'Ogg Bold', serif; font-size: 52px; color: #1B8A8A; text-align: center; margin-bottom: 20px;">
             You have all the skills you need.
         </p>
         
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #636E72; text-align: center; margin-bottom: 30px;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #636E72; text-align: center; margin-bottom: 30px;">
             Everything has step-by-step walkthroughs.
         </p>
         
@@ -524,19 +527,19 @@
                     <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #E07A5F;">know better</p>
                 </div>
                 <div style="width: 140px; background: #E07A5F; opacity: 0.5; padding: 15px; text-align: center;">
-                    <p style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #FFFEF5;">2nd</p>
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #FFFEF5;">2nd</p>
                 </div>
             </div>
             
             <!-- 1st place: Tech-nervous -->
             <div style="display: flex; flex-direction: column; align-items: center;">
                 <div style="width: 180px; background: linear-gradient(145deg, #6B8E6B 0%, #4A5D4A 100%); border-radius: 16px 16px 0 0; padding: 25px 20px; text-align: center;">
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; color: rgba(255,254,245,0.8);">My "tech-nervous" students</p>
-                    <p style="font-family: 'Ogg Bold', serif; font-size: 22px; color: #D4AF37; margin-top: 8px;">MOST SUCCESSFUL</p>
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: rgba(255,254,245,0.8);">My "tech-nervous" students</p>
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 26px; color: #D4AF37; margin-top: 8px;">MOST SUCCESSFUL</p>
                     <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: rgba(255,254,245,0.7); margin-top: 10px;">They follow directions</p>
                 </div>
                 <div style="width: 180px; background: linear-gradient(135deg, #C9A227, #D4AF37); padding: 20px; text-align: center;">
-                    <p style="font-family: 'Ogg Bold', serif; font-size: 36px; color: #FFFEF5;">1st</p>
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 40px; color: #FFFEF5;">1st</p>
                 </div>
             </div>
             
@@ -547,7 +550,7 @@
                     <p style="font-family: 'Satoshi', sans-serif; font-size: 14px; color: #636E72;">everything</p>
                 </div>
                 <div style="width: 140px; background: #636E72; opacity: 0.4; padding: 12px; text-align: center;">
-                    <p style="font-family: 'Ogg Bold', serif; font-size: 24px; color: #FFFEF5;">3rd</p>
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #FFFEF5;">3rd</p>
                 </div>
             </div>
         </div>
@@ -559,7 +562,7 @@
      Massive 96M + crowd visualization
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(180deg, #FDF8F3 0%, #FAF3E0 100%); position: relative; overflow: hidden;">
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column;">
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center;">
         <!-- Header -->
         <div style="text-align: center; padding: 45px 80px 20px;">
             <h1 style="font-family: 'Ogg Bold', serif; font-size: 64px; color: #3D2B1F;">
@@ -572,38 +575,38 @@
             <p style="font-family: 'Ogg Bold', serif; font-size: 160px; color: #C9A227; line-height: 1; letter-spacing: -5px;">
                 96+ MILLION
             </p>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 36px; color: #5C4827; margin-top: 5px;">active buyers.</p>
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 40px; color: #5C4827; margin-top: 5px;">active buyers.</p>
         </div>
         
         <!-- Middle text -->
         <div style="text-align: center; padding: 25px 80px;">
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #636E72;">Yes, there are a lot of sellers.</p>
-            <p style="font-family: 'Ogg Bold', serif; font-size: 38px; color: #E07A5F; margin-top: 10px;">But most of them are doing it wrong.</p>
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #636E72;">Yes, there are a lot of sellers.</p>
+            <p style="font-family: 'Ogg Bold', serif; font-size: 42px; color: #E07A5F; margin-top: 10px;">But most of them are doing it wrong.</p>
         </div>
         
         <!-- Crowd visualization -->
         <div style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 0 80px; position: relative;">
             <div style="position: relative; width: 100%; max-width: 1400px;">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #636E72; margin-bottom: 20px;">They're:</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #636E72; margin-bottom: 20px;">They're:</p>
                 
                 <div style="display: flex; gap: 60px; align-items: flex-start;">
                     <!-- Left: What bad sellers do -->
                     <div style="display: flex; flex-direction: column; gap: 12px; width: 350px;">
                         <div style="display: flex; align-items: center; gap: 15px; opacity: 0.7;">
                             <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="12" fill="rgba(224,122,95,0.2)"/><path d="M9 9 L19 19 M19 9 L9 19" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/></svg>
-                            <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #5C4827;">→ Not researching demand</span>
+                            <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827;">→ Not researching demand</span>
                         </div>
                         <div style="display: flex; align-items: center; gap: 15px; opacity: 0.7;">
                             <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="12" fill="rgba(224,122,95,0.2)"/><path d="M9 9 L19 19 M19 9 L9 19" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/></svg>
-                            <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #5C4827;">→ Ignoring SEO</span>
+                            <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827;">→ Ignoring SEO</span>
                         </div>
                         <div style="display: flex; align-items: center; gap: 15px; opacity: 0.7;">
                             <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="12" fill="rgba(224,122,95,0.2)"/><path d="M9 9 L19 19 M19 9 L9 19" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/></svg>
-                            <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #5C4827;">→ Using terrible photos</span>
+                            <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827;">→ Using terrible photos</span>
                         </div>
                         <div style="display: flex; align-items: center; gap: 15px; opacity: 0.7;">
                             <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="12" fill="rgba(224,122,95,0.2)"/><path d="M9 9 L19 19 M19 9 L9 19" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/></svg>
-                            <span style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #5C4827;">→ Quitting after 2 weeks</span>
+                            <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827;">→ Quitting after 2 weeks</span>
                         </div>
                     </div>
                     
@@ -637,7 +640,7 @@
         
         <!-- Bottom -->
         <div style="text-align: center; padding: 20px 80px 45px;">
-            <p style="font-family: 'Ogg Bold', serif; font-size: 44px; color: #6B8E6B;">
+            <p style="font-family: 'Ogg Bold', serif; font-size: 48px; color: #6B8E6B;">
                 There's always room for sellers who do it <span style="color: #C9A227;">RIGHT.</span>
             </p>
         </div>
@@ -649,7 +652,7 @@
      Messy canvas vs clean canvas + Sara testimonial
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: #FDF8F3; position: relative;">
-    <div style="position: relative; z-index: 1; height: 100%; display: flex;">
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center;">
         <!-- LEFT: Visual metaphor -->
         <div style="width: 55%; display: flex; flex-direction: column; padding: 50px 40px 50px 80px;">
             <h1 style="font-family: 'Ogg Bold', serif; font-size: 58px; color: #3D2B1F; margin-bottom: 20px;">
@@ -696,14 +699,14 @@
             
             <!-- Advantages -->
             <div style="background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 16px; padding: 25px 30px; border: 1px solid rgba(201,162,39,0.15);">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; margin-bottom: 8px;">No bad habits to unlearn.</p>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; margin-bottom: 8px;">No wrong strategies to undo.</p>
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827;">You're a blank slate.</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #5C4827; margin-bottom: 8px;">No bad habits to unlearn.</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #5C4827; margin-bottom: 8px;">No wrong strategies to undo.</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #5C4827;">You're a blank slate.</p>
             </div>
             
             <!-- Roadmap -->
             <div style="margin-top: 25px;">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: #5C4827; line-height: 1.6;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827; line-height: 1.6;">
                     The program meets you where you are.<br>
                     Your personalized roadmap is built for <span style="font-weight: 700; color: #C9A227;">YOUR level.</span>
                 </p>
@@ -716,14 +719,14 @@
         <!-- RIGHT: Sara testimonial -->
         <div style="width: 45%; display: flex; align-items: center; justify-content: center; padding: 50px;">
             <div style="background: linear-gradient(145deg, #6B8E6B 0%, #4A5D4A 100%); border-radius: 28px; padding: 45px; width: 100%; max-width: 420px; transform: rotate(1deg);">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 15px; color: rgba(255,254,245,0.6); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px;">PROOF</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 19px; color: rgba(255,254,245,0.6); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px;">PROOF</p>
                 
                 <!-- Photo placeholder -->
                 <div style="width: 100px; height: 100px; background: rgba(255,254,245,0.15); border-radius: 50%; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; border: 3px solid rgba(255,254,245,0.3);">
                     <svg width="45" height="45" viewBox="0 0 45 45"><circle cx="22.5" cy="17" r="10" fill="rgba(255,254,245,0.5)"/><path d="M8 42 Q8 30 22.5 30 Q37 30 37 42" fill="rgba(255,254,245,0.5)"/></svg>
                 </div>
                 
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: rgba(255,254,245,0.95); line-height: 1.6; margin-bottom: 20px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: rgba(255,254,245,0.95); line-height: 1.6; margin-bottom: 20px;">
                     Sara joined with <span style="font-weight: 700; color: #D4AF37;">0 designs</span> and <span style="font-weight: 700; color: #D4AF37;">0 idea</span> what she was doing.
                 </p>
                 <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: rgba(255,254,245,0.85); line-height: 1.6; margin-bottom: 25px;">
@@ -744,13 +747,13 @@
      Chaos to structure transformation + Liam
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: #FDF8F3; position: relative;">
-    <div style="position: relative; z-index: 1; height: 100%; display: flex;">
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; align-items: center;">
         <!-- LEFT: Content + transformation visual -->
         <div style="width: 55%; display: flex; flex-direction: column; padding: 50px 40px 50px 80px;">
             <h1 style="font-family: 'Ogg Bold', serif; font-size: 50px; color: #3D2B1F; margin-bottom: 15px;">
                 "I HAVE ADHD / GET OVERWHELMED EASILY."
             </h1>
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; margin-bottom: 30px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827; margin-bottom: 30px;">
                 The Empire System is <span style="font-weight: 700; color: #1B8A8A;">DESIGNED</span> for busy, distracted brains.
             </p>
             
@@ -818,31 +821,31 @@
             
             <!-- Key insight -->
             <div style="margin-top: 25px; background: linear-gradient(145deg, #1B8A8A 0%, #2BA5A3 100%); border-radius: 14px; padding: 22px 30px;">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #FFFEF5;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #FFFEF5;">
                     You don't need motivation. You need a <span style="font-weight: 700; color: #D4AF37;">system.</span>
                 </p>
-                <p style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #FFFEF5; margin-top: 8px;">That's what this is.</p>
+                <p style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #FFFEF5; margin-top: 8px;">That's what this is.</p>
             </div>
         </div>
         
         <!-- RIGHT: Liam testimonial -->
         <div style="width: 45%; display: flex; align-items: center; justify-content: center; padding: 50px;">
             <div style="background: linear-gradient(145deg, #1B8A8A 0%, #2BA5A3 100%); border-radius: 28px; padding: 45px; width: 100%; max-width: 420px; transform: rotate(-1deg);">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 15px; color: rgba(255,254,245,0.6); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px;">PROOF</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 19px; color: rgba(255,254,245,0.6); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px;">PROOF</p>
                 
                 <!-- Photo placeholder -->
                 <div style="width: 100px; height: 100px; background: rgba(255,254,245,0.15); border-radius: 50%; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; border: 3px solid rgba(255,254,245,0.3);">
                     <svg width="45" height="45" viewBox="0 0 45 45"><circle cx="22.5" cy="17" r="10" fill="rgba(255,254,245,0.5)"/><path d="M8 42 Q8 30 22.5 30 Q37 30 37 42" fill="rgba(255,254,245,0.5)"/></svg>
                 </div>
                 
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 22px; color: rgba(255,254,245,0.95); line-height: 1.6; margin-bottom: 20px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: rgba(255,254,245,0.95); line-height: 1.6; margin-bottom: 20px;">
                     Liam has <span style="font-weight: 700; color: #D4AF37;">ADHD</span> and said he couldn't finish courses.
                 </p>
                 <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: rgba(255,254,245,0.85); line-height: 1.6; margin-bottom: 25px;">
                     The 90-day roadmap finally made him follow through -
                 </p>
                 <div style="background: rgba(0,0,0,0.15); border-radius: 12px; padding: 20px; border-left: 4px solid #D4AF37;">
-                    <p style="font-family: 'Ogg Bold', serif; font-size: 30px; color: #FFFEF5; line-height: 1.3;">
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 34px; color: #FFFEF5; line-height: 1.3;">
                         he hit his first profitable month in 8 weeks.
                     </p>
                 </div>
@@ -856,13 +859,13 @@
      System-centered with surrounding success profiles
 ═══════════════════════════════════════════════════════════════════════════ -->
 <div class="slide" style="background: linear-gradient(145deg, #FDF8F3 0%, #FAF6E8 100%); position: relative;">
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; padding: 50px 80px;">
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 50px 80px;">
         <!-- Header -->
-        <h1 style="font-family: 'Ogg Bold', serif; font-size: 52px; color: #3D2B1F; text-align: center; line-height: 1.2; margin-bottom: 25px;">
+        <h1 style="font-family: 'Ogg Bold', serif; font-size: 56px; color: #3D2B1F; text-align: center; line-height: 1.2; margin-bottom: 25px;">
             "THIS WORKS FOR OTHER PEOPLE.<br>I'M NOT SPECIAL ENOUGH."
         </h1>
         
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #636E72; margin-bottom: 30px;">Let me tell you who succeeds in my community:</p>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #636E72; margin-bottom: 30px;">Let me tell you who succeeds in my community:</p>
         
         <!-- Success profiles surrounding the system -->
         <div style="position: relative; width: 100%; max-width: 1100px; height: 350px; margin-bottom: 30px;">
@@ -874,7 +877,7 @@
                         <circle cx="25" cy="25" r="10" fill="none" stroke="#FFFEF5" stroke-width="2"/>
                         <circle cx="25" cy="25" r="4" fill="#FFFEF5"/>
                     </svg>
-                    <p style="font-family: 'Ogg Bold', serif; font-size: 18px; color: #FFFEF5;">THE SYSTEM</p>
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 22px; color: #FFFEF5;">THE SYSTEM</p>
                 </div>
             </div>
             
@@ -906,21 +909,21 @@
         </div>
         
         <!-- The insight -->
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; text-align: center; margin-bottom: 20px;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827; text-align: center; margin-bottom: 20px;">
             The system is what's special. Not me. Not them.
         </p>
         
         <!-- Formula -->
         <div style="background: linear-gradient(135deg, #C9A227, #B8860B); border-radius: 16px; padding: 25px 50px; margin-bottom: 25px;">
-            <p style="font-family: 'Ogg Bold', serif; font-size: 40px; color: #FFFEF5; text-align: center;">
+            <p style="font-family: 'Ogg Bold', serif; font-size: 44px; color: #FFFEF5; text-align: center;">
                 Follow the system → Get results.
             </p>
         </div>
         
         <!-- Key insight -->
-        <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; text-align: center;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827; text-align: center;">
             The most successful students aren't the most talented.<br>
-            They're the most <span style="font-family: 'Ogg Bold', serif; font-size: 36px; color: #C9A227;">CONSISTENT.</span>
+            They're the most <span style="font-family: 'Ogg Bold', serif; font-size: 40px; color: #C9A227;">CONSISTENT.</span>
         </p>
     </div>
 </div>
@@ -934,13 +937,13 @@
     <div style="position: absolute; left: 0; top: 0; width: 50%; height: 100%; background: linear-gradient(180deg, rgba(224,122,95,0.06) 0%, rgba(224,122,95,0.02) 100%);"></div>
     <div style="position: absolute; right: 0; top: 0; width: 50%; height: 100%; background: linear-gradient(180deg, rgba(107,142,107,0.08) 0%, rgba(107,142,107,0.02) 100%);"></div>
     
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column;">
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center;">
         <!-- Header -->
         <div style="text-align: center; padding: 45px 80px 25px;">
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 68px; color: #3D2B1F;">
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 72px; color: #3D2B1F;">
                 "I'M NOT CREATIVE. I CAN'T DESIGN THINGS."
             </h1>
-            <p style="font-family: 'Ogg Bold', serif; font-size: 52px; color: #6B8E6B; margin-top: 15px;">Neither can I.</p>
+            <p style="font-family: 'Ogg Bold', serif; font-size: 56px; color: #6B8E6B; margin-top: 15px;">Neither can I.</p>
         </div>
         
         <!-- Split content -->
@@ -957,11 +960,11 @@
                     <circle cx="200" cy="120" r="35" fill="#E07A5F" opacity="0.1"/>
                     <rect x="100" y="60" width="80" height="80" fill="none" stroke="#E07A5F" stroke-width="2" opacity="0.2" transform="rotate(15 140 100)"/>
                     <!-- Question marks -->
-                    <text x="60" y="140" style="font-family: 'Ogg Bold', serif; font-size: 40px; fill: #E07A5F; opacity: 0.4;">?</text>
-                    <text x="200" y="60" style="font-family: 'Ogg Bold', serif; font-size: 30px; fill: #E07A5F; opacity: 0.3;">?</text>
+                    <text x="60" y="140" style="font-family: 'Ogg Bold', serif; font-size: 44px; fill: #E07A5F; opacity: 0.4;">?</text>
+                    <text x="200" y="60" style="font-family: 'Ogg Bold', serif; font-size: 34px; fill: #E07A5F; opacity: 0.3;">?</text>
                 </svg>
                 
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #636E72; text-align: center; line-height: 1.5;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #636E72; text-align: center; line-height: 1.5;">
                     I don't "create from scratch."<br>
                     I don't sit with a blank canvas and imagine.
                 </p>
@@ -971,14 +974,14 @@
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 0;">
                 <div style="width: 4px; flex: 1; background: linear-gradient(180deg, transparent 0%, #C9A227 30%, #C9A227 70%, transparent 100%);"></div>
                 <div style="background: linear-gradient(135deg, #C9A227, #B8860B); border-radius: 12px; padding: 18px 28px; margin: 15px 0; transform: rotate(-90deg); white-space: nowrap;">
-                    <p style="font-family: 'Ogg Bold', serif; font-size: 24px; color: #FFFEF5;">This isn't art. It's STRATEGY.</p>
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 28px; color: #FFFEF5;">This isn't art. It's STRATEGY.</p>
                 </div>
                 <div style="width: 4px; flex: 1; background: linear-gradient(180deg, transparent 0%, #C9A227 30%, #C9A227 70%, transparent 100%);"></div>
             </div>
             
             <!-- RIGHT: STRATEGY (clear) -->
             <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 40px;">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #5C4827; margin-bottom: 20px;">Here's what I actually do:</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; margin-bottom: 20px;">Here's what I actually do:</p>
                 
                 <!-- Strategy toolkit -->
                 <div style="display: flex; flex-direction: column; gap: 14px; width: 100%; max-width: 380px;">
@@ -1015,9 +1018,9 @@
         
         <!-- Bottom insight -->
         <div style="text-align: center; padding: 20px 80px 45px;">
-            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827;">
                 The most successful sellers aren't artists.<br>
-                They're <span style="font-family: 'Ogg Bold', serif; font-size: 36px; color: #6B8E6B;">researchers who execute.</span>
+                They're <span style="font-family: 'Ogg Bold', serif; font-size: 40px; color: #6B8E6B;">researchers who execute.</span>
             </p>
         </div>
     </div>
@@ -1038,10 +1041,10 @@
         <ellipse cx="960" cy="650" rx="800" ry="450" fill="url(#s130glow)"/>
     </svg>
     
-    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; padding: 50px 100px;">
+    <div style="position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 50px 100px;">
         <!-- Header -->
         <div style="text-align: center; margin-bottom: 25px;">
-            <h1 style="font-family: 'Ogg Bold', serif; font-size: 72px; color: #3D2B1F;">
+            <h1 style="font-family: 'Ogg Bold', serif; font-size: 76px; color: #3D2B1F;">
                 "WHAT IF I FAIL... AGAIN?"
             </h1>
             <p style="font-family: 'Ogg Bold', serif; font-size: 56px; color: #6B8E6B; margin-top: 15px;">You didn't fail before.</p>
@@ -1051,7 +1054,7 @@
         <div style="flex: 1; display: flex; gap: 60px; align-items: center;">
             <!-- LEFT: What was missing -->
             <div style="flex: 1;">
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #636E72; margin-bottom: 25px;">You TRIED things without:</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #636E72; margin-bottom: 25px;">You TRIED things without:</p>
                 
                 <!-- Missing elements as empty slots being filled -->
                 <div style="display: flex; flex-direction: column; gap: 14px;">
@@ -1059,36 +1062,36 @@
                         <div style="width: 45px; height: 45px; background: linear-gradient(145deg, rgba(224,122,95,0.15), rgba(224,122,95,0.08)); border: 2px dashed #E07A5F; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                             <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/></svg>
                         </div>
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827;">→ A proven system</span>
+                        <span style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #5C4827;">→ A proven system</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 18px;">
                         <div style="width: 45px; height: 45px; background: linear-gradient(145deg, rgba(224,122,95,0.15), rgba(224,122,95,0.08)); border: 2px dashed #E07A5F; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                             <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/></svg>
                         </div>
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827;">→ Personal guidance</span>
+                        <span style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #5C4827;">→ Personal guidance</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 18px;">
                         <div style="width: 45px; height: 45px; background: linear-gradient(145deg, rgba(224,122,95,0.15), rgba(224,122,95,0.08)); border: 2px dashed #E07A5F; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                             <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/></svg>
                         </div>
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827;">→ Accountability</span>
+                        <span style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #5C4827;">→ Accountability</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 18px;">
                         <div style="width: 45px; height: 45px; background: linear-gradient(145deg, rgba(224,122,95,0.15), rgba(224,122,95,0.08)); border: 2px dashed #E07A5F; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                             <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/></svg>
                         </div>
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827;">→ Someone checking your work</span>
+                        <span style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #5C4827;">→ Someone checking your work</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 18px;">
                         <div style="width: 45px; height: 45px; background: linear-gradient(145deg, rgba(224,122,95,0.15), rgba(224,122,95,0.08)); border: 2px dashed #E07A5F; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
                             <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 5 L15 15 M15 5 L5 15" stroke="#E07A5F" stroke-width="2.5" stroke-linecap="round"/></svg>
                         </div>
-                        <span style="font-family: 'Satoshi', sans-serif; font-size: 26px; color: #5C4827;">→ A community for support</span>
+                        <span style="font-family: 'Satoshi', sans-serif; font-size: 30px; color: #5C4827;">→ A community for support</span>
                     </div>
                 </div>
                 
-                <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; margin-top: 30px;">
-                    That's not failure. That's <span style="font-family: 'Ogg Bold', serif; font-size: 36px; color: #C9A227;">EXPERIMENTATION.</span>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827; margin-top: 30px;">
+                    That's not failure. That's <span style="font-family: 'Ogg Bold', serif; font-size: 40px; color: #C9A227;">EXPERIMENTATION.</span>
                 </p>
             </div>
             
@@ -1144,10 +1147,10 @@
                 
                 <!-- This time is different -->
                 <div style="background: linear-gradient(145deg, #6B8E6B 0%, #4A5D4A 100%); border-radius: 22px; padding: 35px 45px; text-align: center; max-width: 450px;">
-                    <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: rgba(255,254,245,0.9); margin-bottom: 15px;">
+                    <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: rgba(255,254,245,0.9); margin-bottom: 15px;">
                         This time is different because<br>the <span style="font-weight: 700; color: #D4AF37;">SUPPORT</span> is different.
                     </p>
-                    <p style="font-family: 'Ogg Bold', serif; font-size: 32px; color: #FFFEF5; line-height: 1.4;">
+                    <p style="font-family: 'Ogg Bold', serif; font-size: 36px; color: #FFFEF5; line-height: 1.4;">
                         The missing ingredient wasn't you.<br>
                         It was the support system.
                     </p>
