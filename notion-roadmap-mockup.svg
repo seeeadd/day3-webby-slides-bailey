@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200" width="800" height="1200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+      .title { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 40px; font-weight: 700; fill: #37352F; }
+      .description { font-family: 'Inter', sans-serif; font-size: 16px; fill: #37352F; }
+      .metadata { font-family: 'Inter', sans-serif; font-size: 12px; fill: #9B9A97; }
+      .phase-title { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; fill: #37352F; }
+      .phase-sub { font-family: 'Inter', sans-serif; font-size: 13px; fill: #787774; }
+      .checklist-text { font-family: 'Inter', sans-serif; font-size: 14px; fill: #37352F; }
+      .checklist-done { font-family: 'Inter', sans-serif; font-size: 14px; fill: #9B9A97; text-decoration: line-through; }
+      .progress-text { font-family: 'Inter', sans-serif; font-size: 12px; fill: #9B9A97; }
+      .sidebar-title { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; fill: #37352F; }
+      .sidebar-label { font-family: 'Inter', sans-serif; font-size: 12px; fill: #9B9A97; }
+      .sidebar-value { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; fill: #37352F; }
+      .icon { font-family: 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; }
+    </style>
+
+    <!-- Checkbox unchecked -->
+    <g id="checkbox-unchecked">
+      <rect width="16" height="16" rx="3" fill="#FFFFFF" stroke="#C4C4C4" stroke-width="1.5"/>
+    </g>
+
+    <!-- Checkbox checked -->
+    <g id="checkbox-checked">
+      <rect width="16" height="16" rx="3" fill="#2EAADC"/>
+      <path d="M4 8L7 11L12 5" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1200" fill="#FFFFFF"/>
+
+  <!-- Page Icon -->
+  <text x="72" y="120" font-size="78" class="icon">🗺️</text>
+
+  <!-- Page Title -->
+  <text x="72" y="200" class="title">Sarah's 90-Day Accelerator Roadmap</text>
+
+  <!-- Page Description -->
+  <text x="72" y="228" class="description">Your personalized path to $5K/month on Etsy</text>
+
+  <!-- Metadata -->
+  <text x="72" y="252" class="metadata">Created by Bailey Vann • Last edited Dec 2, 2024</text>
+
+  <!-- ==================== PHASE 1: DELETE ==================== -->
+  <g transform="translate(72, 292)">
+    <!-- Box background -->
+    <rect width="500" height="195" rx="4" fill="#FFFFFF" stroke="rgba(55,53,47,0.09)" stroke-width="1"/>
+    <!-- Left accent border -->
+    <rect width="4" height="195" rx="0" fill="#E9967A"/>
+
+    <!-- Phase header -->
+    <text x="24" y="32" font-size="18" class="icon">✂️</text>
+    <text x="50" y="32" class="phase-title">PHASE 1: DELETE — Weeks 1-3</text>
+
+    <!-- Subheader -->
+    <text x="50" y="52" class="phase-sub">Clear the dead weight so your shop can breathe</text>
+
+    <!-- Checklist items -->
+    <g transform="translate(24, 72)">
+      <use href="#checkbox-checked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-done">Complete shop audit questionnaire</text>
+    </g>
+    <g transform="translate(24, 98)">
+      <use href="#checkbox-checked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-done">Identify bottom 20% performing listings</text>
+    </g>
+    <g transform="translate(24, 124)">
+      <use href="#checkbox-unchecked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-text">Archive or delete dead listings</text>
+    </g>
+    <g transform="translate(24, 150)">
+      <use href="#checkbox-unchecked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-text">Document what you're removing and why</text>
+    </g>
+
+    <!-- Progress -->
+    <text x="24" y="182" class="progress-text">2 of 4 complete</text>
+    <rect x="120" y="172" width="100" height="6" rx="3" fill="#EBEBEA"/>
+    <rect x="120" y="172" width="50" height="6" rx="3" fill="#E9967A"/>
+  </g>
+
+  <!-- ==================== PHASE 2: OPTIMIZE ==================== -->
+  <g transform="translate(72, 503)">
+    <!-- Box background -->
+    <rect width="500" height="195" rx="4" fill="#FFFFFF" stroke="rgba(55,53,47,0.09)" stroke-width="1"/>
+    <!-- Left accent border -->
+    <rect width="4" height="195" rx="0" fill="#D4A574"/>
+
+    <!-- Phase header -->
+    <text x="24" y="32" font-size="18" class="icon">⚡</text>
+    <text x="50" y="32" class="phase-title">PHASE 2: OPTIMIZE — Weeks 4-8</text>
+
+    <!-- Subheader -->
+    <text x="50" y="52" class="phase-sub">Make your remaining listings work harder</text>
+
+    <!-- Checklist items -->
+    <g transform="translate(24, 72)">
+      <use href="#checkbox-unchecked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-text">Implement new SEO framework on top 10 listings</text>
+    </g>
+    <g transform="translate(24, 98)">
+      <use href="#checkbox-unchecked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-text">Update photos using "Scroll-Stopper" method</text>
+    </g>
+    <g transform="translate(24, 124)">
+      <use href="#checkbox-unchecked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-text">Revise pricing using value-based formula</text>
+    </g>
+    <g transform="translate(24, 150)">
+      <use href="#checkbox-unchecked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-text">Set up automated email sequences</text>
+    </g>
+
+    <!-- Progress -->
+    <text x="24" y="182" class="progress-text">0 of 4 complete</text>
+    <rect x="120" y="172" width="100" height="6" rx="3" fill="#EBEBEA"/>
+  </g>
+
+  <!-- ==================== PHASE 3: SCALE ==================== -->
+  <g transform="translate(72, 714)">
+    <!-- Box background -->
+    <rect width="500" height="195" rx="4" fill="#FFFFFF" stroke="rgba(55,53,47,0.09)" stroke-width="1"/>
+    <!-- Left accent border -->
+    <rect width="4" height="195" rx="0" fill="#4DA6A6"/>
+
+    <!-- Phase header -->
+    <text x="24" y="32" font-size="18" class="icon">🚀</text>
+    <text x="50" y="32" class="phase-title">PHASE 3: SCALE — Weeks 9-12</text>
+
+    <!-- Subheader -->
+    <text x="50" y="52" class="phase-sub">Strategic growth with your optimized foundation</text>
+
+    <!-- Checklist items -->
+    <g transform="translate(24, 72)">
+      <use href="#checkbox-unchecked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-text">Launch 2-3 new optimized products</text>
+    </g>
+    <g transform="translate(24, 98)">
+      <use href="#checkbox-unchecked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-text">Implement "Second Harvest" backend strategy</text>
+    </g>
+    <g transform="translate(24, 124)">
+      <use href="#checkbox-unchecked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-text">Set up passive traffic systems</text>
+    </g>
+    <g transform="translate(24, 150)">
+      <use href="#checkbox-unchecked" x="0" y="0"/>
+      <text x="24" y="13" class="checklist-text">Plan Q1 2026 product calendar</text>
+    </g>
+
+    <!-- Progress -->
+    <text x="24" y="182" class="progress-text">0 of 4 complete</text>
+    <rect x="120" y="172" width="100" height="6" rx="3" fill="#EBEBEA"/>
+  </g>
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <g transform="translate(592, 292)">
+    <!-- Sidebar card background -->
+    <rect width="180" height="220" rx="4" fill="#F7F6F3" stroke="rgba(55,53,47,0.09)" stroke-width="1"/>
+
+    <!-- Title -->
+    <text x="16" y="28" class="sidebar-title">Your Details</text>
+
+    <!-- Start Date -->
+    <g transform="translate(16, 48)">
+      <text x="0" y="0" font-size="14" class="icon">📅</text>
+      <text x="24" y="-2" class="sidebar-label">Start Date</text>
+      <text x="24" y="14" class="sidebar-value">December 1, 2024</text>
+    </g>
+
+    <!-- Target -->
+    <g transform="translate(16, 92)">
+      <text x="0" y="0" font-size="14" class="icon">🎯</text>
+      <text x="24" y="-2" class="sidebar-label">Target</text>
+      <text x="24" y="14" class="sidebar-value">$5,000/month</text>
+    </g>
+
+    <!-- Current -->
+    <g transform="translate(16, 136)">
+      <text x="0" y="0" font-size="14" class="icon">📊</text>
+      <text x="24" y="-2" class="sidebar-label">Current</text>
+      <text x="24" y="14" class="sidebar-value">$1,200/month</text>
+    </g>
+
+    <!-- Weekly Call -->
+    <g transform="translate(16, 180)">
+      <text x="0" y="0" font-size="14" class="icon">🗓️</text>
+      <text x="24" y="-2" class="sidebar-label">Weekly Call</text>
+      <text x="24" y="14" class="sidebar-value">Thursdays 11am CT</text>
+    </g>
+  </g>
+
+</svg>
