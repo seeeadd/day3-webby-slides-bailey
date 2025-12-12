@@ -212,8 +212,8 @@
 
 #bf-hero .bf-hero__eyebrow-text {
   font-family: 'Satoshi', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: 0.10em;
   text-transform: uppercase;
   color: var(--secondary);
@@ -283,18 +283,19 @@
 
 #bf-hero .bf-hero__program-title {
   font-family: 'Satoshi', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 14px;
-  letter-spacing: 0.01em;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 
 #bf-hero .bf-hero__program-body {
   font-family: 'Satoshi', sans-serif;
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 500;
-  line-height: 1.75;
+  line-height: 1.7;
   color: var(--text);
   max-width: 54ch;
 }
@@ -323,14 +324,15 @@
 
 #bf-hero .bf-hero__bullet-text {
   font-family: 'Satoshi', sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 500;
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--text);
 }
 
 #bf-hero .bf-hero__muted {
-  color: var(--muted);
+  color: #6B5E5E;
+  font-style: italic;
 }
 
 /* CTA - premium, inviting */
@@ -345,25 +347,25 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  height: 58px;
-  padding: 0 36px;
-  background: var(--primary);
+  height: 62px;
+  padding: 0 42px;
+  background: linear-gradient(135deg, var(--primary) 0%, #0d322e 100%);
   color: var(--cream);
   font-family: 'Satoshi', sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
   text-decoration: none;
-  border-radius: 14px;
+  border-radius: 16px;
   width: fit-content;
   letter-spacing: 0.01em;
-  box-shadow: 0 4px 14px rgba(18, 63, 58, 0.25);
+  box-shadow: 0 6px 20px rgba(18, 63, 58, 0.35), 0 2px 6px rgba(18, 63, 58, 0.2);
   transition: all 0.25s ease;
 }
 
 #bf-hero .bf-hero__cta:hover {
-  background: var(--secondary);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(18, 63, 58, 0.3);
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(18, 63, 58, 0.4), 0 4px 10px rgba(18, 63, 58, 0.25);
 }
 
 #bf-hero .bf-hero__cta-arrow {
@@ -378,9 +380,10 @@
 
 #bf-hero .bf-hero__cta-proof {
   font-family: 'Satoshi', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--muted);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--secondary);
+  letter-spacing: 0.01em;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
