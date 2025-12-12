@@ -168,7 +168,7 @@
   font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
   font-synthesis: none !important;
   color: var(--text);
-  overflow: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -186,7 +186,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 #bf-hero .bf-hero__shape {
@@ -543,6 +543,27 @@
 /* ═══════════════════════════════════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE: DESKTOP (1280px+)
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (min-width: 1280px) {
+  #bf-hero .bf-hero__container {
+    padding: 100px 48px 80px;
+    gap: 64px;
+  }
+  
+  #bf-hero .bf-hero__headline {
+    font-size: 72px;
+  }
+  
+  #bf-hero .bf-hero__illustration {
+    max-width: 380px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE: SMALL LAPTOP (1024px)
+   ═══════════════════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   #bf-hero .bf-hero__container {
     grid-template-columns: 1fr;
@@ -552,72 +573,82 @@
   }
   
   #bf-hero .bf-hero__visual {
-  overflow: visible;
     order: -1;
   }
   
   #bf-hero .bf-hero__illustration {
-    max-width: 300px;
+    max-width: 320px;
   }
   
   #bf-hero .bf-hero__headline {
     max-width: 100%;
+    font-size: clamp(44px, 5.5vw, 60px);
   }
 }
 
-@media (max-width: 640px) {
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE: TABLET (768px)
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
   #bf-hero .bf-hero__container {
-    padding: 60px 24px 48px;
+    padding: 64px 24px 52px;
     gap: 40px;
   }
   
   #bf-hero .bf-hero__headline {
-    font-size: clamp(36px, 8vw, 48px);
+    font-size: clamp(36px, 7vw, 48px);
+  }
+  
+  #bf-hero .bf-hero__headline-light {
+    font-size: 0.52em;
+  }
+  
+  #bf-hero .bf-hero__illustration {
+    max-width: 280px;
+  }
+  
+  #bf-hero .bf-hero__accelerator-block {
+    padding: 28px 24px;
+  }
+  
+  #bf-hero .bf-hero__offer-name {
+    font-size: clamp(24px, 5vw, 32px);
+  }
+  
+  #bf-hero .bf-hero__offer-desc {
+    font-size: 18px;
+  }
+  
+  #bf-hero .bf-hero__benefits span {
+    font-size: 17px;
+  }
+  
+  #bf-hero .bf-hero__cta {
+    width: 100%;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE: NORMAL PHONES (430px)
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 430px) {
+  #bf-hero .bf-hero__container {
+    padding: 52px 20px 40px;
+    gap: 32px;
+  }
+  
+  #bf-hero .bf-hero__headline {
+    font-size: clamp(28px, 7.5vw, 36px);
+    letter-spacing: -0.01em;
   }
   
   #bf-hero .bf-hero__headline-light {
     font-size: 0.5em;
   }
   
-  #bf-hero .bf-hero__offer-name {
-    font-size: clamp(24px, 6vw, 32px);
-  }
-  
-  #bf-hero .bf-hero__offer-desc {
-  font-size: 20px;
-  font-weight: 450;
-  line-height: 1.75;
-  color: var(--text);
-  max-width: 52ch;
-}
-
-
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   TABLET (768px)
-   ═══════════════════════════════════════════════════════════════════════════ */
-@media (max-width: 768px) {
-  #bf-hero .bf-hero__container {
-    padding: 64px 24px 52px;
-    gap: 44px;
-  }
-  
-  #bf-hero .bf-hero__illustration {
-    max-width: 280px;
-  }
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   NORMAL PHONES (430px)
-   ═══════════════════════════════════════════════════════════════════════════ */
-@media (max-width: 430px) {
-  #bf-hero .bf-hero__container {
-    padding: 52px 20px 40px;
-    gap: 36px;
-  }
-  
-  #bf-hero .bf-hero__headline {
-    font-size: clamp(30px, 7.5vw, 40px);
+  #bf-hero .bf-hero__accelerator-block {
+    padding: 24px 20px;
+    margin-top: 28px;
   }
   
   #bf-hero .bf-hero__offer-name {
@@ -625,51 +656,142 @@
   }
   
   #bf-hero .bf-hero__offer-desc {
-  font-size: 20px;
-  font-weight: 450;
-  line-height: 1.75;
-  color: var(--text);
-  max-width: 52ch;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  
+  #bf-hero .bf-hero__benefits {
+    gap: 16px;
+  }
+  
+  #bf-hero .bf-hero__benefits span {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  #bf-hero .bf-hero__benefits svg {
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+  }
+  
+  #bf-hero .bf-hero__cta {
+    min-height: 52px;
+    font-size: 16px;
+  }
+  
+  #bf-hero .bf-hero__illustration {
+    max-width: 260px;
+  }
+  
+  #bf-hero .bf-hero__shape--3 {
+    display: none;
+  }
 }
 
-
 /* ═══════════════════════════════════════════════════════════════════════════
-   TINY PHONES (350px) - Prevent horizontal scroll
+   RESPONSIVE: TINY PHONES (350px) - Critical overflow prevention
    ═══════════════════════════════════════════════════════════════════════════ */
 @media (max-width: 350px) {
-  #bf-hero {
-    overflow-x: clip;
-  }
-  
   #bf-hero .bf-hero__container {
     padding: 44px 16px 28px;
-    gap: 32px;
+    gap: 28px;
   }
   
+  /* H1 reflow: clamp + tighter spacing */
   #bf-hero .bf-hero__headline {
-    font-size: 24px;
-    letter-spacing: -0.01em;
+    font-size: clamp(24px, 7vw, 28px);
+    letter-spacing: -0.02em;
+    max-width: 100%;
+    word-wrap: break-word;
   }
   
   #bf-hero .bf-hero__headline-light {
     font-size: 0.48em;
+    margin-bottom: 0.3em;
+  }
+  
+  /* Accelerator block tighter */
+  #bf-hero .bf-hero__accelerator-block {
+    padding: 20px 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
   }
   
   #bf-hero .bf-hero__offer-name {
-    font-size: 19px;
+    font-size: 18px;
+    margin-bottom: 12px;
   }
   
   #bf-hero .bf-hero__offer-desc {
-  font-size: 20px;
-  font-weight: 450;
-  line-height: 1.75;
-  color: var(--text);
-  max-width: 52ch;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  
+  /* Bullets: better line-height, aligned markers */
+  #bf-hero .bf-hero__benefits {
+    gap: 14px;
+  }
+  
+  #bf-hero .bf-hero__benefits li {
+    gap: 10px;
+  }
+  
+  #bf-hero .bf-hero__benefits span {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  
+  #bf-hero .bf-hero__benefits svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  
+  /* CTA: full width, min-height */
+  #bf-hero .bf-hero__cta {
+    width: 100%;
+    min-height: 54px;
+    padding: 16px 24px;
+    font-size: 15px;
+  }
+  
+  #bf-hero .bf-hero__urgency {
+    font-size: 13px;
+  }
+  
+  /* Graphic: stack below, centered, scaled */
+  #bf-hero .bf-hero__visual {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  #bf-hero .bf-hero__illustration {
+    max-width: 280px;
+  }
+  
+  /* Ensure SVG strokes stay legible (min 2.25px) */
+  #bf-hero .bf-hero__illustration path,
+  #bf-hero .bf-hero__illustration circle {
+    vector-effect: non-scaling-stroke;
+  }
+  
+  /* Disable decorative elements */
+  #bf-hero .bf-hero__shape--1,
+  #bf-hero .bf-hero__shape--2,
+  #bf-hero .bf-hero__shape--3 {
+    display: none;
+  }
+  
+  #bf-hero .bf-hero__sparkle {
+    display: none;
+  }
 }
 
-
 /* ═══════════════════════════════════════════════════════════════════════════
-   REDUCED MOTION
+   REDUCED MOTION - Accessibility
    ═══════════════════════════════════════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {
   #bf-hero .bf-hero__shape,
