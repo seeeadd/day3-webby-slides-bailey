@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#F5F5F5"/>
+
+  <!-- MacBook Shadow -->
+  <ellipse cx="700" cy="870" rx="550" ry="20" fill="#D0D0D0"/>
+
+  <!-- ==================== MACBOOK BASE ==================== -->
+  <rect x="200" y="820" width="1000" height="15" rx="2" fill="#B8B8B8"/>
+  <rect x="580" y="820" width="240" height="8" rx="4" fill="#A0A0A0"/>
+
+  <!-- MacBook Hinge -->
+  <rect x="150" y="800" width="1100" height="25" rx="3" fill="#E0E0E0"/>
+
+  <!-- ==================== MACBOOK SCREEN HOUSING ==================== -->
+  <rect x="120" y="40" width="1160" height="770" rx="16" fill="#1A1A1A"/>
+
+  <!-- Screen bezel inner -->
+  <rect x="128" y="48" width="1144" height="754" rx="12" fill="#0D0D0D"/>
+
+  <!-- Camera notch -->
+  <rect x="640" y="48" width="120" height="24" rx="0 0 8 8" fill="#1A1A1A"/>
+  <circle cx="700" cy="60" r="4" fill="#2D2D2D"/>
+  <circle cx="700" cy="60" r="2" fill="#1A1A1A"/>
+
+  <!-- ==================== SCREEN CONTENT ==================== -->
+  <rect x="140" y="72" width="1120" height="718" rx="4" fill="#FFFFFF"/>
+
+  <!-- Browser Chrome -->
+  <rect x="140" y="72" width="1120" height="36" fill="#F3F4F6"/>
+  <rect x="140" y="107" width="1120" height="1" fill="#E5E7EB"/>
+
+  <!-- Traffic lights -->
+  <circle cx="162" cy="90" r="6" fill="#FF5F57"/>
+  <circle cx="182" cy="90" r="6" fill="#FFBD2E"/>
+  <circle cx="202" cy="90" r="6" fill="#28CA41"/>
+
+  <!-- Tab -->
+  <rect x="240" y="76" width="280" height="32" rx="6 6 0 0" fill="#FFFFFF"/>
+  <text x="260" y="97" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#374151">Your Personal Shop Audit — Sarah M.</text>
+  <circle cx="500" cy="92" r="6" fill="#E5E7EB"/>
+  <path d="M497 89l6 6m0-6l-6 6" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Loom interface background -->
+  <rect x="140" y="108" width="1120" height="682" fill="#1A1A1A"/>
+
+  <!-- ==================== MAIN VIDEO AREA ==================== -->
+  <rect x="160" y="128" width="1080" height="540" rx="8" fill="#FFFFFF"/>
+
+  <!-- Etsy Shop Header -->
+  <rect x="160" y="128" width="1080" height="100" fill="#F5F5F5"/>
+  <rect x="180" y="138" width="140" height="80" rx="6" fill="#FBBF24"/>
+  <text x="250" y="185" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">SD</text>
+
+  <text x="340" y="168" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#222222">Sarah's Digital Designs</text>
+  <text x="340" y="192" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#666666">Handcrafted digital products for creative entrepreneurs</text>
+
+  <!-- Star rating -->
+  <path d="M340 205l3.5 7 7.7 1.1-5.6 5.4 1.3 7.7-6.9-3.6-6.9 3.6 1.3-7.7-5.6-5.4 7.7-1.1z" fill="#FBBF24"/>
+  <text x="358" y="215" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#666666">4.9 (247 reviews)</text>
+
+  <!-- Shop nav -->
+  <rect x="160" y="228" width="1080" height="36" fill="#FFFFFF"/>
+  <rect x="160" y="263" width="1080" height="1" fill="#EEEEEE"/>
+  <text x="200" y="252" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#222222">Items</text>
+  <text x="280" y="252" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#666666">Reviews</text>
+  <text x="360" y="252" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#666666">About</text>
+
+  <!-- ==================== PRODUCT GRID ==================== -->
+
+  <!-- Product 1 - HIGHLIGHTED -->
+  <rect x="180" y="280" width="240" height="280" rx="8" fill="#FFFFFF" stroke="#4DA6A6" stroke-width="3"/>
+  <rect x="188" y="288" width="224" height="168" rx="4" fill="#FEE2E2"/>
+  <rect x="220" y="320" width="160" height="100" rx="8" fill="#FECACA"/>
+  <text x="300" y="375" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#991B1B">Product Image</text>
+  <text x="196" y="480" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#222222">Customizable Daily Planner</text>
+  <text x="196" y="498" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#222222">Bundle - Personalized Digital</text>
+  <text x="196" y="516" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#222222">Template Pack</text>
+  <text x="196" y="540" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#222222">$24.99</text>
+
+  <!-- Product 2 -->
+  <rect x="440" y="280" width="240" height="280" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="448" y="288" width="224" height="168" rx="4" fill="#DBEAFE"/>
+  <rect x="480" y="320" width="160" height="100" rx="8" fill="#BFDBFE"/>
+  <text x="560" y="375" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1E40AF">Product Image</text>
+  <text x="456" y="480" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#222222">Social Media Content</text>
+  <text x="456" y="498" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#222222">Calendar Template</text>
+  <text x="456" y="540" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#222222">$19.99</text>
+
+  <!-- Product 3 - CIRCLED -->
+  <rect x="700" y="280" width="240" height="280" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="708" y="288" width="224" height="168" rx="4" fill="#F3E8FF"/>
+  <rect x="740" y="320" width="160" height="100" rx="8" fill="#E9D5FF"/>
+  <text x="820" y="375" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6B21A8">Product Image</text>
+  <text x="716" y="480" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#222222">Budget Spreadsheet</text>
+  <text x="716" y="498" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#222222">Tracker Bundle</text>
+  <text x="716" y="540" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#222222">$14.99</text>
+
+  <!-- Product 4 -->
+  <rect x="960" y="280" width="240" height="280" rx="8" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  <rect x="968" y="288" width="224" height="168" rx="4" fill="#D1FAE5"/>
+  <rect x="1000" y="320" width="160" height="100" rx="8" fill="#A7F3D0"/>
+  <text x="1080" y="375" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#065F46">Product Image</text>
+  <text x="976" y="480" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#222222">Recipe Card Template</text>
+  <text x="976" y="498" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#222222">Collection - Editable</text>
+  <text x="976" y="540" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#222222">$12.99</text>
+
+  <!-- ==================== ANNOTATIONS ==================== -->
+
+  <!-- Red arrow pointing to title of Product 1 -->
+  <path d="M160 490 L185 490" stroke="#EF4444" stroke-width="4" stroke-linecap="round"/>
+  <path d="M175 483 L188 490 L175 497" fill="#EF4444"/>
+
+  <!-- Text annotation box 1 -->
+  <rect x="50" y="420" width="180" height="50" rx="6" fill="#EF4444"/>
+  <text x="140" y="440" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Move 'personalized' to</text>
+  <text x="140" y="456" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">the FRONT of the title</text>
+  <!-- Arrow from annotation to product -->
+  <path d="M180 470 Q200 485 185 490" stroke="#EF4444" stroke-width="2" fill="none" stroke-dasharray="4 2"/>
+
+  <!-- Circle around Product 3 thumbnail -->
+  <circle cx="820" cy="370" r="70" stroke="#EF4444" stroke-width="3" fill="none"/>
+
+  <!-- Text annotation box 2 -->
+  <rect x="880" y="170" width="200" height="40" rx="6" fill="#EF4444"/>
+  <text x="980" y="195" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">This photo needs more contrast</text>
+  <!-- Arrow from annotation to circle -->
+  <path d="M920 210 L860 300" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/>
+  <path d="M865 288 L858 302 L872 297" fill="#EF4444"/>
+
+  <!-- Underline annotation -->
+  <path d="M196 518 Q280 530 390 518" stroke="#FBBF24" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Check mark annotation on Product 2 -->
+  <circle cx="560" cy="540" r="14" fill="#10B981"/>
+  <path d="M552 540l5 5 10-10" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ==================== WEBCAM BUBBLE ==================== -->
+  <circle cx="1100" cy="580" r="70" fill="#4DA6A6"/>
+  <circle cx="1100" cy="580" r="67" fill="#3D9494"/>
+
+  <!-- Bailey placeholder face -->
+  <circle cx="1100" cy="565" r="25" fill="#F5D0C5"/>
+  <ellipse cx="1100" cy="615" rx="35" ry="25" fill="#F5D0C5"/>
+
+  <!-- Simple face features -->
+  <circle cx="1092" cy="560" r="3" fill="#374151"/>
+  <circle cx="1108" cy="560" r="3" fill="#374151"/>
+  <path d="M1092 574 Q1100 580 1108 574" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Hair suggestion -->
+  <ellipse cx="1100" cy="545" rx="28" ry="15" fill="#8B5A2B"/>
+  <ellipse cx="1075" cy="560" rx="8" ry="20" fill="#8B5A2B"/>
+  <ellipse cx="1125" cy="560" rx="8" ry="20" fill="#8B5A2B"/>
+
+  <!-- "BAILEY GOES HERE" text -->
+  <text x="1100" y="650" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="9" fill="#FFFFFF">BAILEY GOES HERE</text>
+
+  <!-- Webcam border ring -->
+  <circle cx="1100" cy="580" r="70" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+
+  <!-- ==================== SUBTITLE BAR ==================== -->
+  <rect x="160" y="628" width="1080" height="40" rx="0 0 8 8" fill="rgba(0,0,0,0.75)"/>
+  <text x="700" y="654" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#FFFFFF">"...so what I'd recommend is moving the main keyword to the front of this title, because right now it's getting buried..."</text>
+
+  <!-- ==================== LOOM CONTROL BAR ==================== -->
+  <rect x="160" y="680" width="1080" height="50" rx="8" fill="#2D2D2D"/>
+
+  <!-- Play/Pause button (paused - showing play icon) -->
+  <circle cx="200" cy="705" r="18" fill="#6366F1"/>
+  <path d="M195 695l14 10-14 10z" fill="#FFFFFF"/>
+
+  <!-- Progress bar -->
+  <rect x="240" y="700" width="600" height="6" rx="3" fill="#4B5563"/>
+  <rect x="240" y="700" width="290" height="6" rx="3" fill="#6366F1"/>
+  <circle cx="530" cy="703" r="8" fill="#6366F1"/>
+
+  <!-- Time -->
+  <text x="860" y="709" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#FFFFFF">2:34 / 5:12</text>
+
+  <!-- Volume -->
+  <rect x="940" y="697" width="60" height="12" rx="3" fill="#4B5563"/>
+  <rect x="940" y="697" width="40" height="12" rx="3" fill="#FFFFFF"/>
+  <!-- Speaker icon -->
+  <rect x="920" y="699" width="4" height="8" rx="1" fill="#FFFFFF"/>
+  <path d="M924 699l6-4v16l-6-4z" fill="#FFFFFF"/>
+
+  <!-- Speed -->
+  <rect x="1020" y="695" width="40" height="20" rx="4" fill="#4B5563"/>
+  <text x="1040" y="709" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#FFFFFF">1x</text>
+
+  <!-- Download button -->
+  <rect x="1080" y="695" width="36" height="20" rx="4" fill="#4B5563"/>
+  <rect x="1092" y="700" width="10" height="8" rx="1" fill="#FFFFFF"/>
+  <path d="M1093 708l4 4 4-4" stroke="#FFFFFF" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Share button -->
+  <rect x="1130" y="695" width="60" height="20" rx="4" fill="#6366F1"/>
+  <text x="1160" y="709" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Share</text>
+
+  <!-- Loom logo area -->
+  <rect x="1200" y="695" width="30" height="20" rx="4" fill="#4B5563"/>
+  <circle cx="1215" cy="705" r="6" fill="#6366F1"/>
+
+  <!-- ==================== VIDEO TITLE BAR ==================== -->
+  <rect x="160" y="740" width="1080" height="40" fill="#1A1A1A"/>
+  <text x="180" y="765" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">Sarah_PersonalShopAudit_Bailey.mp4</text>
+
+  <!-- View count -->
+  <circle cx="1120" cy="760" r="3" fill="#10B981"/>
+  <text x="1132" y="765" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#9CA3AF">Viewed 2 hours ago</text>
+
+</svg>

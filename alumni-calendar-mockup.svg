@@ -1,0 +1,262 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700">
+
+  <!-- Background -->
+  <rect width="1400" height="700" fill="#F9FAFB"/>
+
+  <!-- ==================== HEADER ==================== -->
+  <rect width="1400" height="100" fill="#FFFFFF"/>
+  <rect y="99" width="1400" height="1" fill="#E5E7EB"/>
+
+  <!-- Title and subtitle -->
+  <text x="60" y="45" font-family="Inter, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#111827">Alumni Community — Your Lifetime Access</text>
+  <text x="60" y="72" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#6B7280">Monthly calls and community access that never expires</text>
+
+  <!-- View toggle buttons -->
+  <rect x="1140" y="30" width="120" height="40" rx="8" fill="#F3F4F6"/>
+  <rect x="1144" y="34" width="56" height="32" rx="6" fill="#4DA6A6"/>
+  <text x="1172" y="56" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Month</text>
+  <text x="1228" y="56" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#6B7280">List</text>
+
+  <!-- Navigation arrows -->
+  <circle cx="1060" cy="50" r="18" fill="#F3F4F6"/>
+  <path d="M1065 44l-8 6 8 6" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1100" cy="50" r="18" fill="#F3F4F6"/>
+  <path d="M1095 44l8 6-8 6" stroke="#374151" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ==================== CALENDARS ROW ==================== -->
+
+  <!-- ========== JANUARY 2026 ========== -->
+  <g transform="translate(60, 130)">
+    <rect width="400" height="320" rx="12" fill="#FFFFFF"/>
+
+    <!-- Month header -->
+    <text x="200" y="35" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111827">January 2026</text>
+
+    <!-- Day headers -->
+    <text x="35" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">S</text>
+    <text x="90" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">M</text>
+    <text x="145" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">T</text>
+    <text x="200" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">W</text>
+    <text x="255" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">T</text>
+    <text x="310" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">F</text>
+    <text x="365" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">S</text>
+
+    <!-- Week 1 (Jan 1 = Thursday) -->
+    <text x="255" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">1</text>
+    <text x="310" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">2</text>
+    <text x="365" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">3</text>
+
+    <!-- Week 2 -->
+    <text x="35" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">4</text>
+    <text x="90" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">5</text>
+    <text x="145" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">6</text>
+    <text x="200" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">7</text>
+    <text x="255" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">8</text>
+    <text x="310" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">9</text>
+    <text x="365" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">10</text>
+
+    <!-- Week 3 - Jan 15 highlighted -->
+    <text x="35" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">11</text>
+    <text x="90" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">12</text>
+    <text x="145" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">13</text>
+    <text x="200" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">14</text>
+    <!-- Highlighted date Jan 15 -->
+    <circle cx="255" cy="180" r="18" fill="#4DA6A6"/>
+    <text x="255" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">15</text>
+    <circle cx="255" cy="195" r="3" fill="#FFFFFF"/>
+    <text x="310" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">16</text>
+    <text x="365" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">17</text>
+
+    <!-- Week 4 -->
+    <text x="35" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">18</text>
+    <text x="90" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">19</text>
+    <text x="145" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">20</text>
+    <text x="200" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">21</text>
+    <text x="255" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">22</text>
+    <text x="310" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">23</text>
+    <text x="365" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">24</text>
+
+    <!-- Week 5 -->
+    <text x="35" y="265" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">25</text>
+    <text x="90" y="265" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">26</text>
+    <text x="145" y="265" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">27</text>
+    <text x="200" y="265" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">28</text>
+    <text x="255" y="265" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">29</text>
+    <text x="310" y="265" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">30</text>
+    <text x="365" y="265" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">31</text>
+  </g>
+
+  <!-- ========== FEBRUARY 2026 ========== -->
+  <g transform="translate(500, 130)">
+    <rect width="400" height="320" rx="12" fill="#FFFFFF"/>
+
+    <!-- Month header -->
+    <text x="200" y="35" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111827">February 2026</text>
+
+    <!-- Day headers -->
+    <text x="35" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">S</text>
+    <text x="90" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">M</text>
+    <text x="145" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">T</text>
+    <text x="200" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">W</text>
+    <text x="255" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">T</text>
+    <text x="310" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">F</text>
+    <text x="365" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">S</text>
+
+    <!-- Week 1 (Feb 1 = Sunday) -->
+    <text x="35" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">1</text>
+    <text x="90" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">2</text>
+    <text x="145" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">3</text>
+    <text x="200" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">4</text>
+    <text x="255" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">5</text>
+    <text x="310" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">6</text>
+    <text x="365" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">7</text>
+
+    <!-- Week 2 -->
+    <text x="35" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">8</text>
+    <text x="90" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">9</text>
+    <text x="145" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">10</text>
+    <text x="200" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">11</text>
+    <text x="255" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">12</text>
+    <text x="310" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">13</text>
+    <text x="365" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">14</text>
+
+    <!-- Week 3 - Feb 19 highlighted -->
+    <text x="35" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">15</text>
+    <text x="90" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">16</text>
+    <text x="145" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">17</text>
+    <text x="200" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">18</text>
+    <!-- Highlighted date Feb 19 -->
+    <circle cx="255" cy="180" r="18" fill="#4DA6A6"/>
+    <text x="255" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">19</text>
+    <circle cx="255" cy="195" r="3" fill="#FFFFFF"/>
+    <text x="310" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">20</text>
+    <text x="365" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">21</text>
+
+    <!-- Week 4 -->
+    <text x="35" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">22</text>
+    <text x="90" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">23</text>
+    <text x="145" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">24</text>
+    <text x="200" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">25</text>
+    <text x="255" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">26</text>
+    <text x="310" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">27</text>
+    <text x="365" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">28</text>
+  </g>
+
+  <!-- ========== MARCH 2026 ========== -->
+  <g transform="translate(940, 130)">
+    <rect width="400" height="320" rx="12" fill="#FFFFFF"/>
+
+    <!-- Month header -->
+    <text x="200" y="35" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111827">March 2026</text>
+
+    <!-- Day headers -->
+    <text x="35" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">S</text>
+    <text x="90" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">M</text>
+    <text x="145" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">T</text>
+    <text x="200" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">W</text>
+    <text x="255" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">T</text>
+    <text x="310" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">F</text>
+    <text x="365" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">S</text>
+
+    <!-- Week 1 (Mar 1 = Sunday) -->
+    <text x="35" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">1</text>
+    <text x="90" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">2</text>
+    <text x="145" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">3</text>
+    <text x="200" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">4</text>
+    <text x="255" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">5</text>
+    <text x="310" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">6</text>
+    <text x="365" y="105" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">7</text>
+
+    <!-- Week 2 -->
+    <text x="35" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">8</text>
+    <text x="90" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">9</text>
+    <text x="145" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">10</text>
+    <text x="200" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">11</text>
+    <text x="255" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">12</text>
+    <text x="310" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">13</text>
+    <text x="365" y="145" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">14</text>
+
+    <!-- Week 3 - Mar 19 highlighted -->
+    <text x="35" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">15</text>
+    <text x="90" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">16</text>
+    <text x="145" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">17</text>
+    <text x="200" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">18</text>
+    <!-- Highlighted date Mar 19 -->
+    <circle cx="255" cy="180" r="18" fill="#4DA6A6"/>
+    <text x="255" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">19</text>
+    <circle cx="255" cy="195" r="3" fill="#FFFFFF"/>
+    <text x="310" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">20</text>
+    <text x="365" y="185" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">21</text>
+
+    <!-- Week 4 -->
+    <text x="35" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">22</text>
+    <text x="90" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">23</text>
+    <text x="145" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">24</text>
+    <text x="200" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">25</text>
+    <text x="255" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">26</text>
+    <text x="310" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">27</text>
+    <text x="365" y="225" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">28</text>
+
+    <!-- Week 5 -->
+    <text x="35" y="265" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">29</text>
+    <text x="90" y="265" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">30</text>
+    <text x="145" y="265" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">31</text>
+  </g>
+
+  <!-- ==================== FLOATING EVENT DETAIL CARD ==================== -->
+  <g transform="translate(280, 340)">
+    <rect width="280" height="170" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <!-- Video camera icon -->
+    <rect x="20" y="20" width="44" height="44" rx="10" fill="#E6F7F7"/>
+    <rect x="32" y="32" width="20" height="14" rx="2" fill="#4DA6A6"/>
+    <path d="M52 36l8-4v16l-8-4z" fill="#4DA6A6"/>
+
+    <!-- Event details -->
+    <text x="76" y="38" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#111827">Monthly Alumni Call</text>
+    <text x="76" y="58" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#6B7280">Thursday, Jan 15 at 11am CT</text>
+
+    <!-- Description -->
+    <text x="20" y="95" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">Drop in anytime. You're always welcome.</text>
+
+    <!-- Add to Calendar button -->
+    <rect x="20" y="120" width="160" height="36" rx="8" fill="#4DA6A6"/>
+    <text x="100" y="144" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Add to Calendar</text>
+
+    <!-- Calendar icon in button -->
+    <rect x="40" y="131" width="14" height="14" rx="2" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="40" y1="135" x2="54" y2="135" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="44" y1="128" x2="44" y2="133" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="50" y1="128" x2="50" y2="133" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+
+  </g>
+
+  <!-- ==================== BOTTOM BANNER ==================== -->
+  <rect x="60" y="480" width="1280" height="80" rx="16" fill="#4DA6A6"/>
+
+  <!-- Decorative elements -->
+  <circle cx="120" cy="520" r="40" fill="#3D9494" opacity="0.5"/>
+  <circle cx="1280" cy="520" r="50" fill="#3D9494" opacity="0.5"/>
+
+  <!-- Banner text -->
+  <text x="700" y="525" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF">Your community access never expires. See you every month.</text>
+
+  <!-- Heart icon -->
+  <path d="M745 528l-1-1c-4-3-6-5-6-8 0-2 2-4 4-4 1 0 2 .5 3 1.5.8-1 2-1.5 3-1.5 2 0 4 2 4 4 0 3-2 5-6 8l-1 1z" fill="#FBBF24"/>
+
+  <!-- ==================== SMALL PRINT ==================== -->
+  <text x="700" y="600" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9CA3AF">Alumni calls continue indefinitely — you're part of the family now.</text>
+
+  <!-- Continuation indicator (shows calls extend into future) -->
+  <g transform="translate(1300, 300)">
+    <text x="0" y="0" font-family="Inter, -apple-system, sans-serif" font-size="24" fill="#D1D5DB">...</text>
+    <text x="0" y="30" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#9CA3AF">and beyond</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(60, 470)">
+    <circle cx="8" cy="0" r="6" fill="#4DA6A6"/>
+    <text x="22" y="4" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6B7280">Monthly Alumni Call</text>
+  </g>
+
+</svg>

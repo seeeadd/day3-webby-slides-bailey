@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F5F5F5"/>
+
+  <!-- ==================== BROWSER FRAME ==================== -->
+  <rect x="40" y="30" width="1120" height="740" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- Browser Chrome -->
+  <rect x="40" y="30" width="1120" height="44" rx="12 12 0 0" fill="#F9FAFB"/>
+  <rect x="40" y="73" width="1120" height="1" fill="#E5E7EB"/>
+
+  <!-- Traffic lights -->
+  <circle cx="68" cy="52" r="6" fill="#FF5F57"/>
+  <circle cx="88" cy="52" r="6" fill="#FFBD2E"/>
+  <circle cx="108" cy="52" r="6" fill="#28CA41"/>
+
+  <!-- URL Bar -->
+  <rect x="200" y="40" width="600" height="28" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- Lock icon -->
+  <rect x="216" y="49" width="8" height="7" rx="1" fill="none" stroke="#10B981" stroke-width="1.5"/>
+  <path d="M218 49v-2a4 4 0 1 1 8 0v2" stroke="#10B981" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- URL text -->
+  <text x="236" y="58" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#374151">baileyvann.com/vault/diagnostic</text>
+
+  <!-- Navigation buttons -->
+  <path d="M140 47l8 6-8 6" stroke="#9CA3AF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M168 47l-8 6 8 6" stroke="#D1D5DB" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Refresh button -->
+  <circle cx="840" cy="54" r="8" stroke="#9CA3AF" stroke-width="1.5" fill="none"/>
+  <path d="M836 50l4 4-4 4" stroke="#9CA3AF" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- ==================== VIDEO PLAYER CONTAINER ==================== -->
+  <rect x="80" y="100" width="1040" height="600" rx="8" fill="#1A1A1A"/>
+
+  <!-- Video Thumbnail Area -->
+  <rect x="100" y="120" width="1000" height="480" rx="6" fill="#2D2D2D"/>
+
+  <!-- ==================== 4-QUADRANT DIAGNOSTIC OVERLAY ==================== -->
+
+  <!-- TOP LEFT: SEO - Teal -->
+  <rect x="100" y="120" width="250" height="240" rx="6 0 0 0" fill="#4DA6A6" opacity="0.85"/>
+  <!-- Magnifying glass icon -->
+  <circle cx="225" cy="200" r="35" stroke="#FFFFFF" stroke-width="5" fill="none"/>
+  <line x1="250" y1="225" x2="275" y2="250" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="225" y="290" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">SEO?</text>
+
+  <!-- TOP RIGHT: Photos - Coral -->
+  <rect x="850" y="120" width="250" height="240" rx="0 6 0 0" fill="#F87171" opacity="0.85"/>
+  <!-- Camera icon -->
+  <rect x="925" y="180" width="70" height="50" rx="6" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  <circle cx="960" cy="205" r="15" stroke="#FFFFFF" stroke-width="3" fill="none"/>
+  <rect x="940" y="172" width="20" height="10" rx="2" fill="#FFFFFF"/>
+  <!-- Text -->
+  <text x="975" y="290" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">Photos?</text>
+
+  <!-- BOTTOM LEFT: Pricing - Gold -->
+  <rect x="100" y="360" width="250" height="240" rx="0 0 0 6" fill="#FBBF24" opacity="0.85"/>
+  <!-- Dollar/price tag icon -->
+  <circle cx="225" cy="430" r="35" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+  <text x="225" y="445" text-anchor="middle" font-family="Inter, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">$</text>
+  <!-- Text -->
+  <text x="225" y="530" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">Pricing?</text>
+
+  <!-- BOTTOM RIGHT: Demand - Gray -->
+  <rect x="850" y="360" width="250" height="240" rx="0 0 6 0" fill="#6B7280" opacity="0.85"/>
+  <!-- Graph/chart icon -->
+  <rect x="920" y="400" width="80" height="60" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <path d="M930 450 L950 430 L970 440 L990 410" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M985 410 L990 410 L990 420" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Text -->
+  <text x="975" y="530" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">Demand?</text>
+
+  <!-- ==================== CENTER AREA: BAILEY PLACEHOLDER ==================== -->
+  <rect x="350" y="180" width="500" height="340" rx="8" fill="#374151"/>
+
+  <!-- Placeholder silhouette -->
+  <circle cx="600" cy="300" r="70" fill="#4B5563"/>
+  <ellipse cx="600" cy="420" rx="100" ry="70" fill="#4B5563"/>
+
+  <!-- Bailey placeholder text -->
+  <rect x="450" y="340" width="300" height="50" rx="8" fill="#1F2937"/>
+  <text x="600" y="372" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#9CA3AF">BAILEY GOES HERE</text>
+
+  <!-- ==================== LARGE PLAY BUTTON ==================== -->
+  <circle cx="600" cy="360" r="50" fill="#FFFFFF"/>
+  <circle cx="600" cy="360" r="48" fill="#FFFFFF"/>
+  <path d="M585 335l40 25-40 25z" fill="#1A1A1A"/>
+
+  <!-- ==================== VIDEO PLAYER CONTROLS ==================== -->
+  <rect x="100" y="610" width="1000" height="50" fill="#1A1A1A"/>
+
+  <!-- Progress bar background -->
+  <rect x="120" y="617" width="960" height="4" rx="2" fill="#4B5563"/>
+  <!-- Progress indicator (at 0) -->
+  <circle cx="120" cy="619" r="6" fill="#FFFFFF"/>
+
+  <!-- Controls row -->
+  <!-- Play button -->
+  <rect x="115" y="632" width="30" height="20" fill="none"/>
+  <path d="M120 635l12 8-12 8z" fill="#FFFFFF"/>
+
+  <!-- Volume -->
+  <rect x="160" y="640" width="4" height="10" rx="1" fill="#FFFFFF"/>
+  <path d="M164 640l6-4v18l-6-4z" fill="#FFFFFF"/>
+  <rect x="180" y="643" width="50" height="4" rx="2" fill="#4B5563"/>
+  <rect x="180" y="643" width="35" height="4" rx="2" fill="#FFFFFF"/>
+
+  <!-- Time -->
+  <text x="250" y="652" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#FFFFFF">0:00 / 12:34</text>
+
+  <!-- Right side controls -->
+  <!-- Settings gear -->
+  <circle cx="1000" cy="645" r="8" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+  <circle cx="1000" cy="645" r="3" fill="#FFFFFF"/>
+
+  <!-- Fullscreen -->
+  <rect x="1030" y="637" width="16" height="16" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  <path d="M1030 641v-4h4M1042 641v-4h-4M1030 649v4h4M1042 649v4h-4" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- HD badge -->
+  <rect x="1060" y="637" width="24" height="16" rx="2" fill="#4B5563"/>
+  <text x="1072" y="649" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#FFFFFF">HD</text>
+
+  <!-- ==================== VIDEO TITLE & DESCRIPTION ==================== -->
+  <rect x="80" y="670" width="1040" height="90" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="100" y="698" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#111827">The 60-Second Diagnostic: Why Isn't Your Design Selling?</text>
+
+  <!-- Vault badge -->
+  <rect x="580" y="680" width="100" height="24" rx="4" fill="#6366F1"/>
+  <text x="630" y="697" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Vault Exclusive</text>
+
+  <!-- Description -->
+  <text x="100" y="728" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#6B7280">Learn Bailey's exact process for diagnosing any listing in under 60 seconds. Is it SEO? Photos? Pricing? Or just no demand?</text>
+
+  <!-- View indicators -->
+  <circle cx="1050" cy="690" r="4" fill="#10B981"/>
+  <text x="1062" y="694" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#9CA3AF">New</text>
+
+  <!-- Duration badge -->
+  <rect x="1010" y="714" width="70" height="22" rx="4" fill="#F3F4F6"/>
+  <text x="1045" y="729" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#374151">12:34</text>
+
+</svg>
