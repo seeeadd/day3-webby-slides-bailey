@@ -6,6 +6,7 @@
     width: 100%;
     font-family: 'Satoshi Variable', system-ui, -apple-system, sans-serif;
     animation: sh01-fade-slide 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    overflow-x: clip;
   }
   @keyframes sh01-fade-slide {
     from { opacity: 0; transform: translateY(-20px); }
@@ -22,7 +23,7 @@
   .sticky-header-01__content {
     position: relative;
     z-index: 10;
-    padding: 12px 16px;
+    padding: 10px 12px;
   }
   .sticky-header-01__inner {
     max-width: 72rem;
@@ -30,39 +31,43 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
   }
   .sticky-header-01__left {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
+    row-gap: 4px;
   }
   .sticky-header-01__cohort {
     position: relative;
   }
   .sticky-header-01__cohort-text {
-    font-size: 14px;
+    font-size: clamp(12px, 3.5vw, 14px);
     font-weight: 500;
     letter-spacing: 0.025em;
     color: #1B4D4A;
+    white-space: nowrap;
   }
   .sticky-header-01__underline {
     position: absolute;
-    bottom: -4px;
+    bottom: -3px;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
   }
   .sticky-header-01__divider-wave {
     display: none;
     height: 16px;
     width: 24px;
+    flex-shrink: 0;
   }
   .sticky-header-01__divider-dot {
-    font-size: 14px;
+    font-size: clamp(12px, 3.5vw, 14px);
     color: #8FA5A3;
+    flex-shrink: 0;
   }
   .sticky-header-01__divider-dot--mobile {
     display: inline;
@@ -70,20 +75,21 @@
   .sticky-header-01__spots {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
+    flex-shrink: 0;
   }
   .sticky-header-01__pulse-wrap {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
   .sticky-header-01__pulse-ring {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: #C17B7B;
     animation: sh01-pulse 2s ease-in-out infinite;
@@ -94,34 +100,39 @@
   }
   .sticky-header-01__pulse-dot {
     position: relative;
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background-color: #C17B7B;
   }
   .sticky-header-01__spots-text {
-    font-size: 14px;
+    font-size: clamp(12px, 3.5vw, 14px);
     font-weight: 500;
     color: #1B4D4A;
+    white-space: nowrap;
   }
   .sticky-header-01__deadline {
-    font-size: 14px;
+    font-size: clamp(11px, 3vw, 14px);
     font-weight: 400;
     color: #5A7A78;
+    white-space: nowrap;
   }
   .sticky-header-01__cta {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 20px;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 16px;
     border-radius: 9999px;
     background-color: #1B4D4A;
     color: #FAF9F7;
-    font-size: 14px;
+    font-size: clamp(13px, 3.5vw, 14px);
     font-weight: 500;
     text-decoration: none;
     box-shadow: 0 2px 12px rgba(27,77,74,0.15), 0 0 0 1px rgba(247,231,206,0.2);
     transition: transform 0.15s ease, box-shadow 0.2s ease;
+    min-height: 40px;
+    white-space: nowrap;
   }
   .sticky-header-01__cta:hover {
     transform: scale(1.02);
@@ -131,10 +142,93 @@
     transform: scale(0.98);
   }
   .sticky-header-01__cta-arrow {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     opacity: 0.8;
+    flex-shrink: 0;
   }
+
+  /* Tiny phones (<=350px) - Extra compact, prevent overflow */
+  @media (max-width: 350px) {
+    .sticky-header-01__content {
+      padding: 8px 10px;
+    }
+    .sticky-header-01__inner {
+      gap: 8px;
+    }
+    .sticky-header-01__left {
+      gap: 4px;
+      row-gap: 2px;
+    }
+    .sticky-header-01__cohort-text,
+    .sticky-header-01__spots-text {
+      font-size: 11px;
+    }
+    .sticky-header-01__deadline {
+      font-size: 10px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 2px;
+    }
+    .sticky-header-01__divider-dot {
+      font-size: 10px;
+    }
+    .sticky-header-01__pulse-wrap {
+      width: 6px;
+      height: 6px;
+    }
+    .sticky-header-01__pulse-ring {
+      width: 6px;
+      height: 6px;
+    }
+    .sticky-header-01__pulse-dot {
+      width: 4px;
+      height: 4px;
+    }
+    .sticky-header-01__cta {
+      width: 100%;
+      max-width: 280px;
+      padding: 10px 14px;
+      font-size: 13px;
+      min-height: 44px;
+    }
+    .sticky-header-01__cta-arrow {
+      width: 11px;
+      height: 11px;
+    }
+    /* Hide second divider dot on tiny screens */
+    .sticky-header-01__divider-dot:not(.sticky-header-01__divider-dot--mobile) {
+      display: none;
+    }
+  }
+
+  /* Normal phones (360-430px) */
+  @media (min-width: 360px) and (max-width: 430px) {
+    .sticky-header-01__content {
+      padding: 10px 14px;
+    }
+    .sticky-header-01__inner {
+      gap: 10px;
+    }
+    .sticky-header-01__left {
+      gap: 6px;
+    }
+    .sticky-header-01__cohort-text,
+    .sticky-header-01__spots-text {
+      font-size: 13px;
+    }
+    .sticky-header-01__deadline {
+      font-size: 12px;
+    }
+    .sticky-header-01__cta {
+      padding: 10px 18px;
+      font-size: 14px;
+      min-height: 44px;
+    }
+  }
+
+  /* Tablet (768px+) */
   @media (min-width: 768px) {
     .sticky-header-01__content {
       padding: 12px 24px;
@@ -151,7 +245,19 @@
     .sticky-header-01__cohort-text,
     .sticky-header-01__spots-text,
     .sticky-header-01__deadline {
-      font-size: 16px;
+      font-size: 15px;
+    }
+    .sticky-header-01__pulse-wrap {
+      width: 10px;
+      height: 10px;
+    }
+    .sticky-header-01__pulse-ring {
+      width: 10px;
+      height: 10px;
+    }
+    .sticky-header-01__pulse-dot {
+      width: 6px;
+      height: 6px;
     }
     .sticky-header-01__divider-wave {
       display: block;
@@ -160,8 +266,73 @@
       display: none;
     }
     .sticky-header-01__cta {
-      padding: 10px 24px;
+      padding: 10px 22px;
+      font-size: 15px;
+      min-height: 44px;
+    }
+    .sticky-header-01__cta-arrow {
+      width: 14px;
+      height: 14px;
+    }
+    .sticky-header-01__underline {
+      height: 4px;
+      bottom: -4px;
+    }
+  }
+
+  /* Small laptop (1024px+) */
+  @media (min-width: 1024px) {
+    .sticky-header-01__content {
+      padding: 14px 32px;
+    }
+    .sticky-header-01__left {
+      gap: 14px;
+    }
+    .sticky-header-01__cohort-text,
+    .sticky-header-01__spots-text,
+    .sticky-header-01__deadline {
       font-size: 16px;
+    }
+    .sticky-header-01__cta {
+      padding: 12px 26px;
+      font-size: 16px;
+      min-height: 48px;
+    }
+  }
+
+  /* Desktop (1280px+) */
+  @media (min-width: 1280px) {
+    .sticky-header-01__content {
+      padding: 16px 40px;
+    }
+    .sticky-header-01__left {
+      gap: 16px;
+    }
+    .sticky-header-01__cohort-text,
+    .sticky-header-01__spots-text {
+      font-size: 17px;
+    }
+    .sticky-header-01__deadline {
+      font-size: 16px;
+    }
+    .sticky-header-01__cta {
+      padding: 12px 28px;
+      font-size: 17px;
+    }
+    .sticky-header-01__divider-wave {
+      width: 28px;
+      height: 18px;
+    }
+  }
+
+  /* Reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .sticky-header-01 {
+      animation: none;
+    }
+    .sticky-header-01__pulse-ring {
+      animation: none;
+      opacity: 0.4;
     }
   }
 </style>
@@ -186,10 +357,10 @@
             <div class="sticky-header-01__pulse-ring"></div>
             <div class="sticky-header-01__pulse-dot"></div>
           </div>
-          <span class="sticky-header-01__spots-text">~10 Spots</span>
+          <span class="sticky-header-01__spots-text">~10&nbsp;Spots</span>
         </div>
         <span class="sticky-header-01__divider-dot">·</span>
-        <span class="sticky-header-01__deadline">Black Friday Pricing Ends Dec 14</span>
+        <span class="sticky-header-01__deadline">Black Friday Pricing Ends Dec&nbsp;14</span>
       </div>
       <a href="#join" class="sticky-header-01__cta">
         See If It's a Fit
