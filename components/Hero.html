@@ -11,15 +11,23 @@
 
       <!-- Headline with intentional line breaks -->
       <h1 class="bf-hero__headline">
-        <span class="bf-hero__hline">You don't need another course.</span>
+        <span class="bf-hero__hline bf-hero__hline--muted">You don't need another course.</span>
         <span class="bf-hero__hline bf-hero__hline--emphasis">
-          You need <span class="bf-hero__name">Bailey</span> to tell you <span class="bf-hero__highlight">exactly what to do</span> for the next 90&nbsp;days.
+          You need <span class="bf-hero__name">Bailey</span> to tell you
         </span>
+        <span class="bf-hero__hline bf-hero__hline--pop">exactly what to do</span>
+        <span class="bf-hero__hline">for the next <span class="bf-hero__days">90&nbsp;days.</span></span>
       </h1>
 
       <!-- Program Block -->
       <div class="bf-hero__program">
-        <h2 class="bf-hero__program-title">The 90-Day Etsy Empire Accelerator</h2>
+        <div class="bf-hero__program-badge">
+          <svg class="bf-hero__program-icon" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#D9A3A6" stroke="#D9A3A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="bf-hero__program-label">The Flagship Program</span>
+        </div>
+        <h2 class="bf-hero__program-title">90-Day Etsy Empire<br/>Accelerator</h2>
         <p class="bf-hero__program-body">A clear plan to put your Etsy shop on track for an extra $3K—$5K/month in income. I tell you what to do. You do it. That's the whole thing. Built for 60—90 minutes a day because that's probably all you've got.</p>
       </div>
 
@@ -51,12 +59,16 @@
       <!-- CTA -->
       <div class="bf-hero__cta-group">
         <a href="#pricing" class="bf-hero__cta">
-          <span>Grab the Black Friday Deal</span>
+          <span class="bf-hero__cta-shimmer"></span>
+          <span class="bf-hero__cta-text">Yes! Show Me the Deal</span>
           <svg class="bf-hero__cta-arrow" viewBox="0 0 20 20" fill="none">
-            <path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
-        <span class="bf-hero__cta-proof">Limited spots at this price — Black Friday only</span>
+        <div class="bf-hero__cta-urgency">
+          <span class="bf-hero__cta-dot"></span>
+          <span>47 spots claimed today — Black Friday pricing ends soon</span>
+        </div>
       </div>
 
     </div>
@@ -235,8 +247,36 @@
   display: block;
 }
 
+#bf-hero .bf-hero__hline--muted {
+  color: var(--muted);
+  font-size: 0.75em;
+  margin-bottom: 0.2em;
+}
+
 #bf-hero .bf-hero__hline--emphasis {
-  margin-top: 0.15em;
+  margin-top: 0.1em;
+}
+
+#bf-hero .bf-hero__hline--pop {
+  color: var(--secondary);
+  position: relative;
+  display: inline-block;
+}
+
+#bf-hero .bf-hero__hline--pop::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.05em;
+  width: 100%;
+  height: 0.18em;
+  background: var(--accent);
+  opacity: 0.6;
+  border-radius: 4px;
+}
+
+#bf-hero .bf-hero__days {
+  color: var(--secondary);
 }
 
 #bf-hero .bf-hero__name {
@@ -256,44 +296,52 @@
   background-size: 100% 100%;
 }
 
-/* Highlight underline for "exactly what to do" */
-#bf-hero .bf-hero__highlight {
-  position: relative;
-  white-space: nowrap;
-}
-
-#bf-hero .bf-hero__highlight::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0.12em;
-  background: var(--accent);
-  opacity: 0.5;
-  border-radius: 2px;
-}
-
-/* Program Block - more weight */
+/* Program Block - flagship treatment */
 #bf-hero .bf-hero__program {
-  margin-bottom: 40px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid var(--border);
+  margin-bottom: 44px;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, rgba(217, 163, 166, 0.08) 0%, rgba(46, 106, 98, 0.05) 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(217, 163, 166, 0.2);
+}
+
+#bf-hero .bf-hero__program-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 10px;
+  background: var(--accent);
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+#bf-hero .bf-hero__program-icon {
+  width: 18px;
+  height: 18px;
+}
+
+#bf-hero .bf-hero__program-label {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 #bf-hero .bf-hero__program-title {
-  font-family: 'Satoshi', sans-serif;
-  font-size: 30px;
-  font-weight: 800;
-  color: var(--secondary);
+  font-family: 'Ogg', Georgia, serif;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: normal;
+  color: var(--primary);
   margin-bottom: 16px;
   letter-spacing: -0.02em;
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
 #bf-hero .bf-hero__program-body {
   font-family: 'Satoshi', sans-serif;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.7;
   color: var(--text);
@@ -335,55 +383,112 @@
   font-style: italic;
 }
 
-/* CTA - premium, inviting */
+/* CTA - fun, engaging, urgent */
 #bf-hero .bf-hero__cta-group {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 #bf-hero .bf-hero__cta {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  height: 62px;
-  padding: 0 42px;
-  background: linear-gradient(135deg, var(--primary) 0%, #0d322e 100%);
+  height: 66px;
+  padding: 0 48px;
+  background: linear-gradient(135deg, #1a5a52 0%, var(--primary) 50%, #0d322e 100%);
   color: var(--cream);
   font-family: 'Satoshi', sans-serif;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
   text-decoration: none;
-  border-radius: 16px;
+  border-radius: 50px;
   width: fit-content;
   letter-spacing: 0.01em;
-  box-shadow: 0 6px 20px rgba(18, 63, 58, 0.35), 0 2px 6px rgba(18, 63, 58, 0.2);
-  transition: all 0.25s ease;
+  box-shadow:
+    0 8px 24px rgba(18, 63, 58, 0.4),
+    0 3px 8px rgba(18, 63, 58, 0.25),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  animation: bf-cta-pulse 3s ease-in-out infinite;
+}
+
+@keyframes bf-cta-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+#bf-hero .bf-hero__cta-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.2) 50%,
+    transparent 100%
+  );
+  animation: bf-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes bf-shimmer {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
 }
 
 #bf-hero .bf-hero__cta:hover {
-  background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(18, 63, 58, 0.4), 0 4px 10px rgba(18, 63, 58, 0.25);
+  background: linear-gradient(135deg, var(--secondary) 0%, #1a5a52 50%, var(--primary) 100%);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow:
+    0 14px 36px rgba(18, 63, 58, 0.45),
+    0 6px 12px rgba(18, 63, 58, 0.3),
+    inset 0 1px 0 rgba(255,255,255,0.15);
+  animation: none;
+}
+
+#bf-hero .bf-hero__cta-text {
+  position: relative;
+  z-index: 1;
 }
 
 #bf-hero .bf-hero__cta-arrow {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.25s ease;
+  position: relative;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.3s ease;
 }
 
 #bf-hero .bf-hero__cta:hover .bf-hero__cta-arrow {
-  transform: translateX(3px);
+  transform: translateX(5px);
 }
 
-#bf-hero .bf-hero__cta-proof {
+#bf-hero .bf-hero__cta-urgency {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: 'Satoshi', sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
-  color: var(--secondary);
-  letter-spacing: 0.01em;
+  color: var(--primary);
+}
+
+#bf-hero .bf-hero__cta-dot {
+  width: 10px;
+  height: 10px;
+  background: #e63946;
+  border-radius: 50%;
+  animation: bf-urgency-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes bf-urgency-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.3); }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -402,32 +507,51 @@
   height: auto;
 }
 
-/* Animation: Draw-on paths */
+/* Animation: Draw-on paths - AUTO RUN */
 #bf-hero .bf-hero__chaos-path {
   stroke-dasharray: 350;
   stroke-dashoffset: 350;
+  animation: bf-draw 1500ms cubic-bezier(0.4, 0, 0.2, 1) 500ms forwards;
 }
 
 #bf-hero .bf-hero__chaos-path--2 {
   stroke-dasharray: 250;
   stroke-dashoffset: 250;
+  animation: bf-draw-short 1200ms cubic-bezier(0.4, 0, 0.2, 1) 800ms forwards;
 }
 
 #bf-hero .bf-hero__clarity-path {
   stroke-dasharray: 170;
   stroke-dashoffset: 170;
+  animation: bf-draw-clarity 1400ms cubic-bezier(0.4, 0, 0.2, 1) 1200ms forwards;
 }
 
-#bf-hero.bf-hero--animated .bf-hero__chaos-path {
-  animation: bf-draw 1200ms cubic-bezier(0.2, 0.8, 0.2, 1) 200ms forwards;
+/* Continuous float animation for visual engagement */
+#bf-hero .bf-hero__concept {
+  animation: bf-float 4s ease-in-out infinite;
 }
 
-#bf-hero.bf-hero--animated .bf-hero__chaos-path--2 {
-  animation: bf-draw-short 1000ms cubic-bezier(0.2, 0.8, 0.2, 1) 400ms forwards;
+@keyframes bf-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
 }
 
-#bf-hero.bf-hero--animated .bf-hero__clarity-path {
-  animation: bf-draw-clarity 1300ms cubic-bezier(0.2, 0.8, 0.2, 1) 900ms forwards;
+/* Timeline dots pulse */
+#bf-hero .bf-hero__timeline-dot {
+  animation: bf-dot-pulse 2s ease-in-out infinite;
+}
+
+#bf-hero .bf-hero__timeline-dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+#bf-hero .bf-hero__timeline-dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes bf-dot-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.15); opacity: 1; }
 }
 
 @keyframes bf-draw {
@@ -446,11 +570,8 @@
 #bf-hero .bf-hero__success {
   transform-origin: center;
   opacity: 0;
-}
-
-#bf-hero.bf-hero--animated .bf-hero__success {
   animation: bf-success-pop 450ms cubic-bezier(0.2, 0.8, 0.2, 1) 2100ms forwards,
-             bf-success-pulse 1400ms ease-in-out 2550ms 1;
+             bf-success-pulse 1400ms ease-in-out 2550ms infinite;
 }
 
 @keyframes bf-success-pop {
@@ -506,8 +627,12 @@
    REDUCED MOTION
    ═══════════════════════════════════════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {
-  #bf-hero .bf-hero__eyebrow-dot {
-    animation: none;
+  #bf-hero .bf-hero__eyebrow-dot,
+  #bf-hero .bf-hero__cta,
+  #bf-hero .bf-hero__cta-shimmer,
+  #bf-hero .bf-hero__cta-dot,
+  #bf-hero .bf-hero__concept {
+    animation: none !important;
   }
 
   #bf-hero .bf-hero__chaos-path,
@@ -524,32 +649,3 @@
   }
 }
 </style>
-
-<script>
-(function() {
-  var hero = document.getElementById('bf-hero');
-  if (!hero) return;
-
-  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  
-  if (prefersReducedMotion) {
-    hero.classList.add('bf-hero--animated');
-    return;
-  }
-
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        setTimeout(function() {
-          hero.classList.add('bf-hero--animated');
-        }, 150);
-        observer.unobserve(hero);
-      }
-    });
-  }, {
-    threshold: 0.15
-  });
-
-  observer.observe(hero);
-})();
-</script>
