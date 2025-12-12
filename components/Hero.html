@@ -27,18 +27,30 @@
       </div>
       </div>
 
-      <!-- Bullets - clean, supportive -->
+      <!-- Bullets - clean, supportive with styled checkmarks -->
       <ul class="bf-hero__benefits">
         <li>
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#D9A3A6" fill-opacity="0.2"/><path d="M7 12l4 4 6-7" stroke="#2E6A62" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="13" r="12" fill="#FDF6F0" stroke="#D9A3A6" stroke-width="1.5"/>
+            <circle cx="13" cy="13" r="9" fill="#D9A3A6" fill-opacity="0.15"/>
+            <path d="M8 13l4 4 6-7" stroke="#2E6A62" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
           <span>Wake up knowing exactly what to work on today</span>
         </li>
         <li>
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#D9A3A6" fill-opacity="0.2"/><path d="M7 12l4 4 6-7" stroke="#2E6A62" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="13" r="12" fill="#FDF6F0" stroke="#D9A3A6" stroke-width="1.5"/>
+            <circle cx="13" cy="13" r="9" fill="#D9A3A6" fill-opacity="0.15"/>
+            <path d="M8 13l4 4 6-7" stroke="#2E6A62" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
           <span>Bailey looks at your work and says "yes, keep going" or "no, try this instead"</span>
         </li>
         <li>
-          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#D9A3A6" fill-opacity="0.2"/><path d="M7 12l4 4 6-7" stroke="#2E6A62" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="13" r="12" fill="#FDF6F0" stroke="#D9A3A6" stroke-width="1.5"/>
+            <circle cx="13" cy="13" r="9" fill="#D9A3A6" fill-opacity="0.15"/>
+            <path d="M8 13l4 4 6-7" stroke="#2E6A62" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
           <span>Actually follow through on something for once, with someone in your corner the whole way</span>
         </li>
       </ul>
@@ -46,12 +58,12 @@
       <!-- CTA - clean, warm -->
       <div class="bf-hero__cta-area">
         <a href="#pricing" class="bf-hero__cta">
-          Grab the Black Friday Deal
+          Join the 90-Day Accelerator
           <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <p class="bf-hero__urgency">
           <span class="bf-hero__urgency-dot"></span>
-          Black Friday Special: Save $200. Ends Monday.
+          Limited to 20 spots per cohort
         </p>
       </div>
 
@@ -64,11 +76,36 @@
       <div class="bf-hero__visual-shape bf-hero__visual-shape--2"></div>
       <div class="bf-hero__visual-shape bf-hero__visual-shape--3"></div>
       <svg class="bf-hero__illustration" viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- CHAOS (top) - organic, hand-drawn feeling -->
+        <!-- Gradient and filter definitions -->
+        <defs>
+          <radialGradient id="chaos-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#D9A3A6" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#D9A3A6" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="clarity-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#D9A3A6" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#2E6A62" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- Decorative sparkles around the illustration -->
+        <g class="bf-hero__sparkle bf-hero__sparkle-deco">
+          <circle cx="45" cy="120" r="2" fill="#D9A3A6" opacity="0.5"/>
+          <circle cx="280" cy="60" r="1.5" fill="#D9A3A6" opacity="0.4"/>
+          <circle cx="310" cy="200" r="2" fill="#E8B5A8" opacity="0.5"/>
+          <path d="M30 180 l3 -8 l3 8 l-8 -3 l8 3" stroke="#D9A3A6" stroke-width="1" fill="none" opacity="0.4"/>
+          <path d="M295 130 l2 -5 l2 5 l-5 -2 l5 2" stroke="#D9A3A6" stroke-width="1" fill="none" opacity="0.3"/>
+        </g>
+
+        <!-- CHAOS (top) - organic, hand-drawn feeling with warm coral accents -->
         <g class="bf-hero__chaos-group">
-          <!-- Tangled organic path -->
-          <path class="bf-hero__path-chaos" d="M80 80 Q130 30, 180 90 T230 50 Q260 100, 210 130 T150 100 Q100 130, 130 80 T180 110" stroke="#5E6E6C" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-          <path class="bf-hero__path-chaos-2" d="M100 45 Q150 80, 125 115 T190 80 Q165 45, 210 65" stroke="#D9A3A6" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+          <!-- Soft coral glow behind chaos -->
+          <ellipse cx="160" cy="85" rx="100" ry="70" fill="url(#chaos-glow)" opacity="0.3"/>
+          <!-- Tangled organic path - warmer, more coral -->
+          <path class="bf-hero__path-chaos" d="M80 80 Q130 30, 180 90 T230 50 Q260 100, 210 130 T150 100 Q100 130, 130 80 T180 110" stroke="#C4897D" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <path class="bf-hero__path-chaos-2" d="M100 45 Q150 80, 125 115 T190 80 Q165 45, 210 65" stroke="#D9A3A6" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+          <!-- Extra organic swirl -->
+          <path d="M70 100 Q90 70, 120 85 T160 60" stroke="#E8B5A8" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4"/>
           
           <!-- Floating question elements -->
           <g class="bf-hero__float-1">
@@ -166,10 +203,13 @@
   --coral-deep: #C78F92;
   --text: #203332;
   --muted: #5E6E6C;
-  
+
   width: 100%;
   position: relative;
   background: var(--cream);
+  /* Subtle paper texture for Pinterest-worthy warmth */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-blend-mode: soft-light;
   font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
   font-synthesis: none !important;
   color: var(--text);
@@ -252,8 +292,8 @@
   width: 100%;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  grid-template-columns: 68% 32%; /* 70/30 split - visual supports, doesn't compete */
+  gap: 48px;
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
@@ -279,7 +319,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--secondary);
-  margin-bottom: 0;
+  margin-bottom: 12px; /* Tightened connection to headline */
 }
 
 /* Headline - THE focal point */
@@ -297,7 +337,7 @@
   display: block;
   color: var(--muted);
   font-size: 0.55em;
-  margin-bottom: 0.4em;
+  margin-bottom: 8px; /* Tightened - reads as ONE unit with headline */
   letter-spacing: 0.01em;
 }
 
@@ -320,11 +360,46 @@
 /* Accelerator Block Container - groups offer + bullets */
 #bf-hero .bf-hero__accelerator-block {
   background: #F5F0EB;
-  border: 1px solid #E8DED6;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-blend-mode: soft-light;
+  border: 2px solid #E8DED6;
+  border-left: 4px solid var(--coral, #D9A3A6);
   border-radius: 16px;
   padding: 32px 36px;
   margin-top: 36px;
   margin-bottom: 32px;
+  position: relative;
+  transform: rotate(-0.5deg);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.04),
+    0 8px 32px rgba(217, 163, 166, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  overflow: visible;
+}
+
+/* Decorative botanical corner element */
+#bf-hero .bf-hero__accelerator-block::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 48px;
+  height: 48px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'%3E%3Cpath d='M24 4c0 11-9 20-20 20' stroke='%23D9A3A6' stroke-width='1.5' stroke-linecap='round' fill='none' opacity='0.6'/%3E%3Cpath d='M32 8c0 8-6.5 14.5-14.5 14.5' stroke='%23D9A3A6' stroke-width='1' stroke-linecap='round' fill='none' opacity='0.4'/%3E%3Ccircle cx='24' cy='4' r='2' fill='%23D9A3A6' opacity='0.5'/%3E%3Ccircle cx='32' cy='8' r='1.5' fill='%23D9A3A6' opacity='0.3'/%3E%3C/svg%3E");
+  background-size: contain;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Small sparkle decoration */
+#bf-hero .bf-hero__accelerator-block::after {
+  content: '✦';
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  font-size: 14px;
+  color: var(--coral, #D9A3A6);
+  opacity: 0.4;
 }
 
 /* Offer section - inside container, no card */
@@ -467,6 +542,15 @@
   width: 100%;
   max-width: 420px;
   height: auto;
+  animation: gentle-float 25s ease-in-out infinite;
+  filter: drop-shadow(0 8px 24px rgba(217, 163, 166, 0.15));
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(0.5deg); }
+  50% { transform: translateY(-4px) rotate(-0.5deg); }
+  75% { transform: translateY(-10px) rotate(0.3deg); }
 }
 
 /* Visual background shapes - organic coral presence */
@@ -673,22 +757,35 @@
   
   #bf-hero .bf-hero__accelerator-block {
     padding: 28px 24px;
+    transform: rotate(-0.3deg); /* Subtle on tablet */
   }
-  
+
+  #bf-hero .bf-hero__accelerator-block::before {
+    width: 36px;
+    height: 36px;
+    top: -6px;
+    right: -6px;
+  }
+
   #bf-hero .bf-hero__offer-name {
     font-size: clamp(24px, 5vw, 32px);
   }
-  
+
   #bf-hero .bf-hero__offer-desc {
     font-size: 18px;
   }
-  
+
   #bf-hero .bf-hero__benefits span {
     font-size: 17px;
   }
-  
+
   #bf-hero .bf-hero__cta {
     width: 100%;
+  }
+
+  /* Reduce floating animation on tablet */
+  #bf-hero .bf-hero__illustration {
+    animation-duration: 30s;
   }
 }
 
@@ -713,17 +810,38 @@
   #bf-hero .bf-hero__accelerator-block {
     padding: 24px 20px;
     margin-top: 28px;
+    transform: none; /* Remove rotation on phone */
+    border-left-width: 3px;
   }
-  
+
+  #bf-hero .bf-hero__accelerator-block::before {
+    width: 28px;
+    height: 28px;
+    top: -4px;
+    right: -4px;
+    opacity: 0.6;
+  }
+
+  #bf-hero .bf-hero__accelerator-block::after {
+    font-size: 12px;
+    bottom: 8px;
+    right: 12px;
+  }
+
+  /* Disable illustration animation on phones */
+  #bf-hero .bf-hero__illustration {
+    animation: none;
+  }
+
   #bf-hero .bf-hero__offer-name {
     font-size: clamp(20px, 5.5vw, 26px);
   }
-  
+
   #bf-hero .bf-hero__offer-desc {
     font-size: 17px;
     line-height: 1.7;
   }
-  
+
   #bf-hero .bf-hero__benefits {
     gap: 16px;
   }
@@ -775,12 +893,19 @@
     margin-bottom: 0.3em;
   }
   
-  /* Accelerator block tighter */
+  /* Accelerator block tighter - remove decorations for tiny screens */
   #bf-hero .bf-hero__accelerator-block {
     padding: 20px 16px;
     margin-top: 24px;
     margin-bottom: 0;
     border-radius: 12px;
+    transform: none;
+    border-left-width: 3px;
+  }
+
+  #bf-hero .bf-hero__accelerator-block::before,
+  #bf-hero .bf-hero__accelerator-block::after {
+    display: none; /* Hide decorations on tiny screens */
   }
   
   #bf-hero .bf-hero__offer-name {
@@ -852,10 +977,10 @@
   
   #bf-hero .bf-hero__sparkle {
     display: none;
-  
+  }
+
   #bf-hero .bf-hero__visual-shape {
     display: none;
-  }
   }
 }
 
@@ -868,7 +993,8 @@
   #bf-hero .bf-hero__float-2,
   #bf-hero .bf-hero__sparkle,
   #bf-hero .bf-hero__urgency-dot,
-  #bf-hero .bf-hero__visual-shape {
+  #bf-hero .bf-hero__visual-shape,
+  #bf-hero .bf-hero__illustration {
     animation: none !important;
   }
   
