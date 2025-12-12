@@ -19,7 +19,8 @@
         You need Bailey to tell you <span class="bf-hero__highlight">exactly what to do for the next&nbsp;90&nbsp;days.</span>
       </h1>
 
-      <!-- Description - NO card wrapper, flows naturally -->
+      <!-- Accelerator Block Container -->
+      <div class="bf-hero__accelerator-block">
       <div class="bf-hero__offer">
         <h2 class="bf-hero__offer-name">The 90-Day Etsy Empire Accelerator</h2>
         <p class="bf-hero__offer-desc">A clear plan to put your Etsy shop on track for an extra $3K to $5K/month in income. I tell you what to do. You do it. That's the whole thing. Built for 60 to 90 minutes a day because that's probably all you've got.</p>
@@ -40,6 +41,7 @@
           <span>Actually follow through on something for once, with someone in your corner the whole way</span>
         </li>
       </ul>
+      </div>
 
       <!-- CTA - clean, warm -->
       <div class="bf-hero__cta-area">
@@ -279,7 +281,7 @@
   font-weight: normal;
   line-height: 1.08;
   color: var(--primary);
-  margin-bottom: 40px;
+  margin-bottom: 0;
   max-width: 14ch;
 }
 
@@ -293,7 +295,7 @@
 
 #bf-hero .bf-hero__highlight {
   display: inline;
-  background: linear-gradient(to top, rgba(217, 163, 166, 0.4) 0%, rgba(217, 163, 166, 0.4) 35%, transparent 35%);
+  background: linear-gradient(to top, rgba(217, 163, 166, 0.3) 0%, rgba(217, 163, 166, 0.3) 25%, transparent 25%);
   padding-bottom: 2px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
@@ -304,29 +306,23 @@
 
 #bf-hero .bf-hero__highlight::after { display: none; }
 
-/* OLD highlight underline - disabled
-#bf-hero .bf-hero__DISABLED::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0.05em;
-  width: 100%;
-  height: 0.12em;
-  background: var(--coral);
-  opacity: 0.7;
-  border-radius: 4px;
-*/
+
+
+/* Accelerator Block Container - groups offer + bullets */
+#bf-hero .bf-hero__accelerator-block {
+  background: #F5F0EB;
+  border: 1px solid #E8DED6;
+  border-radius: 16px;
+  padding: 32px 36px;
+  margin-top: 36px;
+  margin-bottom: 32px;
 }
 
-/* Offer section - Card style */
+/* Offer section - inside container, no card */
 #bf-hero .bf-hero__offer {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 16px;
-  padding: 28px 32px;
-  border: 1px solid rgba(46, 106, 98, 0.1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
+
 
 #bf-hero .bf-hero__offer-name {
   font-family: 'Ogg', Georgia, serif;
@@ -338,20 +334,21 @@
 }
 
 #bf-hero .bf-hero__offer-desc {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 450;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--text);
   max-width: 52ch;
 }
+
 
 /* Benefits - clean bullets */
 #bf-hero .bf-hero__benefits {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  margin-bottom: 40px;
+  gap: 20px;
+  margin-bottom: 0;
 }
 
 #bf-hero .bf-hero__benefits li {
@@ -368,9 +365,9 @@
 }
 
 #bf-hero .bf-hero__benefits span {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 450;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--text);
 }
 
@@ -446,6 +443,7 @@
    VISUAL - Right side illustration
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero .bf-hero__visual {
+  overflow: visible;
   position: relative;
   z-index: 1;
   display: flex;
@@ -455,7 +453,7 @@
 
 #bf-hero .bf-hero__illustration {
   width: 100%;
-  max-width: 380px;
+  max-width: 340px;
   height: auto;
 }
 
@@ -554,6 +552,7 @@
   }
   
   #bf-hero .bf-hero__visual {
+  overflow: visible;
     order: -1;
   }
   
@@ -585,37 +584,13 @@
   }
   
   #bf-hero .bf-hero__offer-desc {
-    font-size: 17px;
-  }
-  
-  #bf-hero .bf-hero__benefits span {
-    font-size: 16px;
-  }
-  
-  #bf-hero .bf-hero__cta {
-    width: 100%;
-    height: 58px;
-    font-size: 17px;
-  }
-  
-  #bf-hero .bf-hero__illustration {
-    max-width: 260px;
-  }
-  
-  #bf-hero .bf-hero__shape--1 {
-    width: 300px;
-    height: 300px;
-  }
-  
-  #bf-hero .bf-hero__shape--2 {
-    width: 250px;
-    height: 250px;
-  }
-  
-  #bf-hero .bf-hero__shape--3 {
-    display: none;
-  }
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: 52ch;
 }
+
 
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -650,22 +625,13 @@
   }
   
   #bf-hero .bf-hero__offer-desc {
-    font-size: 16px;
-  }
-  
-  #bf-hero .bf-hero__benefits span {
-    font-size: 15px;
-  }
-  
-  #bf-hero .bf-hero__cta {
-    min-height: 52px;
-    font-size: 16px;
-  }
-  
-  #bf-hero .bf-hero__illustration {
-    max-width: 240px;
-  }
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: 52ch;
 }
+
 
 /* ═══════════════════════════════════════════════════════════════════════════
    TINY PHONES (350px) - Prevent horizontal scroll
@@ -690,34 +656,17 @@
   }
   
   #bf-hero .bf-hero__offer-name {
-    font-size: 18px;
+    font-size: 19px;
   }
   
   #bf-hero .bf-hero__offer-desc {
-    font-size: 15px;
-  }
-  
-  #bf-hero .bf-hero__benefits span {
-    font-size: 14px;
-  }
-  
-  #bf-hero .bf-hero__cta {
-    width: 100%;
-    min-height: 54px;
-    padding: 14px 20px;
-    font-size: 15px;
-  }
-  
-  #bf-hero .bf-hero__illustration {
-    max-width: 200px;
-  }
-  
-  #bf-hero .bf-hero__shape--1,
-  #bf-hero .bf-hero__shape--2 {
-    width: 200px;
-    height: 200px;
-  }
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: 52ch;
 }
+
 
 /* ═══════════════════════════════════════════════════════════════════════════
    REDUCED MOTION
