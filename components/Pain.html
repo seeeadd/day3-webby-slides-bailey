@@ -1,63 +1,68 @@
 <div id="bf-pain">
   <div class="bf-pain__container">
 
-    <!-- HEADLINE - controlled width to prevent orphan -->
+    <!-- HEADLINE -->
     <header class="bf-pain__header">
       <h2 class="bf-pain__headline">Six months in. A hundred strategies saved. Still no idea what to actually do next.</h2>
     </header>
 
-    <!-- LEDE -->
-    <section class="bf-pain__lede-section">
-      <p class="bf-pain__lede">Most people don't quit because they can't do Etsy. They quit because they spend months collecting strategies and still don't know what to do next.</p>
+    <!-- SETUP -->
+    <section class="bf-pain__setup">
+      <p class="bf-pain__setup-text">Most people don't quit because they can't do Etsy. They quit because they spend months collecting strategies and still don't know what to do next.</p>
     </section>
 
-    <!-- PAIN INTRO -->
+    <!-- VISUAL DIVIDER -->
+    <div class="bf-pain__divider" aria-hidden="true">
+      <svg viewBox="0 0 120 24" class="bf-pain__divider-svg">
+        <path d="M0 12 Q30 4 60 12 T120 12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <!-- PAIN INTRO + LIST -->
     <section class="bf-pain__pains">
-      <p class="bf-pain__pains-intro">On the surface it looks like you're trying Etsy. Behind the scenes, it feels more like:</p>
+      <p class="bf-pain__pains-intro">On the surface it looks like you're trying Etsy.<br/>Behind the scenes, it feels more like:</p>
 
-      <!-- PAIN LIST with visible markers -->
       <ul class="bf-pain__list">
-        <li class="bf-pain__item">
-          <span class="bf-pain__bullet" aria-hidden="true"></span>
-          <span class="bf-pain__item-text">second-guessing every listing before you even hit publish</span>
-        </li>
-        <li class="bf-pain__item">
-          <span class="bf-pain__bullet" aria-hidden="true"></span>
-          <span class="bf-pain__item-text">wondering if you're wasting time on products nobody will buy</span>
-        </li>
-        <li class="bf-pain__item">
-          <span class="bf-pain__bullet" aria-hidden="true"></span>
-          <span class="bf-pain__item-text">bouncing between SEO tips, "post more," trends, AI... and none of it sticks</span>
-        </li>
-        <li class="bf-pain__item">
-          <span class="bf-pain__bullet" aria-hidden="true"></span>
-          <span class="bf-pain__item-text">worrying Etsy changes, oversaturation, or AI means you're already too late</span>
-        </li>
-        <li class="bf-pain__item">
-          <span class="bf-pain__bullet" aria-hidden="true"></span>
-          <span class="bf-pain__item-text">spending money on courses and tools, then feeling dumb for still being unsure</span>
-        </li>
-        <li class="bf-pain__item">
-          <span class="bf-pain__bullet" aria-hidden="true"></span>
-          <span class="bf-pain__item-text">getting that little stomach drop every time you open your Etsy dashboard</span>
-        </li>
+        <li class="bf-pain__item">second-guessing every listing before you even hit publish</li>
+        <li class="bf-pain__item">wondering if you're wasting time on products nobody will buy</li>
+        <li class="bf-pain__item">bouncing between SEO tips, "post more," trends, AI... and none of it sticks</li>
+        <li class="bf-pain__item">worrying Etsy changes, oversaturation, or AI means you're already too late</li>
+        <li class="bf-pain__item">spending money on courses and tools, then feeling dumb for still being unsure</li>
+        <li class="bf-pain__item">getting that little stomach drop every time you open your Etsy dashboard</li>
 
-        <!-- KNIFE WOUNDS - these hit harder -->
+        <!-- GUT PUNCHES -->
         <li class="bf-pain__item bf-pain__item--knife">
-          <span class="bf-pain__bullet bf-pain__bullet--knife" aria-hidden="true"></span>
-          <span class="bf-pain__item-text">feeling guilty for being on your laptop instead of present with the people who matter</span>
+          feeling guilty for being on your laptop instead of present with the people who matter
+          <span class="bf-pain__annotation" aria-hidden="true">← this one keeps you up at night</span>
         </li>
-        <li class="bf-pain__item bf-pain__item--knife">
-          <span class="bf-pain__bullet bf-pain__bullet--knife" aria-hidden="true"></span>
-          <span class="bf-pain__item-text">hearing that voice: "Maybe I'm not creative enough. Not techy. Too old for this."</span>
-        </li>
+        <li class="bf-pain__item bf-pain__item--knife">hearing that voice: "Maybe I'm not creative enough. Not techy. Too old for this."</li>
       </ul>
     </section>
 
-    <!-- THE WORST PART - real visual moment -->
+    <!-- CHAOS ILLUSTRATION -->
+    <div class="bf-pain__illustration" aria-hidden="true">
+      <svg viewBox="0 0 200 80" class="bf-pain__chaos-svg">
+        <!-- Tangled thoughts -->
+        <path class="bf-pain__tangle bf-pain__tangle--1" d="M20 40 Q40 20 60 35 Q80 50 70 60 Q55 70 45 55 Q35 40 50 30" fill="none"/>
+        <path class="bf-pain__tangle bf-pain__tangle--2" d="M50 25 Q70 15 85 30 Q100 45 90 55 Q75 65 65 50" fill="none"/>
+        <path class="bf-pain__tangle bf-pain__tangle--3" d="M30 50 Q45 65 65 55 Q85 45 75 30 Q60 15 45 25" fill="none"/>
+        <!-- Question marks -->
+        <text class="bf-pain__question" x="45" y="45">?</text>
+        <text class="bf-pain__question bf-pain__question--small" x="70" y="35">?</text>
+        <text class="bf-pain__question bf-pain__question--small" x="55" y="58">?</text>
+        <!-- Arrow to clarity -->
+        <path class="bf-pain__arrow" d="M110 40 L170 40" fill="none"/>
+        <circle class="bf-pain__clarity-dot" cx="180" cy="40" r="8"/>
+        <polyline class="bf-pain__check" points="175 40 178 43 185 36" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- THE WORST PART - REAL MOMENT -->
     <section class="bf-pain__worst">
-      <p class="bf-pain__worst-label">The worst part?</p>
-      <p class="bf-pain__worst-text">A lot of Etsy advice quietly assumes you have 4 hours a day to experiment. Most of us don't.</p>
+      <div class="bf-pain__worst-card">
+        <p class="bf-pain__worst-label">The worst part?</p>
+        <p class="bf-pain__worst-text">A lot of Etsy advice quietly assumes you have 4 hours a day to experiment. Most of us don't.</p>
+      </div>
     </section>
 
     <!-- SPIRAL -->
@@ -65,21 +70,27 @@
       <p class="bf-pain__spiral-text">So you end up doing the only thing that feels safe: more. More listings, more videos, more tabs, and still no clear plan.</p>
     </section>
 
+    <!-- SECOND DIVIDER -->
+    <div class="bf-pain__divider bf-pain__divider--alt" aria-hidden="true">
+      <svg viewBox="0 0 120 24" class="bf-pain__divider-svg">
+        <path d="M0 12 Q30 20 60 12 T120 12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+    </div>
+
     <!-- THE TURN -->
     <footer class="bf-pain__turn">
-      <p class="bf-pain__turn-setup">What you need isn't more tactics.</p>
-      <p class="bf-pain__turn-insight">It's a simple way to stop guessing and start making the right decisions on purpose.</p>
+      <p class="bf-pain__turn-soft">What you need isn't more tactics.</p>
+      <p class="bf-pain__turn-bold">It's a simple way to stop guessing and start making the right decisions on purpose.</p>
 
       <div class="bf-pain__problem">
-        <p class="bf-pain__problem-text">If you've ever sat down to "work on Etsy" and spent most of the time deciding what to do—</p>
+        <p class="bf-pain__problem-setup">If you've ever sat down to "work on Etsy" and spent most of the time deciding what to do—</p>
         <p class="bf-pain__problem-punch">that is the whole problem.</p>
       </div>
 
-      <!-- FINALE - crescendo with escalating space -->
       <div class="bf-pain__finale">
-        <p class="bf-pain__finale-1">Not effort.</p>
-        <p class="bf-pain__finale-2">Not creativity.</p>
-        <p class="bf-pain__finale-3"><span class="bf-pain__decisions">Decisions.</span></p>
+        <p class="bf-pain__finale-line bf-pain__finale-line--1">Not effort.</p>
+        <p class="bf-pain__finale-line bf-pain__finale-line--2">Not creativity.</p>
+        <p class="bf-pain__finale-word"><span class="bf-pain__decisions">Decisions.</span></p>
       </div>
     </footer>
 
@@ -103,7 +114,7 @@
 
   font-family: 'Satoshi Variable', system-ui, sans-serif;
   background: var(--bg);
-  padding: clamp(64px, 10vw, 120px) clamp(20px, 5vw, 48px);
+  padding: clamp(80px, 12vw, 140px) clamp(20px, 5vw, 48px);
   color: var(--text);
   overflow-x: clip;
   box-sizing: border-box;
@@ -115,229 +126,323 @@
   padding: 0;
 }
 
-/* === CONTAINER === */
+/* ============================================
+   CENTERED CONTAINER
+   ============================================ */
 .bf-pain__container {
   max-width: 700px;
   margin: 0 auto;
+  text-align: center;
 }
 
 /* ============================================
-   HEADLINE - max-width prevents orphan
+   HEADLINE - centered, breathing room
    ============================================ */
 .bf-pain__header {
-  margin-bottom: clamp(48px, 7vw, 72px);
-  text-align: center;
+  margin-bottom: clamp(32px, 5vw, 40px);
 }
 
 .bf-pain__headline {
   font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(28px, 5vw, 48px);
+  font-size: clamp(30px, 5.5vw, 52px);
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.15;
   color: var(--dark);
   letter-spacing: -0.02em;
-  max-width: 14ch;
+  max-width: 16ch;
   margin: 0 auto;
 }
 
 /* ============================================
-   LEDE
+   SETUP - centered paragraph
    ============================================ */
-.bf-pain__lede-section {
-  margin-bottom: clamp(48px, 7vw, 72px);
+.bf-pain__setup {
+  margin-bottom: clamp(40px, 6vw, 48px);
 }
 
-.bf-pain__lede {
-  font-size: clamp(18px, 2.2vw, 22px);
+.bf-pain__setup-text {
+  font-size: clamp(18px, 2.2vw, 20px);
   font-weight: 500;
   line-height: 1.7;
   color: var(--dark);
-  max-width: 52ch;
+  max-width: 48ch;
+  margin: 0 auto;
 }
 
 /* ============================================
-   PAIN POINTS - visible structure
+   DECORATIVE DIVIDER
+   ============================================ */
+.bf-pain__divider {
+  margin-bottom: clamp(40px, 6vw, 56px);
+  display: flex;
+  justify-content: center;
+}
+
+.bf-pain__divider-svg {
+  width: 120px;
+  height: 24px;
+  color: var(--blush);
+  opacity: 0.6;
+}
+
+.bf-pain__divider--alt {
+  margin-top: clamp(48px, 7vw, 64px);
+  margin-bottom: clamp(48px, 7vw, 64px);
+}
+
+/* ============================================
+   PAIN POINTS - left-aligned within center
    ============================================ */
 .bf-pain__pains {
-  margin-bottom: clamp(64px, 10vw, 96px);
+  margin-bottom: clamp(48px, 7vw, 64px);
+  text-align: left;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bf-pain__pains-intro {
-  font-size: clamp(17px, 2vw, 20px);
+  font-size: clamp(17px, 2vw, 19px);
   font-weight: 500;
   line-height: 1.7;
   color: var(--text);
-  margin-bottom: clamp(32px, 5vw, 48px);
+  text-align: center;
+  margin-bottom: clamp(36px, 5vw, 48px);
 }
 
 .bf-pain__list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, 3vw, 28px);
+  gap: clamp(24px, 3.5vw, 32px);
 }
 
 .bf-pain__item {
-  display: flex;
-  align-items: flex-start;
-  gap: clamp(14px, 2vw, 20px);
-}
-
-/* VISIBLE BULLET MARKERS */
-.bf-pain__bullet {
-  flex-shrink: 0;
-  width: 8px;
-  height: 8px;
-  background: var(--blush);
-  border-radius: 50%;
-  margin-top: 10px;
-}
-
-.bf-pain__item-text {
-  font-size: clamp(17px, 1.9vw, 19px);
+  font-size: clamp(17px, 1.9vw, 18px);
   font-weight: 500;
   line-height: 1.7;
   color: var(--text);
-  max-width: 52ch;
+  padding-left: clamp(20px, 3vw, 28px);
+  border-left: 2px solid var(--border);
+  position: relative;
 }
 
-/* KNIFE WOUNDS - hit harder */
+/* GUT PUNCH PAINS - elevated treatment */
 .bf-pain__item--knife {
-  margin-top: clamp(12px, 2vw, 20px);
+  background: rgba(217, 163, 166, 0.12);
+  border-left: 3px solid var(--blush);
+  border-radius: 0 12px 12px 0;
   padding: clamp(20px, 3vw, 28px);
-  padding-left: clamp(16px, 2.5vw, 24px);
-  background: rgba(217, 163, 166, 0.1);
-  border-radius: 12px;
-}
-
-.bf-pain__item--knife .bf-pain__item-text {
-  font-size: clamp(18px, 2.1vw, 21px);
+  padding-left: clamp(20px, 3vw, 28px);
+  margin-top: clamp(8px, 1.5vw, 12px);
   font-weight: 600;
   color: var(--dark);
+  font-size: clamp(18px, 2vw, 19px);
 }
 
-.bf-pain__bullet--knife {
-  width: 10px;
-  height: 10px;
-  background: var(--blush);
-  margin-top: 8px;
+/* HANDWRITTEN ANNOTATION */
+.bf-pain__annotation {
+  display: block;
+  margin-top: 12px;
+  font-size: clamp(14px, 1.6vw, 16px);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--blush);
+  text-align: right;
 }
 
 /* ============================================
-   THE WORST PART - real visual moment
+   CHAOS ILLUSTRATION
+   ============================================ */
+.bf-pain__illustration {
+  margin-bottom: clamp(60px, 9vw, 80px);
+  display: flex;
+  justify-content: center;
+}
+
+.bf-pain__chaos-svg {
+  width: clamp(160px, 25vw, 200px);
+  height: auto;
+}
+
+.bf-pain__tangle {
+  stroke: var(--muted);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.5;
+}
+
+.bf-pain__tangle--2 { opacity: 0.4; }
+.bf-pain__tangle--3 { opacity: 0.3; }
+
+.bf-pain__question {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: 16px;
+  fill: var(--blush);
+}
+
+.bf-pain__question--small {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.bf-pain__arrow {
+  stroke: var(--secondary);
+  stroke-width: 2;
+  stroke-dasharray: 4 4;
+  opacity: 0.6;
+}
+
+.bf-pain__clarity-dot {
+  fill: var(--secondary);
+}
+
+.bf-pain__check {
+  stroke: var(--bg);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ============================================
+   THE WORST PART - REAL VISUAL MOMENT
    ============================================ */
 .bf-pain__worst {
-  margin-bottom: clamp(64px, 10vw, 96px);
-  padding: clamp(36px, 6vw, 56px) clamp(28px, 4vw, 40px);
+  margin-bottom: clamp(48px, 7vw, 64px);
+  padding: 0 clamp(16px, 3vw, 32px);
+}
+
+.bf-pain__worst-card {
   background: var(--cream-dark);
-  border-radius: 16px;
-  border-left: 4px solid var(--secondary);
+  border-radius: 20px;
+  padding: clamp(36px, 6vw, 56px) clamp(28px, 5vw, 48px);
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.bf-pain__worst-card::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--secondary);
+  border-radius: 2px;
 }
 
 .bf-pain__worst-label {
   font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(24px, 3.5vw, 32px);
+  font-size: clamp(26px, 4vw, 34px);
   font-weight: 400;
   color: var(--secondary);
   margin-bottom: clamp(16px, 2.5vw, 24px);
 }
 
 .bf-pain__worst-text {
-  font-size: clamp(18px, 2.2vw, 22px);
+  font-size: clamp(18px, 2.2vw, 21px);
   font-weight: 500;
   line-height: 1.7;
   color: var(--dark);
-  max-width: 44ch;
+  max-width: 38ch;
+  margin: 0 auto;
 }
 
 /* ============================================
    SPIRAL
    ============================================ */
 .bf-pain__spiral {
-  margin-bottom: clamp(72px, 11vw, 112px);
+  margin-bottom: clamp(48px, 7vw, 60px);
 }
 
 .bf-pain__spiral-text {
-  font-size: clamp(17px, 2vw, 20px);
+  font-size: clamp(17px, 2vw, 19px);
   font-weight: 500;
   line-height: 1.7;
   color: var(--text);
-  max-width: 52ch;
+  max-width: 48ch;
+  margin: 0 auto;
 }
 
 /* ============================================
    THE TURN
    ============================================ */
 .bf-pain__turn {
-  padding-top: clamp(48px, 8vw, 80px);
-  border-top: 1px solid var(--border);
+  text-align: center;
 }
 
-.bf-pain__turn-setup {
-  font-size: clamp(17px, 2vw, 20px);
+.bf-pain__turn-soft {
+  font-size: clamp(17px, 2vw, 19px);
   font-weight: 500;
   line-height: 1.6;
   color: var(--muted);
-  margin-bottom: 12px;
+  margin-bottom: clamp(12px, 2vw, 16px);
 }
 
-.bf-pain__turn-insight {
+.bf-pain__turn-bold {
   font-size: clamp(19px, 2.3vw, 24px);
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--dark);
-  max-width: 36ch;
-  margin-bottom: clamp(48px, 7vw, 72px);
+  max-width: 32ch;
+  margin: 0 auto clamp(40px, 6vw, 56px);
 }
 
 /* THE PROBLEM */
 .bf-pain__problem {
-  margin-bottom: clamp(56px, 9vw, 88px);
+  margin-bottom: clamp(48px, 7vw, 64px);
 }
 
-.bf-pain__problem-text {
-  font-size: clamp(17px, 2vw, 20px);
+.bf-pain__problem-setup {
+  font-size: clamp(17px, 2vw, 19px);
   font-weight: 500;
   line-height: 1.7;
   color: var(--text);
-  max-width: 46ch;
-  margin-bottom: clamp(16px, 2.5vw, 24px);
+  max-width: 42ch;
+  margin: 0 auto clamp(20px, 3vw, 28px);
 }
 
 .bf-pain__problem-punch {
-  font-size: clamp(19px, 2.3vw, 24px);
+  font-size: clamp(20px, 2.5vw, 26px);
   font-weight: 700;
   color: var(--dark);
+  background: linear-gradient(to top, var(--blush) 40%, transparent 40%);
+  display: inline;
+  padding: 2px 8px;
 }
 
 /* ============================================
-   FINALE - crescendo with escalating space
+   FINALE - ESCALATING RHYTHM
    ============================================ */
 .bf-pain__finale {
-  text-align: center;
+  margin-top: clamp(40px, 6vw, 56px);
 }
 
-.bf-pain__finale-1 {
+.bf-pain__finale-line {
   font-size: clamp(17px, 2vw, 20px);
   font-weight: 500;
   color: var(--muted);
-  margin-bottom: clamp(16px, 2.5vw, 24px);
 }
 
-.bf-pain__finale-2 {
-  font-size: clamp(17px, 2vw, 20px);
-  font-weight: 500;
-  color: var(--muted);
-  margin-bottom: clamp(32px, 5vw, 48px);
+/* ESCALATING SPACE: 24px → 40px → 60px */
+.bf-pain__finale-line--1 {
+  margin-bottom: clamp(20px, 3vw, 24px);
 }
 
-.bf-pain__finale-3 {
-  margin-top: clamp(24px, 4vw, 40px);
+.bf-pain__finale-line--2 {
+  margin-bottom: clamp(36px, 5.5vw, 48px);
+}
+
+.bf-pain__finale-word {
+  margin-top: clamp(48px, 7vw, 64px);
 }
 
 .bf-pain__decisions {
   font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(48px, 9vw, 88px);
+  font-size: clamp(52px, 10vw, 96px);
   font-weight: 400;
   color: var(--dark);
   letter-spacing: -0.02em;
@@ -349,9 +454,9 @@
   content: '';
   position: absolute;
   left: 0;
-  bottom: clamp(4px, 1vw, 10px);
+  bottom: clamp(6px, 1.2vw, 12px);
   width: 100%;
-  height: clamp(5px, 1vw, 8px);
+  height: clamp(6px, 1.2vw, 10px);
   background: var(--blush);
   transform: scaleX(0);
   transform-origin: left;
@@ -370,24 +475,27 @@
    ============================================ */
 @media (max-width: 350px) {
   #bf-pain {
-    padding: 48px 16px;
+    padding: 56px 16px;
   }
 
   .bf-pain__headline {
-    font-size: 26px;
-    max-width: 100%;
+    font-size: 28px;
   }
 
   .bf-pain__item--knife {
     padding: 16px;
   }
 
-  .bf-pain__worst {
-    padding: 24px 20px;
+  .bf-pain__worst-card {
+    padding: 28px 20px;
   }
 
   .bf-pain__decisions {
-    font-size: 40px;
+    font-size: 44px;
+  }
+
+  .bf-pain__annotation {
+    font-size: 13px;
   }
 }
 
@@ -396,7 +504,7 @@
    ============================================ */
 @media (min-width: 360px) and (max-width: 430px) {
   #bf-pain {
-    padding: 56px 20px;
+    padding: 64px 20px;
   }
 }
 
@@ -408,8 +516,8 @@
     max-width: 720px;
   }
 
-  .bf-pain__headline {
-    max-width: 16ch;
+  .bf-pain__pains {
+    max-width: 600px;
   }
 }
 
