@@ -651,4 +651,166 @@ The bar is not "good enough." The bar is "I've never seen a course sales page th
 
 ---
 
+Master Prompt V2 — Hard-Spec Sales Page Section Builder
+
+Claude: follow this exactly. If any required input is missing, ask for it and STOP.
+
+A) REQUIRED INPUTS (STOP if missing)
+
+SECTION NAME
+
+SECTION JOB (≤ 5 words)
+
+READER QUESTION
+
+Copy for the section (raw text is fine)
+
+Where this section sits in the page (Hero / Pain / Paradigm / Solution / Proof / Offer / Risk / Close)
+
+B) MANDATORY BRIEF (output this first; no code yet)
+
+Fill this out before code (no skipping):
+
+SECTION NAME:
+
+JOB:
+
+READER’S QUESTION:
+
+STATE → DESIRED STATE:
+
+DOMINANT ELEMENT (60%):
+
+SUPPORTING ELEMENT (30%):
+
+DETAIL LAYER (10%):
+
+EYE PATH (how the eye moves):
+
+COMPOSITION IDEA (describe layout in plain English):
+
+ILLUSTRATION NEEDS (what custom SVGs you will build):
+
+UNIQUE ANGLE (must be non-cliché; no generic “premium modern”):
+
+ANIMATION MOMENTS (max 2 “statement moments”; subtle):
+
+CTA (if any):
+
+C) HARD CONSTRAINTS (AUTO-FAIL if violated)
+
+NO generic icon libraries. Do NOT use Lucide/Feather/Heroicons/etc.
+
+NO equal-card grids. No “3 identical cards” or “4 identical cards.”
+
+At least 2 custom inline SVGs per section:
+
+1 “concept graphic” (metaphor / process / comparison)
+
+1 “UI graphic” (custom bullets / divider / badge / highlight treatment)
+
+Asymmetry is required + you must name the balancing element.
+
+Typography cap: max 3 text sizes in the section (excluding tiny labels).
+
+Mobile-first: nothing side-by-side under 768px.
+
+No random blobs unless they convey meaning (signal, path, progress, system).
+
+No big blank rectangles as “design.” Every surface needs purpose.
+
+D) GENERATION WORKFLOW (must follow)
+
+Create 3 distinct layout concepts (written, not code). Each must name:
+
+Dominant element
+
+Supporting element
+
+Detail layer
+
+Metaphor graphic idea
+
+Pick the best concept and explain why (1 paragraph).
+
+Write the code (React + Tailwind + inline SVG + Framer Motion).
+
+Run the Quality Checklist and score 0–10 on:
+
+Visual hierarchy (blur test)
+
+Uniqueness (“underrated genius”)
+
+Brand compliance (colors/typography)
+
+Conversion clarity (answers the question + pulls scroll)
+
+Mobile correctness
+
+If any score < 8: revise once and output the revised code.
+
+E) OUTPUT FORMAT (must match)
+
+Brief
+
+3 concepts
+
+Selected concept
+
+Code
+
+Checklist + scores
+
+If revised: “REVISION PASS” + updated code
+
+Auto-Fail Visual Sins (ban list)
+
+If any of these appear, Claude must restart the section:
+
+“3 cards in a row with icon + title + text”
+
+“Centered headline + centered paragraph + centered button + 2 columns below”
+
+“Generic modern SaaS template layout”
+
+“Floating shapes with no meaning”
+
+“Random gradients everywhere”
+
+“Everything same weight / same size”
+
+Quality Checklist (what ‘good’ looks like)
+1) Hierarchy
+
+If you squint/blur: you still see the headline, the main proof/mechanism, then the CTA.
+
+There’s a clear dominant element (not ‘everything equal’).
+
+2) Composition
+
+Asymmetry + balance.
+
+More than one rhythm: at least one “tight” area and one “breathing” area.
+
+3) Custom graphics (non-negotiable)
+
+Concept graphic actually teaches (process / system / comparison), not decoration.
+
+UI graphic improves scanability (badges, dividers, bullet treatments).
+
+4) Conversion
+
+The section answers a real question.
+
+Next action is obvious.
+
+No jargon, no fluff.
+
+5) Mobile
+
+Everything stacks clean.
+
+No clipped SVGs.
+
+No tiny text.
 **Now proceed to Phase 1 for the specific section you're building.**
