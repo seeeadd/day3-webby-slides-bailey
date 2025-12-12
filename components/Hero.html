@@ -1,124 +1,128 @@
 <div id="bf-hero">
+  <!-- Floating background shapes for warmth -->
+  <div class="bf-hero__bg">
+    <div class="bf-hero__shape bf-hero__shape--1"></div>
+    <div class="bf-hero__shape bf-hero__shape--2"></div>
+    <div class="bf-hero__shape bf-hero__shape--3"></div>
+  </div>
+
   <div class="bf-hero__container">
-    <!-- LEFT: Content -->
+    <!-- LEFT: Content (60%) -->
     <div class="bf-hero__content">
       
       <!-- Eyebrow -->
-      <div class="bf-hero__eyebrow">
-        <span class="bf-hero__eyebrow-dot"></span>
-        <span class="bf-hero__eyebrow-text">Not another course — a 90-day implementation sprint</span>
-      </div>
+      <p class="bf-hero__eyebrow">Not another course. A 90-day implementation sprint.</p>
 
-      <!-- Headline - clean and punchy -->
+      <!-- Headline - ONE focal point, clean -->
       <h1 class="bf-hero__headline">
-        <span class="bf-hero__hline bf-hero__hline--muted">You don't need another course.</span>
-        <span class="bf-hero__hline">You need <span class="bf-hero__name">Bailey</span> to tell you <span class="bf-hero__pop">exactly what to do</span> for the next <span class="bf-hero__days">90&nbsp;days.</span></span>
+        <span class="bf-hero__headline-light">You don't need another course.</span>
+        You need Bailey to tell you <span class="bf-hero__highlight">exactly what to do for the next&nbsp;90&nbsp;days.</span>
       </h1>
 
-      <!-- Program Block -->
-      <div class="bf-hero__program">
-        <div class="bf-hero__program-badge">
-          <span class="bf-hero__program-emoji">🚀</span>
-          <span class="bf-hero__program-label">Your 90-Day Roadmap</span>
-        </div>
-        <h2 class="bf-hero__program-title">The Etsy Empire Accelerator</h2>
-        <p class="bf-hero__program-body">A clear plan to put your Etsy shop on track for an extra <strong>$3K—$5K/month</strong> in income. I tell you what to do. You do it. That's the whole thing. Built for 60—90 minutes a day because that's probably all you've got.</p>
+      <!-- Accelerator Block Container -->
+      <div class="bf-hero__accelerator-block">
+      <div class="bf-hero__offer">
+        <h2 class="bf-hero__offer-name">The 90-Day Etsy Empire Accelerator</h2>
+        <p class="bf-hero__offer-desc">A clear plan to put your Etsy shop on track for an extra $3K to $5K/month in income. I tell you what to do. You do it. That's the whole thing. Built for 60 to 90 minutes a day because that's probably all you've got.</p>
       </div>
 
-      <!-- Bullets -->
-      <ul class="bf-hero__bullets">
-        <li class="bf-hero__bullet">
-          <svg class="bf-hero__bullet-icon" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="11" stroke="#2E6A62" stroke-width="2"/>
-            <path d="M7 12l4 4 6-7" stroke="#123F3A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="bf-hero__bullet-text">Wake up knowing exactly what to work on today <span class="bf-hero__muted">(and stop wasting hours deciding)</span></span>
+      <!-- Bullets - clean, supportive -->
+      <ul class="bf-hero__benefits">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#D9A3A6" fill-opacity="0.2"/><path d="M7 12l4 4 6-7" stroke="#2E6A62" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Wake up knowing exactly what to work on today</span>
         </li>
-        <li class="bf-hero__bullet">
-          <svg class="bf-hero__bullet-icon" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="11" stroke="#2E6A62" stroke-width="2"/>
-            <path d="M7 12l4 4 6-7" stroke="#123F3A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="bf-hero__bullet-text">Bailey looks at your work and says "yes, keep going" or "no, try this instead"</span>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#D9A3A6" fill-opacity="0.2"/><path d="M7 12l4 4 6-7" stroke="#2E6A62" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Bailey looks at your work and says "yes, keep going" or "no, try this instead"</span>
         </li>
-        <li class="bf-hero__bullet">
-          <svg class="bf-hero__bullet-icon" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="11" stroke="#2E6A62" stroke-width="2"/>
-            <path d="M7 12l4 4 6-7" stroke="#123F3A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="bf-hero__bullet-text">Actually follow through on something for once, with someone in your corner the whole way</span>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#D9A3A6" fill-opacity="0.2"/><path d="M7 12l4 4 6-7" stroke="#2E6A62" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Actually follow through on something for once, with someone in your corner the whole way</span>
         </li>
       </ul>
+      </div>
 
-      <!-- CTA -->
-      <div class="bf-hero__cta-group">
+      <!-- CTA - clean, warm -->
+      <div class="bf-hero__cta-area">
         <a href="#pricing" class="bf-hero__cta">
-          <span class="bf-hero__cta-shimmer"></span>
-          <span class="bf-hero__cta-emoji">🎉</span>
-          <span class="bf-hero__cta-text">Grab the Black Friday Deal</span>
-          <svg class="bf-hero__cta-arrow" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          Grab the Black Friday Deal
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <p class="bf-hero__cta-urgency">
-          <span class="bf-hero__cta-dot"></span>
-          <strong>Black Friday Special:</strong> Save $200 — Ends Monday
+        <p class="bf-hero__urgency">
+          <span class="bf-hero__urgency-dot"></span>
+          Black Friday Special: Save $200. Ends Monday.
         </p>
       </div>
 
     </div>
 
-    <!-- RIGHT: Visual -->
+    <!-- RIGHT: Visual (40%) - Custom organic illustration -->
     <div class="bf-hero__visual">
-      <svg class="bf-hero__concept" viewBox="0 0 380 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Chaos Side (top) -->
-        <g class="bf-hero__chaos">
-          <!-- Tangled mess - thicker strokes -->
-          <path class="bf-hero__chaos-path" d="M70 70 Q120 20, 170 80 T220 40 Q250 90, 200 120 T140 90 Q90 120, 120 70 T170 100" stroke="#5E6E6C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <path class="bf-hero__chaos-path bf-hero__chaos-path--2" d="M90 35 Q140 70, 115 105 T180 70 Q155 35, 200 55" stroke="#5E6E6C" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <svg class="bf-hero__illustration" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- CHAOS (top) - organic, hand-drawn feeling -->
+        <g class="bf-hero__chaos-group">
+          <!-- Tangled organic path -->
+          <path class="bf-hero__path-chaos" d="M80 80 Q130 30, 180 90 T230 50 Q260 100, 210 130 T150 100 Q100 130, 130 80 T180 110" stroke="#5E6E6C" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+          <path class="bf-hero__path-chaos-2" d="M100 45 Q150 80, 125 115 T190 80 Q165 45, 210 65" stroke="#D9A3A6" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
           
-          <!-- Scattered elements with blush -->
-          <rect x="55" y="50" width="38" height="28" rx="3" fill="#FDF8F4" stroke="#D9A3A6" stroke-width="2"/>
-          <text x="66" y="70" font-family="Georgia,serif" font-size="14" fill="#5E6E6C" font-weight="600">?</text>
-          <rect x="175" y="28" width="32" height="24" rx="3" fill="#FDF8F4" stroke="#D9A3A6" stroke-width="2" transform="rotate(4 191 40)"/>
-          <text x="184" y="45" font-family="Georgia,serif" font-size="12" fill="#5E6E6C" font-weight="600">??</text>
-          
-          <!-- Label -->
-          <text x="145" y="150" font-family="Satoshi,sans-serif" font-size="13" fill="#5E6E6C" text-anchor="middle" font-weight="600">where you are now</text>
-        </g>
-
-        <!-- Transition Arrow -->
-        <g class="bf-hero__transition">
-          <path d="M190 175 L190 210" stroke="#123F3A" stroke-width="2.5" stroke-dasharray="4,4" stroke-opacity="0.5"/>
-          <text x="190" y="238" font-family="Satoshi,sans-serif" font-size="14" fill="#2E6A62" text-anchor="middle" font-weight="700">90 days</text>
-          <path d="M182 218 L190 230 L198 218" stroke="#123F3A" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.6"/>
-        </g>
-
-        <!-- Clarity Side (bottom) - The clear path -->
-        <g class="bf-hero__clarity">
-          <!-- Main vertical line - thicker -->
-          <path class="bf-hero__clarity-path" d="M190 265 L190 430" stroke="#123F3A" stroke-width="3" fill="none" stroke-linecap="round"/>
-          
-          <!-- Milestone 1 -->
-          <circle cx="190" cy="290" r="10" fill="#FDF8F4" stroke="#2E6A62" stroke-width="2.5"/>
-          <text x="215" y="295" font-family="Satoshi,sans-serif" font-size="14" fill="#203332" font-weight="600">Week 1–4</text>
-          
-          <!-- Milestone 2 -->
-          <circle cx="190" cy="350" r="10" fill="#FDF8F4" stroke="#2E6A62" stroke-width="2.5"/>
-          <text x="215" y="355" font-family="Satoshi,sans-serif" font-size="14" fill="#203332" font-weight="600">Week 5–8</text>
-          
-          <!-- Milestone 3 -->
-          <circle cx="190" cy="410" r="10" fill="#FDF8F4" stroke="#D9A3A6" stroke-width="2.5"/>
-          <text x="215" y="415" font-family="Satoshi,sans-serif" font-size="14" fill="#203332" font-weight="600">Week 9–12</text>
-          
-          <!-- Final Success Check - bigger -->
-          <g class="bf-hero__success">
-            <circle cx="190" cy="455" r="18" fill="#123F3A"/>
-            <path class="bf-hero__success-check" d="M180 455l7 7 10-12" stroke="#FDF8F4" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Floating question elements -->
+          <g class="bf-hero__float-1">
+            <rect x="60" y="55" width="36" height="28" rx="6" fill="#FDF6F0" stroke="#D9A3A6" stroke-width="1.5"/>
+            <text x="78" y="75" font-family="Georgia,serif" font-size="16" fill="#5E6E6C" text-anchor="middle">?</text>
+          </g>
+          <g class="bf-hero__float-2">
+            <rect x="175" y="35" width="30" height="24" rx="6" fill="#FDF6F0" stroke="#D9A3A6" stroke-width="1.5" transform="rotate(5 190 47)"/>
+            <text x="190" y="52" font-family="Georgia,serif" font-size="13" fill="#5E6E6C" text-anchor="middle">??</text>
           </g>
           
-          <!-- Result label -->
-          <text x="190" y="495" font-family="Satoshi,sans-serif" font-size="13" fill="#2E6A62" text-anchor="middle" font-weight="600">where you'll be</text>
+          <!-- Label with handwritten feel -->
+          <text x="150" y="165" font-family="Satoshi,sans-serif" font-size="13" fill="#5E6E6C" text-anchor="middle" font-style="italic">where you are now</text>
+        </g>
+
+        <!-- TRANSFORMATION - organic arrow down -->
+        <g class="bf-hero__transform">
+          <path d="M200 190 C200 220, 200 250, 200 280" stroke="#123F3A" stroke-width="2" fill="none" stroke-dasharray="6,4" opacity="0.4"/>
+          <text x="200" y="260" font-family="Satoshi,sans-serif" font-size="15" fill="#2E6A62" text-anchor="middle" font-weight="600">90 days</text>
+          <path d="M192 270 L200 285 L208 270" stroke="#2E6A62" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+
+        <!-- CLARITY (bottom) - clean stepping stones path -->
+        <g class="bf-hero__clarity-group">
+          <!-- Organic curved path -->
+          <path class="bf-hero__path-clarity" d="M200 310 C180 340, 220 370, 200 400 C180 430, 220 460, 200 480" stroke="#123F3A" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+          
+          <!-- Week 1-4 stone -->
+          <g class="bf-hero__milestone bf-hero__milestone-1">
+            <ellipse cx="200" cy="330" rx="50" ry="20" fill="#FDF6F0" stroke="#2E6A62" stroke-width="2"/>
+            <text x="200" y="335" font-family="Satoshi,sans-serif" font-size="13" fill="#123F3A" text-anchor="middle" font-weight="600">Week 1–4</text>
+          </g>
+          
+          <!-- Week 5-8 stone -->
+          <g class="bf-hero__milestone bf-hero__milestone-2">
+            <ellipse cx="200" cy="390" rx="50" ry="20" fill="#FDF6F0" stroke="#2E6A62" stroke-width="2"/>
+            <text x="200" y="395" font-family="Satoshi,sans-serif" font-size="13" fill="#123F3A" text-anchor="middle" font-weight="600">Week 5–8</text>
+          </g>
+          
+          <!-- Week 9-12 stone with coral accent -->
+          <g class="bf-hero__milestone bf-hero__milestone-3">
+            <ellipse cx="200" cy="450" rx="50" ry="20" fill="#D9A3A6" fill-opacity="0.2" stroke="#D9A3A6" stroke-width="2"/>
+            <text x="200" y="455" font-family="Satoshi,sans-serif" font-size="13" fill="#123F3A" text-anchor="middle" font-weight="600">Week 9–12</text>
+          </g>
+          
+          <!-- Success checkmark -->
+          <g class="bf-hero__success">
+            <circle cx="200" cy="490" r="16" fill="#123F3A"/>
+            <path d="M191 490l6 6 9-10" stroke="#FDF6F0" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          
+          <!-- Decorative sparkles -->
+          <g class="bf-hero__sparkle bf-hero__sparkle-1">
+            <path d="M260 340 l4-8 4 8 -8-4 8 0 -8 4" stroke="#D9A3A6" stroke-width="1" fill="none"/>
+          </g>
+          <g class="bf-hero__sparkle bf-hero__sparkle-2">
+            <path d="M140 420 l3-6 3 6 -6-3 6 0 -6 3" stroke="#2E6A62" stroke-width="1" fill="none"/>
+          </g>
         </g>
       </svg>
     </div>
@@ -147,27 +151,26 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   BASE - Boomer-friendly defaults
+   BASE - Warm, premium defaults
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero {
-  --cream: #FDF8F4;
+  --cream: #FDF6F0;
+  --cream-warm: #FAF0E8;
   --primary: #123F3A;
   --secondary: #2E6A62;
-  --accent: #D9A3A6;
+  --coral: #D9A3A6;
+  --coral-deep: #C78F92;
   --text: #203332;
   --muted: #5E6E6C;
-  --border: #E8DED6;
-
+  
   position: relative;
   background: var(--cream);
   font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
   font-synthesis: none !important;
-  font-size: 20px;
-  font-weight: 500;
   color: var(--text);
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: clip;
 }
 
 #bf-hero *, #bf-hero *::before, #bf-hero *::after {
@@ -177,570 +180,516 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   LAYOUT - More breathing room
+   FLOATING BACKGROUND SHAPES - Subtle warmth
+   ═══════════════════════════════════════════════════════════════════════════ */
+#bf-hero .bf-hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#bf-hero .bf-hero__shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+#bf-hero .bf-hero__shape--1 {
+  width: 500px;
+  height: 500px;
+  background: var(--coral);
+  top: -150px;
+  right: -100px;
+  animation: float-1 30s ease-in-out infinite;
+}
+
+#bf-hero .bf-hero__shape--2 {
+  width: 400px;
+  height: 400px;
+  background: var(--secondary);
+  opacity: 0.15;
+  bottom: -100px;
+  left: -100px;
+  animation: float-2 40s ease-in-out infinite;
+}
+
+#bf-hero .bf-hero__shape--3 {
+  width: 300px;
+  height: 300px;
+  background: var(--coral);
+  opacity: 0.25;
+  top: 40%;
+  left: 30%;
+  animation: float-3 35s ease-in-out infinite;
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(30px, -20px) rotate(5deg); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, 30px); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(25px, -15px) scale(1.05); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LAYOUT - 60/40 split, clean
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero .bf-hero__container {
+  position: relative;
   display: grid;
-  grid-template-columns: 7fr 5fr;
-  gap: 48px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
   align-items: center;
-  max-width: 1320px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 20px 64px;
+  padding: 100px 48px 80px;
   min-height: 100vh;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   CONTENT
+   CONTENT - Left side
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero .bf-hero__content {
   position: relative;
+  z-index: 1;
 }
 
-/* Eyebrow - bigger, bolder */
+/* Eyebrow - simple, supportive */
 #bf-hero .bf-hero__eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-#bf-hero .bf-hero__eyebrow-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--accent);
-  border-radius: 50%;
-  animation: bf-pulse 2s ease-in-out infinite;
-}
-
-@keyframes bf-pulse {
-  0%, 100% { opacity: 0.7; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.15); }
-}
-
-#bf-hero .bf-hero__eyebrow-text {
   font-family: 'Satoshi', sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--secondary);
+  margin-bottom: 24px;
 }
 
-/* Headline - bigger, fuller */
+/* Headline - THE focal point */
 #bf-hero .bf-hero__headline {
   font-family: 'Ogg', Georgia, 'Times New Roman', serif;
-  font-size: clamp(56px, 6vw, 88px);
+  font-size: clamp(48px, 5vw, 72px);
   font-weight: normal;
-  line-height: 1.0;
+  line-height: 1.08;
   color: var(--primary);
-  max-width: 18ch;
-  margin-bottom: 48px;
-  letter-spacing: -0.02em;
+  margin-bottom: 0;
+  max-width: 14ch;
 }
 
-#bf-hero .bf-hero__hline {
+#bf-hero .bf-hero__headline-light {
   display: block;
-}
-
-#bf-hero .bf-hero__hline--muted {
   color: var(--muted);
-  font-size: 0.6em;
-  margin-bottom: 0.3em;
-  letter-spacing: 0;
+  font-size: 0.55em;
+  margin-bottom: 0.4em;
+  letter-spacing: 0.01em;
 }
 
-#bf-hero .bf-hero__pop {
-  color: var(--secondary);
+#bf-hero .bf-hero__highlight {
+  display: inline;
+  background: linear-gradient(to top, rgba(217, 163, 166, 0.3) 0%, rgba(217, 163, 166, 0.3) 25%, transparent 25%);
+  padding-bottom: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   position: relative;
-}
-
-#bf-hero .bf-hero__pop::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0.08em;
-  width: 100%;
-  height: 0.15em;
-  background: var(--accent);
-  opacity: 0.7;
-  border-radius: 4px;
-}
-
-#bf-hero .bf-hero__days {
   color: var(--secondary);
+  
 }
 
-#bf-hero .bf-hero__name {
-  position: relative;
-  white-space: nowrap;
-  color: var(--primary);
-}
+#bf-hero .bf-hero__highlight::after { display: none; }
 
-#bf-hero .bf-hero__name::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0.02em;
-  width: 100%;
-  height: 0.14em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8'%3E%3Cpath d='M0 6 Q25 2, 50 5 T100 4' stroke='%23D9A3A6' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
-  background-size: 100% 100%;
-}
 
-/* Program Block - flagship treatment */
-#bf-hero .bf-hero__program {
-  margin-bottom: 40px;
+
+/* Accelerator Block Container - groups offer + bullets */
+#bf-hero .bf-hero__accelerator-block {
+  background: #F5F0EB;
+  border: 1px solid #E8DED6;
+  border-radius: 16px;
   padding: 32px 36px;
-  background: linear-gradient(135deg, rgba(217, 163, 166, 0.12) 0%, rgba(46, 106, 98, 0.06) 100%);
-  border-radius: 24px;
-  border: 1.5px solid rgba(217, 163, 166, 0.25);
+  margin-top: 36px;
+  margin-bottom: 32px;
 }
 
-#bf-hero .bf-hero__program-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 18px 8px 12px;
-  background: var(--accent);
-  border-radius: 50px;
-  margin-bottom: 18px;
+/* Offer section - inside container, no card */
+#bf-hero .bf-hero__offer {
+  margin-bottom: 24px;
 }
 
-#bf-hero .bf-hero__program-emoji {
-  font-size: 18px;
-}
 
-#bf-hero .bf-hero__program-label {
-  font-family: 'Satoshi', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-#bf-hero .bf-hero__program-title {
+#bf-hero .bf-hero__offer-name {
   font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(36px, 4.5vw, 52px);
+  font-size: clamp(28px, 3.5vw, 40px);
   font-weight: normal;
   color: var(--primary);
-  margin-bottom: 18px;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+  margin-bottom: 16px;
+  line-height: 1.15;
 }
 
-#bf-hero .bf-hero__program-body {
-  font-family: 'Satoshi', sans-serif;
-  font-size: 21px;
-  font-weight: 500;
-  line-height: 1.65;
+#bf-hero .bf-hero__offer-desc {
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 1.75;
   color: var(--text);
-  max-width: 54ch;
+  max-width: 52ch;
 }
 
-#bf-hero .bf-hero__program-body strong {
-  color: var(--secondary);
-  font-weight: 700;
-}
 
-/* Bullets - bigger, bolder */
-#bf-hero .bf-hero__bullets {
+/* Benefits - clean bullets */
+#bf-hero .bf-hero__benefits {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  margin-bottom: 44px;
+  gap: 20px;
+  margin-bottom: 0;
 }
 
-#bf-hero .bf-hero__bullet {
+#bf-hero .bf-hero__benefits li {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 14px;
 }
 
-#bf-hero .bf-hero__bullet-icon {
+#bf-hero .bf-hero__benefits svg {
   flex-shrink: 0;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   margin-top: 2px;
 }
 
-#bf-hero .bf-hero__bullet-text {
-  font-family: 'Satoshi', sans-serif;
-  font-size: 21px;
-  font-weight: 500;
-  line-height: 1.55;
+#bf-hero .bf-hero__benefits span {
+  font-size: 19px;
+  font-weight: 450;
+  line-height: 1.6;
   color: var(--text);
 }
 
-#bf-hero .bf-hero__muted {
-  color: #6B5E5E;
-  font-style: italic;
-}
-
-/* CTA - BIG, BOLD, UNMISSABLE */
-#bf-hero .bf-hero__cta-group {
+/* CTA Area - clean, warm */
+#bf-hero .bf-hero__cta-area {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 #bf-hero .bf-hero__cta {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  height: 72px;
-  padding: 0 52px;
-  background: linear-gradient(135deg, #e63946 0%, #d62839 50%, #c1121f 100%);
+  gap: 12px;
+  height: 64px;
+  padding: 0 40px;
+  background: linear-gradient(135deg, #D85A5A 0%, #C74B4B 100%);
   color: #fff;
   font-family: 'Satoshi', sans-serif;
-  font-size: 22px;
-  font-weight: 800;
+  font-size: 19px;
+  font-weight: 700;
   text-decoration: none;
   border-radius: 50px;
   width: fit-content;
-  letter-spacing: 0.02em;
-  box-shadow:
-    0 10px 30px rgba(230, 57, 70, 0.45),
-    0 4px 10px rgba(230, 57, 70, 0.3),
-    inset 0 1px 0 rgba(255,255,255,0.2);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-  animation: bf-cta-pulse 2.5s ease-in-out infinite;
+  box-shadow: 
+    0 8px 24px rgba(200, 75, 75, 0.35),
+    0 2px 8px rgba(200, 75, 75, 0.2);
+  transition: all 0.3s ease;
 }
 
-@keyframes bf-cta-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.03); }
-}
-
-#bf-hero .bf-hero__cta-shimmer {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255,255,255,0.3) 50%,
-    transparent 100%
-  );
-  animation: bf-shimmer 2.5s ease-in-out infinite;
-}
-
-@keyframes bf-shimmer {
-  0% { left: -100%; }
-  50%, 100% { left: 100%; }
-}
-
-#bf-hero .bf-hero__cta:hover {
-  background: linear-gradient(135deg, #ff4d5a 0%, #e63946 50%, #d62839 100%);
-  transform: translateY(-5px) scale(1.03);
-  box-shadow:
-    0 16px 40px rgba(230, 57, 70, 0.5),
-    0 8px 16px rgba(230, 57, 70, 0.35),
-    inset 0 1px 0 rgba(255,255,255,0.25);
-  animation: none;
-}
-
-#bf-hero .bf-hero__cta-emoji {
-  position: relative;
-  z-index: 1;
-  font-size: 24px;
-}
-
-#bf-hero .bf-hero__cta-text {
-  position: relative;
-  z-index: 1;
-}
-
-#bf-hero .bf-hero__cta-arrow {
-  position: relative;
-  z-index: 1;
-  width: 26px;
-  height: 26px;
+#bf-hero .bf-hero__cta svg {
+  width: 22px;
+  height: 22px;
   transition: transform 0.3s ease;
 }
 
-#bf-hero .bf-hero__cta:hover .bf-hero__cta-arrow {
-  transform: translateX(5px);
+#bf-hero .bf-hero__cta:hover {
+  background: linear-gradient(135deg, #E86A6A 0%, #D85A5A 100%);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 12px 32px rgba(200, 75, 75, 0.4),
+    0 4px 12px rgba(200, 75, 75, 0.25);
 }
 
-#bf-hero .bf-hero__cta-urgency {
+#bf-hero .bf-hero__cta:hover svg {
+  transform: translateX(4px);
+}
+
+#bf-hero .bf-hero__urgency {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-family: 'Satoshi', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--primary);
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
 }
 
-#bf-hero .bf-hero__cta-urgency strong {
-  color: #e63946;
-}
-
-#bf-hero .bf-hero__cta-dot {
-  width: 12px;
-  height: 12px;
-  background: #e63946;
+#bf-hero .bf-hero__urgency-dot {
+  width: 10px;
+  height: 10px;
+  background: #D85A5A;
   border-radius: 50%;
-  animation: bf-urgency-pulse 1.2s ease-in-out infinite;
+  animation: pulse-dot 1.5s ease-in-out infinite;
 }
 
-@keyframes bf-urgency-pulse {
+@keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.4); }
+  50% { opacity: 0.5; transform: scale(1.3); }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   VISUAL - Bigger, bolder, no clip
+   VISUAL - Right side illustration
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero .bf-hero__visual {
+  overflow: visible;
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 32px 24px;
-  overflow: visible;
 }
 
-#bf-hero .bf-hero__concept {
+#bf-hero .bf-hero__illustration {
   width: 100%;
-  max-width: 420px;
+  max-width: 340px;
   height: auto;
 }
 
-/* Animation: Draw-on paths - AUTO RUN */
-#bf-hero .bf-hero__chaos-path {
-  stroke-dasharray: 350;
-  stroke-dashoffset: 350;
-  animation: bf-draw 1500ms cubic-bezier(0.4, 0, 0.2, 1) 500ms forwards;
+/* Chaos paths - draw animation */
+#bf-hero .bf-hero__path-chaos {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: draw-path 2s ease-out 0.3s forwards;
 }
 
-#bf-hero .bf-hero__chaos-path--2 {
-  stroke-dasharray: 250;
-  stroke-dashoffset: 250;
-  animation: bf-draw-short 1200ms cubic-bezier(0.4, 0, 0.2, 1) 800ms forwards;
+#bf-hero .bf-hero__path-chaos-2 {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw-path 1.8s ease-out 0.6s forwards;
 }
 
-#bf-hero .bf-hero__clarity-path {
-  stroke-dasharray: 170;
-  stroke-dashoffset: 170;
-  animation: bf-draw-clarity 1400ms cubic-bezier(0.4, 0, 0.2, 1) 1200ms forwards;
-}
-
-/* Continuous float animation for visual engagement */
-#bf-hero .bf-hero__concept {
-  animation: bf-float 4s ease-in-out infinite;
-}
-
-@keyframes bf-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-
-/* Timeline dots pulse */
-#bf-hero .bf-hero__timeline-dot {
-  animation: bf-dot-pulse 2s ease-in-out infinite;
-}
-
-#bf-hero .bf-hero__timeline-dot:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-#bf-hero .bf-hero__timeline-dot:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-@keyframes bf-dot-pulse {
-  0%, 100% { transform: scale(1); opacity: 0.7; }
-  50% { transform: scale(1.15); opacity: 1; }
-}
-
-@keyframes bf-draw {
+@keyframes draw-path {
   to { stroke-dashoffset: 0; }
 }
 
-@keyframes bf-draw-short {
-  to { stroke-dashoffset: 0; }
+/* Floating elements */
+#bf-hero .bf-hero__float-1 {
+  animation: float-element-1 4s ease-in-out infinite;
 }
 
-@keyframes bf-draw-clarity {
-  to { stroke-dashoffset: 0; }
+#bf-hero .bf-hero__float-2 {
+  animation: float-element-2 5s ease-in-out infinite 0.5s;
 }
 
-/* Animation: Success pulse (once) */
-#bf-hero .bf-hero__success {
-  transform-origin: center;
+@keyframes float-element-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-5px, -8px) rotate(-3deg); }
+}
+
+@keyframes float-element-2 {
+  0%, 100% { transform: translate(0, 0) rotate(5deg); }
+  50% { transform: translate(8px, -5px) rotate(8deg); }
+}
+
+/* Clarity path */
+#bf-hero .bf-hero__path-clarity {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw-path 2s ease-out 1.5s forwards;
+}
+
+/* Milestone animations */
+#bf-hero .bf-hero__milestone {
   opacity: 0;
-  animation: bf-success-pop 450ms cubic-bezier(0.2, 0.8, 0.2, 1) 2100ms forwards,
-             bf-success-pulse 1400ms ease-in-out 2550ms infinite;
+  animation: fade-up 0.6s ease-out forwards;
 }
 
-@keyframes bf-success-pop {
-  from { opacity: 0; transform: scale(0.7); }
+#bf-hero .bf-hero__milestone-1 { animation-delay: 1.8s; }
+#bf-hero .bf-hero__milestone-2 { animation-delay: 2.1s; }
+#bf-hero .bf-hero__milestone-3 { animation-delay: 2.4s; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Success checkmark */
+#bf-hero .bf-hero__success {
+  opacity: 0;
+  animation: pop-in 0.5s ease-out 2.7s forwards;
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.5); }
   to { opacity: 1; transform: scale(1); }
 }
 
-@keyframes bf-success-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+/* Sparkles */
+#bf-hero .bf-hero__sparkle {
+  opacity: 0;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+#bf-hero .bf-hero__sparkle-1 { animation-delay: 3s; }
+#bf-hero .bf-hero__sparkle-2 { animation-delay: 3.5s; }
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.1); }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   TABLET (768px - 900px)
+   RESPONSIVE
    ═══════════════════════════════════════════════════════════════════════════ */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   #bf-hero .bf-hero__container {
     grid-template-columns: 1fr;
     gap: 48px;
-    padding: 64px 24px 56px;
+    padding: 80px 32px 60px;
     min-height: auto;
   }
-
+  
   #bf-hero .bf-hero__visual {
-    order: 1;
-    padding: 0;
+  overflow: visible;
+    order: -1;
   }
-
-  #bf-hero .bf-hero__content {
-    order: 0;
+  
+  #bf-hero .bf-hero__illustration {
+    max-width: 300px;
   }
-
+  
   #bf-hero .bf-hero__headline {
-    font-size: clamp(44px, 9vw, 60px);
     max-width: 100%;
-    margin-bottom: 36px;
-  }
-
-  #bf-hero .bf-hero__concept {
-    max-width: 320px;
-  }
-
-  #bf-hero .bf-hero__cta {
-    width: 100%;
-  }
-
-  #bf-hero .bf-hero__pop {
-    white-space: normal;
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   MOBILE (< 600px)
-   ═══════════════════════════════════════════════════════════════════════════ */
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   #bf-hero .bf-hero__container {
-    padding: 56px 20px 48px;
+    padding: 60px 24px 48px;
     gap: 40px;
   }
-
+  
   #bf-hero .bf-hero__headline {
-    font-size: clamp(36px, 10vw, 48px);
-    margin-bottom: 32px;
+    font-size: clamp(36px, 8vw, 48px);
   }
-
-  #bf-hero .bf-hero__hline--muted {
-    font-size: 0.55em;
+  
+  #bf-hero .bf-hero__headline-light {
+    font-size: 0.5em;
   }
-
-  #bf-hero .bf-hero__program {
-    padding: 24px 24px;
+  
+  #bf-hero .bf-hero__offer-name {
+    font-size: clamp(24px, 6vw, 32px);
   }
+  
+  #bf-hero .bf-hero__offer-desc {
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: 52ch;
+}
 
-  #bf-hero .bf-hero__program-title {
-    font-size: clamp(28px, 7vw, 36px);
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TABLET (768px)
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  #bf-hero .bf-hero__container {
+    padding: 64px 24px 52px;
+    gap: 44px;
   }
-
-  #bf-hero .bf-hero__bullet-text {
-    font-size: 19px;
-  }
-
-  #bf-hero .bf-hero__cta {
-    height: 64px;
-    font-size: 19px;
-    padding: 0 32px;
-  }
-
-  #bf-hero .bf-hero__concept {
+  
+  #bf-hero .bf-hero__illustration {
     max-width: 280px;
   }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   TINY PHONES (< 380px)
+   NORMAL PHONES (430px)
    ═══════════════════════════════════════════════════════════════════════════ */
-@media (max-width: 380px) {
+@media (max-width: 430px) {
   #bf-hero .bf-hero__container {
-    padding: 48px 16px 40px;
+    padding: 52px 20px 40px;
+    gap: 36px;
+  }
+  
+  #bf-hero .bf-hero__headline {
+    font-size: clamp(30px, 7.5vw, 40px);
+  }
+  
+  #bf-hero .bf-hero__offer-name {
+    font-size: clamp(20px, 5.5vw, 26px);
+  }
+  
+  #bf-hero .bf-hero__offer-desc {
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: 52ch;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TINY PHONES (350px) - Prevent horizontal scroll
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 350px) {
+  #bf-hero {
+    overflow-x: clip;
+  }
+  
+  #bf-hero .bf-hero__container {
+    padding: 44px 16px 28px;
     gap: 32px;
   }
-
+  
   #bf-hero .bf-hero__headline {
-    font-size: clamp(32px, 9vw, 40px);
+    font-size: 24px;
     letter-spacing: -0.01em;
   }
-
-  #bf-hero .bf-hero__program {
-    padding: 20px 18px;
-    border-radius: 16px;
+  
+  #bf-hero .bf-hero__headline-light {
+    font-size: 0.48em;
   }
-
-  #bf-hero .bf-hero__program-title {
-    font-size: 26px;
+  
+  #bf-hero .bf-hero__offer-name {
+    font-size: 19px;
   }
-
-  #bf-hero .bf-hero__program-body {
-    font-size: 18px;
-  }
-
-  #bf-hero .bf-hero__bullet-text {
-    font-size: 17px;
-    line-height: 1.6;
-  }
-
-  #bf-hero .bf-hero__cta {
-    height: 58px;
-    font-size: 17px;
-    padding: 0 24px;
-  }
-
-  #bf-hero .bf-hero__cta-urgency {
-    font-size: 15px;
-    flex-wrap: wrap;
-  }
-
-  #bf-hero .bf-hero__concept {
-    max-width: 260px;
-  }
+  
+  #bf-hero .bf-hero__offer-desc {
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: 52ch;
 }
+
 
 /* ═══════════════════════════════════════════════════════════════════════════
    REDUCED MOTION
    ═══════════════════════════════════════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {
-  #bf-hero .bf-hero__eyebrow-dot,
-  #bf-hero .bf-hero__cta,
-  #bf-hero .bf-hero__cta-shimmer,
-  #bf-hero .bf-hero__cta-dot,
-  #bf-hero .bf-hero__concept {
+  #bf-hero .bf-hero__shape,
+  #bf-hero .bf-hero__float-1,
+  #bf-hero .bf-hero__float-2,
+  #bf-hero .bf-hero__sparkle,
+  #bf-hero .bf-hero__urgency-dot {
     animation: none !important;
   }
-
-  #bf-hero .bf-hero__chaos-path,
-  #bf-hero .bf-hero__chaos-path--2,
-  #bf-hero .bf-hero__clarity-path {
+  
+  #bf-hero .bf-hero__path-chaos,
+  #bf-hero .bf-hero__path-chaos-2,
+  #bf-hero .bf-hero__path-clarity {
     stroke-dashoffset: 0 !important;
     animation: none !important;
   }
-
+  
+  #bf-hero .bf-hero__milestone,
   #bf-hero .bf-hero__success {
     opacity: 1 !important;
-    transform: scale(1) !important;
     animation: none !important;
   }
 }
