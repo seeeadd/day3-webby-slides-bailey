@@ -5,16 +5,16 @@
 
      HIERARCHY:
      • DOMINANT (60%): Headline
-     • SUPPORTING (30%): Bullets + CTA
+     • SUPPORTING (30%): Program intro + Bullets + CTA
      • DETAIL (10%): Chaos→Clarity illustration
 
      LAYERS:
      • PRIMARY: Headline + CTA
-     • SECONDARY: Bullets + Eyebrow
+     • SECONDARY: Program name + Body + Bullets + Eyebrow
      • TEXTURE: Grain, gradients, atmosphere
      • DELIGHT: Animations, hand-drawn elements, easter eggs
 
-     EYE PATH: Eyebrow → Headline → Bullets → CTA
+     EYE PATH: Eyebrow → Headline → Program Block → Bullets → CTA
      ═══════════════════════════════════════════════════════════════════════════ -->
 <div id="bf-hero">
 <style>
@@ -48,7 +48,7 @@
 
   /* Secondary - Bailey's Warmth */
   --rose:#C17B7B;
-  --rose-soft:rgba(193,123,123,0.15);
+  --rose-soft:rgba(193,123,123,0.12);
   --blush:#F5E6E0;
 
   /* Functional */
@@ -98,15 +98,15 @@
   z-index:1;
 }
 
-/* Rose gradient in chaos zone (left side overwhelm feeling) */
+/* Rose gradient in chaos zone */
 #bf-hero::after{
   content:'';
   position:absolute;
   top:0;
-  left:0;
-  width:50%;
+  right:0;
+  width:45%;
   height:100%;
-  background:radial-gradient(ellipse at 20% 30%, var(--rose-soft) 0%, transparent 60%);
+  background:radial-gradient(ellipse at 70% 40%, var(--rose-soft) 0%, transparent 70%);
   pointer-events:none;
   z-index:1;
 }
@@ -127,15 +127,15 @@
 
 @media(min-width:1024px){
   .bf-hero__wrapper{
-    grid-template-columns:55% 45%;
+    grid-template-columns:58% 42%;
     align-items:center;
-    gap:var(--space-lg);
-    padding:var(--space-xl) var(--space-xl);
+    gap:var(--space-xl);
+    padding:var(--space-xl);
   }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   CONTENT ZONE (Clarity Side)
+   CONTENT ZONE
    ═══════════════════════════════════════════════════════════════════════════ */
 .bf-hero__content{
   display:flex;
@@ -174,16 +174,15 @@
 .bf-hero__eyebrow-text{
   font-size:14px;
   font-weight:500;
-  letter-spacing:0.03em;
+  letter-spacing:0.02em;
   color:var(--text-secondary);
-  text-transform:uppercase;
 }
 
 /* ─── HEADLINE (DOMINANT - 60%) ─── */
 .bf-hero__headline{
   font-family:'Ogg',Georgia,'Times New Roman',serif;
   font-weight:700;
-  font-size:clamp(32px,5.5vw,54px);
+  font-size:clamp(32px,5.2vw,52px);
   line-height:1.1;
   color:var(--text-primary);
   margin-bottom:var(--space-lg);
@@ -193,9 +192,7 @@
 /* Typography rhythm - first line as pattern interrupt */
 .bf-hero__headline-interrupt{
   display:block;
-  font-size:0.85em;
-  opacity:0.9;
-  margin-bottom:0.15em;
+  margin-bottom:0.1em;
 }
 
 /* "Bailey" with hand-drawn underline */
@@ -208,9 +205,9 @@
   content:'';
   position:absolute;
   left:0;
-  bottom:-4px;
+  bottom:-2px;
   width:100%;
-  height:12px;
+  height:10px;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12'%3E%3Cpath d='M2 9 Q20 3,40 7 T80 5 T118 8' stroke='%23C17B7B' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
   background-size:100% 100%;
   animation:bfDrawUnderline 0.6s ease-out 1s both;
@@ -221,18 +218,35 @@
   to{clip-path:inset(0 0 0 0);}
 }
 
-/* "90 days" emphasis */
-.bf-hero__headline-emphasis{
-  color:var(--dark);
-  position:relative;
+/* ─── PROGRAM BLOCK ─── */
+.bf-hero__program{
+  margin-bottom:var(--space-lg);
+  padding-bottom:var(--space-md);
+  border-bottom:1px solid rgba(27,77,74,0.1);
+  animation:bfFadeUp 0.6s ease-out 0.3s both;
 }
 
-/* ─── BULLETS (SUPPORTING - 30%) ─── */
+.bf-hero__program-name{
+  font-family:'Ogg',Georgia,serif;
+  font-weight:700;
+  font-size:clamp(20px,2.5vw,24px);
+  color:var(--text-primary);
+  margin-bottom:var(--space-sm);
+}
+
+.bf-hero__program-body{
+  font-size:17px;
+  line-height:1.65;
+  color:var(--text-secondary);
+  max-width:540px;
+}
+
+/* ─── BULLETS ─── */
 .bf-hero__bullets{
   list-style:none;
   display:flex;
   flex-direction:column;
-  gap:var(--space-sm);
+  gap:14px;
   margin-bottom:var(--space-lg);
 }
 
@@ -240,7 +254,7 @@
   display:flex;
   align-items:flex-start;
   gap:12px;
-  animation:bfFadeUp 0.6s ease-out both;
+  animation:bfFadeUp 0.5s ease-out both;
 }
 .bf-hero__bullet:nth-child(1){animation-delay:0.4s;}
 .bf-hero__bullet:nth-child(2){animation-delay:0.5s;}
@@ -250,12 +264,12 @@
   flex-shrink:0;
   width:22px;
   height:22px;
-  margin-top:2px;
+  margin-top:1px;
   color:var(--dark);
 }
 
 .bf-hero__bullet-text{
-  font-size:17px;
+  font-size:16px;
   line-height:1.5;
   color:var(--text-primary);
   font-weight:450;
@@ -287,29 +301,29 @@
   align-items:center;
   justify-content:center;
   gap:10px;
-  padding:18px 36px;
+  padding:16px 32px;
   background:var(--dark);
   color:var(--cream);
   font-family:'Satoshi',sans-serif;
-  font-size:16px;
+  font-size:15px;
   font-weight:600;
   text-decoration:none;
   border:none;
   border-radius:4px;
   cursor:pointer;
   transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
-  box-shadow:0 4px 20px rgba(27,77,74,0.25);
+  box-shadow:0 4px 20px rgba(27,77,74,0.2);
 }
 
 .bf-hero__cta:hover{
   background:var(--dark-hover);
   transform:translateY(-2px);
-  box-shadow:0 8px 30px rgba(27,77,74,0.3);
+  box-shadow:0 8px 30px rgba(27,77,74,0.25);
 }
 
 .bf-hero__cta-arrow{
-  width:18px;
-  height:18px;
+  width:16px;
+  height:16px;
   transition:transform 0.3s ease;
 }
 
@@ -321,11 +335,6 @@
   font-size:14px;
   color:var(--text-muted);
   font-weight:450;
-}
-
-.bf-hero__proof strong{
-  color:var(--text-secondary);
-  font-weight:600;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -342,14 +351,14 @@
 @media(max-width:1023px){
   .bf-hero__visual{
     order:-1;
-    max-height:280px;
+    max-height:260px;
     margin-bottom:var(--space-md);
   }
 }
 
 .bf-hero__illustration{
   width:100%;
-  max-width:420px;
+  max-width:380px;
   height:auto;
 }
 
@@ -371,7 +380,6 @@
   75%{transform:translate(4px,2px);}
 }
 
-/* Chaos text labels */
 .bf-chaos-label{
   font-family:'Satoshi',sans-serif;
   font-size:11px;
@@ -379,7 +387,7 @@
   opacity:0.7;
 }
 
-/* ─── PATH ANIMATION (the transformation) ─── */
+/* ─── PATH ANIMATION ─── */
 .bf-hero__path{
   stroke-dasharray:400;
   stroke-dashoffset:400;
@@ -399,7 +407,7 @@
   to{opacity:1;}
 }
 
-/* ─── CLARITY ELEMENTS (organized steps) ─── */
+/* ─── CLARITY ELEMENTS ─── */
 .bf-clarity-step{
   opacity:0;
   animation:bfStepReveal 0.4s ease-out forwards;
@@ -413,7 +421,6 @@
   to{opacity:1;transform:translateY(0);}
 }
 
-/* Final checkmark pop */
 .bf-clarity-check{
   opacity:0;
   transform-origin:center;
@@ -426,7 +433,6 @@
   100%{opacity:1;transform:scale(1);}
 }
 
-/* "Clear Plan" label */
 .bf-clarity-label{
   font-family:'Satoshi',sans-serif;
   font-size:13px;
@@ -436,11 +442,11 @@
   animation:bfFadeIn 0.4s ease-out 2.4s forwards;
 }
 
-/* ─── HAND-WRITTEN ANNOTATION (delight) ─── */
+/* ─── ANNOTATION ─── */
 .bf-hero__annotation{
   position:absolute;
-  top:15%;
-  left:5%;
+  top:12%;
+  left:2%;
   font-family:'Satoshi',sans-serif;
   font-size:13px;
   font-style:italic;
@@ -468,11 +474,15 @@
   }
 
   .bf-hero__headline{
-    font-size:clamp(28px,8vw,36px);
+    font-size:clamp(26px,7vw,34px);
+  }
+
+  .bf-hero__program-body{
+    font-size:16px;
   }
 
   .bf-hero__bullet-text{
-    font-size:16px;
+    font-size:15px;
   }
 
   .bf-hero__cta{
@@ -481,8 +491,7 @@
   }
 
   .bf-hero__visual{
-    max-height:220px;
-    opacity:0.9;
+    max-height:200px;
   }
 }
 
@@ -499,44 +508,50 @@
 
 <div class="bf-hero__wrapper">
   <!-- ═══════════════════════════════════════════════════════════════════════
-       CONTENT ZONE — The Clarity Side
+       CONTENT ZONE
        ═══════════════════════════════════════════════════════════════════════ -->
   <div class="bf-hero__content">
 
-    <!-- Eyebrow: Pattern Interrupt -->
+    <!-- Eyebrow -->
     <div class="bf-hero__eyebrow">
       <span class="bf-hero__eyebrow-dot"></span>
       <span class="bf-hero__eyebrow-text">Not another course — a 90-day implementation sprint</span>
     </div>
 
-    <!-- Headline: DOMINANT ELEMENT -->
+    <!-- Headline -->
     <h1 class="bf-hero__headline">
       <span class="bf-hero__headline-interrupt">You don't need another course.</span>
-      You need <span class="bf-hero__headline-name">Bailey</span> to tell you exactly what to do for the next <span class="bf-hero__headline-emphasis">90&nbsp;days</span>.
+      You need <span class="bf-hero__headline-name">Bailey</span> to tell you exactly what to do for the next 90&nbsp;days.
     </h1>
 
-    <!-- Bullets: Value Clarity -->
+    <!-- Program Block -->
+    <div class="bf-hero__program">
+      <h2 class="bf-hero__program-name">The 90-Day Etsy Empire Accelerator</h2>
+      <p class="bf-hero__program-body">A clear plan to put your Etsy shop on track for an extra $3K—$5K/month in income. I tell you what to do. You do it. That's the whole thing. Built for 60—90 minutes a day because that's probably all you've got.</p>
+    </div>
+
+    <!-- Bullets -->
     <ul class="bf-hero__bullets">
       <li class="bf-hero__bullet">
         <svg class="bf-hero__bullet-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10" opacity="0.3"/>
           <path d="M8 12l3 3 5-6"/>
         </svg>
-        <p class="bf-hero__bullet-text">Wake up knowing exactly what to work on today</p>
+        <p class="bf-hero__bullet-text">Wake up knowing exactly what to work on today <span>(and stop wasting hours deciding)</span></p>
       </li>
       <li class="bf-hero__bullet">
         <svg class="bf-hero__bullet-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10" opacity="0.3"/>
           <path d="M8 12l3 3 5-6"/>
         </svg>
-        <p class="bf-hero__bullet-text">Get real feedback: <span>"yes, keep going"</span> or <span>"try this instead"</span></p>
+        <p class="bf-hero__bullet-text">Bailey looks at your work and says "yes, keep going" or "no, try this instead"</p>
       </li>
       <li class="bf-hero__bullet">
         <svg class="bf-hero__bullet-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10" opacity="0.3"/>
           <path d="M8 12l3 3 5-6"/>
         </svg>
-        <p class="bf-hero__bullet-text">Finally follow through, with someone in your corner</p>
+        <p class="bf-hero__bullet-text">Actually follow through on something for once, with someone in your corner the whole way</p>
       </li>
     </ul>
 
@@ -548,25 +563,22 @@
           <path d="M5 12h14M13 6l6 6-6 6"/>
         </svg>
       </a>
-      <p class="bf-hero__proof"><strong>11 spots</strong> sold in September with zero funnel</p>
+      <p class="bf-hero__proof">11 spots sold in September with zero funnel</p>
     </div>
 
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
-       ILLUSTRATION ZONE — Chaos → Clarity Transformation
+       ILLUSTRATION — Chaos → Clarity
        ═══════════════════════════════════════════════════════════════════════ -->
   <div class="bf-hero__visual">
 
-    <!-- Hand-written annotation (delight detail) -->
     <span class="bf-hero__annotation">← this is you</span>
 
-    <svg class="bf-hero__illustration" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="bf-hero__illustration" viewBox="0 0 400 420" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-      <!-- ═══ CHAOS ZONE (left side) ═══ -->
+      <!-- CHAOS ZONE -->
       <g class="bf-hero__chaos">
-
-        <!-- Floating chaos dots (represent scattered tasks) -->
         <circle class="bf-chaos-dot" cx="60" cy="100" r="8" fill="#C17B7B" opacity="0.7"/>
         <circle class="bf-chaos-dot" cx="85" cy="140" r="5" fill="#1B4D4A" opacity="0.5"/>
         <circle class="bf-chaos-dot" cx="45" cy="155" r="6" fill="#C17B7B" opacity="0.6"/>
@@ -575,24 +587,18 @@
         <circle class="bf-chaos-dot" cx="35" cy="120" r="4" fill="#2D7A75" opacity="0.6"/>
         <circle class="bf-chaos-dot" cx="90" cy="75" r="3" fill="#C17B7B" opacity="0.5"/>
 
-        <!-- Chaos pain labels -->
         <text class="bf-chaos-label" x="30" y="200" transform="rotate(-5 30 200)">what niche?</text>
         <text class="bf-chaos-label" x="75" y="230" transform="rotate(3 75 230)">SEO??</text>
         <text class="bf-chaos-label" x="25" y="260" transform="rotate(-8 25 260)">no views</text>
 
-        <!-- Question marks (scattered) -->
         <text x="110" y="170" font-family="Satoshi,sans-serif" font-size="18" fill="#8FA5A3" opacity="0.4">?</text>
         <text x="50" y="285" font-family="Satoshi,sans-serif" font-size="14" fill="#8FA5A3" opacity="0.3">?</text>
 
-        <!-- "Chaos" label -->
         <text x="55" y="320" font-family="Satoshi,sans-serif" font-size="13" font-weight="500" fill="#8FA5A3">Overwhelm</text>
-
       </g>
 
-      <!-- ═══ TRANSFORMATION PATH ═══ -->
+      <!-- PATH -->
       <g class="bf-hero__transform">
-
-        <!-- Dotted path from chaos to clarity -->
         <path
           class="bf-hero__path"
           d="M120 180 C160 180, 180 200, 200 220 C220 240, 240 250, 260 260 C280 270, 290 275, 300 280"
@@ -602,44 +608,35 @@
           fill="none"
           opacity="0.6"
         />
-
-        <!-- Arrow head -->
         <polygon
           class="bf-hero__path-arrow"
           points="305,285 295,275 298,290"
           fill="#1B4D4A"
           opacity="0.6"
         />
-
       </g>
 
-      <!-- ═══ CLARITY ZONE (right side) ═══ -->
-      <g class="bf-hero__clarity" transform="translate(280, 100)">
-
-        <!-- Step 1 -->
+      <!-- CLARITY ZONE -->
+      <g class="bf-hero__clarity" transform="translate(280, 80)">
         <g class="bf-clarity-step">
-          <circle cx="50" cy="50" r="28" fill="none" stroke="#1B4D4A" stroke-width="2"/>
-          <text x="50" y="56" font-family="Satoshi,sans-serif" font-size="16" font-weight="600" fill="#1B4D4A" text-anchor="middle">1</text>
+          <circle cx="50" cy="50" r="26" fill="none" stroke="#1B4D4A" stroke-width="2"/>
+          <text x="50" y="56" font-family="Satoshi,sans-serif" font-size="15" font-weight="600" fill="#1B4D4A" text-anchor="middle">1</text>
         </g>
 
-        <!-- Connector line -->
-        <line x1="50" y1="78" x2="50" y2="102" stroke="#1B4D4A" stroke-width="2" opacity="0.5"/>
+        <line x1="50" y1="76" x2="50" y2="98" stroke="#1B4D4A" stroke-width="2" opacity="0.5"/>
 
-        <!-- Step 2 -->
         <g class="bf-clarity-step">
-          <circle cx="50" cy="130" r="28" fill="none" stroke="#1B4D4A" stroke-width="2"/>
-          <text x="50" y="136" font-family="Satoshi,sans-serif" font-size="16" font-weight="600" fill="#1B4D4A" text-anchor="middle">2</text>
+          <circle cx="50" cy="124" r="26" fill="none" stroke="#1B4D4A" stroke-width="2"/>
+          <text x="50" y="130" font-family="Satoshi,sans-serif" font-size="15" font-weight="600" fill="#1B4D4A" text-anchor="middle">2</text>
         </g>
 
-        <!-- Connector line -->
-        <line x1="50" y1="158" x2="50" y2="182" stroke="#1B4D4A" stroke-width="2" opacity="0.5"/>
+        <line x1="50" y1="150" x2="50" y2="172" stroke="#1B4D4A" stroke-width="2" opacity="0.5"/>
 
-        <!-- Step 3 with checkmark (success!) -->
         <g class="bf-clarity-step">
-          <circle cx="50" cy="210" r="28" fill="#1B4D4A"/>
+          <circle cx="50" cy="198" r="26" fill="#1B4D4A"/>
           <polyline
             class="bf-clarity-check"
-            points="38,210 46,218 64,198"
+            points="38,198 46,206 62,188"
             stroke="#FAF9F7"
             stroke-width="3"
             fill="none"
@@ -648,9 +645,7 @@
           />
         </g>
 
-        <!-- "Clear Plan" label -->
-        <text class="bf-clarity-label" x="50" y="265" text-anchor="middle">Clear Plan</text>
-
+        <text class="bf-clarity-label" x="50" y="250" text-anchor="middle">Clear Plan</text>
       </g>
 
     </svg>
