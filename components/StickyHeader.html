@@ -1,0 +1,202 @@
+<style>
+  .sticky-header-01 {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    font-family: 'Satoshi Variable', system-ui, -apple-system, sans-serif;
+    animation: sh01-fade-slide 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  @keyframes sh01-fade-slide {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sticky-header-01__bg {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: linear-gradient(180deg, rgba(250,249,247,0.95) 0%, rgba(247,231,206,0.08) 100%);
+    border-bottom: 1px solid rgba(27,77,74,0.08);
+  }
+  .sticky-header-01__content {
+    position: relative;
+    z-index: 10;
+    padding: 12px 16px;
+  }
+  .sticky-header-01__inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .sticky-header-01__left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .sticky-header-01__cohort {
+    position: relative;
+  }
+  .sticky-header-01__cohort-text {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    color: #1B4D4A;
+  }
+  .sticky-header-01__underline {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+  }
+  .sticky-header-01__divider-wave {
+    display: none;
+    height: 16px;
+    width: 24px;
+  }
+  .sticky-header-01__divider-dot {
+    font-size: 14px;
+    color: #8FA5A3;
+  }
+  .sticky-header-01__divider-dot--mobile {
+    display: inline;
+  }
+  .sticky-header-01__spots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .sticky-header-01__pulse-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+  }
+  .sticky-header-01__pulse-ring {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #C17B7B;
+    animation: sh01-pulse 2s ease-in-out infinite;
+  }
+  @keyframes sh01-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.4); opacity: 0.2; }
+  }
+  .sticky-header-01__pulse-dot {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #C17B7B;
+  }
+  .sticky-header-01__spots-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1B4D4A;
+  }
+  .sticky-header-01__deadline {
+    font-size: 14px;
+    font-weight: 400;
+    color: #5A7A78;
+  }
+  .sticky-header-01__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 9999px;
+    background-color: #1B4D4A;
+    color: #FAF9F7;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 2px 12px rgba(27,77,74,0.15), 0 0 0 1px rgba(247,231,206,0.2);
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .sticky-header-01__cta:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(212,175,55,0.25), 0 0 0 1px rgba(212,175,55,0.15);
+  }
+  .sticky-header-01__cta:active {
+    transform: scale(0.98);
+  }
+  .sticky-header-01__cta-arrow {
+    width: 14px;
+    height: 14px;
+    opacity: 0.8;
+  }
+  @media (min-width: 768px) {
+    .sticky-header-01__content {
+      padding: 12px 24px;
+    }
+    .sticky-header-01__inner {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .sticky-header-01__left {
+      justify-content: flex-start;
+      gap: 12px;
+    }
+    .sticky-header-01__cohort-text,
+    .sticky-header-01__spots-text,
+    .sticky-header-01__deadline {
+      font-size: 16px;
+    }
+    .sticky-header-01__divider-wave {
+      display: block;
+    }
+    .sticky-header-01__divider-dot--mobile {
+      display: none;
+    }
+    .sticky-header-01__cta {
+      padding: 10px 24px;
+      font-size: 16px;
+    }
+  }
+</style>
+
+<header class="sticky-header-01">
+  <div class="sticky-header-01__bg"></div>
+  <div class="sticky-header-01__content">
+    <div class="sticky-header-01__inner">
+      <div class="sticky-header-01__left">
+        <div class="sticky-header-01__cohort">
+          <span class="sticky-header-01__cohort-text">Founding Cohort</span>
+          <svg class="sticky-header-01__underline" viewBox="0 0 100 4" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.5C15 1 25 3.5 40 2C55 0.5 70 3 85 1.5C92 1 100 2.5 100 2.5" stroke="#C17B7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+          </svg>
+        </div>
+        <svg class="sticky-header-01__divider-wave" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8C6 6 8 10 12 8C16 6 18 10 20 8" stroke="#2D7A75" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+        <span class="sticky-header-01__divider-dot sticky-header-01__divider-dot--mobile">·</span>
+        <div class="sticky-header-01__spots">
+          <div class="sticky-header-01__pulse-wrap">
+            <div class="sticky-header-01__pulse-ring"></div>
+            <div class="sticky-header-01__pulse-dot"></div>
+          </div>
+          <span class="sticky-header-01__spots-text">~10 Spots</span>
+        </div>
+        <span class="sticky-header-01__divider-dot">·</span>
+        <span class="sticky-header-01__deadline">Black Friday Pricing Ends Dec 14</span>
+      </div>
+      <a href="#join" class="sticky-header-01__cta">
+        See If It's a Fit
+        <svg class="sticky-header-01__cta-arrow" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
