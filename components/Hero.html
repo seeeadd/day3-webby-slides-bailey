@@ -25,6 +25,7 @@
         <h2 class="bf-hero__offer-name">The 90-Day Etsy Empire Accelerator</h2>
         <p class="bf-hero__offer-desc">A clear plan to put your Etsy shop on track for an extra $3K to $5K/month in income. I tell you what to do. You do it. That's the whole thing. Built for 60 to 90 minutes a day because that's probably all you've got.</p>
       </div>
+      </div>
 
       <!-- Bullets - clean, supportive -->
       <ul class="bf-hero__benefits">
@@ -41,7 +42,6 @@
           <span>Actually follow through on something for once, with someone in your corner the whole way</span>
         </li>
       </ul>
-      </div>
 
       <!-- CTA - clean, warm -->
       <div class="bf-hero__cta-area">
@@ -59,6 +59,10 @@
 
     <!-- RIGHT: Visual (40%) - Custom organic illustration -->
     <div class="bf-hero__visual">
+      <!-- Organic background shapes for visual presence -->
+      <div class="bf-hero__visual-shape bf-hero__visual-shape--1"></div>
+      <div class="bf-hero__visual-shape bf-hero__visual-shape--2"></div>
+      <div class="bf-hero__visual-shape bf-hero__visual-shape--3"></div>
       <svg class="bf-hero__illustration" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
         <!-- CHAOS (top) - organic, hand-drawn feeling -->
         <g class="bf-hero__chaos-group">
@@ -94,13 +98,13 @@
           
           <!-- Week 1-4 stone -->
           <g class="bf-hero__milestone bf-hero__milestone-1">
-            <ellipse cx="200" cy="330" rx="50" ry="20" fill="#FDF6F0" stroke="#2E6A62" stroke-width="2"/>
+            <ellipse cx="200" cy="330" rx="50" ry="20" fill="#FDF6F0" stroke="#3D8580" stroke-width="2"/>
             <text x="200" y="335" font-family="Satoshi,sans-serif" font-size="13" fill="#123F3A" text-anchor="middle" font-weight="600">Week 1–4</text>
           </g>
           
           <!-- Week 5-8 stone -->
           <g class="bf-hero__milestone bf-hero__milestone-2">
-            <ellipse cx="200" cy="390" rx="50" ry="20" fill="#FDF6F0" stroke="#2E6A62" stroke-width="2"/>
+            <ellipse cx="200" cy="390" rx="50" ry="20" fill="#FDF6F0" stroke="#3D8580" stroke-width="2"/>
             <text x="200" y="395" font-family="Satoshi,sans-serif" font-size="13" fill="#123F3A" text-anchor="middle" font-weight="600">Week 5–8</text>
           </g>
           
@@ -271,7 +275,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--secondary);
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 
 /* Headline - THE focal point */
@@ -320,7 +324,7 @@
 
 /* Offer section - inside container, no card */
 #bf-hero .bf-hero__offer {
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 
 
@@ -348,7 +352,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 0;
+  margin-bottom: 36px;
 }
 
 #bf-hero .bf-hero__benefits li {
@@ -426,7 +430,8 @@
   color: var(--text);
 }
 
-#bf-hero .bf-hero__urgency-dot {
+#bf-hero .bf-hero__urgency-dot,
+  #bf-hero .bf-hero__visual-shape {
   width: 10px;
   height: 10px;
   background: #D85A5A;
@@ -453,9 +458,60 @@
 
 #bf-hero .bf-hero__illustration {
   width: 100%;
-  max-width: 340px;
+  max-width: 420px;
   height: auto;
 }
+
+/* Visual background shapes - organic coral presence */
+#bf-hero .bf-hero__visual-shape {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#bf-hero .bf-hero__visual-shape--1 {
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(217, 163, 166, 0.15) 0%, transparent 70%);
+  top: -20%;
+  right: -10%;
+  animation: float-visual-1 25s ease-in-out infinite;
+}
+
+#bf-hero .bf-hero__visual-shape--2 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(217, 163, 166, 0.12) 0%, transparent 70%);
+  bottom: 10%;
+  left: -15%;
+  animation: float-visual-2 30s ease-in-out infinite;
+}
+
+#bf-hero .bf-hero__visual-shape--3 {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(46, 106, 98, 0.08) 0%, transparent 70%);
+  top: 40%;
+  right: -20%;
+  animation: float-visual-3 35s ease-in-out infinite;
+}
+
+@keyframes float-visual-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-15px, 20px) scale(1.05); }
+}
+
+@keyframes float-visual-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -15px) scale(1.03); }
+}
+
+@keyframes float-visual-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-10px, 15px) scale(1.02); }
+}
+
 
 /* Chaos paths - draw animation */
 #bf-hero .bf-hero__path-chaos {
@@ -715,7 +771,7 @@
   #bf-hero .bf-hero__accelerator-block {
     padding: 20px 16px;
     margin-top: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
     border-radius: 12px;
   }
   
@@ -787,6 +843,10 @@
   
   #bf-hero .bf-hero__sparkle {
     display: none;
+  
+  #bf-hero .bf-hero__visual-shape {
+    display: none;
+  }
   }
 }
 
@@ -798,7 +858,8 @@
   #bf-hero .bf-hero__float-1,
   #bf-hero .bf-hero__float-2,
   #bf-hero .bf-hero__sparkle,
-  #bf-hero .bf-hero__urgency-dot {
+  #bf-hero .bf-hero__urgency-dot,
+  #bf-hero .bf-hero__visual-shape {
     animation: none !important;
   }
   
