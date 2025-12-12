@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>Bailey Vann - Day 3 Offer Stack (Slides 1-27)</title>
+    <style>
+@font-face {
+    font-family: 'Ogg Bold';
+    src: url('data:font/truetype;base64,AAEAAAAQAQAABAAARFNJRwAAAAIAAIUsAAAACEdQT1PH5Kx8AABsnAAAGJBPUy8yc8+PqgAAAYgAAABgY21hcAEJAaIAAAL0AAAAZGN2dCAc2Qr+AAASSAAAAJBmcGdtnjYV0gAAA1gAAA4VZ2FzcAAAABAAAGyUAAAACGdseWZZZXW9AAATYAAAUKJoZWFkF3P8fAAAAQwAAAA2aGhlYQh+AxgAAAFEAAAAJGhtdHiXQgI5AAAB6AAAAQxsb2NhHZw1LgAAEtgAAACIbWF4cAOLEq0AAAFoAAAAIG5hbWV7C7IeAABkBAAACG1wb3N0/7gAMgAAbHQAAAAgcHJlcGL64+QAABFwAAAA1gABAAAAAgAAaZjs6l8PPPUABgPoAAAAANncvokAAAAA2kT6X/8A/rcFNgP6AAEABgACAAAAAAAAAAEAAARF/kwAAAWG/wD/AgU2AAEAAAAAAAAAAAAAAAAAAABDAAEAAABDAvkADQDVAAkAAgB0AMYAjQAAAiwOFQAEAAIABAJIArwABQAAAooCWAAAAEsCigJYAAABXgAyASwAAAIJCAQIBwYDAgMAAAABAAAAAAAAAAAAAAAAU0hSUAEgAAAAegNw/ukCEQRFAbQgAACTAAAAAAH0Az0AAAAgAAwFhgBQAAAAAADYAAAA2AAAAs7/+AKGAA4C4wAiAtsADAJ9AAwCYgAOAvsAIgLJABABPQANATX/dAKeAA4CWgAMA0sACQK1/+YDEQAiAn0ADgMRACICpgAOAjsAIQKGABUCkwAJAsD/9QPK/+8Crv/9ApL/9wJxABwCHAAdAlT/9wIlAB0CWAAhAhYAGwEnAAACDAADAk7/+QEHAAMA7v9iAkv/+QD9//kDmgAMAlIADQJXAB0CWf/zAlQAIQGAAAsBxQAfAUn/8gJA//YCDv/gA1X/8QI1//0CDf/WAf4AEQEKADcCugAqASUAAgJTACUCNQAqAl4AAwI1ADYCPQAiAh4ALQJEACUCQQAcAAAAAgAAAAMAAAAUAAMAAQAAABQABABQAAAAEAAQAAMAAAAAAA0AIAAuADkAWgB6//8AAAAAAA0AIAAuADAAQQBh//8AAf/1/+MACgAJ/8P/vQABAAAAAAAAAAAAAAAAAAAA') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('data:font/truetype;base64,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') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.slide {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+}
+
+.bg-cream { background: #FDF8F4; }
+.bg-warm { background: #FDF8F4; }
+.bg-dark { background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); }
+
+.display { font-family: 'Ogg Bold', Georgia, serif; font-weight: bold; line-height: 1.2; }
+.body { font-family: 'Satoshi', sans-serif; font-weight: 500; line-height: 1.6; }
+
+.slide-inner {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+}
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 1 — SO NOW YOU HAVE THE SYSTEM
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s1glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#FDF8F4;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="700" ry="500" fill="url(#s1glow)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 72px; color: #3D2B1F; margin-bottom: 40px; max-width: 1400px;">
+            SO NOW YOU HAVE THE SYSTEM...
+        </h1>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827; max-width: 1000px; line-height: 1.6;">
+            You know WHAT to create.<br>
+            You know HOW to validate.<br>
+            You know HOW to stay consistent.
+        </p>
+        <div style="margin-top: 60px; width: 120px; height: 3px; background: #C9A227;"></div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 2 — HONESTLY (Part 1)
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="s2grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.06" />
+                <stop offset="100%" style="stop-color:#FDF8F4;stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="300" cy="200" rx="400" ry="300" fill="url(#s2grad)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #8B8178; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 30px;">
+            Can I be real with you?
+        </p>
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 88px; color: #C9A227; margin-bottom: 50px;">
+            HONESTLY...
+        </h1>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 36px; color: #3D2B1F; max-width: 1100px; line-height: 1.6;">
+            Everything I've taught you this week?<br>
+            You could probably figure it out on your own.
+        </p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 3 — HONESTLY (Part 2)
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="s3grad" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.06" />
+                <stop offset="100%" style="stop-color:#FDF8F4;stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="1600" cy="800" rx="400" ry="300" fill="url(#s3grad)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #3D2B1F; margin-bottom: 50px; max-width: 1300px;">
+            With enough time, trial and error, and frustration...
+        </h1>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 36px; color: #5C4827; max-width: 1000px; line-height: 1.6;">
+            You'd get there eventually.
+        </p>
+        <div style="margin-top: 60px; padding: 30px 50px; background: rgba(201, 162, 39, 0.1); border-radius: 16px;">
+            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 42px; color: #C9A227;">
+                But here's the question...
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 4 — LET ME ASK YOU A FEW QUESTIONS
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s4glow" cx="50%" cy="50%" r="60%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.06" />
+                <stop offset="100%" style="stop-color:#FDF8F4;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="800" ry="500" fill="url(#s4glow)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 72px; color: #3D2B1F; margin-bottom: 60px;">
+            LET ME ASK YOU A FEW QUESTIONS...
+        </h1>
+        <div style="display: flex; flex-direction: column; gap: 30px; max-width: 1200px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827;">
+                How many times have you started something and quit?
+            </p>
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827;">
+                How many courses are collecting dust on your hard drive?
+            </p>
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827;">
+                How many "fresh starts" have you promised yourself?
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 5 — NEXT QUESTION
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div class="slide-inner" style="text-align: center;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #8B8178; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 30px;">
+            Next question
+        </p>
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #3D2B1F; margin-bottom: 50px; max-width: 1400px;">
+            How long have you been "trying to figure this out"?
+        </h1>
+        <div style="display: flex; gap: 40px; justify-content: center; margin-top: 40px;">
+            <div style="padding: 25px 40px; background: rgba(201, 162, 39, 0.1); border-radius: 12px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827;">6 months?</p>
+            </div>
+            <div style="padding: 25px 40px; background: rgba(201, 162, 39, 0.15); border-radius: 12px;">
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827;">A year?</p>
+            </div>
+            <div style="padding: 25px 40px; background: rgba(201, 162, 39, 0.2); border-radius: 12px;">
+                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 28px; color: #C9A227;">Longer?</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 6 — LET ME ASK YOU SOMETHING UNCOMFORTABLE
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-dark">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s6glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.15" />
+                <stop offset="100%" style="stop-color:#3D2B1F;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="600" ry="400" fill="url(#s6glow)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #C9A227; margin-bottom: 50px; max-width: 1300px;">
+            LET ME ASK YOU SOMETHING UNCOMFORTABLE.
+        </h1>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 36px; color: #FFFEF5; max-width: 1100px; line-height: 1.7; margin-bottom: 40px;">
+            If you keep doing what you've been doing...
+        </p>
+        <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 48px; color: #FFFEF5; max-width: 1100px;">
+            Where will you be in 90 days?
+        </p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 7 — HERE'S WHAT I'VE LEARNED
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="s7grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.06" />
+                <stop offset="100%" style="stop-color:#FDF8F4;stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="900" rx="400" ry="300" fill="url(#s7grad)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #3D2B1F; margin-bottom: 50px;">
+            HERE'S WHAT I'VE LEARNED...
+        </h1>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 36px; color: #5C4827; max-width: 1100px; line-height: 1.7;">
+            The difference between people who build successful Etsy shops and people who don't...
+        </p>
+        <div style="margin-top: 50px; padding: 40px 60px; background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 20px; border: 2px solid rgba(201, 162, 39, 0.2);">
+            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 42px; color: #C9A227;">
+                It's NOT talent. It's NOT luck.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 8 — HERE'S THE TRUTH
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s8glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#FDF8F4;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="700" ry="450" fill="url(#s8glow)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 72px; color: #C9A227; margin-bottom: 50px;">
+            HERE'S THE TRUTH:
+        </h1>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 40px; color: #3D2B1F; max-width: 1200px; line-height: 1.6;">
+            It's having the right <span style="color: #C9A227; font-weight: 600;">SUPPORT</span>,<br>
+            the right <span style="color: #C9A227; font-weight: 600;">STRUCTURE</span>,<br>
+            and the right <span style="color: #C9A227; font-weight: 600;">ACCOUNTABILITY</span>.
+        </p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 9 — WHAT IF
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="s9grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#FDF8F4;stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="1600" cy="300" rx="500" ry="350" fill="url(#s9grad)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 88px; color: #3D2B1F; margin-bottom: 50px;">
+            WHAT IF...
+        </h1>
+        <div style="display: flex; flex-direction: column; gap: 25px; max-width: 1200px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827;">
+                You didn't have to figure this out alone?
+            </p>
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827;">
+                You had someone showing you exactly what to do each week?
+            </p>
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: #5C4827;">
+                You had a community of people on the same journey?
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 10 — HERE'S WHAT I'M PROPOSING
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s10glow" cx="50%" cy="60%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#FDF8F4;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="600" rx="800" ry="500" fill="url(#s10glow)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #3D2B1F; margin-bottom: 50px;">
+            HERE'S WHAT I'M PROPOSING...
+        </h1>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 36px; color: #5C4827; max-width: 1100px; line-height: 1.7; margin-bottom: 40px;">
+            Instead of spending the next year trying to piece it together...
+        </p>
+        <div style="padding: 40px 60px; background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); border-radius: 20px;">
+            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 42px; color: #C9A227;">
+                Let me guide you for the next 90 days.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 11 — CAN I SHOW YOU WHAT THIS LOOKS LIKE?
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div class="slide-inner" style="text-align: center;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 72px; color: #C9A227; margin-bottom: 60px;">
+            CAN I SHOW YOU<br>WHAT THIS LOOKS LIKE?
+        </h1>
+        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #C9A227 0%, #D4A84B 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+                <path d="M20 8 L20 32 M12 24 L20 32 L28 24" stroke="#FFFEF5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 12 — IF THIS SOUNDS LIKE YOU
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <linearGradient id="s12grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.05" />
+                <stop offset="100%" style="stop-color:#FDF8F4;stop-opacity:0" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="300" cy="300" rx="400" ry="300" fill="url(#s12grad)"/>
+        <ellipse cx="1600" cy="800" rx="400" ry="300" fill="url(#s12grad)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #3D2B1F; margin-bottom: 50px;">
+            IF THIS SOUNDS LIKE YOU...
+        </h1>
+        <div style="display: flex; flex-direction: column; gap: 20px; max-width: 1100px; text-align: left;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #6B8E6B 0%, #4A5D4A 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg width="22" height="22" viewBox="0 0 22 22"><path d="M4 11 L9 16 L18 6" stroke="#FFFEF5" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #3D2B1F;">You're tired of spinning your wheels</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #6B8E6B 0%, #4A5D4A 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg width="22" height="22" viewBox="0 0 22 22"><path d="M4 11 L9 16 L18 6" stroke="#FFFEF5" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #3D2B1F;">You want a proven path forward</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #6B8E6B 0%, #4A5D4A 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg width="22" height="22" viewBox="0 0 22 22"><path d="M4 11 L9 16 L18 6" stroke="#FFFEF5" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #3D2B1F;">You're ready to actually commit to this</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 13 — INTRODUCING
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-dark">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s13glow" cx="50%" cy="50%" r="60%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.2" />
+                <stop offset="100%" style="stop-color:#3D2B1F;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="700" ry="450" fill="url(#s13glow)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: #C9A227; letter-spacing: 6px; text-transform: uppercase; margin-bottom: 40px;">
+            Introducing
+        </p>
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 96px; color: #FFFEF5; margin-bottom: 20px;">
+            THE 90-DAY
+        </h1>
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 96px; color: #C9A227; margin-bottom: 20px;">
+            ETSY EMPIRE
+        </h1>
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 64px; color: #FFFEF5;">
+            ACCELERATOR
+        </h1>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 14 — THE 90-DAY ETSY EMPIRE ACCELERATOR (Overview)
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="s14glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#C9A227;stop-opacity:0.08" />
+                <stop offset="100%" style="stop-color:#FDF8F4;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="800" ry="500" fill="url(#s14glow)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 56px; color: #3D2B1F; margin-bottom: 20px;">
+            THE 90-DAY ETSY EMPIRE ACCELERATOR
+        </h1>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; margin-bottom: 50px;">
+            Your complete roadmap to a profitable digital products shop
+        </p>
+        <div style="display: flex; gap: 30px; justify-content: center;">
+            <div style="padding: 30px 40px; background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 16px; border: 2px solid rgba(201, 162, 39, 0.2);">
+                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 48px; color: #C9A227;">90</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #5C4827;">Days</p>
+            </div>
+            <div style="padding: 30px 40px; background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 16px; border: 2px solid rgba(201, 162, 39, 0.2);">
+                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 48px; color: #C9A227;">3</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #5C4827;">Pillars</p>
+            </div>
+            <div style="padding: 30px 40px; background: linear-gradient(145deg, #FFFFFF 0%, #FAF6E8 100%); border-radius: 16px; border: 2px solid rgba(201, 162, 39, 0.2);">
+                <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 48px; color: #C9A227;">1</p>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #5C4827;">Transformation</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 15 — THE THREE PILLARS OVERVIEW
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div class="slide-inner">
+        <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 48px; color: #3D2B1F; margin-bottom: 50px; text-align: center;">
+            THE THREE PILLARS
+        </h2>
+        <div style="display: flex; gap: 40px; justify-content: center; width: 100%;">
+            <!-- Pillar 1 -->
+            <div style="flex: 1; max-width: 500px; background: linear-gradient(145deg, #FFFFFF 0%, #F5F0FF 100%); border-radius: 24px; padding: 40px; border: 2px solid rgba(139, 92, 246, 0.2);">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                    <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 28px; color: #FFFEF5;">1</span>
+                </div>
+                <h3 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #7C3AED; margin-bottom: 15px;">YOUR BLUEPRINT</h3>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #5C4827;">Personalized roadmap + strategy</p>
+            </div>
+            <!-- Pillar 2 -->
+            <div style="flex: 1; max-width: 500px; background: linear-gradient(145deg, #FFFFFF 0%, #FFF9EB 100%); border-radius: 24px; padding: 40px; border: 2px solid rgba(245, 158, 11, 0.2); transform: scale(1.05);">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                    <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 28px; color: #FFFEF5;">2</span>
+                </div>
+                <h3 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #D97706; margin-bottom: 15px;">SUPPORT</h3>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #5C4827;">Weekly calls + community</p>
+            </div>
+            <!-- Pillar 3 -->
+            <div style="flex: 1; max-width: 500px; background: linear-gradient(145deg, #FFFFFF 0%, #ECFDF5 100%); border-radius: 24px; padding: 40px; border: 2px solid rgba(16, 185, 129, 0.2);">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #10B981 0%, #059669 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                    <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 28px; color: #FFFEF5;">3</span>
+                </div>
+                <h3 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #059669; margin-bottom: 15px;">RESOURCES</h3>
+                <p style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #5C4827;">Templates, tools + bonuses</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 16 — PILLAR 1: YOUR BLUEPRINT (Header)
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #8B5CF6 0%, #7C3AED 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="p1glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="600" ry="400" fill="url(#p1glow)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: rgba(255,255,255,0.7); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 30px;">
+            Pillar One
+        </p>
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 96px; color: #FFFEF5; margin-bottom: 30px;">
+            YOUR BLUEPRINT
+        </h1>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: rgba(255,255,255,0.9);">
+            Your personalized roadmap to success
+        </p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 17 — PILLAR 1: Component 1
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div style="position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(180deg, #8B5CF6 0%, #7C3AED 100%);"></div>
+    <div class="slide-inner" style="padding-left: 100px;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #8B5CF6; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;">
+            Pillar 1 → Your Blueprint
+        </p>
+        <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 56px; color: #3D2B1F; margin-bottom: 40px;">
+            Group Kickoff Call
+        </h2>
+        <div style="display: flex; flex-direction: column; gap: 25px; max-width: 1000px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; line-height: 1.6;">
+                Start your 90 days with clarity and direction. We'll map out YOUR specific path based on where you are right now.
+            </p>
+            <div style="display: flex; align-items: center; gap: 15px; padding: 20px 30px; background: rgba(139, 92, 246, 0.08); border-radius: 12px;">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #8B5CF6;">$297</span>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #5C4827;">value</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 18 — PILLAR 1: Component 2
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div style="position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(180deg, #8B5CF6 0%, #7C3AED 100%);"></div>
+    <div class="slide-inner" style="padding-left: 100px;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #8B5CF6; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;">
+            Pillar 1 → Your Blueprint
+        </p>
+        <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 56px; color: #3D2B1F; margin-bottom: 40px;">
+            Personalized 90-Day Roadmap
+        </h2>
+        <div style="display: flex; flex-direction: column; gap: 25px; max-width: 1000px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; line-height: 1.6;">
+                No more guessing what to do next. You'll know exactly what to focus on each week for the next 90 days.
+            </p>
+            <div style="display: flex; align-items: center; gap: 15px; padding: 20px 30px; background: rgba(139, 92, 246, 0.08); border-radius: 12px;">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #8B5CF6;">$997</span>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #5C4827;">value</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 19 — PILLAR 1: Total Value
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div style="position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(180deg, #8B5CF6 0%, #7C3AED 100%);"></div>
+    <div class="slide-inner" style="text-align: center;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #8B5CF6; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;">
+            Pillar 1 → Your Blueprint
+        </p>
+        <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 48px; color: #3D2B1F; margin-bottom: 40px;">
+            PILLAR 1 TOTAL VALUE
+        </h2>
+        <div style="padding: 50px 80px; background: linear-gradient(145deg, #8B5CF6 0%, #7C3AED 100%); border-radius: 24px;">
+            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 80px; color: #FFFEF5;">$1,294</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 20 — PILLAR 2: SUPPORT (Header)
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #F59E0B 0%, #D97706 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="p2glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#D97706;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="600" ry="400" fill="url(#p2glow)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: rgba(255,255,255,0.7); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 30px;">
+            Pillar Two
+        </p>
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 96px; color: #FFFEF5; margin-bottom: 30px;">
+            SUPPORT
+        </h1>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: rgba(255,255,255,0.9);">
+            You're never doing this alone
+        </p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 21 — PILLAR 2: Weekly Calls
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div style="position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);"></div>
+    <div class="slide-inner" style="padding-left: 100px;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #D97706; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;">
+            Pillar 2 → Support
+        </p>
+        <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 56px; color: #3D2B1F; margin-bottom: 40px;">
+            Weekly Live Calls WITH ME
+        </h2>
+        <div style="display: flex; flex-direction: column; gap: 25px; max-width: 1000px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; line-height: 1.6;">
+                Every single week, you get direct access to me. Ask questions, get feedback, stay on track.
+            </p>
+            <div style="display: flex; align-items: center; gap: 15px; padding: 20px 30px; background: rgba(245, 158, 11, 0.08); border-radius: 12px;">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #D97706;">$2,400</span>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #5C4827;">value (12 calls)</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 22 — PILLAR 2: Community
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div style="position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);"></div>
+    <div class="slide-inner" style="padding-left: 100px;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #D97706; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;">
+            Pillar 2 → Support
+        </p>
+        <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 56px; color: #3D2B1F; margin-bottom: 40px;">
+            Private Community Access
+        </h2>
+        <div style="display: flex; flex-direction: column; gap: 25px; max-width: 1000px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; line-height: 1.6;">
+                Connect with other serious sellers. Share wins, get feedback, find accountability partners.
+            </p>
+            <div style="display: flex; align-items: center; gap: 15px; padding: 20px 30px; background: rgba(245, 158, 11, 0.08); border-radius: 12px;">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #D97706;">$564</span>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #5C4827;">value (3 months)</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 23 — PILLAR 2: Direct Feedback
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div style="position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);"></div>
+    <div class="slide-inner" style="padding-left: 100px;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #D97706; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;">
+            Pillar 2 → Support
+        </p>
+        <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 56px; color: #3D2B1F; margin-bottom: 40px;">
+            Direct Feedback on YOUR Shop
+        </h2>
+        <div style="display: flex; flex-direction: column; gap: 25px; max-width: 1000px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; line-height: 1.6;">
+                Submit your listings, your shop, your products for direct feedback. Know exactly what to improve.
+            </p>
+            <div style="display: flex; align-items: center; gap: 15px; padding: 20px 30px; background: rgba(245, 158, 11, 0.08); border-radius: 12px;">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #D97706;">$500</span>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #5C4827;">value</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 24 — PILLAR 2: Total Value
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div style="position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);"></div>
+    <div class="slide-inner" style="text-align: center;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #D97706; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;">
+            Pillar 2 → Support
+        </p>
+        <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 48px; color: #3D2B1F; margin-bottom: 40px;">
+            PILLAR 2 TOTAL VALUE
+        </h2>
+        <div style="padding: 50px 80px; background: linear-gradient(145deg, #F59E0B 0%, #D97706 100%); border-radius: 24px;">
+            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 80px; color: #FFFEF5;">$3,464</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 25 — PILLAR 3: RESOURCES (Header)
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide" style="background: linear-gradient(145deg, #10B981 0%, #059669 100%);">
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <radialGradient id="p3glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#059669;stop-opacity:0" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="960" cy="540" rx="600" ry="400" fill="url(#p3glow)"/>
+    </svg>
+    <div class="slide-inner" style="text-align: center;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: rgba(255,255,255,0.7); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 30px;">
+            Pillar Three
+        </p>
+        <h1 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 96px; color: #FFFEF5; margin-bottom: 30px;">
+            RESOURCES
+        </h1>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 32px; color: rgba(255,255,255,0.9);">
+            Everything you need to execute
+        </p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 26 — PILLAR 3: Templates & Tools
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div style="position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(180deg, #10B981 0%, #059669 100%);"></div>
+    <div class="slide-inner" style="padding-left: 100px;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #059669; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;">
+            Pillar 3 → Resources
+        </p>
+        <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 56px; color: #3D2B1F; margin-bottom: 40px;">
+            Done-For-You Templates
+        </h2>
+        <div style="display: flex; flex-direction: column; gap: 25px; max-width: 1000px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 28px; color: #5C4827; line-height: 1.6;">
+                Listing templates, product mockups, SEO checklists, and more. Just plug in your info and go.
+            </p>
+            <div style="display: flex; align-items: center; gap: 15px; padding: 20px 30px; background: rgba(16, 185, 129, 0.08); border-radius: 12px;">
+                <span style="font-family: 'Ogg Bold', Georgia, serif; font-size: 32px; color: #059669;">$497</span>
+                <span style="font-family: 'Satoshi', sans-serif; font-size: 20px; color: #5C4827;">value</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SLIDE 27 — PILLAR 3: Total Value
+═══════════════════════════════════════════════════════════════════════════ -->
+<div class="slide bg-warm">
+    <div style="position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(180deg, #10B981 0%, #059669 100%);"></div>
+    <div class="slide-inner" style="text-align: center;">
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 18px; color: #059669; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;">
+            Pillar 3 → Resources
+        </p>
+        <h2 style="font-family: 'Ogg Bold', Georgia, serif; font-size: 48px; color: #3D2B1F; margin-bottom: 40px;">
+            PILLAR 3 TOTAL VALUE
+        </h2>
+        <div style="padding: 50px 80px; background: linear-gradient(145deg, #10B981 0%, #059669 100%); border-radius: 24px;">
+            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 80px; color: #FFFEF5;">$497</p>
+        </div>
+        <div style="margin-top: 50px; padding: 30px 50px; background: linear-gradient(145deg, #5C4827 0%, #3D2B1F 100%); border-radius: 16px;">
+            <p style="font-family: 'Satoshi', sans-serif; font-size: 24px; color: rgba(255,255,255,0.7); margin-bottom: 10px;">Combined Total Value</p>
+            <p style="font-family: 'Ogg Bold', Georgia, serif; font-size: 56px; color: #C9A227;">$5,255</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
