@@ -531,15 +531,18 @@
   margin: 0 auto;
 }
 
-/* Image container - MUST have aspect-ratio */
+/* Image container - natural sizing, no cropping */
 .image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
 }
 
 .image-container:hover {
@@ -549,19 +552,18 @@
 
 /* Wide images (span 2 columns) */
 .image-container.wide-container {
-  aspect-ratio: 2 / 1;
+  /* No forced aspect ratio - let image determine height */
 }
 
 .span-2 {
   grid-column: span 2;
 }
 
-/* Image inside - MUST have object-fit */
+/* Image inside - natural size, no cropping */
 .image-container img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
@@ -580,11 +582,6 @@
 
   .span-2 {
     grid-column: span 1;
-  }
-
-  .image-container,
-  .image-container.wide-container {
-    aspect-ratio: 4 / 3;
   }
 }
 
@@ -766,6 +763,37 @@
   transform: translateY(0);
 }
 
+/* Fallback: reveal all after animation delay if JS fails */
+@supports (animation: none) {
+  .proof-header,
+  .proof-graphic,
+  .proof-featured,
+  .proof-gallery,
+  .proof-principle,
+  .proof-transition,
+  .proof-cta {
+    animation: proof-reveal-fallback 0.5s ease-out 0.8s forwards;
+  }
+}
+
+@keyframes proof-reveal-fallback {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure CTA is always clickable with proper z-index */
+.proof-cta {
+  position: relative;
+  z-index: 10;
+}
+
+.proof-cta-button {
+  position: relative;
+  z-index: 11;
+}
+
 /* Stagger gallery items */
 .image-container {
   opacity: 0;
@@ -826,26 +854,6 @@
 (function() {
   'use strict';
 
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (prefersReducedMotion) {
-    const elements = document.querySelectorAll('#bf-proof .proof-header, #bf-proof .proof-graphic, #bf-proof .proof-featured, #bf-proof .proof-gallery, #bf-proof .proof-principle, #bf-proof .proof-transition, #bf-proof .proof-cta');
-    elements.forEach(el => el.classList.add('revealed'));
-    return;
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.15,
-    rootMargin: '-30px 0px'
-  });
-
   const animatedElements = document.querySelectorAll(
     '#bf-proof .proof-header, ' +
     '#bf-proof .proof-graphic, ' +
@@ -856,6 +864,46 @@
     '#bf-proof .proof-cta'
   );
 
-  animatedElements.forEach(el => observer.observe(el));
+  function revealAll() {
+    animatedElements.forEach(el => el.classList.add('revealed'));
+  }
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    revealAll();
+    return;
+  }
+
+  // Fallback: reveal all elements after 1.5s if observer doesn't trigger
+  const fallbackTimer = setTimeout(revealAll, 1500);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '50px 0px'
+  });
+
+  animatedElements.forEach(el => {
+    // Check if already in viewport
+    const rect = el.getBoundingClientRect();
+    const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+    if (inViewport) {
+      el.classList.add('revealed');
+    } else {
+      observer.observe(el);
+    }
+  });
+
+  // Clear fallback if all elements are revealed
+  if (document.querySelectorAll('#bf-proof .revealed').length === animatedElements.length) {
+    clearTimeout(fallbackTimer);
+  }
 })();
 </script>
