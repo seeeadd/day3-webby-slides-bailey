@@ -619,8 +619,6 @@
     animation: none;
   }
 }
-</style>
-
 /* Premium Badge Animations */
 .bf-inv__badge-svg {
   filter: drop-shadow(0 4px 12px rgba(212, 175, 55, 0.3));
@@ -635,15 +633,6 @@
   50% { filter: brightness(1.1); }
 }
 
-.bf-inv__ribbons {
-  animation: ribbon-sway 6s ease-in-out infinite;
-}
-
-@keyframes ribbon-sway {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(2px); }
-}
-
 .bf-inv__stars {
   animation: star-twinkle 2s ease-in-out infinite alternate;
 }
@@ -652,13 +641,4 @@
   from { opacity: 0.4; }
   to { opacity: 1; }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .bf-inv__rosette,
-  .bf-inv__ribbons,
-  .bf-inv__stars,
-  .bf-inv__badge-svg {
-    animation: none;
-    filter: none;
-  }
-}
+</style>
