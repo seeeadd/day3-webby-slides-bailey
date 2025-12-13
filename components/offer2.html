@@ -392,7 +392,7 @@ html, body { width: 100%; overflow-x: hidden; }
 .graphic-container svg { width: 100%; height: 100%; max-width: 200px; }
 
 .featured-card {
-  grid-column: span 2;
+  grid-column: auto;
   padding-bottom: clamp(0.75rem, 1.25vw, 1rem);
   border-width: 2px;
   box-shadow: 0 16px 40px rgba(0,0,0,0.08);
@@ -415,16 +415,9 @@ html, body { width: 100%; overflow-x: hidden; }
   box-shadow: 0 10px 24px rgba(18,63,58,0.2);
 }
 
-.bot-avatar-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.25rem;
-  position: relative;
-}
-
 .bot-avatar {
-  width: 86px;
-  height: 86px;
+  width: 78px;
+  height: 78px;
   border-radius: 50%;
   background: linear-gradient(135deg, #f7f2eb, #e4d6c3);
   border: 3px solid #e8ded0;
@@ -440,8 +433,8 @@ html, body { width: 100%; overflow-x: hidden; }
 }
 
 .bot-ask-strip {
-  margin-top: 0.75rem;
-  padding: 0.75rem;
+  margin-top: 0.65rem;
+  padding: 0.65rem 0.7rem;
   background: var(--bg-warm);
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 12px;
@@ -467,13 +460,45 @@ html, body { width: 100%; overflow-x: hidden; }
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.45rem 0.6rem;
+  padding: 0.45rem 0.55rem;
   background: #fff;
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,0.05);
   font-weight: 600;
   font-size: clamp(0.88rem, 1.5vw, 0.98rem);
 }
+
+.bailey-bot-card .card-title,
+.bailey-bot-card .featured-badge {
+  color: var(--teal-deep);
+  font-weight: 700;
+}
+
+.bailey-bot-card .featured-badge {
+  background: linear-gradient(135deg, rgba(74,139,135,0.15), rgba(46,106,98,0.12));
+  border: 1px solid var(--teal-primary);
+  box-shadow: 0 6px 16px rgba(18,63,58,0.16);
+}
+
+.bailey-bot-card .card-title { letter-spacing: -0.02em; }
+
+.bailey-bot-visual {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-height: 140px;
+  padding: 0.5rem;
+}
+
+.bailey-bot-visual img { max-height: 130px; }
+
+.bailey-bot-visual .bot-avatar { margin-top: 0; flex-shrink: 0; }
+
+.bailey-bot-card .card-content { gap: 0.5rem; }
+
+.bailey-bot-card .bot-ask-strip { max-width: 100%; }
 
 .typing-dots {
   display: inline-flex;
@@ -715,9 +740,9 @@ html, body { width: 100%; overflow-x: hidden; }
         <h4 class="card-title">Kickoff Call</h4>
         <p class="card-subtitle">Start clean. Know exactly how the 90 days works before Day 1.</p>
         <ul class="card-list">
-          <li><span class="microcopy">Day 3 Complete Slides</span> 60–90 minute live kickoff</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Meet your cohort, set goals, get oriented</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Ask questions before you waste a week guessing</li>
+          <li>60–90 minute live kickoff</li>
+          <li>Meet your cohort, set goals, get oriented</li>
+          <li>Ask questions before you waste a week guessing</li>
         </ul>
       </div>
     </article>
@@ -731,9 +756,9 @@ html, body { width: 100%; overflow-x: hidden; }
         <h4 class="card-title">Your Personalized 90-Day Roadmap</h4>
         <p class="card-subtitle">Not a generic curriculum. A week-by-week plan for your shop and your schedule.</p>
         <ul class="card-list">
-          <li><span class="microcopy">Day 3 Complete Slides</span> You fill out an intake form (shop, goals, time, challenges)</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Bailey reviews it personally (not a VA, not AI)</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> You get your custom roadmap (week-by-week focus)</li>
+          <li>You fill out an intake form (shop, goals, time, challenges)</li>
+          <li>Bailey reviews it personally (not a VA, not AI)</li>
+          <li>You get your custom roadmap (week-by-week focus)</li>
         </ul>
       </div>
     </article>
@@ -761,9 +786,9 @@ html, body { width: 100%; overflow-x: hidden; }
         <h4 class="card-title">The Simple Weekly Loop</h4>
         <p class="card-subtitle">So you stop “random Etsy” and start output.</p>
         <ul class="card-list">
-          <li><span class="microcopy">Day 3 Complete Slides</span> Research → Create → List → Improve</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Same steps every week</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Less thinking, more shipping</li>
+          <li>Research → Create → List → Improve</li>
+          <li>Same steps every week</li>
+          <li>Less thinking, more shipping</li>
         </ul>
       </div>
     </article>
@@ -796,9 +821,9 @@ html, body { width: 100%; overflow-x: hidden; }
         <h4 class="card-title">Built for Real-Life Time Blocks</h4>
         <p class="card-subtitle">If you’ve got 60–90 minutes, you’ve got enough.</p>
         <ul class="card-list">
-          <li><span class="microcopy">90_Day_Etsy_Empire_Accelerator_</span> Clear weekly focus</li>
-          <li><span class="microcopy">90_Day_Etsy_Empire_Accelerator_</span> No “what should I do today?” spiral</li>
-          <li><span class="microcopy">90_Day_Etsy_Empire_Accelerator_</span> Progress without burning out</li>
+          <li>Clear weekly focus</li>
+          <li>No “what should I do today?” spiral</li>
+          <li>Progress without burning out</li>
         </ul>
       </div>
     </article>
@@ -825,9 +850,9 @@ html, body { width: 100%; overflow-x: hidden; }
         <h4 class="card-title">12 Weekly Implementation + Shop Review Calls</h4>
         <p class="card-subtitle">Your weekly reset so you don’t drift for 6 days and “start over Monday.”</p>
         <ul class="card-list">
-          <li><span class="microcopy">Day 3 Complete Slides</span> 60–75 minutes, every week for 12 weeks</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Weeks 1–4: heavy audits + feedback</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Weeks 5–12: troubleshooting + optimization + Q&A</li>
+          <li>60–75 minutes, every week for 12 weeks</li>
+          <li>Weeks 1–4: heavy audits + feedback</li>
+          <li>Weeks 5–12: troubleshooting + optimization + Q&A</li>
         </ul>
       </div>
     </article>
@@ -841,28 +866,26 @@ html, body { width: 100%; overflow-x: hidden; }
         <h4 class="card-title">Private Skool Community Support (90 days)</h4>
         <p class="card-subtitle">So one question doesn’t cost you a whole week.</p>
         <ul class="card-list">
-          <li><span class="microcopy">Day 3 Complete Slides</span> Post questions anytime</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Get unstuck fast (community + Bailey)</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Loom video responses for complex questions</li>
+          <li>Post questions anytime</li>
+          <li>Get unstuck fast (community + Bailey)</li>
+          <li>Loom video responses for complex questions</li>
         </ul>
       </div>
     </article>
 
-    <article class="offer-card featured-card reveal">
-      <div class="card-visual card-media">
+    <article class="offer-card featured-card bailey-bot-card reveal">
+      <div class="card-visual card-media bailey-bot-visual">
         <img src="https://i.imgur.com/o1R8v3j.png" alt="Bailey Bot" loading="lazy">
+        <div class="bot-avatar" aria-hidden="true">BF</div>
       </div>
       <div class="card-content">
         <span class="featured-badge">⭐ Featured: Bailey Bot</span>
         <h4 class="card-title">Bailey Bot (24/7 AI Assistant)</h4>
         <p class="card-subtitle">It’s 10:47pm. The house is finally quiet. You sit down to work… and get stuck on something small. Instead of pausing your progress for 2 days, you ask Bailey Bot and keep moving.</p>
-        <div class="bot-avatar-wrap">
-          <div class="bot-avatar" aria-hidden="true">BF</div>
-        </div>
         <ul class="card-list">
-          <li><span class="microcopy">Day 3 Complete Slides</span> Trained on Bailey’s courses + content</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Answers in Bailey’s “voice,” on demand</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Available when Bailey is sleeping</li>
+          <li>Trained on Bailey’s courses + content</li>
+          <li>Answers in Bailey’s “voice,” on demand</li>
+          <li>Available when Bailey is sleeping</li>
         </ul>
         <div class="bot-ask-strip">
           <div class="ask-label">Ask Bailey Bot…</div>
@@ -884,9 +907,9 @@ html, body { width: 100%; overflow-x: hidden; }
         <h4 class="card-title">Replays + Catch-Up (if you miss live)</h4>
         <p class="card-subtitle">You don’t fall behind just because life happened.</p>
         <ul class="card-list">
-          <li><span class="microcopy">Day 3 Complete Slides</span> All calls are recorded</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Replay posted within 24 hours</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Submit questions in advance + still get reviewed</li>
+          <li>All calls are recorded</li>
+          <li>Replay posted within 24 hours</li>
+          <li>Submit questions in advance + still get reviewed</li>
         </ul>
       </div>
     </article>
@@ -912,9 +935,9 @@ html, body { width: 100%; overflow-x: hidden; }
         <h4 class="card-title">Lifetime Program Access (current + future)</h4>
         <p class="card-subtitle">You keep the training forever. You’re not “renting information.”</p>
         <ul class="card-list">
-          <li><span class="microcopy">Day 3 Complete Slides</span> All current courses included</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> All future programs included automatically</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Updated when Bailey learns something new</li>
+          <li>All current courses included</li>
+          <li>All future programs included automatically</li>
+          <li>Updated when Bailey learns something new</li>
         </ul>
       </div>
     </article>
@@ -928,9 +951,9 @@ html, body { width: 100%; overflow-x: hidden; }
         <h4 class="card-title">Lifetime Community + Ongoing Monthly Calls</h4>
         <p class="card-subtitle">The sprint ends. Your access doesn’t.</p>
         <ul class="card-list">
-          <li><span class="microcopy">Day 3 Complete Slides</span> Community access forever</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Monthly calls ongoing</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Updates + new trainings included</li>
+          <li>Community access forever</li>
+          <li>Monthly calls ongoing</li>
+          <li>Updates + new trainings included</li>
         </ul>
       </div>
     </article>
@@ -960,9 +983,9 @@ html, body { width: 100%; overflow-x: hidden; }
         <h4 class="card-title">TeachFluence (included, optional)</h4>
         <p class="card-subtitle">Only if you ever want personal brand later.</p>
         <ul class="card-list">
-          <li><span class="microcopy">Day 3 Complete Slides</span> TeachFluence included, optional</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Use it whenever you want a personal brand later</li>
-          <li><span class="microcopy">Day 3 Complete Slides</span> Ready the moment you decide to launch</li>
+          <li>TeachFluence included, optional</li>
+          <li>Use it whenever you want a personal brand later</li>
+          <li>Ready the moment you decide to launch</li>
         </ul>
       </div>
     </article>
