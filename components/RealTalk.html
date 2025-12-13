@@ -2,254 +2,123 @@
   <div class="qual-container">
 
     <!-- ═══════════════════════════════════════════════════════════════════════
-         HEADLINE BLOCK
+         HEADLINE - MASSIVE & DIRECT
          ═══════════════════════════════════════════════════════════════════════ -->
     <header class="qual-header">
-      <div class="qual-headline-wrapper">
-        <!-- Decorative bracket left -->
-        <svg class="qual-bracket qual-bracket--left" viewBox="0 0 24 80" fill="none" aria-hidden="true">
-          <path d="M20 4C12 4 8 12 8 40C8 68 12 76 20 76" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <div class="qual-headline-content">
-          <h2 class="qual-headline">Real talk: This isn't for everyone.</h2>
-          <p class="qual-subline">And that's the point.</p>
-        </div>
-        <!-- Decorative bracket right -->
-        <svg class="qual-bracket qual-bracket--right" viewBox="0 0 24 80" fill="none" aria-hidden="true">
-          <path d="M4 4C12 4 16 12 16 40C16 68 12 76 4 76" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </div>
+      <h2 class="qual-headline">Real talk: This isn't for everyone.</h2>
+      <p class="qual-subline">And that's the point.</p>
     </header>
 
     <!-- ═══════════════════════════════════════════════════════════════════════
-         INTRO AWARENESS BLOCK
+         CALLOUT BOX - Premium treatment
          ═══════════════════════════════════════════════════════════════════════ -->
-    <div class="qual-intro">
-      <p class="qual-intro-text">
+    <div class="qual-callout">
+      <div class="callout-accent"></div>
+      <p class="qual-callout-text">
         You are already stretched. The last thing you need is
-        <span class="qual-highlight">another thing you buy on Tuesday</span>,
+        <strong>another thing you buy on Tuesday</strong>,
         feel great about on Wednesday, and forget exists by the following Monday.
       </p>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════════════════════
-         THESIS STATEMENT
+         TIME COMMITMENT - Real time emphasis
          ═══════════════════════════════════════════════════════════════════════ -->
-    <div class="qual-thesis">
-      <p class="qual-thesis-line">
+    <div class="qual-time">
+      <p class="qual-time-statement">
         This only works if you can protect a small, real block of time every week.
       </p>
-      <p class="qual-thesis-emphasis">
-        Not aspirational time. <span class="qual-real-time">Real time.</span>
-      </p>
+      <div class="qual-real-time-wrapper">
+        <p class="qual-real-time-text">
+          Not aspirational time.
+        </p>
+        <p class="qual-real-time-emphasis">
+          Real time.
+          <svg class="qual-underline" viewBox="0 0 140 12" fill="none" preserveAspectRatio="none">
+            <path d="M4 8 Q70 4 136 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+          </svg>
+        </p>
+      </div>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════════════════════
-         DIVERGING PATHS GRAPHIC
+         ILLUSTRATION - Improved diverging paths
          ═══════════════════════════════════════════════════════════════════════ -->
-    <div class="qual-paths-graphic">
-      <svg class="qual-fork-svg" viewBox="0 0 400 120" fill="none" aria-hidden="true">
-        <!-- Central starting point -->
-        <circle cx="200" cy="100" r="8" fill="#2D5F5D"/>
-        <circle cx="200" cy="100" r="4" fill="#FAF8F3"/>
+    <div class="qual-illustration">
+      <svg class="qual-paths-svg" viewBox="0 0 400 140" fill="none">
+        <!-- Ground shadow -->
+        <ellipse cx="200" cy="125" rx="180" ry="8" fill="url(#groundShadow)" opacity="0.15"/>
 
-        <!-- Left path (fading - walk away) -->
-        <path d="M200 100 Q160 80 100 60 Q60 45 30 50" stroke="#E8997A" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6" opacity="0.6"/>
-        <circle cx="30" cy="50" r="6" fill="#E8997A" opacity="0.4"/>
+        <!-- Central starting point with glow -->
+        <circle cx="200" cy="115" r="14" fill="#123F3A"/>
+        <circle cx="200" cy="115" r="10" fill="#2E6A62"/>
+        <circle cx="200" cy="115" r="5" fill="#FDF8F4"/>
 
-        <!-- Right path (growing - ready) -->
-        <path d="M200 100 Q240 80 300 55 Q340 35 370 20" stroke="#2D5F5D" stroke-width="3" stroke-linecap="round"/>
+        <!-- Left path (fading - not now) -->
+        <path d="M186 110 Q130 85 60 75"
+              stroke="url(#fadeGradient)"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-dasharray="10 8"
+              fill="none"/>
+        <circle cx="60" cy="75" r="10" fill="#E8997A" opacity="0.3"/>
+        <circle cx="60" cy="75" r="6" fill="#E8997A" opacity="0.5"/>
 
-        <!-- Growth elements on right path -->
-        <circle cx="250" cy="72" r="4" fill="#4A8B87" opacity="0.6"/>
-        <circle cx="300" cy="55" r="5" fill="#2D5F5D" opacity="0.8"/>
-        <circle cx="340" cy="35" r="6" fill="#2D5F5D"/>
+        <!-- Left label background -->
+        <rect x="30" y="42" width="70" height="24" rx="12" fill="#FEF5F0"/>
+        <text x="65" y="58" class="path-label path-label--muted" text-anchor="middle">NOT NOW</text>
 
-        <!-- Star at destination -->
-        <path d="M370 12 L372 17 L378 17 L373 21 L375 26 L370 22 L365 26 L367 21 L362 17 L368 17 Z" fill="#D4AF37"/>
+        <!-- Right path (strong - your path) -->
+        <path d="M214 110 Q270 85 340 50"
+              stroke="url(#pathGradient)"
+              stroke-width="5"
+              stroke-linecap="round"
+              fill="none"/>
 
-        <!-- Subtle ground line -->
-        <path d="M20 110 Q100 108 200 110 Q300 108 380 110" stroke="#2D5F5D" stroke-width="1" opacity="0.15"/>
+        <!-- Growth markers on right path -->
+        <circle cx="250" cy="90" r="5" fill="#4A8B87" opacity="0.6"/>
+        <circle cx="290" cy="70" r="7" fill="#2E6A62" opacity="0.8"/>
+        <circle cx="340" cy="50" r="10" fill="#123F3A"/>
 
-        <!-- Labels -->
-        <text x="50" y="75" class="qual-path-label qual-path-label--muted">not now</text>
-        <text x="320" y="55" class="qual-path-label qual-path-label--ready">your path</text>
+        <!-- Star burst at destination -->
+        <g transform="translate(340, 25)">
+          <path d="M0 -12 L2.5 -4 L10 -4 L4 1 L6 9 L0 5 L-6 9 L-4 1 L-10 -4 L-2.5 -4 Z" fill="#D4AF37"/>
+          <circle cx="0" cy="0" r="4" fill="#FDF8F4"/>
+        </g>
+
+        <!-- Right label background -->
+        <rect x="300" y="58" width="90" height="24" rx="12" fill="#E8F5F4"/>
+        <text x="345" y="74" class="path-label path-label--ready" text-anchor="middle">YOUR PATH</text>
+
+        <!-- Gradient definitions -->
+        <defs>
+          <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#E8997A" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#E8997A" stop-opacity="0.5"/>
+          </linearGradient>
+          <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#2E6A62"/>
+            <stop offset="100%" stop-color="#123F3A"/>
+          </linearGradient>
+          <radialGradient id="groundShadow">
+            <stop offset="0%" stop-color="#123F3A"/>
+            <stop offset="100%" stop-color="#123F3A" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
       </svg>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════════════════════
-         COMPARISON COLUMNS (Asymmetric 40/60)
-         ═══════════════════════════════════════════════════════════════════════ -->
-    <div class="qual-comparison">
-
-      <!-- LEFT: Walk Away (40%) -->
-      <div class="qual-walkaway">
-        <span class="qual-col-label qual-col-label--walkaway">Walk away if...</span>
-        <ul class="qual-walkaway-list">
-          <li>
-            <span class="qual-x-icon">
-              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-                <path d="M7 7L13 13M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </span>
-            <span>You're looking for overnight results</span>
-          </li>
-          <li>
-            <span class="qual-x-icon">
-              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-                <path d="M7 7L13 13M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </span>
-            <span>You can't protect 25 minutes a day</span>
-          </li>
-          <li>
-            <span class="qual-x-icon">
-              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-                <path d="M7 7L13 13M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </span>
-            <span>You want done-for-you, not coached</span>
-          </li>
-          <li>
-            <span class="qual-x-icon">
-              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-                <path d="M7 7L13 13M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </span>
-            <span>You're not ready for honest feedback</span>
-          </li>
-          <li>
-            <span class="qual-x-icon">
-              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
-                <path d="M7 7L13 13M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </span>
-            <span>You're buying to feel better, not do better</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- RIGHT: You're Ready (60%) -->
-      <div class="qual-ready">
-        <span class="qual-col-label qual-col-label--ready">You're ready if...</span>
-        <div class="qual-ready-items">
-
-          <!-- Item 1: 90 days -->
-          <div class="qual-ready-item">
-            <div class="qual-check-icon">
-              <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                <circle cx="14" cy="14" r="12" fill="#E8F5F4" stroke="#2D5F5D" stroke-width="1.5"/>
-                <path d="M9 14L12.5 17.5L19 11" stroke="#2D5F5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="14" cy="14" r="6" stroke="#4A8B87" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 2"/>
-              </svg>
-            </div>
-            <div class="qual-ready-content">
-              <strong>You can commit to 90 days without bailing</strong>
-              <span>Momentum builds — but only if you stay</span>
-            </div>
-          </div>
-
-          <!-- Item 2: 3+ hours -->
-          <div class="qual-ready-item">
-            <div class="qual-check-icon">
-              <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                <circle cx="14" cy="14" r="12" fill="#E8F5F4" stroke="#2D5F5D" stroke-width="1.5"/>
-                <path d="M9 14L12.5 17.5L19 11" stroke="#2D5F5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="14" cy="14" r="6" stroke="#4A8B87" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 2"/>
-              </svg>
-            </div>
-            <div class="qual-ready-content">
-              <strong>You can protect 3+ hours per week</strong>
-              <span>That's just 25 minutes a day</span>
-            </div>
-          </div>
-
-          <!-- Item 3: Roadmap -->
-          <div class="qual-ready-item">
-            <div class="qual-check-icon">
-              <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                <circle cx="14" cy="14" r="12" fill="#E8F5F4" stroke="#2D5F5D" stroke-width="1.5"/>
-                <path d="M9 14L12.5 17.5L19 11" stroke="#2D5F5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="14" cy="14" r="6" stroke="#4A8B87" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 2"/>
-              </svg>
-            </div>
-            <div class="qual-ready-content">
-              <strong>You want a roadmap, not another video library</strong>
-              <span>Clear direction beats endless content</span>
-            </div>
-          </div>
-
-          <!-- Item 4: Feedback -->
-          <div class="qual-ready-item">
-            <div class="qual-check-icon">
-              <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                <circle cx="14" cy="14" r="12" fill="#E8F5F4" stroke="#2D5F5D" stroke-width="1.5"/>
-                <path d="M9 14L12.5 17.5L19 11" stroke="#2D5F5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="14" cy="14" r="6" stroke="#4A8B87" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 2"/>
-              </svg>
-            </div>
-            <div class="qual-ready-content">
-              <strong>You're ready for feedback that makes you better</strong>
-              <span>Growth requires honest input</span>
-            </div>
-          </div>
-
-          <!-- Item 5: Done guessing -->
-          <div class="qual-ready-item">
-            <div class="qual-check-icon">
-              <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                <circle cx="14" cy="14" r="12" fill="#E8F5F4" stroke="#2D5F5D" stroke-width="1.5"/>
-                <path d="M9 14L12.5 17.5L19 11" stroke="#2D5F5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="14" cy="14" r="6" stroke="#4A8B87" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 2"/>
-              </svg>
-            </div>
-            <div class="qual-ready-content">
-              <strong>You're done guessing alone</strong>
-              <span>You want Bailey in your corner</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         AUTHORITY BOX
-         ═══════════════════════════════════════════════════════════════════════ -->
-    <div class="qual-authority">
-      <!-- Decorative quote mark -->
-      <span class="qual-authority-quote" aria-hidden="true">"</span>
-
-      <!-- Badge -->
-      <span class="qual-authority-badge">Bailey's Standards</span>
-
-      <p class="qual-authority-main">
-        I only want you here if you're actually going to show up.
-      </p>
-      <p class="qual-authority-text">
-        Otherwise, save your money. I'd rather have 50 committed people than 200 who ghost by Week 2.
-      </p>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         CTA
+         CTA - Premium teal gradient
          ═══════════════════════════════════════════════════════════════════════ -->
     <div class="qual-cta-wrapper">
-      <a
-        href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator/"
-        target="_top"
-        rel="noopener"
-        class="qual-cta-button"
-      >
-        <span class="qual-cta-text">I'm Ready to Commit</span>
-        <svg class="qual-cta-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <a href="#bf-pricing" target="_top" class="qual-cta">
+        <span class="qual-cta-text">I'm Ready to Commit to 90 Days</span>
+        <span class="qual-cta-icon">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M15 8L19 12L15 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
       </a>
     </div>
 
@@ -258,23 +127,31 @@
 
 <style>
 /* ============================================
-   REAL TALK QUALIFICATION SECTION
-   Premium self-selection with diverging paths
+   REAL TALK SECTION - COMPACT & PREMIUM
+   Sharp, direct, $200K quality
    ============================================ */
 
 /* ============================================
-   FONT EMBEDDING - OGG + SATOSHI
+   BASE64 FONT EMBEDDING - OGG + SATOSHI
    ============================================ */
 @font-face {
-  font-family: 'Ogg';
+  font-family: 'OGG';
   src: url("data:font/truetype;base64,AAEAAAAQAQAABAAARFNJRwAAAAIAAIUsAAAACEdQT1PH5Kx8AABsnAAAGJBPUy8yc8+PqgAAAYgAAABgY21hcAEJAaIAAAL0AAAAZGN2dCAc2Qr+AAASSAAAAJBmcGdtnjYV0gAAA1gAAA4VZ2FzcAAAABAAAGyUAAAACGdseWZZZXW9AAATYAAAUKJoZWFkF3P8fAAAAQwAAAA2aGhlYQh+AxgAAAFEAAAAJGhtdHiXQgI5AAAB6AAAAQxsb2NhHZw1LgAAEtgAAACIbWF4cAOLEq0AAAFoAAAAIG5hbWV7C7IeAABkBAAACG1wb3N0/7gAMgAAbHQAAAAgcHJlcGL64+QAABFwAAAA1g") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Satoshi';
+  font-family: 'OGG';
+  src: url("data:font/truetype;base64,AAEAAAAQAQAABAAARFNJRwAAAAIAAIUsAAAACEdQT1PH5Kx8AABsnAAAGJBPUy8yc8+PqgAAAYgAAABgY21hcAEJAaIAAAL0AAAAZGN2dCAc2Qr+AAASSAAAAJBmcGdtnjYV0gAAA1gAAA4VZ2FzcAAAABAAAGyUAAAACGdseWZZZXW9AAATYAAAUKJoZWFkF3P8fAAAAQwAAAA2aGhlYQh+AxgAAAFEAAAAJGhtdHiXQgI5AAAB6AAAAQxsb2NhHZw1LgAAEtgAAACIbWF4cAOLEq0AAAFoAAAAIG5hbWV7C7IeAABkBAAACG1wb3N0/7gAMgAAbHQAAAAgcHJlcGL64+QAABFwAAAA1g") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi Variable';
   src: url("data:font/woff2;base64,d09GMgABAAAAAB") format("woff2");
   font-weight: 400 700;
   font-style: normal;
@@ -282,651 +159,313 @@
 }
 
 /* ============================================
-   CSS VARIABLES - Section Palette
+   CSS VARIABLES
    ============================================ */
 #bf-qualification {
-  /* Section-specific palette (derived from brand) */
-  --qual-bg: #FFF8F5;
-  --qual-bg-subtle: #FEF5F0;
-
-  /* Walk Away palette (warm, soft, kind) */
-  --walkaway-bg: #FFF0EB;
-  --walkaway-border: #E8997A;
-  --walkaway-text: #8B5A4A;
-  --walkaway-icon: #D4877A;
-
-  /* Ready palette (cool, focused, strong) */
-  --ready-bg: #FFFFFF;
-  --ready-border: #2D5F5D;
-  --ready-accent: #4A8B87;
-  --ready-surface: #E8F5F4;
-
-  /* Authority palette */
-  --authority-bg: #1F4543;
-  --authority-text: #FAF8F3;
-  --authority-accent: #D4AF37;
-
-  /* CTA */
-  --cta-bg: #E8997A;
-  --cta-text: #FAF8F3;
-  --cta-hover: #D4877A;
-
-  /* Typography */
-  --text-primary: #1A2D2A;
-  --text-secondary: #4A5856;
-  --text-muted: #7A8886;
-
-  /* Core brand */
-  --teal: #2D5F5D;
+  --teal-dark: #123F3A;
+  --teal-mid: #2E6A62;
   --teal-light: #4A8B87;
   --coral: #E8997A;
-  --cream: #FAF8F3;
+  --coral-light: #F4A59C;
+  --cream: #FDF8F4;
+  --cream-warm: #FFF5F0;
   --gold: #D4AF37;
+  --text-dark: #1A2D2A;
+  --text-mid: #2D3E3C;
+  --text-muted: #5E6E6C;
 
-  /* Spacing scale */
-  --space-xs: clamp(0.5rem, 1.2vw, 0.75rem);
-  --space-sm: clamp(0.75rem, 1.8vw, 1rem);
-  --space-md: clamp(1rem, 2.5vw, 1.5rem);
-  --space-lg: clamp(1.5rem, 3.5vw, 2.25rem);
-  --space-xl: clamp(2rem, 4.5vw, 3rem);
-  --space-2xl: clamp(3rem, 7vw, 5rem);
-  --space-section: clamp(5rem, 12vw, 8rem);
+  /* Compact spacing scale */
+  --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --space-sm: clamp(0.75rem, 1.5vw, 1rem);
+  --space-md: clamp(1.25rem, 2.5vw, 1.75rem);
+  --space-lg: clamp(2rem, 4vw, 2.5rem);
+  --space-xl: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 /* ============================================
-   BASE SECTION STYLES
+   SECTION BASE
    ============================================ */
 #bf-qualification {
   width: 100%;
-  background: var(--qual-bg);
-  padding: var(--space-section) var(--space-md);
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-warm) 100%);
+  padding: clamp(3rem, 7vw, 5rem) clamp(1rem, 3vw, 2rem);
   position: relative;
   overflow: hidden;
-  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle background texture */
+/* Subtle texture overlay */
 #bf-qualification::before {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(232, 153, 122, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(45, 95, 93, 0.05) 0%, transparent 40%);
+  background: radial-gradient(circle at 30% 20%, rgba(232, 153, 122, 0.06) 0%, transparent 50%);
   pointer-events: none;
 }
 
 .qual-container {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
 /* ============================================
-   HEADLINE
+   HEADLINE - MASSIVE
    ============================================ */
 .qual-header {
-  margin-bottom: var(--space-2xl);
-}
-
-.qual-headline-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-md);
-}
-
-.qual-bracket {
-  width: 24px;
-  height: 80px;
-  color: var(--coral);
-  opacity: 0.6;
-  flex-shrink: 0;
-}
-
-.qual-headline-content {
   text-align: center;
+  margin-bottom: var(--space-lg);
 }
 
 .qual-headline {
-  font-family: 'Ogg', Georgia, serif;
-  font-weight: 400;
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
-  line-height: 1.15;
+  font-family: 'OGG', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
   letter-spacing: -0.02em;
-  color: var(--text-primary);
+  color: var(--teal-dark);
   margin: 0 0 var(--space-xs) 0;
 }
 
 .qual-subline {
-  font-family: 'Ogg', Georgia, serif;
+  font-family: 'OGG', Georgia, serif;
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: clamp(1.25rem, 2.8vw, 1.75rem);
   line-height: 1.3;
-  color: var(--teal);
+  color: var(--text-muted);
   margin: 0;
 }
 
 /* ============================================
-   INTRO BLOCK
+   CALLOUT BOX - Premium
    ============================================ */
-.qual-intro {
-  background: var(--cream);
+.qual-callout {
+  position: relative;
+  background: linear-gradient(135deg, #FFF8F5 0%, var(--cream-warm) 100%);
   border-left: 4px solid var(--coral);
-  border-radius: 0 16px 16px 0;
-  padding: var(--space-lg) var(--space-xl);
-  margin-bottom: var(--space-2xl);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  border-radius: 0 12px 12px 0;
+  padding: clamp(1.25rem, 3vw, 1.75rem) clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: var(--space-lg);
   box-shadow:
-    0 4px 20px rgba(232, 153, 122, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.04);
+    0 2px 12px rgba(232, 153, 122, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
-.qual-intro-text {
-  font-size: clamp(1.0625rem, 2.5vw, 1.25rem);
-  line-height: 1.75;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-.qual-highlight {
-  background: linear-gradient(180deg, transparent 60%, rgba(232, 153, 122, 0.3) 60%);
-  padding: 0 4px;
-  font-weight: 600;
-  color: var(--text-primary);
+.callout-accent {
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 50%;
+  background: linear-gradient(180deg, var(--coral) 0%, var(--coral-light) 100%);
   border-radius: 2px;
 }
 
-/* ============================================
-   THESIS STATEMENT
-   ============================================ */
-.qual-thesis {
-  text-align: center;
-  margin-bottom: var(--space-xl);
-  padding: 0 var(--space-md);
+.qual-callout-text {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--text-mid);
+  margin: 0;
 }
 
-.qual-thesis-line {
-  font-size: clamp(1.125rem, 2.8vw, 1.5rem);
+.qual-callout-text strong {
+  font-weight: 700;
+  color: var(--teal-dark);
+}
+
+/* ============================================
+   TIME COMMITMENT
+   ============================================ */
+.qual-time {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.qual-time-statement {
+  font-family: 'Satoshi Variable', sans-serif;
   font-weight: 500;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
   line-height: 1.6;
-  color: var(--text-primary);
+  color: var(--text-mid);
   margin: 0 0 var(--space-md) 0;
-  max-width: 700px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.qual-thesis-emphasis {
-  font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-  font-style: italic;
-  color: var(--teal);
-  margin: 0;
-  line-height: 1.4;
+.qual-real-time-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
 }
 
-.qual-real-time {
+.qual-real-time-text {
+  font-family: 'OGG', Georgia, serif;
+  font-size: clamp(1.25rem, 2.8vw, 1.75rem);
+  color: var(--text-mid);
+  margin: 0;
+}
+
+.qual-real-time-emphasis {
+  font-family: 'OGG', Georgia, serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--teal-dark);
+  margin: 0;
   position: relative;
   display: inline-block;
 }
 
-.qual-real-time::after {
-  content: '';
+.qual-underline {
   position: absolute;
-  bottom: 2px;
-  left: -3px;
-  right: -3px;
-  height: 4px;
-  background: var(--coral);
-  border-radius: 3px;
-  transform: rotate(-0.5deg);
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  color: var(--coral);
 }
 
 /* ============================================
-   DIVERGING PATHS GRAPHIC
+   ILLUSTRATION
    ============================================ */
-.qual-paths-graphic {
-  max-width: 500px;
-  margin: 0 auto var(--space-2xl);
-  padding: var(--space-md) 0;
+.qual-illustration {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+  padding: var(--space-sm) 0;
 }
 
-.qual-fork-svg {
+.qual-paths-svg {
+  max-width: 450px;
   width: 100%;
   height: auto;
 }
 
-.qual-path-label {
-  font-family: 'Satoshi', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.qual-path-label--muted {
-  fill: var(--walkaway-icon);
-  opacity: 0.7;
-}
-
-.qual-path-label--ready {
-  fill: var(--teal);
-}
-
-/* ============================================
-   COMPARISON COLUMNS
-   ============================================ */
-.qual-comparison {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  gap: var(--space-lg);
-  margin-bottom: var(--space-2xl);
-  align-items: start;
-}
-
-/* Walk Away Column */
-.qual-walkaway {
-  background: var(--walkaway-bg);
-  border-radius: 16px;
-  padding: var(--space-lg);
-  border-left: 3px solid var(--walkaway-border);
-}
-
-.qual-col-label {
-  display: block;
-  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+.path-label {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: var(--space-md);
 }
 
-.qual-col-label--walkaway {
-  color: var(--walkaway-text);
+.path-label--muted {
+  fill: var(--coral);
 }
 
-.qual-col-label--ready {
-  color: var(--teal);
-}
-
-.qual-walkaway-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.qual-walkaway-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-sm);
-  padding: var(--space-sm) 0;
-  border-bottom: 1px solid rgba(232, 153, 122, 0.15);
-  font-size: clamp(0.9rem, 2vw, 0.95rem);
-  line-height: 1.55;
-  color: var(--walkaway-text);
-}
-
-.qual-walkaway-list li:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.qual-x-icon {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  color: var(--walkaway-icon);
-  margin-top: 2px;
-}
-
-.qual-x-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-/* Ready Column */
-.qual-ready {
-  background: var(--ready-bg);
-  border-radius: 20px;
-  padding: var(--space-xl);
-  border: 2px solid rgba(45, 95, 93, 0.12);
-  box-shadow:
-    0 8px 32px rgba(45, 95, 93, 0.1),
-    0 2px 8px rgba(0, 0, 0, 0.04);
-  position: relative;
-}
-
-/* Top accent bar */
-.qual-ready::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--teal), var(--teal-light));
-  border-radius: 20px 20px 0 0;
-}
-
-.qual-ready-items {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.qual-ready-item {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-md);
-  padding: var(--space-sm);
-  border-radius: 12px;
-  transition: background-color 0.25s ease, transform 0.25s ease;
-}
-
-.qual-ready-item:hover {
-  background: var(--ready-surface);
-  transform: translateX(4px);
-}
-
-.qual-check-icon {
-  flex-shrink: 0;
-  width: 28px;
-  height: 28px;
-  margin-top: 2px;
-}
-
-.qual-check-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.qual-ready-content {
-  flex: 1;
-}
-
-.qual-ready-content strong {
-  display: block;
-  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 4px;
-  line-height: 1.45;
-}
-
-.qual-ready-content span {
-  font-size: clamp(0.875rem, 1.8vw, 0.925rem);
-  color: var(--text-muted);
-  line-height: 1.5;
+.path-label--ready {
+  fill: var(--teal-dark);
 }
 
 /* ============================================
-   AUTHORITY BOX
-   ============================================ */
-.qual-authority {
-  background: linear-gradient(135deg, var(--authority-bg) 0%, #1A3A38 100%);
-  border-radius: 24px;
-  padding: var(--space-xl) var(--space-2xl);
-  margin-bottom: var(--space-xl);
-  position: relative;
-  overflow: hidden;
-  box-shadow:
-    0 12px 48px rgba(31, 69, 67, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-/* Decorative quote */
-.qual-authority-quote {
-  position: absolute;
-  top: -15px;
-  left: 20px;
-  font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(100px, 20vw, 160px);
-  color: rgba(255, 255, 255, 0.08);
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* Badge */
-.qual-authority-badge {
-  display: inline-block;
-  background: rgba(212, 175, 55, 0.2);
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  font-size: clamp(0.6rem, 1.3vw, 0.7rem);
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 20px;
-  margin-bottom: var(--space-md);
-  position: relative;
-  z-index: 1;
-}
-
-/* Subtle glow effect */
-.qual-authority::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.06) 0%, transparent 40%),
-    radial-gradient(circle at 25% 75%, rgba(74, 139, 135, 0.12) 0%, transparent 40%);
-  pointer-events: none;
-}
-
-.qual-authority-main {
-  font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(1.25rem, 3vw, 1.625rem);
-  line-height: 1.5;
-  color: var(--authority-text);
-  margin: 0 0 var(--space-sm) 0;
-  position: relative;
-  z-index: 1;
-}
-
-.qual-authority-text {
-  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
-  line-height: 1.7;
-  color: rgba(250, 248, 243, 0.85);
-  margin: 0;
-  position: relative;
-  z-index: 1;
-}
-
-/* ============================================
-   CTA BUTTON
+   CTA BUTTON - Premium teal gradient
    ============================================ */
 .qual-cta-wrapper {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.qual-cta-button {
+.qual-cta {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: var(--space-sm);
-  background: var(--cta-bg);
-  color: var(--cta-text);
-  font-family: 'Satoshi', sans-serif;
-  font-size: clamp(1rem, 2.3vw, 1.125rem);
-  font-weight: 600;
+  gap: clamp(0.75rem, 2vw, 1rem);
+  padding: clamp(1.1rem, 2.5vw, 1.35rem) clamp(2rem, 5vw, 3rem);
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal-mid) 100%);
+  color: #FFFFFF;
+  font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   text-decoration: none;
-  padding: var(--space-md) var(--space-xl);
-  border-radius: 60px;
-  border: none;
-  cursor: pointer;
+  border-radius: 12px;
   box-shadow:
-    0 4px 20px rgba(232, 153, 122, 0.35),
-    0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  max-width: 380px;
+    0 4px 16px rgba(18, 63, 58, 0.3),
+    0 8px 32px rgba(18, 63, 58, 0.15);
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.qual-cta:hover {
+  background: linear-gradient(135deg, #0F332F 0%, var(--teal-dark) 100%);
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 24px rgba(18, 63, 58, 0.4),
+    0 16px 48px rgba(18, 63, 58, 0.2);
+}
+
+.qual-cta:active {
+  transform: translateY(-1px);
+}
+
+.qual-cta-text {
+  white-space: nowrap;
+}
+
+.qual-cta-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.qual-cta-icon svg {
   width: 100%;
+  height: 100%;
 }
 
-.qual-cta-button:hover {
-  background: var(--cta-hover);
-  transform: translateY(-2px);
-  box-shadow:
-    0 8px 32px rgba(232, 153, 122, 0.4),
-    0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.qual-cta-button:active {
-  transform: translateY(0);
-}
-
-.qual-cta-arrow {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.3s ease;
-}
-
-.qual-cta-button:hover .qual-cta-arrow {
+.qual-cta:hover .qual-cta-icon {
   transform: translateX(4px);
 }
 
 /* ============================================
    ANIMATIONS
    ============================================ */
-.qual-intro,
-.qual-thesis,
-.qual-paths-graphic,
-.qual-walkaway,
-.qual-ready,
-.qual-authority,
+.qual-header,
+.qual-callout,
+.qual-time,
+.qual-illustration,
 .qual-cta-wrapper {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.qual-intro.revealed,
-.qual-thesis.revealed,
-.qual-paths-graphic.revealed,
-.qual-walkaway.revealed,
-.qual-ready.revealed,
-.qual-authority.revealed,
-.qual-cta-wrapper.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Stagger the columns */
-.qual-walkaway.revealed {
-  transition-delay: 0ms;
-}
-
-.qual-ready.revealed {
-  transition-delay: 100ms;
-}
-
-/* Authority entrance */
-.qual-authority.revealed {
-  transition-delay: 0ms;
-  animation: authorityGlow 2s ease-out 0.6s;
-}
-
-@keyframes authorityGlow {
-  0% {
-    box-shadow:
-      0 12px 48px rgba(31, 69, 67, 0.35),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  }
-  50% {
-    box-shadow:
-      0 12px 60px rgba(31, 69, 67, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.15),
-      0 0 40px rgba(74, 139, 135, 0.2);
-  }
-  100% {
-    box-shadow:
-      0 12px 48px rgba(31, 69, 67, 0.35),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  }
-}
+.qual-header.revealed { opacity: 1; transform: translateY(0); transition-delay: 0ms; }
+.qual-callout.revealed { opacity: 1; transform: translateY(0); transition-delay: 80ms; }
+.qual-time.revealed { opacity: 1; transform: translateY(0); transition-delay: 160ms; }
+.qual-illustration.revealed { opacity: 1; transform: translateY(0); transition-delay: 240ms; }
+.qual-cta-wrapper.revealed { opacity: 1; transform: translateY(0); transition-delay: 320ms; }
 
 /* ============================================
-   RESPONSIVE — Mobile First
+   RESPONSIVE
    ============================================ */
-@media (max-width: 900px) {
-  .qual-comparison {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
+@media (max-width: 600px) {
+  .qual-headline {
+    font-size: clamp(2rem, 8vw, 2.5rem);
   }
 
-  /* Ready column first on mobile (more important) */
-  .qual-ready {
-    order: -1;
+  .qual-real-time-emphasis {
+    font-size: clamp(1.5rem, 6vw, 2rem);
   }
 
-  .qual-bracket {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  #bf-qualification {
-    padding: var(--space-2xl) var(--space-md);
-  }
-
-  .qual-intro {
-    padding: var(--space-md) var(--space-lg);
-    border-radius: 0 12px 12px 0;
-  }
-
-  .qual-ready {
-    padding: var(--space-lg);
-    border-radius: 16px;
-  }
-
-  .qual-authority {
-    padding: var(--space-lg);
-    border-radius: 20px;
-  }
-
-  .qual-authority-quote {
-    font-size: 80px;
-    top: -10px;
-    left: 10px;
-  }
-
-  .qual-cta-button {
+  .qual-cta {
     width: 100%;
-    max-width: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .qual-ready-item {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .qual-ready-item:hover {
-    transform: translateY(-2px) translateX(0);
-  }
-
-  .qual-check-icon {
-    margin-bottom: var(--space-xs);
-  }
-
-  .qual-paths-graphic {
-    padding: 0;
+    justify-content: center;
   }
 }
 
 @media (max-width: 350px) {
   #bf-qualification {
-    padding: var(--space-xl) var(--space-sm);
+    padding: clamp(2rem, 5vw, 3rem) clamp(0.75rem, 2vw, 1rem);
   }
 
   .qual-headline {
@@ -934,29 +473,16 @@
   }
 
   .qual-subline {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 
-  .qual-thesis-emphasis {
-    font-size: 1.25rem;
+  .qual-callout {
+    padding: 1rem 1.25rem;
   }
 
-  .qual-intro {
-    padding: var(--space-sm) var(--space-md);
-  }
-
-  .qual-walkaway,
-  .qual-ready {
-    padding: var(--space-md);
-  }
-
-  .qual-authority {
-    padding: var(--space-md);
-  }
-
-  .qual-cta-button {
-    padding: var(--space-sm) var(--space-md);
-    font-size: 0.95rem;
+  .qual-cta {
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -964,31 +490,21 @@
    REDUCED MOTION
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
-  .qual-intro,
-  .qual-thesis,
-  .qual-paths-graphic,
-  .qual-walkaway,
-  .qual-ready,
-  .qual-authority,
+  .qual-header,
+  .qual-callout,
+  .qual-time,
+  .qual-illustration,
   .qual-cta-wrapper {
     opacity: 1;
     transform: none;
     transition: none;
   }
 
-  .qual-authority.revealed {
-    animation: none;
-  }
-
-  .qual-ready-item:hover {
+  .qual-cta:hover {
     transform: none;
   }
 
-  .qual-cta-button:hover {
-    transform: none;
-  }
-
-  .qual-cta-button:hover .qual-cta-arrow {
+  .qual-cta:hover .qual-cta-icon {
     transform: none;
   }
 }
@@ -996,7 +512,6 @@
 
 <script>
 (function() {
-  // Intersection Observer for scroll-triggered animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -1005,20 +520,15 @@
     });
   }, {
     threshold: 0.15,
-    rootMargin: '-50px 0px'
+    rootMargin: '-30px 0px'
   });
 
-  // Observe all animated elements
-  const animatedElements = document.querySelectorAll(
-    '#bf-qualification .qual-intro, ' +
-    '#bf-qualification .qual-thesis, ' +
-    '#bf-qualification .qual-paths-graphic, ' +
-    '#bf-qualification .qual-walkaway, ' +
-    '#bf-qualification .qual-ready, ' +
-    '#bf-qualification .qual-authority, ' +
+  document.querySelectorAll(
+    '#bf-qualification .qual-header, ' +
+    '#bf-qualification .qual-callout, ' +
+    '#bf-qualification .qual-time, ' +
+    '#bf-qualification .qual-illustration, ' +
     '#bf-qualification .qual-cta-wrapper'
-  );
-
-  animatedElements.forEach(el => observer.observe(el));
+  ).forEach(el => observer.observe(el));
 })();
 </script>
