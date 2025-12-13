@@ -1,0 +1,589 @@
+<div id="bf-scarcity">
+  <!-- PART 1: HEADLINE + ANTI-SCARCITY STATEMENT -->
+  <div class="bf-scarcity__intro">
+    <h2 class="bf-scarcity__headline">I'm not doing fake scarcity here.</h2>
+  </div>
+
+  <!-- CONCEPT SVG: HONEST CAPACITY GRAPHIC -->
+  <div class="bf-scarcity__graphic" aria-hidden="true">
+    <svg class="bf-scarcity__svg" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Capacity container outline -->
+      <rect class="bf-scarcity__svg-container" x="40" y="25" width="220" height="50" rx="8" stroke="#0F766E" stroke-width="2.5" fill="none"/>
+
+      <!-- Fill level (capacity indicator) -->
+      <rect class="bf-scarcity__svg-fill" x="44" y="29" width="0" height="42" rx="5" fill="#14B8A6" opacity="0.2"/>
+
+      <!-- Seat markers row 1 -->
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--1" cx="65" cy="42" r="6" fill="#0F766E"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--2" cx="85" cy="42" r="6" fill="#0F766E"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--3" cx="105" cy="42" r="6" fill="#0F766E"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--4" cx="125" cy="42" r="6" fill="#0F766E"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--5" cx="145" cy="42" r="6" fill="#14B8A6" opacity="0.4"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--6" cx="165" cy="42" r="6" stroke="#C8E4DC" stroke-width="1.5" fill="none"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--7" cx="185" cy="42" r="6" stroke="#C8E4DC" stroke-width="1.5" fill="none"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--8" cx="205" cy="42" r="6" stroke="#C8E4DC" stroke-width="1.5" fill="none"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--9" cx="225" cy="42" r="6" stroke="#C8E4DC" stroke-width="1.5" fill="none"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--10" cx="245" cy="42" r="6" stroke="#C8E4DC" stroke-width="1.5" fill="none"/>
+
+      <!-- Seat markers row 2 -->
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--11" cx="65" cy="58" r="6" fill="#0F766E"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--12" cx="85" cy="58" r="6" fill="#0F766E"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--13" cx="105" cy="58" r="6" fill="#0F766E"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--14" cx="125" cy="58" r="6" fill="#14B8A6" opacity="0.4"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--15" cx="145" cy="58" r="6" stroke="#C8E4DC" stroke-width="1.5" fill="none"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--16" cx="165" cy="58" r="6" stroke="#C8E4DC" stroke-width="1.5" fill="none"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--17" cx="185" cy="58" r="6" stroke="#C8E4DC" stroke-width="1.5" fill="none"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--18" cx="205" cy="58" r="6" stroke="#C8E4DC" stroke-width="1.5" fill="none"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--19" cx="225" cy="58" r="6" stroke="#C8E4DC" stroke-width="1.5" fill="none"/>
+      <circle class="bf-scarcity__svg-seat bf-scarcity__svg-seat--20" cx="245" cy="58" r="6" stroke="#C8E4DC" stroke-width="1.5" fill="none"/>
+
+      <!-- Capacity marker with pulse -->
+      <g class="bf-scarcity__svg-cap-marker">
+        <line class="bf-scarcity__svg-cap-line" x1="155" y1="18" x2="155" y2="82" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4 3"/>
+        <circle class="bf-scarcity__svg-cap-dot" cx="155" cy="12" r="4" fill="#F59E0B"/>
+        <circle class="bf-scarcity__svg-cap-pulse" cx="155" cy="12" r="8" fill="none" stroke="#F59E0B" stroke-width="1.5" opacity="0"/>
+      </g>
+
+      <!-- "~100" label -->
+      <text class="bf-scarcity__svg-label" x="155" y="96" text-anchor="middle" fill="#F59E0B" font-size="11" font-family="'Satoshi Variable', sans-serif" font-weight="600">~100 cap</text>
+
+      <!-- Left label -->
+      <text class="bf-scarcity__svg-label-left" x="40" y="96" text-anchor="start" fill="#5E8A84" font-size="9" font-family="'Satoshi Variable', sans-serif" font-weight="500">filled</text>
+
+      <!-- Right label -->
+      <text class="bf-scarcity__svg-label-right" x="260" y="96" text-anchor="end" fill="#5E8A84" font-size="9" font-family="'Satoshi Variable', sans-serif" font-weight="500">available</text>
+    </svg>
+  </div>
+
+  <!-- PART 2: INFORMATION CARDS -->
+  <div class="bf-scarcity__cards">
+    <!-- FOUNDING COHORT CARD -->
+    <div class="bf-scarcity__card bf-scarcity__card--cohort">
+      <span class="bf-scarcity__card-label">Founding cohort</span>
+      <p class="bf-scarcity__card-text">This is the <strong class="bf-scarcity__emphasis--teal">founding cohort</strong>, meaning it's the <strong>first time</strong> this exact structure is being run.</p>
+    </div>
+
+    <!-- THE CAP CARD -->
+    <div class="bf-scarcity__card bf-scarcity__card--cap">
+      <span class="bf-scarcity__card-label">Why the cap</span>
+      <p class="bf-scarcity__card-text">And we're keeping it capped at around <strong class="bf-scarcity__emphasis--amber">~100 students max</strong>, because the whole point is real support and real feedback.</p>
+    </div>
+
+    <!-- WHATSAPP CLARIFICATION CARD -->
+    <div class="bf-scarcity__card bf-scarcity__card--whatsapp">
+      <span class="bf-scarcity__card-label">One thing to know</span>
+      <p class="bf-scarcity__card-text">One expectation to set clearly: WhatsApp access is <strong class="bf-scarcity__emphasis--muted">90 days</strong>. Not lifetime.</p>
+    </div>
+
+    <!-- THE RULE CARD -->
+    <div class="bf-scarcity__card bf-scarcity__card--rule">
+      <span class="bf-scarcity__card-label">The rule</span>
+      <p class="bf-scarcity__card-text">So this is the rule: when we hit ~100, or when the timer hits zero, <strong class="bf-scarcity__emphasis--teal-bright">doors close</strong>.</p>
+    </div>
+  </div>
+
+  <!-- PART 3: BRIDGE + CTA -->
+  <div class="bf-scarcity__bridge">
+    <p class="bf-scarcity__bridge-text">If you still have a few "but what if..." questions, here are the most common ones.</p>
+  </div>
+
+  <div class="bf-scarcity__cta">
+    <a href="#bf-pricing" class="bf-scarcity__cta-button" aria-label="Join the founding cohort and enroll now">
+      Join The Founding Cohort
+      <svg class="bf-scarcity__cta-arrow" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <span class="bf-scarcity__cta-micro">Spots are capped. No fake urgency.</span>
+  </div>
+</div>
+
+<style>
+@font-face {
+  font-family: 'Ogg';
+  src: url('data:font/truetype;charset=utf-8;base64,') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-synthesis: none;
+}
+
+@font-face {
+  font-family: 'Satoshi Variable';
+  src: url('data:font/truetype;charset=utf-8;base64,') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+  font-synthesis: none;
+}
+
+#bf-scarcity {
+  /* HONEST FRESH COLOR PALETTE */
+  --bg: #FAFDFB;
+  --bg-alt: #EEF9F4;
+  --card-bg: #FFFFFF;
+  --primary-teal: #0F766E;
+  --secondary-teal: #14B8A6;
+  --accent-amber: #F59E0B;
+  --accent-amber-soft: #FEF3C7;
+  --text-dark: #134E4A;
+  --text-muted: #5E8A84;
+  --border: #C8E4DC;
+  --highlight-bg: rgba(245, 158, 11, 0.1);
+  --shadow-teal: rgba(15, 118, 110, 0.06);
+  --shadow-soft: rgba(15, 118, 110, 0.08);
+
+  /* LAYOUT */
+  background: var(--bg);
+  padding: clamp(56px, 10vw, 112px) clamp(16px, 5vw, 48px);
+  overflow-x: clip;
+}
+
+#bf-scarcity *,
+#bf-scarcity *::before,
+#bf-scarcity *::after {
+  box-sizing: border-box;
+}
+
+/* === INTRO / HEADLINE === */
+.bf-scarcity__intro {
+  max-width: 720px;
+  margin: 0 auto clamp(32px, 6vw, 48px);
+  text-align: center;
+}
+
+.bf-scarcity__headline {
+  font-family: 'Ogg', Georgia, 'Times New Roman', serif;
+  font-size: clamp(26px, 5.5vw, 44px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+/* === CONCEPT SVG === */
+.bf-scarcity__graphic {
+  max-width: 400px;
+  margin: 0 auto clamp(36px, 7vw, 56px);
+  padding: 0 16px;
+}
+
+.bf-scarcity__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SVG Animation States */
+.bf-scarcity__svg-container {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.bf-scarcity__svg-fill {
+  transition: width 1.2s ease-out 0.3s;
+}
+
+.bf-scarcity__svg-seat {
+  opacity: 0;
+  transform-origin: center;
+  transform: scale(0);
+}
+
+.bf-scarcity__svg-cap-marker {
+  opacity: 0;
+  transition: opacity 0.4s ease 1s;
+}
+
+.bf-scarcity__svg-cap-pulse {
+  opacity: 0;
+}
+
+.bf-scarcity__svg-label,
+.bf-scarcity__svg-label-left,
+.bf-scarcity__svg-label-right {
+  opacity: 0;
+  transition: opacity 0.4s ease 1.3s;
+}
+
+/* Animated State */
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-container {
+  stroke-dashoffset: 0;
+}
+
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-fill {
+  width: 128px;
+}
+
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered seat animations */
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--1 { transition: opacity 0.3s ease 0.4s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--2 { transition: opacity 0.3s ease 0.45s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--3 { transition: opacity 0.3s ease 0.5s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--4 { transition: opacity 0.3s ease 0.55s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.55s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--5 { transition: opacity 0.3s ease 0.6s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--6 { transition: opacity 0.3s ease 0.65s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.65s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--7 { transition: opacity 0.3s ease 0.7s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.7s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--8 { transition: opacity 0.3s ease 0.75s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.75s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--9 { transition: opacity 0.3s ease 0.8s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--10 { transition: opacity 0.3s ease 0.85s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.85s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--11 { transition: opacity 0.3s ease 0.5s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--12 { transition: opacity 0.3s ease 0.55s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.55s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--13 { transition: opacity 0.3s ease 0.6s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--14 { transition: opacity 0.3s ease 0.65s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.65s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--15 { transition: opacity 0.3s ease 0.7s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.7s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--16 { transition: opacity 0.3s ease 0.75s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.75s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--17 { transition: opacity 0.3s ease 0.8s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--18 { transition: opacity 0.3s ease 0.85s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.85s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--19 { transition: opacity 0.3s ease 0.9s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.9s; }
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-seat--20 { transition: opacity 0.3s ease 0.95s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.95s; }
+
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-cap-marker {
+  opacity: 1;
+}
+
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-cap-pulse {
+  animation: bf-scarcity-pulse 2s ease-out 1.2s infinite;
+}
+
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-label,
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-label-left,
+.bf-scarcity__svg.is-animated .bf-scarcity__svg-label-right {
+  opacity: 1;
+}
+
+@keyframes bf-scarcity-pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+/* === INFORMATION CARDS === */
+.bf-scarcity__cards {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 3vw, 16px);
+  max-width: 640px;
+  margin: 0 auto clamp(36px, 7vw, 48px);
+}
+
+.bf-scarcity__card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: clamp(16px, 4vw, 24px);
+  box-shadow: 0 2px 8px var(--shadow-teal);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.bf-scarcity__card:hover {
+  box-shadow: 0 4px 16px var(--shadow-soft);
+  transform: translateY(-1px);
+}
+
+.bf-scarcity__card-label {
+  display: inline-block;
+  font-family: 'Satoshi Variable', system-ui, -apple-system, sans-serif;
+  font-size: clamp(10px, 2.5vw, 11px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  background: var(--bg-alt);
+  border-radius: 4px;
+}
+
+.bf-scarcity__card--cohort .bf-scarcity__card-label {
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--primary-teal);
+}
+
+.bf-scarcity__card--cap .bf-scarcity__card-label {
+  background: var(--highlight-bg);
+  color: var(--accent-amber);
+}
+
+.bf-scarcity__card--whatsapp .bf-scarcity__card-label {
+  background: var(--bg-alt);
+  color: var(--text-muted);
+}
+
+.bf-scarcity__card--rule .bf-scarcity__card-label {
+  background: rgba(20, 184, 166, 0.1);
+  color: var(--secondary-teal);
+}
+
+.bf-scarcity__card-text {
+  font-family: 'Satoshi Variable', system-ui, -apple-system, sans-serif;
+  font-size: clamp(16px, 3.8vw, 18px);
+  font-weight: 450;
+  line-height: 1.65;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+/* Emphasis styles */
+.bf-scarcity__emphasis--teal {
+  color: var(--primary-teal);
+  font-weight: 600;
+}
+
+.bf-scarcity__emphasis--teal-bright {
+  color: var(--secondary-teal);
+  font-weight: 600;
+}
+
+.bf-scarcity__emphasis--amber {
+  color: var(--accent-amber);
+  font-weight: 600;
+}
+
+.bf-scarcity__emphasis--muted {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* === BRIDGE === */
+.bf-scarcity__bridge {
+  max-width: 540px;
+  margin: 0 auto clamp(24px, 5vw, 32px);
+  text-align: center;
+}
+
+.bf-scarcity__bridge-text {
+  font-family: 'Satoshi Variable', system-ui, -apple-system, sans-serif;
+  font-size: clamp(15px, 3.5vw, 17px);
+  font-weight: 450;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* === CTA === */
+.bf-scarcity__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.bf-scarcity__cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: clamp(14px, 3vw, 18px) clamp(28px, 5vw, 36px);
+  min-height: 48px;
+  background: var(--primary-teal);
+  color: #FAFDFB;
+  font-family: 'Satoshi Variable', system-ui, -apple-system, sans-serif;
+  font-size: clamp(15px, 3.5vw, 17px);
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.bf-scarcity__cta-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 24px rgba(15, 118, 110, 0.25);
+  background: #0d6860;
+}
+
+.bf-scarcity__cta-button:focus {
+  outline: 3px solid var(--secondary-teal);
+  outline-offset: 3px;
+}
+
+.bf-scarcity__cta-button:active {
+  transform: scale(0.98);
+}
+
+.bf-scarcity__cta-arrow {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.bf-scarcity__cta-micro {
+  font-family: 'Satoshi Variable', system-ui, -apple-system, sans-serif;
+  font-size: clamp(12px, 2.8vw, 13px);
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+/* === RESPONSIVE === */
+
+/* Tiny phones (≤350px) */
+@media (max-width: 350px) {
+  #bf-scarcity {
+    padding: 48px 12px;
+  }
+
+  .bf-scarcity__headline {
+    font-size: 24px;
+  }
+
+  .bf-scarcity__card {
+    padding: 14px;
+  }
+
+  .bf-scarcity__card-text {
+    font-size: 15px;
+  }
+
+  .bf-scarcity__cta-button {
+    width: 100%;
+    padding: 14px 24px;
+  }
+}
+
+/* Normal phones (360-430px) */
+@media (min-width: 360px) and (max-width: 430px) {
+  .bf-scarcity__cta-button {
+    width: 100%;
+  }
+}
+
+/* Tablets (768px+) */
+@media (min-width: 768px) {
+  .bf-scarcity__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .bf-scarcity__card--rule {
+    grid-column: 1 / -1;
+  }
+
+  .bf-scarcity__graphic {
+    max-width: 480px;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  #bf-scarcity {
+    padding: 112px 48px;
+  }
+
+  .bf-scarcity__cards {
+    max-width: 720px;
+    gap: 20px;
+  }
+
+  .bf-scarcity__card {
+    padding: 24px 28px;
+  }
+}
+
+/* Wide desktop (1280px+) */
+@media (min-width: 1280px) {
+  .bf-scarcity__intro {
+    max-width: 800px;
+  }
+
+  .bf-scarcity__graphic {
+    max-width: 520px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .bf-scarcity__svg-container,
+  .bf-scarcity__svg-fill,
+  .bf-scarcity__svg-seat,
+  .bf-scarcity__svg-cap-marker,
+  .bf-scarcity__svg-label,
+  .bf-scarcity__svg-label-left,
+  .bf-scarcity__svg-label-right,
+  .bf-scarcity__card,
+  .bf-scarcity__cta-button {
+    transition: none;
+  }
+
+  .bf-scarcity__svg.is-animated .bf-scarcity__svg-cap-pulse {
+    animation: none;
+  }
+
+  /* Show everything immediately without animation */
+  .bf-scarcity__svg-container {
+    stroke-dashoffset: 0;
+  }
+
+  .bf-scarcity__svg-fill {
+    width: 128px;
+  }
+
+  .bf-scarcity__svg-seat {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .bf-scarcity__svg-cap-marker {
+    opacity: 1;
+  }
+
+  .bf-scarcity__svg-label,
+  .bf-scarcity__svg-label-left,
+  .bf-scarcity__svg-label-right {
+    opacity: 1;
+  }
+}
+</style>
+
+<script>
+(function() {
+  'use strict';
+
+  const scarcitySection = document.getElementById('bf-scarcity');
+  if (!scarcitySection) return;
+
+  const svg = scarcitySection.querySelector('.bf-scarcity__svg');
+  if (!svg) return;
+
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    // Immediately show animated state for reduced motion users
+    svg.classList.add('is-animated');
+    return;
+  }
+
+  // Set up IntersectionObserver for scroll-triggered animation
+  const observerOptions = {
+    threshold: 0.4,
+    rootMargin: '0px 0px -40px 0px'
+  };
+
+  const svgObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        svg.classList.add('is-animated');
+        svgObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  svgObserver.observe(svg);
+})();
+</script>
