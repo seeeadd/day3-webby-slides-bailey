@@ -1,6 +1,7 @@
 <div id="bf-hero">
-  <!-- Subtle background texture -->
-  <div class="bf-hero__bg-texture"></div>
+  <!-- Subtle background elements -->
+  <div class="bf-hero__bg-glow bf-hero__bg-glow--1"></div>
+  <div class="bf-hero__bg-glow bf-hero__bg-glow--2"></div>
 
   <!-- Decorative sparkles -->
   <svg class="bf-hero__sparkle bf-hero__sparkle--1" viewBox="0 0 24 24" fill="none">
@@ -22,34 +23,35 @@
       <p class="bf-hero__preheader">
         <span class="bf-hero__preheader-line"></span>
         Not another course. A 90-day implementation sprint.
+        <span class="bf-hero__preheader-line"></span>
       </p>
 
       <!-- Headline -->
       <h1 class="bf-hero__headline">
-        You don't need another course. <em>You need Bailey to tell you exactly what to do for the next 90 days.</em>
+        You don't need another course.<br/>
+        <span class="bf-hero__headline-teal">You need Bailey to tell you exactly what to do</span> for the next 90 days.
       </h1>
 
-      <!-- Subheadline -->
-      <p class="bf-hero__subheadline">
-        The 90-Day Etsy Empire Accelerator is a focused sprint to install a simple Etsy system in real life time blocks. You get a personalized roadmap, weekly implementation calls, a 90-day WhatsApp support pod, and Bailey Bot 24/7 so one question never costs you a whole week.
-      </p>
+      <!-- Subheadline with Accelerator Callout -->
+      <div class="bf-hero__subheadline">
+        <p class="bf-hero__accelerator-callout">The 90-Day Etsy Empire Accelerator</p>
+        <p class="bf-hero__subtext">is a focused sprint to install a simple Etsy system in real life time blocks. You get a personalized roadmap, weekly implementation calls, a 90-day WhatsApp support pod, and Bailey Bot 24/7 so one question never costs you a whole week.</p>
+      </div>
     </header>
 
     <!-- ═══════════════════════════════════════════════════════════════════════
-         FIRST CARD: Bailey Bot (Dominant)
+         FIRST CARD: Bailey Bot (Glassmorphism + Teal Border)
          ═══════════════════════════════════════════════════════════════════════ -->
     <section class="bf-hero__section bf-hero__section--first">
       <p class="bf-hero__section-label">
         <span class="bf-hero__label-line"></span>
         First, here's what you get
+        <span class="bf-hero__label-line"></span>
       </p>
 
       <div class="bf-hero__bot-card">
-        <!-- Subtle rails background -->
-        <svg class="bf-hero__rails" viewBox="0 0 400 500" fill="none" preserveAspectRatio="none">
-          <path class="bf-hero__rails-path" d="M50 0 Q150 100, 200 180 T350 280 Q300 380, 200 450 T50 500" stroke="rgba(255,255,255,0.15)" stroke-width="2" fill="none" stroke-dasharray="10,8"/>
-          <path d="M350 50 Q280 150, 250 220 T100 350" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" fill="none" stroke-dasharray="6,6"/>
-        </svg>
+        <!-- Glassmorphism overlay -->
+        <div class="bf-hero__bot-card-glass"></div>
 
         <!-- Badge -->
         <div class="bf-hero__badge">
@@ -66,17 +68,17 @@
             <div class="bf-hero__avatar">
               <img src="BAILEY_BOT_AVATAR_PLACEHOLDER" alt="Bailey Bot avatar - AI assistant for Etsy sellers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
               <svg class="bf-hero__avatar-fallback" viewBox="0 0 80 80" fill="none">
-                <circle cx="40" cy="40" r="38" fill="#FFFFFF" stroke="#2E6A62" stroke-width="2"/>
-                <circle cx="40" cy="30" r="12" fill="#E8DED6"/>
-                <ellipse cx="40" cy="55" rx="18" ry="14" fill="#E8DED6"/>
-                <circle cx="35" cy="28" r="2" fill="#2E6A62"/>
-                <circle cx="45" cy="28" r="2" fill="#2E6A62"/>
-                <path d="M36 35 Q40 39, 44 35" stroke="#2E6A62" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                <circle cx="40" cy="40" r="38" fill="#FFFFFF" stroke="#008080" stroke-width="2"/>
+                <circle cx="40" cy="30" r="12" fill="#E0F2F1"/>
+                <ellipse cx="40" cy="55" rx="18" ry="14" fill="#E0F2F1"/>
+                <circle cx="35" cy="28" r="2.5" fill="#008080"/>
+                <circle cx="45" cy="28" r="2.5" fill="#008080"/>
+                <path d="M36 35 Q40 39, 44 35" stroke="#008080" stroke-width="2" fill="none" stroke-linecap="round"/>
               </svg>
             </div>
             <!-- Spark decoration -->
             <svg class="bf-hero__avatar-spark" viewBox="0 0 20 20" fill="none">
-              <path d="M10 1l1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5 1.5-4z" fill="#D9A3A6"/>
+              <path d="M10 1l1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5 1.5-4z" fill="#E8998D"/>
             </svg>
           </div>
 
@@ -85,38 +87,42 @@
           <p class="bf-hero__bot-subtitle">Instant Etsy answers, in Bailey's voice, while you're actually working.</p>
 
           <!-- Situational Hook -->
-          <p class="bf-hero__bot-hook">
-            It's 10:38 PM. Kids are finally down. You sit to work, then you freeze on something small. Title. Tags. What to list next. Whether this idea is even worth finishing. Normally you'd spiral, open 12 tabs, and lose the night.
-          </p>
+          <div class="bf-hero__bot-scenario">
+            <p class="bf-hero__bot-hook">
+              It's 10:38 PM. Kids are finally down. You sit to work, then you freeze on something small. Title. Tags. What to list next. Whether this idea is even worth finishing. Normally you'd spiral, open 12 tabs, and lose the night.
+            </p>
+          </div>
 
           <!-- Transition Line -->
           <p class="bf-hero__bot-transition">
             <strong>With Bailey Bot:</strong> you ask. You get the answer. You keep moving.
           </p>
 
-          <!-- Fake Video Preview -->
-          <div class="bf-hero__video-preview">
-            <button class="bf-hero__play-btn" aria-label="Preview how Bailey Bot works">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M8 5v14l11-7L8 5z" fill="#FFFFFF"/>
-              </svg>
-            </button>
-            <span class="bf-hero__video-label">Tap to preview how it works</span>
-          </div>
+          <!-- Preview UI Section -->
+          <div class="bf-hero__preview">
+            <div class="bf-hero__preview-header">
+              <button class="bf-hero__play-btn" aria-label="Preview how Bailey Bot works">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M8 5v14l11-7L8 5z" fill="#FFFFFF"/>
+                </svg>
+              </button>
+              <span class="bf-hero__preview-label">Tap to preview how it works</span>
+            </div>
 
-          <!-- Chat Bubbles -->
-          <div class="bf-hero__chat-preview">
-            <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
-              <span>What should my title be for this sticker?</span>
-            </div>
-            <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
-              <span>Use this format. Put the keyword first. Keep it human. Here are 3 options.</span>
-            </div>
-            <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
-              <span>What should I list next based on my shop?</span>
-            </div>
-            <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
-              <span>List this next. Here's why. Here's the checklist so you can hit publish.</span>
+            <!-- Chat Bubbles -->
+            <div class="bf-hero__chat-preview">
+              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
+                <span>What should my title be for this sticker?</span>
+              </div>
+              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
+                <span>Use this format. Put the keyword first. Keep it human. Here are 3 options.</span>
+              </div>
+              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
+                <span>What should I list next based on my shop?</span>
+              </div>
+              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
+                <span>List this next. Here's why. Here's the checklist so you can hit publish.</span>
+              </div>
             </div>
           </div>
 
@@ -130,10 +136,6 @@
           <!-- Micro-close -->
           <p class="bf-hero__micro-close">This is what stops the Tuesday-night stall.</p>
         </div>
-
-        <!-- Decorative dots -->
-        <div class="bf-hero__dot bf-hero__dot--1"></div>
-        <div class="bf-hero__dot bf-hero__dot--2"></div>
       </div>
     </section>
 
@@ -144,79 +146,79 @@
       <p class="bf-hero__section-label bf-hero__section-label--alt">
         <span class="bf-hero__label-line"></span>
         Second, you get the whole 90-day system
+        <span class="bf-hero__label-line"></span>
       </p>
 
       <div class="bf-hero__system-card">
         <!-- Main List (6 items) -->
         <ul class="bf-hero__system-list">
           <li>
-            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
-              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <span class="bf-hero__check-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
             <span>Kickoff + setup so you start clean and know the rules of the game</span>
           </li>
           <li>
-            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
-              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <span class="bf-hero__check-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
             <span>Personalized 90-day roadmap built for your shop and your available time</span>
           </li>
           <li>
-            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
-              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <span class="bf-hero__check-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
             <span>12 weekly implementation calls (shop reviews, troubleshooting, exactly what to do next)</span>
           </li>
           <li>
-            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
-              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <span class="bf-hero__check-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
             <span>90-day WhatsApp support pod for questions in between calls</span>
           </li>
           <li>
-            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
-              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <span class="bf-hero__check-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
             <span>Lifetime library access to Bailey's full catalog, including future programs</span>
           </li>
           <li>
-            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
-              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <span class="bf-hero__check-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
             <span>Lifetime community + ongoing calls so you're not starting over after Day 90</span>
           </li>
         </ul>
 
-        <!-- Divider -->
-        <div class="bf-hero__divider"></div>
-
-        <!-- Supporting Bullets (3 items) -->
-        <ul class="bf-hero__support-list">
-          <li>
-            <span class="bf-hero__bullet"></span>
-            <span>Wake up knowing exactly what to work on today.</span>
-          </li>
-          <li>
-            <span class="bf-hero__bullet"></span>
-            <span>Bailey looks at your work and says "yes, keep going" or "no, try this instead."</span>
-          </li>
-          <li>
-            <span class="bf-hero__bullet"></span>
-            <span>Actually follow through on something for once, with someone in your corner the whole way.</span>
-          </li>
-        </ul>
-
-        <!-- Subtle decoration -->
-        <svg class="bf-hero__system-deco" viewBox="0 0 100 100" fill="none">
-          <circle cx="85" cy="15" r="8" fill="#D9A3A6" opacity="0.15"/>
-          <circle cx="90" cy="85" r="5" fill="#2E6A62" opacity="0.1"/>
-        </svg>
+        <!-- Supporting Bullets -->
+        <div class="bf-hero__support-section">
+          <ul class="bf-hero__support-list">
+            <li>
+              <span class="bf-hero__bullet"></span>
+              <span>Wake up knowing exactly what to work on today.</span>
+            </li>
+            <li>
+              <span class="bf-hero__bullet"></span>
+              <span>Bailey looks at your work and says "yes, keep going" or "no, try this instead."</span>
+            </li>
+            <li>
+              <span class="bf-hero__bullet"></span>
+              <span>Actually follow through on something for once, with someone in your corner the whole way.</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -225,10 +227,11 @@
          ═══════════════════════════════════════════════════════════════════════ -->
     <div class="bf-hero__cta-section">
       <a href="#bf-pricing" class="bf-hero__cta">
-        Join the 90-Day Accelerator
-        <svg viewBox="0 0 24 24" fill="none">
+        <span class="bf-hero__cta-text">Join the 90-Day Accelerator</span>
+        <svg class="bf-hero__cta-arrow" viewBox="0 0 24 24" fill="none">
           <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+        <span class="bf-hero__cta-shine"></span>
       </a>
       <p class="bf-hero__microcopy">
         <span>Capped seats</span>
@@ -240,7 +243,7 @@
 
 <style>
 /* ═══════════════════════════════════════════════════════════════════════════
-   FONTS - Ogg & Satoshi Variable (Base64 Embedded)
+   FONTS - Ogg Bold & Satoshi Variable (Base64 Embedded)
    ═══════════════════════════════════════════════════════════════════════════ */
 @font-face {
   font-family: 'Ogg';
@@ -259,43 +262,43 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   CSS VARIABLES - Soft, Warm Color Palette
+   CSS VARIABLES - Fresh, Vibrant Color Palette
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero {
-  /* Base Colors - Warm & Sophisticated */
-  --bg-main: #FDF8F4;
-  --bg-secondary: #FAF7F2;
+  /* Backgrounds - Fresh, warm, inviting */
+  --bg-main: #FFFBF7;
+  --bg-card-light: #FFF9F5;
+  --bg-glass: rgba(255, 255, 255, 0.75);
 
-  /* Text Colors */
-  --text-primary: #203332;
-  --text-body: #5E6E6C;
-  --text-muted: #8E9E9C;
+  /* Teal Palette - Vibrant but professional */
+  --teal-primary: #008080;
+  --teal-dark: #006666;
+  --teal-light: #E0F2F1;
+  --teal-glass: rgba(0, 128, 128, 0.06);
 
-  /* Accent Colors - Muted & Warm */
-  --accent-teal: #2E6A62;
-  --accent-teal-light: #E8F5F3;
-  --accent-coral: #D9A3A6;
-  --accent-coral-dark: #C88E91;
-  --accent-cream: #E8DED6;
+  /* Coral/Blush - Warmer accents */
+  --coral-primary: #E8998D;
+  --coral-light: #F5D5D0;
+  --coral-bg: #FEF6F4;
 
-  /* Card Backgrounds */
-  --card-bot: #2E6A62;
-  --card-bot-dark: #245750;
-  --card-system: #FAF7F2;
+  /* Text - Strong contrast */
+  --text-primary: #1A1A1A;
+  --text-secondary: #4A4A4A;
+  --text-muted: #6B6B6B;
+  --text-on-teal: #FFFFFF;
 
-  /* Functional Colors */
-  --border: #E8DED6;
-  --badge-bg: #FEF3C7;
-  --badge-text: #2E6A62;
-  --white: #FFFFFF;
+  /* Accents */
+  --accent-gold: #D4A574;
+  --accent-yellow: #FFD166;
 
-  /* Shadow System */
-  --shadow-sm: 0 2px 4px rgba(32, 51, 50, 0.04);
-  --shadow-md: 0 4px 16px rgba(32, 51, 50, 0.08);
-  --shadow-lg: 0 8px 24px rgba(32, 51, 50, 0.10);
-  --shadow-card: 0 12px 40px rgba(32, 51, 50, 0.12);
+  /* Borders & Effects */
+  --border-teal: #008080;
+  --border-glass: rgba(255, 255, 255, 0.4);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 12px 48px rgba(0, 128, 128, 0.12);
+  --backdrop-blur: blur(16px);
 
-  /* Spacing System */
+  /* Spacing */
   --space-xs: clamp(0.5rem, 1vw, 0.75rem);
   --space-sm: clamp(0.75rem, 1.5vw, 1rem);
   --space-md: clamp(1rem, 2vw, 1.5rem);
@@ -316,10 +319,9 @@
 #bf-hero {
   position: relative;
   background: var(--bg-main);
-  padding: var(--space-3xl) clamp(1rem, 4vw, 2rem);
+  padding: var(--space-3xl) clamp(1.5rem, 3vw, 2rem);
   overflow-x: clip;
   width: 100%;
-  max-width: 100%;
 }
 
 #bf-hero *,
@@ -328,59 +330,72 @@
   box-sizing: border-box;
 }
 
-/* Background texture (subtle paper grain) */
-#bf-hero .bf-hero__bg-texture {
+/* Background glows */
+#bf-hero .bf-hero__bg-glow {
   position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.015;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
   pointer-events: none;
   z-index: 0;
+}
+
+#bf-hero .bf-hero__bg-glow--1 {
+  width: 600px;
+  height: 600px;
+  background: var(--teal-light);
+  top: -200px;
+  right: -200px;
+}
+
+#bf-hero .bf-hero__bg-glow--2 {
+  width: 400px;
+  height: 400px;
+  background: var(--coral-light);
+  bottom: 20%;
+  left: -150px;
+  opacity: 0.3;
 }
 
 /* Decorative sparkles */
 #bf-hero .bf-hero__sparkle {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  color: var(--accent-coral);
-  opacity: 0.25;
+  color: var(--coral-primary);
+  opacity: 0.3;
   z-index: 1;
   pointer-events: none;
 }
 
 #bf-hero .bf-hero__sparkle--1 {
-  top: 8%;
-  left: 5%;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
+  top: 12%;
+  left: 8%;
 }
 
 #bf-hero .bf-hero__sparkle--2 {
-  top: 25%;
-  right: 8%;
-  width: 24px;
-  height: 24px;
-  opacity: 0.2;
+  width: 28px;
+  height: 28px;
+  top: 30%;
+  right: 10%;
+  opacity: 0.25;
 }
 
 #bf-hero .bf-hero__sparkle--3 {
-  bottom: 15%;
-  left: 10%;
-  width: 14px;
-  height: 14px;
-  opacity: 0.18;
+  width: 16px;
+  height: 16px;
+  bottom: 25%;
+  left: 5%;
+  opacity: 0.2;
 }
 
-/* Container - VERTICAL FLOW */
+/* Container - WIDER */
 #bf-hero .bf-hero__container {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 1400px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  width: 100%;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -388,64 +403,73 @@
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero .bf-hero__header {
   text-align: center;
-  margin-bottom: var(--space-2xl);
+  max-width: 900px;
+  margin: 0 auto var(--space-3xl);
 }
 
 /* Preheader */
 #bf-hero .bf-hero__preheader {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 600;
-  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
-  letter-spacing: 0.05em;
+  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-coral);
-  margin: 0 0 var(--space-md) 0;
-  display: inline-flex;
+  color: var(--coral-primary);
+  margin: 0 0 var(--space-lg) 0;
+  display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  justify-content: center;
+  gap: 1rem;
 }
 
 #bf-hero .bf-hero__preheader-line {
   display: block;
   width: 40px;
   height: 2px;
-  background: var(--accent-coral);
+  background: var(--coral-primary);
 }
 
-/* Headline */
+/* Headline - OGG BOLD */
 #bf-hero .bf-hero__headline {
   font-family: 'Ogg', Georgia, serif;
   font-weight: 700;
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  line-height: 1.15;
+  font-size: clamp(2.5rem, 7vw, 4.25rem);
+  line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--text-primary);
-  margin: 0 0 var(--space-lg) 0;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 0 var(--space-xl) 0;
 }
 
-#bf-hero .bf-hero__headline em {
-  font-style: normal;
-  display: block;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-teal) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+#bf-hero .bf-hero__headline-teal {
+  color: var(--teal-primary);
 }
 
-/* Subheadline */
+/* Subheadline with Accelerator Callout */
 #bf-hero .bf-hero__subheadline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#bf-hero .bf-hero__accelerator-callout {
+  font-family: 'Ogg', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(1.375rem, 3.5vw, 1.875rem);
+  color: var(--teal-primary);
+  margin: 0 0 var(--space-sm) 0;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(to right, transparent 0%, var(--teal-light) 15%, var(--teal-light) 85%, transparent 100%);
+  padding: 0.35rem 1rem;
+  border-radius: 8px;
+}
+
+#bf-hero .bf-hero__subtext {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 500;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-size: clamp(1.0625rem, 2.5vw, 1.25rem);
   line-height: 1.65;
-  color: var(--text-body);
+  color: var(--text-secondary);
   margin: 0;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -458,81 +482,79 @@
 #bf-hero .bf-hero__section-label {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 700;
-  font-size: clamp(0.7rem, 1.5vw, 0.85rem);
-  letter-spacing: 0.08em;
+  font-size: clamp(0.7rem, 1.6vw, 0.8rem);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-teal);
-  margin: 0 0 var(--space-md) 0;
+  color: var(--coral-primary);
+  margin: 0 0 var(--space-lg) 0;
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  justify-content: center;
+  gap: 1rem;
 }
 
 #bf-hero .bf-hero__section-label--alt {
-  color: var(--accent-coral);
+  color: var(--teal-primary);
 }
 
 #bf-hero .bf-hero__label-line {
   display: block;
-  width: 40px;
+  width: 50px;
   height: 2px;
   background: currentColor;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   BAILEY BOT CARD (FIRST CARD - DOMINANT)
+   BAILEY BOT CARD (GLASSMORPHISM + TEAL BORDERS)
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero .bf-hero__bot-card {
   position: relative;
-  background: linear-gradient(135deg, var(--card-bot) 0%, var(--card-bot-dark) 100%);
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-glass);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  border: 3px solid var(--border-teal);
   border-radius: 28px;
-  padding: clamp(2rem, 5vw, 3rem);
+  padding: clamp(2.5rem, 5vw, 3.5rem);
   box-shadow: var(--shadow-card);
-  border: 2px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 
-/* Rails background */
-#bf-hero .bf-hero__rails {
+#bf-hero .bf-hero__bot-card-glass {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+  inset: 0;
+  background: var(--teal-glass);
+  border-radius: 26px;
   pointer-events: none;
-}
-
-#bf-hero .bf-hero__rails-path {
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
+  z-index: 0;
 }
 
 /* Badge */
 #bf-hero .bf-hero__badge {
   position: absolute;
-  top: var(--space-md);
-  right: var(--space-md);
-  background: var(--badge-bg);
-  color: var(--badge-text);
-  padding: 0.4rem 0.9rem;
+  top: -14px;
+  right: 24px;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #C99A65 100%);
+  color: var(--teal-dark);
+  padding: 0.5rem 1.1rem;
   border-radius: 24px;
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 700;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 16px rgba(212, 165, 116, 0.35);
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  z-index: 3;
+  gap: 0.4rem;
+  z-index: 5;
 }
 
 #bf-hero .bf-hero__badge-sparkle {
-  width: 12px;
-  height: 12px;
-  color: var(--accent-coral);
+  width: 14px;
+  height: 14px;
+  color: var(--teal-dark);
 }
 
 /* Bot Content */
@@ -556,9 +578,9 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: var(--white);
-  box-shadow: var(--shadow-md);
-  border: 4px solid var(--white);
+  background: var(--text-on-teal);
+  box-shadow: 0 4px 20px rgba(0, 128, 128, 0.2);
+  padding: 4px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -567,30 +589,31 @@
 
 @media (min-width: 768px) {
   #bf-hero .bf-hero__avatar {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
   }
 }
 
 #bf-hero .bf-hero__avatar img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   object-fit: cover;
 }
 
 #bf-hero .bf-hero__avatar-fallback {
-  width: 75%;
-  height: 75%;
+  width: 85%;
+  height: 85%;
   display: none;
 }
 
 #bf-hero .bf-hero__avatar-spark {
   position: absolute;
-  top: -6px;
-  right: -6px;
-  width: 22px;
-  height: 22px;
-  animation: bf-sparkle-rotate 6s linear infinite;
+  top: -4px;
+  right: -4px;
+  width: 24px;
+  height: 24px;
+  animation: bf-sparkle-rotate 8s linear infinite;
 }
 
 @keyframes bf-sparkle-rotate {
@@ -602,90 +625,106 @@
 #bf-hero .bf-hero__bot-title {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 700;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  color: var(--white);
+  font-size: clamp(1.75rem, 4.5vw, 2.25rem);
+  color: var(--teal-primary);
   margin: 0 0 var(--space-xs) 0;
 }
 
 #bf-hero .bf-hero__bot-subtitle {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 500;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.0625rem, 2.5vw, 1.25rem);
+  color: var(--text-secondary);
   line-height: 1.5;
-  margin: 0 0 var(--space-lg) 0;
+  margin: 0 0 var(--space-xl) 0;
+}
+
+#bf-hero .bf-hero__bot-scenario {
+  background: rgba(255, 255, 255, 0.6);
+  border-left: 3px solid var(--coral-primary);
+  border-radius: 0 12px 12px 0;
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-lg);
+  max-width: 600px;
 }
 
 #bf-hero .bf-hero__bot-hook {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 400;
-  font-size: clamp(0.95rem, 2vw, 1.05rem);
-  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  color: var(--text-secondary);
   line-height: 1.7;
-  margin: 0 0 var(--space-md) 0;
-  max-width: 580px;
+  margin: 0;
+  text-align: left;
 }
 
 #bf-hero .bf-hero__bot-transition {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 600;
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  color: var(--white);
+  font-size: clamp(1.0625rem, 2.5vw, 1.1875rem);
+  color: var(--text-primary);
   line-height: 1.5;
   margin: 0 0 var(--space-xl) 0;
 }
 
 #bf-hero .bf-hero__bot-transition strong {
-  color: var(--badge-bg);
+  color: var(--teal-primary);
 }
 
-/* Video Preview */
-#bf-hero .bf-hero__video-preview {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-sm);
+/* Preview UI Section */
+#bf-hero .bf-hero__preview {
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid var(--border-glass);
+  border-radius: 20px;
+  padding: clamp(1.5rem, 3.5vw, 2rem);
   margin-bottom: var(--space-xl);
+  width: 100%;
+  max-width: 550px;
+  backdrop-filter: blur(8px);
+}
+
+#bf-hero .bf-hero__preview-header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
 }
 
 #bf-hero .bf-hero__play-btn {
-  width: 64px;
-  height: 64px;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto var(--space-sm);
+  background: linear-gradient(135deg, var(--teal-primary) 0%, var(--teal-dark) 100%);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: var(--shadow-md);
-  transition: transform 200ms ease-out, background 200ms ease-out;
+  box-shadow: 0 6px 24px rgba(0, 128, 128, 0.35);
+  transition: transform 250ms ease, box-shadow 250ms ease;
   animation: bf-pulse 3s ease-in-out infinite;
 }
 
 #bf-hero .bf-hero__play-btn svg {
-  width: 24px;
-  height: 24px;
-  margin-left: 3px;
+  width: 26px;
+  height: 26px;
+  margin-left: 4px;
 }
 
 #bf-hero .bf-hero__play-btn:hover {
   transform: scale(1.08);
-  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 128, 128, 0.45);
 }
 
 @keyframes bf-pulse {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  50% { transform: scale(1.06); }
 }
 
-#bf-hero .bf-hero__video-label {
+#bf-hero .bf-hero__preview-label {
   font-family: 'Satoshi Variable', sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-muted);
 }
 
 /* Chat Preview */
@@ -693,125 +732,86 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  width: 100%;
-  max-width: 500px;
-  margin-bottom: var(--space-lg);
 }
 
 #bf-hero .bf-hero__chat-bubble {
-  max-width: 85%;
+  max-width: 88%;
   padding: var(--space-sm) var(--space-md);
   font-family: 'Satoshi Variable', sans-serif;
-  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
-  line-height: 1.5;
-  opacity: 0;
-  transform: translateY(16px);
+  font-size: clamp(0.875rem, 2vw, 0.95rem);
+  line-height: 1.55;
 }
 
 #bf-hero .bf-hero__chat-bubble--user {
   align-self: flex-end;
-  background: var(--white);
+  background: var(--text-on-teal);
   color: var(--text-primary);
   border-radius: 16px 16px 4px 16px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 #bf-hero .bf-hero__chat-bubble--bot {
   align-self: flex-start;
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--white);
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  border: 1.5px solid var(--teal-primary);
   border-radius: 16px 16px 16px 4px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Feature Chips */
 #bf-hero .bf-hero__chips {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm);
+  gap: 0.75rem;
   justify-content: center;
   margin-bottom: var(--space-lg);
 }
 
 #bf-hero .bf-hero__chip {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
+  background: rgba(0, 128, 128, 0.1);
+  border: 1.5px solid var(--teal-primary);
+  color: var(--teal-dark);
+  border-radius: 24px;
+  padding: 0.5rem 1.1rem;
   font-family: 'Satoshi Variable', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* Micro-close */
 #bf-hero .bf-hero__micro-close {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 500;
-  font-size: clamp(0.9rem, 1.8vw, 1rem);
-  color: var(--badge-bg);
+  font-size: clamp(0.95rem, 2.2vw, 1.0625rem);
+  color: var(--text-secondary);
   font-style: italic;
   margin: 0;
 }
 
-/* Decorative dots */
-#bf-hero .bf-hero__dot {
-  position: absolute;
-  border-radius: 50%;
-  background: var(--accent-coral);
-  opacity: 0.2;
-  z-index: 1;
-  pointer-events: none;
-}
-
-#bf-hero .bf-hero__dot--1 {
-  width: 10px;
-  height: 10px;
-  bottom: 15%;
-  left: 8%;
-}
-
-#bf-hero .bf-hero__dot--2 {
-  width: 6px;
-  height: 6px;
-  top: 25%;
-  right: 12%;
-}
-
 /* ═══════════════════════════════════════════════════════════════════════════
-   90-DAY SYSTEM CARD (SECOND CARD)
+   90-DAY SYSTEM CARD
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero .bf-hero__system-card {
   position: relative;
-  background: var(--card-system);
-  border-radius: 28px;
-  padding: clamp(2rem, 5vw, 3rem);
-  box-shadow: var(--shadow-lg);
-  border: 2px solid var(--border);
-  overflow: hidden;
-}
-
-/* System decoration */
-#bf-hero .bf-hero__system-deco {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100px;
-  height: 100px;
-  pointer-events: none;
-  z-index: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--text-on-teal);
+  border: 2px solid var(--teal-light);
+  border-radius: 24px;
+  padding: clamp(2.5rem, 5vw, 3.5rem);
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.06);
 }
 
 /* Main List */
 #bf-hero .bf-hero__system-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 var(--space-lg) 0;
+  margin: 0 0 var(--space-xl) 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  position: relative;
-  z-index: 1;
 }
 
 #bf-hero .bf-hero__system-list li {
@@ -820,28 +820,37 @@
   gap: var(--space-sm);
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 500;
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-size: clamp(1rem, 2.2vw, 1.125rem);
   line-height: 1.6;
   color: var(--text-primary);
 }
 
-#bf-hero .bf-hero__check {
+#bf-hero .bf-hero__check-icon {
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  margin-top: 1px;
+  width: 26px;
+  height: 26px;
+  background: var(--teal-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
 }
 
-/* Divider */
-#bf-hero .bf-hero__divider {
-  height: 1px;
-  background: var(--border);
-  margin: var(--space-lg) 0;
-  position: relative;
-  z-index: 1;
+#bf-hero .bf-hero__check-icon svg {
+  width: 14px;
+  height: 14px;
+  color: var(--text-on-teal);
 }
 
-/* Support List */
+/* Support Section */
+#bf-hero .bf-hero__support-section {
+  background: var(--coral-bg);
+  border-left: 4px solid var(--coral-primary);
+  border-radius: 0 12px 12px 0;
+  padding: var(--space-lg);
+}
+
 #bf-hero .bf-hero__support-list {
   list-style: none;
   padding: 0;
@@ -849,8 +858,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  position: relative;
-  z-index: 1;
 }
 
 #bf-hero .bf-hero__support-list li {
@@ -859,87 +866,114 @@
   gap: var(--space-sm);
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 400;
-  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  font-size: clamp(0.95rem, 2vw, 1.0625rem);
   line-height: 1.6;
-  color: var(--text-body);
+  color: var(--text-secondary);
 }
 
 #bf-hero .bf-hero__bullet {
   flex-shrink: 0;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--accent-coral);
-  margin-top: 8px;
+  background: var(--coral-primary);
+  margin-top: 7px;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   CTA SECTION
+   CTA SECTION (PREMIUM REDESIGN)
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero .bf-hero__cta-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-md);
-  padding-top: var(--space-lg);
+  padding-top: var(--space-xl);
 }
 
 #bf-hero .bf-hero__cta {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-sm);
-  background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-coral-dark) 100%);
-  padding: clamp(1.125rem, 2.5vw, 1.5rem) clamp(2.5rem, 5vw, 4rem);
-  border-radius: 14px;
+  gap: clamp(0.75rem, 2vw, 1rem);
+  background: linear-gradient(135deg, var(--teal-primary) 0%, var(--teal-dark) 100%);
+  padding: clamp(1.25rem, 3vw, 1.5rem) clamp(2.5rem, 6vw, 4rem);
+  border-radius: 16px;
   font-family: 'Satoshi Variable', sans-serif;
-  font-weight: 600;
-  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-  letter-spacing: 0.02em;
-  color: var(--white);
+  font-weight: 700;
+  font-size: clamp(1.125rem, 2.7vw, 1.375rem);
+  letter-spacing: 0.01em;
+  color: var(--text-on-teal);
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(217, 163, 166, 0.35);
-  transition: all 200ms ease-out;
-  min-height: 56px;
+  box-shadow:
+    0 8px 32px rgba(0, 128, 128, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 60px;
   cursor: pointer;
   border: none;
+  overflow: hidden;
 }
 
-#bf-hero .bf-hero__cta svg {
-  width: 22px;
-  height: 22px;
-  transition: transform 200ms ease-out;
+#bf-hero .bf-hero__cta-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);
+  transition: left 600ms ease;
+}
+
+#bf-hero .bf-hero__cta:hover .bf-hero__cta-shine {
+  left: 100%;
 }
 
 #bf-hero .bf-hero__cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(217, 163, 166, 0.45);
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 48px rgba(0, 128, 128, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-#bf-hero .bf-hero__cta:hover svg {
-  transform: translateX(4px);
+#bf-hero .bf-hero__cta:active {
+  transform: translateY(-2px);
 }
 
 #bf-hero .bf-hero__cta:focus {
-  outline: 3px solid var(--accent-coral);
+  outline: 4px solid var(--teal-light);
   outline-offset: 4px;
+}
+
+#bf-hero .bf-hero__cta-arrow {
+  width: 24px;
+  height: 24px;
+  transition: transform 280ms ease;
+}
+
+#bf-hero .bf-hero__cta:hover .bf-hero__cta-arrow {
+  transform: translateX(5px);
 }
 
 /* Microcopy */
 #bf-hero .bf-hero__microcopy {
   font-family: 'Satoshi Variable', sans-serif;
-  font-size: 0.9rem;
+  font-weight: 500;
+  font-size: clamp(0.875rem, 2vw, 0.9375rem);
   color: var(--text-muted);
   margin: 0;
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: 0.5rem;
 }
 
 #bf-hero .bf-hero__microcopy span::after {
-  content: ' •';
-  color: var(--accent-cream);
-  margin-left: var(--space-xs);
+  content: '•';
+  margin-left: 0.5rem;
+  color: var(--coral-primary);
 }
 
 #bf-hero .bf-hero__microcopy span:last-child::after {
@@ -951,7 +985,7 @@
    ═══════════════════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   #bf-hero {
-    padding: var(--space-2xl) var(--space-sm);
+    padding: var(--space-2xl) 1.25rem;
   }
 
   #bf-hero .bf-hero__header {
@@ -962,19 +996,41 @@
     justify-content: flex-start;
   }
 
+  #bf-hero .bf-hero__preheader-line:first-child {
+    display: none;
+  }
+
   #bf-hero .bf-hero__headline {
     text-align: left;
   }
 
   #bf-hero .bf-hero__subheadline {
     text-align: left;
-    margin-left: 0;
-    margin-right: 0;
+  }
+
+  #bf-hero .bf-hero__accelerator-callout {
+    display: block;
+    text-align: left;
+  }
+
+  #bf-hero .bf-hero__section-label {
+    justify-content: flex-start;
+  }
+
+  #bf-hero .bf-hero__label-line:first-child {
+    display: none;
   }
 
   #bf-hero .bf-hero__bot-card {
     border-radius: 24px;
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  #bf-hero .bf-hero__badge {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: var(--space-lg);
   }
 
   #bf-hero .bf-hero__bot-content {
@@ -982,8 +1038,12 @@
     text-align: left;
   }
 
-  #bf-hero .bf-hero__video-preview {
-    align-items: flex-start;
+  #bf-hero .bf-hero__preview-header {
+    text-align: left;
+  }
+
+  #bf-hero .bf-hero__play-btn {
+    margin: 0 0 var(--space-sm) 0;
   }
 
   #bf-hero .bf-hero__chips {
@@ -996,32 +1056,69 @@
 
   #bf-hero .bf-hero__system-card {
     border-radius: 24px;
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--space-xl) var(--space-lg);
   }
 
   #bf-hero .bf-hero__cta {
     width: 100%;
-    min-height: 56px;
+    max-width: 420px;
+  }
+
+  #bf-hero .bf-hero__chat-bubble {
+    max-width: 92%;
   }
 }
 
 /* Extra small screens */
 @media (max-width: 400px) {
   #bf-hero .bf-hero__headline {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   #bf-hero .bf-hero__bot-card,
   #bf-hero .bf-hero__system-card {
-    padding: var(--space-md);
+    padding: var(--space-lg) var(--space-md);
+    border-radius: 20px;
   }
 
-  #bf-hero .bf-hero__badge {
-    position: relative;
-    top: 0;
-    right: 0;
-    margin-bottom: var(--space-md);
+  #bf-hero .bf-hero__play-btn {
+    width: 60px;
+    height: 60px;
   }
+
+  #bf-hero .bf-hero__preview {
+    padding: var(--space-md);
+    border-radius: 16px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════════════════════════════════ */
+#bf-hero .bf-hero__bot-card,
+#bf-hero .bf-hero__system-card,
+#bf-hero .bf-hero__cta-section {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+#bf-hero .bf-hero__bot-card.bf-revealed,
+#bf-hero .bf-hero__system-card.bf-revealed,
+#bf-hero .bf-hero__cta-section.bf-revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+
+#bf-hero .bf-hero__chat-bubble {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+#bf-hero .bf-hero__chat-bubble.bf-revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -1036,6 +1133,9 @@
     transition-duration: 0.01ms !important;
   }
 
+  #bf-hero .bf-hero__bot-card,
+  #bf-hero .bf-hero__system-card,
+  #bf-hero .bf-hero__cta-section,
   #bf-hero .bf-hero__chat-bubble {
     opacity: 1;
     transform: none;
@@ -1045,7 +1145,7 @@
 /* Focus states for keyboard navigation */
 #bf-hero a:focus-visible,
 #bf-hero button:focus-visible {
-  outline: 3px solid var(--accent-coral);
+  outline: 3px solid var(--teal-primary);
   outline-offset: 4px;
 }
 </style>
@@ -1060,30 +1160,27 @@
 
   function initHeroAnimations() {
     var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     if (prefersReducedMotion) {
-      // Show chat bubbles immediately without animation
-      var bubbles = document.querySelectorAll('#bf-hero .bf-hero__chat-bubble');
-      bubbles.forEach(function(bubble) {
-        bubble.style.opacity = '1';
-        bubble.style.transform = 'none';
+      // Show everything immediately
+      document.querySelectorAll('#bf-hero .bf-hero__bot-card, #bf-hero .bf-hero__system-card, #bf-hero .bf-hero__cta-section, #bf-hero .bf-hero__chat-bubble').forEach(function(el) {
+        el.classList.add('bf-revealed');
       });
       return;
     }
 
-    // Cards fade-slide animation
-    var cards = document.querySelectorAll('#bf-hero .bf-hero__bot-card, #bf-hero .bf-hero__system-card');
+    // Scroll-triggered reveals for cards
+    var cards = document.querySelectorAll('#bf-hero .bf-hero__bot-card, #bf-hero .bf-hero__system-card, #bf-hero .bf-hero__cta-section');
     var cardObserver = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          entry.target.style.animation = 'bf-fadeSlideUp 600ms ease-out forwards';
+          entry.target.classList.add('bf-revealed');
           cardObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
 
     cards.forEach(function(card) {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(30px)';
       cardObserver.observe(card);
     });
 
@@ -1095,50 +1192,17 @@
           if (entry.isIntersecting) {
             chatBubbles.forEach(function(bubble, i) {
               setTimeout(function() {
-                bubble.style.animation = 'bf-fadeSlideUp 400ms ease-out forwards';
-              }, 200 + (i * 150));
+                bubble.classList.add('bf-revealed');
+              }, 150 + (i * 180));
             });
             bubbleObserver.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.3 });
+      }, { threshold: 0.25 });
 
       var chatPreview = document.querySelector('#bf-hero .bf-hero__chat-preview');
       if (chatPreview) bubbleObserver.observe(chatPreview);
     }
-
-    // Rails path draw animation
-    var railsPath = document.querySelector('#bf-hero .bf-hero__rails-path');
-    if (railsPath && typeof railsPath.getTotalLength === 'function') {
-      var pathLength = railsPath.getTotalLength();
-      railsPath.style.strokeDasharray = pathLength;
-      railsPath.style.strokeDashoffset = pathLength;
-
-      var railsObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            railsPath.style.animation = 'bf-drawPath 1500ms ease-out forwards';
-            railsObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
-
-      var botCard = document.querySelector('#bf-hero .bf-hero__bot-card');
-      if (botCard) railsObserver.observe(botCard);
-    }
-
-    // Inject keyframes
-    var style = document.createElement('style');
-    style.textContent = [
-      '@keyframes bf-fadeSlideUp {',
-      '  from { opacity: 0; transform: translateY(30px); }',
-      '  to { opacity: 1; transform: translateY(0); }',
-      '}',
-      '@keyframes bf-drawPath {',
-      '  to { stroke-dashoffset: 0; }',
-      '}'
-    ].join('');
-    document.head.appendChild(style);
   }
 })();
 </script>
