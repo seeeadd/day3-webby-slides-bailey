@@ -299,11 +299,6 @@
       <p class="bf-90day__bridge-next">Next, I'll show you how you get that weekly guidance while you're running the plan.</p>
     </div>
 
-    <!-- Path continues forward -->
-    <svg class="bf-90day__bridge-path" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path class="bf-90day__path-line bf-90day__path-line--forward" d="M100 0 C100 15, 100 30, 100 45" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 8"/>
-      <path d="M90 40 L100 55 L110 40" stroke="#2E6A62" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" class="bf-90day__bridge-arrow"/>
-    </svg>
   </div>
 
 </div>
@@ -330,7 +325,10 @@
   --path-color: #2E6A62;
 
   background: var(--cream);
-  padding: 80px 24px 100px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 80px clamp(16px, 4vw, 64px) 100px;
   position: relative;
   overflow: hidden;
   font-synthesis: none;
@@ -456,7 +454,7 @@
    JOURNEY SECTION
    ───────────────────────────────────────────────────────────────────────────── */
 #bf-90day .bf-90day__journey {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -654,16 +652,6 @@
   font-size: clamp(15px, 2vw, 17px);
   color: var(--muted);
   font-style: italic;
-}
-
-#bf-90day .bf-90day__bridge-path {
-  width: 100px;
-  height: 50px;
-  margin: 0 auto;
-}
-
-#bf-90day .bf-90day__bridge-arrow {
-  opacity: 0.5;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
