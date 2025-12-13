@@ -1,282 +1,270 @@
-<div id="bf-realtalk">
-  <div class="bf-realtalk__wrapper">
+<div id="bf-qualification">
+  <div class="qual-container">
 
-    <!-- HERO MOMENT: Headline + Concept -->
-    <div class="bf-realtalk__hero">
-      <h2 class="bf-realtalk__headline">Real talk: This isn't for everyone.</h2>
-      <p class="bf-realtalk__headline-accent">And that's the point.</p>
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         HEADLINE BLOCK
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <header class="qual-header">
+      <div class="qual-headline-wrapper">
+        <!-- Decorative bracket left -->
+        <svg class="qual-bracket qual-bracket--left" viewBox="0 0 24 80" fill="none" aria-hidden="true">
+          <path d="M20 4C12 4 8 12 8 40C8 68 12 76 20 76" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="qual-headline-content">
+          <h2 class="qual-headline">Real talk: This isn't for everyone.</h2>
+          <p class="qual-subline">And that's the point.</p>
+        </div>
+        <!-- Decorative bracket right -->
+        <svg class="qual-bracket qual-bracket--right" viewBox="0 0 24 80" fill="none" aria-hidden="true">
+          <path d="M4 4C12 4 16 12 16 40C16 68 12 76 4 76" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         INTRO AWARENESS BLOCK
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="qual-intro">
+      <p class="qual-intro-text">
+        You are already stretched. The last thing you need is
+        <span class="qual-highlight">another thing you buy on Tuesday</span>,
+        feel great about on Wednesday, and forget exists by the following Monday.
+      </p>
     </div>
 
-    <!-- PAIN/AWARENESS BLOCK with teal left border -->
-    <div class="bf-realtalk__awareness">
-      <p class="bf-realtalk__awareness-text">You are already stretched. The last thing you need is <span class="bf-realtalk__highlight">another thing you buy on Tuesday</span>, feel great about on Wednesday, and forget exists by the following Monday.</p>
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         THESIS STATEMENT
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="qual-thesis">
+      <p class="qual-thesis-line">
+        This only works if you can protect a small, real block of time every week.
+      </p>
+      <p class="qual-thesis-emphasis">
+        Not aspirational time. <span class="qual-real-time">Real time.</span>
+      </p>
     </div>
 
-    <!-- THESIS STATEMENT - Major Visual Moment -->
-    <div class="bf-realtalk__thesis">
-      <p class="bf-realtalk__thesis-text">This only works if you can protect a small, real block of time every week.</p>
-      <p class="bf-realtalk__thesis-emphasis">Not aspirational time. <span class="bf-realtalk__real-time">Real time.</span></p>
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         DIVERGING PATHS GRAPHIC
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="qual-paths-graphic">
+      <svg class="qual-fork-svg" viewBox="0 0 400 120" fill="none" aria-hidden="true">
+        <!-- Central starting point -->
+        <circle cx="200" cy="100" r="8" fill="#2D5F5D"/>
+        <circle cx="200" cy="100" r="4" fill="#FAF8F3"/>
+
+        <!-- Left path (fading - walk away) -->
+        <path d="M200 100 Q160 80 100 60 Q60 45 30 50" stroke="#E8997A" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 6" opacity="0.6"/>
+        <circle cx="30" cy="50" r="6" fill="#E8997A" opacity="0.4"/>
+
+        <!-- Right path (growing - ready) -->
+        <path d="M200 100 Q240 80 300 55 Q340 35 370 20" stroke="#2D5F5D" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- Growth elements on right path -->
+        <circle cx="250" cy="72" r="4" fill="#4A8B87" opacity="0.6"/>
+        <circle cx="300" cy="55" r="5" fill="#2D5F5D" opacity="0.8"/>
+        <circle cx="340" cy="35" r="6" fill="#2D5F5D"/>
+
+        <!-- Star at destination -->
+        <path d="M370 12 L372 17 L378 17 L373 21 L375 26 L370 22 L365 26 L367 21 L362 17 L368 17 Z" fill="#D4AF37"/>
+
+        <!-- Subtle ground line -->
+        <path d="M20 110 Q100 108 200 110 Q300 108 380 110" stroke="#2D5F5D" stroke-width="1" opacity="0.15"/>
+
+        <!-- Labels -->
+        <text x="50" y="75" class="qual-path-label qual-path-label--muted">not now</text>
+        <text x="320" y="55" class="qual-path-label qual-path-label--ready">your path</text>
+      </svg>
     </div>
 
-    <!-- SELF-IDENTIFICATION: Asymmetric Comparison -->
-    <div class="bf-realtalk__comparison">
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         COMPARISON COLUMNS (Asymmetric 40/60)
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="qual-comparison">
 
-      <!-- LEFT: Disqualifiers (smaller, muted, de-emphasized) -->
-      <div class="bf-realtalk__walkaway">
-        <span class="bf-realtalk__label bf-realtalk__label--muted">WALK AWAY IF...</span>
-        <ul class="bf-realtalk__list bf-realtalk__list--muted">
+      <!-- LEFT: Walk Away (40%) -->
+      <div class="qual-walkaway">
+        <span class="qual-col-label qual-col-label--walkaway">Walk away if...</span>
+        <ul class="qual-walkaway-list">
           <li>
-            <span class="bf-realtalk__x-mark">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-                <path d="M8 8L16 16M16 8L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <span class="qual-x-icon">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                <path d="M7 7L13 13M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </span>
-            You're looking for overnight results
+            <span>You're looking for overnight results</span>
           </li>
           <li>
-            <span class="bf-realtalk__x-mark">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-                <path d="M8 8L16 16M16 8L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <span class="qual-x-icon">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                <path d="M7 7L13 13M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </span>
-            You can't protect 25 minutes a day
+            <span>You can't protect 25 minutes a day</span>
           </li>
           <li>
-            <span class="bf-realtalk__x-mark">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-                <path d="M8 8L16 16M16 8L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <span class="qual-x-icon">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                <path d="M7 7L13 13M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </span>
-            You want done-for-you, not coached
+            <span>You want done-for-you, not coached</span>
           </li>
           <li>
-            <span class="bf-realtalk__x-mark">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-                <path d="M8 8L16 16M16 8L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <span class="qual-x-icon">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                <path d="M7 7L13 13M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </span>
-            You're not ready for honest feedback
+            <span>You're not ready for honest feedback</span>
           </li>
           <li>
-            <span class="bf-realtalk__x-mark">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
-                <path d="M8 8L16 16M16 8L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <span class="qual-x-icon">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                <path d="M7 7L13 13M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </span>
-            You're buying to feel better, not do better
+            <span>You're buying to feel better, not do better</span>
           </li>
         </ul>
       </div>
 
-      <!-- RIGHT: Qualifiers (dominant, illustrated) -->
-      <div class="bf-realtalk__ready">
-        <span class="bf-realtalk__label bf-realtalk__label--vibrant">YOU'RE READY IF...</span>
-        <ul class="bf-realtalk__list bf-realtalk__list--vibrant">
+      <!-- RIGHT: You're Ready (60%) -->
+      <div class="qual-ready">
+        <span class="qual-col-label qual-col-label--ready">You're ready if...</span>
+        <div class="qual-ready-items">
 
-          <!-- Item 1: Calendar with checkmark - 90 days commitment -->
-          <li class="bf-realtalk__ready-item">
-            <div class="bf-realtalk__ready-icon">
-              <svg viewBox="0 0 56 56" fill="none" aria-hidden="true">
-                <!-- Calendar base -->
-                <rect x="6" y="10" width="44" height="38" rx="6" fill="#E0F2F1" stroke="#0F766E" stroke-width="2"/>
-                <!-- Calendar header bar -->
-                <rect x="6" y="10" width="44" height="12" rx="6" fill="#0F766E"/>
-                <rect x="6" y="16" width="44" height="6" fill="#0F766E"/>
-                <!-- Calendar rings -->
-                <rect x="16" y="6" width="4" height="10" rx="2" fill="#0F766E"/>
-                <rect x="36" y="6" width="4" height="10" rx="2" fill="#0F766E"/>
-                <!-- Day grid - filled progress squares -->
-                <rect x="12" y="26" width="6" height="6" rx="1" fill="#10B981"/>
-                <rect x="21" y="26" width="6" height="6" rx="1" fill="#10B981"/>
-                <rect x="30" y="26" width="6" height="6" rx="1" fill="#10B981"/>
-                <rect x="39" y="26" width="6" height="6" rx="1" fill="#10B981"/>
-                <rect x="12" y="35" width="6" height="6" rx="1" fill="#10B981"/>
-                <rect x="21" y="35" width="6" height="6" rx="1" fill="#10B981"/>
-                <rect x="30" y="35" width="6" height="6" rx="1" fill="#34D399"/>
-                <rect x="39" y="35" width="6" height="6" rx="1" fill="#D1FAE5"/>
-                <!-- Checkmark overlay -->
-                <circle cx="44" cy="44" r="10" fill="#10B981"/>
-                <path d="M39 44L43 48L50 40" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Item 1: 90 days -->
+          <div class="qual-ready-item">
+            <div class="qual-check-icon">
+              <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <circle cx="14" cy="14" r="12" fill="#E8F5F4" stroke="#2D5F5D" stroke-width="1.5"/>
+                <path d="M9 14L12.5 17.5L19 11" stroke="#2D5F5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="14" cy="14" r="6" stroke="#4A8B87" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 2"/>
               </svg>
             </div>
-            <div class="bf-realtalk__ready-content">
+            <div class="qual-ready-content">
               <strong>You can commit to 90 days without bailing</strong>
               <span>Momentum builds — but only if you stay</span>
             </div>
-          </li>
+          </div>
 
-          <!-- Item 2: Clock - 3+ hours per week -->
-          <li class="bf-realtalk__ready-item">
-            <div class="bf-realtalk__ready-icon">
-              <svg viewBox="0 0 56 56" fill="none" aria-hidden="true">
-                <!-- Clock face -->
-                <circle cx="28" cy="28" r="22" fill="#E0F2F1" stroke="#0F766E" stroke-width="2"/>
-                <!-- Inner ring -->
-                <circle cx="28" cy="28" r="18" stroke="#0F766E" stroke-width="1" stroke-dasharray="2 4" opacity="0.3"/>
-                <!-- Highlighted time segment (3 hours = quarter of clock) -->
-                <path d="M28 28L28 10A18 18 0 0 1 46 28L28 28Z" fill="#10B981" opacity="0.3"/>
-                <!-- Clock hands -->
-                <line x1="28" y1="28" x2="28" y2="14" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
-                <line x1="28" y1="28" x2="38" y2="32" stroke="#0F766E" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Center dot -->
-                <circle cx="28" cy="28" r="4" fill="#10B981"/>
-                <circle cx="28" cy="28" r="2" fill="white"/>
-                <!-- Hour markers -->
-                <circle cx="28" cy="10" r="2" fill="#0F766E"/>
-                <circle cx="46" cy="28" r="2" fill="#10B981"/>
-                <circle cx="28" cy="46" r="2" fill="#0F766E"/>
-                <circle cx="10" cy="28" r="2" fill="#0F766E"/>
-                <!-- Sparkle accent -->
-                <path d="M48 12L50 16L54 14L50 18L52 22L48 18L44 20L48 16L46 12L48 12Z" fill="#10B981" opacity="0.6"/>
+          <!-- Item 2: 3+ hours -->
+          <div class="qual-ready-item">
+            <div class="qual-check-icon">
+              <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <circle cx="14" cy="14" r="12" fill="#E8F5F4" stroke="#2D5F5D" stroke-width="1.5"/>
+                <path d="M9 14L12.5 17.5L19 11" stroke="#2D5F5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="14" cy="14" r="6" stroke="#4A8B87" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 2"/>
               </svg>
             </div>
-            <div class="bf-realtalk__ready-content">
+            <div class="qual-ready-content">
               <strong>You can protect 3+ hours per week</strong>
               <span>That's just 25 minutes a day</span>
             </div>
-          </li>
+          </div>
 
-          <!-- Item 3: Map/Roadmap - direction vs video library -->
-          <li class="bf-realtalk__ready-item">
-            <div class="bf-realtalk__ready-icon">
-              <svg viewBox="0 0 56 56" fill="none" aria-hidden="true">
-                <!-- Folded map base -->
-                <path d="M8 12L20 8V44L8 48V12Z" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
-                <path d="M20 8L36 12V48L20 44V8Z" fill="#E0F2F1" stroke="#0F766E" stroke-width="1.5"/>
-                <path d="M36 12L48 8V44L36 48V12Z" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
-                <!-- Route path -->
-                <path d="M14 38C14 38 18 32 24 30C30 28 28 22 34 20C40 18 42 14 42 14" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 4"/>
-                <!-- Start marker -->
-                <circle cx="14" cy="38" r="4" fill="#0F766E"/>
-                <circle cx="14" cy="38" r="2" fill="white"/>
-                <!-- Destination marker -->
-                <path d="M42 6C42 6 50 12 50 18C50 24 42 24 42 24C42 24 34 24 34 18C34 12 42 6 42 6Z" fill="#10B981" stroke="#0F766E" stroke-width="1.5"/>
-                <circle cx="42" cy="16" r="3" fill="white"/>
-                <!-- Map fold lines -->
-                <line x1="20" y1="8" x2="20" y2="44" stroke="#0F766E" stroke-width="1" opacity="0.3"/>
-                <line x1="36" y1="12" x2="36" y2="48" stroke="#0F766E" stroke-width="1" opacity="0.3"/>
+          <!-- Item 3: Roadmap -->
+          <div class="qual-ready-item">
+            <div class="qual-check-icon">
+              <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <circle cx="14" cy="14" r="12" fill="#E8F5F4" stroke="#2D5F5D" stroke-width="1.5"/>
+                <path d="M9 14L12.5 17.5L19 11" stroke="#2D5F5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="14" cy="14" r="6" stroke="#4A8B87" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 2"/>
               </svg>
             </div>
-            <div class="bf-realtalk__ready-content">
+            <div class="qual-ready-content">
               <strong>You want a roadmap, not another video library</strong>
               <span>Clear direction beats endless content</span>
             </div>
-          </li>
+          </div>
 
-          <!-- Item 4: Star/Growth - feedback that makes you better -->
-          <li class="bf-realtalk__ready-item">
-            <div class="bf-realtalk__ready-icon">
-              <svg viewBox="0 0 56 56" fill="none" aria-hidden="true">
-                <!-- Growth arrow base -->
-                <path d="M8 44L20 32L32 38L48 16" stroke="#E0F2F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M8 44L20 32L32 38L48 16" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <!-- Arrow head -->
-                <path d="M42 12L50 16L46 24" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <!-- Star at peak -->
-                <path d="M48 8L50 13L55 13L51 17L53 22L48 19L43 22L45 17L41 13L46 13L48 8Z" fill="#0F766E"/>
-                <!-- Smaller accent stars -->
-                <path d="M12 20L13 23L16 23L14 25L15 28L12 26L9 28L10 25L8 23L11 23L12 20Z" fill="#10B981" opacity="0.5"/>
-                <path d="M28 12L29 14L31 14L29.5 15.5L30 18L28 16.5L26 18L26.5 15.5L25 14L27 14L28 12Z" fill="#10B981" opacity="0.7"/>
-                <!-- Progress dots -->
-                <circle cx="8" cy="44" r="3" fill="#0F766E"/>
-                <circle cx="20" cy="32" r="2.5" fill="#0F766E"/>
-                <circle cx="32" cy="38" r="2.5" fill="#0F766E"/>
+          <!-- Item 4: Feedback -->
+          <div class="qual-ready-item">
+            <div class="qual-check-icon">
+              <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <circle cx="14" cy="14" r="12" fill="#E8F5F4" stroke="#2D5F5D" stroke-width="1.5"/>
+                <path d="M9 14L12.5 17.5L19 11" stroke="#2D5F5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="14" cy="14" r="6" stroke="#4A8B87" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 2"/>
               </svg>
             </div>
-            <div class="bf-realtalk__ready-content">
+            <div class="qual-ready-content">
               <strong>You're ready for feedback that makes you better</strong>
               <span>Growth requires honest input</span>
             </div>
-          </li>
+          </div>
 
-          <!-- Item 5: Person/Support - done guessing alone -->
-          <li class="bf-realtalk__ready-item">
-            <div class="bf-realtalk__ready-icon">
-              <svg viewBox="0 0 56 56" fill="none" aria-hidden="true">
-                <!-- Main person (you) -->
-                <circle cx="20" cy="16" r="8" fill="#E0F2F1" stroke="#0F766E" stroke-width="2"/>
-                <path d="M8 48V40C8 34 14 30 20 30C26 30 32 34 32 40V48" fill="#E0F2F1" stroke="#0F766E" stroke-width="2"/>
-                <!-- Bailey (support figure) -->
-                <circle cx="40" cy="18" r="7" fill="#10B981" stroke="#0F766E" stroke-width="1.5"/>
-                <path d="M30 46V40C30 35 35 32 40 32C45 32 50 35 50 40V46" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
-                <!-- Connection heart -->
-                <path d="M28 26C28 26 26 23 23 23C20 23 18 26 18 28C18 32 28 38 28 38C28 38 38 32 38 28C38 26 36 23 33 23C30 23 28 26 28 26Z" fill="#10B981" stroke="#0F766E" stroke-width="1.5"/>
-                <!-- Support hand reaching -->
-                <path d="M32 36L38 34" stroke="#0F766E" stroke-width="2" stroke-linecap="round"/>
-                <!-- Sparkle of connection -->
-                <circle cx="28" cy="20" r="2" fill="#10B981"/>
-                <path d="M28 16V18M24 20H26M30 20H32M28 22V24" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Item 5: Done guessing -->
+          <div class="qual-ready-item">
+            <div class="qual-check-icon">
+              <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <circle cx="14" cy="14" r="12" fill="#E8F5F4" stroke="#2D5F5D" stroke-width="1.5"/>
+                <path d="M9 14L12.5 17.5L19 11" stroke="#2D5F5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="14" cy="14" r="6" stroke="#4A8B87" stroke-width="0.5" opacity="0.4" stroke-dasharray="2 2"/>
               </svg>
             </div>
-            <div class="bf-realtalk__ready-content">
+            <div class="qual-ready-content">
               <strong>You're done guessing alone</strong>
               <span>You want Bailey in your corner</span>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+          </div>
 
-    <!-- AUTHORITY STATEMENT -->
-    <div class="bf-realtalk__authority">
-      <div class="bf-realtalk__authority-quote">"</div>
-      <p class="bf-realtalk__authority-main">I only want you here if you're actually going to show up.</p>
-      <p class="bf-realtalk__authority-text">Otherwise, save your money. I'd rather have 50 committed people than 200 who ghost by Week 2.</p>
-    </div>
-
-    <!-- TIME BREAKDOWN - Visual Proof -->
-    <div class="bf-realtalk__time-proof">
-      <div class="bf-realtalk__time-equation">
-        <span class="bf-realtalk__time-hours">3 hours a week</span>
-        <span class="bf-realtalk__time-equals">=</span>
-        <span class="bf-realtalk__time-minutes">25 minutes a day</span>
-      </div>
-
-      <div class="bf-realtalk__time-visual">
-        <div class="bf-realtalk__time-blocks">
-          <div class="bf-realtalk__time-block" data-day="1">
-            <span>25m</span>
-          </div>
-          <div class="bf-realtalk__time-block" data-day="2">
-            <span>25m</span>
-          </div>
-          <div class="bf-realtalk__time-block" data-day="3">
-            <span>25m</span>
-          </div>
-          <div class="bf-realtalk__time-block" data-day="4">
-            <span>25m</span>
-          </div>
-          <div class="bf-realtalk__time-block" data-day="5">
-            <span>25m</span>
-          </div>
         </div>
-        <span class="bf-realtalk__time-label">PER DAY</span>
       </div>
-
-      <p class="bf-realtalk__time-detail">Not flawless execution. Not every single day. Just protected enough that you make real progress instead of spinning.</p>
     </div>
 
-    <!-- BRIDGE -->
-    <p class="bf-realtalk__bridge">If you're reading this and nodding, keep going.</p>
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         AUTHORITY BOX
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="qual-authority">
+      <!-- Decorative quote mark -->
+      <span class="qual-authority-quote" aria-hidden="true">"</span>
 
-    <svg class="bf-realtalk__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M12 4L12 20M12 20L6 14M12 20L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
+      <!-- Badge -->
+      <span class="qual-authority-badge">Bailey's Standards</span>
+
+      <p class="qual-authority-main">
+        I only want you here if you're actually going to show up.
+      </p>
+      <p class="qual-authority-text">
+        Otherwise, save your money. I'd rather have 50 committed people than 200 who ghost by Week 2.
+      </p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         CTA
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="qual-cta-wrapper">
+      <a
+        href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator/"
+        target="_top"
+        rel="noopener"
+        class="qual-cta-button"
+      >
+        <span class="qual-cta-text">I'm Ready to Commit</span>
+        <svg class="qual-cta-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
   </div>
 </div>
 
 <style>
 /* ============================================
-   REAL TALK SECTION - PREMIUM SELF-QUALIFICATION
-   "Make the right people say 'oh shit, that's me'"
+   REAL TALK QUALIFICATION SECTION
+   Premium self-selection with diverging paths
    ============================================ */
 
-/* Ogg Font */
+/* ============================================
+   FONT EMBEDDING - OGG + SATOSHI
+   ============================================ */
 @font-face {
   font-family: 'Ogg';
   src: url("data:font/truetype;base64,AAEAAAAQAQAABAAARFNJRwAAAAIAAIUsAAAACEdQT1PH5Kx8AABsnAAAGJBPUy8yc8+PqgAAAYgAAABgY21hcAEJAaIAAAL0AAAAZGN2dCAc2Qr+AAASSAAAAJBmcGdtnjYV0gAAA1gAAA4VZ2FzcAAAABAAAGyUAAAACGdseWZZZXW9AAATYAAAUKJoZWFkF3P8fAAAAQwAAAA2aGhlYQh+AxgAAAFEAAAAJGhtdHiXQgI5AAAB6AAAAQxsb2NhHZw1LgAAEtgAAACIbWF4cAOLEq0AAAFoAAAAIG5hbWV7C7IeAABkBAAACG1wb3N0/7gAMgAAbHQAAAAgcHJlcGL64+QAABFwAAAA1g") format("truetype");
@@ -285,660 +273,752 @@
   font-display: swap;
 }
 
-/* Satoshi Variable Font */
 @font-face {
-  font-family: 'Satoshi Variable';
+  font-family: 'Satoshi';
   src: url("data:font/woff2;base64,d09GMgABAAAAAB") format("woff2");
-  font-weight: 100 900;
+  font-weight: 400 700;
+  font-style: normal;
   font-display: swap;
 }
 
-#bf-realtalk {
-  --bf-color-primary: #0F766E;
-  --bf-color-primary-dark: #0D5D57;
-  --bf-color-primary-light: #10B981;
-  --bf-color-bg: #F8FFFE;
-  --bf-color-surface: #E0F2F1;
-  --bf-color-surface-light: #ECFDF5;
-  --bf-color-text: #1E293B;
-  --bf-color-text-muted: #64748B;
-  --bf-color-accent: #10B981;
-  --bf-color-coral: #E8998D;
-  --bf-color-coral-light: #FEF2F2;
-  --bf-color-coral-dark: #991B1B;
-  --bf-color-coral-muted: #B45454;
+/* ============================================
+   CSS VARIABLES - Section Palette
+   ============================================ */
+#bf-qualification {
+  /* Section-specific palette (derived from brand) */
+  --qual-bg: #FFF8F5;
+  --qual-bg-subtle: #FEF5F0;
 
-  background: var(--bf-color-bg);
-  padding: 100px 24px;
-  position: relative;
-  overflow: hidden;
+  /* Walk Away palette (warm, soft, kind) */
+  --walkaway-bg: #FFF0EB;
+  --walkaway-border: #E8997A;
+  --walkaway-text: #8B5A4A;
+  --walkaway-icon: #D4877A;
+
+  /* Ready palette (cool, focused, strong) */
+  --ready-bg: #FFFFFF;
+  --ready-border: #2D5F5D;
+  --ready-accent: #4A8B87;
+  --ready-surface: #E8F5F4;
+
+  /* Authority palette */
+  --authority-bg: #1F4543;
+  --authority-text: #FAF8F3;
+  --authority-accent: #D4AF37;
+
+  /* CTA */
+  --cta-bg: #E8997A;
+  --cta-text: #FAF8F3;
+  --cta-hover: #D4877A;
+
+  /* Typography */
+  --text-primary: #1A2D2A;
+  --text-secondary: #4A5856;
+  --text-muted: #7A8886;
+
+  /* Core brand */
+  --teal: #2D5F5D;
+  --teal-light: #4A8B87;
+  --coral: #E8997A;
+  --cream: #FAF8F3;
+  --gold: #D4AF37;
+
+  /* Spacing scale */
+  --space-xs: clamp(0.5rem, 1.2vw, 0.75rem);
+  --space-sm: clamp(0.75rem, 1.8vw, 1rem);
+  --space-md: clamp(1rem, 2.5vw, 1.5rem);
+  --space-lg: clamp(1.5rem, 3.5vw, 2.25rem);
+  --space-xl: clamp(2rem, 4.5vw, 3rem);
+  --space-2xl: clamp(3rem, 7vw, 5rem);
+  --space-section: clamp(5rem, 12vw, 8rem);
 }
 
-/* Premium background texture */
-#bf-realtalk::before {
+/* ============================================
+   BASE SECTION STYLES
+   ============================================ */
+#bf-qualification {
+  width: 100%;
+  background: var(--qual-bg);
+  padding: var(--space-section) var(--space-md);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle background texture */
+#bf-qualification::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 85% 80%, rgba(15, 118, 110, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.02) 0%, transparent 70%);
+    radial-gradient(circle at 20% 30%, rgba(232, 153, 122, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(45, 95, 93, 0.05) 0%, transparent 40%);
   pointer-events: none;
 }
 
-.bf-realtalk__wrapper {
-  max-width: 1100px;
+.qual-container {
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
 /* ============================================
-   HERO: Headline - PREMIUM TYPOGRAPHY
+   HEADLINE
    ============================================ */
-.bf-realtalk__hero {
+.qual-header {
+  margin-bottom: var(--space-2xl);
+}
+
+.qual-headline-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.qual-bracket {
+  width: 24px;
+  height: 80px;
+  color: var(--coral);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.qual-headline-content {
   text-align: center;
-  margin-bottom: 64px;
 }
 
-.bf-realtalk__headline {
-  font-family: 'Ogg', Georgia, serif !important;
-  font-size: clamp(2.75rem, 6vw, 4rem);
+.qual-headline {
+  font-family: 'Ogg', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
   line-height: 1.15;
-  color: var(--bf-color-text);
-  margin: 0 0 16px 0;
   letter-spacing: -0.02em;
-  font-weight: normal;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-xs) 0;
 }
 
-.bf-realtalk__headline-accent {
-  font-family: 'Ogg', Georgia, serif !important;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+.qual-subline {
+  font-family: 'Ogg', Georgia, serif;
+  font-weight: 400;
   font-style: italic;
-  color: var(--bf-color-primary);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.3;
+  color: var(--teal);
   margin: 0;
-  letter-spacing: -0.01em;
 }
 
 /* ============================================
-   AWARENESS BLOCK: Pain Copy with teal border
+   INTRO BLOCK
    ============================================ */
-.bf-realtalk__awareness {
-  background: white;
-  border-radius: 20px;
-  padding: 36px 44px;
-  margin-bottom: 56px;
+.qual-intro {
+  background: var(--cream);
+  border-left: 4px solid var(--coral);
+  border-radius: 0 16px 16px 0;
+  padding: var(--space-lg) var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   box-shadow:
-    0 4px 24px rgba(15, 118, 110, 0.08),
+    0 4px 20px rgba(232, 153, 122, 0.1),
     0 1px 3px rgba(0, 0, 0, 0.04);
-  border-left: 5px solid var(--bf-color-primary);
-  position: relative;
 }
 
-.bf-realtalk__awareness::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 20px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.02) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-.bf-realtalk__awareness-text {
-  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1.3rem;
+.qual-intro-text {
+  font-size: clamp(1.0625rem, 2.5vw, 1.25rem);
   line-height: 1.75;
-  color: var(--bf-color-text);
+  color: var(--text-secondary);
   margin: 0;
-  position: relative;
 }
 
-.bf-realtalk__highlight {
-  background: linear-gradient(180deg, transparent 55%, rgba(16, 185, 129, 0.25) 55%);
-  padding: 0 6px;
+.qual-highlight {
+  background: linear-gradient(180deg, transparent 60%, rgba(232, 153, 122, 0.3) 60%);
+  padding: 0 4px;
   font-weight: 600;
+  color: var(--text-primary);
   border-radius: 2px;
 }
 
 /* ============================================
-   THESIS STATEMENT: The Big Moment
+   THESIS STATEMENT
    ============================================ */
-.bf-realtalk__thesis {
+.qual-thesis {
   text-align: center;
-  margin-bottom: 72px;
-  padding: 56px 24px;
+  margin-bottom: var(--space-xl);
+  padding: 0 var(--space-md);
 }
 
-.bf-realtalk__thesis-text {
-  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(1.35rem, 3vw, 1.65rem);
+.qual-thesis-line {
+  font-size: clamp(1.125rem, 2.8vw, 1.5rem);
+  font-weight: 500;
   line-height: 1.6;
-  color: var(--bf-color-text);
-  margin: 0 0 28px 0;
-  max-width: 720px;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-md) 0;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.bf-realtalk__thesis-emphasis {
-  font-family: 'Ogg', Georgia, serif !important;
-  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
-  color: var(--bf-color-primary);
+.qual-thesis-emphasis {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-style: italic;
+  color: var(--teal);
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
-.bf-realtalk__real-time {
-  font-style: italic;
+.qual-real-time {
   position: relative;
   display: inline-block;
 }
 
-/* Hand-drawn underline on "Real time" */
-.bf-realtalk__real-time::after {
+.qual-real-time::after {
   content: '';
   position: absolute;
   bottom: 2px;
-  left: -4px;
-  right: -4px;
+  left: -3px;
+  right: -3px;
   height: 4px;
-  background: var(--bf-color-coral);
+  background: var(--coral);
   border-radius: 3px;
   transform: rotate(-0.5deg);
 }
 
 /* ============================================
-   COMPARISON: Asymmetric 35/65 Layout
+   DIVERGING PATHS GRAPHIC
    ============================================ */
-.bf-realtalk__comparison {
-  display: grid;
-  grid-template-columns: 35% 65%;
-  gap: 36px;
-  margin-bottom: 72px;
-  align-items: start;
+.qual-paths-graphic {
+  max-width: 500px;
+  margin: 0 auto var(--space-2xl);
+  padding: var(--space-md) 0;
+}
+
+.qual-fork-svg {
+  width: 100%;
+  height: auto;
+}
+
+.qual-path-label {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.qual-path-label--muted {
+  fill: var(--walkaway-icon);
+  opacity: 0.7;
+}
+
+.qual-path-label--ready {
+  fill: var(--teal);
 }
 
 /* ============================================
-   LEFT: Walk Away Column (De-emphasized)
+   COMPARISON COLUMNS
    ============================================ */
-.bf-realtalk__walkaway {
-  padding: 28px 24px;
-  background: var(--bf-color-coral-light);
+.qual-comparison {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+  align-items: start;
+}
+
+/* Walk Away Column */
+.qual-walkaway {
+  background: var(--walkaway-bg);
   border-radius: 16px;
-  border-left: 3px solid var(--bf-color-coral);
-  opacity: 0.9;
+  padding: var(--space-lg);
+  border-left: 3px solid var(--walkaway-border);
 }
 
-.bf-realtalk__label {
+.qual-col-label {
   display: block;
-  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.12em;
-  margin-bottom: 24px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
 }
 
-.bf-realtalk__label--muted {
-  color: var(--bf-color-coral-dark);
+.qual-col-label--walkaway {
+  color: var(--walkaway-text);
 }
 
-.bf-realtalk__label--vibrant {
-  color: var(--bf-color-primary);
+.qual-col-label--ready {
+  color: var(--teal);
 }
 
-.bf-realtalk__list {
+.qual-walkaway-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.bf-realtalk__list--muted li {
-  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.95rem;
-  color: #7F1D1D;
-  padding: 12px 0 12px 32px;
-  position: relative;
-  border-bottom: 1px solid rgba(220, 38, 38, 0.1);
-  line-height: 1.5;
+.qual-walkaway-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid rgba(232, 153, 122, 0.15);
+  font-size: clamp(0.9rem, 2vw, 0.95rem);
+  line-height: 1.55;
+  color: var(--walkaway-text);
 }
 
-.bf-realtalk__list--muted li:last-child {
+.qual-walkaway-list li:last-child {
   border-bottom: none;
+  padding-bottom: 0;
 }
 
-.bf-realtalk__x-mark {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.qual-x-icon {
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
-  color: var(--bf-color-coral-muted);
+  color: var(--walkaway-icon);
+  margin-top: 2px;
 }
 
-.bf-realtalk__x-mark svg {
+.qual-x-icon svg {
   width: 100%;
   height: 100%;
 }
 
-/* ============================================
-   RIGHT: Ready Column (Emphasized, Premium)
-   ============================================ */
-.bf-realtalk__ready {
-  padding: 40px;
-  background: white;
-  border-radius: 24px;
+/* Ready Column */
+.qual-ready {
+  background: var(--ready-bg);
+  border-radius: 20px;
+  padding: var(--space-xl);
+  border: 2px solid rgba(45, 95, 93, 0.12);
   box-shadow:
-    0 12px 40px rgba(15, 118, 110, 0.12),
-    0 4px 12px rgba(0, 0, 0, 0.04);
-  border: 2px solid var(--bf-color-surface);
+    0 8px 32px rgba(45, 95, 93, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.04);
   position: relative;
 }
 
-.bf-realtalk__ready::before {
+/* Top accent bar */
+.qual-ready::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--bf-color-primary), var(--bf-color-accent));
-  border-radius: 24px 24px 0 0;
+  background: linear-gradient(90deg, var(--teal), var(--teal-light));
+  border-radius: 20px 20px 0 0;
 }
 
-.bf-realtalk__list--vibrant {
+.qual-ready-items {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: var(--space-md);
 }
 
-.bf-realtalk__ready-item {
+.qual-ready-item {
   display: flex;
-  gap: 20px;
   align-items: flex-start;
-  padding: 16px;
-  border-radius: 16px;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  gap: var(--space-md);
+  padding: var(--space-sm);
+  border-radius: 12px;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-.bf-realtalk__ready-item:hover {
-  background: var(--bf-color-surface-light);
-  transform: translateX(6px);
+.qual-ready-item:hover {
+  background: var(--ready-surface);
+  transform: translateX(4px);
 }
 
-.bf-realtalk__ready-icon {
+.qual-check-icon {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  background: var(--bf-color-surface-light);
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 28px;
+  height: 28px;
+  margin-top: 2px;
 }
 
-.bf-realtalk__ready-item:hover .bf-realtalk__ready-icon {
-  background: var(--bf-color-surface);
-  transform: scale(1.08);
+.qual-check-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
-.bf-realtalk__ready-icon svg {
-  width: 44px;
-  height: 44px;
-}
-
-.bf-realtalk__ready-content {
+.qual-ready-content {
   flex: 1;
-  padding-top: 4px;
 }
 
-.bf-realtalk__ready-content strong {
+.qual-ready-content strong {
   display: block;
-  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--bf-color-text);
-  margin-bottom: 6px;
-  line-height: 1.4;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.45;
 }
 
-.bf-realtalk__ready-content span {
-  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.95rem;
-  color: var(--bf-color-text-muted);
+.qual-ready-content span {
+  font-size: clamp(0.875rem, 1.8vw, 0.925rem);
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
 /* ============================================
-   AUTHORITY STATEMENT - Premium Card
+   AUTHORITY BOX
    ============================================ */
-.bf-realtalk__authority {
-  background: linear-gradient(135deg, var(--bf-color-primary) 0%, var(--bf-color-primary-dark) 100%);
+.qual-authority {
+  background: linear-gradient(135deg, var(--authority-bg) 0%, #1A3A38 100%);
   border-radius: 24px;
-  padding: 48px 56px;
-  margin-bottom: 64px;
+  padding: var(--space-xl) var(--space-2xl);
+  margin-bottom: var(--space-xl);
   position: relative;
   overflow: hidden;
   box-shadow:
-    0 12px 40px rgba(15, 118, 110, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+    0 12px 48px rgba(31, 69, 67, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-/* Decorative quote mark */
-.bf-realtalk__authority-quote {
+/* Decorative quote */
+.qual-authority-quote {
   position: absolute;
-  top: -10px;
-  left: 24px;
-  font-family: 'Ogg', Georgia, serif !important;
-  font-size: 160px;
-  color: rgba(255, 255, 255, 0.12);
+  top: -15px;
+  left: 20px;
+  font-family: 'Ogg', Georgia, serif;
+  font-size: clamp(100px, 20vw, 160px);
+  color: rgba(255, 255, 255, 0.08);
   line-height: 1;
   pointer-events: none;
+  user-select: none;
 }
 
-/* Subtle pattern overlay */
-.bf-realtalk__authority::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 40%);
-  pointer-events: none;
-}
-
-.bf-realtalk__authority-main {
-  font-family: 'Ogg', Georgia, serif !important;
-  font-size: clamp(1.35rem, 3vw, 1.65rem);
-  line-height: 1.5;
-  color: white;
-  margin: 0 0 16px 0;
+/* Badge */
+.qual-authority-badge {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.2);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: clamp(0.6rem, 1.3vw, 0.7rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: var(--space-md);
   position: relative;
   z-index: 1;
 }
 
-.bf-realtalk__authority-text {
-  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1.1rem;
+/* Subtle glow effect */
+.qual-authority::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 25% 75%, rgba(74, 139, 135, 0.12) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.qual-authority-main {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: clamp(1.25rem, 3vw, 1.625rem);
+  line-height: 1.5;
+  color: var(--authority-text);
+  margin: 0 0 var(--space-sm) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.qual-authority-text {
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(250, 248, 243, 0.85);
   margin: 0;
   position: relative;
   z-index: 1;
 }
 
 /* ============================================
-   TIME BREAKDOWN - Creative Visual
+   CTA BUTTON
    ============================================ */
-.bf-realtalk__time-proof {
-  background: var(--bf-color-surface);
-  border-radius: 24px;
-  padding: 48px;
-  margin-bottom: 64px;
+.qual-cta-wrapper {
   text-align: center;
 }
 
-.bf-realtalk__time-equation {
-  display: flex;
+.qual-cta-button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 36px;
-  flex-wrap: wrap;
-}
-
-.bf-realtalk__time-hours {
-  font-family: 'Ogg', Georgia, serif !important;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  color: var(--bf-color-text);
-}
-
-.bf-realtalk__time-equals {
-  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1.5rem;
-  color: var(--bf-color-text-muted);
-  font-weight: 300;
-}
-
-.bf-realtalk__time-minutes {
-  font-family: 'Ogg', Georgia, serif !important;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  color: var(--bf-color-primary);
-  font-style: italic;
-}
-
-.bf-realtalk__time-visual {
-  margin-bottom: 32px;
-}
-
-.bf-realtalk__time-blocks {
-  display: flex;
-  gap: 12px;
-  align-items: flex-end;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.bf-realtalk__time-block {
-  width: 56px;
-  height: 72px;
-  background: linear-gradient(180deg, var(--bf-color-primary) 0%, var(--bf-color-primary-dark) 100%);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: var(--space-sm);
+  background: var(--cta-bg);
+  color: var(--cta-text);
+  font-family: 'Satoshi', sans-serif;
+  font-size: clamp(1rem, 2.3vw, 1.125rem);
+  font-weight: 600;
+  text-decoration: none;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
   box-shadow:
-    0 4px 12px rgba(15, 118, 110, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: default;
+    0 4px 20px rgba(232, 153, 122, 0.35),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 380px;
+  width: 100%;
 }
 
-.bf-realtalk__time-block:hover {
-  transform: translateY(-8px);
+.qual-cta-button:hover {
+  background: var(--cta-hover);
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 32px rgba(232, 153, 122, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Slight height variations for visual interest */
-.bf-realtalk__time-block[data-day="1"] { height: 72px; }
-.bf-realtalk__time-block[data-day="2"] { height: 68px; }
-.bf-realtalk__time-block[data-day="3"] { height: 74px; }
-.bf-realtalk__time-block[data-day="4"] { height: 70px; }
-.bf-realtalk__time-block[data-day="5"] { height: 72px; }
-
-.bf-realtalk__time-block span {
-  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: white;
-  letter-spacing: 0.02em;
+.qual-cta-button:active {
+  transform: translateY(0);
 }
 
-.bf-realtalk__time-label {
-  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--bf-color-primary);
+.qual-cta-arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
 }
 
-.bf-realtalk__time-detail {
-  font-family: 'Satoshi Variable', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--bf-color-text-muted);
-  max-width: 560px;
-  margin: 0 auto;
+.qual-cta-button:hover .qual-cta-arrow {
+  transform: translateX(4px);
 }
 
 /* ============================================
-   BRIDGE: CTA to Continue
+   ANIMATIONS
    ============================================ */
-.bf-realtalk__bridge {
-  text-align: center;
-  font-family: 'Ogg', Georgia, serif !important;
-  font-size: clamp(1.25rem, 3vw, 1.5rem);
-  font-style: italic;
-  color: var(--bf-color-primary);
-  margin: 0 0 24px 0;
+.qual-intro,
+.qual-thesis,
+.qual-paths-graphic,
+.qual-walkaway,
+.qual-ready,
+.qual-authority,
+.qual-cta-wrapper {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.bf-realtalk__arrow {
-  display: block;
-  width: 36px;
-  height: 36px;
-  margin: 0 auto;
-  color: var(--bf-color-primary);
-  animation: bounce 2s ease-in-out infinite;
+.qual-intro.revealed,
+.qual-thesis.revealed,
+.qual-paths-graphic.revealed,
+.qual-walkaway.revealed,
+.qual-ready.revealed,
+.qual-authority.revealed,
+.qual-cta-wrapper.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
+/* Stagger the columns */
+.qual-walkaway.revealed {
+  transition-delay: 0ms;
+}
+
+.qual-ready.revealed {
+  transition-delay: 100ms;
+}
+
+/* Authority entrance */
+.qual-authority.revealed {
+  transition-delay: 0ms;
+  animation: authorityGlow 2s ease-out 0.6s;
+}
+
+@keyframes authorityGlow {
+  0% {
+    box-shadow:
+      0 12px 48px rgba(31, 69, 67, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 12px 60px rgba(31, 69, 67, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 0 40px rgba(74, 139, 135, 0.2);
+  }
+  100% {
+    box-shadow:
+      0 12px 48px rgba(31, 69, 67, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
 }
 
 /* ============================================
-   RESPONSIVE - Mobile First
+   RESPONSIVE — Mobile First
    ============================================ */
 @media (max-width: 900px) {
-  .bf-realtalk__comparison {
+  .qual-comparison {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: var(--space-md);
   }
 
-  /* Show ready column first on mobile */
-  .bf-realtalk__ready {
+  /* Ready column first on mobile (more important) */
+  .qual-ready {
     order: -1;
   }
 
-  .bf-realtalk__walkaway {
-    opacity: 1;
+  .qual-bracket {
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
-  #bf-realtalk {
-    padding: 64px 16px;
+  #bf-qualification {
+    padding: var(--space-2xl) var(--space-md);
   }
 
-  .bf-realtalk__awareness {
-    padding: 28px 24px;
+  .qual-intro {
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 0 12px 12px 0;
+  }
+
+  .qual-ready {
+    padding: var(--space-lg);
     border-radius: 16px;
   }
 
-  .bf-realtalk__ready {
-    padding: 28px 20px;
+  .qual-authority {
+    padding: var(--space-lg);
     border-radius: 20px;
   }
 
-  .bf-realtalk__ready-item {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    padding: 12px;
+  .qual-authority-quote {
+    font-size: 80px;
+    top: -10px;
+    left: 10px;
   }
 
-  .bf-realtalk__ready-item:hover {
-    transform: translateX(0) translateY(-4px);
-  }
-
-  .bf-realtalk__ready-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 8px;
-  }
-
-  .bf-realtalk__ready-icon svg {
-    width: 48px;
-    height: 48px;
-  }
-
-  .bf-realtalk__authority {
-    padding: 36px 24px;
-    border-radius: 20px;
-  }
-
-  .bf-realtalk__authority-quote {
-    font-size: 100px;
-    top: -5px;
-    left: 12px;
-  }
-
-  .bf-realtalk__time-proof {
-    padding: 36px 20px;
-    border-radius: 20px;
-  }
-
-  .bf-realtalk__time-equation {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .bf-realtalk__time-block {
-    width: 48px;
-    height: 60px !important;
-  }
-
-  .bf-realtalk__time-block span {
-    font-size: 0.85rem;
+  .qual-cta-button {
+    width: 100%;
+    max-width: none;
   }
 }
 
-@media (max-width: 400px) {
-  .bf-realtalk__headline {
-    font-size: 2rem;
+@media (max-width: 480px) {
+  .qual-ready-item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
 
-  .bf-realtalk__headline-accent {
-    font-size: 1.35rem;
+  .qual-ready-item:hover {
+    transform: translateY(-2px) translateX(0);
   }
 
-  .bf-realtalk__thesis-emphasis {
-    font-size: 1.5rem;
+  .qual-check-icon {
+    margin-bottom: var(--space-xs);
   }
 
-  .bf-realtalk__time-blocks {
-    gap: 8px;
+  .qual-paths-graphic {
+    padding: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  #bf-qualification {
+    padding: var(--space-xl) var(--space-sm);
   }
 
-  .bf-realtalk__time-block {
-    width: 42px;
-    height: 54px !important;
+  .qual-headline {
+    font-size: 1.75rem;
   }
 
-  .bf-realtalk__ready-content strong {
-    font-size: 1rem;
+  .qual-subline {
+    font-size: 1.25rem;
   }
 
-  .bf-realtalk__authority-main {
-    font-size: 1.15rem;
+  .qual-thesis-emphasis {
+    font-size: 1.25rem;
+  }
+
+  .qual-intro {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .qual-walkaway,
+  .qual-ready {
+    padding: var(--space-md);
+  }
+
+  .qual-authority {
+    padding: var(--space-md);
+  }
+
+  .qual-cta-button {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.95rem;
   }
 }
 
 /* ============================================
-   REDUCED MOTION PREFERENCE
+   REDUCED MOTION
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
-  .bf-realtalk__arrow {
+  .qual-intro,
+  .qual-thesis,
+  .qual-paths-graphic,
+  .qual-walkaway,
+  .qual-ready,
+  .qual-authority,
+  .qual-cta-wrapper {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .qual-authority.revealed {
     animation: none;
   }
 
-  .bf-realtalk__time-block:hover {
+  .qual-ready-item:hover {
     transform: none;
   }
 
-  .bf-realtalk__ready-item:hover {
+  .qual-cta-button:hover {
     transform: none;
   }
 
-  .bf-realtalk__ready-item:hover .bf-realtalk__ready-icon {
+  .qual-cta-button:hover .qual-cta-arrow {
     transform: none;
   }
 }
 </style>
+
+<script>
+(function() {
+  // Intersection Observer for scroll-triggered animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '-50px 0px'
+  });
+
+  // Observe all animated elements
+  const animatedElements = document.querySelectorAll(
+    '#bf-qualification .qual-intro, ' +
+    '#bf-qualification .qual-thesis, ' +
+    '#bf-qualification .qual-paths-graphic, ' +
+    '#bf-qualification .qual-walkaway, ' +
+    '#bf-qualification .qual-ready, ' +
+    '#bf-qualification .qual-authority, ' +
+    '#bf-qualification .qual-cta-wrapper'
+  );
+
+  animatedElements.forEach(el => observer.observe(el));
+})();
+</script>
