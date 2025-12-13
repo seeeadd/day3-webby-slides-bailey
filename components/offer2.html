@@ -361,6 +361,8 @@ html, body { width: 100%; overflow-x: hidden; }
   font-size: clamp(26px, 2.3vw, 40px);
   line-height: 1.15;
   font-weight: 700;
+  font-family: 'Ogg';
+  font-synthesis: weight;
   color: var(--teal-deep);
   margin: 0 0 clamp(0.75rem, 1.6vw, 1rem) 0;
 }
@@ -371,24 +373,31 @@ html, body { width: 100%; overflow-x: hidden; }
   font-size: clamp(1rem, 1.7vw, 1.1rem);
   line-height: 1.6;
   color: rgba(0,0,0,0.72);
-  margin: 0 0 clamp(0.65rem, 1.4vw, 0.85rem) 0;
+  margin: 12px 0 10px;
 }
 
 .pillar-group .card-list {
   font-family: 'Satoshi Variable';
   font-weight: 400;
   font-size: clamp(1rem, 1.6vw, 1.05rem);
-  line-height: 1.6;
+  line-height: 1.5;
   color: rgba(0,0,0,0.72);
-  gap: clamp(0.5rem, 1vw, 0.65rem);
+  margin: 18px auto 0;
+  padding-left: 1.1em;
   max-width: 38ch;
-  margin-left: auto;
-  margin-right: auto;
+  display: block;
+  list-style: disc;
+  gap: 0;
 }
 
 .pillar-group .card-list li {
-  margin: 0.45rem 0;
+  display: list-item;
+  margin: 8px 0;
+  line-height: 1.5;
 }
+
+.pillar-group .card-list li::before { content: none; }
+.pillar-group .card-list li::marker { color: var(--teal-deep); }
 
 .microcopy {
   display: inline-block;
