@@ -1,29 +1,38 @@
-<div id="bf-fitcheck">
-  <div class="bf-fitcheck__wrapper">
-    
-    <!-- HERO MOMENT: Headline + Concept -->
-    <div class="bf-fitcheck__hero">
-      <h2 class="bf-fitcheck__headline">Real talk: This isn't for everyone.<br><span class="bf-fitcheck__headline-accent">And that's the point.</span></h2>
+<div id="bf-fit-section">
+  <div class="fit-container">
+
+    <!-- HEADLINE -->
+    <div class="fit-headline-wrapper">
+      <h2 class="fit-headline">Real talk: This isn't for everyone.</h2>
+      <p class="fit-subline">And that's the point.</p>
     </div>
 
-    <!-- PAIN/AWARENESS BLOCK -->
-    <div class="bf-fitcheck__awareness">
-      <p class="bf-fitcheck__awareness-text">You are already stretched. The last thing you need is <span class="bf-fitcheck__highlight">another thing you buy on Tuesday</span>, feel great about on Wednesday, and forget exists by the following Monday.</p>
+    <!-- OPENING QUOTE -->
+    <div class="opening-quote-card">
+      <p class="opening-quote">
+        You are already stretched. The last thing you need is
+        <strong>another thing you buy on Tuesday</strong>, feel great about on Wednesday,
+        and forget exists by the following Monday.
+      </p>
     </div>
 
-    <!-- THESIS STATEMENT - Major Visual Moment -->
-    <div class="bf-fitcheck__thesis">
-      <p class="bf-fitcheck__thesis-text">This only works if you can protect a small, real block of time every week.</p>
-      <p class="bf-fitcheck__thesis-emphasis">Not aspirational time. <span class="bf-fitcheck__handwritten">Real time.</span></p>
+    <!-- THESIS STATEMENT -->
+    <div class="thesis-wrapper">
+      <p class="thesis-line">
+        This only works if you can protect a small, real block of time every week.
+      </p>
+      <p class="thesis-emphasis">
+        Not aspirational time. <span class="underline-emphasis">Real time.</span>
+      </p>
     </div>
 
-    <!-- SELF-IDENTIFICATION: Asymmetric Comparison -->
-    <div class="bf-fitcheck__comparison">
-      
-      <!-- LEFT: Disqualifiers (smaller, muted) -->
-      <div class="bf-fitcheck__disqualify">
-        <span class="bf-fitcheck__label bf-fitcheck__label--muted">Walk away if...</span>
-        <ul class="bf-fitcheck__list bf-fitcheck__list--muted">
+    <!-- COMPARISON GRID -->
+    <div class="comparison-grid">
+
+      <!-- LEFT: Walk Away If (Smaller, Subtle) -->
+      <div class="disqualify-column">
+        <h3 class="column-label disqualify-label">Walk away if...</h3>
+        <ul class="disqualify-list">
           <li>You're looking for overnight results</li>
           <li>You can't protect 25 minutes a day</li>
           <li>You want done-for-you, not coached</li>
@@ -32,557 +41,642 @@
         </ul>
       </div>
 
-      <!-- RIGHT: Qualifiers (dominant, illustrated) -->
-      <div class="bf-fitcheck__qualify">
-        <span class="bf-fitcheck__label bf-fitcheck__label--vibrant">You're ready if...</span>
-        <ul class="bf-fitcheck__list bf-fitcheck__list--vibrant">
-          <li class="bf-fitcheck__qualify-item">
-            <div class="bf-fitcheck__qualify-icon">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <rect x="4" y="8" width="40" height="32" rx="4" fill="#E0F2F1" stroke="#0F766E" stroke-width="2"/>
-                <line x1="4" y1="16" x2="44" y2="16" stroke="#0F766E" stroke-width="2"/>
-                <rect x="8" y="20" width="6" height="6" rx="1" fill="#10B981"/>
-                <rect x="16" y="20" width="6" height="6" rx="1" fill="#10B981"/>
-                <rect x="24" y="20" width="6" height="6" rx="1" fill="#10B981"/>
-                <rect x="8" y="28" width="6" height="6" rx="1" fill="#10B981"/>
-                <rect x="16" y="28" width="6" height="6" rx="1" fill="#10B981"/>
-                <rect x="24" y="28" width="6" height="6" rx="1" fill="#D1FAE5"/>
-                <rect x="32" y="28" width="6" height="6" rx="1" fill="#D1FAE5"/>
-                <path d="M32 20L35 23L40 17" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+      <!-- RIGHT: You're Ready If (Larger, Dominant) -->
+      <div class="qualify-column">
+        <h3 class="column-label qualify-label">You're ready if...</h3>
+        <div class="qualify-items">
+
+          <!-- Item 1: 90 days commitment -->
+          <div class="qualify-item">
+            <div class="qualify-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M7 13L9 15L12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 17L9 19L12 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <div class="bf-fitcheck__qualify-content">
-              <strong>You can commit to 90 days without bailing</strong>
-              <span>Momentum builds — but only if you stay</span>
+            <div class="qualify-content">
+              <p class="qualify-title">You can commit to 90 days without bailing</p>
+              <p class="qualify-subtitle">Momentum builds — but only if you stay</p>
             </div>
-          </li>
-          <li class="bf-fitcheck__qualify-item">
-            <div class="bf-fitcheck__qualify-icon">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <circle cx="24" cy="24" r="18" fill="#E0F2F1" stroke="#0F766E" stroke-width="2"/>
-                <path d="M24 12V24L32 28" stroke="#0F766E" stroke-width="2.5" stroke-linecap="round"/>
-                <circle cx="24" cy="24" r="3" fill="#10B981"/>
-                <path d="M14 8L18 12" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
-                <path d="M34 8L30 12" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+          </div>
+
+          <!-- Item 2: 3+ hours/week -->
+          <div class="qualify-item">
+            <div class="qualify-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
               </svg>
             </div>
-            <div class="bf-fitcheck__qualify-content">
-              <strong>You can protect 3+ hours per week</strong>
-              <span>That's just 25 minutes a day</span>
+            <div class="qualify-content">
+              <p class="qualify-title">You can protect 3+ hours per week</p>
+              <p class="qualify-subtitle">That's just 25 minutes a day</p>
             </div>
-          </li>
-          <li class="bf-fitcheck__qualify-item">
-            <div class="bf-fitcheck__qualify-icon">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <path d="M8 40L24 8L40 40H8Z" fill="#E0F2F1" stroke="#0F766E" stroke-width="2" stroke-linejoin="round"/>
-                <circle cx="24" cy="28" r="4" fill="#10B981"/>
-                <path d="M24 20V24" stroke="#0F766E" stroke-width="2" stroke-linecap="round"/>
-                <path d="M20 36L24 32L28 36" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <line x1="16" y1="40" x2="32" y2="40" stroke="#0F766E" stroke-width="2" stroke-dasharray="2 2"/>
+          </div>
+
+          <!-- Item 3: Roadmap not videos -->
+          <div class="qualify-item">
+            <div class="qualify-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6L9 3L15 6L21 3V18L15 21L9 18L3 21V6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <line x1="9" y1="3" x2="9" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="15" y1="6" x2="15" y2="21" stroke="currentColor" stroke-width="1.5"/>
               </svg>
             </div>
-            <div class="bf-fitcheck__qualify-content">
-              <strong>You want a roadmap, not another video library</strong>
-              <span>Clear direction beats endless content</span>
+            <div class="qualify-content">
+              <p class="qualify-title">You want a roadmap, not another video library</p>
+              <p class="qualify-subtitle">Clear direction beats endless content</p>
             </div>
-          </li>
-          <li class="bf-fitcheck__qualify-item">
-            <div class="bf-fitcheck__qualify-icon">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <circle cx="18" cy="20" r="8" fill="#E0F2F1" stroke="#0F766E" stroke-width="2"/>
-                <circle cx="30" cy="20" r="8" fill="#D1FAE5" stroke="#0F766E" stroke-width="2"/>
-                <path d="M18 32C18 32 20 38 24 38C28 38 30 32 30 32" stroke="#0F766E" stroke-width="2" stroke-linecap="round"/>
-                <path d="M22 40L24 44L26 40" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M14 16L16 18L20 14" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M28 16L30 18L34 14" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+          </div>
+
+          <!-- Item 4: Ready for feedback -->
+          <div class="qualify-item">
+            <div class="qualify-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L14 9H20L15 13L17 19L12 15L7 19L9 13L4 9H10L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M12 8V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="12" cy="14" r="1" fill="currentColor"/>
               </svg>
             </div>
-            <div class="bf-fitcheck__qualify-content">
-              <strong>You're ready for feedback that makes you better</strong>
-              <span>Growth requires honest input</span>
+            <div class="qualify-content">
+              <p class="qualify-title">You're ready for feedback that makes you better</p>
+              <p class="qualify-subtitle">Growth requires honest input</p>
             </div>
-          </li>
-          <li class="bf-fitcheck__qualify-item">
-            <div class="bf-fitcheck__qualify-icon">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                <circle cx="24" cy="16" r="8" fill="#10B981"/>
-                <path d="M24 8L24 4" stroke="#0F766E" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="12" cy="32" r="6" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
-                <circle cx="36" cy="32" r="6" fill="#D1FAE5" stroke="#0F766E" stroke-width="1.5"/>
-                <path d="M18 30L24 24L30 30" stroke="#0F766E" stroke-width="2" stroke-linecap="round"/>
-                <path d="M12 38V42" stroke="#0F766E" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M36 38V42" stroke="#0F766E" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M24 24V20" stroke="#0F766E" stroke-width="2" stroke-linecap="round"/>
+          </div>
+
+          <!-- Item 5: Done guessing alone -->
+          <div class="qualify-item">
+            <div class="qualify-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 20C4 16.6863 7.58172 14 12 14C16.4183 14 20 16.6863 20 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M16 6L18 4M18 4L20 6M18 4V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <div class="bf-fitcheck__qualify-content">
-              <strong>You're done guessing alone</strong>
-              <span>You want Bailey in your corner</span>
+            <div class="qualify-content">
+              <p class="qualify-title">You're done guessing alone</p>
+              <p class="qualify-subtitle">You want Bailey in your corner</p>
             </div>
-          </li>
-        </ul>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <!-- AUTHORITY STATEMENT -->
-    <div class="bf-fitcheck__authority">
-      <p class="bf-fitcheck__authority-text"><span class="bf-fitcheck__authority-emphasis">I only want you here if you're actually going to show up.</span> Otherwise, save your money. I'd rather have 50 committed people than 200 who ghost by Week 2.</p>
+    <!-- AUTHORITY CARD -->
+    <div class="authority-card">
+      <p class="authority-text authority-emphasis">
+        I only want you here if you're actually going to show up.
+      </p>
+      <p class="authority-text">
+        Otherwise, save your money. I'd rather have 50 committed people than 200 who ghost by Week 2.
+      </p>
     </div>
 
-    <!-- TIME BREAKDOWN - Visual Proof -->
-    <div class="bf-fitcheck__time-proof">
-      <div class="bf-fitcheck__time-visual">
-        <svg viewBox="0 0 120 60" fill="none" aria-hidden="true">
-          <rect x="10" y="15" width="100" height="30" rx="6" fill="#E0F2F1"/>
-          <rect x="14" y="19" width="18" height="22" rx="3" fill="#10B981"/>
-          <text x="23" y="33" font-size="8" fill="white" text-anchor="middle" font-weight="600">25m</text>
-          <rect x="36" y="19" width="18" height="22" rx="3" fill="#34D399" opacity="0.7"/>
-          <rect x="58" y="19" width="18" height="22" rx="3" fill="#34D399" opacity="0.5"/>
-          <rect x="80" y="19" width="18" height="22" rx="3" fill="#34D399" opacity="0.3"/>
-          <text x="60" y="55" font-size="7" fill="#64748B" text-anchor="middle">per day</text>
+    <!-- TIME BREAKDOWN -->
+    <div class="time-breakdown">
+      <div class="time-visual">
+        <svg class="calendar-visual" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="5" width="24" height="32" rx="4" fill="#2E6A62"/>
+          <text x="18" y="42" font-size="8" fill="#2E6A62" text-anchor="middle" font-weight="600" font-family="system-ui">25m</text>
+
+          <rect x="34" y="5" width="24" height="32" rx="4" fill="#B8D8D1" opacity="0.4"/>
+
+          <rect x="62" y="5" width="24" height="32" rx="4" fill="#2E6A62"/>
+          <text x="74" y="42" font-size="8" fill="#2E6A62" text-anchor="middle" font-weight="600" font-family="system-ui">25m</text>
+
+          <rect x="90" y="5" width="24" height="32" rx="4" fill="#2E6A62"/>
+          <text x="102" y="42" font-size="8" fill="#2E6A62" text-anchor="middle" font-weight="600" font-family="system-ui">25m</text>
+
+          <rect x="118" y="5" width="24" height="32" rx="4" fill="#B8D8D1" opacity="0.4"/>
+
+          <rect x="146" y="5" width="24" height="32" rx="4" fill="#2E6A62"/>
+          <text x="158" y="42" font-size="8" fill="#2E6A62" text-anchor="middle" font-weight="600" font-family="system-ui">25m</text>
+
+          <rect x="174" y="5" width="24" height="32" rx="4" fill="#2E6A62"/>
+          <text x="186" y="42" font-size="8" fill="#2E6A62" text-anchor="middle" font-weight="600" font-family="system-ui">25m</text>
         </svg>
+        <p class="time-caption">per day</p>
       </div>
-      <div class="bf-fitcheck__time-text">
-        <p class="bf-fitcheck__time-headline">3 hours a week = <span class="bf-fitcheck__time-accent">25 minutes a day</span></p>
-        <p class="bf-fitcheck__time-detail">Not flawless execution. Not every single day. Just protected enough that you make real progress instead of spinning.</p>
+      <div class="time-text">
+        <p class="time-main">
+          3 hours a week = <span class="time-highlight">25 minutes a day</span>
+        </p>
+        <p class="time-supporting">
+          Not flawless execution. Not every single day. Just protected enough that you make real progress instead of spinning.
+        </p>
       </div>
     </div>
 
     <!-- BRIDGE -->
-    <p class="bf-fitcheck__bridge">If you're reading this and nodding, keep going.</p>
-
-    <svg class="bf-fitcheck__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M12 4L12 20M12 20L6 14M12 20L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <p class="fit-bridge">If you're reading this and nodding, keep going.</p>
+    <svg class="fit-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
+
   </div>
 </div>
 
 <style>
 /* ============================================
-   FIT CHECK SECTION - PERSUASION CHECKPOINT
-   "Make the right people say 'oh shit, that's me'"
+   FIT SECTION — Premium Modern Design
    ============================================ */
 
-
-/* OGG Font */
+/* Ogg Font */
 @font-face {
   font-family: 'Ogg';
-  src: url("data:font/truetype;base64,AAEAAAAQAQAABAAARFNJRwAAAAIAAIUsAAAACEdQT1PH5Kx8AABsnAAAGJBPUy8yc8+PqgAAAYgAAABgY21hcAEJAaIAAAL0AAAAZGN2dCAc2Qr+AAASSAAAAJBmcGdtnjYV0gAAA1gAAA4VZ2FzcAAAABAAAGyUAAAACGdseWZZZXW9AAATYAAAUKJoZWFkF3P8fAAAAQwAAAA2aGhlYQh+AxgAAAFEAAAAJGhtdHiXQgI5AAAB6AAAAQxsb2NhHZw1LgAAEtgAAACIbWF4cAOLEq0AAAFoAAAAIG5hbWV7C7IeAABkBAAACG1wb3N0/7gAMgAAbHQAAAAgcHJlcGL64+QAABFwAAAA1g") format("truetype");
+  src: url("data:font/truetype;base64,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WLBAYFlmsAFjYbACJUZhOCMgPCM4GyEgIEYjR7ABKyNhOCFZsTABFCstsEcssQA6Ky6xMAEUKy2wSCyxADsrISMgIDywBiNCIzixMAEUK7AGQy6wMCstsEkssAAVIEewACNCsgABARUUEy6wNiotsEossAAVIEewACNCsgABARUUEy6wNiotsEsssQABFBOwNyotsEwssDkqLbBNLLAAFkUjIC4gRoojYTixMAEUKy2wTiywCiNCsE0rLbBPLLIAAEYrLbBQLLIAAUYrLbBRLLIBAEYrLbBSLLIBAUYrLbBTLLIAAEcrLbBULLIAAUcrLbBVLLIBAEcrLbBWLLIBAUcrLbBXLLMAAABDKy2wWCyzAAEAQystsFksswEAAEMrLbBaLLMBAQBDKy2wWyyzAAABQystsFwsswABAUMrLbBdLLMBAAFDKy2wXiyzAQEBQystsF8ssgAARSstsGAssgABRSstsGEssgEARSstsGIssgEBRSstsGMssgAASCstsGQssgABSCstsGUssgEASCstsGYssgEBSCstsGcsswAAAEQrLbBoLLMAAQBEKy2waSyzAQAARCstsGosswEBAEQrLbBrLLMAAAFEKy2wbCyzAAEBRCstsG0sswEAAUQrLbBuLLMBAQFEKy2wbyyxADwrLrEwARQrLbBwLLEAPCuwQCstsHEssQA8K7BBKy2wciywABaxADwrsEIrLbBzLLEBPCuwQCstsHQssQE8K7BBKy2wdSywABaxATwrsEIrLbB2LLEAPSsusTABFCstsHcssQA9K7BAKy2weCyxAD0rsEErLbB5LLEAPSuwQistsHossQE9K7BAKy2weyyxAT0rsEErLbB8LLEBPSuwQistsH0ssQA+Ky6xMAEUKy2wfiyxAD4rsEArLbB/LLEAPiuwQSstsIAssQA+K7BCKy2wgSyxAT4rsEArLbCCLLEBPiuwQSstsIMssQE+K7BCKy2whCyxAD8rLrEwARQrLbCFLLEAPyuwQCstsIYssQA/K7BBKy2whyyxAD8rsEIrLbCILLEBPyuwQCstsIkssQE/K7BBKy2wiiyxAT8rsEIrLbCLLLILAANFUFiwBhuyBAIDRVgjIRshWVlCK7AIZbADJFB4sQUBFUVYMFktAAAAAEu4AMhSWLEBAY5ZsAG5CAAIAGNwsQAHQrYAADUmHQUAKrEAB0JADEIEOgQqCCIEGAUFCiqxAAdCQAxGAj4CMgYmAh0DBQoqsQAMQr4QwA7ACsAIwAZAAAUACyqxABFCvgBAAEAAQABAAEAABQALKrkAAwAARLEkAYhRWLBAiFi5AAMAZESxKAGIUVi4CACIWLkAAwBkRFkbsScBiFFYugiAAAEEQIhjVFi5AAMAZERZWVlZWUAMRAI8AiwGJAIaAwUOKrgB/4WwBI2xAgBEswVkBgBERAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYABgAYABgCOf/2/wECOf/2/wEAZgBmAAcABwK6AYsCugGLAIwAjAAKAAoCtQAAAy8B9AAA/vUCv//2Ay8B/v/2/vUAXQBdACQAJADE/2oAzP9lAF0AXQAkACQDTAHyA1UB8AAABk8GTwZPBk8G9gfJCC0IuglvChsKsQuSDBBMow3iDmUPQg/oECYQuRERER4SnBMvE70UVBVgFkgXOReqGDUYlhjfGVkZuBo4GxsboRv/HGEc8R1AHfsegB66HzEfmiALIIcgzyFDIa0iUiMLI5MkACQjJGoktSU0JbkmPSaxJwYniCgCKFEACgBQ/xYFNgNCABcCRAJZAmUCeQKCAqMCuwLRAvgEQ0GLAlEBdgF1APsABAAcABYBtAF8AWwBKgEEAAUAGgAZAV0BTgEpAQcABAe") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-#bf-fitcheck {
-  --bf-color-primary: #0F766E;
-  --bf-color-primary-light: #10B981;
-  --bf-color-bg: #F8FFFE;
-  --bf-color-surface: #E0F2F1;
-  --bf-color-text: #1E293B;
-  --bf-color-text-muted: #64748B;
-  --bf-color-accent: #10B981;
-  --bf-color-danger: #DC2626;
-  --bf-color-danger-muted: #F87171;
-  
-  background: var(--bf-color-bg);
-  padding: 80px 24px;
-  position: relative;
-  overflow: hidden;
+/* CSS Variables */
+#bf-fit-section {
+  /* Background */
+  --bg-main: #F9FCFB;
+  --bg-card-light: #FFF9F5;
+  --bg-card-disqualify: #FEF6F4;
+  --bg-card-qualify: #FFFFFF;
+  --bg-authority: #2E6A62;
+
+  /* Text */
+  --text-primary: #1A2D2A;
+  --text-secondary: #4A5856;
+  --text-muted: #7A8886;
+  --text-on-teal: #FFFFFF;
+
+  /* Accents */
+  --accent-teal: #2E6A62;
+  --accent-coral: #E8B4A8;
+  --accent-mint: #B8D8D1;
+  --accent-highlight: #FEF3E8;
+
+  /* Borders & Shadows */
+  --border-subtle: rgba(46, 106, 98, 0.08);
+  --border-medium: rgba(46, 106, 98, 0.15);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Spacing */
+  --space-xs: clamp(0.5rem, 1.2vw, 0.75rem);
+  --space-sm: clamp(0.75rem, 1.8vw, 1rem);
+  --space-md: clamp(1rem, 2.5vw, 1.5rem);
+  --space-lg: clamp(1.5rem, 3.5vw, 2.25rem);
+  --space-xl: clamp(2rem, 4.5vw, 3rem);
+  --space-2xl: clamp(3rem, 7vw, 5rem);
+  --space-3xl: clamp(4rem, 10vw, 8rem);
 }
 
-/* Subtle background texture */
-#bf-fitcheck::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: 
-    radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 85% 80%, rgba(15, 118, 110, 0.06) 0%, transparent 40%);
-  pointer-events: none;
+#bf-fit-section {
+  width: 100%;
+  max-width: 100%;
+  background: var(--bg-main);
+  padding: var(--space-3xl) var(--space-lg);
+  overflow-x: clip;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.bf-fitcheck__wrapper {
+.fit-container {
   max-width: 1100px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  width: 100%;
 }
 
 /* ============================================
-   HERO: Headline
+   HEADLINE
    ============================================ */
-.bf-fitcheck__hero {
+.fit-headline-wrapper {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: var(--space-2xl);
 }
 
-.bf-fitcheck__headline {
+.fit-headline {
   font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.fit-subline {
+  font-family: 'Ogg', Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.2;
-  color: var(--bf-color-text);
-  margin: 0;
-  letter-spacing: -0.02em;
-}
-
-.bf-fitcheck__headline-accent {
-  display: block;
-  color: var(--bf-color-primary);
-  font-style: italic;
-  margin-top: 8px;
-}
-
-/* ============================================
-   AWARENESS BLOCK: Pain Copy
-   ============================================ */
-.bf-fitcheck__awareness {
-  background: white;
-  border-radius: 16px;
-  padding: 32px 40px;
-  margin-bottom: 48px;
-  box-shadow: 0 4px 24px rgba(15, 118, 110, 0.08);
-  border-left: 4px solid var(--bf-color-primary);
-}
-
-.bf-fitcheck__awareness-text {
-  font-size: 1.25rem;
-  line-height: 1.7;
-  color: var(--bf-color-text);
+  color: var(--accent-teal);
   margin: 0;
 }
 
-.bf-fitcheck__highlight {
-  background: linear-gradient(180deg, transparent 60%, rgba(16, 185, 129, 0.25) 60%);
-  padding: 0 4px;
-  font-weight: 600;
+/* ============================================
+   OPENING QUOTE
+   ============================================ */
+.opening-quote-card {
+  background: var(--bg-card-light);
+  border-left: 4px solid var(--accent-teal);
+  border-radius: 8px;
+  padding: var(--space-lg) var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.opening-quote {
+  font-size: clamp(1.125rem, 2.8vw, 1.375rem);
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.opening-quote strong {
+  font-weight: 700;
+  color: var(--accent-teal);
+  background: var(--accent-highlight);
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
 }
 
 /* ============================================
-   THESIS STATEMENT: The Big Moment
+   THESIS STATEMENT
    ============================================ */
-.bf-fitcheck__thesis {
+.thesis-wrapper {
   text-align: center;
-  margin-bottom: 64px;
-  padding: 48px 24px;
+  margin-bottom: var(--space-2xl);
+  padding: 0 var(--space-md);
 }
 
-.bf-fitcheck__thesis-text {
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
+.thesis-line {
+  font-weight: 600;
+  font-size: clamp(1.25rem, 3.2vw, 1.75rem);
   line-height: 1.5;
-  color: var(--bf-color-text);
-  margin: 0 0 24px 0;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-md) 0;
 }
 
-.bf-fitcheck__thesis-emphasis {
+.thesis-emphasis {
   font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  color: var(--bf-color-primary);
+  font-style: italic;
+  font-size: clamp(1.5rem, 3.8vw, 2.125rem);
+  color: var(--accent-teal);
   margin: 0;
 }
 
-.bf-fitcheck__handwritten {
-  font-style: italic;
+.underline-emphasis {
   position: relative;
   display: inline-block;
 }
 
-.bf-fitcheck__handwritten::after {
+.underline-emphasis::after {
   content: '';
   position: absolute;
-  bottom: 4px;
+  bottom: -2px;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 3px;
-  background: var(--bf-color-accent);
+  background: var(--accent-coral);
   border-radius: 2px;
 }
 
 /* ============================================
-   COMPARISON: Asymmetric Layout
+   COMPARISON GRID
    ============================================ */
-.bf-fitcheck__comparison {
+.comparison-grid {
   display: grid;
   grid-template-columns: 35% 65%;
-  gap: 32px;
-  margin-bottom: 64px;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
   align-items: start;
 }
 
-/* LEFT: Disqualifiers (muted) */
-.bf-fitcheck__disqualify {
-  padding: 28px;
-  background: #FEF2F2;
+/* LEFT: Disqualifiers */
+.disqualify-column {
+  background: var(--bg-card-disqualify);
+  border: 1px solid var(--border-subtle);
   border-radius: 12px;
-  border: 1px solid rgba(220, 38, 38, 0.15);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
 }
 
-.bf-fitcheck__label {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 600;
+.column-label {
+  font-weight: 700;
+  font-size: clamp(0.7rem, 1.6vw, 0.85rem);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 20px;
+  margin: 0 0 var(--space-md) 0;
 }
 
-.bf-fitcheck__label--muted {
-  color: #991B1B;
+.disqualify-label {
+  color: #B07D70;
 }
 
-.bf-fitcheck__label--vibrant {
-  color: var(--bf-color-primary);
+.qualify-label {
+  color: var(--accent-teal);
 }
 
-.bf-fitcheck__list {
+.disqualify-list {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
-.bf-fitcheck__list--muted li {
-  font-size: 0.95rem;
-  color: #7F1D1D;
-  padding: 10px 0 10px 28px;
+.disqualify-list li {
+  font-weight: 500;
+  font-size: clamp(0.9rem, 2vw, 0.975rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  padding-left: 1.75rem;
   position: relative;
-  border-bottom: 1px solid rgba(220, 38, 38, 0.1);
+  margin-bottom: 0.875rem;
 }
 
-.bf-fitcheck__list--muted li:last-child {
-  border-bottom: none;
+.disqualify-list li:last-child {
+  margin-bottom: 0;
 }
 
-.bf-fitcheck__list--muted li::before {
+.disqualify-list li::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23DC2626' stroke-width='2'/%3E%3Cpath d='M15 9L9 15M9 9L15 15' stroke='%23DC2626' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
+  top: 0.35em;
+  width: 14px;
+  height: 14px;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7' cy='7' r='6' stroke='%23E8B4A8' stroke-width='1.5'/%3E%3Cpath d='M9 5L5 9M5 5L9 9' stroke='%23E8B4A8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 
-/* RIGHT: Qualifiers (dominant) */
-.bf-fitcheck__qualify {
-  padding: 36px;
-  background: white;
+/* RIGHT: Qualifiers */
+.qualify-column {
+  background: var(--bg-card-qualify);
+  border: 2px solid var(--border-medium);
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(15, 118, 110, 0.12);
-  border: 2px solid var(--bf-color-surface);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
 }
 
-.bf-fitcheck__list--vibrant {
+.qualify-items {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--space-lg);
 }
 
-.bf-fitcheck__qualify-item {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
+.qualify-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: var(--space-md);
+  align-items: start;
 }
 
-.bf-fitcheck__qualify-icon {
+.qualify-icon {
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent-mint) 0%, #D4E8E3 100%);
+  border-radius: 12px;
+  padding: 10px;
+  color: var(--accent-teal);
 }
 
-.bf-fitcheck__qualify-icon svg {
+.qualify-icon svg {
   width: 100%;
   height: 100%;
 }
 
-.bf-fitcheck__qualify-content {
+.qualify-content {
   flex: 1;
 }
 
-.bf-fitcheck__qualify-content strong {
-  display: block;
-  font-size: 1.1rem;
-  color: var(--bf-color-text);
-  margin-bottom: 6px;
-  line-height: 1.4;
-}
-
-.bf-fitcheck__qualify-content span {
-  font-size: 0.95rem;
-  color: var(--bf-color-text-muted);
+.qualify-title {
+  font-weight: 600;
+  font-size: clamp(1rem, 2.4vw, 1.125rem);
   line-height: 1.5;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
 }
 
-/* ============================================
-   AUTHORITY STATEMENT
-   ============================================ */
-.bf-fitcheck__authority {
-  background: linear-gradient(135deg, var(--bf-color-primary), #0D9488);
-  border-radius: 16px;
-  padding: 40px 48px;
-  margin-bottom: 56px;
-  position: relative;
-  overflow: hidden;
-}
-
-.bf-fitcheck__authority::before {
-  content: '"';
-  position: absolute;
-  top: -20px;
-  left: 20px;
-  font-family: 'Ogg', Georgia, serif;
-  font-size: 120px;
-  color: rgba(255, 255, 255, 0.15);
-  line-height: 1;
-}
-
-.bf-fitcheck__authority-text {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: white;
+.qualify-subtitle {
+  font-weight: 400;
+  font-size: clamp(0.875rem, 2vw, 0.9375rem);
+  line-height: 1.6;
+  color: var(--text-muted);
   margin: 0;
-  position: relative;
-  z-index: 1;
-}
-
-.bf-fitcheck__authority-emphasis {
-  font-family: 'Ogg', Georgia, serif;
-  font-size: 1.35rem;
-  display: block;
-  margin-bottom: 12px;
 }
 
 /* ============================================
-   TIME PROOF: Visual Breakdown
+   AUTHORITY CARD
    ============================================ */
-.bf-fitcheck__time-proof {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  background: var(--bf-color-surface);
+.authority-card {
+  background: linear-gradient(135deg, var(--bg-authority) 0%, #245750 100%);
   border-radius: 16px;
-  padding: 40px;
-  margin-bottom: 56px;
+  padding: var(--space-xl);
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.bf-fitcheck__time-visual {
+.authority-text {
+  font-weight: 500;
+  font-size: clamp(1.0625rem, 2.6vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--text-on-teal);
+  margin: 0;
+}
+
+.authority-emphasis {
+  font-family: 'Ogg', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.125rem, 2.8vw, 1.375rem);
+  margin-bottom: var(--space-sm) !important;
+}
+
+/* ============================================
+   TIME BREAKDOWN
+   ============================================ */
+.time-breakdown {
+  background: var(--accent-highlight);
+  border-radius: 12px;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.time-visual {
   flex-shrink: 0;
-  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.bf-fitcheck__time-visual svg {
-  width: 100%;
+.calendar-visual {
+  width: clamp(140px, 25vw, 200px);
   height: auto;
 }
 
-.bf-fitcheck__time-text {
+.time-caption {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--accent-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+}
+
+.time-text {
   flex: 1;
+  max-width: 600px;
 }
 
-.bf-fitcheck__time-headline {
+.time-main {
   font-family: 'Ogg', Georgia, serif;
-  font-size: 1.75rem;
-  color: var(--bf-color-text);
-  margin: 0 0 12px 0;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-sm) 0;
 }
 
-.bf-fitcheck__time-accent {
-  color: var(--bf-color-primary);
+.time-highlight {
+  color: var(--accent-teal);
 }
 
-.bf-fitcheck__time-detail {
-  font-size: 1.05rem;
-  color: var(--bf-color-text-muted);
-  line-height: 1.6;
+.time-supporting {
+  font-weight: 400;
+  font-size: clamp(0.95rem, 2.2vw, 1.0625rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
   margin: 0;
 }
 
 /* ============================================
-   BRIDGE: CTA to Continue
+   BRIDGE / CTA
    ============================================ */
-.bf-fitcheck__bridge {
+.fit-bridge {
   text-align: center;
   font-family: 'Ogg', Georgia, serif;
-  font-size: 1.35rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   font-style: italic;
-  color: var(--bf-color-primary);
-  margin: 0 0 24px 0;
+  color: var(--accent-teal);
+  margin: 0 0 var(--space-md) 0;
 }
 
-.bf-fitcheck__arrow {
+.fit-arrow {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   margin: 0 auto;
-  color: var(--bf-color-primary);
+  color: var(--accent-teal);
   animation: bounce 2s ease-in-out infinite;
 }
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+  50% { transform: translateY(6px); }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+.opening-quote-card,
+.comparison-grid,
+.authority-card,
+.time-breakdown {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opening-quote-card,
+  .comparison-grid,
+  .authority-card,
+  .time-breakdown {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .fit-arrow {
+    animation: none;
+  }
 }
 
 /* ============================================
    RESPONSIVE
    ============================================ */
-@media (max-width: 768px) {
-  #bf-fitcheck {
-    padding: 56px 16px;
-  }
-  
-  .bf-fitcheck__comparison {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  .bf-fitcheck__disqualify {
-    order: 2;
-  }
-  
-  .bf-fitcheck__qualify {
-    order: 1;
-  }
-  
-  .bf-fitcheck__awareness {
-    padding: 24px;
-  }
-  
-  .bf-fitcheck__authority {
-    padding: 32px 24px;
-  }
-  
-  .bf-fitcheck__time-proof {
-    flex-direction: column;
-    text-align: center;
-    padding: 32px 24px;
-  }
-  
-  .bf-fitcheck__qualify-item {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-  
-  .bf-fitcheck__qualify-icon {
-    width: 64px;
-    height: 64px;
+@media (min-width: 768px) {
+  .time-breakdown {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
   }
 }
 
-@media (max-width: 350px) {
-  .bf-fitcheck__headline {
-    font-size: 2rem;
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
-  
-  .bf-fitcheck__thesis-emphasis {
-    font-size: 1.5rem;
+
+  .disqualify-column {
+    order: 2;
   }
-  
-  .bf-fitcheck__qualify-content strong {
-    font-size: 1rem;
+
+  .qualify-column {
+    order: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  #bf-fit-section {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .qualify-item {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .qualify-icon {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
   }
 }
 </style>
+
+<script>
+(function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('#bf-fit-section .opening-quote-card, #bf-fit-section .comparison-grid, #bf-fit-section .authority-card, #bf-fit-section .time-breakdown').forEach(el => {
+    observer.observe(el);
+  });
+})();
+</script>
