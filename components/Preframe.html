@@ -138,7 +138,7 @@
       <!-- THE NUMBERS - Huge and dramatic -->
       <div class="bf-preframe__proof-numbers">
         <div class="bf-preframe__proof-stat">
-          <span class="bf-preframe__proof-num" data-count="45">45</span>
+          <span class="bf-preframe__proof-num" data-count="11">11</span>
           <span class="bf-preframe__proof-label">spots</span>
         </div>
         <span class="bf-preframe__proof-at">at</span>
@@ -180,11 +180,11 @@
         <span class="bf-preframe__urgency-badge">2</span>
         <span class="bf-preframe__urgency-text">It's capped at about <strong class="bf-preframe__coral">100 seats</strong> so the support actually works.</span>
         <!-- Progress indicator -->
-        <div class="bf-preframe__scarcity" aria-label="45 of 100 seats taken">
+        <div class="bf-preframe__scarcity" aria-label="11 of 100 seats taken">
           <div class="bf-preframe__scarcity-bar">
-            <div class="bf-preframe__scarcity-fill" style="--fill: 45%"></div>
+            <div class="bf-preframe__scarcity-fill" style="--fill: 11%"></div>
           </div>
-          <span class="bf-preframe__scarcity-text">45/100 taken</span>
+          <span class="bf-preframe__scarcity-text">11/100 taken</span>
         </div>
       </li>
       <li class="bf-preframe__urgency-item" style="--delay: 2">
@@ -314,14 +314,11 @@
   box-sizing: border-box;
 }
 
-/* Content wrapper - full width for Framer embed */
+/* Content wrapper for consistent width */
 #bf-preframe > * {
-  max-width: 100%;
-  width: 100%;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 /* ============================================
@@ -331,7 +328,7 @@
 .bf-preframe__headline {
   font-family: 'Ogg', Georgia, serif;
   font-size: clamp(1.75rem, 5vw, 2.25rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.2;
   color: var(--text);
   margin: 0 auto 28px;
@@ -920,7 +917,7 @@
 
 .bf-preframe__scarcity-fill {
   height: 100%;
-  width: var(--fill, 45%);
+  width: var(--fill, 11%);
   background: linear-gradient(90deg, var(--coral) 0%, var(--coral-soft) 100%);
   border-radius: 3px;
   transition: width 1s ease-out;
