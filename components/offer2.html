@@ -356,6 +356,40 @@ html, body { width: 100%; overflow-x: hidden; }
   letter-spacing: 0.04em;
 }
 
+/* Pillar card typography refinements */
+.pillar-group .card-title {
+  font-size: clamp(26px, 2.3vw, 40px);
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--teal-deep);
+  margin: 0 0 clamp(0.75rem, 1.6vw, 1rem) 0;
+}
+
+.pillar-group .card-subtitle {
+  font-family: 'Satoshi Variable';
+  font-weight: 400;
+  font-size: clamp(1rem, 1.7vw, 1.1rem);
+  line-height: 1.6;
+  color: rgba(0,0,0,0.72);
+  margin: 0 0 clamp(0.65rem, 1.4vw, 0.85rem) 0;
+}
+
+.pillar-group .card-list {
+  font-family: 'Satoshi Variable';
+  font-weight: 400;
+  font-size: clamp(1rem, 1.6vw, 1.05rem);
+  line-height: 1.6;
+  color: rgba(0,0,0,0.72);
+  gap: clamp(0.5rem, 1vw, 0.65rem);
+  max-width: 38ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pillar-group .card-list li {
+  margin: 0.45rem 0;
+}
+
 .microcopy {
   display: inline-block;
   padding: 0.15rem 0.45rem;
@@ -1057,11 +1091,30 @@ html, body { width: 100%; overflow-x: hidden; }
 
 <!-- CTA -->
 <div class="cta-section reveal">
-  <a href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator/" target="_top" rel="noopener" class="cta-button">
+  <a
+    href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="cta-button"
+  >
     Join the 90-Day Accelerator →
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
 </div>
+
+  <script>
+    // Framer embed-safe: force full-page navigation (new tab)
+    document.querySelectorAll('a.cta-button').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const url = a.getAttribute('href');
+        if (!url) return;
+        if (a.getAttribute('target') === '_blank') {
+          e.preventDefault();
+          window.open(url, '_blank', 'noopener,noreferrer');
+        }
+      });
+    });
+  </script>
 
 </div>
 </section>
