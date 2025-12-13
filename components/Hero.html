@@ -1,179 +1,246 @@
 <div id="bf-hero">
-  <!-- Abstract background blob -->
-  <div class="bf-hero__bg-blob"></div>
+  <!-- Subtle background texture -->
+  <div class="bf-hero__bg-texture"></div>
 
   <!-- Decorative sparkles -->
-  <div class="bf-hero__sparkle bf-hero__sparkle--1"></div>
-  <div class="bf-hero__sparkle bf-hero__sparkle--2"></div>
-  <div class="bf-hero__sparkle bf-hero__sparkle--3"></div>
+  <svg class="bf-hero__sparkle bf-hero__sparkle--1" viewBox="0 0 24 24" fill="none">
+    <path d="M12 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7z" fill="currentColor"/>
+  </svg>
+  <svg class="bf-hero__sparkle bf-hero__sparkle--2" viewBox="0 0 24 24" fill="none">
+    <path d="M12 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7z" fill="currentColor"/>
+  </svg>
+  <svg class="bf-hero__sparkle bf-hero__sparkle--3" viewBox="0 0 24 24" fill="none">
+    <path d="M12 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7z" fill="currentColor"/>
+  </svg>
 
   <div class="bf-hero__container">
-    <!-- LEFT COLUMN: Content (5 cols on desktop) -->
-    <div class="bf-hero__left">
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         TOP SECTION: Preheader + Headline + Subheadline
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <header class="bf-hero__header">
       <!-- Preheader / Eyebrow -->
-      <p class="bf-hero__eyebrow">
-        <span class="bf-hero__eyebrow-line"></span>
+      <p class="bf-hero__preheader">
+        <span class="bf-hero__preheader-line"></span>
         Not another course. A 90-day implementation sprint.
       </p>
 
       <!-- Headline -->
       <h1 class="bf-hero__headline">
-        <span class="bf-hero__headline-light">You don't need another course.</span>
-        <span class="bf-hero__headline-bold">You need Bailey to tell you exactly what to do for the next 90 days.</span>
+        You don't need another course. <em>You need Bailey to tell you exactly what to do for the next 90 days.</em>
       </h1>
 
       <!-- Subheadline -->
       <p class="bf-hero__subheadline">
         The 90-Day Etsy Empire Accelerator is a focused sprint to install a simple Etsy system in real life time blocks. You get a personalized roadmap, weekly implementation calls, a 90-day WhatsApp support pod, and Bailey Bot 24/7 so one question never costs you a whole week.
       </p>
+    </header>
 
-      <!-- FIRST Label -->
-      <p class="bf-hero__section-label">First, here's what you get</p>
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         FIRST CARD: Bailey Bot (Dominant)
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="bf-hero__section bf-hero__section--first">
+      <p class="bf-hero__section-label">
+        <span class="bf-hero__label-line"></span>
+        First, here's what you get
+      </p>
 
-      <!-- Core Offer Stack (compact) -->
-      <ul class="bf-hero__offer-stack">
-        <li>
-          <svg class="bf-hero__check" viewBox="0 0 20 20" fill="none">
-            <circle cx="10" cy="10" r="9" fill="#E0F2F1" stroke="#00B4A6" stroke-width="1.5"/>
-            <path d="M6 10l3 3 5-6" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Wake up knowing exactly what to work on today</span>
-        </li>
-        <li>
-          <svg class="bf-hero__check" viewBox="0 0 20 20" fill="none">
-            <circle cx="10" cy="10" r="9" fill="#E0F2F1" stroke="#00B4A6" stroke-width="1.5"/>
-            <path d="M6 10l3 3 5-6" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Bailey looks at your work and says "yes, keep going" or "no, try this instead"</span>
-        </li>
-        <li>
-          <svg class="bf-hero__check" viewBox="0 0 20 20" fill="none">
-            <circle cx="10" cy="10" r="9" fill="#E0F2F1" stroke="#00B4A6" stroke-width="1.5"/>
-            <path d="M6 10l3 3 5-6" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span>Actually follow through on something for once, with someone in your corner the whole way</span>
-        </li>
-      </ul>
-
-      <!-- SECOND Label -->
-      <p class="bf-hero__section-label bf-hero__section-label--second">Second, you get the whole 90-day system</p>
-
-      <!-- Second Block (compact list) -->
-      <ul class="bf-hero__system-list">
-        <li>Kickoff + setup so you start clean and know the rules of the game</li>
-        <li>Personalized 90-day roadmap built for your shop and your available time</li>
-        <li>12 weekly implementation calls (shop reviews, troubleshooting, exactly what to do next)</li>
-        <li>90-day WhatsApp support pod for questions in between calls</li>
-        <li>Lifetime library access to Bailey's full catalog, including future programs</li>
-        <li>Lifetime community + ongoing calls so you're not starting over after Day 90</li>
-      </ul>
-
-      <!-- CTA -->
-      <div class="bf-hero__cta-wrapper">
-        <a href="#bf-pricing" class="bf-hero__cta">
-          Join the 90-Day Accelerator
-          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <p class="bf-hero__microcopy"><span>Capped seats</span><span>Real support</span></p>
-      </div>
-    </div>
-
-    <!-- RIGHT COLUMN: Bailey Bot Card (7 cols on desktop, dominant) -->
-    <div class="bf-hero__right">
       <div class="bf-hero__bot-card">
-        <!-- Rails/track SVG background -->
-        <svg class="bf-hero__rails" viewBox="0 0 300 400" fill="none" preserveAspectRatio="none">
-          <path class="bf-hero__rails-path" d="M50 0 Q100 100, 150 150 T250 250 Q200 300, 150 350 T50 400" stroke="rgba(255,255,255,0.2)" stroke-width="2" fill="none" stroke-dasharray="8,6"/>
+        <!-- Subtle rails background -->
+        <svg class="bf-hero__rails" viewBox="0 0 400 500" fill="none" preserveAspectRatio="none">
+          <path class="bf-hero__rails-path" d="M50 0 Q150 100, 200 180 T350 280 Q300 380, 200 450 T50 500" stroke="rgba(255,255,255,0.15)" stroke-width="2" fill="none" stroke-dasharray="10,8"/>
+          <path d="M350 50 Q280 150, 250 220 T100 350" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" fill="none" stroke-dasharray="6,6"/>
         </svg>
 
         <!-- Badge -->
         <div class="bf-hero__badge">
-          <svg class="bf-hero__badge-sparkle" viewBox="0 0 20 20" fill="none">
-            <path d="M10 2l1.5 4.5L16 8l-4.5 1.5L10 14l-1.5-4.5L4 8l4.5-1.5L10 2z" fill="#FF6B6B" opacity="0.9"/>
+          <svg class="bf-hero__badge-sparkle" viewBox="0 0 16 16" fill="none">
+            <path d="M8 1l1.5 4.5L14 7l-4.5 1.5L8 13l-1.5-4.5L2 7l4.5-1.5L8 1z" fill="currentColor"/>
           </svg>
           Included with the Accelerator
         </div>
 
-        <!-- Avatar -->
-        <div class="bf-hero__avatar-wrapper">
-          <div class="bf-hero__avatar">
-            <img src="BAILEY_BOT_AVATAR_PLACEHOLDER" alt="Bailey Bot avatar - AI assistant for Etsy sellers" onerror="this.style.display='none'"/>
-            <svg class="bf-hero__avatar-fallback" viewBox="0 0 80 80" fill="none">
-              <circle cx="40" cy="40" r="38" fill="#FFFFFF" stroke="#00B4A6" stroke-width="2"/>
-              <circle cx="40" cy="32" r="14" fill="#E0F2F1"/>
-              <path d="M20 62c0-11 9-20 20-20s20 9 20 20" fill="#E0F2F1"/>
-              <circle cx="40" cy="40" r="6" fill="#00B4A6"/>
-              <path d="M34 38h12M40 32v12" stroke="#0D9488" stroke-width="2" stroke-linecap="round"/>
+        <!-- Bot Content -->
+        <div class="bf-hero__bot-content">
+          <!-- Avatar -->
+          <div class="bf-hero__avatar-wrapper">
+            <div class="bf-hero__avatar">
+              <img src="BAILEY_BOT_AVATAR_PLACEHOLDER" alt="Bailey Bot avatar - AI assistant for Etsy sellers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+              <svg class="bf-hero__avatar-fallback" viewBox="0 0 80 80" fill="none">
+                <circle cx="40" cy="40" r="38" fill="#FFFFFF" stroke="#2E6A62" stroke-width="2"/>
+                <circle cx="40" cy="30" r="12" fill="#E8DED6"/>
+                <ellipse cx="40" cy="55" rx="18" ry="14" fill="#E8DED6"/>
+                <circle cx="35" cy="28" r="2" fill="#2E6A62"/>
+                <circle cx="45" cy="28" r="2" fill="#2E6A62"/>
+                <path d="M36 35 Q40 39, 44 35" stroke="#2E6A62" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <!-- Spark decoration -->
+            <svg class="bf-hero__avatar-spark" viewBox="0 0 20 20" fill="none">
+              <path d="M10 1l1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5 1.5-4z" fill="#D9A3A6"/>
             </svg>
           </div>
-          <!-- Spark element near avatar -->
-          <svg class="bf-hero__avatar-spark" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2l2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6z" fill="#FF6B6B" opacity="0.8"/>
-          </svg>
-        </div>
 
-        <!-- Bot Title -->
-        <h2 class="bf-hero__bot-title">Meet Bailey Bot (24/7)</h2>
-        <p class="bf-hero__bot-subtitle">Instant Etsy answers, in Bailey's voice, while you're actually working.</p>
+          <!-- Title & Subtitle -->
+          <h2 class="bf-hero__bot-title">Meet Bailey Bot (24/7)</h2>
+          <p class="bf-hero__bot-subtitle">Instant Etsy answers, in Bailey's voice, while you're actually working.</p>
 
-        <!-- Situational Hook -->
-        <p class="bf-hero__bot-hook">
-          It's 10:38 PM. Kids are finally down. You sit to work, then you freeze on something small. Title. Tags. What to list next. Whether this idea is even worth finishing. Normally you'd spiral, open 12 tabs, and lose the night.
-        </p>
+          <!-- Situational Hook -->
+          <p class="bf-hero__bot-hook">
+            It's 10:38 PM. Kids are finally down. You sit to work, then you freeze on something small. Title. Tags. What to list next. Whether this idea is even worth finishing. Normally you'd spiral, open 12 tabs, and lose the night.
+          </p>
 
-        <!-- Transition Line -->
-        <p class="bf-hero__bot-transition">
-          <strong>With Bailey Bot:</strong> you ask. You get the answer. You keep moving.
-        </p>
+          <!-- Transition Line -->
+          <p class="bf-hero__bot-transition">
+            <strong>With Bailey Bot:</strong> you ask. You get the answer. You keep moving.
+          </p>
 
-        <!-- Fake Video UI -->
-        <div class="bf-hero__video-preview">
-          <button class="bf-hero__play-btn" aria-label="Preview how Bailey Bot works">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M8 5v14l11-7L8 5z" fill="#FFFFFF"/>
-            </svg>
-          </button>
-          <span class="bf-hero__video-label">Tap to preview how it works</span>
-        </div>
-
-        <!-- Chat Bubbles Preview -->
-        <div class="bf-hero__chat-preview">
-          <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
-            <span>What should my title be for this sticker?</span>
+          <!-- Fake Video Preview -->
+          <div class="bf-hero__video-preview">
+            <button class="bf-hero__play-btn" aria-label="Preview how Bailey Bot works">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M8 5v14l11-7L8 5z" fill="#FFFFFF"/>
+              </svg>
+            </button>
+            <span class="bf-hero__video-label">Tap to preview how it works</span>
           </div>
-          <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
-            <span>Use this format. Put the keyword first. Keep it human. Here are 3 options.</span>
-          </div>
-          <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
-            <span>What should I list next based on my shop?</span>
-          </div>
-          <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
-            <span>List this next. Here's why. Here's the checklist so you can hit publish.</span>
-          </div>
-        </div>
 
-        <!-- Micro-close -->
-        <p class="bf-hero__micro-close">This is what stops the Tuesday-night stall.</p>
+          <!-- Chat Bubbles -->
+          <div class="bf-hero__chat-preview">
+            <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
+              <span>What should my title be for this sticker?</span>
+            </div>
+            <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
+              <span>Use this format. Put the keyword first. Keep it human. Here are 3 options.</span>
+            </div>
+            <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
+              <span>What should I list next based on my shop?</span>
+            </div>
+            <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
+              <span>List this next. Here's why. Here's the checklist so you can hit publish.</span>
+            </div>
+          </div>
 
-        <!-- Footer Chips -->
-        <div class="bf-hero__chips">
-          <span class="bf-hero__chip">24/7</span>
-          <span class="bf-hero__chip">Bailey-trained</span>
-          <span class="bf-hero__chip">Decision help</span>
+          <!-- Feature Chips -->
+          <div class="bf-hero__chips">
+            <span class="bf-hero__chip">24/7</span>
+            <span class="bf-hero__chip">Bailey-trained</span>
+            <span class="bf-hero__chip">Decision help</span>
+          </div>
+
+          <!-- Micro-close -->
+          <p class="bf-hero__micro-close">This is what stops the Tuesday-night stall.</p>
         </div>
 
         <!-- Decorative dots -->
         <div class="bf-hero__dot bf-hero__dot--1"></div>
         <div class="bf-hero__dot bf-hero__dot--2"></div>
-        <div class="bf-hero__dot bf-hero__dot--3"></div>
       </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         SECOND CARD: 90-Day System
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="bf-hero__section bf-hero__section--second">
+      <p class="bf-hero__section-label bf-hero__section-label--alt">
+        <span class="bf-hero__label-line"></span>
+        Second, you get the whole 90-day system
+      </p>
+
+      <div class="bf-hero__system-card">
+        <!-- Main List (6 items) -->
+        <ul class="bf-hero__system-list">
+          <li>
+            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
+              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Kickoff + setup so you start clean and know the rules of the game</span>
+          </li>
+          <li>
+            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
+              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Personalized 90-day roadmap built for your shop and your available time</span>
+          </li>
+          <li>
+            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
+              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>12 weekly implementation calls (shop reviews, troubleshooting, exactly what to do next)</span>
+          </li>
+          <li>
+            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
+              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>90-day WhatsApp support pod for questions in between calls</span>
+          </li>
+          <li>
+            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
+              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Lifetime library access to Bailey's full catalog, including future programs</span>
+          </li>
+          <li>
+            <svg class="bf-hero__check" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="#E8F5F3" stroke="#2E6A62" stroke-width="1.5"/>
+              <path d="M8 12l3 3 5-6" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Lifetime community + ongoing calls so you're not starting over after Day 90</span>
+          </li>
+        </ul>
+
+        <!-- Divider -->
+        <div class="bf-hero__divider"></div>
+
+        <!-- Supporting Bullets (3 items) -->
+        <ul class="bf-hero__support-list">
+          <li>
+            <span class="bf-hero__bullet"></span>
+            <span>Wake up knowing exactly what to work on today.</span>
+          </li>
+          <li>
+            <span class="bf-hero__bullet"></span>
+            <span>Bailey looks at your work and says "yes, keep going" or "no, try this instead."</span>
+          </li>
+          <li>
+            <span class="bf-hero__bullet"></span>
+            <span>Actually follow through on something for once, with someone in your corner the whole way.</span>
+          </li>
+        </ul>
+
+        <!-- Subtle decoration -->
+        <svg class="bf-hero__system-deco" viewBox="0 0 100 100" fill="none">
+          <circle cx="85" cy="15" r="8" fill="#D9A3A6" opacity="0.15"/>
+          <circle cx="90" cy="85" r="5" fill="#2E6A62" opacity="0.1"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         CTA SECTION
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="bf-hero__cta-section">
+      <a href="#bf-pricing" class="bf-hero__cta">
+        Join the 90-Day Accelerator
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <p class="bf-hero__microcopy">
+        <span>Capped seats</span>
+        <span>Real support</span>
+      </p>
     </div>
   </div>
 </div>
 
 <style>
 /* ═══════════════════════════════════════════════════════════════════════════
-   FONTS - Ogg & Satoshi Variable
+   FONTS - Ogg & Satoshi Variable (Base64 Embedded)
    ═══════════════════════════════════════════════════════════════════════════ */
 @font-face {
   font-family: 'Ogg';
@@ -192,30 +259,43 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   CSS VARIABLES - Fresh Mint & Coral (Option 1)
+   CSS VARIABLES - Soft, Warm Color Palette
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero {
-  /* Color Palette */
-  --bg: #FAFCFC;
-  --primary: #00B4A6;
-  --primary-dark: #0D9488;
-  --primary-light: #E0F2F1;
-  --secondary: #FF6B6B;
-  --secondary-dark: #E85D5D;
-  --text: #1A1F1E;
-  --text-muted: #64748B;
-  --border: #E0F2F1;
-  --highlight: #FEF3C7;
+  /* Base Colors - Warm & Sophisticated */
+  --bg-main: #FDF8F4;
+  --bg-secondary: #FAF7F2;
+
+  /* Text Colors */
+  --text-primary: #203332;
+  --text-body: #5E6E6C;
+  --text-muted: #8E9E9C;
+
+  /* Accent Colors - Muted & Warm */
+  --accent-teal: #2E6A62;
+  --accent-teal-light: #E8F5F3;
+  --accent-coral: #D9A3A6;
+  --accent-coral-dark: #C88E91;
+  --accent-cream: #E8DED6;
+
+  /* Card Backgrounds */
+  --card-bot: #2E6A62;
+  --card-bot-dark: #245750;
+  --card-system: #FAF7F2;
+
+  /* Functional Colors */
+  --border: #E8DED6;
+  --badge-bg: #FEF3C7;
+  --badge-text: #2E6A62;
   --white: #FFFFFF;
 
   /* Shadow System */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-  --shadow-glow: 0 0 32px rgba(0, 180, 166, 0.25);
+  --shadow-sm: 0 2px 4px rgba(32, 51, 50, 0.04);
+  --shadow-md: 0 4px 16px rgba(32, 51, 50, 0.08);
+  --shadow-lg: 0 8px 24px rgba(32, 51, 50, 0.10);
+  --shadow-card: 0 12px 40px rgba(32, 51, 50, 0.12);
 
   /* Spacing System */
-  --space-2xs: clamp(0.25rem, 0.5vw, 0.375rem);
   --space-xs: clamp(0.5rem, 1vw, 0.75rem);
   --space-sm: clamp(0.75rem, 1.5vw, 1rem);
   --space-md: clamp(1rem, 2vw, 1.5rem);
@@ -224,7 +304,7 @@
   --space-2xl: clamp(3rem, 6vw, 4rem);
   --space-3xl: clamp(4rem, 8vw, 6rem);
 
-  /* Prevent font synthesis */
+  /* Typography */
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -235,8 +315,8 @@
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero {
   position: relative;
-  background: var(--bg);
-  padding: var(--space-2xl) var(--space-md);
+  background: var(--bg-main);
+  padding: var(--space-3xl) clamp(1rem, 4vw, 2rem);
   overflow-x: clip;
   width: 100%;
   max-width: 100%;
@@ -248,300 +328,171 @@
   box-sizing: border-box;
 }
 
-/* Background blob */
-#bf-hero .bf-hero__bg-blob {
+/* Background texture (subtle paper grain) */
+#bf-hero .bf-hero__bg-texture {
   position: absolute;
-  top: -20%;
-  right: -10%;
-  width: 60%;
-  height: 80%;
-  background: radial-gradient(ellipse at center, var(--primary-light) 0%, transparent 70%);
-  opacity: 0.3;
-  z-index: 0;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.015;
   pointer-events: none;
+  z-index: 0;
 }
 
 /* Decorative sparkles */
 #bf-hero .bf-hero__sparkle {
   position: absolute;
-  width: 6px;
-  height: 6px;
-  background: var(--secondary);
-  border-radius: 50%;
-  opacity: 0.3;
+  width: 20px;
+  height: 20px;
+  color: var(--accent-coral);
+  opacity: 0.25;
   z-index: 1;
   pointer-events: none;
 }
-#bf-hero .bf-hero__sparkle--1 { top: 15%; left: 8%; }
-#bf-hero .bf-hero__sparkle--2 { top: 40%; left: 3%; width: 4px; height: 4px; }
-#bf-hero .bf-hero__sparkle--3 { top: 70%; right: 5%; width: 8px; height: 8px; opacity: 0.2; }
 
-/* Container - 12 col grid */
+#bf-hero .bf-hero__sparkle--1 {
+  top: 8%;
+  left: 5%;
+  width: 16px;
+  height: 16px;
+}
+
+#bf-hero .bf-hero__sparkle--2 {
+  top: 25%;
+  right: 8%;
+  width: 24px;
+  height: 24px;
+  opacity: 0.2;
+}
+
+#bf-hero .bf-hero__sparkle--3 {
+  bottom: 15%;
+  left: 10%;
+  width: 14px;
+  height: 14px;
+  opacity: 0.18;
+}
+
+/* Container - VERTICAL FLOW */
 #bf-hero .bf-hero__container {
   position: relative;
   z-index: 2;
-  max-width: 1280px;
+  max-width: 800px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-xl);
-  align-items: start;
-}
-
-@media (min-width: 1024px) {
-  #bf-hero .bf-hero__container {
-    grid-template-columns: 5fr 7fr;
-    gap: var(--space-2xl);
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   LEFT COLUMN - Content
+   HEADER SECTION - Preheader, Headline, Subheadline
    ═══════════════════════════════════════════════════════════════════════════ */
-#bf-hero .bf-hero__left {
-  order: 2;
+#bf-hero .bf-hero__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
 }
 
-@media (min-width: 1024px) {
-  #bf-hero .bf-hero__left {
-    order: 1;
-    padding-top: var(--space-lg);
-  }
-}
-
-/* Eyebrow */
-#bf-hero .bf-hero__eyebrow {
+/* Preheader */
+#bf-hero .bf-hero__preheader {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 600;
   font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--secondary);
-  margin: 0 0 var(--space-sm) 0;
-  display: flex;
+  color: var(--accent-coral);
+  margin: 0 0 var(--space-md) 0;
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
 }
 
-#bf-hero .bf-hero__eyebrow-line {
+#bf-hero .bf-hero__preheader-line {
   display: block;
   width: 40px;
   height: 2px;
-  background: var(--secondary);
+  background: var(--accent-coral);
 }
 
 /* Headline */
 #bf-hero .bf-hero__headline {
   font-family: 'Ogg', Georgia, serif;
   font-weight: 700;
-  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-size: clamp(2rem, 6vw, 3.5rem);
   line-height: 1.15;
   letter-spacing: -0.02em;
-  color: var(--text);
-  margin: 0 0 var(--space-md) 0;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-lg) 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#bf-hero .bf-hero__headline-light {
+#bf-hero .bf-hero__headline em {
+  font-style: normal;
   display: block;
-  font-family: 'Satoshi Variable', sans-serif;
-  font-weight: 500;
-  color: var(--text-muted);
-  font-size: 0.5em;
-  margin-bottom: var(--space-2xs);
-  letter-spacing: 0;
-}
-
-#bf-hero .bf-hero__headline-bold {
-  display: block;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Subheadline */
 #bf-hero .bf-hero__subheadline {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 500;
-  font-size: clamp(0.95rem, 2vw, 1.125rem);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   line-height: 1.65;
-  color: var(--text-muted);
-  margin: 0 0 var(--space-lg) 0;
-}
-
-/* Section Labels */
-#bf-hero .bf-hero__section-label {
-  font-family: 'Satoshi Variable', sans-serif;
-  font-weight: 700;
-  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--primary-dark);
-  margin: 0 0 var(--space-sm) 0;
-}
-
-#bf-hero .bf-hero__section-label--second {
-  margin-top: var(--space-lg);
-  color: var(--text-muted);
-}
-
-/* Offer Stack (bullets) */
-#bf-hero .bf-hero__offer-stack {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--space-md) 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-#bf-hero .bf-hero__offer-stack li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-xs);
-  font-family: 'Satoshi Variable', sans-serif;
-  font-weight: 500;
-  font-size: clamp(0.9rem, 1.8vw, 1rem);
-  line-height: 1.5;
-  color: var(--text);
-}
-
-#bf-hero .bf-hero__check {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  margin-top: 2px;
-}
-
-/* System List (compact) */
-#bf-hero .bf-hero__system-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--space-xl) 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
-
-#bf-hero .bf-hero__system-list li {
-  font-family: 'Satoshi Variable', sans-serif;
-  font-weight: 400;
-  font-size: clamp(0.85rem, 1.6vw, 0.95rem);
-  line-height: 1.5;
-  color: var(--text-muted);
-  padding-left: var(--space-sm);
-  position: relative;
-}
-
-#bf-hero .bf-hero__system-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.5em;
-  width: 4px;
-  height: 4px;
-  background: var(--primary);
-  border-radius: 50%;
-}
-
-/* CTA Wrapper */
-#bf-hero .bf-hero__cta-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-sm);
-}
-
-/* CTA Button */
-#bf-hero .bf-hero__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-xs);
-  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
-  padding: clamp(0.875rem, 2vw, 1.125rem) clamp(1.5rem, 3vw, 2.5rem);
-  border-radius: 12px;
-  font-family: 'Satoshi Variable', sans-serif;
-  font-weight: 600;
-  font-size: clamp(0.95rem, 1.8vw, 1.0625rem);
-  letter-spacing: 0.02em;
-  color: var(--white);
-  text-decoration: none;
-  box-shadow: var(--shadow-md);
-  transition: all 200ms ease-out;
-  min-height: 48px;
-  cursor: pointer;
-  border: none;
-}
-
-#bf-hero .bf-hero__cta svg {
-  width: 20px;
-  height: 20px;
-  transition: transform 200ms ease-out;
-}
-
-#bf-hero .bf-hero__cta:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow-lg);
-  background: var(--secondary-dark);
-}
-
-#bf-hero .bf-hero__cta:hover svg {
-  transform: translateX(4px);
-}
-
-#bf-hero .bf-hero__cta:focus {
-  outline: 3px solid var(--secondary);
-  outline-offset: 4px;
-}
-
-/* Microcopy */
-#bf-hero .bf-hero__microcopy {
-  font-family: 'Satoshi Variable', sans-serif;
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--text-body);
   margin: 0;
-  display: flex;
-  gap: var(--space-xs);
-}
-
-#bf-hero .bf-hero__microcopy span::after {
-  content: ' \2022';
-  color: var(--text-muted);
-  margin-left: var(--space-xs);
-}
-
-#bf-hero .bf-hero__microcopy span:last-child::after {
-  content: '';
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   RIGHT COLUMN - Bailey Bot Card (DOMINANT)
+   SECTION LABELS
    ═══════════════════════════════════════════════════════════════════════════ */
-#bf-hero .bf-hero__right {
-  order: 1;
+#bf-hero .bf-hero__section {
+  margin-bottom: var(--space-2xl);
 }
 
-@media (min-width: 1024px) {
-  #bf-hero .bf-hero__right {
-    order: 2;
-  }
+#bf-hero .bf-hero__section-label {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-teal);
+  margin: 0 0 var(--space-md) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
 }
 
-/* Bot Card */
+#bf-hero .bf-hero__section-label--alt {
+  color: var(--accent-coral);
+}
+
+#bf-hero .bf-hero__label-line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: currentColor;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BAILEY BOT CARD (FIRST CARD - DOMINANT)
+   ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero .bf-hero__bot-card {
   position: relative;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, var(--card-bot) 0%, var(--card-bot-dark) 100%);
   border-radius: 28px;
-  padding: var(--space-xl);
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
-  border: 2px solid rgba(255, 255, 255, 0.15);
+  padding: clamp(2rem, 5vw, 3rem);
+  box-shadow: var(--shadow-card);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
 }
 
-#bf-hero .bf-hero__bot-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg), var(--shadow-glow), 0 12px 32px rgba(0, 0, 0, 0.15);
-}
-
-/* Rails SVG background */
+/* Rails background */
 #bf-hero .bf-hero__rails {
   position: absolute;
   top: 0;
@@ -549,13 +500,12 @@
   width: 100%;
   height: 100%;
   z-index: 0;
-  opacity: 0.4;
   pointer-events: none;
 }
 
 #bf-hero .bf-hero__rails-path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
 }
 
 /* Badge */
@@ -563,34 +513,43 @@
   position: absolute;
   top: var(--space-md);
   right: var(--space-md);
-  background: var(--highlight);
-  color: var(--primary-dark);
-  padding: 0.375rem 0.875rem;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  padding: 0.4rem 0.9rem;
   border-radius: 24px;
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 700;
   font-size: 0.65rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   box-shadow: var(--shadow-sm);
-  border: 1.5px solid rgba(13, 148, 136, 0.2);
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.35rem;
   z-index: 3;
 }
 
 #bf-hero .bf-hero__badge-sparkle {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
+  color: var(--accent-coral);
+}
+
+/* Bot Content */
+#bf-hero .bf-hero__bot-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Avatar */
 #bf-hero .bf-hero__avatar-wrapper {
   position: relative;
   display: inline-block;
-  margin-bottom: var(--space-md);
-  z-index: 2;
+  margin-bottom: var(--space-lg);
 }
 
 #bf-hero .bf-hero__avatar {
@@ -599,7 +558,7 @@
   border-radius: 50%;
   background: var(--white);
   box-shadow: var(--shadow-md);
-  border: 3px solid var(--white);
+  border: 4px solid var(--white);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -620,20 +579,21 @@
 }
 
 #bf-hero .bf-hero__avatar-fallback {
-  width: 80%;
-  height: 80%;
+  width: 75%;
+  height: 75%;
+  display: none;
 }
 
 #bf-hero .bf-hero__avatar-spark {
   position: absolute;
-  top: -8px;
-  right: -8px;
-  width: 24px;
-  height: 24px;
-  animation: bf-sparkRotate 4s linear infinite;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  animation: bf-sparkle-rotate 6s linear infinite;
 }
 
-@keyframes bf-sparkRotate {
+@keyframes bf-sparkle-rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
@@ -642,50 +602,41 @@
 #bf-hero .bf-hero__bot-title {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 700;
-  font-size: clamp(1.375rem, 3vw, 1.75rem);
+  font-size: clamp(1.5rem, 4vw, 2rem);
   color: var(--white);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   margin: 0 0 var(--space-xs) 0;
-  position: relative;
-  z-index: 2;
 }
 
 #bf-hero .bf-hero__bot-subtitle {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 500;
-  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.5;
-  margin: 0 0 var(--space-md) 0;
-  position: relative;
-  z-index: 2;
+  margin: 0 0 var(--space-lg) 0;
 }
 
 #bf-hero .bf-hero__bot-hook {
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 400;
-  font-size: clamp(0.85rem, 1.6vw, 0.95rem);
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
   color: rgba(255, 255, 255, 0.85);
-  line-height: 1.6;
-  margin: 0 0 var(--space-sm) 0;
-  font-style: italic;
-  position: relative;
-  z-index: 2;
+  line-height: 1.7;
+  margin: 0 0 var(--space-md) 0;
+  max-width: 580px;
 }
 
 #bf-hero .bf-hero__bot-transition {
   font-family: 'Satoshi Variable', sans-serif;
-  font-weight: 500;
-  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   color: var(--white);
   line-height: 1.5;
-  margin: 0 0 var(--space-lg) 0;
-  position: relative;
-  z-index: 2;
+  margin: 0 0 var(--space-xl) 0;
 }
 
 #bf-hero .bf-hero__bot-transition strong {
-  color: var(--highlight);
+  color: var(--badge-bg);
 }
 
 /* Video Preview */
@@ -693,10 +644,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-xs);
-  margin-bottom: var(--space-lg);
-  position: relative;
-  z-index: 2;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
 }
 
 #bf-hero .bf-hero__play-btn {
@@ -705,6 +654,7 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 2px solid rgba(255, 255, 255, 0.3);
   display: flex;
   align-items: center;
@@ -718,24 +668,24 @@
 #bf-hero .bf-hero__play-btn svg {
   width: 24px;
   height: 24px;
-  margin-left: 4px;
+  margin-left: 3px;
 }
 
 #bf-hero .bf-hero__play-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
   background: rgba(255, 255, 255, 0.3);
 }
 
 @keyframes bf-pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.08); opacity: 0.9; }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 #bf-hero .bf-hero__video-label {
   font-family: 'Satoshi Variable', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* Chat Preview */
@@ -743,58 +693,44 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  margin-bottom: var(--space-md);
-  position: relative;
-  z-index: 2;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: var(--space-lg);
 }
 
 #bf-hero .bf-hero__chat-bubble {
   max-width: 85%;
   padding: var(--space-sm) var(--space-md);
   font-family: 'Satoshi Variable', sans-serif;
-  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
   line-height: 1.5;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(16px);
 }
 
 #bf-hero .bf-hero__chat-bubble--user {
   align-self: flex-end;
-  max-width: 75%;
   background: var(--white);
-  color: var(--text);
+  color: var(--text-primary);
   border-radius: 16px 16px 4px 16px;
   box-shadow: var(--shadow-sm);
 }
 
 #bf-hero .bf-hero__chat-bubble--bot {
   align-self: flex-start;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   color: var(--white);
   border-radius: 16px 16px 16px 4px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Micro Close */
-#bf-hero .bf-hero__micro-close {
-  font-family: 'Satoshi Variable', sans-serif;
-  font-weight: 600;
-  font-size: clamp(0.85rem, 1.6vw, 0.95rem);
-  color: var(--highlight);
-  text-align: center;
-  margin: 0 0 var(--space-md) 0;
-  position: relative;
-  z-index: 2;
-}
-
-/* Footer Chips */
+/* Feature Chips */
 #bf-hero .bf-hero__chips {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
   justify-content: center;
-  position: relative;
-  z-index: 2;
+  margin-bottom: var(--space-lg);
 }
 
 #bf-hero .bf-hero__chip {
@@ -808,82 +744,283 @@
   color: var(--white);
 }
 
-/* Decorative Dots */
+/* Micro-close */
+#bf-hero .bf-hero__micro-close {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  color: var(--badge-bg);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Decorative dots */
 #bf-hero .bf-hero__dot {
   position: absolute;
   border-radius: 50%;
-  background: var(--secondary);
+  background: var(--accent-coral);
   opacity: 0.2;
   z-index: 1;
   pointer-events: none;
 }
 
 #bf-hero .bf-hero__dot--1 {
-  width: 8px;
-  height: 8px;
-  top: 20%;
-  right: 15%;
+  width: 10px;
+  height: 10px;
+  bottom: 15%;
+  left: 8%;
 }
 
 #bf-hero .bf-hero__dot--2 {
-  width: 5px;
-  height: 5px;
-  bottom: 30%;
-  left: 10%;
-}
-
-#bf-hero .bf-hero__dot--3 {
   width: 6px;
   height: 6px;
-  bottom: 15%;
-  right: 25%;
+  top: 25%;
+  right: 12%;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   MOBILE RESPONSIVE (<=768px)
+   90-DAY SYSTEM CARD (SECOND CARD)
+   ═══════════════════════════════════════════════════════════════════════════ */
+#bf-hero .bf-hero__system-card {
+  position: relative;
+  background: var(--card-system);
+  border-radius: 28px;
+  padding: clamp(2rem, 5vw, 3rem);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--border);
+  overflow: hidden;
+}
+
+/* System decoration */
+#bf-hero .bf-hero__system-deco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Main List */
+#bf-hero .bf-hero__system-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-lg) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+#bf-hero .bf-hero__system-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 500;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+#bf-hero .bf-hero__check {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-top: 1px;
+}
+
+/* Divider */
+#bf-hero .bf-hero__divider {
+  height: 1px;
+  background: var(--border);
+  margin: var(--space-lg) 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Support List */
+#bf-hero .bf-hero__support-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  position: relative;
+  z-index: 1;
+}
+
+#bf-hero .bf-hero__support-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+#bf-hero .bf-hero__bullet {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-coral);
+  margin-top: 8px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CTA SECTION
+   ═══════════════════════════════════════════════════════════════════════════ */
+#bf-hero .bf-hero__cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding-top: var(--space-lg);
+}
+
+#bf-hero .bf-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-coral-dark) 100%);
+  padding: clamp(1.125rem, 2.5vw, 1.5rem) clamp(2.5rem, 5vw, 4rem);
+  border-radius: 14px;
+  font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  letter-spacing: 0.02em;
+  color: var(--white);
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(217, 163, 166, 0.35);
+  transition: all 200ms ease-out;
+  min-height: 56px;
+  cursor: pointer;
+  border: none;
+}
+
+#bf-hero .bf-hero__cta svg {
+  width: 22px;
+  height: 22px;
+  transition: transform 200ms ease-out;
+}
+
+#bf-hero .bf-hero__cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(217, 163, 166, 0.45);
+}
+
+#bf-hero .bf-hero__cta:hover svg {
+  transform: translateX(4px);
+}
+
+#bf-hero .bf-hero__cta:focus {
+  outline: 3px solid var(--accent-coral);
+  outline-offset: 4px;
+}
+
+/* Microcopy */
+#bf-hero .bf-hero__microcopy {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+#bf-hero .bf-hero__microcopy span::after {
+  content: ' •';
+  color: var(--accent-cream);
+  margin-left: var(--space-xs);
+}
+
+#bf-hero .bf-hero__microcopy span:last-child::after {
+  content: '';
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE - MOBILE
    ═══════════════════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   #bf-hero {
-    background: var(--white);
-    padding: var(--space-lg) var(--space-sm);
+    padding: var(--space-2xl) var(--space-sm);
+  }
+
+  #bf-hero .bf-hero__header {
+    text-align: left;
+  }
+
+  #bf-hero .bf-hero__preheader {
+    justify-content: flex-start;
+  }
+
+  #bf-hero .bf-hero__headline {
+    text-align: left;
+  }
+
+  #bf-hero .bf-hero__subheadline {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   #bf-hero .bf-hero__bot-card {
-    margin-left: calc(-1 * var(--space-sm));
-    margin-right: calc(-1 * var(--space-sm));
-    border-radius: 0 0 24px 24px;
+    border-radius: 24px;
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  #bf-hero .bf-hero__bot-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  #bf-hero .bf-hero__video-preview {
+    align-items: flex-start;
+  }
+
+  #bf-hero .bf-hero__chips {
+    justify-content: flex-start;
+  }
+
+  #bf-hero .bf-hero__micro-close {
+    text-align: left;
+  }
+
+  #bf-hero .bf-hero__system-card {
+    border-radius: 24px;
     padding: var(--space-lg) var(--space-md);
   }
 
   #bf-hero .bf-hero__cta {
     width: 100%;
     min-height: 56px;
-    font-size: 1.0625rem;
-  }
-
-  #bf-hero .bf-hero__cta-wrapper {
-    width: 100%;
-    align-items: center;
-  }
-
-  #bf-hero .bf-hero__microcopy {
-    justify-content: center;
   }
 }
 
-/* Extra small screens (<=350px) */
-@media (max-width: 350px) {
-  #bf-hero {
-    --space-xl: 1.5rem;
-    --space-lg: 1.25rem;
-  }
-
+/* Extra small screens */
+@media (max-width: 400px) {
   #bf-hero .bf-hero__headline {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 
-  #bf-hero .bf-hero__bot-card {
-    padding: 1.25rem 1rem;
+  #bf-hero .bf-hero__bot-card,
+  #bf-hero .bf-hero__system-card {
+    padding: var(--space-md);
+  }
+
+  #bf-hero .bf-hero__badge {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: var(--space-md);
   }
 }
 
@@ -898,12 +1035,17 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  #bf-hero .bf-hero__chat-bubble {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Focus states for keyboard navigation */
-#bf-hero a:focus,
-#bf-hero button:focus {
-  outline: 3px solid var(--secondary);
+#bf-hero a:focus-visible,
+#bf-hero button:focus-visible {
+  outline: 3px solid var(--accent-coral);
   outline-offset: 4px;
 }
 </style>
@@ -918,21 +1060,32 @@
 
   function initHeroAnimations() {
     var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) return;
-
-    // Bot Card entrance animation
-    var botCard = document.querySelector('#bf-hero .bf-hero__bot-card');
-    if (botCard) {
-      var botObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            botCard.style.animation = 'bf-slideInRight 600ms ease-out forwards';
-            botObserver.unobserve(botCard);
-          }
-        });
-      }, { threshold: 0.2 });
-      botObserver.observe(botCard);
+    if (prefersReducedMotion) {
+      // Show chat bubbles immediately without animation
+      var bubbles = document.querySelectorAll('#bf-hero .bf-hero__chat-bubble');
+      bubbles.forEach(function(bubble) {
+        bubble.style.opacity = '1';
+        bubble.style.transform = 'none';
+      });
+      return;
     }
+
+    // Cards fade-slide animation
+    var cards = document.querySelectorAll('#bf-hero .bf-hero__bot-card, #bf-hero .bf-hero__system-card');
+    var cardObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'bf-fadeSlideUp 600ms ease-out forwards';
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    cards.forEach(function(card) {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      cardObserver.observe(card);
+    });
 
     // Chat bubbles sequential reveal
     var chatBubbles = document.querySelectorAll('#bf-hero .bf-hero__chat-bubble');
@@ -942,8 +1095,8 @@
           if (entry.isIntersecting) {
             chatBubbles.forEach(function(bubble, i) {
               setTimeout(function() {
-                bubble.style.animation = 'bf-slideUp 300ms ease-out forwards';
-              }, i * 150);
+                bubble.style.animation = 'bf-fadeSlideUp 400ms ease-out forwards';
+              }, 200 + (i * 150));
             });
             bubbleObserver.unobserve(entry.target);
           }
@@ -964,18 +1117,27 @@
       var railsObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            railsPath.style.animation = 'bf-drawPath 1200ms ease-out forwards';
+            railsPath.style.animation = 'bf-drawPath 1500ms ease-out forwards';
             railsObserver.unobserve(entry.target);
           }
         });
       }, { threshold: 0.2 });
 
+      var botCard = document.querySelector('#bf-hero .bf-hero__bot-card');
       if (botCard) railsObserver.observe(botCard);
     }
 
-    // Inject keyframes dynamically
+    // Inject keyframes
     var style = document.createElement('style');
-    style.textContent = '@keyframes bf-slideInRight { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } } @keyframes bf-slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } } @keyframes bf-drawPath { to { stroke-dashoffset: 0; } }';
+    style.textContent = [
+      '@keyframes bf-fadeSlideUp {',
+      '  from { opacity: 0; transform: translateY(30px); }',
+      '  to { opacity: 1; transform: translateY(0); }',
+      '}',
+      '@keyframes bf-drawPath {',
+      '  to { stroke-dashoffset: 0; }',
+      '}'
+    ].join('');
     document.head.appendChild(style);
   }
 })();
