@@ -227,7 +227,7 @@ html, body { width: 100%; overflow-x: hidden; }
 .offer-items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(0.875rem, 1.75vw, 1rem);
+  gap: clamp(0.55rem, 1vw, 0.75rem);
 }
 
 /* CARD - SQUARE */
@@ -235,17 +235,17 @@ html, body { width: 100%; overflow-x: hidden; }
   display: flex;
   flex-direction: column;
   background: var(--white);
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  box-shadow: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
   opacity: 0;
-  transform: translateY(15px);
+  transform: translateY(12px);
   border: 1px solid rgba(0,0,0,0.04);
   position: relative;
 }
 .offer-card.visible { opacity: 1; transform: translateY(0); }
-.offer-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+.offer-card:hover { transform: translateY(-2px); border-color: rgba(0,0,0,0.08); }
 
 .offer-card::before {
   content: '';
@@ -260,30 +260,31 @@ html, body { width: 100%; overflow-x: hidden; }
 
 /* CARD IMAGE - SQUARE */
 .card-visual {
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 3;
+  max-height: 230px;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(135deg, var(--bg-warm) 0%, #EDE8E0 100%);
+  background: none;
 }
 
 .card-visual img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.35s ease;
+  transition: none;
 }
-.offer-card:hover .card-visual img { transform: scale(1.03); }
+.offer-card:hover .card-visual img { transform: none; }
 
 /* CARD CONTENT */
 .card-content {
-  padding: clamp(0.625rem, 1.25vw, 0.75rem);
+  padding: clamp(0.45rem, 0.95vw, 0.6rem);
   flex: 1;
 }
 
 .card-title {
   font-family: 'Satoshi Variable';
   font-weight: 500;
-  font-size: clamp(0.75rem, 1.4vw, 0.85rem);
+  font-size: clamp(0.72rem, 1.3vw, 0.82rem);
   line-height: 1.4;
   color: var(--text-secondary);
 }
@@ -307,7 +308,7 @@ html, body { width: 100%; overflow-x: hidden; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 .graphic-container svg { width: 100%; height: 100%; max-width: 200px; }
 
