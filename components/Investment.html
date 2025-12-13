@@ -1,117 +1,210 @@
 <div id="bf-investment">
-  <!-- PART 1: THE INVESTMENT (PRICING BLOCK) -->
-  <div class="bf-investment__pricing">
-    <span class="bf-investment__pricing-label">The investment</span>
+  <!-- PART 1: THE INVESTMENT HEADLINE -->
+  <div class="bf-investment__header">
+    <span class="bf-investment__label">The investment</span>
+  </div>
 
-    <div class="bf-investment__pricing-card">
+  <!-- PART 2: PREMIUM PRICE CARD -->
+  <div class="bf-investment__pricing">
+    <div class="bf-investment__price-card">
+      <!-- Decorative corner accents -->
+      <div class="bf-investment__corner-accent bf-investment__corner-accent--tl"></div>
+      <div class="bf-investment__corner-accent bf-investment__corner-accent--br"></div>
+      
+      <!-- Background pattern -->
+      <div class="bf-investment__pattern-bg"></div>
+      
+      <!-- Price icon -->
+      <svg class="bf-investment__price-icon" viewBox="0 0 60 60" aria-hidden="true">
+        <circle cx="30" cy="30" r="27" fill="none" stroke="#123F3A" stroke-width="2"/>
+        <circle cx="30" cy="30" r="22" fill="#123F3A" opacity="0.05"/>
+        <text x="30" y="40" text-anchor="middle" font-family="'Ogg', Georgia, serif" font-size="28" font-weight="700" fill="#123F3A">$</text>
+      </svg>
+      
+      <!-- Pay in full -->
       <div class="bf-investment__price-primary">
-        <span class="bf-investment__price-prefix">Pay in full</span>
-        <span class="bf-investment__price-amount">$2,497</span>
+        <p class="bf-investment__price-label">Pay in full</p>
+        <p class="bf-investment__price-amount">$2,497</p>
+        <span class="bf-investment__value-badge">Best Value</span>
       </div>
 
-      <div class="bf-investment__price-divider"></div>
+      <!-- Decorative divider -->
+      <div class="bf-investment__divider">
+        <svg viewBox="0 0 200 12" preserveAspectRatio="none">
+          <path d="M 0,6 Q 50,2 100,6 T 200,6" stroke="#E8DED6" stroke-width="2" fill="none"/>
+          <circle cx="100" cy="6" r="3" fill="#D4AF37"/>
+        </svg>
+      </div>
 
+      <!-- Payment plan -->
       <div class="bf-investment__price-secondary">
-        <span class="bf-investment__price-prefix">Payment plan</span>
-        <span class="bf-investment__price-plan">$897 × 3</span>
-        <span class="bf-investment__price-total">($2,691 total)</span>
+        <p class="bf-investment__price-label">Payment plan</p>
+        <p class="bf-investment__price-plan">$897 × 3</p>
+        <p class="bf-investment__price-total">($2,691 total)</p>
       </div>
     </div>
 
     <p class="bf-investment__vip-note">Current members and VIPs receive a private rate through Bailey's member channels.</p>
   </div>
 
-  <!-- PART 2: WHAT MAKES THIS SAFE (PREMIUM GUARANTEE VISUAL) -->
+  <!-- PART 3: PREMIUM GUARANTEE VISUAL -->
   <div class="bf-investment__guarantees">
     <h3 class="bf-investment__guarantees-header">What makes this safe</h3>
 
-    <!-- Premium Gold Guarantee Visual -->
-    <div class="bf-investment__guarantee-visual">
-      <svg viewBox="0 0 400 280" class="bf-investment__guarantee-svg" aria-label="Guarantee badge showing 30-Day Clarity Guarantee and 90-Day Extension guarantee">
-        <!-- Gold badge background -->
-        <rect x="80" y="16" width="240" height="56" rx="8" fill="#D4AF37" opacity="0.15"/>
-        <rect x="80" y="16" width="240" height="56" rx="8" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+    <div class="bf-investment__guarantee-visual-wrapper">
+      <svg viewBox="0 0 600 400" class="bf-investment__guarantee-svg" aria-label="Premium guarantee certificate with 30-Day Clarity and 90-Day Extension guarantees">
+        <!-- Definitions -->
+        <defs>
+          <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#F4E4A6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" />
+          </linearGradient>
+          
+          <filter id="goldGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          
+          <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.1"/>
+          </filter>
+        </defs>
+        
+        <!-- Gold badge background with glow -->
+        <rect x="75" y="20" width="450" height="80" rx="12" fill="url(#goldGradient)" opacity="0.12"/>
+        <rect x="75" y="20" width="450" height="80" rx="12" fill="none" stroke="#D4AF37" stroke-width="3" filter="url(#goldGlow)"/>
+        
+        <!-- Decorative corner stars -->
+        <g class="bf-investment__decorative-stars">
+          <path d="M 95,60 L 102,50 L 109,60 L 102,70 Z" fill="#D4AF37" opacity="0.7"/>
+          <path d="M 491,60 L 498,50 L 505,60 L 498,70 Z" fill="#D4AF37" opacity="0.7"/>
+          <!-- Additional small stars -->
+          <circle cx="120" cy="45" r="2" fill="#D4AF37" opacity="0.5"/>
+          <circle cx="480" cy="45" r="2" fill="#D4AF37" opacity="0.5"/>
+          <circle cx="120" cy="75" r="2" fill="#D4AF37" opacity="0.5"/>
+          <circle cx="480" cy="75" r="2" fill="#D4AF37" opacity="0.5"/>
+        </g>
         
         <!-- GUARANTEE text -->
-        <text x="200" y="52" text-anchor="middle" font-family="'Ogg', Georgia, serif" font-size="26" font-weight="700" fill="#D4AF37" letter-spacing="0.08em">GUARANTEE</text>
+        <text x="300" y="70" text-anchor="middle" font-family="'Ogg', Georgia, serif" font-size="38" font-weight="700" fill="#D4AF37" letter-spacing="6">GUARANTEE</text>
         
-        <!-- Decorative stars -->
-        <path d="M 98,44 L 102,38 L 106,44 L 102,50 Z" fill="#D4AF37"/>
-        <path d="M 294,44 L 298,38 L 302,44 L 298,50 Z" fill="#D4AF37"/>
+        <!-- Decorative underline flourish -->
+        <path d="M 180,85 Q 300,95 420,85" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.5"/>
+        <circle cx="300" cy="90" r="3" fill="#D4AF37" opacity="0.6"/>
         
         <!-- 30-Day Card -->
-        <rect x="30" y="92" width="165" height="165" rx="12" fill="#FFFFFF" stroke="#E8DED6" stroke-width="2"/>
-        <rect x="30" y="92" width="165" height="5" rx="2.5 2.5 0 0" fill="#123F3A"/>
-        
-        <circle cx="112" cy="132" r="22" fill="#123F3A" opacity="0.08"/>
-        <text x="112" y="140" text-anchor="middle" font-size="24" fill="#123F3A">✓</text>
-        
-        <text x="112" y="172" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-weight="700" font-size="15" fill="#123F3A">30-Day Clarity</text>
-        
-        <text x="112" y="195" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-size="12" fill="#5E6E6C">
-          <tspan x="112">Show up. Follow the plan.</tspan>
-          <tspan x="112" dy="16">Still lost?</tspan>
-        </text>
-        <text x="112" y="235" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-weight="700" font-size="12" fill="#123F3A">Request full refund.</text>
+        <g class="bf-investment__guarantee-card" filter="url(#cardShadow)">
+          <rect x="75" y="130" width="210" height="220" rx="16" fill="#FFFFFF"/>
+          <rect x="75" y="130" width="210" height="220" rx="16" fill="none" stroke="#123F3A" stroke-width="3"/>
+          
+          <!-- Green accent bar -->
+          <rect x="75" y="130" width="210" height="8" rx="16 16 0 0" fill="#123F3A"/>
+          
+          <!-- Checkmark icon circle -->
+          <circle cx="180" cy="190" r="32" fill="#123F3A" opacity="0.08"/>
+          <circle cx="180" cy="190" r="26" fill="none" stroke="#123F3A" stroke-width="2" opacity="0.3"/>
+          <path d="M 164,190 L 175,201 L 196,180" stroke="#123F3A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          
+          <!-- Title -->
+          <text x="180" y="250" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-weight="700" font-size="20" fill="#123F3A">30-Day Clarity</text>
+          
+          <!-- Description -->
+          <text x="180" y="278" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-size="14" fill="#5E6E6C">
+            <tspan x="180">Follow the plan.</tspan>
+            <tspan x="180" dy="20">Still feel lost?</tspan>
+          </text>
+          
+          <!-- Action text -->
+          <text x="180" y="332" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-weight="700" font-size="15" fill="#123F3A">Request full refund</text>
+        </g>
         
         <!-- 90-Day Card -->
-        <rect x="205" y="92" width="165" height="165" rx="12" fill="#FFFFFF" stroke="#E8DED6" stroke-width="2"/>
-        <rect x="205" y="92" width="165" height="5" rx="2.5 2.5 0 0" fill="#D4AF37"/>
+        <g class="bf-investment__guarantee-card" filter="url(#cardShadow)">
+          <rect x="315" y="130" width="210" height="220" rx="16" fill="#FFFFFF"/>
+          <rect x="315" y="130" width="210" height="220" rx="16" fill="none" stroke="#D4AF37" stroke-width="3"/>
+          
+          <!-- Gold accent bar -->
+          <rect x="315" y="130" width="210" height="8" rx="16 16 0 0" fill="#D4AF37"/>
+          
+          <!-- Checkmark icon circle -->
+          <circle cx="420" cy="190" r="32" fill="#D4AF37" opacity="0.12"/>
+          <circle cx="420" cy="190" r="26" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.4"/>
+          <path d="M 404,190 L 415,201 L 436,180" stroke="#D4AF37" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          
+          <!-- Title -->
+          <text x="420" y="250" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-weight="700" font-size="20" fill="#123F3A">90-Day Extension</text>
+          
+          <!-- Description -->
+          <text x="420" y="278" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-size="14" fill="#5E6E6C">
+            <tspan x="420">Did the work.</tspan>
+            <tspan x="420" dy="20">No real progress?</tspan>
+          </text>
+          
+          <!-- Action text -->
+          <text x="420" y="332" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-weight="700" font-size="15" fill="#123F3A">Support continues</text>
+        </g>
         
-        <circle cx="287" cy="132" r="22" fill="#D4AF37" opacity="0.12"/>
-        <text x="287" y="140" text-anchor="middle" font-size="24" fill="#D4AF37">✓</text>
-        
-        <text x="287" y="172" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-weight="700" font-size="15" fill="#123F3A">90-Day Extension</text>
-        
-        <text x="287" y="195" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-size="12" fill="#5E6E6C">
-          <tspan x="287">Did the work.</tspan>
-          <tspan x="287" dy="16">No progress?</tspan>
-        </text>
-        <text x="287" y="235" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-weight="700" font-size="12" fill="#123F3A">Support continues.</text>
+        <!-- Bottom decorative flourish -->
+        <path d="M 220,375 Q 300,385 380,375" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.4"/>
+        <path d="M 250,380 Q 300,388 350,380" stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.3"/>
       </svg>
     </div>
   </div>
 
-  <!-- PART 3: THE CAP (100 STUDENTS) -->
-  <div class="bf-investment__cap">
-    <div class="bf-investment__cap-icon">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="8" r="4" stroke="#123F3A" stroke-width="2"/>
-        <path d="M6 20C6 17.2386 8.68629 15 12 15C15.3137 15 18 17.2386 18 20" stroke="#123F3A" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="5" cy="10" r="2.5" stroke="#D4AF37" stroke-width="1.5"/>
-        <circle cx="19" cy="10" r="2.5" stroke="#D4AF37" stroke-width="1.5"/>
-      </svg>
+  <!-- PART 4: SOCIAL PROOF (CAP + SOLD OUT) -->
+  <div class="bf-investment__social-proof">
+    <!-- Cohort Cap -->
+    <div class="bf-investment__cap">
+      <div class="bf-investment__cap-icon">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="8" r="4" stroke="#123F3A" stroke-width="2"/>
+          <path d="M6 20C6 17.2386 8.68629 15 12 15C15.3137 15 18 17.2386 18 20" stroke="#123F3A" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="5" cy="10" r="2.5" stroke="#D4AF37" stroke-width="1.5"/>
+          <circle cx="19" cy="10" r="2.5" stroke="#D4AF37" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <p class="bf-investment__cap-text">This is capped at <strong>100 students</strong> so Bailey can review shops and answer questions without you getting lost in the crowd.</p>
     </div>
-    <p class="bf-investment__cap-text">This is capped at <strong>100 students</strong> so Bailey can review shops and answer questions without you getting lost in the crowd.</p>
+
+    <!-- Sold Out Bonus -->
+    <div class="bf-investment__soldout">
+      <div class="bf-investment__soldout-badge">SOLD OUT</div>
+      <div class="bf-investment__soldout-content">
+        <p class="bf-investment__soldout-title">Fast Action Bonus</p>
+        <p class="bf-investment__soldout-detail">The first 25 live buyers received a Personal Shop Audit Package with Bailey — a 15-minute diagnostic call plus a custom shop audit video. Those spots filled during the live launch.</p>
+      </div>
+    </div>
   </div>
 
-  <!-- PART 4: SOLD OUT PROOF -->
-  <div class="bf-investment__soldout">
-    <div class="bf-investment__soldout-badge">SOLD OUT</div>
-    <div class="bf-investment__soldout-content">
-      <p class="bf-investment__soldout-title">Fast Action Bonus</p>
-      <p class="bf-investment__soldout-detail">The first 25 live buyers received a Personal Shop Audit Package with Bailey — a 15-minute diagnostic call plus a custom shop audit video. Those spots filled during the live launch.</p>
-    </div>
-  </div>
-
-  <!-- PART 5: BRIDGE TO NEXT SECTION -->
+  <!-- PART 5: BRIDGE TEXT -->
   <div class="bf-investment__bridge">
     <p class="bf-investment__bridge-text">Now let me show you what happens inside the 90 days, week by week, so you know exactly what you are signing up for.</p>
   </div>
 
-  <!-- PART 6: CTA BUTTON -->
+  <!-- PART 6: PREMIUM CTA BUTTON -->
   <div class="bf-investment__cta-wrapper">
     <a href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator/" target="_top" rel="noopener" class="bf-investment__cta-button">
-      Join the 90-Day Etsy Empire Accelerator
+      <span class="bf-investment__cta-icon">
+        <svg viewBox="0 0 20 20" fill="none">
+          <path d="M6,10 L14,10 M11,7 L14,10 L11,13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="bf-investment__cta-text">Join the 90-Day Etsy Empire Accelerator</span>
+      <span class="bf-investment__cta-shine"></span>
     </a>
   </div>
 </div>
 
 <style>
 /* ============================================
-   INVESTMENT / PRICING SECTION
-   Premium Guarantee Visual | Foundation Colors
+   INVESTMENT SECTION - PREMIUM DESIGN
+   $200k Agency Quality
    ============================================ */
+
 
 @font-face {
   font-family: 'Ogg';
@@ -142,6 +235,7 @@
   background: var(--bg-section);
   padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 4vw, 2.5rem);
   font-family: 'Satoshi Variable', system-ui, -apple-system, sans-serif;
+  font-weight: 500;
   font-synthesis: none;
   color: var(--text-primary);
   overflow-x: clip;
@@ -154,122 +248,197 @@
 }
 
 /* ============================================
-   PART 1: THE INVESTMENT (PRICING BLOCK)
+   TYPOGRAPHY - OGG BOLD
    ============================================ */
-.bf-investment__pricing {
-  max-width: 600px;
-  margin: 0 auto clamp(1.5rem, 3.5vw, 2.5rem);
+#bf-investment h1,
+#bf-investment h2,
+#bf-investment h3,
+#bf-investment .bf-investment__label,
+#bf-investment .bf-investment__price-amount,
+#bf-investment .bf-investment__price-plan,
+#bf-investment .bf-investment__guarantees-header {
+  font-family: 'Ogg', Georgia, serif;
+  font-weight: 700;
+}
+
+/* ============================================
+   PART 1: THE INVESTMENT HEADER
+   ============================================ */
+.bf-investment__header {
+  max-width: 900px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
   text-align: center;
 }
 
-.bf-investment__pricing-label {
+.bf-investment__label {
   display: inline-block;
-  font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
-  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--primary-green);
-  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
 }
 
-.bf-investment__pricing-card {
-  background: var(--white);
+/* ============================================
+   PART 2: PREMIUM PRICE CARD
+   ============================================ */
+.bf-investment__pricing {
+  max-width: 700px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+
+.bf-investment__price-card {
+  background: linear-gradient(135deg, var(--white) 0%, var(--bg-section) 100%);
   border: 2px solid var(--border);
-  border-radius: 16px;
-  padding: clamp(2rem, 4vw, 2.5rem);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  padding: clamp(2.5rem, 5vw, 3.5rem) clamp(2rem, 4vw, 3rem);
   position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 12px 40px rgba(18, 63, 58, 0.08);
 }
 
-/* Pay in Full - Primary */
-.bf-investment__price-primary {
-  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+/* Decorative corner accents */
+.bf-investment__corner-accent {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: var(--accent-gold);
+  opacity: 0.08;
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
 }
 
-.bf-investment__price-prefix {
+.bf-investment__corner-accent--tl {
+  top: -40px;
+  left: -40px;
+}
+
+.bf-investment__corner-accent--br {
+  bottom: -40px;
+  right: -40px;
+}
+
+/* Pattern background */
+.bf-investment__pattern-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  height: 250px;
+  background-image: radial-gradient(circle, var(--accent-gold) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* Price icon */
+.bf-investment__price-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto clamp(1.5rem, 3vw, 2rem);
   display: block;
+}
+
+/* Price primary */
+.bf-investment__price-primary {
+  position: relative;
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.bf-investment__price-label {
   font-size: clamp(0.875rem, 2vw, 1rem);
   font-weight: 500;
   color: var(--text-muted);
-  margin-bottom: clamp(0.375rem, 1vw, 0.5rem);
+  margin: 0 0 clamp(0.5rem, 1vw, 0.75rem);
   letter-spacing: 0.02em;
 }
 
 .bf-investment__price-amount {
-  display: block;
-  font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 700;
+  font-size: clamp(3rem, 7vw, 4.5rem);
   color: var(--primary-green);
-  line-height: 1.2;
+  line-height: 1.1;
+  margin: 0;
 }
 
-/* Divider */
-.bf-investment__price-divider {
+/* Value badge */
+.bf-investment__value-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: var(--primary-green);
+  color: var(--white);
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 24px;
+  margin-top: 1rem;
+}
+
+/* Decorative divider */
+.bf-investment__divider {
   width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 10%, var(--border) 50%, transparent 90%);
-  margin: clamp(1rem, 2vw, 1.25rem) 0;
+  max-width: 200px;
+  height: 12px;
+  margin: clamp(1.25rem, 2.5vw, 1.75rem) auto;
 }
 
-/* Payment Plan - Secondary */
+.bf-investment__divider svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Price secondary */
 .bf-investment__price-secondary {
-  opacity: 0.9;
-}
-
-.bf-investment__price-secondary .bf-investment__price-prefix {
-  margin-bottom: clamp(0.25rem, 0.75vw, 0.375rem);
+  opacity: 0.85;
 }
 
 .bf-investment__price-plan {
-  display: block;
-  font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
-  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   color: var(--primary-green);
   line-height: 1.2;
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.25rem;
 }
 
 .bf-investment__price-total {
-  display: block;
-  font-size: clamp(0.8rem, 1.8vw, 0.875rem);
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
   font-weight: 500;
   color: var(--text-muted);
+  margin: 0;
 }
 
-/* VIP Note */
+/* VIP note */
 .bf-investment__vip-note {
-  font-size: clamp(0.8rem, 1.8vw, 0.875rem);
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
   font-weight: 500;
   color: var(--text-muted);
   line-height: 1.6;
-  margin: clamp(1rem, 2.5vw, 1.5rem) 0 0;
+  margin: clamp(1.25rem, 2.5vw, 1.75rem) 0 0;
   font-style: italic;
 }
 
 /* ============================================
-   PART 2: PREMIUM GUARANTEE VISUAL
+   PART 3: PREMIUM GUARANTEE VISUAL
    ============================================ */
 .bf-investment__guarantees {
-  max-width: 480px;
-  margin: 0 auto clamp(1.5rem, 3.5vw, 2.5rem);
+  max-width: 900px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
 }
 
 .bf-investment__guarantees-header {
-  font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(1.25rem, 3.5vw, 1.75rem);
-  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
   color: var(--primary-green);
   text-align: center;
-  margin: 0 0 clamp(1rem, 2.5vw, 1.5rem);
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
   line-height: 1.25;
 }
 
-.bf-investment__guarantee-visual {
+.bf-investment__guarantee-visual-wrapper {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -277,43 +446,61 @@
   width: 100%;
   height: auto;
   display: block;
-  animation: gold-glow 3s ease-in-out infinite;
+  animation: guarantee-glow 4s ease-in-out infinite;
 }
 
-@keyframes gold-glow {
+@keyframes guarantee-glow {
   0%, 100% { 
-    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.35));
   }
   50% { 
-    filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.5));
+    filter: drop-shadow(0 0 24px rgba(212, 175, 55, 0.55));
   }
+}
+
+/* Decorative stars twinkle */
+.bf-investment__decorative-stars {
+  animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bf-investment__guarantee-svg {
+  .bf-investment__guarantee-svg,
+  .bf-investment__decorative-stars {
     animation: none;
   }
 }
 
 /* ============================================
-   PART 3: THE CAP (100 STUDENTS)
+   PART 4: SOCIAL PROOF
    ============================================ */
+.bf-investment__social-proof {
+  max-width: 800px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* Cohort Cap */
 .bf-investment__cap {
-  max-width: 560px;
-  margin: 0 auto clamp(1.5rem, 3vw, 2rem);
   display: flex;
   align-items: flex-start;
-  gap: clamp(0.75rem, 2vw, 1rem);
-  padding: clamp(1rem, 2.5vw, 1.25rem) clamp(1.25rem, 3vw, 1.5rem);
-  background: rgba(18, 63, 58, 0.04);
-  border: 1px solid rgba(18, 63, 58, 0.1);
-  border-radius: 12px;
+  gap: clamp(0.875rem, 2vw, 1.25rem);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  background: rgba(18, 63, 58, 0.03);
+  border: 1px solid rgba(18, 63, 58, 0.08);
+  border-radius: 16px;
 }
 
 .bf-investment__cap-icon {
   flex-shrink: 0;
-  width: clamp(2rem, 5vw, 2.5rem);
-  height: clamp(2rem, 5vw, 2.5rem);
+  width: clamp(2.25rem, 5vw, 2.75rem);
+  height: clamp(2.25rem, 5vw, 2.75rem);
 }
 
 .bf-investment__cap-icon svg {
@@ -322,7 +509,7 @@
 }
 
 .bf-investment__cap-text {
-  font-size: clamp(0.875rem, 2vw, 0.9375rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 500;
   color: var(--text-primary);
   line-height: 1.65;
@@ -334,30 +521,26 @@
   font-weight: 700;
 }
 
-/* ============================================
-   PART 4: SOLD OUT PROOF
-   ============================================ */
+/* Sold Out */
 .bf-investment__soldout {
-  max-width: 560px;
-  margin: 0 auto clamp(1.5rem, 3.5vw, 2.5rem);
   display: flex;
   align-items: flex-start;
-  gap: clamp(0.75rem, 2vw, 1rem);
-  padding: clamp(1rem, 2.5vw, 1.25rem);
-  background: rgba(94, 110, 108, 0.04);
+  gap: clamp(0.875rem, 2vw, 1.25rem);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  background: rgba(94, 110, 108, 0.03);
   border: 1px dashed var(--border);
-  border-radius: 12px;
+  border-radius: 16px;
 }
 
 .bf-investment__soldout-badge {
   flex-shrink: 0;
-  font-size: clamp(0.625rem, 1.5vw, 0.6875rem);
+  font-size: clamp(0.625rem, 1.5vw, 0.7rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--bg-section);
   background: var(--text-muted);
-  padding: clamp(0.375rem, 1vw, 0.5rem) clamp(0.625rem, 1.5vw, 0.75rem);
+  padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.75rem, 1.5vw, 0.875rem);
   border-radius: 6px;
 }
 
@@ -366,14 +549,14 @@
 }
 
 .bf-investment__soldout-title {
-  font-size: clamp(0.875rem, 2vw, 0.9375rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 600;
   color: var(--text-muted);
   margin: 0 0 clamp(0.25rem, 0.75vw, 0.375rem);
 }
 
 .bf-investment__soldout-detail {
-  font-size: clamp(0.8125rem, 1.8vw, 0.875rem);
+  font-size: clamp(0.8125rem, 1.8vw, 0.9rem);
   font-weight: 500;
   color: var(--text-muted);
   line-height: 1.6;
@@ -381,16 +564,16 @@
 }
 
 /* ============================================
-   PART 5: BRIDGE TO NEXT SECTION
+   PART 5: BRIDGE TEXT
    ============================================ */
 .bf-investment__bridge {
-  max-width: 560px;
-  margin: 0 auto clamp(1.5rem, 3vw, 2rem);
+  max-width: 700px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
   text-align: center;
 }
 
 .bf-investment__bridge-text {
-  font-size: clamp(0.9375rem, 2.2vw, 1.0625rem);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
   font-weight: 500;
   color: var(--text-muted);
   line-height: 1.7;
@@ -398,41 +581,96 @@
 }
 
 /* ============================================
-   PART 6: CTA BUTTON
+   PART 6: PREMIUM CTA BUTTON
    ============================================ */
 .bf-investment__cta-wrapper {
   text-align: center;
-  max-width: 560px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .bf-investment__cta-button {
-  display: inline-block;
-  padding: clamp(1rem, 2.5vw, 1.25rem) clamp(2rem, 4vw, 2.5rem);
-  background: var(--primary-green);
-  color: var(--bg-section);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: clamp(1.25rem, 3vw, 1.5rem) clamp(2.5rem, 5vw, 3rem);
+  background: linear-gradient(135deg, var(--primary-green) 0%, #0F332F 100%);
+  color: var(--white);
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 700;
-  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
   text-decoration: none;
-  border-radius: 8px;
-  min-height: 48px;
-  box-shadow: 0 4px 12px rgba(18, 63, 58, 0.2);
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  border-radius: 14px;
+  min-height: 60px;
+  border: 2px solid transparent;
+  box-shadow: 
+    0 4px 12px rgba(18, 63, 58, 0.3),
+    0 8px 28px rgba(18, 63, 58, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.bf-investment__cta-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bf-investment__cta-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bf-investment__cta-shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.12) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  transition: transform 600ms ease;
+  pointer-events: none;
 }
 
 .bf-investment__cta-button:hover {
-  background: #0F332F;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(18, 63, 58, 0.25);
+  background: linear-gradient(135deg, #0F332F 0%, var(--primary-green) 100%);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 20px rgba(18, 63, 58, 0.4),
+    0 16px 44px rgba(18, 63, 58, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.bf-investment__cta-button:hover .bf-investment__cta-icon {
+  transform: translateX(4px);
+}
+
+.bf-investment__cta-button:hover .bf-investment__cta-shine {
+  transform: translateX(100%) translateY(100%) rotate(45deg);
 }
 
 .bf-investment__cta-button:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
+}
+
+.bf-investment__cta-button:focus {
+  outline: 3px solid var(--accent-gold);
+  outline-offset: 3px;
 }
 
 /* ============================================
-   RESPONSIVE: MOBILE FIRST
+   RESPONSIVE DESIGN
    ============================================ */
 
 /* Tiny phones (≤350px) */
@@ -441,20 +679,27 @@
     padding: 2.5rem 1rem;
   }
 
-  .bf-investment__pricing-label {
+  .bf-investment__label {
     font-size: 1.5rem;
+    letter-spacing: 0.04em;
   }
 
-  .bf-investment__pricing-card {
-    padding: 1.5rem 1.25rem;
+  .bf-investment__price-card {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
   }
 
   .bf-investment__price-amount {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   .bf-investment__price-plan {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+  }
+
+  .bf-investment__guarantee-visual-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
   }
 
   .bf-investment__cap,
@@ -466,7 +711,10 @@
 
   .bf-investment__cta-button {
     width: 100%;
-    text-align: center;
+    padding: 1.125rem 1.5rem;
+    font-size: 0.95rem;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 
@@ -490,19 +738,31 @@
     padding: 4rem 2rem;
   }
 
+  .bf-investment__header {
+    max-width: 1000px;
+  }
+
   .bf-investment__pricing {
-    max-width: 640px;
+    max-width: 750px;
   }
 
   .bf-investment__guarantees {
-    max-width: 520px;
+    max-width: 960px;
+  }
+
+  .bf-investment__guarantee-visual-wrapper {
+    max-width: 640px;
+  }
+
+  .bf-investment__social-proof {
+    max-width: 850px;
+    flex-direction: row;
+    gap: clamp(1.25rem, 3vw, 2rem);
   }
 
   .bf-investment__cap,
-  .bf-investment__soldout,
-  .bf-investment__bridge,
-  .bf-investment__cta-wrapper {
-    max-width: 600px;
+  .bf-investment__soldout {
+    flex: 1;
   }
 }
 
@@ -512,27 +772,59 @@
     padding: 5rem 2.5rem;
   }
 
+  .bf-investment__header {
+    max-width: 1100px;
+  }
+
   .bf-investment__pricing {
-    max-width: 680px;
+    max-width: 800px;
   }
 
   .bf-investment__guarantees {
-    max-width: 560px;
+    max-width: 1000px;
   }
 
-  .bf-investment__cap,
-  .bf-investment__soldout,
+  .bf-investment__guarantee-visual-wrapper {
+    max-width: 680px;
+  }
+
+  .bf-investment__social-proof {
+    max-width: 900px;
+  }
+
   .bf-investment__bridge,
   .bf-investment__cta-wrapper {
-    max-width: 640px;
+    max-width: 750px;
   }
 }
 
-/* Wide desktop (640px CTA full width) */
+/* Wide desktop (1280px+) */
+@media (min-width: 1280px) {
+  #bf-investment {
+    padding: 5rem 3rem;
+  }
+
+  .bf-investment__pricing {
+    max-width: 850px;
+  }
+
+  .bf-investment__guarantees {
+    max-width: 1100px;
+  }
+
+  .bf-investment__guarantee-visual-wrapper {
+    max-width: 720px;
+  }
+
+  .bf-investment__social-proof {
+    max-width: 950px;
+  }
+}
+
+/* Mobile CTA full width */
 @media (max-width: 640px) {
   .bf-investment__cta-button {
     width: 100%;
-    text-align: center;
   }
 }
 </style>
