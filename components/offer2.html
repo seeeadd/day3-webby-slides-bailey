@@ -1,0 +1,1510 @@
+<!-- ═══════════════════════════════════════════════════════════════════════════════
+     OFFER STACK WITH STICKY SCROLL
+     Parisian Designer $500k Experience
+
+     DESIGN PHILOSOPHY:
+     - Fresh, lighter colors that feel modern and sophisticated
+     - Sticky scroll creates an editorial, magazine-quality journey
+     - Images transition gracefully as users scroll through pillars
+     - Premium execution: subtle shadows, generous whitespace, silk-smooth transitions
+     - No borders on images - they breathe in their space
+     ═══════════════════════════════════════════════════════════════════════════════ -->
+
+<div id="bf-offerstack-sticky">
+  <div class="offer-container">
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         HEADER: Editorial Eyebrow + Headline
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <header class="offer-header">
+      <div class="offer-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span class="eyebrow-text">What You Get</span>
+        <span class="eyebrow-dot"></span>
+      </div>
+      <h2 class="offer-headline">
+        Everything you need to install the system in 90 days.
+        <span class="headline-accent">And keep it.</span>
+      </h2>
+      <p class="offer-subhead">
+        The Accelerator is built on 3 pillars: <strong>Blueprint</strong>,
+        <strong>Implementation + Support</strong>, and <strong>Lifetime Access</strong>.
+      </p>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         MAIN LAYOUT: Sticky Image + Scrolling Content
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="offer-layout">
+
+      <!-- LEFT: STICKY IMAGE COLUMN -->
+      <aside class="image-column">
+        <div class="image-sticky-wrapper">
+          <!-- Image container with all pillar images - JS handles visibility -->
+          <div class="image-showcase">
+            <!-- Pillar 1 Image -->
+            <div class="showcase-image active" data-pillar="1">
+              <img src="https://i.imgur.com/PPFFNNx.png" alt="Personalized 90-day roadmap" />
+              <div class="image-caption">
+                <span class="caption-badge">Pillar 1</span>
+                <span class="caption-text">Your Blueprint</span>
+              </div>
+            </div>
+
+            <!-- Pillar 2 Image -->
+            <div class="showcase-image" data-pillar="2">
+              <img src="https://i.imgur.com/XNuQC9F.png" alt="Bailey Bot AI Assistant" />
+              <div class="image-caption">
+                <span class="caption-badge">Pillar 2</span>
+                <span class="caption-text">Implementation</span>
+              </div>
+            </div>
+
+            <!-- Pillar 3 Image -->
+            <div class="showcase-image" data-pillar="3">
+              <img src="https://i.imgur.com/JnvXoHP.png" alt="Design Club Library" />
+              <div class="image-caption">
+                <span class="caption-badge">Pillar 3</span>
+                <span class="caption-text">Lifetime Access</span>
+              </div>
+            </div>
+
+            <!-- Bonus Image -->
+            <div class="showcase-image" data-pillar="bonus">
+              <div class="bonus-graphic">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Gift box base -->
+                  <rect x="30" y="90" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#4A8B87" stroke-width="2"/>
+                  <!-- Gift box lid -->
+                  <rect x="25" y="70" width="150" height="30" rx="6" fill="#FFFFFF" stroke="#4A8B87" stroke-width="2"/>
+                  <!-- Vertical ribbon -->
+                  <rect x="92" y="70" width="16" height="110" fill="#E8C4A0"/>
+                  <!-- Horizontal ribbon -->
+                  <rect x="30" y="100" width="140" height="16" fill="#E8C4A0"/>
+                  <!-- Bow -->
+                  <ellipse cx="100" cy="55" rx="30" ry="18" fill="#E8C4A0" stroke="#D4AF37" stroke-width="1"/>
+                  <ellipse cx="100" cy="55" rx="8" ry="8" fill="#D4AF37"/>
+                  <!-- Bow loops -->
+                  <path d="M70 50 Q50 35 65 25 Q80 35 70 50" fill="#E8C4A0" stroke="#D4AF37" stroke-width="1"/>
+                  <path d="M130 50 Q150 35 135 25 Q120 35 130 50" fill="#E8C4A0" stroke="#D4AF37" stroke-width="1"/>
+                  <!-- Sparkles -->
+                  <circle cx="40" cy="40" r="3" fill="#D4AF37" opacity="0.8"/>
+                  <circle cx="160" cy="50" r="4" fill="#D4AF37" opacity="0.6"/>
+                  <circle cx="175" cy="90" r="2" fill="#D4AF37" opacity="0.7"/>
+                  <circle cx="25" cy="120" r="3" fill="#D4AF37" opacity="0.5"/>
+                </svg>
+              </div>
+              <div class="image-caption">
+                <span class="caption-badge caption-badge--gold">Bonus</span>
+                <span class="caption-text">Extra Resources</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress indicator -->
+          <div class="scroll-progress">
+            <div class="progress-track">
+              <div class="progress-fill"></div>
+            </div>
+            <div class="progress-dots">
+              <button class="progress-dot active" data-target="1" aria-label="Go to Pillar 1"></button>
+              <button class="progress-dot" data-target="2" aria-label="Go to Pillar 2"></button>
+              <button class="progress-dot" data-target="3" aria-label="Go to Pillar 3"></button>
+              <button class="progress-dot progress-dot--gold" data-target="bonus" aria-label="Go to Bonuses"></button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT: SCROLLING CONTENT COLUMN -->
+      <main class="content-column">
+
+        <!-- ═════════════════════════════════════════════════════════════════
+             PILLAR 1: BLUEPRINT
+             ═════════════════════════════════════════════════════════════════ -->
+        <section class="pillar" data-pillar="1">
+          <div class="pillar-header">
+            <div class="pillar-badge">
+              <span class="pillar-num">1</span>
+            </div>
+            <div class="pillar-title-group">
+              <h3 class="pillar-title">Blueprint</h3>
+              <p class="pillar-tagline">So you always know what to do next.</p>
+            </div>
+          </div>
+
+          <div class="pillar-items">
+            <article class="offer-item">
+              <div class="item-marker">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">Kickoff call to start clean and get oriented</h4>
+                <p class="item-desc">Group session to align on exactly how the 90 days work and what to focus on first.</p>
+              </div>
+            </article>
+
+            <article class="offer-item">
+              <div class="item-marker">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">A personalized 90-day roadmap built around your shop and your real schedule</h4>
+              </div>
+            </article>
+
+            <article class="offer-item">
+              <div class="item-marker">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">The simple weekly loop that removes guessing: Research &rarr; Create &rarr; List &rarr; Improve</h4>
+              </div>
+            </article>
+
+            <article class="offer-item">
+              <div class="item-marker">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">A realistic plan designed to keep you moving in 60&ndash;90 minute blocks</h4>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ═════════════════════════════════════════════════════════════════
+             PILLAR 2: IMPLEMENTATION + SUPPORT
+             ═════════════════════════════════════════════════════════════════ -->
+        <section class="pillar" data-pillar="2">
+          <div class="pillar-header">
+            <div class="pillar-badge pillar-badge--teal">
+              <span class="pillar-num">2</span>
+            </div>
+            <div class="pillar-title-group">
+              <h3 class="pillar-title">Implementation + Support</h3>
+              <p class="pillar-tagline">So you don't stall for a week over one question.</p>
+            </div>
+          </div>
+
+          <div class="pillar-items">
+            <article class="offer-item">
+              <div class="item-marker item-marker--teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">12 weekly implementation + shop review calls</h4>
+                <p class="item-desc">60-75 minutes every week. Hot seats, audits, troubleshooting. Every call ends with exactly what to do next.</p>
+              </div>
+            </article>
+
+            <article class="offer-item">
+              <div class="item-marker item-marker--teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">Skool support for the 90-day sprint</h4>
+              </div>
+            </article>
+
+            <article class="offer-item">
+              <div class="item-marker item-marker--teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">Bailey Bot (24/7) for the exact moment you get stuck mid-work session</h4>
+                <span class="item-badge">Always On</span>
+              </div>
+            </article>
+
+            <article class="offer-item">
+              <div class="item-marker item-marker--teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">Replays if you miss live, so you can stay on track without falling behind</h4>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ═════════════════════════════════════════════════════════════════
+             PILLAR 3: LIFETIME ACCESS
+             ═════════════════════════════════════════════════════════════════ -->
+        <section class="pillar" data-pillar="3">
+          <div class="pillar-header">
+            <div class="pillar-badge pillar-badge--gold">
+              <span class="pillar-num">3</span>
+            </div>
+            <div class="pillar-title-group">
+              <h3 class="pillar-title">Lifetime Access</h3>
+              <p class="pillar-tagline">So you're not starting over after Day 90.</p>
+            </div>
+            <div class="lifetime-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="infinity-icon">
+                <path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.133-8-12.739-8-4.093 0-4.093 8 0 8 5.606 0 7.644-8 12.739-8z"/>
+              </svg>
+              <span>Forever yours</span>
+            </div>
+          </div>
+
+          <div class="pillar-items">
+            <article class="offer-item">
+              <div class="item-marker item-marker--gold">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">Lifetime Design Club Library access (everything Bailey has created + future updates)</h4>
+                <p class="item-desc">All courses, templates, and resources. Every future update included automatically.</p>
+              </div>
+            </article>
+
+            <article class="offer-item">
+              <div class="item-marker item-marker--gold">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">Lifetime community access + ongoing monthly calls</h4>
+              </div>
+            </article>
+
+            <article class="offer-item">
+              <div class="item-marker item-marker--gold">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">TeachFluence access (there if you want it later)</h4>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ═════════════════════════════════════════════════════════════════
+             BONUSES SECTION
+             ═════════════════════════════════════════════════════════════════ -->
+        <section class="pillar pillar--bonus" data-pillar="bonus">
+          <div class="pillar-header">
+            <div class="bonus-badge-header">
+              <span class="bonus-label">BONUS</span>
+            </div>
+            <div class="pillar-title-group">
+              <h3 class="pillar-title">Plus these extras when you join</h3>
+            </div>
+          </div>
+
+          <div class="pillar-items">
+            <article class="offer-item offer-item--bonus">
+              <div class="item-marker item-marker--bonus">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">Trending PSD Mockups That Actually Convert</h4>
+                <p class="item-desc">A full suite of current, Etsy-ready PSD mockups with smart objects already set up. No tweaking layers, no rebuilding templates.</p>
+              </div>
+            </article>
+
+            <article class="offer-item offer-item--bonus">
+              <div class="item-marker item-marker--bonus">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <div class="item-content">
+                <h4 class="item-title">The "Secret" Etsy Email List Growth System</h4>
+                <p class="item-desc">A new, simple way to grow your Etsy email list so you can remarket to past customers again and again.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         BOTTOM NOTE
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <div class="offer-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="note-icon">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 16v-4M12 8h.01"/>
+      </svg>
+      <p class="note-text">
+        <strong>Quick note:</strong> Skool support is for the 90-day sprint.
+        The library and community are lifetime.
+      </p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         CLOSING + CTA
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <footer class="offer-footer">
+      <p class="closing-statement">
+        The goal isn't more hustle. It's a system you can keep running even when life gets busy.
+      </p>
+
+      <div class="cta-wrapper">
+        <a href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator/"
+           target="_top"
+           rel="noopener"
+           class="cta-button">
+          <span class="cta-text">Join the 90-Day Etsy Empire Accelerator</span>
+          <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <p class="cta-microcopy">Capped seats. Real support.</p>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<style>
+/* ═══════════════════════════════════════════════════════════════════════════════
+   OFFER STACK WITH STICKY SCROLL
+   Parisian Designer $500k Experience
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   EMBEDDED FONTS (Base64)
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@font-face {
+  font-family: 'Ogg';
+  src: url('https://seanthea.github.io/bailey-fonts/Ogg-Bold.woff2') format('woff2'),
+       url('https://seanthea.github.io/bailey-fonts/Ogg-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://seanthea.github.io/bailey-fonts/Satoshi-Variable.woff2') format('woff2'),
+       url('https://seanthea.github.io/bailey-fonts/Satoshi-Variable.woff') format('woff');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FRESH PARISIAN COLOR PALETTE
+   ═══════════════════════════════════════════════════════════════════════════════ */
+#bf-offerstack-sticky {
+  /* Backgrounds - Lighter, Airier */
+  --bg-section: #FDFBF7;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #FAF9F6;
+
+  /* Teal Family - Fresher, Lighter */
+  --teal-primary: #4A8B87;
+  --teal-light: #6FA9A5;
+  --teal-dark: #2E6A62;
+  --teal-deep: #1D5A52;
+
+  /* Warm Accents */
+  --coral-fresh: #F4A59C;
+  --gold-accent: #E8C4A0;
+  --gold-primary: #D4AF37;
+  --gold-rich: #B8972E;
+
+  /* Neutrals - Warm Charcoal, Not Black */
+  --text-primary: #2D3E3C;
+  --text-secondary: #5A706E;
+  --text-muted: #8A9A98;
+
+  /* Borders & Subtle Elements */
+  --border-subtle: #E8E4DE;
+  --border-light: #F0ECE6;
+
+  /* Shadows - Sophisticated, Subtle */
+  --shadow-soft: 0 4px 20px rgba(45, 62, 60, 0.04), 0 12px 40px rgba(45, 62, 60, 0.03);
+  --shadow-medium: 0 8px 32px rgba(45, 62, 60, 0.06), 0 16px 48px rgba(45, 62, 60, 0.04);
+  --shadow-elevated: 0 12px 48px rgba(45, 62, 60, 0.08), 0 24px 64px rgba(45, 62, 60, 0.05);
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Container */
+  --container-max: 1200px;
+  --content-max: 600px;
+
+  /* Transitions - Silk Smooth */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 200ms var(--ease-out-expo);
+  --transition-medium: 400ms var(--ease-out-expo);
+  --transition-slow: 600ms var(--ease-out-quint);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════════════════════════════════════ */
+#bf-offerstack-sticky {
+  background: var(--bg-section);
+  padding: var(--space-4xl) var(--space-xl);
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-primary);
+  overflow-x: clip;
+  position: relative;
+}
+
+#bf-offerstack-sticky *,
+#bf-offerstack-sticky *::before,
+#bf-offerstack-sticky *::after {
+  box-sizing: border-box;
+}
+
+.offer-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   HEADER SECTION - Editorial Typography
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.offer-header {
+  text-align: center;
+  margin-bottom: var(--space-4xl);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s var(--ease-out-expo) forwards;
+}
+
+.offer-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--teal-primary);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.eyebrow-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal-primary);
+}
+
+.offer-headline {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: bold;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-lg);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headline-accent {
+  color: var(--teal-primary);
+  position: relative;
+  white-space: nowrap;
+}
+
+.headline-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 0.1em;
+  left: -0.1em;
+  right: -0.1em;
+  height: 0.25em;
+  background: linear-gradient(90deg, rgba(232, 196, 160, 0.4), rgba(232, 196, 160, 0.15));
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.offer-subhead {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 450;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offer-subhead strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   MAIN LAYOUT - Sticky Scroll Architecture
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.offer-layout {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  gap: var(--space-3xl);
+  margin-bottom: var(--space-4xl);
+}
+
+/* LEFT COLUMN - Sticky Image */
+.image-column {
+  position: relative;
+}
+
+.image-sticky-wrapper {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.image-showcase {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Individual showcase images - crossfade transition */
+.showcase-image {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.02);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase-image.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.showcase-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.showcase-image .bonus-graphic {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(232, 196, 160, 0.15), rgba(212, 175, 55, 0.08));
+  border-radius: 16px;
+}
+
+.showcase-image .bonus-graphic svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Image caption overlay */
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-lg);
+  background: linear-gradient(to top, rgba(45, 62, 60, 0.85), transparent);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.caption-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--teal-primary);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+
+.caption-badge--gold {
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-rich));
+}
+
+.caption-text {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Progress indicator */
+.scroll-progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: 0 var(--space-sm);
+}
+
+.progress-track {
+  height: 3px;
+  background: var(--border-subtle);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 25%;
+  background: linear-gradient(90deg, var(--teal-primary), var(--teal-light));
+  border-radius: 2px;
+  transition: width var(--transition-medium);
+}
+
+.progress-dots {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.progress-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-subtle);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 0;
+}
+
+.progress-dot:hover {
+  background: var(--teal-light);
+  transform: scale(1.2);
+}
+
+.progress-dot.active {
+  background: var(--teal-primary);
+  transform: scale(1.3);
+}
+
+.progress-dot--gold.active {
+  background: var(--gold-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   RIGHT COLUMN - Scrolling Content
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.content-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   PILLAR SECTIONS
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.pillar {
+  padding: var(--space-2xl);
+  background: var(--bg-card);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-light);
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow),
+    box-shadow var(--transition-medium);
+}
+
+.pillar.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pillar:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+/* Pillar Header */
+.pillar-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.pillar-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--teal-dark), var(--teal-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(46, 106, 98, 0.25);
+}
+
+.pillar-badge--teal {
+  background: linear-gradient(135deg, var(--teal-primary), var(--teal-dark));
+}
+
+.pillar-badge--gold {
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-rich));
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.pillar-num {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+.pillar-title-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.pillar-title {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: bold;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-xs);
+  line-height: 1.2;
+}
+
+.pillar-tagline {
+  font-size: 1rem;
+  font-weight: 450;
+  color: var(--text-secondary);
+  margin: 0;
+  font-style: italic;
+}
+
+/* Lifetime badge */
+.lifetime-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(212, 175, 55, 0.04));
+  padding: 10px 18px;
+  border-radius: 24px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  margin-left: auto;
+}
+
+.infinity-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--gold-primary);
+}
+
+.lifetime-badge span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold-rich);
+  letter-spacing: 0.02em;
+}
+
+/* Bonus header badge */
+.bonus-badge-header {
+  display: flex;
+  align-items: center;
+}
+
+.bonus-label {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-rich));
+  color: var(--text-primary);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 10px 20px;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+}
+
+/* Pillar Bonus styling */
+.pillar--bonus {
+  background: linear-gradient(135deg, rgba(232, 196, 160, 0.08), rgba(212, 175, 55, 0.03));
+  border: 1.5px solid rgba(212, 175, 55, 0.2);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   OFFER ITEMS
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.pillar-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.offer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--bg-subtle);
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.offer-item:hover {
+  background: var(--bg-card);
+  border-color: var(--border-subtle);
+  transform: translateX(6px);
+  box-shadow: var(--shadow-soft);
+}
+
+.offer-item--bonus {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.06), transparent);
+}
+
+.offer-item--bonus:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.02));
+}
+
+/* Item markers */
+.item-marker {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--teal-dark), var(--teal-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.item-marker svg {
+  width: 16px;
+  height: 16px;
+  color: white;
+}
+
+.item-marker--teal {
+  background: linear-gradient(135deg, var(--teal-primary), var(--teal-dark));
+}
+
+.item-marker--gold {
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-rich));
+}
+
+.item-marker--bonus {
+  background: linear-gradient(135deg, var(--gold-accent), var(--gold-primary));
+}
+
+.item-marker--bonus svg {
+  color: var(--text-primary);
+}
+
+/* Item content */
+.item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.item-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.item-desc {
+  font-size: 0.9rem;
+  font-weight: 450;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.item-badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 12px;
+  background: linear-gradient(135deg, var(--teal-light), var(--teal-primary));
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 12px;
+  margin-top: var(--space-xs);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   BOTTOM NOTE
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.offer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  max-width: 620px;
+  margin: 0 auto var(--space-3xl);
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--bg-card);
+  border-radius: 16px;
+  border-left: 4px solid var(--teal-primary);
+  box-shadow: var(--shadow-soft);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow);
+}
+
+.offer-note.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.note-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--teal-primary);
+}
+
+.note-text {
+  font-size: 0.95rem;
+  font-weight: 450;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.note-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FOOTER / CTA
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.offer-footer {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow);
+}
+
+.offer-footer.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.closing-statement {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+  font-weight: bold;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-xl);
+  line-height: 1.4;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background: linear-gradient(135deg, var(--teal-dark), var(--teal-deep));
+  color: white;
+  font-family: 'Satoshi', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1.125rem 2.5rem;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  min-height: 60px;
+  box-shadow:
+    0 4px 16px rgba(46, 106, 98, 0.3),
+    0 0 0 0 rgba(212, 175, 55, 0);
+  transition: all var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.7s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, var(--teal-deep), #153D38);
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 28px rgba(46, 106, 98, 0.4),
+    0 0 0 3px rgba(212, 175, 55, 0.25);
+}
+
+.cta-button:hover::before {
+  transform: translateX(100%);
+}
+
+.cta-button:focus {
+  outline: 3px solid var(--gold-primary);
+  outline-offset: 3px;
+}
+
+.cta-button:active {
+  transform: translateY(-1px);
+}
+
+.cta-text {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-fast);
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+.cta-microcopy {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE: TABLET (1024px and below)
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .offer-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .image-column {
+    order: -1;
+  }
+
+  .image-sticky-wrapper {
+    position: relative;
+    top: 0;
+  }
+
+  .image-showcase {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .scroll-progress {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .pillar-header {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .lifetime-badge {
+    margin-left: 0;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE: MOBILE (640px and below)
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  #bf-offerstack-sticky {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .offer-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .image-showcase {
+    aspect-ratio: 1;
+    border-radius: 16px;
+  }
+
+  .pillar {
+    padding: var(--space-xl);
+    border-radius: 20px;
+  }
+
+  .pillar-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+  }
+
+  .pillar-num {
+    font-size: 1.125rem;
+  }
+
+  .offer-item {
+    padding: var(--space-md);
+  }
+
+  .item-marker {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+  }
+
+  .item-marker svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .offer-note {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-lg);
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE: SMALL MOBILE (380px and below)
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 380px) {
+  #bf-offerstack-sticky {
+    padding: var(--space-xl) var(--space-sm);
+  }
+
+  .offer-headline {
+    font-size: 1.75rem;
+  }
+
+  .pillar {
+    padding: var(--space-lg);
+  }
+
+  .pillar-title {
+    font-size: 1.25rem;
+  }
+
+  .offer-item {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .item-title {
+    font-size: 0.95rem;
+  }
+
+  .closing-statement {
+    font-size: 1.125rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   REDUCED MOTION
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  .offer-header,
+  .pillar,
+  .offer-note,
+  .offer-footer {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+
+  .showcase-image {
+    transition: opacity 0.2s ease;
+  }
+
+  .offer-item:hover,
+  .pillar:hover,
+  .cta-button:hover {
+    transform: none;
+  }
+
+  .cta-button::before {
+    display: none;
+  }
+
+  .cta-button:hover .cta-arrow {
+    transform: none;
+  }
+
+  .progress-fill {
+    transition: none;
+  }
+}
+</style>
+
+<script>
+(function() {
+  'use strict';
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // INTERSECTION OBSERVER FOR PILLAR VISIBILITY
+  // ═══════════════════════════════════════════════════════════════════════════════
+
+  const pillars = document.querySelectorAll('#bf-offerstack-sticky .pillar');
+  const showcaseImages = document.querySelectorAll('#bf-offerstack-sticky .showcase-image');
+  const progressDots = document.querySelectorAll('#bf-offerstack-sticky .progress-dot');
+  const progressFill = document.querySelector('#bf-offerstack-sticky .progress-fill');
+
+  // Track currently active pillar
+  let currentPillar = '1';
+
+  // Function to update active image and progress
+  function setActivePillar(pillarId) {
+    if (currentPillar === pillarId) return;
+    currentPillar = pillarId;
+
+    // Update showcase images
+    showcaseImages.forEach(img => {
+      img.classList.remove('active');
+      if (img.dataset.pillar === pillarId) {
+        img.classList.add('active');
+      }
+    });
+
+    // Update progress dots
+    progressDots.forEach(dot => {
+      dot.classList.remove('active');
+      if (dot.dataset.target === pillarId) {
+        dot.classList.add('active');
+      }
+    });
+
+    // Update progress fill
+    const pillarsArray = ['1', '2', '3', 'bonus'];
+    const index = pillarsArray.indexOf(pillarId);
+    const percentage = ((index + 1) / pillarsArray.length) * 100;
+    if (progressFill) {
+      progressFill.style.width = percentage + '%';
+    }
+  }
+
+  // Create observer for pillar sections
+  const pillarObserverOptions = {
+    threshold: [0, 0.25, 0.5, 0.75, 1],
+    rootMargin: '-20% 0px -30% 0px'
+  };
+
+  const pillarObserver = new IntersectionObserver((entries) => {
+    // Find the most visible pillar
+    let maxRatio = 0;
+    let mostVisiblePillar = null;
+
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > maxRatio) {
+        maxRatio = entry.intersectionRatio;
+        mostVisiblePillar = entry.target;
+      }
+    });
+
+    // Also check all pillars to find which one is most in view
+    pillars.forEach(pillar => {
+      const rect = pillar.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+      const ratio = visibleHeight / pillar.offsetHeight;
+
+      if (ratio > maxRatio && rect.top < viewportHeight * 0.6) {
+        maxRatio = ratio;
+        mostVisiblePillar = pillar;
+      }
+    });
+
+    if (mostVisiblePillar && maxRatio > 0.15) {
+      setActivePillar(mostVisiblePillar.dataset.pillar);
+    }
+  }, pillarObserverOptions);
+
+  pillars.forEach(pillar => {
+    pillarObserver.observe(pillar);
+  });
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // PROGRESS DOT CLICK HANDLERS
+  // ═══════════════════════════════════════════════════════════════════════════════
+
+  progressDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const targetId = dot.dataset.target;
+      const targetPillar = document.querySelector(`#bf-offerstack-sticky .pillar[data-pillar="${targetId}"]`);
+
+      if (targetPillar) {
+        const offsetTop = targetPillar.getBoundingClientRect().top + window.pageYOffset - 120;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: prefersReducedMotion ? 'auto' : 'smooth'
+        });
+      }
+    });
+  });
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // REVEAL ANIMATION OBSERVER
+  // ═══════════════════════════════════════════════════════════════════════════════
+
+  if (prefersReducedMotion) {
+    // Show everything immediately
+    const elements = document.querySelectorAll(
+      '#bf-offerstack-sticky .pillar, ' +
+      '#bf-offerstack-sticky .offer-note, ' +
+      '#bf-offerstack-sticky .offer-footer'
+    );
+    elements.forEach(el => el.classList.add('revealed'));
+    return;
+  }
+
+  const revealOptions = {
+    threshold: 0.1,
+    rootMargin: '-50px 0px'
+  };
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('revealed');
+        }, index * 80);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, revealOptions);
+
+  const animatedElements = document.querySelectorAll(
+    '#bf-offerstack-sticky .pillar, ' +
+    '#bf-offerstack-sticky .offer-note, ' +
+    '#bf-offerstack-sticky .offer-footer'
+  );
+
+  animatedElements.forEach(el => revealObserver.observe(el));
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // SCROLL PROGRESS TRACKING
+  // ═══════════════════════════════════════════════════════════════════════════════
+
+  let ticking = false;
+
+  function updateOnScroll() {
+    // Find which pillar is most visible based on scroll position
+    let activePillar = '1';
+    let minDistance = Infinity;
+
+    pillars.forEach(pillar => {
+      const rect = pillar.getBoundingClientRect();
+      const distance = Math.abs(rect.top - window.innerHeight * 0.3);
+
+      if (rect.top < window.innerHeight * 0.6 && distance < minDistance) {
+        minDistance = distance;
+        activePillar = pillar.dataset.pillar;
+      }
+    });
+
+    setActivePillar(activePillar);
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateOnScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+})();
+</script>
