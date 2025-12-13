@@ -65,6 +65,45 @@
       </div>
     </section>
 
+    <!-- TESTIMONIAL GALLERY -->
+    <section class="bf-pain__testimonials">
+      <div class="bf-pain__testimonial-gallery">
+        <div class="bf-pain__testimonial-item">
+          <img src="https://i.imgur.com/hiWO6T9.png" alt="Student testimonial" loading="lazy" />
+        </div>
+        <div class="bf-pain__testimonial-item">
+          <img src="https://i.imgur.com/93BkGJU.png" alt="Student testimonial" loading="lazy" />
+        </div>
+        <div class="bf-pain__testimonial-item">
+          <img src="https://i.imgur.com/5tCes9t.png" alt="Student testimonial" loading="lazy" />
+        </div>
+        <div class="bf-pain__testimonial-item">
+          <img src="https://i.imgur.com/Mj5sFz5.png" alt="Student testimonial" loading="lazy" />
+        </div>
+        <div class="bf-pain__testimonial-item">
+          <img src="https://i.imgur.com/KkPxdIy.png" alt="Student testimonial" loading="lazy" />
+        </div>
+        <div class="bf-pain__testimonial-item">
+          <img src="https://i.imgur.com/6YdH3Hs.png" alt="Student testimonial" loading="lazy" />
+        </div>
+        <div class="bf-pain__testimonial-item">
+          <img src="https://i.imgur.com/HMg70tU.png" alt="Student testimonial" loading="lazy" />
+        </div>
+        <div class="bf-pain__testimonial-item">
+          <img src="https://i.imgur.com/948fxoa.png" alt="Student testimonial" loading="lazy" />
+        </div>
+        <div class="bf-pain__testimonial-item">
+          <img src="https://i.imgur.com/VYVvH3W.png" alt="Student testimonial" loading="lazy" />
+        </div>
+        <div class="bf-pain__testimonial-item">
+          <img src="https://i.imgur.com/kgT4ffW.png" alt="Student testimonial" loading="lazy" />
+        </div>
+        <div class="bf-pain__testimonial-item">
+          <img src="https://i.imgur.com/z6Q739M.png" alt="Student testimonial" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
     <!-- SPIRAL -->
     <section class="bf-pain__spiral">
       <p class="bf-pain__spiral-text">So you end up doing the only thing that feels safe: more. More listings, more videos, more tabs, and still no clear plan.</p>
@@ -528,6 +567,47 @@
   .bf-pain__decisions::after {
     animation: none !important;
     transform: scaleX(1) !important;
+  }
+}
+
+/* ============================================
+   TESTIMONIAL GALLERY
+   ============================================ */
+.bf-pain__testimonials {
+  margin: clamp(2rem, 5vw, 3.5rem) auto;
+}
+
+.bf-pain__testimonial-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3.5vw, 2.5rem);
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+.bf-pain__testimonial-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bf-pain__testimonial-item img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .bf-pain__testimonial-item img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
   }
 }
 </style>
