@@ -350,6 +350,48 @@ html, body { width: 100%; overflow-x: hidden; }
   margin-top: 0.05rem;
 }
 
+/* Pillar card typography refinements */
+.pillar-group .card-title {
+  font-family: 'Ogg', serif;
+  font-weight: 700;
+  font-synthesis: weight;
+  font-size: clamp(26px, 2.3vw, 40px);
+  line-height: 1.15;
+  color: var(--teal-deep);
+  margin: 0 0 0.8rem;
+}
+
+.pillar-group .card-subtitle {
+  font-family: 'Satoshi Variable', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 1.6vw, 18px);
+  line-height: 1.6;
+  color: rgba(0,0,0,0.72);
+  margin: 0 0 0.65rem;
+}
+
+.pillar-group .card-list {
+  list-style: disc;
+  margin: 18px auto 0;
+  padding-left: 1.1em;
+  max-width: 38ch;
+  display: block;
+  font-family: 'Satoshi Variable', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1.5vw, 17px);
+  line-height: 1.5;
+  color: rgba(0,0,0,0.72);
+}
+
+.pillar-group .card-list li {
+  display: list-item;
+  margin: 8px 0;
+}
+
+.pillar-group .card-list li::before { content: none; }
+
+.pillar-group .card-list li::marker { color: var(--teal-deep); }
+
 .card-label {
   display: inline-flex;
   align-self: center;
@@ -363,49 +405,6 @@ html, body { width: 100%; overflow-x: hidden; }
   color: var(--text-muted);
   letter-spacing: 0.04em;
 }
-
-/* Pillar card typography refinements */
-.pillar-group .card-title {
-  font-size: clamp(26px, 2.3vw, 40px);
-  line-height: 1.15;
-  font-weight: 700;
-  font-family: 'Ogg';
-  font-synthesis: weight;
-  color: var(--teal-deep);
-  margin: 0 0 clamp(0.75rem, 1.6vw, 1rem) 0;
-}
-
-.pillar-group .card-subtitle {
-  font-family: 'Satoshi Variable';
-  font-weight: 400;
-  font-size: clamp(1rem, 1.7vw, 1.1rem);
-  line-height: 1.6;
-  color: rgba(0,0,0,0.72);
-  margin: 12px 0 10px;
-}
-
-.pillar-group .card-list {
-  font-family: 'Satoshi Variable';
-  font-weight: 400;
-  font-size: clamp(1rem, 1.6vw, 1.05rem);
-  line-height: 1.5;
-  color: rgba(0,0,0,0.72);
-  margin: 18px auto 0;
-  padding-left: 1.1em;
-  max-width: 38ch;
-  display: block;
-  list-style: disc;
-  gap: 0;
-}
-
-.pillar-group .card-list li {
-  display: list-item;
-  margin: 8px 0;
-  line-height: 1.5;
-}
-
-.pillar-group .card-list li::before { content: none; }
-.pillar-group .card-list li::marker { color: var(--teal-deep); }
 
 .pillar-group[data-pillar="3"] .card-media {
   background: rgba(248, 244, 236, 0.7);
