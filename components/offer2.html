@@ -1218,3 +1218,18 @@ html, body { width: 100%; overflow-x: hidden; }
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 })();
 </script>
+<script>
+  function sendHeight() {
+    const h = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    );
+    window.parent.postMessage({ type: "setHeight", height: h }, "*");
+  }
+
+  window.addEventListener("load", () => setTimeout(sendHeight, 200));
+  window.addEventListener("resize", () => setTimeout(sendHeight, 200));
+  setInterval(sendHeight, 1000);
+</script>
+</body>
+</html>
