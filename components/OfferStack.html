@@ -2,348 +2,407 @@
   <div class="offerstack-container">
 
     <!-- ═══════════════════════════════════════════════════════════════════════
-         HEADLINE SECTION
+         HEADER: Eyebrow + Headline + Subhead
          ═══════════════════════════════════════════════════════════════════════ -->
     <header class="offerstack-header">
-      <!-- Pillar motif decoration -->
-      <div class="offerstack-motif" aria-hidden="true">
-        <svg viewBox="0 0 60 60" class="pillar-motif-svg" fill="none">
-          <rect x="10" y="40" width="40" height="8" rx="2" fill="#123F3A"/>
-          <rect x="15" y="25" width="30" height="8" rx="2" fill="#2E6A62"/>
-          <rect x="20" y="10" width="20" height="8" rx="2" fill="#D9A3A6"/>
-        </svg>
+      <div class="offerstack-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">What You Get</span>
+        <span class="eyebrow-line"></span>
       </div>
-      <h2 class="offerstack-headline">Everything you need to install the system in 90 days. And keep it.</h2>
-      <p class="offerstack-subhead">The Accelerator is built on 3 pillars: Blueprint, Implementation + Support, and Lifetime Access.</p>
-      <!-- Divider motif -->
-      <svg class="divider-motif" viewBox="0 0 200 10" fill="none" aria-hidden="true">
-        <path d="M5,5 Q100,2 195,5" fill="none" stroke="#D9A3A6" stroke-width="2" stroke-linecap="round"/>
-      </svg>
+      <h2 class="offerstack-headline">Everything you need to install the system in 90 days. <span class="headline-accent">And keep it.</span></h2>
+      <p class="offerstack-subhead">The Accelerator is built on 3 pillars: <strong>Blueprint</strong>, <strong>Implementation + Support</strong>, and <strong>Lifetime Access</strong>.</p>
     </header>
 
     <!-- ═══════════════════════════════════════════════════════════════════════
-         3 PILLARS LAYOUT (Staggered: Blueprint full-width, then 2+3 split)
+         PILLAR 1: BLUEPRINT
          ═══════════════════════════════════════════════════════════════════════ -->
-    <div class="pillars-grid">
-
-      <!-- ══════════════════════════════════════════════════════════════════════
-           PILLAR 1: BLUEPRINT (Dominant)
-           ══════════════════════════════════════════════════════════════════════ -->
-      <section class="pillar-card pillar-card--dominant pillar-card--blueprint">
-        <div class="pillar-badge">
-          <span class="pillar-number">1</span>
+    <section class="pillar pillar--blueprint">
+      <div class="pillar-header">
+        <div class="pillar-badge pillar-badge--blueprint">
+          <span class="pillar-num">1</span>
         </div>
-        <div class="pillar-header">
+        <div class="pillar-title-group">
           <h3 class="pillar-title">Blueprint</h3>
           <p class="pillar-tagline">So you always know what to do next.</p>
         </div>
-        <ul class="pillar-items">
-          <!-- Item 1: Kickoff call (real screenshot) -->
-          <li class="pillar-item">
-            <div class="item-icon">
-              <img
-                src="https://i.imgur.com/qtdG7oV.png"
-                alt="Kickoff call screenshot"
-                loading="lazy"
-              />
-            </div>
-            <div class="item-text">
-              <p>Kickoff call to start clean and get oriented</p>
-            </div>
-          </li>
+      </div>
 
-          <!-- Item 2: 90-day roadmap (real screenshot) -->
-          <li class="pillar-item">
-            <div class="item-icon">
-              <img
-                src="https://i.imgur.com/PPFFNNx.png"
-                alt="Personalized 90-day roadmap screenshot"
-                loading="lazy"
-              />
-            </div>
-            <div class="item-text">
-              <p>A personalized 90-day roadmap built around your shop and your real schedule</p>
-            </div>
-          </li>
+      <div class="pillar-items pillar-items--blueprint">
+        <!-- Item 1: HERO - Kickoff Call -->
+        <article class="offer-item offer-item--hero">
+          <div class="item-number"><span>01</span></div>
+          <div class="item-image item-image--hero">
+            <img src="https://i.imgur.com/qtdG7oV.png" alt="Kickoff call interface showing the welcome session" loading="lazy" />
+          </div>
+          <div class="item-content">
+            <h4 class="item-title">Kickoff call to start clean and get oriented</h4>
+            <p class="item-desc">Group session to align on exactly how the 90 days work and what to focus on first.</p>
+          </div>
+        </article>
 
-          <!-- Item 3: Weekly loop (CUSTOM SVG) -->
-          <li class="pillar-item">
-            <div class="item-icon item-icon--svg">
-              <svg viewBox="0 0 120 120" class="weekly-loop-graphic custom-graphic" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Circular background -->
-                <circle cx="60" cy="60" r="48" fill="none" stroke="#E8DED6" stroke-width="2"/>
+        <!-- Item 2: Personalized Roadmap -->
+        <article class="offer-item">
+          <div class="item-number"><span>02</span></div>
+          <div class="item-image">
+            <img src="https://i.imgur.com/PPFFNNx.png" alt="Personalized 90-day roadmap example" loading="lazy" />
+          </div>
+          <div class="item-content">
+            <h4 class="item-title">A personalized 90-day roadmap built around your shop and your real schedule</h4>
+          </div>
+        </article>
 
-                <!-- 4 stage nodes -->
-                <g class="loop-node loop-node--research">
-                  <circle cx="60" cy="14" r="12" fill="#123F3A"/>
-                  <text x="60" y="18" text-anchor="middle" fill="#FDF8F4" font-size="7" font-weight="600">R</text>
-                </g>
-                <g class="loop-node loop-node--create">
-                  <circle cx="106" cy="60" r="12" fill="#2E6A62"/>
-                  <text x="106" y="64" text-anchor="middle" fill="#FDF8F4" font-size="7" font-weight="600">C</text>
-                </g>
-                <g class="loop-node loop-node--list">
-                  <circle cx="60" cy="106" r="12" fill="#2E6A62"/>
-                  <text x="60" y="110" text-anchor="middle" fill="#FDF8F4" font-size="7" font-weight="600">L</text>
-                </g>
-                <g class="loop-node loop-node--improve">
-                  <circle cx="14" cy="60" r="12" fill="#D9A3A6"/>
-                  <text x="14" y="64" text-anchor="middle" fill="#123F3A" font-size="7" font-weight="600">I</text>
-                </g>
+        <!-- Item 3: Weekly Loop - CUSTOM GRAPHIC -->
+        <article class="offer-item">
+          <div class="item-number"><span>03</span></div>
+          <div class="item-image item-image--graphic">
+            <svg class="custom-graphic graphic-loop" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Outer circle track -->
+              <circle cx="100" cy="100" r="80" stroke="#E8DED6" stroke-width="3" fill="none"/>
 
-                <!-- Connecting arrows (curved paths) -->
-                <path class="loop-arrow" d="M70,18 Q88,28 100,48" fill="none" stroke="#123F3A" stroke-width="2" stroke-linecap="round"/>
-                <path class="loop-arrow" d="M100,72 Q88,92 70,102" fill="none" stroke="#2E6A62" stroke-width="2" stroke-linecap="round"/>
-                <path class="loop-arrow" d="M48,102 Q32,92 22,72" fill="none" stroke="#2E6A62" stroke-width="2" stroke-linecap="round"/>
-                <path class="loop-arrow" d="M22,48 Q32,28 48,18" fill="none" stroke="#D9A3A6" stroke-width="2" stroke-linecap="round"/>
+              <!-- Four nodes with labels -->
+              <g class="loop-stage loop-stage--research">
+                <circle cx="100" cy="20" r="24" fill="#123F3A"/>
+                <text x="100" y="26" text-anchor="middle" fill="#FDF8F4" font-size="14" font-weight="600">R</text>
+                <text x="100" y="0" text-anchor="middle" fill="#5E6E6C" font-size="10" font-weight="500">Research</text>
+              </g>
 
-                <!-- Arrow heads -->
-                <polygon points="100,48 95,42 92,50" fill="#123F3A"/>
-                <polygon points="70,102 75,96 67,95" fill="#2E6A62"/>
-                <polygon points="22,72 27,78 29,68" fill="#2E6A62"/>
-                <polygon points="48,18 43,24 52,25" fill="#D9A3A6"/>
-              </svg>
-            </div>
-            <div class="item-text">
-              <p>The simple weekly loop that removes guessing: Research → Create → List → Improve</p>
-            </div>
-          </li>
+              <g class="loop-stage loop-stage--create">
+                <circle cx="180" cy="100" r="24" fill="#2E6A62"/>
+                <text x="180" y="106" text-anchor="middle" fill="#FDF8F4" font-size="14" font-weight="600">C</text>
+                <text x="180" y="140" text-anchor="middle" fill="#5E6E6C" font-size="10" font-weight="500">Create</text>
+              </g>
 
-          <!-- Item 4: 60-90 minute blocks (CUSTOM SVG) -->
-          <li class="pillar-item">
-            <div class="item-icon item-icon--svg">
-              <svg viewBox="0 0 120 120" class="time-blocks-graphic custom-graphic" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Clock face -->
-                <circle cx="60" cy="55" r="42" fill="none" stroke="#123F3A" stroke-width="2.5"/>
+              <g class="loop-stage loop-stage--list">
+                <circle cx="100" cy="180" r="24" fill="#4A8B87"/>
+                <text x="100" y="186" text-anchor="middle" fill="#FDF8F4" font-size="14" font-weight="600">L</text>
+                <text x="100" y="210" text-anchor="middle" fill="#5E6E6C" font-size="10" font-weight="500">List</text>
+              </g>
 
-                <!-- Hour markers -->
-                <line x1="60" y1="17" x2="60" y2="22" stroke="#123F3A" stroke-width="2"/>
-                <line x1="97" y1="55" x2="92" y2="55" stroke="#123F3A" stroke-width="2"/>
-                <line x1="60" y1="93" x2="60" y2="88" stroke="#123F3A" stroke-width="2"/>
-                <line x1="23" y1="55" x2="28" y2="55" stroke="#123F3A" stroke-width="2"/>
+              <g class="loop-stage loop-stage--improve">
+                <circle cx="20" cy="100" r="24" fill="#D9A3A6"/>
+                <text x="20" y="106" text-anchor="middle" fill="#123F3A" font-size="14" font-weight="600">I</text>
+                <text x="20" y="140" text-anchor="middle" fill="#5E6E6C" font-size="10" font-weight="500">Improve</text>
+              </g>
 
-                <!-- 60-90 min arc highlight (roughly 12 to 1:30 position) -->
-                <path class="time-arc" d="M60,13 A42,42 0 0,1 97,55" fill="none" stroke="#D9A3A6" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+              <!-- Curved arrows between nodes -->
+              <path d="M118 28 Q150 50 172 82" stroke="#123F3A" stroke-width="2.5" fill="none" stroke-linecap="round" marker-end="url(#arrowhead-green)"/>
+              <path d="M172 118 Q150 150 118 172" stroke="#2E6A62" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M82 172 Q50 150 28 118" stroke="#4A8B87" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M28 82 Q50 50 82 28" stroke="#D9A3A6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
-                <!-- Clock hands -->
-                <line x1="60" y1="55" x2="60" y2="28" stroke="#123F3A" stroke-width="3" stroke-linecap="round"/>
-                <line x1="60" y1="55" x2="82" y2="55" stroke="#D9A3A6" stroke-width="3" stroke-linecap="round"/>
+              <!-- Arrowhead definition -->
+              <defs>
+                <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#123F3A"/>
+                </marker>
+              </defs>
+            </svg>
+          </div>
+          <div class="item-content">
+            <h4 class="item-title">The simple weekly loop that removes guessing: Research → Create → List → Improve</h4>
+          </div>
+        </article>
 
-                <!-- Center dot -->
-                <circle cx="60" cy="55" r="4" fill="#123F3A"/>
+        <!-- Item 4: Time Blocks - CUSTOM GRAPHIC -->
+        <article class="offer-item">
+          <div class="item-number"><span>04</span></div>
+          <div class="item-image item-image--graphic">
+            <svg class="custom-graphic graphic-time" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Clock face -->
+              <circle cx="100" cy="90" r="70" fill="#FAFAF8" stroke="#123F3A" stroke-width="3"/>
 
-                <!-- Text label -->
-                <text x="60" y="112" text-anchor="middle" fill="#203332" font-size="11" font-weight="600" font-family="sans-serif">60-90 min</text>
-              </svg>
-            </div>
-            <div class="item-text">
-              <p>A realistic plan designed to keep you moving in 60–90 minute blocks</p>
-            </div>
-          </li>
-        </ul>
-      </section>
+              <!-- Hour markers -->
+              <line x1="100" y1="25" x2="100" y2="35" stroke="#123F3A" stroke-width="2"/>
+              <line x1="165" y1="90" x2="155" y2="90" stroke="#123F3A" stroke-width="2"/>
+              <line x1="100" y1="155" x2="100" y2="145" stroke="#123F3A" stroke-width="2"/>
+              <line x1="35" y1="90" x2="45" y2="90" stroke="#123F3A" stroke-width="2"/>
 
-      <!-- ══════════════════════════════════════════════════════════════════════
-           PILLAR 2: IMPLEMENTATION + SUPPORT
-           ══════════════════════════════════════════════════════════════════════ -->
-      <section class="pillar-card pillar-card--implementation">
-        <div class="pillar-badge">
-          <span class="pillar-number">2</span>
+              <!-- 60-90 minute arc (highlighted) -->
+              <path d="M100 20 A70 70 0 0 1 165 90" stroke="#D4AF37" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+              <!-- Clock hands -->
+              <line x1="100" y1="90" x2="100" y2="45" stroke="#123F3A" stroke-width="4" stroke-linecap="round"/>
+              <line x1="100" y1="90" x2="140" y2="90" stroke="#D4AF37" stroke-width="4" stroke-linecap="round"/>
+
+              <!-- Center dot -->
+              <circle cx="100" cy="90" r="6" fill="#123F3A"/>
+
+              <!-- Time label badge -->
+              <rect x="55" y="170" width="90" height="28" rx="14" fill="#123F3A"/>
+              <text x="100" y="189" text-anchor="middle" fill="#FDF8F4" font-size="13" font-weight="600">60-90 min</text>
+            </svg>
+          </div>
+          <div class="item-content">
+            <h4 class="item-title">A realistic plan designed to keep you moving in 60–90 minute blocks</h4>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PILLAR 2: IMPLEMENTATION + SUPPORT
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="pillar pillar--implementation">
+      <div class="pillar-header">
+        <div class="pillar-badge pillar-badge--implementation">
+          <span class="pillar-num">2</span>
         </div>
-        <div class="pillar-header">
+        <div class="pillar-title-group">
           <h3 class="pillar-title">Implementation + Support</h3>
           <p class="pillar-tagline">So you don't stall for a week over one question.</p>
         </div>
-        <ul class="pillar-items">
-          <!-- Item 1: 12 weekly calls (real screenshot) -->
-          <li class="pillar-item">
-            <div class="item-icon">
-              <img
-                src="https://i.imgur.com/BbKcg4P.png"
-                alt="12 weekly implementation calls screenshot"
-                loading="lazy"
-              />
-            </div>
-            <div class="item-text">
-              <p>12 weekly implementation + shop review calls</p>
-            </div>
-          </li>
+      </div>
 
-          <!-- Item 2: Skool support (CUSTOM SVG) -->
-          <li class="pillar-item">
-            <div class="item-icon item-icon--svg">
-              <svg viewBox="0 0 120 120" class="skool-dm-graphic custom-graphic" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Chat container -->
-                <rect x="10" y="10" width="100" height="85" rx="10" fill="#FFFFFF" stroke="#E8DED6" stroke-width="2"/>
+      <div class="pillar-items pillar-items--implementation">
+        <!-- Item 1: HERO - 12 Weekly Calls -->
+        <article class="offer-item offer-item--hero">
+          <div class="item-number"><span>01</span></div>
+          <div class="item-image item-image--hero">
+            <img src="https://i.imgur.com/BbKcg4P.png" alt="Weekly implementation call interface" loading="lazy" />
+            <div class="item-image-badge">12 weeks</div>
+          </div>
+          <div class="item-content">
+            <h4 class="item-title">12 weekly implementation + shop review calls</h4>
+            <p class="item-desc">60-75 minutes every week. Hot seats, audits, troubleshooting. Every call ends with exactly what to do next.</p>
+          </div>
+        </article>
 
-                <!-- Question bubble (user - left aligned) -->
-                <rect x="16" y="22" width="60" height="22" rx="11" fill="#F5F5F5"/>
-                <circle cx="24" cy="33" r="4" fill="#5E6E6C"/>
-                <line x1="32" y1="30" x2="68" y2="30" stroke="#5E6E6C" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-                <line x1="32" y1="36" x2="55" y2="36" stroke="#5E6E6C" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+        <!-- Item 2: Skool Support - CUSTOM GRAPHIC -->
+        <article class="offer-item">
+          <div class="item-number"><span>02</span></div>
+          <div class="item-image item-image--graphic">
+            <svg class="custom-graphic graphic-skool" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Chat container -->
+              <rect x="20" y="20" width="160" height="140" rx="16" fill="#FFFFFF" stroke="#E8DED6" stroke-width="2"/>
 
-                <!-- Answer bubble (support - right aligned) -->
-                <rect x="44" y="52" width="60" height="28" rx="11" fill="#E8F5F4"/>
-                <circle cx="96" cy="66" r="4" fill="#2E6A62"/>
-                <line x1="52" y1="60" x2="88" y2="60" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-                <line x1="52" y1="66" x2="80" y2="66" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-                <line x1="52" y1="72" x2="70" y2="72" stroke="#2E6A62" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+              <!-- User message bubble -->
+              <rect x="30" y="35" width="100" height="35" rx="12" fill="#F5F5F5"/>
+              <circle cx="45" cy="52" r="8" fill="#5E6E6C"/>
+              <line x1="60" y1="48" x2="115" y2="48" stroke="#5E6E6C" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+              <line x1="60" y1="58" x2="95" y2="58" stroke="#5E6E6C" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
 
-                <!-- Skool branding -->
-                <text x="60" y="108" text-anchor="middle" fill="#5E6E6C" font-size="11" font-weight="600" font-family="sans-serif" opacity="0.7">Skool</text>
-              </svg>
-            </div>
-            <div class="item-text">
-              <p>Skool support for the 90-day sprint</p>
-            </div>
-          </li>
+              <!-- Support response bubble -->
+              <rect x="70" y="80" width="110" height="55" rx="12" fill="#E8F5F4"/>
+              <circle cx="165" cy="107" r="8" fill="#2E6A62"/>
+              <line x1="80" y1="95" x2="155" y2="95" stroke="#2E6A62" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+              <line x1="80" y1="107" x2="145" y2="107" stroke="#2E6A62" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+              <line x1="80" y1="119" x2="125" y2="119" stroke="#2E6A62" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
 
-          <!-- Item 3: Bailey Bot (real screenshot) -->
-          <li class="pillar-item">
-            <div class="item-icon">
-              <img
-                src="https://i.imgur.com/XNuQC9F.png"
-                alt="Bailey Bot AI assistant screenshot"
-                loading="lazy"
-              />
-            </div>
-            <div class="item-text">
-              <p>Bailey Bot (24/7) for the exact moment you get stuck mid-work session</p>
-            </div>
-          </li>
+              <!-- Badge -->
+              <rect x="60" y="170" width="80" height="24" rx="12" fill="#2E6A62"/>
+              <text x="100" y="186" text-anchor="middle" fill="#FDF8F4" font-size="11" font-weight="600">90-Day Access</text>
+            </svg>
+          </div>
+          <div class="item-content">
+            <h4 class="item-title">Skool support for the 90-day sprint</h4>
+          </div>
+        </article>
 
-          <!-- Item 4: Replays (real screenshot) -->
-          <li class="pillar-item">
-            <div class="item-icon">
-              <img
-                src="https://i.imgur.com/zs5mG1s.png"
-                alt="Call replays screenshot"
-                loading="lazy"
-              />
-            </div>
-            <div class="item-text">
-              <p>Replays if you miss live, so you can stay on track without falling behind</p>
-            </div>
-          </li>
-        </ul>
-      </section>
+        <!-- Item 3: Bailey Bot -->
+        <article class="offer-item">
+          <div class="item-number"><span>03</span></div>
+          <div class="item-image">
+            <img src="https://i.imgur.com/XNuQC9F.png" alt="Bailey Bot AI assistant interface" loading="lazy" />
+            <div class="item-image-badge item-image-badge--gold">24/7</div>
+          </div>
+          <div class="item-content">
+            <h4 class="item-title">Bailey Bot (24/7) for the exact moment you get stuck mid-work session</h4>
+          </div>
+        </article>
 
-      <!-- ══════════════════════════════════════════════════════════════════════
-           PILLAR 3: LIFETIME ACCESS
-           ══════════════════════════════════════════════════════════════════════ -->
-      <section class="pillar-card pillar-card--lifetime">
-        <div class="pillar-badge">
-          <span class="pillar-number">3</span>
+        <!-- Item 4: Replays -->
+        <article class="offer-item">
+          <div class="item-number"><span>04</span></div>
+          <div class="item-image">
+            <img src="https://i.imgur.com/zs5mG1s.png" alt="Call replay library interface" loading="lazy" />
+          </div>
+          <div class="item-content">
+            <h4 class="item-title">Replays if you miss live, so you can stay on track without falling behind</h4>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PILLAR 3: LIFETIME ACCESS
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="pillar pillar--lifetime">
+      <div class="pillar-header">
+        <div class="pillar-badge pillar-badge--lifetime">
+          <span class="pillar-num">3</span>
         </div>
-        <div class="pillar-header">
+        <div class="pillar-title-group">
           <h3 class="pillar-title">Lifetime Access</h3>
           <p class="pillar-tagline">So you're not starting over after Day 90.</p>
         </div>
-        <ul class="pillar-items">
-          <!-- Item 1: Lifetime Design Club Library (real screenshot) -->
-          <li class="pillar-item">
-            <div class="item-icon">
-              <img
-                src="https://i.imgur.com/JnvXoHP.png"
-                alt="Lifetime Design Club Library access screenshot"
-                loading="lazy"
-              />
-            </div>
-            <div class="item-text">
-              <p>Lifetime Design Club Library access (everything Bailey has created + future updates)</p>
-            </div>
-          </li>
+        <div class="lifetime-badge">
+          <svg viewBox="0 0 20 20" fill="none" class="infinity-icon">
+            <path d="M5 10C5 7.5 7 6 9 6C11 6 12.5 7.5 12.5 10C12.5 12.5 11 14 9 14C7 14 5 12.5 5 10ZM12.5 10C12.5 7.5 14 6 16 6C18 6 20 7.5 20 10C20 12.5 18 14 16 14C14 14 12.5 12.5 12.5 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>Forever yours</span>
+        </div>
+      </div>
 
-          <!-- Item 2: Lifetime community (real screenshot) -->
-          <li class="pillar-item">
-            <div class="item-icon">
-              <img
-                src="https://i.imgur.com/VkMRwQC.png"
-                alt="Lifetime community and monthly calls screenshot"
-                loading="lazy"
-              />
-            </div>
-            <div class="item-text">
-              <p>Lifetime community access + ongoing monthly calls</p>
-            </div>
-          </li>
+      <div class="pillar-items pillar-items--lifetime">
+        <!-- Item 1: HERO - Design Club Library -->
+        <article class="offer-item offer-item--hero">
+          <div class="item-number"><span>01</span></div>
+          <div class="item-image item-image--hero">
+            <img src="https://i.imgur.com/JnvXoHP.png" alt="Design Club Library interface showing all courses" loading="lazy" />
+            <div class="item-image-badge item-image-badge--gold">Lifetime</div>
+          </div>
+          <div class="item-content">
+            <h4 class="item-title">Lifetime Design Club Library access (everything Bailey has created + future updates)</h4>
+            <p class="item-desc">All courses, templates, and resources. Every future update included automatically.</p>
+          </div>
+        </article>
 
-          <!-- Item 3: TeachFluence (CUSTOM SVG) -->
-          <li class="pillar-item">
-            <div class="item-icon item-icon--svg">
-              <svg viewBox="0 0 120 120" class="teachfluence-graphic custom-graphic" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Book/course module base -->
-                <rect x="25" y="15" width="70" height="75" rx="6" fill="#FFFFFF" stroke="#123F3A" stroke-width="2.5"/>
+        <!-- Item 2: Community -->
+        <article class="offer-item">
+          <div class="item-number"><span>02</span></div>
+          <div class="item-image">
+            <img src="https://i.imgur.com/VkMRwQC.png" alt="Community and monthly calls interface" loading="lazy" />
+          </div>
+          <div class="item-content">
+            <h4 class="item-title">Lifetime community access + ongoing monthly calls</h4>
+          </div>
+        </article>
 
-                <!-- Book spine effect -->
-                <line x1="30" y1="15" x2="30" y2="90" stroke="#123F3A" stroke-width="1.5" opacity="0.3"/>
+        <!-- Item 3: TeachFluence - CUSTOM GRAPHIC -->
+        <article class="offer-item">
+          <div class="item-number"><span>03</span></div>
+          <div class="item-image item-image--graphic">
+            <svg class="custom-graphic graphic-teachfluence" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Course module stack -->
+              <rect x="35" y="40" width="130" height="100" rx="8" fill="#FFFFFF" stroke="#123F3A" stroke-width="2.5"/>
+              <rect x="40" y="45" width="120" height="90" rx="6" fill="#FAFAF8"/>
 
-                <!-- Content lines -->
-                <line x1="40" y1="30" x2="85" y2="30" stroke="#D9A3A6" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="40" y1="42" x2="80" y2="42" stroke="#E8DED6" stroke-width="2" stroke-linecap="round"/>
-                <line x1="40" y1="52" x2="75" y2="52" stroke="#E8DED6" stroke-width="2" stroke-linecap="round"/>
+              <!-- Content lines -->
+              <rect x="55" y="60" width="90" height="6" rx="3" fill="#D9A3A6"/>
+              <rect x="55" y="75" width="75" height="4" rx="2" fill="#E8DED6"/>
+              <rect x="55" y="85" width="80" height="4" rx="2" fill="#E8DED6"/>
 
-                <!-- Play button circle -->
-                <circle cx="60" cy="70" r="14" fill="#123F3A" opacity="0.1"/>
-                <circle cx="60" cy="70" r="12" fill="#123F3A"/>
+              <!-- Play button -->
+              <circle cx="100" cy="115" r="18" fill="#123F3A"/>
+              <path d="M95 107 L95 123 L110 115 Z" fill="#FDF8F4"/>
 
-                <!-- Play icon -->
-                <path d="M56,64 L56,76 L68,70 Z" fill="#FDF8F4"/>
+              <!-- Course badge -->
+              <rect x="50" y="155" width="100" height="30" rx="15" fill="#123F3A"/>
+              <text x="100" y="175" text-anchor="middle" fill="#FDF8F4" font-size="11" font-weight="600">Personal Brand</text>
 
-                <!-- Label -->
-                <text x="60" y="108" text-anchor="middle" fill="#203332" font-size="10" font-weight="600" font-family="sans-serif">Personal Brand</text>
-              </svg>
-            </div>
-            <div class="item-text">
-              <p>TeachFluence access (there if you want it later)</p>
-            </div>
-          </li>
-        </ul>
-      </section>
+              <!-- Decorative sparkle -->
+              <path d="M160 35 L163 42 L170 45 L163 48 L160 55 L157 48 L150 45 L157 42 Z" fill="#D4AF37"/>
+            </svg>
+          </div>
+          <div class="item-content">
+            <h4 class="item-title">TeachFluence access (there if you want it later)</h4>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    </div>
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         BONUSES SECTION (Gold treatment)
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="bonuses-section">
+      <div class="bonuses-header">
+        <div class="bonus-badge-wrap">
+          <span class="bonus-badge">BONUS</span>
+        </div>
+        <h3 class="bonuses-title">Plus these extras when you join</h3>
+      </div>
+
+      <div class="bonuses-grid">
+        <!-- Bonus 1: PSD Mockups -->
+        <article class="bonus-card">
+          <div class="bonus-icon">
+            <svg class="custom-graphic graphic-mockups" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Stacked mockup frames -->
+              <rect x="8" y="24" width="50" height="40" rx="4" fill="#E8DED6" stroke="#123F3A" stroke-width="2"/>
+              <rect x="16" y="16" width="50" height="40" rx="4" fill="#F5F5F5" stroke="#123F3A" stroke-width="2"/>
+              <rect x="24" y="8" width="50" height="40" rx="4" fill="#FFFFFF" stroke="#123F3A" stroke-width="2"/>
+              <!-- Image placeholder in top frame -->
+              <rect x="30" y="14" width="38" height="24" rx="2" fill="#E8F5F4"/>
+              <circle cx="40" cy="24" r="5" fill="#4A8B87"/>
+              <path d="M32 34 L45 26 L55 32 L65 22" stroke="#2E6A62" stroke-width="2" fill="none"/>
+              <!-- Smart object indicator -->
+              <circle cx="68" cy="50" r="10" fill="#D4AF37"/>
+              <text x="68" y="54" text-anchor="middle" fill="#123F3A" font-size="10" font-weight="700">S</text>
+            </svg>
+          </div>
+          <div class="bonus-content">
+            <h4 class="bonus-title">Trending PSD Mockups That Actually Convert</h4>
+            <p class="bonus-desc">A full suite of current, Etsy-ready PSD mockups with smart objects already set up. No tweaking layers, no rebuilding templates. Drop in your design and you're done. Works great if you use bulk mockup tools like BulkMockup or Mockster.</p>
+          </div>
+        </article>
+
+        <!-- Bonus 2: Email Growth -->
+        <article class="bonus-card">
+          <div class="bonus-icon">
+            <svg class="custom-graphic graphic-email" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Email envelope -->
+              <rect x="10" y="20" width="60" height="40" rx="4" fill="#FFFFFF" stroke="#123F3A" stroke-width="2"/>
+              <path d="M10 24 L40 44 L70 24" stroke="#123F3A" stroke-width="2" fill="none"/>
+              <!-- Growth arrow -->
+              <path d="M55 55 L55 30 M55 30 L48 37 M55 30 L62 37" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- List growth dots -->
+              <circle cx="20" cy="65" r="3" fill="#E8DED6"/>
+              <circle cx="28" cy="62" r="3" fill="#D9A3A6"/>
+              <circle cx="36" cy="58" r="3" fill="#2E6A62"/>
+              <circle cx="44" cy="52" r="4" fill="#D4AF37"/>
+            </svg>
+          </div>
+          <div class="bonus-content">
+            <h4 class="bonus-title">The "Secret" Etsy Email List Growth System</h4>
+            <p class="bonus-desc">A new, simple way to grow your Etsy email list so you can remarket to past customers again and again. Includes templates and copy you can copy and paste.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <!-- ═══════════════════════════════════════════════════════════════════════
          BOTTOM NOTE
          ═══════════════════════════════════════════════════════════════════════ -->
     <div class="offerstack-note">
+      <div class="note-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 16v-4M12 8h.01"/>
+        </svg>
+      </div>
       <p class="note-text"><strong>Quick note:</strong> Skool support is for the 90-day sprint. The library and community are lifetime.</p>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════════════════════
-         CLOSING STATEMENT
+         CLOSING + CTA
          ═══════════════════════════════════════════════════════════════════════ -->
-    <div class="offerstack-closing">
-      <p class="closing-text">The goal isn't more hustle. It's a system you can keep running even when life gets busy.</p>
-    </div>
+    <footer class="offerstack-footer">
+      <p class="closing-statement">The goal isn't more hustle. It's a system you can keep running even when life gets busy.</p>
 
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         CTA SECTION
-         ═══════════════════════════════════════════════════════════════════════ -->
-    <div class="offerstack-cta">
-      <a
-        href="#bf-pricing"
-        class="cta-button"
-        aria-label="Join the 90-Day Etsy Empire Accelerator"
-      >
-        Join the 90-Day Etsy Empire Accelerator
-      </a>
-      <p class="cta-microcopy">Capped seats. Real support.</p>
-    </div>
+      <div class="cta-wrapper">
+        <a href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator/" target="_top" rel="noopener" class="cta-button" aria-label="Join the 90-Day Etsy Empire Accelerator">
+          <span class="cta-text">Join the 90-Day Etsy Empire Accelerator</span>
+          <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <p class="cta-microcopy">Capped seats. Real support.</p>
+      </div>
+    </footer>
 
   </div>
 </div>
 
 <style>
-/* ============================================
-   OFFER STACK SECTION
-   "Everything You Get" - 3 Pillars
-   Premium Editorial Design
-   ============================================ */
+/* ═══════════════════════════════════════════════════════════════════════════════
+   OFFER STACK SECTION — PREMIUM REDESIGN
+   "Everything You Get" - Visual Value Demonstration
+   ═══════════════════════════════════════════════════════════════════════════════ */
 
-/* ============================================
-   FONT EMBEDDING - HOSTED URLs
-   ============================================ */
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FONT EMBEDDING
+   ═══════════════════════════════════════════════════════════════════════════════ */
 @font-face {
   font-family: 'Ogg';
   src: url('https://seanthea.github.io/bailey-fonts/Ogg-Bold.woff2') format('woff2'),
@@ -362,55 +421,58 @@
   font-display: swap;
 }
 
-/* ============================================
-   CSS VARIABLES
-   ============================================ */
+/* ═══════════════════════════════════════════════════════════════════════════════
+   CSS CUSTOM PROPERTIES
+   ═══════════════════════════════════════════════════════════════════════════════ */
 #bf-offerstack {
-  /* Background */
-  --bg-section: #FDF8F4;
+  /* Foundation Colors */
+  --cream: #FDF8F4;
+  --deep-green: #123F3A;
+  --teal: #2E6A62;
+  --teal-light: #4A8B87;
+  --gold: #D4AF37;
+  --blush: #D9A3A6;
 
   /* Text */
   --text-primary: #203332;
-  --text-muted: #5E6E6C;
+  --text-secondary: #5E6E6C;
+  --text-muted: #8A9A98;
 
-  /* Brand colors */
-  --primary-deep: #123F3A;
-  --secondary-green: #2E6A62;
-  --accent-blush: #D9A3A6;
+  /* Borders & Backgrounds */
+  --border-light: #E8DED6;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #FAFAF8;
 
-  /* Borders */
-  --border-hairline: #E8DED6;
-
-  /* Cards */
-  --card-bg: #FFFFFF;
-
-  /* CTA */
-  --cta-bg: #123F3A;
-  --cta-text: #FDF8F4;
-  --cta-hover: #0F332F;
-
-  /* Spacing scale */
-  --section-padding-y: clamp(3rem, 7vw, 5rem);
-  --section-padding-x: clamp(1.5rem, 4vw, 2.5rem);
-  --space-xl: clamp(2rem, 5vw, 3.5rem);
-  --space-lg: clamp(1.5rem, 3.5vw, 2.5rem);
-  --space-md: clamp(1rem, 2.5vw, 1.75rem);
-  --space-sm: clamp(0.75rem, 1.8vw, 1.25rem);
-  --card-padding: clamp(2rem, 4vw, 2.5rem);
-  --items-gap: clamp(1rem, 2.5vw, 1.75rem);
+  /* Spacing Scale */
+  --space-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --space-sm: clamp(0.75rem, 1.5vw, 1rem);
+  --space-md: clamp(1rem, 2vw, 1.5rem);
+  --space-lg: clamp(1.5rem, 3vw, 2rem);
+  --space-xl: clamp(2rem, 4vw, 3rem);
+  --space-2xl: clamp(3rem, 6vw, 4.5rem);
+  --space-3xl: clamp(4rem, 8vw, 6rem);
 
   /* Container */
-  --container-max: 1200px;
+  --container-max: 1100px;
+
+  /* Image sizes */
+  --image-hero: clamp(200px, 30vw, 280px);
+  --image-standard: clamp(140px, 20vw, 180px);
+  --image-graphic: clamp(100px, 15vw, 140px);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-medium: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ============================================
-   BASE SECTION STYLES
-   ============================================ */
+/* ═══════════════════════════════════════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════════════════════════════════════ */
 #bf-offerstack {
-  width: 100%;
-  background: var(--bg-section);
-  padding: var(--section-padding-y) var(--section-padding-x);
-  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--cream);
+  padding: var(--space-3xl) var(--space-lg);
+  font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -429,291 +491,475 @@
   margin: 0 auto;
 }
 
-/* ============================================
-   HEADLINE SECTION
-   ============================================ */
+/* ═══════════════════════════════════════════════════════════════════════════════
+   HEADER SECTION
+   ═══════════════════════════════════════════════════════════════════════════════ */
 .offerstack-header {
   text-align: center;
-  margin-bottom: var(--space-xl);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: var(--space-3xl);
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
-.offerstack-header.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.offerstack-motif {
-  margin-bottom: var(--space-md);
-}
-
-.pillar-motif-svg {
-  width: 48px;
-  height: 48px;
-}
-
-.offerstack-headline {
-  font-family: 'Ogg', Georgia, 'Times New Roman', serif;
-  font-weight: bold;
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--primary-deep);
-  margin: 0 0 var(--space-md);
-}
-
-.offerstack-subhead {
-  font-family: 'Satoshi', sans-serif;
-  font-weight: 500;
-  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
-  line-height: 1.6;
-  color: var(--text-muted);
-  margin: 0 0 var(--space-md);
-}
-
-.divider-motif {
-  width: 120px;
-  height: 10px;
-  margin: 0 auto;
-}
-
-/* ============================================
-   PILLARS GRID - Staggered Layout
-   ============================================ */
-.pillars-grid {
-  display: grid;
-  gap: clamp(2rem, 5vw, 3.5rem);
-  margin-bottom: var(--space-xl);
-}
-
-/* Desktop: Blueprint full width, then 2+3 side by side */
-@media (min-width: 1024px) {
-  .pillars-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-  }
-
-  .pillar-card--blueprint {
-    grid-column: 1 / -1;
-  }
-
-  .pillar-card--implementation,
-  .pillar-card--lifetime {
-    grid-column: span 1;
-  }
-}
-
-/* Tablet: All stack */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .pillars-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Mobile: Stack vertically */
-@media (max-width: 767px) {
-  .pillars-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ============================================
-   PILLAR CARD
-   ============================================ */
-.pillar-card {
-  background: var(--card-bg);
-  border: 2px solid var(--border-hairline);
-  border-radius: 16px;
-  padding: var(--card-padding);
-  position: relative;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.pillar-card.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Dominant pillar (Blueprint) styling */
-.pillar-card--dominant {
-  border-left: 4px solid var(--accent-blush);
-  box-shadow: 0 6px 24px rgba(18, 63, 58, 0.08);
-}
-
-.pillar-card--dominant::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: 10%;
-  right: 10%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--accent-blush), transparent);
-  border-radius: 3px;
-}
-
-/* Supporting pillars accent */
-.pillar-card--implementation {
-  border-top: 3px solid var(--secondary-green);
-}
-
-.pillar-card--lifetime {
-  border-top: 3px solid var(--primary-deep);
-}
-
-/* Pillar badge */
-.pillar-badge {
-  position: absolute;
-  top: -14px;
-  left: 24px;
-  background: var(--primary-deep);
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+.offerstack-eyebrow {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
 }
 
-.pillar-number {
+.eyebrow-line {
+  width: 40px;
+  height: 1px;
+  background: var(--border-light);
+}
+
+.eyebrow-text {
+  font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.offerstack-headline {
   font-family: 'Ogg', Georgia, serif;
-  font-size: 14px;
+  font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: bold;
-  color: var(--bg-section);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--deep-green);
+  margin: 0 0 var(--space-md);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Pillar header */
+.headline-accent {
+  color: var(--teal);
+  position: relative;
+}
+
+.headline-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: -4px;
+  right: -4px;
+  height: 0.3em;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.1));
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.offerstack-subhead {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 450;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offerstack-subhead strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   PILLAR SECTIONS
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.pillar {
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-xl);
+  background: var(--bg-card);
+  border-radius: 20px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: var(--transition-slow);
+}
+
+.pillar.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pillar accent colors */
+.pillar--blueprint {
+  border-top: 4px solid var(--deep-green);
+}
+
+.pillar--implementation {
+  border-top: 4px solid var(--teal);
+}
+
+.pillar--lifetime {
+  border-top: 4px solid var(--gold);
+}
+
+/* Pillar Header */
 .pillar-header {
-  margin-bottom: var(--space-lg);
-  padding-top: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.pillar-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pillar-badge--blueprint { background: var(--deep-green); }
+.pillar-badge--implementation { background: var(--teal); }
+.pillar-badge--lifetime { background: linear-gradient(135deg, var(--gold), #B8972E); }
+
+.pillar-num {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--cream);
+}
+
+.pillar-title-group {
+  flex: 1;
+  min-width: 200px;
 }
 
 .pillar-title {
-  font-family: 'Ogg', Georgia, 'Times New Roman', serif;
-  font-weight: bold;
+  font-family: 'Ogg', Georgia, serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
-  line-height: 1.3;
-  color: var(--primary-deep);
-  margin: 0 0 var(--space-sm);
+  font-weight: bold;
+  color: var(--deep-green);
+  margin: 0 0 var(--space-xs);
+  line-height: 1.2;
 }
 
 .pillar-tagline {
-  font-family: 'Satoshi', sans-serif;
-  font-weight: 500;
-  font-size: clamp(0.95rem, 2vw, 1.05rem);
-  line-height: 1.7;
-  color: var(--text-muted);
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  font-weight: 450;
+  color: var(--text-secondary);
   margin: 0;
   font-style: italic;
 }
 
-/* ============================================
-   PILLAR ITEMS LIST
-   ============================================ */
+/* Lifetime badge */
+.lifetime-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  margin-left: auto;
+}
+
+.infinity-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--gold);
+}
+
+.lifetime-badge span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   OFFER ITEMS
+   ═══════════════════════════════════════════════════════════════════════════════ */
 .pillar-items {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--items-gap);
+  gap: var(--space-lg);
 }
 
-/* Blueprint pillar: 2 columns on large screens */
-@media (min-width: 1024px) {
-  .pillar-card--dominant .pillar-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--items-gap);
-  }
-}
-
-.pillar-item {
-  display: flex;
-  align-items: flex-start;
+.offer-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: var(--space-md);
-  padding: var(--space-sm);
-  background: var(--bg-section);
-  border-radius: 12px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: var(--space-md);
+  background: var(--bg-subtle);
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition: var(--transition-medium);
+  position: relative;
 }
 
-.pillar-item:hover {
+.offer-item:hover {
+  border-color: var(--border-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
   transform: translateX(4px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* Item icon container */
-.item-icon {
-  flex-shrink: 0;
-  width: 80px;
-  height: 80px;
+/* Hero items get larger images */
+.offer-item--hero {
+  background: linear-gradient(135deg, var(--bg-subtle), var(--bg-card));
+  border: 1px solid var(--border-light);
+}
+
+.offer-item--hero .item-image--hero {
+  grid-row: span 2;
+}
+
+/* Item Number Badge */
+.item-number {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  width: 28px;
+  height: 28px;
+  background: var(--cream);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  z-index: 2;
+}
+
+.item-number span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Item Images */
+.item-image {
+  width: var(--image-standard);
+  height: var(--image-standard);
+  border-radius: 12px;
   overflow: hidden;
-  background: #FAFAF8;
-  border: 1px solid var(--border-hairline);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  position: relative;
+  flex-shrink: 0;
 }
 
-.item-icon img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+.item-image--hero {
+  width: var(--image-hero);
+  height: var(--image-hero);
 }
 
-/* SVG icon styling */
-.item-icon--svg {
+.item-image--graphic {
   background: transparent;
   border: none;
-}
-
-.item-icon--svg svg {
-  width: 64px;
-  height: 64px;
-}
-
-/* Item text */
-.item-text {
-  flex: 1;
   display: flex;
   align-items: center;
-  min-height: 60px;
+  justify-content: center;
+  width: var(--image-graphic);
+  height: var(--image-graphic);
 }
 
-.item-text p {
-  font-family: 'Satoshi', sans-serif;
-  font-weight: 500;
-  font-size: clamp(0.9rem, 1.9vw, 1rem);
-  line-height: 1.6;
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-medium);
+}
+
+.offer-item:hover .item-image img {
+  transform: scale(1.03);
+}
+
+/* Image badges */
+.item-image-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: var(--teal);
+  color: var(--cream);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.03em;
+}
+
+.item-image-badge--gold {
+  background: linear-gradient(135deg, var(--gold), #B8972E);
+}
+
+/* Custom Graphics */
+.custom-graphic {
+  width: 100%;
+  height: 100%;
+  max-width: 140px;
+  max-height: 140px;
+}
+
+/* Item Content */
+.item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: var(--space-sm);
+}
+
+.item-title {
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  font-weight: 600;
   color: var(--text-primary);
+  margin: 0 0 var(--space-xs);
+  line-height: 1.5;
+}
+
+.item-desc {
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  font-weight: 450;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   BONUSES SECTION
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.bonuses-section {
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.02));
+  border: 2px solid rgba(212, 175, 55, 0.25);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: var(--transition-slow);
+}
+
+.bonuses-section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Decorative corner accent */
+.bonuses-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.bonuses-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.bonus-badge-wrap {
+  margin-bottom: var(--space-sm);
+}
+
+.bonus-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold), #B8972E);
+  color: var(--deep-green);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  padding: 8px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.bonuses-title {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: bold;
+  color: var(--deep-green);
   margin: 0;
 }
 
-/* ============================================
+/* Bonus Cards */
+.bonuses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.bonus-card {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  transition: var(--transition-medium);
+}
+
+.bonus-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.12);
+}
+
+.bonus-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+
+.bonus-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bonus-content {
+  flex: 1;
+}
+
+.bonus-title {
+  font-size: clamp(1rem, 1.8vw, 1.1rem);
+  font-weight: 700;
+  color: var(--deep-green);
+  margin: 0 0 var(--space-xs);
+  line-height: 1.4;
+}
+
+.bonus-desc {
+  font-size: clamp(0.85rem, 1.5vw, 0.9rem);
+  font-weight: 450;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
    BOTTOM NOTE
-   ============================================ */
+   ═══════════════════════════════════════════════════════════════════════════════ */
 .offerstack-note {
-  max-width: 700px;
-  margin: 0 auto var(--space-lg);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  max-width: 600px;
+  margin: 0 auto var(--space-2xl);
   padding: var(--space-md) var(--space-lg);
-  background: linear-gradient(90deg, rgba(217, 163, 166, 0.1) 0%, rgba(217, 163, 166, 0.05) 100%);
+  background: var(--bg-subtle);
   border-radius: 12px;
-  border-left: 3px solid var(--accent-blush);
+  border-left: 3px solid var(--teal);
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transform: translateY(20px);
+  transition: var(--transition-slow);
 }
 
 .offerstack-note.revealed {
@@ -721,269 +967,313 @@
   transform: translateY(0);
 }
 
+.note-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--teal);
+}
+
 .note-text {
-  font-family: 'Satoshi', sans-serif;
-  font-weight: 500;
-  font-size: clamp(0.9rem, 1.9vw, 1rem);
-  line-height: 1.7;
-  color: var(--text-muted);
+  font-size: clamp(0.9rem, 1.6vw, 0.95rem);
+  font-weight: 450;
+  color: var(--text-secondary);
   margin: 0;
+  line-height: 1.6;
 }
 
 .note-text strong {
-  color: var(--primary-deep);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
-/* ============================================
-   CLOSING STATEMENT
-   ============================================ */
-.offerstack-closing {
-  max-width: 800px;
-  margin: 0 auto var(--space-xl);
+/* ═══════════════════════════════════════════════════════════════════════════════
+   FOOTER / CTA
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.offerstack-footer {
   text-align: center;
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transform: translateY(20px);
+  transition: var(--transition-slow);
 }
 
-.offerstack-closing.revealed {
+.offerstack-footer.revealed {
   opacity: 1;
   transform: translateY(0);
 }
 
-.closing-text {
-  font-family: 'Ogg', Georgia, 'Times New Roman', serif;
+.closing-statement {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
   font-weight: bold;
-  font-size: clamp(1.25rem, 2.8vw, 1.75rem);
+  color: var(--deep-green);
+  margin: 0 0 var(--space-xl);
   line-height: 1.4;
-  color: var(--primary-deep);
-  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ============================================
-   CTA SECTION
-   ============================================ */
-.offerstack-cta {
-  text-align: center;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.offerstack-cta.revealed {
-  opacity: 1;
-  transform: translateY(0);
+.cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
 }
 
 .cta-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--cta-bg);
-  color: var(--cta-text);
+  gap: var(--space-sm);
+  background: var(--deep-green);
+  color: var(--cream);
   font-family: 'Satoshi', sans-serif;
-  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  font-size: clamp(1rem, 2vw, 1.1rem);
   font-weight: 700;
   text-decoration: none;
-  padding: clamp(1rem, 2.5vw, 1.25rem) clamp(2rem, 4vw, 2.5rem);
-  border-radius: 12px;
+  padding: clamp(1rem, 2.5vw, 1.25rem) clamp(2rem, 4vw, 3rem);
+  border-radius: 14px;
   border: none;
   cursor: pointer;
-  min-height: 48px;
-  box-shadow: 0 4px 12px rgba(18, 63, 58, 0.2);
-  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 56px;
+  box-shadow: 0 4px 16px rgba(18, 63, 58, 0.25), 0 0 0 0 rgba(212, 175, 55, 0);
+  transition: all var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
 }
 
 .cta-button:hover {
-  background: var(--cta-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(18, 63, 58, 0.3);
+  background: #0F332F;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(18, 63, 58, 0.35), 0 0 0 3px rgba(212, 175, 55, 0.3);
+}
+
+.cta-button:hover::before {
+  transform: translateX(100%);
 }
 
 .cta-button:focus {
-  outline: 3px solid var(--accent-blush);
-  outline-offset: 2px;
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
 }
 
 .cta-button:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
+}
+
+.cta-text {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-fast);
+  position: relative;
+  z-index: 1;
+}
+
+.cta-button:hover .cta-arrow {
+  transform: translateX(4px);
 }
 
 .cta-microcopy {
-  font-family: 'Satoshi', sans-serif;
-  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  font-size: clamp(0.85rem, 1.5vw, 0.9rem);
   font-weight: 500;
   color: var(--text-muted);
-  margin-top: 0.75rem;
+  margin: 0;
 }
 
-/* ============================================
-   CUSTOM SVG GRAPHICS - ANIMATIONS
-   ============================================ */
-.custom-graphic path,
-.custom-graphic line,
-.custom-graphic circle,
-.custom-graphic rect {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  transition: stroke-dashoffset 0.8s ease-out;
+/* ═══════════════════════════════════════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.custom-graphic text,
-.custom-graphic polygon {
-  opacity: 0;
-  transition: opacity 0.4s ease-out 0.6s;
-}
-
-.pillar-card.revealed .custom-graphic path,
-.pillar-card.revealed .custom-graphic line,
-.pillar-card.revealed .custom-graphic circle,
-.pillar-card.revealed .custom-graphic rect {
-  stroke-dashoffset: 0;
-}
-
-.pillar-card.revealed .custom-graphic text,
-.pillar-card.revealed .custom-graphic polygon {
-  opacity: 1;
-}
-
-/* Time arc special animation */
-.time-arc {
-  stroke-dasharray: 150;
-  stroke-dashoffset: 150;
-}
-
-.pillar-card.revealed .time-arc {
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 1s ease-out 0.3s;
-}
-
-/* ============================================
-   RESPONSIVE — Mobile First
-   ============================================ */
-@media (max-width: 768px) {
-  .cta-button {
-    width: 100%;
-    max-width: 400px;
+/* ═══════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE: TABLET
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .pillar-header {
+    flex-direction: column;
+    gap: var(--space-sm);
   }
 
-  .item-icon {
+  .lifetime-badge {
+    margin-left: 0;
+    margin-top: var(--space-sm);
+  }
+
+  .offer-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .item-image,
+  .item-image--hero,
+  .item-image--graphic {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 4/3;
+    margin: 0 auto;
+  }
+
+  .item-image--graphic {
+    aspect-ratio: 1;
+    max-width: 160px;
+  }
+
+  .item-number {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .item-content {
+    padding-left: 0;
+    padding-top: var(--space-sm);
+  }
+
+  .bonus-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE: MOBILE
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  #bf-offerstack {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .pillar {
+    padding: var(--space-lg);
+    border-radius: 16px;
+  }
+
+  .pillar-badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .pillar-num {
+    font-size: 1rem;
+  }
+
+  .bonuses-section {
+    padding: var(--space-lg);
+  }
+
+  .bonus-icon {
     width: 64px;
     height: 64px;
   }
 
-  .item-icon--svg svg {
-    width: 56px;
-    height: 56px;
+  .cta-button {
+    width: 100%;
+    max-width: 400px;
   }
 }
 
-@media (max-width: 640px) {
-  .pillar-card {
-    padding: var(--space-lg);
-  }
-
-  .pillar-item {
-    padding: var(--space-sm);
-    gap: var(--space-sm);
-  }
-
-  .item-icon {
-    width: 56px;
-    height: 56px;
-  }
-
-  .item-icon--svg svg {
-    width: 48px;
-    height: 48px;
-  }
-
-  .pillar-badge {
-    top: -12px;
-    left: 16px;
-    width: 24px;
-    height: 24px;
-  }
-
-  .pillar-number {
-    font-size: 12px;
-  }
-}
-
+/* ═══════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE: SMALL MOBILE (350px)
+   ═══════════════════════════════════════════════════════════════════════════════ */
 @media (max-width: 350px) {
   #bf-offerstack {
-    padding: clamp(2rem, 5vw, 3rem) 1rem;
+    padding: var(--space-xl) var(--space-sm);
   }
 
   .offerstack-headline {
     font-size: 1.75rem;
   }
 
+  .pillar {
+    padding: var(--space-md);
+  }
+
   .pillar-title {
     font-size: 1.25rem;
   }
 
-  .pillar-card {
+  .offer-item {
+    padding: var(--space-sm);
+  }
+
+  .item-title {
+    font-size: 0.9rem;
+  }
+
+  .bonuses-section {
     padding: var(--space-md);
-    border-radius: 12px;
+    border-radius: 16px;
   }
 
-  .item-icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  .item-icon--svg svg {
-    width: 40px;
-    height: 40px;
-  }
-
-  .item-text p {
-    font-size: 0.875rem;
-  }
-
-  .cta-button {
-    width: 100%;
-    padding: var(--space-sm) var(--space-md);
+  .bonus-title {
     font-size: 0.95rem;
   }
 
-  .closing-text {
-    font-size: 1.125rem;
+  .bonus-desc {
+    font-size: 0.8rem;
+  }
+
+  .closing-statement {
+    font-size: 1.1rem;
   }
 }
 
-/* ============================================
+/* ═══════════════════════════════════════════════════════════════════════════════
    REDUCED MOTION
-   ============================================ */
+   ═══════════════════════════════════════════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {
   .offerstack-header,
-  .pillar-card,
+  .pillar,
+  .bonuses-section,
   .offerstack-note,
-  .offerstack-closing,
-  .offerstack-cta {
+  .offerstack-footer {
     opacity: 1;
     transform: none;
+    animation: none;
     transition: none;
   }
 
-  .custom-graphic path,
-  .custom-graphic line,
-  .custom-graphic circle,
-  .custom-graphic rect {
-    stroke-dashoffset: 0;
-    transition: none;
-  }
-
-  .custom-graphic text,
-  .custom-graphic polygon {
-    opacity: 1;
-    transition: none;
-  }
-
-  .pillar-item:hover,
+  .offer-item:hover,
+  .bonus-card:hover,
   .cta-button:hover {
+    transform: none;
+  }
+
+  .offer-item:hover .item-image img {
+    transform: none;
+  }
+
+  .cta-button::before {
+    display: none;
+  }
+
+  .cta-button:hover .cta-arrow {
     transform: none;
   }
 }
@@ -993,44 +1283,47 @@
 (function() {
   'use strict';
 
-  // Check for reduced motion
+  // Check for reduced motion preference
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (prefersReducedMotion) {
     // Show everything immediately
-    const elements = document.querySelectorAll('#bf-offerstack .offerstack-header, #bf-offerstack .pillar-card, #bf-offerstack .offerstack-note, #bf-offerstack .offerstack-closing, #bf-offerstack .offerstack-cta');
+    const elements = document.querySelectorAll(
+      '#bf-offerstack .pillar, ' +
+      '#bf-offerstack .bonuses-section, ' +
+      '#bf-offerstack .offerstack-note, ' +
+      '#bf-offerstack .offerstack-footer'
+    );
     elements.forEach(el => el.classList.add('revealed'));
     return;
   }
 
   // Intersection Observer for scroll-triggered animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '-50px 0px'
+  };
+
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
+        // Stagger the reveal
+        setTimeout(() => {
+          entry.target.classList.add('revealed');
+        }, index * 100);
         observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.15,
-    rootMargin: '-50px 0px'
-  });
+  }, observerOptions);
 
-  // Observe all animated elements
+  // Observe all animatable elements
   const animatedElements = document.querySelectorAll(
-    '#bf-offerstack .offerstack-header, ' +
-    '#bf-offerstack .pillar-card, ' +
+    '#bf-offerstack .pillar, ' +
+    '#bf-offerstack .bonuses-section, ' +
     '#bf-offerstack .offerstack-note, ' +
-    '#bf-offerstack .offerstack-closing, ' +
-    '#bf-offerstack .offerstack-cta'
+    '#bf-offerstack .offerstack-footer'
   );
 
-  animatedElements.forEach((el, index) => {
-    // Add staggered delay for pillar cards
-    if (el.classList.contains('pillar-card')) {
-      el.style.transitionDelay = `${index * 150}ms`;
-    }
-    observer.observe(el);
-  });
+  animatedElements.forEach(el => observer.observe(el));
 })();
 </script>
