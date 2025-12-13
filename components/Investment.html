@@ -1,285 +1,107 @@
 <div id="bf-investment">
-  <!-- PART 1: THE INVESTMENT HEADLINE -->
-  <div class="bf-investment__header">
-    <span class="bf-investment__label">The Investment</span>
-  </div>
+  <!-- SECTION HEADER - Refined, not shouty -->
+  <header class="bf-inv__header">
+    <div class="bf-inv__header-line"></div>
+    <h2 class="bf-inv__title">The Investment</h2>
+    <div class="bf-inv__header-line"></div>
+  </header>
 
-  <!-- PART 2: DRAMATIC PRICE CARD -->
-  <div class="bf-investment__pricing">
-    <div class="bf-investment__price-card">
-      <!-- Gold corner ribbons -->
-      <div class="bf-investment__ribbon bf-investment__ribbon--tl">
-        <svg viewBox="0 0 80 80" preserveAspectRatio="none">
-          <path d="M0,0 L80,0 L0,80 Z" fill="#D4AF37" opacity="0.15"/>
-          <path d="M0,0 L60,0 L0,60 Z" fill="#D4AF37" opacity="0.08"/>
-        </svg>
-      </div>
-      <div class="bf-investment__ribbon bf-investment__ribbon--br">
-        <svg viewBox="0 0 80 80" preserveAspectRatio="none">
-          <path d="M80,80 L0,80 L80,0 Z" fill="#D4AF37" opacity="0.15"/>
-          <path d="M80,80 L20,80 L80,20 Z" fill="#D4AF37" opacity="0.08"/>
-        </svg>
+  <!-- PRICE CARD - Compact, elegant -->
+  <div class="bf-inv__pricing">
+    <div class="bf-inv__card">
+      <div class="bf-inv__price-main">
+        <span class="bf-inv__price-label">Pay in full</span>
+        <span class="bf-inv__price-amount">$2,497</span>
+        <span class="bf-inv__price-badge">Best Value</span>
       </div>
       
-      <!-- Decorative border frame -->
-      <div class="bf-investment__frame"></div>
-      
-      <!-- Price icon with laurel -->
-      <div class="bf-investment__price-icon-wrap">
-        <svg class="bf-investment__price-laurel" viewBox="0 0 120 120" aria-hidden="true">
-          <!-- Left laurel branch -->
-          <g class="laurel-left">
-            <ellipse cx="25" cy="60" rx="8" ry="16" fill="none" stroke="#123F3A" stroke-width="1.5" transform="rotate(-30 25 60)"/>
-            <ellipse cx="20" cy="45" rx="6" ry="12" fill="none" stroke="#123F3A" stroke-width="1.5" transform="rotate(-45 20 45)"/>
-            <ellipse cx="20" cy="75" rx="6" ry="12" fill="none" stroke="#123F3A" stroke-width="1.5" transform="rotate(-15 20 75)"/>
-            <ellipse cx="18" cy="35" rx="5" ry="10" fill="none" stroke="#123F3A" stroke-width="1.5" transform="rotate(-55 18 35)"/>
-            <ellipse cx="18" cy="85" rx="5" ry="10" fill="none" stroke="#123F3A" stroke-width="1.5" transform="rotate(-5 18 85)"/>
-          </g>
-          <!-- Right laurel branch (mirrored) -->
-          <g class="laurel-right">
-            <ellipse cx="95" cy="60" rx="8" ry="16" fill="none" stroke="#123F3A" stroke-width="1.5" transform="rotate(30 95 60)"/>
-            <ellipse cx="100" cy="45" rx="6" ry="12" fill="none" stroke="#123F3A" stroke-width="1.5" transform="rotate(45 100 45)"/>
-            <ellipse cx="100" cy="75" rx="6" ry="12" fill="none" stroke="#123F3A" stroke-width="1.5" transform="rotate(15 100 75)"/>
-            <ellipse cx="102" cy="35" rx="5" ry="10" fill="none" stroke="#123F3A" stroke-width="1.5" transform="rotate(55 102 35)"/>
-            <ellipse cx="102" cy="85" rx="5" ry="10" fill="none" stroke="#123F3A" stroke-width="1.5" transform="rotate(5 102 85)"/>
-          </g>
-          <!-- Center dollar circle -->
-          <circle cx="60" cy="60" r="28" fill="#FDF8F4" stroke="#123F3A" stroke-width="3"/>
-          <circle cx="60" cy="60" r="22" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <text x="60" y="72" text-anchor="middle" font-family="'Ogg', Georgia, serif" font-size="36" fill="#123F3A" class="bf-investment__dollar-sign">$</text>
-        </svg>
+      <div class="bf-inv__divider">
+        <span class="bf-inv__divider-text">or</span>
       </div>
       
-      <!-- Pay in full -->
-      <div class="bf-investment__price-primary">
-        <p class="bf-investment__price-label">Pay in full</p>
-        <p class="bf-investment__price-amount">$2,497</p>
-        <span class="bf-investment__value-badge">
-          <svg viewBox="0 0 16 16" class="bf-investment__badge-star"><path d="M8,0 L10,6 L16,6 L11,10 L13,16 L8,12 L3,16 L5,10 L0,6 L6,6 Z" fill="currentColor"/></svg>
-          Best Value
-        </span>
-      </div>
-
-      <!-- Ornamental divider -->
-      <div class="bf-investment__ornament">
-        <svg viewBox="0 0 300 24" preserveAspectRatio="xMidYMid meet">
-          <path d="M0,12 Q75,4 150,12 T300,12" stroke="#E8DED6" stroke-width="1.5" fill="none"/>
-          <circle cx="150" cy="12" r="6" fill="#D4AF37"/>
-          <circle cx="150" cy="12" r="3" fill="#FDF8F4"/>
-          <circle cx="120" cy="12" r="2" fill="#D4AF37" opacity="0.5"/>
-          <circle cx="180" cy="12" r="2" fill="#D4AF37" opacity="0.5"/>
-        </svg>
-      </div>
-
-      <!-- Payment plan -->
-      <div class="bf-investment__price-secondary">
-        <p class="bf-investment__price-label">Payment plan</p>
-        <p class="bf-investment__price-plan">$897 × 3</p>
-        <p class="bf-investment__price-total">($2,691 total)</p>
+      <div class="bf-inv__price-alt">
+        <span class="bf-inv__price-label">Payment plan</span>
+        <span class="bf-inv__price-plan">$897 × 3</span>
+        <span class="bf-inv__price-total">($2,691 total)</span>
       </div>
     </div>
-
-    <p class="bf-investment__vip-note">Current members and VIPs receive a private rate through Bailey's member channels.</p>
+    
+    <p class="bf-inv__note">Current members and VIPs receive a private rate through Bailey's member channels.</p>
   </div>
 
-  <!-- PART 3: WHAT MAKES THIS SAFE -->
-  <div class="bf-investment__guarantees">
-    <h3 class="bf-investment__guarantees-header">What makes this safe</h3>
+  <!-- GUARANTEE - Official certificate style -->
+  <section class="bf-inv__guarantee">
+    <h3 class="bf-inv__guarantee-title">What makes this safe</h3>
+    
+    <div class="bf-inv__certificate">
+      <div class="bf-inv__cert-border">
+        <div class="bf-inv__cert-inner">
+          <!-- Official seal - embossed style, not wax -->
+          <div class="bf-inv__seal">
+            <svg viewBox="0 0 80 80" class="bf-inv__seal-svg">
+              <circle cx="40" cy="40" r="38" fill="none" stroke="#D4AF37" stroke-width="2"/>
+              <circle cx="40" cy="40" r="32" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="4 2"/>
+              <circle cx="40" cy="40" r="26" fill="#D4AF37" opacity="0.08"/>
+              <text x="40" y="36" text-anchor="middle" font-size="8" fill="#D4AF37" letter-spacing="1" class="bf-inv__seal-text">OFFICIAL</text>
+              <text x="40" y="48" text-anchor="middle" font-size="10" fill="#D4AF37" letter-spacing="0.5" class="bf-inv__seal-text">GUARANTEE</text>
+            </svg>
+          </div>
+          
+          <!-- Unified protection statement -->
+          <p class="bf-inv__cert-headline">Your investment is protected</p>
+          
+          <!-- Two guarantees as unified terms -->
+          <div class="bf-inv__terms">
+            <div class="bf-inv__term">
+              <span class="bf-inv__term-badge">30 Days</span>
+              <p class="bf-inv__term-text">Show up for the first 30 days. Follow the plan. Still feel completely lost? <strong>Request a full refund.</strong></p>
+            </div>
+            
+            <div class="bf-inv__term">
+              <span class="bf-inv__term-badge bf-inv__term-badge--gold">90 Days</span>
+              <p class="bf-inv__term-text">Do the work for the full 90 days. Not seeing real progress? <strong>Support extends</strong> up to another 90 days until you hit meaningful traction.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- PREMIUM WAX SEAL GUARANTEE VISUAL -->
-    <div class="bf-investment__seal-container">
-      <svg viewBox="0 0 700 520" class="bf-investment__guarantee-seal" aria-label="Premium guarantee seal with 30-Day Clarity and 90-Day Extension guarantees">
-        <defs>
-          <!-- Gold radial gradient for seal -->
-          <radialGradient id="sealGold" cx="50%" cy="30%" r="70%">
-            <stop offset="0%" style="stop-color:#F4E4A6"/>
-            <stop offset="50%" style="stop-color:#D4AF37"/>
-            <stop offset="100%" style="stop-color:#B8972E"/>
-          </radialGradient>
-          
-          <!-- Darker gold for depth -->
-          <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#F4E4A6"/>
-            <stop offset="50%" style="stop-color:#D4AF37"/>
-            <stop offset="100%" style="stop-color:#997A22"/>
-          </linearGradient>
-          
-          <!-- Glow filter -->
-          <filter id="sealGlow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="8" result="blur"/>
-            <feMerge>
-              <feMergeNode in="blur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-          
-          <!-- Emboss effect -->
-          <filter id="emboss">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
-            <feOffset in="blur" dx="2" dy="2" result="offsetBlur"/>
-            <feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.75" specularExponent="20" lighting-color="#F4E4A6" result="specOut">
-              <fePointLight x="-5000" y="-10000" z="20000"/>
-            </feSpecularLighting>
-            <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
-            <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
-          </filter>
-          
-          <!-- Card shadow -->
-          <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.15"/>
-          </filter>
-        </defs>
-        
-        <!-- MAIN SEAL - Wax seal style with scalloped edges -->
-        <g class="bf-investment__main-seal" filter="url(#sealGlow)">
-          <!-- Outer scalloped ring -->
-          <path d="M350,20 
-            Q380,25 385,50 Q390,25 420,30 Q425,55 450,55 Q450,30 480,40 Q480,65 505,70 
-            Q500,45 530,55 Q525,80 545,90 Q535,70 560,85 Q550,105 565,120 Q550,105 570,125
-            Q555,145 565,165 Q545,155 555,180 Q535,175 540,200 Q520,200 520,225 Q500,220 495,245
-            Q480,235 470,260 Q455,250 440,270 Q430,255 410,270 Q405,250 385,260 Q385,240 365,245
-            Q370,225 350,220 Q355,200 335,200 Q345,180 325,175 Q340,160 325,150 Q345,140 335,125
-            Q355,120 350,100 Q375,105 375,85 Q395,95 405,75 Q420,90 435,75 Q445,95 465,85
-            Q470,105 490,100 Q490,120 510,120 Q505,140 525,145 Q515,165 530,175 Q515,190 525,210
-            Q505,215 510,235 Q490,235 485,255 Q465,250 455,270 Q440,260 425,275 Q410,260 395,270
-            Q385,255 365,260 Q360,240 340,245 Q350,225 335,215 Q355,205 345,185 Q365,180 360,160
-            Q380,160 380,140 Q395,150 410,140 Q415,160 435,155 Q435,175 455,175 Q450,195 470,200
-            Q460,215 475,230 Q455,235 460,255 Q440,255 435,275 Q420,265 405,280 Q390,270 375,280
-            Q365,265 350,275 Q340,260 325,270 Q320,255 305,265 Q305,245 290,250 Q300,235 285,225
-            Q305,220 300,200 Q320,200 320,180 Q340,185 345,165 Q360,175 375,165 Q380,185 400,180
-            Q395,200 415,205 Q405,220 420,235 Q400,240 405,260 Q385,260 380,280 Q365,270 350,280
-            Z" fill="url(#sealGold)" stroke="#B8972E" stroke-width="2"/>
-          
-          <!-- Inner circle with embossed look -->
-          <circle cx="350" cy="150" r="95" fill="url(#goldShine)" stroke="#997A22" stroke-width="3"/>
-          <circle cx="350" cy="150" r="80" fill="none" stroke="#F4E4A6" stroke-width="2" opacity="0.6"/>
-          <circle cx="350" cy="150" r="70" fill="none" stroke="#997A22" stroke-width="1" stroke-dasharray="8 4"/>
-          
-          <!-- GUARANTEE text embossed -->
-          <text x="350" y="140" text-anchor="middle" font-family="'Ogg', Georgia, serif" font-size="32" fill="#5C4A1F" letter-spacing="4" class="bf-investment__seal-text">GUARANTEE</text>
-          
-          <!-- Decorative line under text -->
-          <path d="M280,155 Q350,165 420,155" stroke="#5C4A1F" stroke-width="2" fill="none" opacity="0.6"/>
-          
-          <!-- Small stars around seal -->
-          <g class="bf-investment__seal-stars">
-            <path d="M270,100 L273,107 L280,107 L274,112 L277,120 L270,115 L263,120 L266,112 L260,107 L267,107 Z" fill="#5C4A1F" opacity="0.5"/>
-            <path d="M430,100 L433,107 L440,107 L434,112 L437,120 L430,115 L423,120 L426,112 L420,107 L427,107 Z" fill="#5C4A1F" opacity="0.5"/>
-            <path d="M350,75 L352,80 L358,80 L354,84 L356,90 L350,86 L344,90 L346,84 L342,80 L348,80 Z" fill="#5C4A1F" opacity="0.6"/>
-          </g>
-        </g>
-        
-        <!-- RIBBON BANNER flowing from seal -->
-        <g class="bf-investment__ribbon-banner">
-          <!-- Left ribbon -->
-          <path d="M200,180 Q250,200 300,195 L310,230 Q260,235 210,215 Z" fill="#123F3A"/>
-          <path d="M150,165 L200,180 L210,215 L170,205 L160,220 L150,200 Z" fill="#0F332F"/>
-          <!-- Right ribbon -->
-          <path d="M500,180 Q450,200 400,195 L390,230 Q440,235 490,215 Z" fill="#123F3A"/>
-          <path d="M550,165 L500,180 L490,215 L530,205 L540,220 L550,200 Z" fill="#0F332F"/>
-        </g>
-        
-        <!-- 30-DAY CARD -->
-        <g class="bf-investment__guarantee-card" filter="url(#cardShadow)">
-          <rect x="60" y="280" width="260" height="220" rx="16" fill="#FFFFFF"/>
-          <rect x="60" y="280" width="260" height="220" rx="16" fill="none" stroke="#123F3A" stroke-width="4"/>
-          
-          <!-- Top accent bar -->
-          <rect x="60" y="280" width="260" height="12" rx="16 16 0 0" fill="#123F3A"/>
-          
-          <!-- Checkmark badge -->
-          <circle cx="190" cy="345" r="36" fill="#123F3A" opacity="0.08"/>
-          <circle cx="190" cy="345" r="28" fill="#FFFFFF" stroke="#123F3A" stroke-width="3"/>
-          <path d="M175,345 L185,355 L207,333" stroke="#123F3A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          
-          <!-- Title -->
-          <text x="190" y="410" text-anchor="middle" font-family="'Ogg', Georgia, serif" font-size="24" fill="#123F3A" class="bf-investment__card-title">30-Day Clarity</text>
-          
-          <!-- Description -->
-          <text x="190" y="440" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-size="15" fill="#5E6E6C">
-            <tspan x="190">Follow the plan.</tspan>
-            <tspan x="190" dy="22">Still feel lost?</tspan>
-          </text>
-          
-          <!-- Action -->
-          <text x="190" y="488" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-weight="700" font-size="16" fill="#123F3A">Request full refund</text>
-        </g>
-        
-        <!-- 90-DAY CARD -->
-        <g class="bf-investment__guarantee-card" filter="url(#cardShadow)">
-          <rect x="380" y="280" width="260" height="220" rx="16" fill="#FFFFFF"/>
-          <rect x="380" y="280" width="260" height="220" rx="16" fill="none" stroke="#D4AF37" stroke-width="4"/>
-          
-          <!-- Top accent bar -->
-          <rect x="380" y="280" width="260" height="12" rx="16 16 0 0" fill="#D4AF37"/>
-          
-          <!-- Checkmark badge -->
-          <circle cx="510" cy="345" r="36" fill="#D4AF37" opacity="0.12"/>
-          <circle cx="510" cy="345" r="28" fill="#FFFFFF" stroke="#D4AF37" stroke-width="3"/>
-          <path d="M495,345 L505,355 L527,333" stroke="#D4AF37" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          
-          <!-- Title -->
-          <text x="510" y="410" text-anchor="middle" font-family="'Ogg', Georgia, serif" font-size="24" fill="#123F3A" class="bf-investment__card-title">90-Day Extension</text>
-          
-          <!-- Description -->
-          <text x="510" y="440" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-size="15" fill="#5E6E6C">
-            <tspan x="510">Did the work.</tspan>
-            <tspan x="510" dy="22">No real progress?</tspan>
-          </text>
-          
-          <!-- Action -->
-          <text x="510" y="488" text-anchor="middle" font-family="'Satoshi Variable', sans-serif" font-weight="700" font-size="16" fill="#123F3A">Support continues</text>
-        </g>
+  <!-- SOCIAL PROOF - Compact, integrated -->
+  <div class="bf-inv__proof">
+    <div class="bf-inv__proof-item">
+      <svg class="bf-inv__proof-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
+      <span>Capped at <strong>100 students</strong> for personal attention</span>
+    </div>
+    
+    <div class="bf-inv__proof-item bf-inv__proof-item--muted">
+      <span class="bf-inv__soldout">SOLD OUT</span>
+      <span><strong>Fast Action Bonus</strong> — The first 25 spots included a Personal Shop Audit with Bailey. Those filled during live launch.</span>
     </div>
   </div>
 
-  <!-- PART 4: SOCIAL PROOF -->
-  <div class="bf-investment__social-proof">
-    <div class="bf-investment__cap">
-      <div class="bf-investment__cap-icon">
-        <svg viewBox="0 0 48 48" fill="none">
-          <circle cx="24" cy="16" r="8" stroke="#123F3A" stroke-width="3"/>
-          <path d="M8 42C8 33.163 15.163 26 24 26C32.837 26 40 33.163 40 42" stroke="#123F3A" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="8" cy="20" r="5" stroke="#D4AF37" stroke-width="2"/>
-          <circle cx="40" cy="20" r="5" stroke="#D4AF37" stroke-width="2"/>
-        </svg>
-      </div>
-      <p class="bf-investment__cap-text">This is capped at <strong>100 students</strong> so Bailey can review shops and answer questions without you getting lost in the crowd.</p>
-    </div>
+  <!-- TRANSITION -->
+  <p class="bf-inv__transition">Now let me show you what happens inside the 90 days, week by week, so you know exactly what you are signing up for.</p>
 
-    <div class="bf-investment__soldout">
-      <div class="bf-investment__soldout-badge">SOLD OUT</div>
-      <div class="bf-investment__soldout-content">
-        <p class="bf-investment__soldout-title">Fast Action Bonus</p>
-        <p class="bf-investment__soldout-detail">The first 25 live buyers received a Personal Shop Audit Package with Bailey — a 15-minute diagnostic call plus a custom shop audit video. Those spots filled during the live launch.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- PART 5: BRIDGE -->
-  <div class="bf-investment__bridge">
-    <p class="bf-investment__bridge-text">Now let me show you what happens inside the 90 days, week by week, so you know exactly what you are signing up for.</p>
-  </div>
-
-  <!-- PART 6: CTA BUTTON -->
-  <div class="bf-investment__cta-wrapper">
-    <a href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator/" target="_top" rel="noopener" class="bf-investment__cta-button">
-      <span class="bf-investment__cta-icon">
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M5,12 L19,12 M14,7 L19,12 L14,17" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span>
-      <span class="bf-investment__cta-text">Join the 90-Day Etsy Empire Accelerator</span>
-      <span class="bf-investment__cta-shine"></span>
+  <!-- CTA - Clean, confident -->
+  <div class="bf-inv__cta-wrap">
+    <a href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator/" target="_top" rel="noopener" class="bf-inv__cta">
+      <span class="bf-inv__cta-text">Join the 90-Day Etsy Empire Accelerator</span>
+      <svg class="bf-inv__cta-arrow" viewBox="0 0 20 20" fill="none">
+        <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </a>
+    <p class="bf-inv__cta-micro">Secure checkout · Instant access · Cancel anytime during guarantee period</p>
   </div>
 </div>
 
 <style>
 /* ============================================
-   INVESTMENT SECTION - RUTHLESS PREMIUM
-   No more boring shit. $200k agency quality.
+   INVESTMENT SECTION - REFINED PREMIUM
+   Makes $2,497 feel inevitable, not expensive
    ============================================ */
 
 
@@ -299,539 +121,412 @@
   font-display: swap;
 }
 
+/* Base */
 #bf-investment {
-  /* FOUNDATION COLORS */
   --bg: #FDF8F4;
   --text: #203332;
   --muted: #5E6E6C;
   --green: #123F3A;
-  --green-dark: #0F332F;
   --gold: #D4AF37;
-  --gold-light: #F4E4A6;
-  --gold-dark: #997A22;
   --border: #E8DED6;
   --white: #FFFFFF;
 
-  background: var(--bg);
-  /* FULL WIDTH - no more cramped */
   width: 100%;
-  padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
-  font-family: 'Satoshi Variable', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  padding: clamp(3rem, 8vw, 5rem) clamp(1.25rem, 4vw, 3rem);
+  font-family: 'Satoshi Variable', system-ui, sans-serif;
   font-weight: 500;
   color: var(--text);
-  overflow-x: clip;
 }
 
-#bf-investment *,
-#bf-investment *::before,
-#bf-investment *::after {
+#bf-investment *, #bf-investment *::before, #bf-investment *::after {
   box-sizing: border-box;
 }
 
-/* ============================================
-   BOLD OGG - Using text-shadow to fake weight
-   ============================================ */
-.bf-investment__label,
-.bf-investment__price-amount,
-.bf-investment__price-plan,
-.bf-investment__guarantees-header,
-.bf-investment__seal-text,
-.bf-investment__card-title,
-.bf-investment__dollar-sign {
+/* OGG Bold Treatment - text-shadow for weight */
+.bf-inv__title,
+.bf-inv__price-amount,
+.bf-inv__price-plan,
+.bf-inv__guarantee-title,
+.bf-inv__cert-headline {
   font-family: 'Ogg', Georgia, serif;
   font-weight: 700;
-  /* FAKE BOLD - text-shadow technique */
-  text-shadow: 
-    0.5px 0 0 currentColor,
-    -0.5px 0 0 currentColor,
-    0 0.5px 0 currentColor,
-    0 -0.5px 0 currentColor;
-  -webkit-font-smoothing: antialiased;
+  text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor;
 }
 
-/* ============================================
-   PART 1: THE INVESTMENT HEADER
-   ============================================ */
-.bf-investment__header {
-  width: 100%;
-  text-align: center;
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
-}
-
-.bf-investment__label {
-  display: inline-block;
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
-  color: var(--green);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-/* ============================================
-   PART 2: PRICE CARD - DRAMATIC
-   ============================================ */
-.bf-investment__pricing {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto clamp(3rem, 6vw, 5rem);
-  text-align: center;
-}
-
-.bf-investment__price-card {
-  position: relative;
-  background: linear-gradient(145deg, var(--white) 0%, var(--bg) 100%);
-  border: 3px solid var(--border);
-  border-radius: 32px;
-  padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 4vw, 4rem);
-  box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.06),
-    0 20px 60px rgba(18, 63, 58, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  overflow: hidden;
-}
-
-/* Gold corner ribbons */
-.bf-investment__ribbon {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  pointer-events: none;
-}
-
-.bf-investment__ribbon--tl {
-  top: 0;
-  left: 0;
-}
-
-.bf-investment__ribbon--br {
-  bottom: 0;
-  right: 0;
-}
-
-.bf-investment__ribbon svg {
-  width: 100%;
-  height: 100%;
-}
-
-/* Decorative frame */
-.bf-investment__frame {
-  position: absolute;
-  inset: 16px;
-  border: 1px solid var(--gold);
-  border-radius: 24px;
-  opacity: 0.2;
-  pointer-events: none;
-}
-
-/* Laurel wreath icon */
-.bf-investment__price-icon-wrap {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
-}
-
-.bf-investment__price-laurel {
-  width: 100%;
-  height: 100%;
-}
-
-/* Price primary */
-.bf-investment__price-primary {
-  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-.bf-investment__price-label {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  font-weight: 500;
-  color: var(--muted);
-  margin: 0 0 clamp(0.5rem, 1vw, 0.75rem);
-  letter-spacing: 0.03em;
-}
-
-.bf-investment__price-amount {
-  font-size: clamp(4rem, 10vw, 7rem);
-  color: var(--green);
-  line-height: 1;
-  margin: 0;
-  letter-spacing: -0.02em;
-}
-
-/* Value badge with star */
-.bf-investment__value-badge {
-  display: inline-flex;
+/* ===== HEADER - Refined ===== */
+.bf-inv__header {
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.25rem;
-  background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.bf-inv__header-line {
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.bf-inv__title {
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  color: var(--green);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+/* ===== PRICE CARD - Compact ===== */
+.bf-inv__pricing {
+  max-width: 480px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+}
+
+.bf-inv__card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04), 0 8px 32px rgba(18,63,58,0.04);
+}
+
+.bf-inv__price-main {
+  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.bf-inv__price-label {
+  display: block;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.bf-inv__price-amount {
+  display: block;
+  font-size: clamp(2.75rem, 8vw, 4rem);
+  color: var(--green);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.bf-inv__price-badge {
+  display: inline-block;
+  padding: 0.35rem 0.875rem;
+  background: var(--green);
   color: var(--white);
-  font-family: 'Satoshi Variable', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  border-radius: 30px;
-  margin-top: 1.25rem;
-  box-shadow: 0 4px 12px rgba(18, 63, 58, 0.3);
+  border-radius: 20px;
 }
 
-.bf-investment__badge-star {
-  width: 14px;
-  height: 14px;
+/* Divider */
+.bf-inv__divider {
+  position: relative;
+  margin: clamp(1rem, 2.5vw, 1.5rem) 0;
 }
 
-/* Ornamental divider */
-.bf-investment__ornament {
-  width: 100%;
-  max-width: 300px;
-  height: 24px;
-  margin: clamp(1.5rem, 3vw, 2.5rem) auto;
+.bf-inv__divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border);
 }
 
-.bf-investment__ornament svg {
-  width: 100%;
-  height: 100%;
+.bf-inv__divider-text {
+  position: relative;
+  display: inline-block;
+  padding: 0 1rem;
+  background: var(--white);
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
-/* Price secondary */
-.bf-investment__price-secondary {
+/* Alt price */
+.bf-inv__price-alt {
   opacity: 0.85;
 }
 
-.bf-investment__price-plan {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+.bf-inv__price-plan {
+  display: block;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   color: var(--green);
-  line-height: 1.1;
-  margin: 0 0 0.25rem;
+  line-height: 1.2;
+  margin-bottom: 0.125rem;
 }
 
-.bf-investment__price-total {
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  font-weight: 500;
+.bf-inv__price-total {
+  display: block;
+  font-size: clamp(0.75rem, 1.8vw, 0.85rem);
   color: var(--muted);
-  margin: 0;
 }
 
-/* VIP note */
-.bf-investment__vip-note {
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  font-weight: 500;
+.bf-inv__note {
+  font-size: clamp(0.8rem, 1.8vw, 0.875rem);
   color: var(--muted);
-  line-height: 1.6;
-  margin: clamp(1.5rem, 3vw, 2rem) 0 0;
   font-style: italic;
+  margin: clamp(1rem, 2.5vw, 1.5rem) 0 0;
+  line-height: 1.5;
 }
 
-/* ============================================
-   PART 3: WAX SEAL GUARANTEE
-   ============================================ */
-.bf-investment__guarantees {
-  width: 100%;
-  margin-bottom: clamp(3rem, 6vw, 5rem);
+/* ===== GUARANTEE - Official Certificate ===== */
+.bf-inv__guarantee {
+  max-width: 720px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
 }
 
-.bf-investment__guarantees-header {
-  font-size: clamp(1.75rem, 5vw, 3rem);
+.bf-inv__guarantee-title {
+  font-size: clamp(1.25rem, 3.5vw, 1.75rem);
   color: var(--green);
   text-align: center;
-  margin: 0 0 clamp(2rem, 4vw, 3rem);
-  line-height: 1.2;
+  margin: 0 0 clamp(1.25rem, 3vw, 2rem);
 }
 
-.bf-investment__seal-container {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1rem;
+/* Certificate frame */
+.bf-inv__certificate {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 3px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
 }
 
-.bf-investment__guarantee-seal {
-  width: 100%;
-  height: auto;
-  display: block;
-  animation: seal-glow 4s ease-in-out infinite;
+.bf-inv__cert-border {
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 2px;
 }
 
-@keyframes seal-glow {
-  0%, 100% { 
-    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
-  }
-  50% { 
-    filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.6));
-  }
+.bf-inv__cert-inner {
+  border: 1px dashed rgba(212,175,55,0.4);
+  border-radius: 8px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
 }
 
-.bf-investment__seal-stars {
-  animation: twinkle 2s ease-in-out infinite alternate;
+/* Seal */
+.bf-inv__seal {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto clamp(1rem, 2.5vw, 1.5rem);
 }
 
-@keyframes twinkle {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
-}
-
-.bf-investment__main-seal {
-  animation: seal-pulse 6s ease-in-out infinite;
-}
-
-@keyframes seal-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.02); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bf-investment__guarantee-seal,
-  .bf-investment__seal-stars,
-  .bf-investment__main-seal {
-    animation: none;
-  }
-}
-
-/* ============================================
-   PART 4: SOCIAL PROOF - FULL WIDTH
-   ============================================ */
-.bf-investment__social-proof {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
-  padding: 0 1rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(1.25rem, 3vw, 2rem);
-}
-
-@media (min-width: 768px) {
-  .bf-investment__social-proof {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.bf-investment__cap {
-  display: flex;
-  align-items: flex-start;
-  gap: clamp(1rem, 2.5vw, 1.5rem);
-  padding: clamp(1.5rem, 3vw, 2rem);
-  background: rgba(18, 63, 58, 0.03);
-  border: 2px solid rgba(18, 63, 58, 0.08);
-  border-radius: 20px;
-}
-
-.bf-investment__cap-icon {
-  flex-shrink: 0;
-  width: clamp(48px, 8vw, 64px);
-  height: clamp(48px, 8vw, 64px);
-}
-
-.bf-investment__cap-icon svg {
+.bf-inv__seal-svg {
   width: 100%;
   height: 100%;
 }
 
-.bf-investment__cap-text {
-  font-size: clamp(1rem, 2.5vw, 1.15rem);
-  font-weight: 500;
-  color: var(--text);
-  line-height: 1.65;
-  margin: 0;
+.bf-inv__seal-text {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 700;
 }
 
-.bf-investment__cap-text strong {
+.bf-inv__cert-headline {
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
   color: var(--green);
-  font-weight: 700;
+  margin: 0 0 clamp(1.25rem, 3vw, 1.75rem);
 }
 
-.bf-investment__soldout {
-  display: flex;
-  align-items: flex-start;
+/* Terms */
+.bf-inv__terms {
+  display: grid;
   gap: clamp(1rem, 2.5vw, 1.5rem);
-  padding: clamp(1.5rem, 3vw, 2rem);
-  background: rgba(94, 110, 108, 0.04);
-  border: 2px dashed var(--border);
-  border-radius: 20px;
 }
 
-.bf-investment__soldout-badge {
-  flex-shrink: 0;
-  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--bg);
-  background: var(--muted);
-  padding: 0.5rem 0.875rem;
+@media (min-width: 600px) {
+  .bf-inv__terms {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+}
+
+.bf-inv__term {
+  padding: clamp(1rem, 2.5vw, 1.25rem);
+  background: var(--bg);
   border-radius: 8px;
 }
 
-.bf-investment__soldout-content {
-  flex: 1;
+.bf-inv__term-badge {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  background: var(--green);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-bottom: 0.625rem;
 }
 
-.bf-investment__soldout-title {
-  font-size: clamp(1rem, 2.5vw, 1.15rem);
-  font-weight: 600;
-  color: var(--muted);
-  margin: 0 0 0.375rem;
+.bf-inv__term-badge--gold {
+  background: var(--gold);
+  color: var(--white);
 }
 
-.bf-investment__soldout-detail {
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  font-weight: 500;
-  color: var(--muted);
+.bf-inv__term-text {
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  color: var(--text);
   line-height: 1.6;
   margin: 0;
 }
 
-/* ============================================
-   PART 5: BRIDGE
-   ============================================ */
-.bf-investment__bridge {
-  width: 100%;
+.bf-inv__term-text strong {
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* ===== SOCIAL PROOF ===== */
+.bf-inv__proof {
   max-width: 800px;
   margin: 0 auto clamp(2rem, 4vw, 3rem);
-  text-align: center;
-  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 2vw, 1rem);
 }
 
-.bf-investment__bridge-text {
-  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-  font-weight: 500;
+.bf-inv__proof-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: clamp(1rem, 2.5vw, 1.25rem);
+  background: rgba(18,63,58,0.03);
+  border-radius: 10px;
+  font-size: clamp(0.875rem, 2vw, 0.95rem);
+  line-height: 1.5;
+}
+
+.bf-inv__proof-item--muted {
+  background: rgba(94,110,108,0.04);
   color: var(--muted);
-  line-height: 1.7;
-  margin: 0;
 }
 
-/* ============================================
-   PART 6: CTA BUTTON - PREMIUM
-   ============================================ */
-.bf-investment__cta-wrapper {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+.bf-inv__proof-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--green);
+}
+
+.bf-inv__proof-item strong {
+  font-weight: 700;
+  color: var(--green);
+}
+
+.bf-inv__proof-item--muted strong {
+  color: var(--muted);
+}
+
+.bf-inv__soldout {
+  flex-shrink: 0;
+  padding: 0.25rem 0.5rem;
+  background: var(--muted);
+  color: var(--white);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+}
+
+/* ===== TRANSITION ===== */
+.bf-inv__transition {
+  max-width: 640px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  color: var(--muted);
   text-align: center;
-  padding: 0 1rem;
+  line-height: 1.65;
 }
 
-.bf-investment__cta-button {
-  position: relative;
+/* ===== CTA ===== */
+.bf-inv__cta-wrap {
+  text-align: center;
+}
+
+.bf-inv__cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: clamp(1.25rem, 3vw, 1.75rem) clamp(2.5rem, 5vw, 4rem);
-  background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+  gap: 0.75rem;
+  padding: clamp(1rem, 2.5vw, 1.25rem) clamp(2rem, 4vw, 3rem);
+  background: var(--green);
   color: var(--white);
   font-family: 'Satoshi Variable', sans-serif;
   font-weight: 700;
-  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
   text-decoration: none;
-  border-radius: 16px;
-  min-height: 64px;
-  border: 3px solid transparent;
-  box-shadow: 
-    0 6px 20px rgba(18, 63, 58, 0.35),
-    0 12px 40px rgba(18, 63, 58, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid var(--green);
+  box-shadow: 0 4px 16px rgba(18,63,58,0.25);
+  transition: all 300ms ease;
 }
 
-.bf-investment__cta-icon {
-  width: 24px;
-  height: 24px;
-  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.bf-investment__cta-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.bf-investment__cta-shine {
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.15) 50%,
-    transparent 70%
-  );
-  transform: translateX(-100%) translateY(-100%) rotate(45deg);
-  transition: transform 600ms ease;
-  pointer-events: none;
-}
-
-.bf-investment__cta-button:hover {
-  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
-  transform: translateY(-4px);
-  box-shadow: 
-    0 12px 30px rgba(18, 63, 58, 0.45),
-    0 20px 60px rgba(18, 63, 58, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  border-color: rgba(212, 175, 55, 0.5);
-}
-
-.bf-investment__cta-button:hover .bf-investment__cta-icon {
-  transform: translateX(6px);
-}
-
-.bf-investment__cta-button:hover .bf-investment__cta-shine {
-  transform: translateX(100%) translateY(100%) rotate(45deg);
-}
-
-.bf-investment__cta-button:active {
+.bf-inv__cta:hover {
+  background: #0F332F;
+  border-color: #0F332F;
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(18,63,58,0.3);
 }
 
-.bf-investment__cta-button:focus {
-  outline: 4px solid var(--gold);
-  outline-offset: 4px;
+.bf-inv__cta:hover .bf-inv__cta-arrow {
+  transform: translateX(4px);
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
+.bf-inv__cta-arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 300ms ease;
+}
+
+.bf-inv__cta-micro {
+  font-size: clamp(0.75rem, 1.6vw, 0.8rem);
+  color: var(--muted);
+  margin: clamp(0.75rem, 2vw, 1rem) 0 0;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 480px) {
-  .bf-investment__cap,
-  .bf-investment__soldout {
+  .bf-inv__proof-item {
     flex-direction: column;
+    gap: 0.5rem;
   }
   
-  .bf-investment__cta-button {
+  .bf-inv__cta {
     width: 100%;
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 1.25rem 2rem;
   }
   
-  .bf-investment__price-card {
-    padding: 2.5rem 1.5rem;
-    border-radius: 24px;
-  }
-  
-  .bf-investment__ribbon {
-    width: 70px;
-    height: 70px;
+  .bf-inv__header-line {
+    max-width: 60px;
   }
 }
 
-@media (max-width: 640px) {
-  .bf-investment__cta-button {
-    width: 100%;
+@media (min-width: 768px) {
+  .bf-inv__proof {
+    flex-direction: row;
+  }
+  
+  .bf-inv__proof-item {
+    flex: 1;
   }
 }
 
-@media (min-width: 1024px) {
-  .bf-investment__pricing {
-    max-width: 1000px;
-  }
-  
-  .bf-investment__seal-container {
-    max-width: 900px;
-  }
-  
-  .bf-investment__social-proof {
-    max-width: 1200px;
+/* Subtle seal animation */
+@keyframes seal-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.bf-inv__seal-svg {
+  animation: seal-pulse 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bf-inv__seal-svg {
+    animation: none;
   }
 }
 </style>
