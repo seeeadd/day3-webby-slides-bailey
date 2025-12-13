@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What You Get - Bailey Flourish</title>
 <style>
 /* BASE64 FONTS */
 @font-face {
@@ -49,6 +43,8 @@ html, body { width: 100%; overflow-x: hidden; }
   position: relative;
   width: 100%;
   background: var(--bg-cream);
+  --media-h-desktop: 170px;
+  --media-h-mobile: 140px;
   padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
   overflow: hidden;
 }
@@ -227,7 +223,7 @@ html, body { width: 100%; overflow-x: hidden; }
 .offer-items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(0.875rem, 1.75vw, 1rem);
+  gap: clamp(0.55rem, 1vw, 0.75rem);
 }
 
 /* CARD - SQUARE */
@@ -235,17 +231,17 @@ html, body { width: 100%; overflow-x: hidden; }
   display: flex;
   flex-direction: column;
   background: var(--white);
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  box-shadow: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
   opacity: 0;
-  transform: translateY(15px);
+  transform: translateY(12px);
   border: 1px solid rgba(0,0,0,0.04);
   position: relative;
 }
 .offer-card.visible { opacity: 1; transform: translateY(0); }
-.offer-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+.offer-card:hover { transform: translateY(-2px); border-color: rgba(0,0,0,0.08); }
 
 .offer-card::before {
   content: '';
@@ -260,30 +256,39 @@ html, body { width: 100%; overflow-x: hidden; }
 
 /* CARD IMAGE - SQUARE */
 .card-visual {
-  aspect-ratio: 1;
-  overflow: hidden;
   position: relative;
-  background: linear-gradient(135deg, var(--bg-warm) 0%, #EDE8E0 100%);
 }
 
-.card-visual img {
+.card-media {
+  height: var(--media-h-desktop);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.35s ease;
+  padding: 12px;
+  overflow: hidden;
 }
-.offer-card:hover .card-visual img { transform: scale(1.03); }
+
+.card-media img, .card-media video, .card-media iframe, .card-media svg {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.offer-card:hover .card-media img { transform: none; }
 
 /* CARD CONTENT */
 .card-content {
-  padding: clamp(0.625rem, 1.25vw, 0.75rem);
+  padding: clamp(0.45rem, 0.95vw, 0.6rem);
   flex: 1;
 }
 
 .card-title {
   font-family: 'Satoshi Variable';
   font-weight: 500;
-  font-size: clamp(0.75rem, 1.4vw, 0.85rem);
+  font-size: clamp(0.72rem, 1.3vw, 0.82rem);
   line-height: 1.4;
   color: var(--text-secondary);
 }
@@ -307,7 +312,7 @@ html, body { width: 100%; overflow-x: hidden; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 .graphic-container svg { width: 100%; height: 100%; max-width: 200px; }
 
@@ -418,7 +423,7 @@ html, body { width: 100%; overflow-x: hidden; }
 }
 .bonus-card:hover { border-color: var(--gold-primary); transform: translateY(-2px); box-shadow: 0 4px 14px rgba(212,175,55,0.12); }
 
-.bonus-card .card-visual { aspect-ratio: 4/3; background: linear-gradient(135deg, #FFF9E8 0%, #FFF3D4 100%); }
+.bonus-card .card-media { background: linear-gradient(135deg, #FFF9E8 0%, #FFF3D4 100%); }
 .bonus-card .card-content { padding: clamp(0.5rem, 1vw, 0.625rem); }
 .bonus-card .card-title { color: var(--gold-deep); font-weight: 600; font-size: clamp(0.7rem, 1.3vw, 0.8rem); margin-bottom: 0.2rem; }
 .bonus-card .card-desc { font-family: 'Satoshi Variable'; font-weight: 450; font-size: clamp(0.65rem, 1.2vw, 0.72rem); line-height: 1.4; color: var(--text-secondary); }
@@ -462,6 +467,10 @@ html, body { width: 100%; overflow-x: hidden; }
 .cta-button:hover svg { transform: translateX(3px); }
 
 /* RESPONSIVE */
+@media (max-width: 768px) {
+  .card-media { height: var(--media-h-mobile); }
+}
+
 @media (max-width: 700px) {
   .offer-items, .bonus-items { grid-template-columns: 1fr; }
   .pillar-header { flex-direction: column; text-align: center; gap: 0.5rem; }
@@ -473,8 +482,6 @@ html, body { width: 100%; overflow-x: hidden; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 </style>
-</head>
-<body>
 
 <section id="bf-offer-premium">
 
@@ -512,7 +519,7 @@ html, body { width: 100%; overflow-x: hidden; }
   
   <div class="offer-items">
     <article class="offer-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <img src="https://i.imgur.com/KMM7lxy.png" alt="Kickoff Call" loading="lazy">
       </div>
       <div class="card-content">
@@ -521,7 +528,7 @@ html, body { width: 100%; overflow-x: hidden; }
     </article>
     
     <article class="offer-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <img src="https://i.imgur.com/0nWjNzC.png" alt="90-Day Roadmap" loading="lazy">
       </div>
       <div class="card-content">
@@ -530,7 +537,7 @@ html, body { width: 100%; overflow-x: hidden; }
     </article>
     
     <article class="offer-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <div class="graphic-container">
           <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g class="loop-arrows">
@@ -553,7 +560,7 @@ html, body { width: 100%; overflow-x: hidden; }
     </article>
     
     <article class="offer-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <div class="graphic-container">
           <svg viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="8" y="10" width="144" height="100" rx="8" fill="#FDFBF7" stroke="#123F3A" stroke-width="2"/>
@@ -594,7 +601,7 @@ html, body { width: 100%; overflow-x: hidden; }
   
   <div class="offer-items">
     <article class="offer-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <img src="https://i.imgur.com/mbMa5XJ.png" alt="Weekly Calls" loading="lazy">
       </div>
       <div class="card-content">
@@ -603,7 +610,7 @@ html, body { width: 100%; overflow-x: hidden; }
     </article>
     
     <article class="offer-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <div class="graphic-container">
           <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="15" y="15" width="130" height="130" rx="12" fill="#FDFBF7" stroke="#5865F2" stroke-width="2"/>
@@ -635,7 +642,7 @@ html, body { width: 100%; overflow-x: hidden; }
     </article>
     
     <article class="offer-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <img src="https://i.imgur.com/o1R8v3j.png" alt="Bailey Bot" loading="lazy">
       </div>
       <div class="card-content">
@@ -644,7 +651,7 @@ html, body { width: 100%; overflow-x: hidden; }
     </article>
     
     <article class="offer-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <img src="https://i.imgur.com/8oxJRPb.png" alt="Replays" loading="lazy">
       </div>
       <div class="card-content">
@@ -666,7 +673,7 @@ html, body { width: 100%; overflow-x: hidden; }
   
   <div class="offer-items">
     <article class="offer-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <img src="https://i.imgur.com/HlKZ8lA.png" alt="Library" loading="lazy">
       </div>
       <div class="card-content">
@@ -675,7 +682,7 @@ html, body { width: 100%; overflow-x: hidden; }
     </article>
     
     <article class="offer-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <img src="https://i.imgur.com/MRZv7g1.png" alt="Community" loading="lazy">
       </div>
       <div class="card-content">
@@ -684,7 +691,7 @@ html, body { width: 100%; overflow-x: hidden; }
     </article>
     
     <article class="offer-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <div class="graphic-container">
           <svg viewBox="0 0 160 130" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(10, 30)"><rect width="36" height="36" rx="8" fill="#D4AF37" class="float-anim"/><text x="18" y="24" font-size="16" text-anchor="middle">💡</text></g>
@@ -725,7 +732,7 @@ html, body { width: 100%; overflow-x: hidden; }
   
   <div class="bonus-items">
     <article class="bonus-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <div class="graphic-container">
           <svg viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g class="float-anim">
@@ -748,7 +755,7 @@ html, body { width: 100%; overflow-x: hidden; }
     </article>
     
     <article class="bonus-card">
-      <div class="card-visual">
+      <div class="card-visual card-media">
         <div class="graphic-container">
           <svg viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(8, 22)"><rect width="28" height="28" rx="6" fill="#D4AF37"/><text x="14" y="18" font-size="12" text-anchor="middle">🛒</text></g>
@@ -802,6 +809,3 @@ html, body { width: 100%; overflow-x: hidden; }
   document.querySelectorAll('.pillar-group, .offer-card, .bonus-section, .callout-box, .cta-section').forEach(el => observer.observe(el));
 })();
 </script>
-
-</body>
-</html>
