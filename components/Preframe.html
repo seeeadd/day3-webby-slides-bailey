@@ -1,103 +1,272 @@
 <div id="bf-preframe">
-  <!-- HEADLINE -->
+  <!-- HEADLINE - Left-aligned, intimate start -->
   <h2 class="bf-preframe__headline">Why you're seeing this offer right now</h2>
 
-  <!-- THE PATTERN -->
-  <div class="bf-preframe__content">
+  <!-- THE PATTERN - Intimate whisper energy -->
+  <div class="bf-preframe__content bf-preframe__content--fade-in">
     <p class="bf-preframe__text">I've had the $47 a month membership and free content for years. And it works for learning.</p>
-    <p class="bf-preframe__text">But I kept watching the <strong>same pattern</strong> happen.</p>
+    <p class="bf-preframe__text">But I kept watching the <strong class="bf-preframe__pattern-text">same pattern</strong> happen.</p>
+  </div>
 
-    <!-- Tuesday Night Scene - left border only, not full card -->
-    <div class="bf-preframe__scene">
+  <!-- TUESDAY NIGHT SCENE - Coral quote with torn paper aesthetic -->
+  <div class="bf-preframe__scene bf-preframe__scene--slide-in">
+    <div class="bf-preframe__scene-paper">
+      <div class="bf-preframe__scene-corner" aria-hidden="true"></div>
       <p class="bf-preframe__scene-text">You'll watch a training. Take notes. Save ideas.</p>
       <p class="bf-preframe__scene-text">Then it's a Tuesday night, you finally get 60 minutes… and you <strong class="bf-preframe__freeze">freeze</strong>.</p>
       <p class="bf-preframe__scene-text bf-preframe__scene-text--muted">Not because you're lazy. Because nobody is telling you what matters first, second, and third.</p>
+      <!-- Handwritten annotation: circle around "freeze" -->
+      <svg class="bf-preframe__annotation bf-preframe__annotation--freeze-circle" viewBox="0 0 60 35" aria-hidden="true">
+        <ellipse cx="30" cy="17" rx="28" ry="15" fill="none" stroke="#E87B6B" stroke-width="2" stroke-dasharray="4 3" opacity="0.7"/>
+      </svg>
     </div>
   </div>
 
-  <!-- KEY INSIGHT - THE VISUAL CLIMAX -->
-  <div class="bf-preframe__insight">
+  <!-- KEY INSIGHT - THE HERO MOMENT -->
+  <div class="bf-preframe__insight bf-preframe__insight--scale-in">
     <p class="bf-preframe__insight-line1">Information is everywhere.</p>
     <p class="bf-preframe__insight-line2">Implementation is where good intentions quietly die.</p>
+    <!-- Handwritten underline -->
+    <svg class="bf-preframe__annotation bf-preframe__annotation--underline" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M5 12 Q100 8, 200 14 T395 10" fill="none" stroke="#E87B6B" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <!-- "← THIS" annotation -->
+    <span class="bf-preframe__annotation bf-preframe__annotation--this">← THIS</span>
   </div>
 
-  <!-- INLINE SVG - smaller, integrated -->
-  <div class="bf-preframe__graphic" aria-hidden="true">
-    <svg class="bf-preframe__svg" viewBox="0 0 280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Learning Loop -->
-      <circle class="bf-preframe__svg-loop" cx="45" cy="30" r="18" stroke="#EBE0D8" stroke-width="2.5" fill="none"/>
-      <circle cx="38" cy="24" r="2" fill="#7A6E68" opacity="0.35"/>
-      <circle cx="52" cy="26" r="1.5" fill="#7A6E68" opacity="0.3"/>
-      <circle cx="40" cy="38" r="1.5" fill="#7A6E68" opacity="0.3"/>
-      <text x="45" y="56" text-anchor="middle" fill="#7A6E68" font-size="8" font-family="system-ui" font-weight="500">stuck</text>
+  <!-- CUSTOM STUCK→FORWARD SVG - The Garden Transformation -->
+  <div class="bf-preframe__graphic" aria-label="Transformation from stuck chaos to forward progress">
+    <svg class="bf-preframe__svg" viewBox="0 0 600 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- STUCK SIDE - Overgrown, chaotic garden -->
+      <g class="bf-preframe__svg-stuck">
+        <!-- Dark soil/ground -->
+        <path d="M20 150 Q80 145, 150 150 T280 148" stroke="#8B7355" stroke-width="3" fill="none" stroke-linecap="round"/>
 
-      <!-- Arrow break -->
-      <path class="bf-preframe__svg-arrow" d="M68 30 L100 30" stroke="#E87B6B" stroke-width="2" stroke-linecap="round"/>
-      <path d="M96 26 L102 30 L96 34" stroke="#E87B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <!-- Tangled, wilting plants -->
+        <path class="bf-preframe__svg-tangle" d="M40 150 Q35 120, 50 100 Q45 80, 60 70 Q55 50, 45 40" stroke="#9B8B7A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path class="bf-preframe__svg-tangle" d="M70 148 Q80 130, 65 115 Q75 95, 60 80 Q70 60, 55 50" stroke="#A69B8C" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path class="bf-preframe__svg-tangle" d="M100 150 Q90 125, 110 105 Q95 85, 115 70 Q100 55, 120 45" stroke="#8B7D6B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path class="bf-preframe__svg-tangle" d="M130 149 Q140 120, 125 100 Q145 80, 130 60" stroke="#9B8B7A" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path class="bf-preframe__svg-tangle" d="M160 150 Q150 130, 170 110 Q155 90, 175 75 Q160 60, 180 50" stroke="#A69B8C" stroke-width="2" fill="none" stroke-linecap="round"/>
 
-      <!-- Execution Path -->
-      <path class="bf-preframe__svg-path" d="M110 30 L220 30" stroke="#2BA89E" stroke-width="2.5" stroke-linecap="round"/>
-      <circle class="bf-preframe__svg-dot" cx="135" cy="30" r="4" fill="#2BA89E"/>
-      <circle class="bf-preframe__svg-dot" cx="165" cy="30" r="5" fill="#2BA89E"/>
-      <circle class="bf-preframe__svg-dot" cx="200" cy="30" r="6" fill="#2BA89E"/>
-      <circle class="bf-preframe__svg-pulse" cx="200" cy="30" r="10" fill="none" stroke="#2BA89E" stroke-width="1"/>
-      <text x="165" y="50" text-anchor="middle" fill="#2D2522" font-size="9" font-family="system-ui" font-weight="600">forward</text>
+        <!-- Dead leaves / weeds -->
+        <circle cx="55" cy="65" r="4" fill="#C4B5A5" opacity="0.6"/>
+        <circle cx="90" cy="85" r="3" fill="#B8A898" opacity="0.5"/>
+        <circle cx="125" cy="55" r="3.5" fill="#C4B5A5" opacity="0.6"/>
+        <circle cx="165" cy="70" r="3" fill="#B8A898" opacity="0.5"/>
+
+        <!-- Question marks floating (confusion) -->
+        <text x="45" y="35" fill="#7A6E68" font-size="14" font-family="'Ogg', Georgia, serif" opacity="0.5">?</text>
+        <text x="105" y="40" fill="#7A6E68" font-size="12" font-family="'Ogg', Georgia, serif" opacity="0.4">?</text>
+        <text x="150" y="45" fill="#7A6E68" font-size="10" font-family="'Ogg', Georgia, serif" opacity="0.35">?</text>
+
+        <!-- Handwritten "stuck" label -->
+        <text x="110" y="172" text-anchor="middle" fill="#7A6E68" font-size="14" font-family="'Caveat', cursive" font-weight="600">stuck</text>
+      </g>
+
+      <!-- TRANSFORMATION ARROW -->
+      <g class="bf-preframe__svg-arrow-group">
+        <path class="bf-preframe__svg-arrow" d="M200 90 C240 90, 280 90, 320 90" stroke="#E87B6B" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path class="bf-preframe__svg-arrow-head" d="M310 80 L325 90 L310 100" stroke="#E87B6B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Sparkle on arrow -->
+        <path class="bf-preframe__svg-sparkle" d="M260 80 L262 75 L264 80 L269 82 L264 84 L262 89 L260 84 L255 82 Z" fill="#D9A44D"/>
+      </g>
+
+      <!-- FORWARD SIDE - Healthy, organized garden -->
+      <g class="bf-preframe__svg-forward">
+        <!-- Rich soil/ground -->
+        <path d="M340 150 Q400 148, 460 150 T580 148" stroke="#5D8A3E" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+        <!-- Healthy growing plants in organized rows -->
+        <path class="bf-preframe__svg-plant" d="M360 150 Q358 130, 365 115 Q360 100, 370 85" stroke="#2BA89E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <circle class="bf-preframe__svg-bloom" cx="370" cy="78" r="8" fill="#3CC4B5" opacity="0.9"/>
+
+        <path class="bf-preframe__svg-plant" d="M410 150 Q408 125, 415 105 Q410 85, 420 65" stroke="#2BA89E" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <circle class="bf-preframe__svg-bloom" cx="420" cy="58" r="10" fill="#2BA89E"/>
+
+        <path class="bf-preframe__svg-plant" d="M460 150 Q458 120, 465 95 Q460 70, 470 50" stroke="#2BA89E" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <circle class="bf-preframe__svg-bloom" cx="470" cy="42" r="12" fill="#0FA698"/>
+
+        <path class="bf-preframe__svg-plant" d="M510 150 Q508 130, 515 110 Q510 90, 520 75" stroke="#2BA89E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <circle class="bf-preframe__svg-bloom" cx="520" cy="68" r="9" fill="#3CC4B5" opacity="0.9"/>
+
+        <path class="bf-preframe__svg-plant" d="M555 150 Q553 135, 560 120 Q555 105, 565 92" stroke="#2BA89E" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle class="bf-preframe__svg-bloom" cx="565" cy="85" r="7" fill="#2BA89E" opacity="0.85"/>
+
+        <!-- Milestone markers (1, 2, 3) -->
+        <circle cx="390" cy="150" r="12" fill="#F4F1ED" stroke="#2BA89E" stroke-width="2"/>
+        <text x="390" y="155" text-anchor="middle" fill="#2BA89E" font-size="12" font-family="'Satoshi Variable', sans-serif" font-weight="700">1</text>
+
+        <circle cx="450" cy="150" r="12" fill="#F4F1ED" stroke="#2BA89E" stroke-width="2"/>
+        <text x="450" y="155" text-anchor="middle" fill="#2BA89E" font-size="12" font-family="'Satoshi Variable', sans-serif" font-weight="700">2</text>
+
+        <circle cx="510" cy="150" r="12" fill="#F4F1ED" stroke="#2BA89E" stroke-width="2"/>
+        <text x="510" y="155" text-anchor="middle" fill="#2BA89E" font-size="12" font-family="'Satoshi Variable', sans-serif" font-weight="700">3</text>
+
+        <!-- Star/celebration -->
+        <path class="bf-preframe__svg-star" d="M475 25 L478 35 L488 37 L480 44 L482 55 L473 49 L463 55 L466 44 L458 37 L468 35 Z" fill="#D9A44D"/>
+
+        <!-- Pulse ring on main bloom -->
+        <circle class="bf-preframe__svg-pulse" cx="470" cy="42" r="20" fill="none" stroke="#2BA89E" stroke-width="1.5"/>
+
+        <!-- Handwritten "forward" label -->
+        <text x="460" y="172" text-anchor="middle" fill="#2BA89E" font-size="14" font-family="'Caveat', cursive" font-weight="600">forward</text>
+      </g>
     </svg>
   </div>
 
   <!-- THE SOLUTION - flows as text -->
-  <div class="bf-preframe__content">
+  <div class="bf-preframe__content bf-preframe__content--fade-in">
     <p class="bf-preframe__text">So I built this 90-day Accelerator for the people who are done <em>"collecting strategies"</em> and want a <strong class="bf-preframe__teal">clear, time-bound path</strong> where you actually execute.</p>
-
     <p class="bf-preframe__text">And I didn't build it in theory. Demand already showed up.</p>
   </div>
 
-  <!-- PROOF - this one gets a card -->
-  <div class="bf-preframe__proof">
-    <p class="bf-preframe__proof-intro">In September, I ran a messy, unoptimized mini-launch and still sold</p>
-    <div class="bf-preframe__proof-numbers">
-      <span class="bf-preframe__proof-stat"><span class="bf-preframe__proof-num">11</span> spots</span>
-      <span class="bf-preframe__proof-at">at</span>
-      <span class="bf-preframe__proof-stat"><span class="bf-preframe__proof-num">$2.5K</span> each</span>
+  <!-- PROOF BOX - Receipt/Spotlight Drama -->
+  <div class="bf-preframe__proof bf-preframe__proof--reveal">
+    <div class="bf-preframe__proof-spotlight" aria-hidden="true"></div>
+    <div class="bf-preframe__proof-card">
+      <!-- Torn receipt edge -->
+      <div class="bf-preframe__proof-tear" aria-hidden="true"></div>
+
+      <!-- Timeline badge -->
+      <span class="bf-preframe__proof-badge">In September</span>
+
+      <!-- Handwritten intro -->
+      <p class="bf-preframe__proof-intro">I ran a messy, unoptimized mini-launch and still sold</p>
+
+      <!-- THE NUMBERS - Huge and dramatic -->
+      <div class="bf-preframe__proof-numbers">
+        <div class="bf-preframe__proof-stat">
+          <span class="bf-preframe__proof-num" data-count="11">11</span>
+          <span class="bf-preframe__proof-label">spots</span>
+        </div>
+        <span class="bf-preframe__proof-at">at</span>
+        <div class="bf-preframe__proof-stat">
+          <span class="bf-preframe__proof-num bf-preframe__proof-num--money">$2.5K</span>
+          <span class="bf-preframe__proof-label">each</span>
+        </div>
+      </div>
+
+      <!-- The kicker - shocked emphasis -->
+      <p class="bf-preframe__proof-kicker">
+        with basically <strong class="bf-preframe__proof-nofunnel">"no real funnel"</strong>
+      </p>
+
+      <!-- Handwritten circle around the kicker -->
+      <svg class="bf-preframe__annotation bf-preframe__annotation--proof-circle" viewBox="0 0 200 50" aria-hidden="true">
+        <ellipse cx="100" cy="25" rx="95" ry="22" fill="none" stroke="#E87B6B" stroke-width="2" stroke-dasharray="6 4" opacity="0.6"/>
+      </svg>
+
+      <!-- Coffee stain (subtle authenticity) -->
+      <div class="bf-preframe__proof-stain" aria-hidden="true"></div>
     </div>
-    <p class="bf-preframe__proof-note">with basically <strong>no real funnel</strong>.</p>
   </div>
 
-  <!-- WHY NOW - simple list, no card -->
-  <div class="bf-preframe__urgency">
+  <!-- WHY NOW - Urgency Cascade -->
+  <div class="bf-preframe__urgency bf-preframe__urgency--cascade">
     <span class="bf-preframe__label">Why now</span>
+
     <ul class="bf-preframe__urgency-list">
-      <li>This is the <strong class="bf-preframe__gold">founding cohort</strong>. First time this exact structure is offered.</li>
-      <li>It's capped at about <strong class="bf-preframe__coral">100 seats</strong> so the support actually works.</li>
-      <li>The cohort starts the week of <strong class="bf-preframe__teal">Dec 16 to 20</strong>.</li>
+      <li class="bf-preframe__urgency-item" style="--delay: 0">
+        <span class="bf-preframe__urgency-badge">1</span>
+        <span class="bf-preframe__urgency-text">This is the <strong class="bf-preframe__gold">founding cohort</strong>. First time this exact structure is offered.</span>
+        <!-- Handwritten star annotation -->
+        <svg class="bf-preframe__annotation bf-preframe__annotation--star" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2L14 8L20 9L15.5 13.5L17 20L12 16.5L7 20L8.5 13.5L4 9L10 8L12 2Z" fill="none" stroke="#D9A44D" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </li>
+      <li class="bf-preframe__urgency-item" style="--delay: 1">
+        <span class="bf-preframe__urgency-badge">2</span>
+        <span class="bf-preframe__urgency-text">It's capped at about <strong class="bf-preframe__coral">100 seats</strong> so the support actually works.</span>
+        <!-- Progress indicator -->
+        <div class="bf-preframe__scarcity" aria-label="11 of 100 seats taken">
+          <div class="bf-preframe__scarcity-bar">
+            <div class="bf-preframe__scarcity-fill" style="--fill: 11%"></div>
+          </div>
+          <span class="bf-preframe__scarcity-text">11/100 taken</span>
+        </div>
+      </li>
+      <li class="bf-preframe__urgency-item" style="--delay: 2">
+        <span class="bf-preframe__urgency-badge">3</span>
+        <span class="bf-preframe__urgency-text">The cohort starts the week of <strong class="bf-preframe__teal">Dec 16 to 20</strong>.</span>
+        <!-- Calendar icon -->
+        <svg class="bf-preframe__annotation bf-preframe__annotation--calendar" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" fill="none" stroke="#2BA89E" stroke-width="1.5"/>
+          <line x1="3" y1="10" x2="21" y2="10" stroke="#2BA89E" stroke-width="1.5"/>
+          <line x1="8" y1="2" x2="8" y2="6" stroke="#2BA89E" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="16" y1="2" x2="16" y2="6" stroke="#2BA89E" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="12" cy="16" r="3" fill="#2BA89E" opacity="0.3"/>
+        </svg>
+      </li>
     </ul>
   </div>
 
-  <!-- PERMISSION - simple text, no card -->
+  <!-- PERMISSION / DECISION FORK - Two Paths Visually Separated -->
   <div class="bf-preframe__permission">
-    <p class="bf-preframe__permission-exit">If you're happy exploring at your own pace in the membership, you don't need this.</p>
-    <p class="bf-preframe__permission-continue">If you're at the point where you need someone to <strong>tell you exactly what to do</strong> for 90 days, keep reading.</p>
+    <!-- Exit Path (softer, less emphasis) -->
+    <div class="bf-preframe__permission-card bf-preframe__permission-card--exit">
+      <div class="bf-preframe__permission-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M16 17l5-5-5-5M21 12H9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <p class="bf-preframe__permission-text">If you're happy exploring at your own pace in the membership, you don't need this.</p>
+    </div>
+
+    <!-- Continue Path (emphasized, leads to CTA) -->
+    <div class="bf-preframe__permission-card bf-preframe__permission-card--continue">
+      <div class="bf-preframe__permission-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <p class="bf-preframe__permission-text">If you're at the point where you need someone to <strong>tell you exactly what to do</strong> for 90 days, keep reading.</p>
+      <!-- Handwritten arrow pointing down -->
+      <svg class="bf-preframe__annotation bf-preframe__annotation--arrow-down" viewBox="0 0 40 60" aria-hidden="true">
+        <path d="M20 5 Q18 25, 22 40 Q20 50, 20 55" fill="none" stroke="#2BA89E" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M12 48 L20 58 L28 48" fill="none" stroke="#2BA89E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
   </div>
 
-  <!-- CTA -->
+  <!-- CTA - HERO BUTTON -->
   <div class="bf-preframe__cta">
     <a href="#bf-90days" class="bf-preframe__cta-btn" aria-label="Show me the 90-day plan">
-      Show Me The 90-Day Plan
+      <span class="bf-preframe__cta-text">Show Me The 90-Day Plan</span>
     </a>
     <span class="bf-preframe__cta-sub">See the week-by-week roadmap.</span>
+
+    <!-- Cohort reminder -->
+    <span class="bf-preframe__cta-reminder">Cohort starts Dec 16</span>
   </div>
 </div>
 
 <style>
 /* ============================================
-   PREFRAME SECTION - COMPACT & INTEGRATED
+   PREFRAME SECTION - ULTIMATE CONVERSION REBUILD
+   Psychology-driven visual hierarchy
    ============================================ */
+
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap');
 
 @font-face {
   font-family: 'Ogg';
   src: url('../fonts/Ogg-Regular.woff2') format('woff2'),
-       url('../fonts/Ogg-Regular.woff') format('woff');
+       url('../fonts/Ogg-Regular.woff') format('woff'),
+       url('../Ogg-Regular.ttf') format('truetype');
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ogg';
+  src: url('../fonts/Ogg-Bold.woff2') format('woff2'),
+       url('../fonts/Ogg-Bold.woff') format('woff'),
+       url('../Ogg-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -105,29 +274,45 @@
 @font-face {
   font-family: 'Satoshi Variable';
   src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
-       url('../fonts/Satoshi-Variable.woff') format('woff');
+       url('../fonts/Satoshi-Variable.woff') format('woff'),
+       url('../Satoshi-Variable.ttf') format('truetype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }
 
+/* ============================================
+   ROOT VARIABLES & BASE
+   ============================================ */
 #bf-preframe {
+  /* Colors */
   --bg: #FFFBF8;
+  --bg-warm: #FFF8F3;
   --bg-alt: #FFF3EC;
   --card-bg: #FFFFFF;
   --coral: #E87B6B;
   --coral-soft: #F4A396;
+  --coral-glow: rgba(232, 123, 107, 0.15);
   --teal: #2BA89E;
+  --teal-soft: #D4F0ED;
   --gold: #D9A44D;
+  --gold-glow: rgba(217, 164, 77, 0.2);
   --text: #2D2522;
   --muted: #7A6E68;
   --border: #EBE0D8;
 
+  /* Spacing */
+  --section-gap: 48px;
+  --content-gap: 24px;
+
   background: var(--bg);
-  padding: 48px 24px;
+  /* Subtle paper grain texture */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  padding: 56px 20px 72px;
   font-family: 'Satoshi Variable', system-ui, -apple-system, sans-serif;
   color: var(--text);
   max-width: 100%;
+  overflow: hidden;
 }
 
 #bf-preframe *, #bf-preframe *::before, #bf-preframe *::after {
@@ -136,38 +321,40 @@
 
 /* Content wrapper for consistent width */
 #bf-preframe > * {
-  max-width: 760px;
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* ============================================
-   HEADLINE - feels like Bailey starting
+   HEADLINE - Left-aligned, intimate start
+   F-pattern: eye starts here
    ============================================ */
 .bf-preframe__headline {
   font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(1.75rem, 4vw, 2rem);
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 1.2;
   color: var(--text);
-  margin: 0 auto 20px;
+  margin: 0 auto 28px;
   text-align: left;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 /* ============================================
-   CONTENT BLOCKS - flowing text
+   CONTENT BLOCKS - Intimate whisper energy
    ============================================ */
 .bf-preframe__content {
-  margin-bottom: 20px;
+  margin-bottom: var(--content-gap);
 }
 
 .bf-preframe__text {
-  font-size: 17px;
+  font-size: clamp(16px, 2.5vw, 18px);
   font-weight: 450;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--text);
-  margin: 0 0 14px;
+  margin: 0 0 16px;
+  text-align: left;
 }
 
 .bf-preframe__text:last-child {
@@ -175,7 +362,7 @@
 }
 
 .bf-preframe__text strong {
-  font-weight: 600;
+  font-weight: 650;
 }
 
 .bf-preframe__text em {
@@ -183,23 +370,77 @@
   color: var(--muted);
 }
 
+/* Handwritten underline for "same pattern" */
+.bf-preframe__pattern-text {
+  font-weight: 650;
+  position: relative;
+}
+
+.bf-preframe__pattern-text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: -4px;
+  right: -4px;
+  height: 8px;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 8 Q25 4, 50 7 T100 5' fill='none' stroke='%23E87B6B' stroke-width='2' stroke-linecap='round' opacity='0.5'/%3E%3C/svg%3E") no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
 /* ============================================
-   SCENE - feels like stepping into a moment
+   SCENE - Coral quote with torn paper aesthetic
+   Pattern break: rotated slightly, feels like a note
    ============================================ */
 .bf-preframe__scene {
-  border-left: 3px solid var(--coral);
-  padding: 16px 20px;
-  margin: 20px 0 20px 20px; /* Indented from left */
-  background: rgba(255, 243, 236, 0.4);
-  border-radius: 0 8px 8px 0;
+  margin: 32px auto 40px;
+  max-width: 640px;
+  position: relative;
+  transform: rotate(-0.5deg);
+}
+
+.bf-preframe__scene-paper {
+  background: linear-gradient(135deg, #FFF9F5 0%, #FFFBF8 100%);
+  border-left: 4px solid var(--coral);
+  padding: 24px 28px 24px 24px;
+  border-radius: 0 12px 12px 0;
+  box-shadow:
+    0 4px 20px rgba(232, 123, 107, 0.08),
+    0 1px 3px rgba(45, 37, 34, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  position: relative;
+  /* Paper texture */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23paper)' opacity='0.02'/%3E%3C/svg%3E");
+}
+
+/* Curled corner effect */
+.bf-preframe__scene-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, transparent 50%, #F5EDE8 50%);
+  border-radius: 0 12px 0 0;
+}
+
+.bf-preframe__scene-corner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(315deg, var(--bg) 50%, transparent 50%);
+  box-shadow: -2px 2px 4px rgba(0,0,0,0.05);
 }
 
 .bf-preframe__scene-text {
-  font-size: 16px;
+  font-size: clamp(15px, 2.2vw, 17px);
   font-weight: 450;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--text);
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .bf-preframe__scene-text:last-child {
@@ -209,88 +450,154 @@
 .bf-preframe__scene-text--muted {
   color: var(--muted);
   font-style: italic;
+  font-size: clamp(14px, 2vw, 15px);
 }
 
+/* FREEZE - emphasized with glow */
 .bf-preframe__freeze {
   color: var(--coral);
   font-weight: 700;
   position: relative;
+  display: inline-block;
 }
 
-.bf-preframe__freeze::after {
+.bf-preframe__freeze::before {
   content: '';
   position: absolute;
-  bottom: -1px;
-  left: -2px;
-  right: -2px;
-  height: 6px;
-  background: rgba(232, 123, 107, 0.15);
-  border-radius: 2px;
+  inset: -4px -8px;
+  background: var(--coral-glow);
+  border-radius: 4px;
   z-index: -1;
 }
 
+/* Circle annotation around freeze */
+.bf-preframe__annotation--freeze-circle {
+  position: absolute;
+  width: 60px;
+  height: 35px;
+  top: 50%;
+  right: 45%;
+  transform: translate(50%, -50%) rotate(5deg);
+  pointer-events: none;
+  display: none; /* Will show on desktop */
+}
+
 /* ============================================
-   KEY INSIGHT - THE VISUAL CLIMAX
-   This is THE moment. Everything else supports this.
+   KEY INSIGHT - THE HERO MOMENT
+   STOP SCROLLING. This is THE moment.
    ============================================ */
 .bf-preframe__insight {
   text-align: center;
-  max-width: 520px;
-  margin: 48px auto;
-  padding: 32px 24px;
+  max-width: 580px;
+  margin: var(--section-gap) auto calc(var(--section-gap) + 16px);
+  padding: 48px 32px;
+  position: relative;
+  /* Warm background glow */
+  background: radial-gradient(ellipse at center, rgba(232, 123, 107, 0.06) 0%, transparent 70%);
 }
 
 .bf-preframe__insight-line1 {
   font-family: 'Satoshi Variable', system-ui, sans-serif;
-  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  font-size: clamp(1.125rem, 3vw, 1.375rem);
   font-weight: 500;
   color: var(--text);
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   line-height: 1.4;
+  opacity: 0.9;
 }
 
 .bf-preframe__insight-line2 {
   font-family: 'Satoshi Variable', system-ui, sans-serif;
-  font-size: clamp(1.375rem, 4vw, 1.75rem);
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+  font-weight: 700;
+  color: var(--coral);
+  line-height: 1.25;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  /* Subtle red undertone for danger/urgency */
+  text-shadow: 0 0 40px rgba(232, 123, 107, 0.2);
+}
+
+/* Handwritten underline */
+.bf-preframe__annotation--underline {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, 400px);
+  height: 20px;
+  pointer-events: none;
+}
+
+/* "← THIS" annotation */
+.bf-preframe__annotation--this {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-5deg);
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
   font-weight: 600;
   color: var(--coral);
-  line-height: 1.35;
-  margin: 0;
-  text-decoration: underline;
-  text-decoration-color: var(--coral);
-  text-underline-offset: 5px;
-  text-decoration-thickness: 2px;
+  white-space: nowrap;
+  display: none; /* Show on larger screens */
 }
 
 /* ============================================
-   SVG GRAPHIC - transition point between problem & solution
+   STUCK→FORWARD SVG GRAPHIC
+   Custom hand-illustrated transformation
    ============================================ */
 .bf-preframe__graphic {
-  max-width: 280px;
-  margin: 24px auto 32px;
-  padding: 0;
+  max-width: 100%;
+  margin: 0 auto 40px;
+  padding: 20px 0;
+  overflow: visible;
 }
 
 .bf-preframe__svg {
   width: 100%;
   height: auto;
   display: block;
+  max-height: 180px;
 }
 
-/* SVG animations */
-.bf-preframe__svg-loop,
-.bf-preframe__svg-arrow,
-.bf-preframe__svg-path {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
+/* Animation classes */
+.bf-preframe__svg-tangle {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
   transition: stroke-dashoffset 0.8s ease-out;
 }
 
-.bf-preframe__svg-dot {
+.bf-preframe__svg-arrow {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  transition: stroke-dashoffset 0.6s ease-out;
+}
+
+.bf-preframe__svg-arrow-head {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bf-preframe__svg-plant {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 0.7s ease-out;
+}
+
+.bf-preframe__svg-bloom {
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bf-preframe__svg-sparkle,
+.bf-preframe__svg-star {
   opacity: 0;
   transform: scale(0);
   transform-origin: center;
-  transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .bf-preframe__svg-pulse {
@@ -301,23 +608,35 @@
 
 @keyframes preframe-pulse {
   0%, 100% { transform: scale(1); opacity: 0.4; }
-  50% { transform: scale(1.4); opacity: 0; }
+  50% { transform: scale(1.3); opacity: 0; }
 }
 
-.bf-preframe__graphic.is-animated .bf-preframe__svg-loop { stroke-dashoffset: 0; }
-.bf-preframe__graphic.is-animated .bf-preframe__svg-arrow { stroke-dashoffset: 0; transition-delay: 0.3s; }
-.bf-preframe__graphic.is-animated .bf-preframe__svg-path { stroke-dashoffset: 0; transition-delay: 0.5s; }
-.bf-preframe__graphic.is-animated .bf-preframe__svg-dot { opacity: 1; transform: scale(1); }
-.bf-preframe__graphic.is-animated .bf-preframe__svg-dot:nth-child(4) { transition-delay: 0.6s; }
-.bf-preframe__graphic.is-animated .bf-preframe__svg-dot:nth-child(5) { transition-delay: 0.7s; }
-.bf-preframe__graphic.is-animated .bf-preframe__svg-dot:nth-child(6) { transition-delay: 0.8s; }
-.bf-preframe__graphic.is-animated .bf-preframe__svg-pulse { opacity: 0.4; animation-play-state: running; transition-delay: 0.9s; }
+/* Animated state */
+.bf-preframe__graphic.is-animated .bf-preframe__svg-tangle { stroke-dashoffset: 0; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-arrow { stroke-dashoffset: 0; transition-delay: 0.4s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-arrow-head { opacity: 1; transition-delay: 0.7s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-plant { stroke-dashoffset: 0; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-plant:nth-child(1) { transition-delay: 0.8s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-plant:nth-child(3) { transition-delay: 0.9s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-plant:nth-child(5) { transition-delay: 1s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-plant:nth-child(7) { transition-delay: 1.1s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-plant:nth-child(9) { transition-delay: 1.2s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-bloom { transform: scale(1); }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-bloom:nth-child(2) { transition-delay: 1s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-bloom:nth-child(4) { transition-delay: 1.1s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-bloom:nth-child(6) { transition-delay: 1.2s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-bloom:nth-child(8) { transition-delay: 1.3s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-bloom:nth-child(10) { transition-delay: 1.4s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-sparkle { opacity: 1; transform: scale(1); transition-delay: 0.6s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-star { opacity: 1; transform: scale(1); transition-delay: 1.5s; }
+.bf-preframe__graphic.is-animated .bf-preframe__svg-pulse { opacity: 0.4; animation-play-state: running; transition-delay: 1.6s; }
 
 /* ============================================
    HIGHLIGHT COLORS
    ============================================ */
 .bf-preframe__teal {
   color: var(--teal);
+  font-weight: 600;
   position: relative;
 }
 
@@ -325,307 +644,678 @@
   content: '';
   position: absolute;
   bottom: -1px;
-  left: -2px;
-  right: -2px;
-  height: 6px;
-  background: rgba(43, 168, 158, 0.15);
+  left: -3px;
+  right: -3px;
+  height: 8px;
+  background: rgba(43, 168, 158, 0.12);
   border-radius: 2px;
   z-index: -1;
 }
 
 .bf-preframe__coral {
   color: var(--coral);
+  font-weight: 600;
 }
 
 .bf-preframe__gold {
   color: #B8882F;
+  font-weight: 600;
 }
 
 /* ============================================
-   PROOF - compact receipts energy
+   PROOF BOX - Receipt/Spotlight Drama
+   This is the PROOF moment - make it POP
    ============================================ */
 .bf-preframe__proof {
+  position: relative;
+  margin: var(--section-gap) auto;
+  max-width: 440px;
+}
+
+/* Spotlight glow effect */
+.bf-preframe__proof-spotlight {
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(ellipse at center, var(--gold-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bf-preframe__proof-card {
+  position: relative;
+  z-index: 1;
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-top: 3px solid var(--gold);
-  padding: 20px 24px;
-  margin: 24px auto;
-  max-width: 400px;
-  border-radius: 8px;
+  border-top: none;
+  padding: 28px 32px 24px;
+  border-radius: 0 0 12px 12px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(45, 37, 34, 0.04);
+  box-shadow:
+    0 8px 32px rgba(217, 164, 77, 0.12),
+    0 2px 8px rgba(45, 37, 34, 0.06);
 }
 
-.bf-preframe__proof-intro {
-  font-size: 15px;
+/* Torn receipt edge at top */
+.bf-preframe__proof-tear {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: var(--card-bg);
+  border-top: 4px solid var(--gold);
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12 L0 4 Q5 0, 10 4 T20 4 T30 4 T40 4 T50 4 T60 4 T70 4 T80 4 T90 4 T100 4 L100 12 Z' fill='white'/%3E%3C/svg%3E");
+  mask-size: 100px 12px;
+}
+
+/* Timeline badge */
+.bf-preframe__proof-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--muted);
-  margin: 0 0 12px;
+  background: var(--bg-alt);
+  padding: 4px 10px;
+  border-radius: 4px;
 }
 
+/* Handwritten intro */
+.bf-preframe__proof-intro {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(16px, 2.5vw, 18px);
+  color: var(--muted);
+  margin: 16px 0 20px;
+  line-height: 1.4;
+}
+
+/* THE NUMBERS */
 .bf-preframe__proof-numbers {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 12px;
+  gap: 20px;
+  margin-bottom: 16px;
 }
 
 .bf-preframe__proof-stat {
-  font-size: 15px;
-  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bf-preframe__proof-num {
   font-family: 'Ogg', Georgia, serif;
-  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
   font-weight: 400;
   color: var(--gold);
-  display: block;
   line-height: 1;
-  margin-bottom: 2px;
+  display: block;
+}
+
+.bf-preframe__proof-num--money {
+  font-size: clamp(2.25rem, 7vw, 3rem);
+}
+
+.bf-preframe__proof-label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+  font-weight: 500;
 }
 
 .bf-preframe__proof-at {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
+  align-self: flex-end;
+  margin-bottom: 8px;
 }
 
-.bf-preframe__proof-note {
-  font-size: 14px;
+/* The kicker */
+.bf-preframe__proof-kicker {
+  font-size: 15px;
   color: var(--muted);
-  font-style: italic;
   margin: 0;
+  position: relative;
 }
 
-.bf-preframe__proof-note strong {
+.bf-preframe__proof-nofunnel {
   font-style: normal;
-  font-weight: 600;
-  color: var(--text);
+  font-weight: 700;
+  color: var(--coral);
+  background: var(--coral-glow);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Circle annotation */
+.bf-preframe__annotation--proof-circle {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 50px;
+  pointer-events: none;
+}
+
+/* Coffee stain (subtle authenticity) */
+.bf-preframe__proof-stain {
+  position: absolute;
+  bottom: -8px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 40% 40%,
+    rgba(180, 140, 100, 0.08) 0%,
+    rgba(180, 140, 100, 0.04) 40%,
+    transparent 70%);
+  transform: rotate(15deg);
 }
 
 /* ============================================
-   URGENCY - simple list with border-top
+   WHY NOW - Urgency Cascade
+   Building urgency with visual momentum
    ============================================ */
 .bf-preframe__urgency {
-  margin: 32px auto 24px;
-  padding-top: 24px;
+  margin: var(--section-gap) auto 32px;
+  padding-top: 32px;
   border-top: 1px solid var(--border);
 }
 
 .bf-preframe__label {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--coral);
-  background: rgba(232, 123, 107, 0.1);
-  padding: 4px 10px;
-  border-radius: 4px;
-  margin-bottom: 12px;
+  background: var(--coral-glow);
+  padding: 6px 14px;
+  border-radius: 6px;
+  margin-bottom: 20px;
 }
 
 .bf-preframe__urgency-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.bf-preframe__urgency-list li {
+.bf-preframe__urgency-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bf-preframe__urgency-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(45, 37, 34, 0.06);
+}
+
+.bf-preframe__urgency-badge {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--coral);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.bf-preframe__urgency-text {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text);
-  padding: 8px 0 8px 24px;
-  position: relative;
+  flex: 1;
 }
 
-.bf-preframe__urgency-list li::before {
-  content: '★';
+.bf-preframe__urgency-text strong {
+  font-weight: 650;
+}
+
+/* Star annotation */
+.bf-preframe__annotation--star {
   position: absolute;
-  left: 0;
-  top: 10px;
-  font-size: 11px;
-  color: var(--coral);
+  top: 8px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
 }
 
-.bf-preframe__urgency-list li strong {
+/* Scarcity progress bar */
+.bf-preframe__scarcity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.bf-preframe__scarcity-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-alt);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bf-preframe__scarcity-fill {
+  height: 100%;
+  width: var(--fill, 11%);
+  background: linear-gradient(90deg, var(--coral) 0%, var(--coral-soft) 100%);
+  border-radius: 3px;
+  transition: width 1s ease-out;
+}
+
+.bf-preframe__scarcity-text {
+  font-size: 12px;
   font-weight: 600;
+  color: var(--coral);
+  white-space: nowrap;
+}
+
+/* Calendar annotation */
+.bf-preframe__annotation--calendar {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
 }
 
 /* ============================================
-   PERMISSION - two paths, conversational
+   PERMISSION / DECISION FORK
+   Two paths visually separated
    ============================================ */
 .bf-preframe__permission {
-  margin: 0 auto 32px;
-  padding: 0;
+  margin: 32px auto 40px;
+  display: grid;
+  gap: 16px;
 }
 
-.bf-preframe__permission-exit {
-  font-size: 16px;
-  line-height: 1.65;
+.bf-preframe__permission-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Exit path - softer, less emphasis */
+.bf-preframe__permission-card--exit {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+}
+
+.bf-preframe__permission-card--exit .bf-preframe__permission-icon {
   color: var(--muted);
-  margin: 0 0 12px;
 }
 
-.bf-preframe__permission-continue {
-  font-size: 17px;
-  line-height: 1.65;
+.bf-preframe__permission-card--exit .bf-preframe__permission-text {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Continue path - emphasized, leads to CTA */
+.bf-preframe__permission-card--continue {
+  background: linear-gradient(135deg, #F0FAF8 0%, #E8F6F4 100%);
+  border: 2px solid var(--teal);
+  box-shadow: 0 4px 20px rgba(43, 168, 158, 0.12);
+}
+
+.bf-preframe__permission-card--continue .bf-preframe__permission-icon {
+  color: var(--teal);
+}
+
+.bf-preframe__permission-card--continue .bf-preframe__permission-text {
   color: var(--text);
+  font-size: 16px;
   font-weight: 500;
-  margin: 0;
 }
 
-.bf-preframe__permission-continue strong {
+.bf-preframe__permission-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+}
+
+.bf-preframe__permission-text {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.bf-preframe__permission-text strong {
   font-weight: 700;
   color: var(--teal);
 }
 
+/* Arrow pointing down to CTA */
+.bf-preframe__annotation--arrow-down {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 60px;
+  pointer-events: none;
+}
+
 /* ============================================
-   CTA
+   CTA - HERO BUTTON
+   The LARGEST, most inviting element
    ============================================ */
 .bf-preframe__cta {
   text-align: center;
-  margin-top: 28px;
+  margin-top: 56px;
+  padding: 32px 24px 0;
+  position: relative;
 }
 
 .bf-preframe__cta-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 52px;
-  padding: 14px 36px;
-  background: var(--coral);
+  min-height: 64px;
+  padding: 18px 48px;
+  background: linear-gradient(135deg, var(--coral) 0%, #D96A5A 100%);
   color: #FFFFFF;
   font-family: inherit;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: clamp(17px, 2.5vw, 19px);
+  font-weight: 700;
   text-decoration: none;
   border: none;
   border-radius: 100px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  box-shadow: 0 4px 12px rgba(232, 123, 107, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow:
+    0 8px 24px rgba(232, 123, 107, 0.3),
+    0 2px 8px rgba(232, 123, 107, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle shine effect */
+.bf-preframe__cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
 }
 
 .bf-preframe__cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(232, 123, 107, 0.25);
-  background: #D96A5A;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 12px 32px rgba(232, 123, 107, 0.35),
+    0 4px 12px rgba(232, 123, 107, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.bf-preframe__cta-btn:hover::before {
+  left: 100%;
 }
 
 .bf-preframe__cta-btn:focus {
   outline: 3px solid var(--coral-soft);
-  outline-offset: 2px;
+  outline-offset: 3px;
+}
+
+/* Pulse animation */
+.bf-preframe__cta-btn {
+  animation: cta-pulse 3s ease-in-out infinite;
+}
+
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(232, 123, 107, 0.3), 0 2px 8px rgba(232, 123, 107, 0.2); }
+  50% { box-shadow: 0 8px 32px rgba(232, 123, 107, 0.4), 0 4px 16px rgba(232, 123, 107, 0.3); }
+}
+
+.bf-preframe__cta-text {
+  position: relative;
+  z-index: 1;
 }
 
 .bf-preframe__cta-sub {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
-  margin-top: 10px;
+  margin-top: 14px;
+}
+
+.bf-preframe__cta-reminder {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+  background: var(--teal-soft);
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-top: 16px;
 }
 
 /* ============================================
-   RESPONSIVE
+   SCROLL ANIMATIONS
    ============================================ */
-@media (max-width: 480px) {
+.bf-preframe__content--fade-in,
+.bf-preframe__scene--slide-in,
+.bf-preframe__insight--scale-in,
+.bf-preframe__proof--reveal,
+.bf-preframe__urgency--cascade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.bf-preframe__scene--slide-in {
+  transform: translateX(-20px) rotate(-0.5deg);
+}
+
+.bf-preframe__insight--scale-in {
+  transform: scale(0.95);
+}
+
+/* Animated states */
+.bf-preframe__content--fade-in.is-visible,
+.bf-preframe__scene--slide-in.is-visible,
+.bf-preframe__insight--scale-in.is-visible,
+.bf-preframe__proof--reveal.is-visible,
+.bf-preframe__urgency--cascade.is-visible {
+  opacity: 1;
+  transform: translateY(0) rotate(0) scale(1);
+}
+
+.bf-preframe__scene--slide-in.is-visible {
+  transform: translateX(0) rotate(-0.5deg);
+}
+
+/* Urgency item cascade */
+.bf-preframe__urgency--cascade .bf-preframe__urgency-item {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bf-preframe__urgency--cascade.is-visible .bf-preframe__urgency-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.bf-preframe__urgency--cascade.is-visible .bf-preframe__urgency-item:nth-child(1) { transition-delay: 0.1s; }
+.bf-preframe__urgency--cascade.is-visible .bf-preframe__urgency-item:nth-child(2) { transition-delay: 0.25s; }
+.bf-preframe__urgency--cascade.is-visible .bf-preframe__urgency-item:nth-child(3) { transition-delay: 0.4s; }
+
+/* ============================================
+   RESPONSIVE - MOBILE FIRST
+   ============================================ */
+@media (max-width: 600px) {
   #bf-preframe {
-    padding: 40px 18px;
+    padding: 40px 16px 56px;
   }
 
   .bf-preframe__headline {
-    font-size: 1.5rem;
-    margin-bottom: 18px;
-  }
-
-  .bf-preframe__text,
-  .bf-preframe__scene-text {
-    font-size: 15px;
+    font-size: 1.625rem;
+    margin-bottom: 20px;
   }
 
   .bf-preframe__scene {
-    margin-left: 12px;
-    padding: 14px 16px;
+    margin: 24px -8px 32px;
+    transform: none;
+  }
+
+  .bf-preframe__scene-paper {
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
   }
 
   .bf-preframe__insight {
-    padding: 24px 16px;
-    margin: 32px auto;
+    padding: 32px 16px;
+    margin: 36px auto;
   }
 
-  .bf-preframe__insight-line1 {
-    font-size: 1rem;
+  .bf-preframe__annotation--this,
+  .bf-preframe__annotation--freeze-circle {
+    display: none;
   }
 
-  .bf-preframe__insight-line2 {
-    font-size: 1.25rem;
+  .bf-preframe__graphic {
+    margin: 0 -16px 32px;
+    padding: 16px;
+    overflow-x: auto;
+  }
+
+  .bf-preframe__svg {
+    min-width: 500px;
   }
 
   .bf-preframe__proof {
-    padding: 16px 18px;
-    max-width: 100%;
+    margin: 32px auto;
   }
 
-  .bf-preframe__proof-num {
-    font-size: 1.5rem;
+  .bf-preframe__proof-card {
+    padding: 24px 20px 20px;
   }
 
   .bf-preframe__proof-numbers {
+    gap: 14px;
+  }
+
+  .bf-preframe__proof-num {
+    font-size: 2.25rem;
+  }
+
+  .bf-preframe__proof-num--money {
+    font-size: 2rem;
+  }
+
+  .bf-preframe__urgency-item {
+    padding: 14px 16px;
+  }
+
+  .bf-preframe__annotation--star,
+  .bf-preframe__annotation--calendar {
+    display: none;
+  }
+
+  .bf-preframe__permission {
     gap: 12px;
   }
 
-  .bf-preframe__urgency-list li {
-    font-size: 15px;
+  .bf-preframe__permission-card {
+    padding: 16px 18px;
+  }
+
+  .bf-preframe__annotation--arrow-down {
+    display: none;
+  }
+
+  .bf-preframe__cta {
+    margin-top: 40px;
+    padding: 24px 0 0;
   }
 
   .bf-preframe__cta-btn {
     width: 100%;
-    padding: 14px 24px;
+    min-height: 58px;
+    padding: 16px 32px;
   }
+}
 
-  .bf-preframe__graphic {
-    max-width: 240px;
+@media (min-width: 601px) and (max-width: 900px) {
+  #bf-preframe {
+    padding: 48px 24px 64px;
   }
 }
 
 @media (min-width: 768px) {
-  #bf-preframe {
-    padding: 56px 32px;
+  .bf-preframe__annotation--this {
+    display: block;
   }
 
-  #bf-preframe > * {
-    max-width: 760px;
+  .bf-preframe__annotation--freeze-circle {
+    display: block;
   }
 
-  .bf-preframe__headline {
-    margin-bottom: 24px;
+  .bf-preframe__permission {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
-  .bf-preframe__text {
-    font-size: 18px;
+  .bf-preframe__permission-card--continue {
+    grid-column: span 1;
   }
 
-  .bf-preframe__scene {
-    padding: 18px 24px;
-    margin-left: 24px;
-  }
-
-  .bf-preframe__insight {
-    margin: 48px auto;
-  }
-
-  .bf-preframe__proof {
-    padding: 20px 24px;
-  }
-
-  .bf-preframe__graphic {
-    max-width: 280px;
+  .bf-preframe__annotation--arrow-down {
+    display: block;
+    bottom: -55px;
+    left: auto;
+    right: -30px;
+    transform: rotate(-15deg);
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   #bf-preframe {
-    padding: 64px 40px;
+    padding: 64px 40px 80px;
+  }
+
+  .bf-preframe__headline {
+    font-size: 2.25rem;
+  }
+
+  .bf-preframe__insight {
+    padding: 56px 40px;
+  }
+
+  .bf-preframe__insight-line2 {
+    font-size: 2.25rem;
   }
 }
 
@@ -633,14 +1323,31 @@
    REDUCED MOTION
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
-  .bf-preframe__svg-loop,
+  .bf-preframe__content--fade-in,
+  .bf-preframe__scene--slide-in,
+  .bf-preframe__insight--scale-in,
+  .bf-preframe__proof--reveal,
+  .bf-preframe__urgency--cascade,
+  .bf-preframe__urgency--cascade .bf-preframe__urgency-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .bf-preframe__scene--slide-in {
+    transform: rotate(-0.5deg) !important;
+  }
+
+  .bf-preframe__svg-tangle,
   .bf-preframe__svg-arrow,
-  .bf-preframe__svg-path {
+  .bf-preframe__svg-plant {
     stroke-dashoffset: 0 !important;
     transition: none !important;
   }
 
-  .bf-preframe__svg-dot {
+  .bf-preframe__svg-bloom,
+  .bf-preframe__svg-sparkle,
+  .bf-preframe__svg-star {
     opacity: 1 !important;
     transform: scale(1) !important;
     transition: none !important;
@@ -652,8 +1359,43 @@
   }
 
   .bf-preframe__cta-btn {
+    animation: none !important;
     transition: none !important;
   }
+
+  .bf-preframe__cta-btn::before {
+    display: none;
+  }
+
+  .bf-preframe__urgency-item {
+    transition: none !important;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+.bf-preframe__cta-btn:focus-visible {
+  outline: 3px solid var(--coral-soft);
+  outline-offset: 3px;
+}
+
+.bf-preframe__urgency-item:focus-within {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+/* Screen reader only content */
+.bf-preframe__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 </style>
 
@@ -661,24 +1403,95 @@
 (function() {
   'use strict';
 
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const graphic = document.querySelector('#bf-preframe .bf-preframe__graphic');
-    if (graphic) graphic.classList.add('is-animated');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Initialize all animated elements immediately if reduced motion
+  if (prefersReducedMotion) {
+    document.querySelectorAll('#bf-preframe .bf-preframe__graphic').forEach(el => el.classList.add('is-animated'));
+    document.querySelectorAll('#bf-preframe [class*="--fade-in"], #bf-preframe [class*="--slide-in"], #bf-preframe [class*="--scale-in"], #bf-preframe [class*="--reveal"], #bf-preframe [class*="--cascade"]').forEach(el => el.classList.add('is-visible'));
     return;
   }
 
-  // Simple IntersectionObserver for SVG
-  const graphic = document.querySelector('#bf-preframe .bf-preframe__graphic');
-  if (graphic) {
-    const observer = new IntersectionObserver((entries) => {
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const animationObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+
+        // Special handling for graphic
+        if (entry.target.classList.contains('bf-preframe__graphic')) {
+          entry.target.classList.add('is-animated');
+        }
+
+        animationObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all animated elements
+  const animatedElements = document.querySelectorAll(
+    '#bf-preframe .bf-preframe__content--fade-in, ' +
+    '#bf-preframe .bf-preframe__scene--slide-in, ' +
+    '#bf-preframe .bf-preframe__insight--scale-in, ' +
+    '#bf-preframe .bf-preframe__graphic, ' +
+    '#bf-preframe .bf-preframe__proof--reveal, ' +
+    '#bf-preframe .bf-preframe__urgency--cascade'
+  );
+
+  animatedElements.forEach(el => animationObserver.observe(el));
+
+  // Count-up animation for proof numbers
+  const proofSection = document.querySelector('#bf-preframe .bf-preframe__proof');
+  if (proofSection) {
+    const countObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          graphic.classList.add('is-animated');
-          observer.unobserve(entry.target);
+          const numElements = entry.target.querySelectorAll('.bf-preframe__proof-num[data-count]');
+          numElements.forEach(el => {
+            const target = parseInt(el.dataset.count, 10);
+            let current = 0;
+            const duration = 1000;
+            const step = target / (duration / 16);
+
+            const counter = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                el.textContent = target;
+                clearInterval(counter);
+              } else {
+                el.textContent = Math.floor(current);
+              }
+            }, 16);
+          });
+
+          countObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.5 });
-    observer.observe(graphic);
+
+    countObserver.observe(proofSection);
+  }
+
+  // Scarcity bar animation
+  const scarcityBar = document.querySelector('#bf-preframe .bf-preframe__scarcity-fill');
+  if (scarcityBar) {
+    const scarcityObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.style.getPropertyValue('--fill');
+          scarcityObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    // Start with 0 width
+    scarcityBar.style.width = '0%';
+    scarcityObserver.observe(scarcityBar);
   }
 })();
 </script>
