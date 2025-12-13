@@ -92,6 +92,9 @@
         <p class="bf-pain__finale-line bf-pain__finale-line--2">Not creativity.</p>
         <p class="bf-pain__finale-word"><span class="bf-pain__decisions">Decisions.</span></p>
       </div>
+
+      <!-- CTA BUTTON -->
+      <a href="#" class="bf-pain__cta">Show Me the System →</a>
     </footer>
 
   </div>
@@ -315,7 +318,7 @@
 .bf-pain__worst-card {
   background: var(--cream-dark);
   border-radius: 20px;
-  padding: clamp(36px, 6vw, 56px) clamp(28px, 5vw, 48px);
+  padding: clamp(1rem, 2vw, 1.35rem) clamp(1.25rem, 2.5vw, 1.75rem);
   max-width: 520px;
   margin: 0 auto;
   text-align: center;
@@ -470,6 +473,28 @@
   to { transform: scaleX(1); }
 }
 
+/* === CTA BUTTON === */
+.bf-pain__cta {
+  display: inline-block;
+  margin-top: clamp(32px, 5vw, 48px);
+  padding: clamp(14px, 2vw, 18px) clamp(28px, 4vw, 40px);
+  background: var(--teal);
+  color: #FFFFFF;
+  font-family: "Satoshi Variable", system-ui, sans-serif;
+  font-size: clamp(15px, 1.8vw, 18px);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(45, 95, 93, 0.25);
+}
+
+.bf-pain__cta:hover {
+  background: var(--teal-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 95, 93, 0.35);
+}
+
 /* ============================================
    RESPONSIVE: 350px
    ============================================ */
@@ -487,7 +512,7 @@
   }
 
   .bf-pain__worst-card {
-    padding: 28px 20px;
+    padding: 16px 18px;
   }
 
   .bf-pain__decisions {
