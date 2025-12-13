@@ -47,6 +47,7 @@ html, body { width: 100%; overflow-x: hidden; }
   --media-h-mobile: 140px;
   padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
   overflow: hidden;
+  font-family: 'Satoshi Variable', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 /* GRAIN TEXTURE */
@@ -78,7 +79,7 @@ html, body { width: 100%; overflow-x: hidden; }
 .offer-container {
   position: relative;
   z-index: 1;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
 }
@@ -152,13 +153,16 @@ html, body { width: 100%; overflow-x: hidden; }
 }
 
 /* PILLAR GROUP */
-.pillar-group {
-  margin-bottom: clamp(2rem, 4vw, 2.5rem);
+.reveal {
   opacity: 0;
-  transform: translateY(25px);
+  transform: translateY(18px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.pillar-group.visible { opacity: 1; transform: translateY(0); }
+.is-visible { opacity: 1; transform: translateY(0); }
+
+.pillar-group {
+  margin-bottom: clamp(2rem, 4vw, 2.5rem);
+}
 
 .pillar-header {
   display: flex;
@@ -222,8 +226,9 @@ html, body { width: 100%; overflow-x: hidden; }
 /* CARDS GRID - SQUARE */
 .offer-items {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(0.55rem, 1vw, 0.75rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.9rem, 1.5vw, 1.2rem);
+  align-items: stretch;
 }
 
 /* CARD - SQUARE */
@@ -231,23 +236,25 @@ html, body { width: 100%; overflow-x: hidden; }
   display: flex;
   flex-direction: column;
   background: var(--white);
-  border-radius: 6px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: none;
-  transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+  transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
-  transform: translateY(12px);
-  border: 1px solid rgba(0,0,0,0.04);
+  transform: translateY(16px);
+  border: 1px solid rgba(0,0,0,0.06);
   position: relative;
+  backdrop-filter: blur(2px);
+  overflow-wrap: anywhere;
 }
-.offer-card.visible { opacity: 1; transform: translateY(0); }
-.offer-card:hover { transform: translateY(-2px); border-color: rgba(0,0,0,0.08); }
+.offer-card.is-visible { opacity: 1; transform: translateY(0); }
+.offer-card:hover { transform: translateY(-4px); border-color: rgba(0,0,0,0.14); box-shadow: 0 16px 36px rgba(0,0,0,0.08); }
 
 .offer-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 2px;
+  height: 3px;
 }
 
 .pillar-group[data-pillar="1"] .offer-card::before { background: linear-gradient(90deg, var(--teal-primary), var(--teal-light)); }
@@ -281,16 +288,84 @@ html, body { width: 100%; overflow-x: hidden; }
 
 /* CARD CONTENT */
 .card-content {
-  padding: clamp(0.45rem, 0.95vw, 0.6rem);
+  padding: clamp(0.9rem, 1.5vw, 1.1rem);
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  text-align: center;
 }
 
 .card-title {
+  font-family: 'Ogg';
+  font-weight: 700;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.25;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.card-subtitle {
   font-family: 'Satoshi Variable';
-  font-weight: 500;
-  font-size: clamp(0.72rem, 1.3vw, 0.82rem);
-  line-height: 1.4;
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  line-height: 1.55;
   color: var(--text-secondary);
+  text-align: center;
+}
+
+.card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+  text-align: left;
+  font-family: 'Satoshi Variable';
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.6vw, 1rem);
+  color: var(--text-secondary);
+}
+
+.card-list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.card-list li::before {
+  content: '•';
+  color: var(--teal-primary);
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 0.05rem;
+}
+
+.card-label {
+  display: inline-flex;
+  align-self: center;
+  padding: 0.35rem 0.7rem;
+  background: var(--bg-warm);
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.05);
+  font-family: 'Satoshi Variable';
+  font-weight: 700;
+  font-size: clamp(0.75rem, 1.4vw, 0.85rem);
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.microcopy {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  background: rgba(18,63,58,0.06);
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 /* EMPHASIS STYLES */
@@ -316,11 +391,114 @@ html, body { width: 100%; overflow-x: hidden; }
 }
 .graphic-container svg { width: 100%; height: 100%; max-width: 200px; }
 
+.featured-card {
+  grid-column: span 2;
+  padding-bottom: clamp(0.75rem, 1.25vw, 1rem);
+  border-width: 2px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+.featured-card::before { height: 4px; }
+
+.featured-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep));
+  color: var(--white);
+  border-radius: 999px;
+  font-family: 'Satoshi Variable';
+  font-weight: 700;
+  font-size: 0.82rem;
+  align-self: center;
+  box-shadow: 0 10px 24px rgba(18,63,58,0.2);
+}
+
+.bot-avatar-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+  position: relative;
+}
+
+.bot-avatar {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f7f2eb, #e4d6c3);
+  border: 3px solid #e8ded0;
+  box-shadow: 0 0 0 0 rgba(212,175,55,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Ogg';
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--teal-deep);
+  animation: glowPulse 2.8s ease-in-out infinite;
+}
+
+.bot-ask-strip {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: var(--bg-warm);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+.ask-label {
+  font-family: 'Satoshi Variable';
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  color: var(--text-primary);
+}
+
+.ask-examples {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.ask-example {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.6rem;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.05);
+  font-weight: 600;
+  font-size: clamp(0.88rem, 1.5vw, 0.98rem);
+}
+
+.typing-dots {
+  display: inline-flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.typing-dots span {
+  width: 8px;
+  height: 8px;
+  background: var(--teal-primary);
+  border-radius: 50%;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-dots span:nth-child(2) { animation-delay: 0.18s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.36s; }
+
 /* ANIMATIONS */
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
 @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
 @keyframes rotateLoop { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@keyframes glowPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.45); } 50% { box-shadow: 0 0 0 14px rgba(212,175,55,0); } }
+@keyframes typing { 0%, 80%, 100% { opacity: 0.3; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-2px); } }
 
 .float-anim { animation: float 3s ease-in-out infinite; }
 .pulse-anim { animation: pulse 2s ease-in-out infinite; }
@@ -333,11 +511,9 @@ html, body { width: 100%; overflow-x: hidden; }
   border-radius: 0 8px 8px 0;
   padding: clamp(0.625rem, 1.25vw, 0.875rem);
   margin: clamp(1.25rem, 2.5vw, 1.5rem) 0;
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: all 0.4s ease;
 }
-.callout-box.visible { opacity: 1; transform: translateX(0); }
+.callout-box { opacity: 0; transform: translateX(-10px); transition: all 0.4s ease; }
+.callout-box.is-visible { opacity: 1; transform: translateX(0); }
 
 .callout-label {
   font-family: 'Satoshi Variable';
@@ -370,7 +546,7 @@ html, body { width: 100%; overflow-x: hidden; }
   transform: translateY(25px);
   transition: all 0.5s ease;
 }
-.bonus-section.visible { opacity: 1; transform: translateY(0); }
+.bonus-section.is-visible { opacity: 1; transform: translateY(0); }
 
 .bonus-section::before {
   content: '';
@@ -436,10 +612,9 @@ html, body { width: 100%; overflow-x: hidden; }
   border-top: 1px solid rgba(0,0,0,0.06);
   opacity: 0;
   transform: translateY(15px);
-  transition: all 0.5s ease;
   position: relative;
 }
-.cta-section.visible { opacity: 1; transform: translateY(0); }
+.cta-section.is-visible { opacity: 1; transform: translateY(0); transition: all 0.5s ease; }
 .cta-section::before { content: '✦'; position: absolute; top: -8px; left: 50%; transform: translateX(-50%); background: var(--bg-cream); padding: 0 0.5rem; color: var(--gold-primary); font-size: 0.875rem; }
 
 .cta-button {
@@ -471,11 +646,24 @@ html, body { width: 100%; overflow-x: hidden; }
   .card-media { height: var(--media-h-mobile); }
 }
 
+@media (max-width: 900px) {
+  .offer-items { grid-template-columns: 1fr; }
+  .featured-card { grid-column: auto; }
+  .card-content { text-align: left; }
+}
+
 @media (max-width: 700px) {
   .offer-items, .bonus-items { grid-template-columns: 1fr; }
   .pillar-header { flex-direction: column; text-align: center; gap: 0.5rem; }
   .pillar-title-wrap { align-items: center; }
   .decor-circle, .decor-dots, .decor-line, .header-sparkle { display: none; }
+}
+
+@media (max-width: 420px) {
+  #bf-offer-premium { padding: 1.75rem 0.75rem; }
+  .card-content { text-align: left; }
+  .card-title { font-size: clamp(1rem, 6vw, 1.15rem); }
+  .card-subtitle { font-size: clamp(0.92rem, 5vw, 1rem); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -508,7 +696,7 @@ html, body { width: 100%; overflow-x: hidden; }
 </header>
 
 <!-- PILLAR 1 -->
-<div class="pillar-group" data-pillar="1">
+<div class="pillar-group reveal" data-pillar="1">
   <div class="pillar-header">
     <div class="pillar-number">1</div>
     <div class="pillar-title-wrap">
@@ -516,27 +704,41 @@ html, body { width: 100%; overflow-x: hidden; }
       <p class="pillar-tagline">So you always know what to do next.</p>
     </div>
   </div>
-  
+
   <div class="offer-items">
-    <article class="offer-card">
+    <article class="offer-card reveal">
       <div class="card-visual card-media">
         <img src="https://i.imgur.com/KMM7lxy.png" alt="Kickoff Call" loading="lazy">
       </div>
       <div class="card-content">
-        <h4 class="card-title"><span class="emphasis">Kickoff call</span> to start clean and get oriented</h4>
+        <span class="card-label">PILLAR 1 — Your 90-Day Blueprint</span>
+        <h4 class="card-title">Kickoff Call</h4>
+        <p class="card-subtitle">Start clean. Know exactly how the 90 days works before Day 1.</p>
+        <ul class="card-list">
+          <li><span class="microcopy">Day 3 Complete Slides</span> 60–90 minute live kickoff</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Meet your cohort, set goals, get oriented</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Ask questions before you waste a week guessing</li>
+        </ul>
       </div>
     </article>
-    
-    <article class="offer-card">
+
+    <article class="offer-card reveal">
       <div class="card-visual card-media">
-        <img src="https://i.imgur.com/0nWjNzC.png" alt="90-Day Roadmap" loading="lazy">
+        <img src="https://i.imgur.com/0nWjNzC.png" alt="Personalized 90-Day Roadmap" loading="lazy">
       </div>
       <div class="card-content">
-        <h4 class="card-title">A personalized <span class="emphasis">90-day roadmap</span> built around your shop and your real schedule</h4>
+        <span class="card-label">PILLAR 1 — Your 90-Day Blueprint</span>
+        <h4 class="card-title">Your Personalized 90-Day Roadmap</h4>
+        <p class="card-subtitle">Not a generic curriculum. A week-by-week plan for your shop and your schedule.</p>
+        <ul class="card-list">
+          <li><span class="microcopy">Day 3 Complete Slides</span> You fill out an intake form (shop, goals, time, challenges)</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Bailey reviews it personally (not a VA, not AI)</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> You get your custom roadmap (week-by-week focus)</li>
+        </ul>
       </div>
     </article>
-    
-    <article class="offer-card">
+
+    <article class="offer-card reveal">
       <div class="card-visual card-media">
         <div class="graphic-container">
           <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -555,11 +757,18 @@ html, body { width: 100%; overflow-x: hidden; }
         </div>
       </div>
       <div class="card-content">
-        <h4 class="card-title">The simple weekly loop: <span class="emphasis">Research → Create → List → Improve</span></h4>
+        <span class="card-label">PILLAR 1 — Your 90-Day Blueprint</span>
+        <h4 class="card-title">The Simple Weekly Loop</h4>
+        <p class="card-subtitle">So you stop “random Etsy” and start output.</p>
+        <ul class="card-list">
+          <li><span class="microcopy">Day 3 Complete Slides</span> Research → Create → List → Improve</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Same steps every week</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Less thinking, more shipping</li>
+        </ul>
       </div>
     </article>
-    
-    <article class="offer-card">
+
+    <article class="offer-card reveal">
       <div class="card-visual card-media">
         <div class="graphic-container">
           <svg viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -578,19 +787,26 @@ html, body { width: 100%; overflow-x: hidden; }
             <text x="96" y="84" font-size="6" fill="white" text-anchor="middle" font-weight="600">LIST</text>
             <rect x="114" y="48" width="28" height="18" rx="4" fill="#E07A5F" class="float-anim" style="animation-delay:0.9s"/>
             <text x="128" y="60" font-size="6" fill="white" text-anchor="middle" font-weight="600">REVIEW</text>
-            <text x="80" y="122" font-size="7" fill="#123F3A" text-anchor="middle" font-weight="600">60-90 minute blocks</text>
+            <text x="80" y="122" font-size="7" fill="#123F3A" text-anchor="middle" font-weight="600">60–90 minute blocks</text>
           </svg>
         </div>
       </div>
       <div class="card-content">
-        <h4 class="card-title">A <span class="emphasis">realistic plan</span> in 60–90 minute blocks</h4>
+        <span class="card-label">PILLAR 1 — Your 90-Day Blueprint</span>
+        <h4 class="card-title">Built for Real-Life Time Blocks</h4>
+        <p class="card-subtitle">If you’ve got 60–90 minutes, you’ve got enough.</p>
+        <ul class="card-list">
+          <li><span class="microcopy">90_Day_Etsy_Empire_Accelerator_</span> Clear weekly focus</li>
+          <li><span class="microcopy">90_Day_Etsy_Empire_Accelerator_</span> No “what should I do today?” spiral</li>
+          <li><span class="microcopy">90_Day_Etsy_Empire_Accelerator_</span> Progress without burning out</li>
+        </ul>
       </div>
     </article>
   </div>
 </div>
 
 <!-- PILLAR 2 -->
-<div class="pillar-group" data-pillar="2">
+<div class="pillar-group reveal" data-pillar="2">
   <div class="pillar-header">
     <div class="pillar-number">2</div>
     <div class="pillar-title-wrap">
@@ -598,111 +814,140 @@ html, body { width: 100%; overflow-x: hidden; }
       <p class="pillar-tagline">So you don't stall for a week over one question.</p>
     </div>
   </div>
-  
+
   <div class="offer-items">
-    <article class="offer-card">
+    <article class="offer-card reveal">
       <div class="card-visual card-media">
         <img src="https://i.imgur.com/mbMa5XJ.png" alt="Weekly Calls" loading="lazy">
       </div>
       <div class="card-content">
-        <h4 class="card-title"><span class="emphasis">12 weekly implementation + shop review calls</span></h4>
+        <span class="card-label">PILLAR 2 — Implementation + Support</span>
+        <h4 class="card-title">12 Weekly Implementation + Shop Review Calls</h4>
+        <p class="card-subtitle">Your weekly reset so you don’t drift for 6 days and “start over Monday.”</p>
+        <ul class="card-list">
+          <li><span class="microcopy">Day 3 Complete Slides</span> 60–75 minutes, every week for 12 weeks</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Weeks 1–4: heavy audits + feedback</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Weeks 5–12: troubleshooting + optimization + Q&A</li>
+        </ul>
       </div>
     </article>
-    
-    <article class="offer-card">
+
+    <article class="offer-card reveal">
       <div class="card-visual card-media">
-        <div class="graphic-container">
-          <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="15" y="15" width="130" height="130" rx="12" fill="#FDFBF7" stroke="#5865F2" stroke-width="2"/>
-            <rect x="15" y="15" width="130" height="24" fill="#5865F2" rx="12"/>
-            <rect x="15" y="30" width="130" height="9" fill="#5865F2"/>
-            <circle cx="30" cy="27" r="6" fill="#FEE75C"/>
-            <text x="48" y="30" font-size="8" fill="white" font-weight="700">Skool Community</text>
-            <circle cx="135" cy="27" r="5" fill="#57F287" class="pulse-anim"/>
-            <rect x="22" y="50" width="116" height="22" rx="6" fill="#F0F0F5"/>
-            <circle cx="34" cy="61" r="7" fill="#E07A5F"/>
-            <text x="48" y="58" font-size="6" fill="#1A1A1A">Help! Tags not working...</text>
-            <text x="48" y="67" font-size="5" fill="#6B6B6B">Bailey replied • 2h ago</text>
-            <rect x="22" y="78" width="116" height="22" rx="6" fill="#F0F0F5"/>
-            <circle cx="34" cy="89" r="7" fill="#4A8B87"/>
-            <text x="48" y="86" font-size="6" fill="#1A1A1A">First $100 day!! 🎉</text>
-            <text x="48" y="95" font-size="5" fill="#6B6B6B">12 replies • celebrating</text>
-            <rect x="22" y="106" width="116" height="22" rx="6" fill="#E8F4F3"/>
-            <circle cx="34" cy="117" r="7" fill="#D4AF37"/>
-            <text x="48" y="114" font-size="6" fill="#1A1A1A">SEO question from newbie</text>
-            <text x="48" y="123" font-size="5" fill="#6B6B6B">Bailey is typing...</text>
-            <rect x="108" y="8" width="40" height="14" rx="7" fill="#E07A5F"/>
-            <text x="128" y="18" font-size="6" fill="white" text-anchor="middle" font-weight="700">90 Days</text>
-          </svg>
-        </div>
+        <img src="https://i.imgur.com/MRZv7g1.png" alt="Skool Community" loading="lazy">
       </div>
       <div class="card-content">
-        <h4 class="card-title"><span class="emphasis">Skool community support</span> for the 90-day sprint</h4>
+        <span class="card-label">PILLAR 2 — Implementation + Support</span>
+        <h4 class="card-title">Private Skool Community Support (90 days)</h4>
+        <p class="card-subtitle">So one question doesn’t cost you a whole week.</p>
+        <ul class="card-list">
+          <li><span class="microcopy">Day 3 Complete Slides</span> Post questions anytime</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Get unstuck fast (community + Bailey)</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Loom video responses for complex questions</li>
+        </ul>
       </div>
     </article>
-    
-    <article class="offer-card">
+
+    <article class="offer-card featured-card reveal">
       <div class="card-visual card-media">
         <img src="https://i.imgur.com/o1R8v3j.png" alt="Bailey Bot" loading="lazy">
       </div>
       <div class="card-content">
-        <h4 class="card-title"><span class="emphasis">Bailey Bot (24/7)</span> for the moment you get stuck</h4>
+        <span class="featured-badge">⭐ Featured: Bailey Bot</span>
+        <h4 class="card-title">Bailey Bot (24/7 AI Assistant)</h4>
+        <p class="card-subtitle">It’s 10:47pm. The house is finally quiet. You sit down to work… and get stuck on something small. Instead of pausing your progress for 2 days, you ask Bailey Bot and keep moving.</p>
+        <div class="bot-avatar-wrap">
+          <div class="bot-avatar" aria-hidden="true">BF</div>
+        </div>
+        <ul class="card-list">
+          <li><span class="microcopy">Day 3 Complete Slides</span> Trained on Bailey’s courses + content</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Answers in Bailey’s “voice,” on demand</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Available when Bailey is sleeping</li>
+        </ul>
+        <div class="bot-ask-strip">
+          <div class="ask-label">Ask Bailey Bot…</div>
+          <div class="ask-examples">
+            <div class="ask-example"><span class="typing-dots" aria-hidden="true"><span></span><span></span><span></span></span> “What should I list next?”</div>
+            <div class="ask-example"><span class="typing-dots" aria-hidden="true"><span></span><span></span><span></span></span> “Is this title okay?”</div>
+            <div class="ask-example"><span class="typing-dots" aria-hidden="true"><span></span><span></span><span></span></span> “Which of these ideas is stronger?”</div>
+          </div>
+        </div>
       </div>
     </article>
-    
-    <article class="offer-card">
+
+    <article class="offer-card reveal">
       <div class="card-visual card-media">
         <img src="https://i.imgur.com/8oxJRPb.png" alt="Replays" loading="lazy">
       </div>
       <div class="card-content">
-        <h4 class="card-title"><span class="emphasis">Replays</span> if you miss live, so you stay on track</h4>
+        <span class="card-label">PILLAR 2 — Implementation + Support</span>
+        <h4 class="card-title">Replays + Catch-Up (if you miss live)</h4>
+        <p class="card-subtitle">You don’t fall behind just because life happened.</p>
+        <ul class="card-list">
+          <li><span class="microcopy">Day 3 Complete Slides</span> All calls are recorded</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Replay posted within 24 hours</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Submit questions in advance + still get reviewed</li>
+        </ul>
       </div>
     </article>
   </div>
 </div>
-
 <!-- PILLAR 3 -->
-<div class="pillar-group" data-pillar="3">
+<div class="pillar-group reveal" data-pillar="3">
   <div class="pillar-header">
     <div class="pillar-number">3</div>
     <div class="pillar-title-wrap">
       <h3 class="pillar-title">Lifetime Access</h3>
-      <p class="pillar-tagline">So you're not starting over after Day 90.</p>
+      <p class="pillar-tagline">So you keep the compounding momentum forever.</p>
     </div>
   </div>
-  
+
   <div class="offer-items">
-    <article class="offer-card">
+    <article class="offer-card reveal">
       <div class="card-visual card-media">
-        <img src="https://i.imgur.com/HlKZ8lA.png" alt="Library" loading="lazy">
+        <img src="https://i.imgur.com/HlKZ8lA.png" alt="Lifetime Library" loading="lazy">
       </div>
       <div class="card-content">
-        <h4 class="card-title"><span class="emphasis">Lifetime library access</span> (everything + future updates)</h4>
+        <span class="card-label">PILLAR 3 — Lifetime Access</span>
+        <h4 class="card-title">Lifetime Program Access (current + future)</h4>
+        <p class="card-subtitle">You keep the training forever. You’re not “renting information.”</p>
+        <ul class="card-list">
+          <li><span class="microcopy">Day 3 Complete Slides</span> All current courses included</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> All future programs included automatically</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Updated when Bailey learns something new</li>
+        </ul>
       </div>
     </article>
-    
-    <article class="offer-card">
+
+    <article class="offer-card reveal">
       <div class="card-visual card-media">
-        <img src="https://i.imgur.com/MRZv7g1.png" alt="Community" loading="lazy">
+        <img src="https://i.imgur.com/MRZv7g1.png" alt="Lifetime Community" loading="lazy">
       </div>
       <div class="card-content">
-        <h4 class="card-title"><span class="emphasis">Lifetime community access</span> + ongoing monthly calls</h4>
+        <span class="card-label">PILLAR 3 — Lifetime Access</span>
+        <h4 class="card-title">Lifetime Community + Ongoing Monthly Calls</h4>
+        <p class="card-subtitle">The sprint ends. Your access doesn’t.</p>
+        <ul class="card-list">
+          <li><span class="microcopy">Day 3 Complete Slides</span> Community access forever</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Monthly calls ongoing</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Updates + new trainings included</li>
+        </ul>
       </div>
     </article>
-    
-    <article class="offer-card">
+
+    <article class="offer-card reveal">
       <div class="card-visual card-media">
         <div class="graphic-container">
           <svg viewBox="0 0 160 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g transform="translate(10, 30)"><rect width="36" height="36" rx="8" fill="#D4AF37" class="float-anim"/><text x="18" y="24" font-size="16" text-anchor="middle">💡</text></g>
+            <g transform="translate(10, 30)"><rect width="36" height="36" rx="8" fill="#D4AF37" class="float-anim"/><text x="18" y="24" font-size="16" text-anchor="middle">🧠</text></g>
             <text x="28" y="80" font-size="6" fill="#6B6B6B" text-anchor="middle">Your</text>
             <text x="28" y="88" font-size="6" fill="#6B6B6B" text-anchor="middle">Expertise</text>
             <path d="M52 48 L68 48" stroke="#D4AF37" stroke-width="2" stroke-dasharray="4 2"/><polygon points="68,45 75,48 68,51" fill="#D4AF37"/>
-            <g transform="translate(80, 30)"><rect width="36" height="36" rx="8" fill="#4A8B87" class="float-anim" style="animation-delay:0.4s"/><text x="18" y="24" font-size="16" text-anchor="middle">📚</text></g>
+            <g transform="translate(80, 30)"><rect width="36" height="36" rx="8" fill="#4A8B87" class="float-anim" style="animation-delay:0.4s"/><text x="18" y="24" font-size="16" text-anchor="middle">📣</text></g>
             <text x="98" y="80" font-size="6" fill="#6B6B6B" text-anchor="middle">Teach</text>
             <text x="98" y="88" font-size="6" fill="#6B6B6B" text-anchor="middle">Fluence</text>
             <path d="M122 48 L138 48" stroke="#4A8B87" stroke-width="2" stroke-dasharray="4 2"/><polygon points="138,45 145,48 138,51" fill="#4A8B87"/>
-            <g transform="translate(150, 30)"><rect width="36" height="36" rx="8" fill="#E07A5F" class="float-anim" style="animation-delay:0.8s"/><text x="18" y="24" font-size="16" text-anchor="middle">🎓</text></g>
+            <g transform="translate(150, 30)"><rect width="36" height="36" rx="8" fill="#E07A5F" class="float-anim" style="animation-delay:0.8s"/><text x="18" y="24" font-size="16" text-anchor="middle">📦</text></g>
             <text x="168" y="80" font-size="6" fill="#6B6B6B" text-anchor="middle">Your</text>
             <text x="168" y="88" font-size="6" fill="#6B6B6B" text-anchor="middle">Course</text>
             <rect x="45" y="100" width="90" height="18" rx="9" fill="#123F3A"/>
@@ -711,20 +956,26 @@ html, body { width: 100%; overflow-x: hidden; }
         </div>
       </div>
       <div class="card-content">
-        <h4 class="card-title"><span class="emphasis">TeachFluence access</span> (there if you want it later)</h4>
+        <span class="card-label">PILLAR 3 — Lifetime Access</span>
+        <h4 class="card-title">TeachFluence (included, optional)</h4>
+        <p class="card-subtitle">Only if you ever want personal brand later.</p>
+        <ul class="card-list">
+          <li><span class="microcopy">Day 3 Complete Slides</span> TeachFluence included, optional</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Use it whenever you want a personal brand later</li>
+          <li><span class="microcopy">Day 3 Complete Slides</span> Ready the moment you decide to launch</li>
+        </ul>
       </div>
     </article>
   </div>
 </div>
-
 <!-- CALLOUT -->
-<div class="callout-box">
+<div class="callout-box reveal">
   <p class="callout-label">Quick note</p>
   <p class="callout-text">Skool support is for the 90-day sprint. The library and community are lifetime.</p>
 </div>
 
 <!-- BONUS -->
-<div class="bonus-section">
+<div class="bonus-section reveal">
   <header class="bonus-header">
     <span class="bonus-badge">Bonus</span>
     <h3 class="bonus-headline">Plus these extras when you join</h3>
@@ -782,9 +1033,9 @@ html, body { width: 100%; overflow-x: hidden; }
 </div>
 
 <!-- CTA -->
-<div class="cta-section">
-  <a href="#enroll" class="cta-button">
-    Join the 90-Day Etsy Empire Accelerator
+<div class="cta-section reveal">
+  <a href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator/" target="_top" rel="noopener" class="cta-button">
+    Join the 90-Day Accelerator →
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
 </div>
@@ -798,14 +1049,14 @@ html, body { width: 100%; overflow-x: hidden; }
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const delay = entry.target.classList.contains('offer-card') ? 
-          Array.from(entry.target.parentElement.children).indexOf(entry.target) * 60 : 0;
-        setTimeout(() => entry.target.classList.add('visible'), delay);
+        const delay = entry.target.classList.contains('offer-card') ?
+          Array.from(entry.target.parentElement.children).indexOf(entry.target) * 70 : 0;
+        setTimeout(() => entry.target.classList.add('is-visible'), delay);
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
-  
-  document.querySelectorAll('.pillar-group, .offer-card, .bonus-section, .callout-box, .cta-section').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 })();
 </script>
