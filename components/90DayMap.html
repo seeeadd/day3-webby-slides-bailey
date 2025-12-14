@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offer</title>
+</head>
+<body>
 <!--
   90-Day Map Section - Bailey Founding Cohort
   Visual Concept: The Winding Path
@@ -912,3 +920,18 @@
   }
 })();
 </script>
+<script>
+  function sendHeight() {
+    const h = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    );
+    window.parent.postMessage({ type: "setHeight", height: h }, "*");
+  }
+
+  window.addEventListener("load", () => setTimeout(sendHeight, 200));
+  window.addEventListener("resize", () => setTimeout(sendHeight, 200));
+  setInterval(sendHeight, 1000);
+</script>
+</body>
+</html>
