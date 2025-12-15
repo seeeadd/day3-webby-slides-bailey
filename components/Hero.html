@@ -37,33 +37,106 @@
         <p class="bf-hero__accelerator-callout">The 90-Day Etsy Empire Accelerator</p>
         <p class="bf-hero__subtext">is a focused sprint to install a simple Etsy system in real life time blocks. You get a personalized roadmap, weekly implementation calls, a 90-day WhatsApp support pod, and Bailey Bot 24/7 so one question never costs you a whole week.</p>
       </div>
-
-      <!-- Hero CTA Buttons -->
-      <div class="bf-hero__cta-buttons">
-        <a href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator-2//" target="_blank" rel="noopener noreferrer" class="bf-hero__btn bf-hero__btn--primary">
-          <span class="bf-hero__btn-text">Join the 90-Day Accelerator</span>
-          <svg class="bf-hero__btn-arrow" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-        <a href="#bailey-bot-section" class="bf-hero__btn bf-hero__btn--secondary">
-          <span class="bf-hero__btn-text">See what you get (2-minute overview)</span>
-        </a>
-      </div>
-
-      <!-- Social Proof Section -->
-      <div class="bf-hero__proof">
-        <p class="bf-hero__proof-text">Get the same results as my best students!</p>
-      </div>
     </header>
 
     <!-- ═══════════════════════════════════════════════════════════════════════
-         FIRST CARD: 90-Day System (Premium 2-Column Grid)
+         FIRST CARD: Bailey Bot (Glassmorphism + Teal Border)
          ═══════════════════════════════════════════════════════════════════════ -->
     <section class="bf-hero__section bf-hero__section--first">
       <p class="bf-hero__section-label">
         <span class="bf-hero__label-line"></span>
         First, here's what you get
+        <span class="bf-hero__label-line"></span>
+      </p>
+
+      <div class="bf-hero__bot-card">
+        <!-- Glassmorphism overlay -->
+        <div class="bf-hero__bot-card-glass"></div>
+
+        <!-- Badge -->
+        <div class="bf-hero__badge">
+          <svg class="bf-hero__badge-sparkle" viewBox="0 0 16 16" fill="none">
+            <path d="M8 1l1.5 4.5L14 7l-4.5 1.5L8 13l-1.5-4.5L2 7l4.5-1.5L8 1z" fill="currentColor"/>
+          </svg>
+          Included with the Accelerator
+        </div>
+
+        <!-- Bot Content -->
+        <div class="bf-hero__bot-content">
+          <!-- Avatar -->
+          <div class="bf-hero__avatar-wrapper">
+            <div class="bf-hero__avatar">
+              <img src="BAILEY_BOT_AVATAR_PLACEHOLDER" alt="Bailey Bot avatar - AI assistant for Etsy sellers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+              <svg class="bf-hero__avatar-fallback" viewBox="0 0 80 80" fill="none">
+                <circle cx="40" cy="40" r="38" fill="#FFFFFF" stroke="#008080" stroke-width="2"/>
+                <circle cx="40" cy="30" r="12" fill="#E0F2F1"/>
+                <ellipse cx="40" cy="55" rx="18" ry="14" fill="#E0F2F1"/>
+                <circle cx="35" cy="28" r="2.5" fill="#008080"/>
+                <circle cx="45" cy="28" r="2.5" fill="#008080"/>
+                <path d="M36 35 Q40 39, 44 35" stroke="#008080" stroke-width="2" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <!-- Spark decoration -->
+            <svg class="bf-hero__avatar-spark" viewBox="0 0 20 20" fill="none">
+              <path d="M10 1l1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5 1.5-4z" fill="#E8998D"/>
+            </svg>
+          </div>
+
+          <!-- Title & Subtitle -->
+          <h2 class="bf-hero__bot-title">Meet Bailey Bot (24/7)</h2>
+          <p class="bf-hero__bot-subtitle">Instant Etsy answers, in Bailey's voice, while you're actually working.</p>
+
+          <!-- Situational Hook -->
+          <div class="bf-hero__bot-scenario">
+            <p class="bf-hero__bot-hook">
+              It's 10:38 PM. Kids are finally down. You sit to work, then you freeze on something small. Title. Tags. What to list next. Whether this idea is even worth finishing. Normally you'd spiral, open 12 tabs, and lose the night.
+            </p>
+          </div>
+
+          <!-- Transition Line -->
+          <p class="bf-hero__bot-transition">
+            <strong>With Bailey Bot:</strong> you ask. You get the answer. You keep moving.
+          </p>
+
+          <!-- Chat Preview - Direct Display (No Play Button) -->
+          <div class="bf-hero__preview">
+            <div class="bf-hero__chat-preview">
+              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
+                <span>What should my title be for this sticker?</span>
+              </div>
+              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
+                <span>Use this format. Put the keyword first. Keep it human. Here are 3 options.</span>
+              </div>
+              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
+                <span>What should I list next based on my shop?</span>
+              </div>
+              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
+                <span>List this next. Here's why. Here's the checklist so you can hit publish.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Chips -->
+          <div class="bf-hero__chips">
+            <span class="bf-hero__chip">24/7</span>
+            <span class="bf-hero__chip">Bailey-trained</span>
+            <span class="bf-hero__chip">Decision help</span>
+          </div>
+
+          <!-- Micro-close -->
+          <p class="bf-hero__micro-close">This is what stops the Tuesday-night stall.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         SECOND CARD: 90-Day System (Premium 2-Column Grid)
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="bf-hero__section bf-hero__section--second">
+      <p class="bf-hero__section-label bf-hero__section-label--alt">
+        <span class="bf-hero__label-line"></span>
+        Second, Your Complete 90-Day System
+        <span class="bf-hero__label-line"></span>
       </p>
 
       <div class="bf-hero__system-card">
@@ -228,98 +301,9 @@
           </ul>
         </div>
       </div>
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         Bailey Bot (Glassmorphism + Teal Border)
-         ═══════════════════════════════════════════════════════════════════════ -->
-    <section id="bailey-bot-section" class="bf-hero__section bf-hero__section--second">
-      <p class="bf-hero__section-label">
-        <span class="bf-hero__label-line"></span>
-        Plus, Your 24/7 Bailey Bot
-        <span class="bf-hero__label-line"></span>
-      </p>
-
-      <div class="bf-hero__bot-card">
-        <!-- Glassmorphism overlay -->
-        <div class="bf-hero__bot-card-glass"></div>
-
-        <!-- Badge -->
-        <div class="bf-hero__badge">
-          <svg class="bf-hero__badge-sparkle" viewBox="0 0 16 16" fill="none">
-            <path d="M8 1l1.5 4.5L14 7l-4.5 1.5L8 13l-1.5-4.5L2 7l4.5-1.5L8 1z" fill="currentColor"/>
-          </svg>
-          Included with the Accelerator
-        </div>
-
-        <!-- Bot Content -->
-        <div class="bf-hero__bot-content">
-          <!-- Avatar -->
-          <div class="bf-hero__avatar-wrapper">
-            <div class="bf-hero__avatar">
-              <img src="BAILEY_BOT_AVATAR_PLACEHOLDER" alt="Bailey Bot avatar - AI assistant for Etsy sellers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
-              <svg class="bf-hero__avatar-fallback" viewBox="0 0 80 80" fill="none">
-                <circle cx="40" cy="40" r="38" fill="#FFFFFF" stroke="#008080" stroke-width="2"/>
-                <circle cx="40" cy="30" r="12" fill="#E0F2F1"/>
-                <ellipse cx="40" cy="55" rx="18" ry="14" fill="#E0F2F1"/>
-                <circle cx="35" cy="28" r="2.5" fill="#008080"/>
-                <circle cx="45" cy="28" r="2.5" fill="#008080"/>
-                <path d="M36 35 Q40 39, 44 35" stroke="#008080" stroke-width="2" fill="none" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <!-- Spark decoration -->
-            <svg class="bf-hero__avatar-spark" viewBox="0 0 20 20" fill="none">
-              <path d="M10 1l1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5 1.5-4z" fill="#E8998D"/>
-            </svg>
-          </div>
-
-          <!-- Title & Subtitle -->
-          <h2 class="bf-hero__bot-title">Meet Bailey Bot (24/7)</h2>
-          <p class="bf-hero__bot-subtitle">Instant Etsy answers, in Bailey's voice, while you're actually working.</p>
-
-          <!-- Situational Hook -->
-          <div class="bf-hero__bot-scenario">
-            <p class="bf-hero__bot-hook">
-              It's 10:38 PM. Kids are finally down. You sit to work, then you freeze on something small. Title. Tags. What to list next. Whether this idea is even worth finishing. Normally you'd spiral, open 12 tabs, and lose the night.
-            </p>
-          </div>
-
-          <!-- Transition Line -->
-          <p class="bf-hero__bot-transition">
-            <strong>With Bailey Bot:</strong> you ask. You get the answer. You keep moving.
-          </p>
-
-          <!-- Chat Preview - Direct Display (No Play Button) -->
-          <div class="bf-hero__preview">
-            <div class="bf-hero__chat-preview">
-              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
-                <span>What should my title be for this sticker?</span>
-              </div>
-              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
-                <span>Use this format. Put the keyword first. Keep it human. Here are 3 options.</span>
-              </div>
-              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
-                <span>What should I list next based on my shop?</span>
-              </div>
-              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
-                <span>List this next. Here's why. Here's the checklist so you can hit publish.</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Feature Chips -->
-          <div class="bf-hero__chips">
-            <span class="bf-hero__chip">24/7</span>
-            <span class="bf-hero__chip">Bailey-trained</span>
-            <span class="bf-hero__chip">Decision help</span>
-          </div>
-
-          <!-- Micro-close -->
-          <p class="bf-hero__micro-close">This is what stops the Tuesday-night stall.</p>
-        </div>
-      </div>
     </section>
 
-
+    <!-- ═══════════════════════════════════════════════════════════════════════
          CTA SECTION (Premium Artistic Button)
          ═══════════════════════════════════════════════════════════════════════ -->
     <div class="bf-hero__cta-section">
@@ -332,7 +316,7 @@
           <path d="M12 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7z" fill="currentColor"/>
         </svg>
 
-        <a href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator-2//" target="_blank" rel="noopener noreferrer" class="bf-hero__cta">
+        <a href="https://digitallypurposed.thrivecart.com/etsy-empire-accelerator/" target="_blank" rel="noopener noreferrer" class="bf-hero__cta">
           <!-- Glow effect -->
           <span class="bf-hero__cta-glow"></span>
           <!-- Button content -->
@@ -394,7 +378,6 @@
 /* ═══════════════════════════════════════════════════════════════════════════
    CSS VARIABLES - Fresh, Vibrant Color Palette
    ═══════════════════════════════════════════════════════════════════════════ */
-  
 #bf-hero {
   /* Backgrounds - Fresh, warm, inviting */
   --bg-main: #FFFBF7;
@@ -635,89 +618,6 @@
    SECTION LABELS
    ═══════════════════════════════════════════════════════════════════════════ */
 #bf-hero .bf-hero__section {
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   HERO CTA BUTTONS
-   ═══════════════════════════════════════════════════════════════════════════ */
-#bf-hero .bf-hero__cta-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 2.5rem auto 1.5rem;
-  max-width: 600px;
-}
-
-@media (min-width: 640px) {
-  #bf-hero .bf-hero__cta-buttons {
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.25rem;
-  }
-}
-
-#bf-hero .bf-hero__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.625rem;
-  padding: 1rem 2rem;
-  font-family: 'Satoshi Variable', sans-serif;
-  font-weight: 700;
-  font-size: 1.0625rem;
-  text-decoration: none;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-#bf-hero .bf-hero__btn--primary {
-  background: linear-gradient(135deg, var(--teal-primary) 0%, #006B6B 100%);
-  color: #FFFFFF;
-  box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
-}
-
-#bf-hero .bf-hero__btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 128, 128, 0.4);
-}
-
-#bf-hero .bf-hero__btn--secondary {
-  background: transparent;
-  color: var(--teal-primary);
-  border: 2px solid var(--teal-primary);
-}
-
-#bf-hero .bf-hero__btn--secondary:hover {
-  background: var(--teal-light);
-  transform: translateY(-2px);
-}
-
-#bf-hero .bf-hero__btn-arrow {
-  width: 20px;
-  height: 20px;
-  stroke: currentColor;
-}
-
-/* ═══════════════════════════════════════════════════════════════════════════
-   SOCIAL PROOF SECTION
-   ═══════════════════════════════════════════════════════════════════════════ */
-#bf-hero .bf-hero__proof {
-  text-align: center;
-  margin: 1rem auto 2rem;
-  max-width: 600px;
-}
-
-#bf-hero .bf-hero__proof-text {
-  font-family: 'Satoshi Variable', sans-serif;
-  font-weight: 600;
-  font-size: clamp(1rem, 2.2vw, 1.125rem);
-  color: var(--text-primary);
-  margin: 0;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(to right, transparent 0%, rgba(212, 165, 116, 0.1) 20%, rgba(212, 165, 116, 0.1) 80%, transparent 100%);
-  border-radius: 8px;
-}
-
   margin-bottom: var(--space-2xl);
 }
 
@@ -1645,18 +1545,3 @@
   }
 })();
 </script>
-<script>
-  function sendHeight() {
-    const h = Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight
-    );
-    window.parent.postMessage({ type: "setHeight", height: h }, "*");
-  }
-
-  window.addEventListener("load", () => setTimeout(sendHeight, 200));
-  window.addEventListener("resize", () => setTimeout(sendHeight, 200));
-  setInterval(sendHeight, 1000);
-</script>
-</body>
-</html>
