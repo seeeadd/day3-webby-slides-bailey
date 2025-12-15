@@ -614,6 +614,197 @@ html, body { width: 100%; overflow-x: hidden; }
 
 .bailey-bot-card .bot-ask-strip { max-width: 100%; }
 
+/* New Bailey Bot Layout */
+.bailey-bot-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  min-height: 350px;
+}
+
+.bailey-bot-chat-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-window {
+  background: #FDFBF7;
+  border-radius: 16px;
+  border: 2px solid rgba(74, 139, 135, 0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep));
+  color: white;
+}
+
+.chat-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.3);
+  flex-shrink: 0;
+}
+
+.bot-profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chat-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.chat-name {
+  font-family: 'Satoshi Variable';
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.chat-status {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #4ADE80;
+  border-radius: 50%;
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.chat-messages {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 180px;
+  background: #fff;
+}
+
+.chat-message {
+  max-width: 85%;
+  padding: 0.65rem 0.875rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.user-message {
+  align-self: flex-end;
+  background: var(--teal-light);
+  color: var(--teal-deep);
+  border-bottom-right-radius: 4px;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background: #F3F4F6;
+  color: var(--text-primary);
+  border-bottom-left-radius: 4px;
+}
+
+.slide-in-msg {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideInMsg 0.4s ease forwards;
+}
+
+@keyframes slideInMsg {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.typing-indicator {
+  align-self: flex-start;
+  padding: 0.65rem 0.875rem;
+  background: #F3F4F6;
+  border-radius: 12px;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-input {
+  padding: 0.75rem 1rem;
+  background: #F9FAFB;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.input-placeholder {
+  font-size: 0.85rem;
+  color: #9CA3AF;
+}
+
+.bailey-bot-content-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.bailey-photo-feature {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--teal-light);
+  box-shadow: 0 8px 24px rgba(74, 139, 135, 0.2);
+  flex-shrink: 0;
+  animation: glowPulse 2.8s ease-in-out infinite;
+}
+
+.bailey-zoom-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bailey-bot-content-side .card-content {
+  padding: 0;
+}
+
+.bailey-bot-content-side .featured-badge {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .bailey-bot-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .bailey-bot-content-side {
+    align-items: center;
+    text-align: center;
+  }
+
+  .bailey-bot-content-side .card-list {
+    text-align: left;
+  }
+}
+
 .typing-dots {
   display: inline-flex;
   gap: 0.2rem;
@@ -738,46 +929,114 @@ html, body { width: 100%; overflow-x: hidden; }
 }
 .bonus-card:hover { border-color: var(--gold-primary); transform: translateY(-2px); box-shadow: 0 4px 14px rgba(212,175,55,0.12); }
 
-.bonus-card .card-media { background: linear-gradient(135deg, #FFF9E8 0%, #FFF3D4 100%); }
-.bonus-card .card-content { padding: clamp(0.5rem, 1vw, 0.625rem); }
-.bonus-card .card-title { color: var(--gold-deep); font-weight: 600; font-size: clamp(0.7rem, 1.3vw, 0.8rem); margin-bottom: 0.2rem; }
-.bonus-card .card-desc { font-family: 'Satoshi Variable'; font-weight: 450; font-size: clamp(0.65rem, 1.2vw, 0.72rem); line-height: 1.4; color: var(--text-secondary); }
+.bonus-card .card-media {
+  background: linear-gradient(135deg, #FFF9E8 0%, #FFF3D4 100%);
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bonus-card .card-content { padding: clamp(1rem, 2vw, 1.5rem); }
+.bonus-card .card-title {
+  font-family: 'Ogg';
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
 
 /* Bonus grid for 4 cards */
 .bonus-grid-4 {
   grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
 }
 
-/* Offer-style bonus cards */
-.bonus-card.offer-style .card-content { padding: clamp(0.75rem, 1.5vw, 1rem); }
+/* Offer-style bonus cards - redesigned */
+.bonus-card.offer-style {
+  border: 2px solid rgba(74, 139, 135, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.bonus-card.offer-style:hover {
+  border-color: var(--teal-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(74, 139, 135, 0.15);
+}
+
+.bonus-card.offer-style .card-content {
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
 .bonus-card.offer-style .card-title {
-  color: var(--gold-deep);
+  font-family: 'Ogg';
+  color: var(--text-primary);
   font-weight: 700;
-  font-size: clamp(0.85rem, 1.5vw, 1rem);
-  margin-bottom: 0.75rem;
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(74, 139, 135, 0.1);
 }
 
+/* Section labels with icons */
 .card-section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: 'Satoshi Variable';
   font-weight: 700;
-  font-size: clamp(0.65rem, 1.1vw, 0.72rem);
+  font-size: clamp(0.75rem, 1.3vw, 0.85rem);
   color: var(--teal-primary);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 0.5rem;
-  margin-bottom: 0.15rem;
+  letter-spacing: 0.08em;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.card-section-label::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: var(--teal-primary);
+  border-radius: 50%;
 }
 
 .bonus-card.offer-style .card-desc {
-  color: var(--text-muted);
-  font-size: clamp(0.7rem, 1.2vw, 0.78rem);
-  line-height: 1.5;
+  font-family: 'Satoshi Variable';
+  color: var(--text-secondary);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  line-height: 1.6;
   margin-bottom: 0;
+  padding-left: 0.75rem;
 }
 
 .bonus-card.offer-style .card-list {
-  margin-top: 0.25rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.bonus-card.offer-style .card-list li {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary);
+}
+
+/* Bonus card graphics container */
+.bonus-card .graphic-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.bonus-card .graphic-container svg {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
 }
 
 /* Roadmap Graphic Animations */
@@ -838,25 +1097,25 @@ html, body { width: 100%; overflow-x: hidden; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   background: linear-gradient(135deg, var(--teal-deep), var(--teal-primary));
   background-size: 200% 200%;
   color: var(--white);
   font-family: 'Satoshi Variable';
-  font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
   font-weight: 700;
   text-decoration: none;
-  padding: 0.875rem 1.75rem;
-  border-radius: 10px;
+  padding: clamp(1rem, 2vw, 1.25rem) clamp(2rem, 4vw, 3rem);
+  border-radius: 12px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(18,63,58,0.25);
+  box-shadow: 0 6px 20px rgba(18,63,58,0.3);
   transition: all 0.3s ease;
   animation: gradientShift 3s ease infinite;
 }
-.cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(18,63,58,0.35); }
-.cta-button svg { width: 16px; height: 16px; transition: transform 0.25s ease; }
-.cta-button:hover svg { transform: translateX(3px); }
+.cta-button:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(18,63,58,0.4); }
+.cta-button svg { width: 22px; height: 22px; transition: transform 0.25s ease; }
+.cta-button:hover svg { transform: translateX(4px); }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -928,7 +1187,6 @@ html, body { width: 100%; overflow-x: hidden; }
         <img src="https://i.imgur.com/Je6zgiS.png" alt="Kickoff Call" loading="lazy">
       </div>
       <div class="card-content">
-        <span class="card-label">PILLAR 1 &mdash; Your 90-Day Blueprint</span>
         <h4 class="card-title">Kickoff Call</h4>
         <p class="card-subtitle">Start clean. Know exactly how the 90 days works before Day 1.</p>
         <ul class="card-list">
@@ -1008,7 +1266,6 @@ html, body { width: 100%; overflow-x: hidden; }
         </div>
       </div>
       <div class="card-content">
-        <span class="card-label">PILLAR 1 &mdash; Your 90-Day Blueprint</span>
         <h4 class="card-title">Your Personalized 90-Day Roadmap</h4>
         <p class="card-subtitle">Not a generic curriculum. A week-by-week plan for your shop and your schedule.</p>
         <ul class="card-list">
@@ -1038,7 +1295,6 @@ html, body { width: 100%; overflow-x: hidden; }
         </div>
       </div>
       <div class="card-content">
-        <span class="card-label">PILLAR 1 &mdash; Your 90-Day Blueprint</span>
         <h4 class="card-title">The Simple Weekly Loop</h4>
         <p class="card-subtitle">So you stop &ldquo;random Etsy&rdquo; and start output.</p>
         <ul class="card-list">
@@ -1073,7 +1329,6 @@ html, body { width: 100%; overflow-x: hidden; }
         </div>
       </div>
       <div class="card-content">
-        <span class="card-label">PILLAR 1 &mdash; Your 90-Day Blueprint</span>
         <h4 class="card-title">Built for Real-Life Time Blocks</h4>
         <p class="card-subtitle">If you&rsquo;ve got 60&ndash;90 minutes, you&rsquo;ve got enough.</p>
         <ul class="card-list">
@@ -1102,7 +1357,6 @@ html, body { width: 100%; overflow-x: hidden; }
         <img src="https://i.imgur.com/mbMa5XJ.png" alt="Weekly Calls" loading="lazy">
       </div>
       <div class="card-content">
-        <span class="card-label">PILLAR 2 &mdash; Implementation + Support</span>
         <h4 class="card-title">12 Weekly Implementation + Shop Review Calls</h4>
         <p class="card-subtitle">Every week you can get live 1-1 support from Bailey and get told exactly what to fix / update in your shop.</p>
         <ul class="card-list">
@@ -1118,7 +1372,6 @@ html, body { width: 100%; overflow-x: hidden; }
         <img src="https://i.imgur.com/MRZv7g1.png" alt="Skool Community" loading="lazy">
       </div>
       <div class="card-content">
-        <span class="card-label">PILLAR 2 &mdash; Implementation + Support</span>
         <h4 class="card-title">Private Skool Community Support (90 days)</h4>
         <p class="card-subtitle">So one question doesn&rsquo;t cost you a whole week.</p>
         <ul class="card-list">
@@ -1130,25 +1383,52 @@ html, body { width: 100%; overflow-x: hidden; }
     </article>
 
     <article class="offer-card featured-card bailey-bot-card reveal">
-      <div class="card-visual card-media bailey-bot-visual">
-        <img src="https://i.imgur.com/o1R8v3j.png" alt="Bailey Bot" loading="lazy">
-        <div class="bot-avatar" aria-hidden="true">BF</div>
-      </div>
-      <div class="card-content">
-        <span class="featured-badge">⭐ Featured: Bailey Bot</span>
-        <h4 class="card-title">Bailey Bot (24/7 AI Assistant)</h4>
-        <p class="card-subtitle">It&rsquo;s 10:47pm. The house is finally quiet. You sit down to work&hellip; and get stuck on something small. Instead of pausing your progress for 2 days, you ask Bailey Bot and keep moving.</p>
-        <ul class="card-list">
-          <li>Trained on Bailey&rsquo;s courses + content</li>
-          <li>Answers in Bailey&rsquo;s &ldquo;voice,&rdquo; on demand</li>
-          <li>Available when Bailey is sleeping</li>
-        </ul>
-        <div class="bot-ask-strip">
-          <div class="ask-label">Ask Bailey Bot&hellip;</div>
-          <div class="ask-examples">
-            <div class="ask-example"><span class="typing-dots" aria-hidden="true"><span></span><span></span><span></span></span> &ldquo;What should I list next?&rdquo;</div>
-            <div class="ask-example"><span class="typing-dots" aria-hidden="true"><span></span><span></span><span></span></span> &ldquo;Is this title okay?&rdquo;</div>
-            <div class="ask-example"><span class="typing-dots" aria-hidden="true"><span></span><span></span><span></span></span> &ldquo;Which of these ideas is stronger?&rdquo;</div>
+      <div class="bailey-bot-layout">
+        <!-- Left: Animated Chat Interface -->
+        <div class="bailey-bot-chat-visual">
+          <div class="chat-window">
+            <div class="chat-header">
+              <div class="chat-avatar">
+                <img src="https://i.imgur.com/bgdTQin.png" alt="Bailey Bot" class="bot-profile-pic">
+              </div>
+              <div class="chat-header-info">
+                <span class="chat-name">Bailey Bot</span>
+                <span class="chat-status"><span class="status-dot"></span> Online 24/7</span>
+              </div>
+            </div>
+            <div class="chat-messages">
+              <div class="chat-message user-message slide-in-msg" style="animation-delay: 0.2s">
+                <span>What should I list next?</span>
+              </div>
+              <div class="chat-message bot-message slide-in-msg" style="animation-delay: 0.8s">
+                <span>Based on your niche, I'd recommend creating a bundle of your top 3 sellers. Here's why...</span>
+              </div>
+              <div class="chat-message user-message slide-in-msg" style="animation-delay: 1.4s">
+                <span>Is this title okay?</span>
+              </div>
+              <div class="typing-indicator slide-in-msg" style="animation-delay: 1.8s">
+                <span class="typing-dots"><span></span><span></span><span></span></span>
+              </div>
+            </div>
+            <div class="chat-input">
+              <span class="input-placeholder">Ask Bailey Bot anything...</span>
+            </div>
+          </div>
+        </div>
+        <!-- Right: Bailey Photo + Content -->
+        <div class="bailey-bot-content-side">
+          <div class="bailey-photo-feature">
+            <img src="https://i.imgur.com/bgdTQin.png" alt="Bailey" class="bailey-zoom-photo">
+          </div>
+          <div class="card-content">
+            <span class="featured-badge">Featured: Bailey Bot</span>
+            <h4 class="card-title">Bailey Bot (24/7 AI Assistant)</h4>
+            <p class="card-subtitle">It&rsquo;s 10:47pm. The house is finally quiet. You sit down to work&hellip; and get stuck on something small. Instead of pausing your progress for 2 days, you ask Bailey Bot and keep moving.</p>
+            <ul class="card-list">
+              <li>Trained on Bailey&rsquo;s courses + content</li>
+              <li>Answers in Bailey&rsquo;s &ldquo;voice,&rdquo; on demand</li>
+              <li>Available when Bailey is sleeping</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -1159,7 +1439,6 @@ html, body { width: 100%; overflow-x: hidden; }
         <img src="https://i.imgur.com/8oxJRPb.png" alt="Replays" loading="lazy">
       </div>
       <div class="card-content">
-        <span class="card-label">PILLAR 2 &mdash; Implementation + Support</span>
         <h4 class="card-title">Replays + Catch-Up (if you miss live)</h4>
         <p class="card-subtitle">You don&rsquo;t fall behind just because life happened.</p>
         <ul class="card-list">
@@ -1187,7 +1466,6 @@ html, body { width: 100%; overflow-x: hidden; }
         <img src="https://i.imgur.com/HlKZ8lA.png" alt="Lifetime Library" loading="lazy">
       </div>
       <div class="card-content">
-        <span class="card-label">PILLAR 3 &mdash; Lifetime Access</span>
         <h4 class="card-title">Lifetime Program Access (current + future)</h4>
         <p class="card-subtitle">The sprint + weekly calls are 90 days. The library + community are lifetime.</p>
         <div class="lifetime-callout">No subscription. No expiration. You keep everything Bailey adds later.</div>
@@ -1205,7 +1483,6 @@ html, body { width: 100%; overflow-x: hidden; }
         <img src="https://i.imgur.com/MRZv7g1.png" alt="Lifetime Community" loading="lazy">
       </div>
       <div class="card-content">
-        <span class="card-label">PILLAR 3 &mdash; Lifetime Access</span>
         <h4 class="card-title">Lifetime Community + Ongoing Monthly Calls</h4>
         <p class="card-subtitle">The sprint ends. Your access doesn&rsquo;t.</p>
         <ul class="card-list">
