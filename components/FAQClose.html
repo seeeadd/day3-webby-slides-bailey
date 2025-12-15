@@ -372,7 +372,7 @@
    ============================================ */
 
 #bf-testimonial-wall {
-  padding: 5rem 1.5rem;
+  padding: 5rem 0;
   background: linear-gradient(165deg, #0D2926 0%, #123F3A 40%, #1a524a 70%, #0D2926 100%);
   position: relative;
   overflow: hidden;
@@ -417,6 +417,7 @@
 .bf-wall__header {
   text-align: center;
   margin-bottom: 3.5rem;
+  padding: 0 1.5rem;
   position: relative;
   z-index: 2;
 }
@@ -465,8 +466,10 @@
   column-gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1.5rem;
   position: relative;
   z-index: 2;
+  box-sizing: border-box;
 }
 
 /* Card Base - Glassmorphism */
@@ -624,7 +627,7 @@
 
 @media (max-width: 640px) {
   #bf-testimonial-wall {
-    padding: 3.5rem 1rem;
+    padding: 3.5rem 0;
   }
 
   .bf-wall__grid {
@@ -960,11 +963,12 @@
   --white: #FFFFFF;
 
   background: var(--cream-bg);
-  padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.25rem, 3vw, 2rem);
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
   font-family: 'Satoshi Variable';
   color: var(--deep-teal);
   overflow: hidden;
   width: 100%;
+  box-sizing: border-box;
 }
 
 #bf-faq-close *, #bf-faq-close *::before, #bf-faq-close *::after {
@@ -975,9 +979,11 @@
    FAQ INTRO - BOLD HEADERS
    ════════════════════════════════════════════════════════════════ */
 .bf-faq__intro {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto clamp(1.5rem, 3vw, 2rem);
+  padding: 0 1.5rem;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .bf-faq__label {
@@ -1006,6 +1012,8 @@
 .bf-faq__accordion {
   max-width: 900px;
   margin: 0 auto clamp(2.5rem, 5vw, 3.5rem);
+  padding: 0 1.5rem;
+  box-sizing: border-box;
 }
 
 /* Default FAQ item - White card, cream border */
