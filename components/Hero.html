@@ -262,19 +262,31 @@
     <!-- ═══════════════════════════════════════════════════════════════════════
          SECOND CARD: Bailey Bot (Glassmorphism + Teal Border) - MOVED DOWN
          ═══════════════════════════════════════════════════════════════════════ -->
-    <section id="bailey-bot" class="bf-hero__section bf-hero__section--second">
-      <p class="bf-hero__section-label bf-hero__section-label--alt">
-        <span class="bf-hero__label-line"></span>
-        Plus, Your 24/7 AI Assistant
-        <span class="bf-hero__label-line"></span>
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         SECOND CARD: Bailey Bot (Nighttime Vibe + Premium Design)
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section id="bailey-bot" class="bf-hero__section bf-hero__section--second bf-hero__section--nighttime">
+      <!-- Nighttime background with stars -->
+      <div class="bf-hero__nighttime-bg">
+        <div class="bf-hero__star bf-hero__star--1"></div>
+        <div class="bf-hero__star bf-hero__star--2"></div>
+        <div class="bf-hero__star bf-hero__star--3"></div>
+        <div class="bf-hero__star bf-hero__star--4"></div>
+        <div class="bf-hero__star bf-hero__star--5"></div>
+      </div>
+
+      <p class="bf-hero__section-label bf-hero__section-label--night">
+        <span class="bf-hero__label-line bf-hero__label-line--gold"></span>
+        Your 24/7 AI Assistant
+        <span class="bf-hero__label-line bf-hero__label-line--gold"></span>
       </p>
 
-      <div class="bf-hero__bot-card">
+      <div class="bf-hero__bot-card bf-hero__bot-card--nighttime">
         <!-- Glassmorphism overlay -->
-        <div class="bf-hero__bot-card-glass"></div>
+        <div class="bf-hero__bot-card-glass bf-hero__bot-card-glass--dark"></div>
 
         <!-- Badge -->
-        <div class="bf-hero__badge">
+        <div class="bf-hero__badge bf-hero__badge--gold">
           <svg class="bf-hero__badge-sparkle" viewBox="0 0 16 16" fill="none">
             <path d="M8 1l1.5 4.5L14 7l-4.5 1.5L8 13l-1.5-4.5L2 7l4.5-1.5L8 1z" fill="currentColor"/>
           </svg>
@@ -283,71 +295,88 @@
 
         <!-- Bot Content -->
         <div class="bf-hero__bot-content">
-          <!-- Avatar -->
-          <div class="bf-hero__avatar-wrapper">
-            <div class="bf-hero__avatar">
-              <img src="BAILEY_BOT_AVATAR_PLACEHOLDER" alt="Bailey Bot avatar - AI assistant for Etsy sellers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
-              <svg class="bf-hero__avatar-fallback" viewBox="0 0 80 80" fill="none">
-                <circle cx="40" cy="40" r="38" fill="#FFFFFF" stroke="#008080" stroke-width="2"/>
-                <circle cx="40" cy="30" r="12" fill="#E0F2F1"/>
-                <ellipse cx="40" cy="55" rx="18" ry="14" fill="#E0F2F1"/>
-                <circle cx="35" cy="28" r="2.5" fill="#008080"/>
-                <circle cx="45" cy="28" r="2.5" fill="#008080"/>
-                <path d="M36 35 Q40 39, 44 35" stroke="#008080" stroke-width="2" fill="none" stroke-linecap="round"/>
-              </svg>
+          <!-- Premium Avatar - More Prominent -->
+          <div class="bf-hero__avatar-wrapper bf-hero__avatar-wrapper--large">
+            <div class="bf-hero__avatar-glow"></div>
+            <div class="bf-hero__avatar bf-hero__avatar--large">
+              <img src="https://i.imgur.com/bgdTQin.png" alt="Bailey Bot avatar - AI assistant for Etsy sellers" class="bf-hero__avatar-img"/>
             </div>
-            <!-- Spark decoration -->
-            <svg class="bf-hero__avatar-spark" viewBox="0 0 20 20" fill="none">
-              <path d="M10 1l1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5 1.5-4z" fill="#E8998D"/>
-            </svg>
+            <!-- Pulse animation ring -->
+            <div class="bf-hero__avatar-pulse"></div>
+            <!-- Online indicator -->
+            <div class="bf-hero__avatar-status">
+              <span class="bf-hero__status-dot"></span>
+              <span class="bf-hero__status-text">Always On</span>
+            </div>
           </div>
 
           <!-- Title & Subtitle -->
-          <h2 class="bf-hero__bot-title">Meet Bailey Bot <span class="bf-hero__bot-new-badge">(NEW!)</span></h2>
-          <p class="bf-hero__bot-subtitle">Get access to an AI chatbot that has Bailey's brain & knowledge installed. No prompts. No tech setup. Use it or ignore it.</p>
+          <h2 class="bf-hero__bot-title bf-hero__bot-title--night">Meet Bailey Bot <span class="bf-hero__bot-new-badge bf-hero__bot-new-badge--gold">(NEW!)</span></h2>
+          <p class="bf-hero__bot-subtitle bf-hero__bot-subtitle--night">Get access to an AI chatbot trained with Bailey's brain & knowledge. No prompts. No tech setup. Use it or ignore it.</p>
 
-          <!-- Situational Hook -->
-          <div class="bf-hero__bot-scenario">
-            <p class="bf-hero__bot-hook">
-              It's 10:38 PM. Kids are finally down. You sit to work, then you freeze on something small. Title. Tags. What to list next. Whether this idea is even worth finishing. Normally you'd spiral, open 12 tabs, and lose the night.
+          <!-- Situational Hook - Nighttime Scene -->
+          <div class="bf-hero__bot-scenario bf-hero__bot-scenario--night">
+            <div class="bf-hero__scenario-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" fill="#FFF8E1" stroke="#D4AF37" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <p class="bf-hero__bot-hook bf-hero__bot-hook--night">
+              It's <span class="bf-hero__time-highlight">10:38 PM</span>. Kids are finally down. You sit to work, then you freeze on something small. Title. Tags. What to list next. Whether this idea is even worth finishing. Normally you'd spiral, open 12 tabs, and lose the night.
             </p>
           </div>
 
           <!-- Transition Line -->
-          <p class="bf-hero__bot-transition">
+          <p class="bf-hero__bot-transition bf-hero__bot-transition--night">
             <strong>With Bailey Bot:</strong> you ask. You get the answer. You keep moving.
           </p>
 
-          <!-- Chat Preview - Direct Display (No Play Button) -->
-          <div class="bf-hero__preview">
-            <div class="bf-hero__chat-preview">
-              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
-                <span>What should my title be for this sticker?</span>
+          <!-- GIF Demo - The Real Thing -->
+          <div class="bf-hero__demo-wrapper">
+            <div class="bf-hero__demo-frame">
+              <div class="bf-hero__demo-header">
+                <span class="bf-hero__demo-dot bf-hero__demo-dot--red"></span>
+                <span class="bf-hero__demo-dot bf-hero__demo-dot--yellow"></span>
+                <span class="bf-hero__demo-dot bf-hero__demo-dot--green"></span>
+                <span class="bf-hero__demo-title">Bailey Bot Demo</span>
               </div>
-              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
-                <span>Use this format. Put the keyword first. Keep it human. Here are 3 options.</span>
-              </div>
-              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--user">
-                <span>What should I list next based on my shop?</span>
-              </div>
-              <div class="bf-hero__chat-bubble bf-hero__chat-bubble--bot">
-                <span>List this next. Here's why. Here's the checklist so you can hit publish.</span>
+              <div class="bf-hero__demo-content">
+                <img src="https://i.imgur.com/kzFxgM4.gif" alt="Bailey Bot in action - live demo" class="bf-hero__demo-gif"/>
               </div>
             </div>
+            <p class="bf-hero__demo-caption">Real conversation with Bailey Bot</p>
           </div>
 
-          <!-- Feature Chips -->
-          <div class="bf-hero__chips">
-            <span class="bf-hero__chip">24/7</span>
-            <span class="bf-hero__chip">Bailey-trained</span>
-            <span class="bf-hero__chip">Decision help</span>
+          <!-- Feature Chips - Nighttime Style -->
+          <div class="bf-hero__chips bf-hero__chips--night">
+            <span class="bf-hero__chip bf-hero__chip--night">
+              <svg viewBox="0 0 16 16" fill="none" class="bf-hero__chip-icon">
+                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 4v4l2.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              24/7 Available
+            </span>
+            <span class="bf-hero__chip bf-hero__chip--night">
+              <svg viewBox="0 0 16 16" fill="none" class="bf-hero__chip-icon">
+                <path d="M8 1l1.5 4.5L14 7l-4.5 1.5L8 13l-1.5-4.5L2 7l4.5-1.5L8 1z" fill="currentColor"/>
+              </svg>
+              Bailey-Trained
+            </span>
+            <span class="bf-hero__chip bf-hero__chip--night">
+              <svg viewBox="0 0 16 16" fill="none" class="bf-hero__chip-icon">
+                <path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="8" cy="8" r="3" fill="currentColor" opacity="0.3"/>
+              </svg>
+              Instant Decisions
+            </span>
           </div>
 
           <!-- Micro-close -->
-          <p class="bf-hero__micro-close">This is what stops the Tuesday-night stall.</p>
+          <p class="bf-hero__micro-close bf-hero__micro-close--night">This is what stops the Tuesday-night stall.</p>
         </div>
       </div>
     </section>
+
 
     <!-- ═══════════════════════════════════════════════════════════════════════
          CTA SECTION (Premium Artistic Button)
@@ -427,49 +456,290 @@
         </ul>
       </div>
 
-      <!-- Proof Snippets / Testimonials -->
-      <div class="bf-hero__testimonials">
-        <div class="bf-hero__testimonial-card">
-          <p class="bf-hero__testimonial-text">"I finally stopped guessing what to work on next..."</p>
+      <!-- Premium Testimonial Cards with Emotional Hierarchy -->
+      <div class="bf-hero__testimonials-premium">
+        <!-- Card 1: THE BREAKTHROUGH - Excitement/Joy Vibe -->
+        <div class="bf-hero__testimonial-card bf-hero__testimonial-card--breakthrough">
+          <div class="bf-hero__testimonial-glow"></div>
+          <div class="bf-hero__testimonial-inner">
+            <!-- Illustrated Avatar -->
+            <div class="bf-hero__testimonial-avatar bf-hero__testimonial-avatar--joy">
+              <svg viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="28" fill="#FDF8F4" stroke="#E8997A" stroke-width="2"/>
+                <circle cx="30" cy="24" r="10" fill="#FFE4D6"/>
+                <ellipse cx="30" cy="44" rx="14" ry="10" fill="#FFE4D6"/>
+                <circle cx="25" cy="22" r="2" fill="#123F3A"/>
+                <circle cx="35" cy="22" r="2" fill="#123F3A"/>
+                <!-- Big smile for joy -->
+                <path d="M24 28 Q30 35, 36 28" stroke="#123F3A" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <!-- Happy tears -->
+                <path d="M21 24 L19 27" stroke="#87CEEB" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M39 24 L41 27" stroke="#87CEEB" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <!-- Emotion indicator -->
+              <span class="bf-hero__testimonial-emotion">🎉</span>
+            </div>
+
+            <!-- Quote Content -->
+            <div class="bf-hero__testimonial-content">
+              <p class="bf-hero__testimonial-quote">
+                "I think I'm going to <span class="bf-hero__highlight bf-hero__highlight--coral">cry... from joy</span>... I have sold my first three tumblers, one of which was only listed about <span class="bf-hero__highlight bf-hero__highlight--gold">6 hours ago</span>!!!!!! All 3 tumblers are from Bailey's prompts/SEO."
+              </p>
+              <div class="bf-hero__testimonial-meta">
+                <span class="bf-hero__testimonial-name">Amanda K.</span>
+                <span class="bf-hero__testimonial-badge">First Sales in Days</span>
+              </div>
+            </div>
+
+            <!-- Metric Highlight -->
+            <div class="bf-hero__testimonial-metric">
+              <span class="bf-hero__metric-number">3</span>
+              <span class="bf-hero__metric-label">sales in one week</span>
+            </div>
+          </div>
         </div>
-        <div class="bf-hero__testimonial-card">
-          <p class="bf-hero__testimonial-text">"I listed consistently for the first time in months..."</p>
+
+        <!-- Card 2: THE TRUST - Gratitude/Trust Vibe -->
+        <div class="bf-hero__testimonial-card bf-hero__testimonial-card--trust">
+          <div class="bf-hero__testimonial-glow"></div>
+          <div class="bf-hero__testimonial-inner">
+            <!-- Illustrated Avatar -->
+            <div class="bf-hero__testimonial-avatar bf-hero__testimonial-avatar--trust">
+              <svg viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="28" fill="#E0F2F1" stroke="#123F3A" stroke-width="2"/>
+                <circle cx="30" cy="24" r="10" fill="#B2DFDB"/>
+                <ellipse cx="30" cy="44" rx="14" ry="10" fill="#B2DFDB"/>
+                <circle cx="25" cy="22" r="2" fill="#123F3A"/>
+                <circle cx="35" cy="22" r="2" fill="#123F3A"/>
+                <!-- Warm smile -->
+                <path d="M26 28 Q30 32, 34 28" stroke="#123F3A" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <!-- Heart near face -->
+                <path d="M42 18 C42 16, 45 16, 45 18 C45 16, 48 16, 48 18 C48 21, 45 23, 45 23 C45 23, 42 21, 42 18Z" fill="#E8997A"/>
+              </svg>
+              <!-- Emotion indicator -->
+              <span class="bf-hero__testimonial-emotion">💝</span>
+            </div>
+
+            <!-- Quote Content -->
+            <div class="bf-hero__testimonial-content">
+              <p class="bf-hero__testimonial-quote">
+                "Bailey is one of the <span class="bf-hero__highlight bf-hero__highlight--teal">most generous</span> course creators/teachers in this space..."
+              </p>
+              <div class="bf-hero__testimonial-meta">
+                <span class="bf-hero__testimonial-name">Sarah M.</span>
+                <span class="bf-hero__testimonial-badge bf-hero__testimonial-badge--teal">Verified Student</span>
+              </div>
+            </div>
+
+            <!-- Trust Icon -->
+            <div class="bf-hero__testimonial-trust-icon">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4z" fill="#123F3A" opacity="0.1"/>
+                <path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4z" stroke="#123F3A" stroke-width="1.5" fill="none"/>
+                <path d="M9 12l2 2 4-4" stroke="#123F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
         </div>
-        <div class="bf-hero__testimonial-card">
-          <p class="bf-hero__testimonial-text">"Bailey's roadmap saved me weeks of trial and error..."</p>
+
+        <!-- Card 3: THE RESULTS - Speed/Achievement Vibe -->
+        <div class="bf-hero__testimonial-card bf-hero__testimonial-card--results">
+          <div class="bf-hero__testimonial-glow"></div>
+          <div class="bf-hero__testimonial-inner">
+            <!-- Illustrated Avatar -->
+            <div class="bf-hero__testimonial-avatar bf-hero__testimonial-avatar--results">
+              <svg viewBox="0 0 60 60" fill="none">
+                <circle cx="30" cy="30" r="28" fill="#FFF8E1" stroke="#D4AF37" stroke-width="2"/>
+                <circle cx="30" cy="24" r="10" fill="#FFE082"/>
+                <ellipse cx="30" cy="44" rx="14" ry="10" fill="#FFE082"/>
+                <circle cx="25" cy="22" r="2" fill="#123F3A"/>
+                <circle cx="35" cy="22" r="2" fill="#123F3A"/>
+                <!-- Confident smile -->
+                <path d="M25 28 Q30 33, 35 28" stroke="#123F3A" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <!-- Star sparkle -->
+                <path d="M45 12 l1 3 3 1 -3 1 -1 3 -1-3 -3-1 3-1 1-3z" fill="#D4AF37"/>
+              </svg>
+              <!-- Emotion indicator -->
+              <span class="bf-hero__testimonial-emotion">⭐</span>
+            </div>
+
+            <!-- Quote Content -->
+            <div class="bf-hero__testimonial-content">
+              <p class="bf-hero__testimonial-quote">
+                "Reopened my shop on 7/2/24... Just made my <span class="bf-hero__highlight bf-hero__highlight--gold">100th sale</span> using <span class="bf-hero__highlight bf-hero__highlight--coral">98% of Bailey's prompts</span>."
+              </p>
+              <div class="bf-hero__testimonial-meta">
+                <span class="bf-hero__testimonial-name">Jennifer R.</span>
+                <span class="bf-hero__testimonial-badge bf-hero__testimonial-badge--gold">100 Sales Milestone</span>
+              </div>
+            </div>
+
+            <!-- Metric Highlight -->
+            <div class="bf-hero__testimonial-metric bf-hero__testimonial-metric--gold">
+              <span class="bf-hero__metric-number">100</span>
+              <span class="bf-hero__metric-label">sales with prompts</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- What Happens After Checkout - 5 Steps -->
-      <div class="bf-hero__checkout-steps">
-        <h4 class="bf-hero__steps-title">What happens after checkout:</h4>
-        <div class="bf-hero__steps-track">
-          <div class="bf-hero__step">
-            <span class="bf-hero__step-number">1</span>
-            <span class="bf-hero__step-text">Purchase</span>
+
+      <!-- Premium Journey Timeline -->
+      <div class="bf-hero__journey-timeline">
+        <h4 class="bf-hero__journey-title">Your Journey After Checkout</h4>
+        <p class="bf-hero__journey-subtitle">Five simple steps to your personalized Etsy roadmap</p>
+        
+        <div class="bf-hero__journey-track">
+          <!-- Step 1: Purchase -->
+          <div class="bf-hero__journey-step">
+            <div class="bf-hero__journey-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <!-- Shopping bag -->
+                <rect x="10" y="16" width="28" height="26" rx="3" fill="#E0F2F1" stroke="#123F3A" stroke-width="2"/>
+                <path d="M16 20V14a8 8 0 1116 0v6" stroke="#123F3A" stroke-width="2" stroke-linecap="round"/>
+                <!-- Checkmark -->
+                <path d="M18 30l4 4 8-8" stroke="#123F3A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Sparkle -->
+                <circle cx="38" cy="12" r="3" fill="#D4AF37"/>
+              </svg>
+            </div>
+            <span class="bf-hero__journey-number">1</span>
+            <span class="bf-hero__journey-label">Purchase</span>
+            <span class="bf-hero__journey-time">Instant access</span>
           </div>
-          <div class="bf-hero__step-connector"></div>
-          <div class="bf-hero__step">
-            <span class="bf-hero__step-number">2</span>
-            <span class="bf-hero__step-text">Onboarding page + intake form</span>
+
+          <!-- Connector -->
+          <div class="bf-hero__journey-connector">
+            <svg viewBox="0 0 40 12" fill="none">
+              <path d="M0 6h35M35 6l-6-5M35 6l-6 5" stroke="#123F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4">
+                <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+              </path>
+            </svg>
           </div>
-          <div class="bf-hero__step-connector"></div>
-          <div class="bf-hero__step">
-            <span class="bf-hero__step-number">3</span>
-            <span class="bf-hero__step-text">Roadmap built around your shop</span>
+
+          <!-- Step 2: Onboarding -->
+          <div class="bf-hero__journey-step">
+            <div class="bf-hero__journey-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <!-- Clipboard -->
+                <rect x="8" y="8" width="32" height="36" rx="4" fill="#FDF8F4" stroke="#123F3A" stroke-width="2"/>
+                <rect x="16" y="4" width="16" height="8" rx="2" fill="#E8997A" stroke="#123F3A" stroke-width="1.5"/>
+                <!-- Form lines -->
+                <line x1="14" y1="20" x2="34" y2="20" stroke="#123F3A" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14" y1="26" x2="34" y2="26" stroke="#123F3A" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14" y1="32" x2="26" y2="32" stroke="#123F3A" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- Pencil -->
+                <path d="M32 38l4-12 4 4-4 12-4-4z" fill="#D4AF37" stroke="#123F3A" stroke-width="1"/>
+              </svg>
+            </div>
+            <span class="bf-hero__journey-number">2</span>
+            <span class="bf-hero__journey-label">Onboarding + Intake</span>
+            <span class="bf-hero__journey-time">Tell us about your shop</span>
           </div>
-          <div class="bf-hero__step-connector"></div>
-          <div class="bf-hero__step">
-            <span class="bf-hero__step-number">4</span>
-            <span class="bf-hero__step-text">Kickoff call Dec 16</span>
+
+          <!-- Connector -->
+          <div class="bf-hero__journey-connector">
+            <svg viewBox="0 0 40 12" fill="none">
+              <path d="M0 6h35M35 6l-6-5M35 6l-6 5" stroke="#123F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4">
+                <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+              </path>
+            </svg>
           </div>
-          <div class="bf-hero__step-connector"></div>
-          <div class="bf-hero__step">
-            <span class="bf-hero__step-number">5</span>
-            <span class="bf-hero__step-text">Weekly calls begin</span>
+
+          <!-- Step 3: ROADMAP (THE STAR) -->
+          <div class="bf-hero__journey-step bf-hero__journey-step--star">
+            <div class="bf-hero__journey-glow"></div>
+            <div class="bf-hero__journey-icon bf-hero__journey-icon--star">
+              <svg viewBox="0 0 56 56" fill="none">
+                <!-- Outer glow ring -->
+                <circle cx="28" cy="28" r="26" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.3">
+                  <animate attributeName="r" values="24;26;24" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <!-- Map/roadmap -->
+                <rect x="10" y="12" width="36" height="32" rx="4" fill="#FFF8E1" stroke="#D4AF37" stroke-width="2"/>
+                <!-- Roadmap path -->
+                <path d="M16 36c4-8 8-4 12-12s8-4 12-8" stroke="#E8997A" stroke-width="3" stroke-linecap="round" fill="none"/>
+                <!-- Location pins -->
+                <circle cx="16" cy="36" r="3" fill="#123F3A"/>
+                <circle cx="28" cy="24" r="3" fill="#123F3A"/>
+                <circle cx="40" cy="16" r="4" fill="#D4AF37" stroke="#123F3A" stroke-width="1.5"/>
+                <!-- Star at destination -->
+                <path d="M40 16l1.5 3 3.5.5-2.5 2.5.5 3.5-3-1.5-3 1.5.5-3.5-2.5-2.5 3.5-.5z" fill="#D4AF37" stroke="#123F3A" stroke-width="0.75"/>
+              </svg>
+            </div>
+            <span class="bf-hero__journey-number bf-hero__journey-number--star">★</span>
+            <span class="bf-hero__journey-label">Your Custom Roadmap</span>
+            <span class="bf-hero__journey-time">Built around YOUR shop</span>
+            <span class="bf-hero__journey-highlight">The Game Changer</span>
+          </div>
+
+          <!-- Connector -->
+          <div class="bf-hero__journey-connector">
+            <svg viewBox="0 0 40 12" fill="none">
+              <path d="M0 6h35M35 6l-6-5M35 6l-6 5" stroke="#123F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4">
+                <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+              </path>
+            </svg>
+          </div>
+
+          <!-- Step 4: Kickoff -->
+          <div class="bf-hero__journey-step">
+            <div class="bf-hero__journey-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <!-- Video call frame -->
+                <rect x="6" y="10" width="36" height="28" rx="4" fill="#E0F2F1" stroke="#123F3A" stroke-width="2"/>
+                <!-- Screen content - Bailey silhouette -->
+                <circle cx="24" cy="20" r="6" fill="#123F3A"/>
+                <ellipse cx="24" cy="34" rx="10" ry="6" fill="#123F3A"/>
+                <!-- Play button overlay -->
+                <circle cx="24" cy="24" r="8" fill="white" opacity="0.9"/>
+                <path d="M22 20v8l6-4z" fill="#123F3A"/>
+                <!-- Calendar badge -->
+                <rect x="32" y="6" width="12" height="10" rx="2" fill="#E8997A" stroke="#123F3A" stroke-width="1"/>
+                <text x="38" y="13" text-anchor="middle" font-size="6" font-weight="bold" fill="#123F3A">16</text>
+              </svg>
+            </div>
+            <span class="bf-hero__journey-number">4</span>
+            <span class="bf-hero__journey-label">Kickoff Call</span>
+            <span class="bf-hero__journey-time">December 16th</span>
+          </div>
+
+          <!-- Connector -->
+          <div class="bf-hero__journey-connector">
+            <svg viewBox="0 0 40 12" fill="none">
+              <path d="M0 6h35M35 6l-6-5M35 6l-6 5" stroke="#123F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4">
+                <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite"/>
+              </path>
+            </svg>
+          </div>
+
+          <!-- Step 5: Weekly Calls -->
+          <div class="bf-hero__journey-step">
+            <div class="bf-hero__journey-icon">
+              <svg viewBox="0 0 48 48" fill="none">
+                <!-- Calendar -->
+                <rect x="8" y="10" width="32" height="30" rx="4" fill="#FDF8F4" stroke="#123F3A" stroke-width="2"/>
+                <rect x="8" y="10" width="32" height="8" rx="4 4 0 0" fill="#123F3A"/>
+                <!-- Calendar rings -->
+                <line x1="16" y1="6" x2="16" y2="14" stroke="#123F3A" stroke-width="2" stroke-linecap="round"/>
+                <line x1="32" y1="6" x2="32" y2="14" stroke="#123F3A" stroke-width="2" stroke-linecap="round"/>
+                <!-- Recurring marks -->
+                <circle cx="16" cy="26" r="2" fill="#E8997A"/>
+                <circle cx="24" cy="26" r="2" fill="#E8997A"/>
+                <circle cx="32" cy="26" r="2" fill="#E8997A"/>
+                <circle cx="16" cy="34" r="2" fill="#E8997A"/>
+                <circle cx="24" cy="34" r="2" fill="#E8997A"/>
+                <!-- Infinity loop for ongoing -->
+                <path d="M28 34c2-2 6-2 6 0s-4 2-6 0-6-2-6 0 4 2 6 0z" stroke="#123F3A" stroke-width="1.5" fill="none"/>
+              </svg>
+            </div>
+            <span class="bf-hero__journey-number">5</span>
+            <span class="bf-hero__journey-label">Weekly Calls Begin</span>
+            <span class="bf-hero__journey-time">90 days of support</span>
           </div>
         </div>
       </div>
+
     </section>
   </div>
 </div>
@@ -1939,6 +2209,774 @@
     text-align: left;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PREMIUM TESTIMONIAL CARDS - Emotional Hierarchy
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+#bf-hero .bf-hero__testimonials-premium {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(1.5rem, 3vw, 2rem);
+  margin-top: var(--space-lg);
+}
+
+#bf-hero .bf-hero__testimonial-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#bf-hero .bf-hero__testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+#bf-hero .bf-hero__testimonial-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(232, 153, 122, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#bf-hero .bf-hero__testimonial-card:hover .bf-hero__testimonial-glow {
+  opacity: 1;
+}
+
+#bf-hero .bf-hero__testimonial-inner {
+  position: relative;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  z-index: 1;
+}
+
+/* Card variants */
+#bf-hero .bf-hero__testimonial-card--breakthrough {
+  border: 2px solid rgba(232, 153, 122, 0.3);
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFF9F6 100%);
+  box-shadow: 0 8px 32px rgba(232, 153, 122, 0.15);
+}
+
+#bf-hero .bf-hero__testimonial-card--trust {
+  border: 2px solid rgba(18, 63, 58, 0.2);
+  background: linear-gradient(145deg, #FFFFFF 0%, #F0F9F8 100%);
+  box-shadow: 0 8px 32px rgba(18, 63, 58, 0.1);
+}
+
+#bf-hero .bf-hero__testimonial-card--results {
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFFEF5 100%);
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
+}
+
+/* Illustrated avatars */
+#bf-hero .bf-hero__testimonial-avatar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+#bf-hero .bf-hero__testimonial-avatar svg {
+  width: 100%;
+  height: 100%;
+}
+
+#bf-hero .bf-hero__testimonial-emotion {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  font-size: 1.25rem;
+  background: white;
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote styling */
+#bf-hero .bf-hero__testimonial-content {
+  flex: 1;
+}
+
+#bf-hero .bf-hero__testimonial-quote {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
+
+#bf-hero .bf-hero__highlight {
+  font-weight: 600;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+#bf-hero .bf-hero__highlight--coral {
+  background: rgba(232, 153, 122, 0.2);
+  color: #C67B5C;
+}
+
+#bf-hero .bf-hero__highlight--teal {
+  background: rgba(18, 63, 58, 0.1);
+  color: var(--teal-primary);
+}
+
+#bf-hero .bf-hero__highlight--gold {
+  background: rgba(212, 175, 55, 0.2);
+  color: #B8942F;
+}
+
+/* Testimonial meta */
+#bf-hero .bf-hero__testimonial-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+#bf-hero .bf-hero__testimonial-name {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+#bf-hero .bf-hero__testimonial-badge {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(232, 153, 122, 0.15);
+  color: #C67B5C;
+}
+
+#bf-hero .bf-hero__testimonial-badge--teal {
+  background: rgba(18, 63, 58, 0.1);
+  color: var(--teal-primary);
+}
+
+#bf-hero .bf-hero__testimonial-badge--gold {
+  background: rgba(212, 175, 55, 0.15);
+  color: #B8942F;
+}
+
+/* Metric highlights */
+#bf-hero .bf-hero__testimonial-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: rgba(232, 153, 122, 0.08);
+  border-radius: 12px;
+  text-align: center;
+}
+
+#bf-hero .bf-hero__testimonial-metric--gold {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+#bf-hero .bf-hero__metric-number {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--coral);
+  line-height: 1;
+}
+
+#bf-hero .bf-hero__testimonial-metric--gold .bf-hero__metric-number {
+  color: #B8942F;
+}
+
+#bf-hero .bf-hero__metric-label {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* Trust icon */
+#bf-hero .bf-hero__testimonial-trust-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+}
+
+#bf-hero .bf-hero__testimonial-trust-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PREMIUM JOURNEY TIMELINE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+#bf-hero .bf-hero__journey-timeline {
+  background: linear-gradient(145deg, var(--teal-primary) 0%, var(--teal-dark) 100%);
+  border-radius: 24px;
+  padding: clamp(2rem, 4vw, 3rem);
+  color: #FFFFFF;
+  margin-top: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+#bf-hero .bf-hero__journey-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+#bf-hero .bf-hero__journey-title {
+  font-family: 'Ogg', Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+}
+
+#bf-hero .bf-hero__journey-subtitle {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+  text-align: center;
+  margin: 0 0 2rem 0;
+  opacity: 0.9;
+  position: relative;
+}
+
+#bf-hero .bf-hero__journey-track {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+#bf-hero .bf-hero__journey-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  min-width: 120px;
+  max-width: 150px;
+}
+
+#bf-hero .bf-hero__journey-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 6px;
+  margin-bottom: 0.75rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#bf-hero .bf-hero__journey-step:hover .bf-hero__journey-icon {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+#bf-hero .bf-hero__journey-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+#bf-hero .bf-hero__journey-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+#bf-hero .bf-hero__journey-label {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: clamp(0.8125rem, 1.5vw, 0.9375rem);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+#bf-hero .bf-hero__journey-time {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+#bf-hero .bf-hero__journey-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+#bf-hero .bf-hero__journey-connector svg {
+  width: 100%;
+  height: 12px;
+}
+
+/* Star step - the hero moment */
+#bf-hero .bf-hero__journey-step--star {
+  position: relative;
+  z-index: 1;
+}
+
+#bf-hero .bf-hero__journey-step--star .bf-hero__journey-glow {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: starPulse 2s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+  0%, 100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.1); }
+}
+
+#bf-hero .bf-hero__journey-icon--star {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 50%, #D4AF37 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+}
+
+#bf-hero .bf-hero__journey-number--star {
+  background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+  border: none;
+  color: #FFFFFF;
+  font-size: 1rem;
+  width: 32px;
+  height: 32px;
+}
+
+#bf-hero .bf-hero__journey-highlight {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 4px 12px;
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 20px;
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #F4D03F;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BAILEY BOT - NIGHTTIME PREMIUM DESIGN
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+#bf-hero .bf-hero__section--nighttime {
+  position: relative;
+  background: linear-gradient(180deg, #0D2B3E 0%, #1A3A4A 50%, #123F3A 100%);
+  border-radius: 24px;
+  margin: var(--space-xl) 0;
+  padding: clamp(2rem, 4vw, 3rem);
+  overflow: hidden;
+}
+
+#bf-hero .bf-hero__nighttime-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#bf-hero .bf-hero__star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+#bf-hero .bf-hero__star--1 { top: 10%; left: 15%; animation-delay: 0s; }
+#bf-hero .bf-hero__star--2 { top: 20%; right: 20%; animation-delay: 0.5s; width: 3px; height: 3px; }
+#bf-hero .bf-hero__star--3 { top: 40%; left: 10%; animation-delay: 1s; width: 2px; height: 2px; }
+#bf-hero .bf-hero__star--4 { bottom: 30%; right: 15%; animation-delay: 1.5s; }
+#bf-hero .bf-hero__star--5 { bottom: 20%; left: 25%; animation-delay: 2s; width: 3px; height: 3px; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+#bf-hero .bf-hero__section-label--night {
+  color: #FFFFFF;
+}
+
+#bf-hero .bf-hero__label-line--gold {
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+#bf-hero .bf-hero__bot-card--nighttime {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+#bf-hero .bf-hero__bot-card-glass--dark {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+#bf-hero .bf-hero__badge--gold {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(244, 208, 63, 0.1) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #F4D03F;
+}
+
+/* Large avatar wrapper */
+#bf-hero .bf-hero__avatar-wrapper--large {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+#bf-hero .bf-hero__avatar-glow {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: avatarGlow 3s ease-in-out infinite;
+}
+
+@keyframes avatarGlow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+#bf-hero .bf-hero__avatar--large {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #D4AF37;
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+#bf-hero .bf-hero__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#bf-hero .bf-hero__avatar-pulse {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border: 2px solid rgba(212, 175, 55, 0.5);
+  border-radius: 50%;
+  animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+#bf-hero .bf-hero__avatar-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.75rem;
+  padding: 6px 12px;
+  background: rgba(0, 200, 83, 0.15);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 200, 83, 0.3);
+}
+
+#bf-hero .bf-hero__status-dot {
+  width: 8px;
+  height: 8px;
+  background: #00C853;
+  border-radius: 50%;
+  animation: statusBlink 1.5s ease-in-out infinite;
+}
+
+@keyframes statusBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+#bf-hero .bf-hero__status-text {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #00C853;
+}
+
+/* Night mode text */
+#bf-hero .bf-hero__bot-title--night {
+  color: #FFFFFF;
+}
+
+#bf-hero .bf-hero__bot-new-badge--gold {
+  color: #F4D03F;
+}
+
+#bf-hero .bf-hero__bot-subtitle--night {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#bf-hero .bf-hero__bot-scenario--night {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+#bf-hero .bf-hero__scenario-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.75rem;
+}
+
+#bf-hero .bf-hero__bot-hook--night {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#bf-hero .bf-hero__time-highlight {
+  display: inline-block;
+  padding: 2px 8px;
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 4px;
+  color: #F4D03F;
+  font-weight: 600;
+}
+
+#bf-hero .bf-hero__bot-transition--night {
+  color: #FFFFFF;
+}
+
+/* Demo wrapper - Mac-style frame */
+#bf-hero .bf-hero__demo-wrapper {
+  margin: 1.5rem 0;
+}
+
+#bf-hero .bf-hero__demo-frame {
+  background: #1A1A2E;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+#bf-hero .bf-hero__demo-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: #2D2D44;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#bf-hero .bf-hero__demo-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+#bf-hero .bf-hero__demo-dot--red { background: #FF5F57; }
+#bf-hero .bf-hero__demo-dot--yellow { background: #FFBD2E; }
+#bf-hero .bf-hero__demo-dot--green { background: #28CA41; }
+
+#bf-hero .bf-hero__demo-title {
+  flex: 1;
+  text-align: center;
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: -36px;
+}
+
+#bf-hero .bf-hero__demo-content {
+  padding: 0;
+}
+
+#bf-hero .bf-hero__demo-gif {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#bf-hero .bf-hero__demo-caption {
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* Night mode chips */
+#bf-hero .bf-hero__chips--night {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+#bf-hero .bf-hero__chip--night {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  font-family: 'Satoshi Variable', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  transition: background 0.2s ease;
+}
+
+#bf-hero .bf-hero__chip--night:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+#bf-hero .bf-hero__chip-icon {
+  width: 16px;
+  height: 16px;
+}
+
+#bf-hero .bf-hero__micro-close--night {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE ADJUSTMENTS FOR NEW PREMIUM SECTIONS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  #bf-hero .bf-hero__testimonials-premium {
+    grid-template-columns: 1fr;
+  }
+
+  #bf-hero .bf-hero__journey-track {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #bf-hero .bf-hero__journey-step {
+    flex-direction: row;
+    text-align: left;
+    max-width: 100%;
+    width: 100%;
+    gap: 1rem;
+    padding: 0.75rem 0;
+  }
+
+  #bf-hero .bf-hero__journey-icon {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  #bf-hero .bf-hero__journey-step--star .bf-hero__journey-glow {
+    width: 80px;
+    height: 80px;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #bf-hero .bf-hero__journey-connector {
+    width: 100%;
+    height: 24px;
+    justify-content: flex-start;
+    padding-left: 24px;
+  }
+
+  #bf-hero .bf-hero__journey-connector svg {
+    transform: rotate(90deg);
+    width: 12px;
+    height: 40px;
+  }
+
+  #bf-hero .bf-hero__avatar--large {
+    width: 100px;
+    height: 100px;
+  }
+
+  #bf-hero .bf-hero__avatar-glow {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  #bf-hero .bf-hero__testimonial-metric {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  #bf-hero .bf-hero__journey-step {
+    gap: 0.75rem;
+  }
+
+  #bf-hero .bf-hero__journey-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  #bf-hero .bf-hero__journey-icon--star {
+    width: 56px;
+    height: 56px;
+  }
+
+  #bf-hero .bf-hero__chips--night {
+    gap: 0.5rem;
+  }
+
+  #bf-hero .bf-hero__chip--night {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+
 </style>
 
 <script>
