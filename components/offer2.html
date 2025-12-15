@@ -743,6 +743,84 @@ html, body { width: 100%; overflow-x: hidden; }
 .bonus-card .card-title { color: var(--gold-deep); font-weight: 600; font-size: clamp(0.7rem, 1.3vw, 0.8rem); margin-bottom: 0.2rem; }
 .bonus-card .card-desc { font-family: 'Satoshi Variable'; font-weight: 450; font-size: clamp(0.65rem, 1.2vw, 0.72rem); line-height: 1.4; color: var(--text-secondary); }
 
+/* Bonus grid for 4 cards */
+.bonus-grid-4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Offer-style bonus cards */
+.bonus-card.offer-style .card-content { padding: clamp(0.75rem, 1.5vw, 1rem); }
+.bonus-card.offer-style .card-title {
+  color: var(--gold-deep);
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  margin-bottom: 0.75rem;
+}
+
+.card-section-label {
+  font-family: 'Satoshi Variable';
+  font-weight: 700;
+  font-size: clamp(0.65rem, 1.1vw, 0.72rem);
+  color: var(--teal-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.15rem;
+}
+
+.bonus-card.offer-style .card-desc {
+  color: var(--text-muted);
+  font-size: clamp(0.7rem, 1.2vw, 0.78rem);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.bonus-card.offer-style .card-list {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Roadmap Graphic Animations */
+.roadmap-graphic { width: 100%; max-width: 100%; }
+.notion-roadmap-svg { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 0.6s ease forwards;
+}
+
+.fade-in-text {
+  opacity: 0;
+  animation: fadeInText 0.8s ease forwards;
+}
+
+.pulse-dot {
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+.draw-line {
+  stroke-dashoffset: 10;
+  animation: drawLine 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInText {
+  to { opacity: 1; }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; r: 3; }
+  50% { opacity: 0.6; r: 4; }
+}
+
+@keyframes drawLine {
+  to { stroke-dashoffset: 0; }
+}
+
 /* CTA SECTION */
 .cta-section {
   text-align: center;
@@ -847,7 +925,7 @@ html, body { width: 100%; overflow-x: hidden; }
   <div class="offer-items">
     <article class="offer-card reveal">
       <div class="card-visual card-media">
-        <img src="https://i.imgur.com/KMM7lxy.png" alt="Kickoff Call" loading="lazy">
+        <img src="https://i.imgur.com/Je6zgiS.png" alt="Kickoff Call" loading="lazy">
       </div>
       <div class="card-content">
         <span class="card-label">PILLAR 1 &mdash; Your 90-Day Blueprint</span>
@@ -863,7 +941,71 @@ html, body { width: 100%; overflow-x: hidden; }
 
     <article class="offer-card reveal">
       <div class="card-visual card-media">
-        <img src="https://i.imgur.com/0nWjNzC.png" alt="Personalized 90-Day Roadmap" loading="lazy">
+        <div class="graphic-container roadmap-graphic">
+          <!-- Custom animated Notion-style roadmap graphic -->
+          <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" class="notion-roadmap-svg">
+            <!-- Browser window frame -->
+            <rect x="0" y="0" width="320" height="180" rx="8" fill="#FFFFFF" stroke="#E8E8E8" stroke-width="1"/>
+            <!-- Top bar -->
+            <rect x="0" y="0" width="320" height="24" rx="8" fill="#F7F6F3"/>
+            <rect x="0" y="16" width="320" height="8" fill="#F7F6F3"/>
+            <!-- Window controls -->
+            <circle cx="14" cy="12" r="4" fill="#FF5F57"/>
+            <circle cx="28" cy="12" r="4" fill="#FEBC2E"/>
+            <circle cx="42" cy="12" r="4" fill="#28C840"/>
+            <!-- Notion sidebar hint -->
+            <rect x="0" y="24" width="50" height="156" fill="#FBFBFA"/>
+            <rect x="8" y="35" width="34" height="6" rx="2" fill="#E8E8E8"/>
+            <rect x="8" y="48" width="28" height="4" rx="1" fill="#E8E8E8"/>
+            <rect x="8" y="58" width="32" height="4" rx="1" fill="#E8E8E8"/>
+            <!-- Main content area -->
+            <rect x="50" y="24" width="270" height="156" fill="#FFFFFF"/>
+            <!-- Page title -->
+            <text x="70" y="50" font-size="14" fill="#37352F" font-weight="700" class="fade-in-text">Your 90-Day Roadmap</text>
+            <text x="70" y="65" font-size="8" fill="#9B9A97">[Student Name] &bull; Custom Plan</text>
+            <!-- Week blocks - animated timeline -->
+            <g class="roadmap-weeks">
+              <!-- Week 1-4 block -->
+              <g class="week-block slide-in" style="animation-delay: 0.2s">
+                <rect x="70" y="78" width="70" height="40" rx="4" fill="#E8F4F3" stroke="#4A8B87" stroke-width="1"/>
+                <text x="105" y="92" font-size="7" fill="#123F3A" text-anchor="middle" font-weight="600">Weeks 1-4</text>
+                <text x="105" y="104" font-size="5" fill="#6B6B6B" text-anchor="middle">Foundation</text>
+                <circle cx="78" y="112" r="3" fill="#4A8B87" class="pulse-dot"/>
+              </g>
+              <!-- Week 5-8 block -->
+              <g class="week-block slide-in" style="animation-delay: 0.5s">
+                <rect x="150" y="78" width="70" height="40" rx="4" fill="#FFF8E7" stroke="#D4AF37" stroke-width="1"/>
+                <text x="185" y="92" font-size="7" fill="#123F3A" text-anchor="middle" font-weight="600">Weeks 5-8</text>
+                <text x="185" y="104" font-size="5" fill="#6B6B6B" text-anchor="middle">Growth</text>
+                <circle cx="158" cy="112" r="3" fill="#D4AF37" class="pulse-dot" style="animation-delay: 0.3s"/>
+              </g>
+              <!-- Week 9-12 block -->
+              <g class="week-block slide-in" style="animation-delay: 0.8s">
+                <rect x="230" y="78" width="70" height="40" rx="4" fill="#FFEAE5" stroke="#E07A5F" stroke-width="1"/>
+                <text x="265" y="92" font-size="7" fill="#123F3A" text-anchor="middle" font-weight="600">Weeks 9-12</text>
+                <text x="265" y="104" font-size="5" fill="#6B6B6B" text-anchor="middle">Scale</text>
+                <circle cx="238" cy="112" r="3" fill="#E07A5F" class="pulse-dot" style="animation-delay: 0.6s"/>
+              </g>
+              <!-- Connecting arrows -->
+              <path d="M142 98 L148 98" stroke="#4A8B87" stroke-width="1.5" stroke-dasharray="2 1" class="draw-line"/>
+              <path d="M222 98 L228 98" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="2 1" class="draw-line" style="animation-delay: 0.3s"/>
+            </g>
+            <!-- Tasks preview -->
+            <g class="tasks-preview fade-in-text" style="animation-delay: 1s">
+              <rect x="70" y="130" width="8" height="8" rx="2" fill="#4A8B87"/>
+              <text x="82" y="137" font-size="6" fill="#37352F">Audit existing listings</text>
+              <rect x="70" y="142" width="8" height="8" rx="2" fill="#FFFFFF" stroke="#D4AF37" stroke-width="1"/>
+              <text x="82" y="149" font-size="6" fill="#37352F">Optimize top 5 products</text>
+              <rect x="70" y="154" width="8" height="8" rx="2" fill="#FFFFFF" stroke="#E8E8E8" stroke-width="1"/>
+              <text x="82" y="161" font-size="6" fill="#9B9A97">Launch new collection...</text>
+            </g>
+            <!-- Personalization badge -->
+            <g class="float-anim" style="animation-delay: 1.2s">
+              <rect x="235" y="135" width="70" height="24" rx="4" fill="#123F3A"/>
+              <text x="270" y="150" font-size="6" fill="white" text-anchor="middle" font-weight="600">Made for YOU</text>
+            </g>
+          </svg>
+        </div>
       </div>
       <div class="card-content">
         <span class="card-label">PILLAR 1 &mdash; Your 90-Day Blueprint</span>
@@ -962,7 +1104,7 @@ html, body { width: 100%; overflow-x: hidden; }
       <div class="card-content">
         <span class="card-label">PILLAR 2 &mdash; Implementation + Support</span>
         <h4 class="card-title">12 Weekly Implementation + Shop Review Calls</h4>
-        <p class="card-subtitle">Your weekly reset so you don&rsquo;t drift for 6 days and &ldquo;start over Monday.&rdquo;</p>
+        <p class="card-subtitle">Every week you can get live 1-1 support from Bailey and get told exactly what to fix / update in your shop.</p>
         <ul class="card-list">
           <li>60&ndash;75 minutes, every week for 12 weeks</li>
           <li>Weeks 1&ndash;4: heavy audits + feedback</li>
@@ -1047,7 +1189,7 @@ html, body { width: 100%; overflow-x: hidden; }
       <div class="card-content">
         <span class="card-label">PILLAR 3 &mdash; Lifetime Access</span>
         <h4 class="card-title">Lifetime Program Access (current + future)</h4>
-        <p class="card-subtitle">You keep the training forever. You&rsquo;re not &ldquo;renting information.&rdquo;</p>
+        <p class="card-subtitle">The sprint + weekly calls are 90 days. The library + community are lifetime.</p>
         <div class="lifetime-callout">No subscription. No expiration. You keep everything Bailey adds later.</div>
         <ul class="card-list">
           <li>All current courses included</li>
@@ -1074,37 +1216,6 @@ html, body { width: 100%; overflow-x: hidden; }
       </div>
     </article>
 
-    <article class="offer-card reveal">
-      <div class="card-visual card-media">
-        <div class="graphic-container">
-          <svg viewBox="0 0 160 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g transform="translate(10, 30)"><rect width="36" height="36" rx="8" fill="#D4AF37" class="float-anim"/><text x="18" y="24" font-size="16" text-anchor="middle">🧠</text></g>
-            <text x="28" y="80" font-size="6" fill="#6B6B6B" text-anchor="middle">Your</text>
-            <text x="28" y="88" font-size="6" fill="#6B6B6B" text-anchor="middle">Expertise</text>
-            <path d="M52 48 L68 48" stroke="#D4AF37" stroke-width="2" stroke-dasharray="4 2"/><polygon points="68,45 75,48 68,51" fill="#D4AF37"/>
-            <g transform="translate(80, 30)"><rect width="36" height="36" rx="8" fill="#4A8B87" class="float-anim" style="animation-delay:0.4s"/><text x="18" y="24" font-size="16" text-anchor="middle">📣</text></g>
-            <text x="98" y="80" font-size="6" fill="#6B6B6B" text-anchor="middle">Teach</text>
-            <text x="98" y="88" font-size="6" fill="#6B6B6B" text-anchor="middle">Fluence</text>
-            <path d="M122 48 L138 48" stroke="#4A8B87" stroke-width="2" stroke-dasharray="4 2"/><polygon points="138,45 145,48 138,51" fill="#4A8B87"/>
-            <g transform="translate(150, 30)"><rect width="36" height="36" rx="8" fill="#E07A5F" class="float-anim" style="animation-delay:0.8s"/><text x="18" y="24" font-size="16" text-anchor="middle">📦</text></g>
-            <text x="168" y="80" font-size="6" fill="#6B6B6B" text-anchor="middle">Your</text>
-            <text x="168" y="88" font-size="6" fill="#6B6B6B" text-anchor="middle">Course</text>
-            <rect x="45" y="100" width="90" height="18" rx="9" fill="#123F3A"/>
-            <text x="90" y="112" font-size="7" fill="white" text-anchor="middle" font-weight="700">→ Passive Income</text>
-          </svg>
-        </div>
-      </div>
-      <div class="card-content">
-        <span class="card-label">PILLAR 3 &mdash; Lifetime Access</span>
-        <h4 class="card-title">TeachFluence (included, optional)</h4>
-        <p class="card-subtitle">Only if you ever want personal brand later.</p>
-        <ul class="card-list">
-          <li>TeachFluence included, optional</li>
-          <li>Use it whenever you want a personal brand later</li>
-          <li>Ready the moment you decide to launch</li>
-        </ul>
-      </div>
-    </article>
   </div>
 </div>
 <!-- CALLOUT -->
@@ -1120,8 +1231,9 @@ html, body { width: 100%; overflow-x: hidden; }
     <h3 class="bonus-headline">Plus these extras when you join</h3>
   </header>
   
-  <div class="bonus-items">
-    <article class="bonus-card">
+  <div class="bonus-items bonus-grid-4">
+    <!-- Bonus 1: PSD Mockups -->
+    <article class="bonus-card offer-style">
       <div class="card-visual card-media">
         <div class="graphic-container">
           <svg viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1140,11 +1252,17 @@ html, body { width: 100%; overflow-x: hidden; }
       </div>
       <div class="card-content">
         <h4 class="card-title">Trending PSD Mockups That Convert</h4>
+        <p class="card-section-label">What it solves:</p>
+        <p class="card-desc">Spending hours on mockups that don't convert or look outdated.</p>
+        <p class="card-section-label">What you get:</p>
         <p class="card-desc">Etsy-ready mockups with smart objects. Drop in your design and done.</p>
+        <p class="card-section-label">When you'll use it:</p>
+        <p class="card-desc">Every time you create a new listing or refresh an old one.</p>
       </div>
     </article>
-    
-    <article class="bonus-card">
+
+    <!-- Bonus 2: Email List Growth -->
+    <article class="bonus-card offer-style">
       <div class="card-visual card-media">
         <div class="graphic-container">
           <svg viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1165,7 +1283,80 @@ html, body { width: 100%; overflow-x: hidden; }
       </div>
       <div class="card-content">
         <h4 class="card-title">The Etsy Email List Growth System</h4>
+        <p class="card-section-label">What it solves:</p>
+        <p class="card-desc">Losing customers after one sale and starting from zero every month.</p>
+        <p class="card-section-label">What you get:</p>
         <p class="card-desc">Remarket to past customers. Templates included.</p>
+        <p class="card-section-label">When you'll use it:</p>
+        <p class="card-desc">After your first few sales to build repeat buyers on autopilot.</p>
+      </div>
+    </article>
+
+    <!-- Bonus 3: Etsy Edge 2026 Workshops -->
+    <article class="bonus-card offer-style">
+      <div class="card-visual card-media">
+        <div class="graphic-container">
+          <svg viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="15" width="120" height="70" rx="8" fill="#FDFBF7" stroke="#4A8B87" stroke-width="2"/>
+            <rect x="20" y="25" width="100" height="12" rx="3" fill="#E8F4F3"/>
+            <text x="70" y="34" font-size="8" fill="#123F3A" text-anchor="middle" font-weight="700">ETSY EDGE 2026</text>
+            <g class="float-anim">
+              <circle cx="35" cy="58" r="12" fill="#D4AF37"/>
+              <text x="35" y="62" font-size="10" text-anchor="middle">🔧</text>
+            </g>
+            <g class="float-anim" style="animation-delay:0.3s">
+              <circle cx="70" cy="58" r="12" fill="#4A8B87"/>
+              <text x="70" y="62" font-size="10" text-anchor="middle">🚀</text>
+            </g>
+            <g class="float-anim" style="animation-delay:0.6s">
+              <circle cx="105" cy="58" r="12" fill="#E07A5F"/>
+              <text x="105" y="62" font-size="10" text-anchor="middle">📊</text>
+            </g>
+            <text x="35" y="78" font-size="5" fill="#6B6B6B" text-anchor="middle">Fix</text>
+            <text x="70" y="78" font-size="5" fill="#6B6B6B" text-anchor="middle">Launch</text>
+            <text x="105" y="78" font-size="5" fill="#6B6B6B" text-anchor="middle">Plan</text>
+          </svg>
+        </div>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title">Etsy Edge 2026 Workshops</h4>
+        <p class="card-section-label">What it solves:</p>
+        <p class="card-desc">Feeling behind on Etsy changes and not knowing what to prioritize in 2026.</p>
+        <p class="card-section-label">What you get (3 workshops):</p>
+        <ul class="card-list">
+          <li>Fix dead listings in 60 seconds</li>
+          <li>Launch a new digital product no one is selling</li>
+          <li>Map your 2026 revenue plan</li>
+        </ul>
+        <p class="card-section-label">When you'll use it:</p>
+        <p class="card-desc">During Q1 2026 to hit the ground running.</p>
+      </div>
+    </article>
+
+    <!-- Bonus 4: Future Deep-Dive Workshops -->
+    <article class="bonus-card offer-style">
+      <div class="card-visual card-media">
+        <div class="graphic-container">
+          <svg viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="15" y="20" width="110" height="60" rx="8" fill="#FDFBF7" stroke="#E07A5F" stroke-width="2"/>
+            <g class="pulse-anim">
+              <circle cx="70" cy="45" r="18" fill="#E8F4F3"/>
+              <text x="70" y="50" font-size="16" text-anchor="middle">🎁</text>
+            </g>
+            <text x="70" y="72" font-size="7" fill="#123F3A" text-anchor="middle" font-weight="600">Lifetime Access</text>
+            <rect x="25" y="5" width="90" height="12" rx="6" fill="#123F3A" class="float-anim"/>
+            <text x="70" y="13" font-size="6" fill="white" text-anchor="middle" font-weight="600">2026 + Beyond</text>
+          </svg>
+        </div>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title">Future Deep-Dive Workshops</h4>
+        <p class="card-section-label">What it solves:</p>
+        <p class="card-desc">Missing out on new strategies as Etsy evolves.</p>
+        <p class="card-section-label">What you get:</p>
+        <p class="card-desc">2026 trainings included for lifetime as they drop throughout 2026!</p>
+        <p class="card-section-label">When you'll use it:</p>
+        <p class="card-desc">Whenever new workshops are released &mdash; you get them automatically.</p>
       </div>
     </article>
   </div>
