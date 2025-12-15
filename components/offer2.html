@@ -239,37 +239,59 @@ html, body { width: 100%; overflow-x: hidden; }
   align-items: stretch;
 }
 
-/* CARD - SQUARE */
+/* ═══════════════════════════════════════════════════════════════════════════
+   OFFER CARD - Premium consultancy-level presentation
+   ═══════════════════════════════════════════════════════════════════════════ */
 .offer-card {
   display: flex;
   flex-direction: column;
   background: var(--white);
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.04);
-  transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow:
+    0 4px 6px rgba(0,0,0,0.02),
+    0 12px 28px rgba(0,0,0,0.045),
+    0 0 0 1px rgba(0,0,0,0.03);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.3s ease,
+    box-shadow 0.4s ease;
   opacity: 0;
-  transform: translateY(16px);
-  border: 1px solid rgba(0,0,0,0.06);
+  transform: translateY(18px);
+  border: 1px solid rgba(0,0,0,0.05);
   position: relative;
   backdrop-filter: blur(2px);
   overflow-wrap: anywhere;
 }
 .offer-card.is-visible { opacity: 1; transform: translateY(0); }
-.offer-card:hover { transform: translateY(-4px); border-color: rgba(0,0,0,0.14); box-shadow: 0 16px 36px rgba(0,0,0,0.08); }
 
+/* Premium hover - consultancy-level card elevation */
+.offer-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,0,0,0.1);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.09),
+    0 8px 20px rgba(0,0,0,0.05),
+    0 0 0 1px rgba(0,0,0,0.03);
+}
+
+/* Top accent bar */
 .offer-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
+  z-index: 2;
 }
 
 .pillar-group[data-pillar="1"] .offer-card::before { background: linear-gradient(90deg, var(--teal-primary), var(--teal-light)); }
 .pillar-group[data-pillar="2"] .offer-card::before { background: linear-gradient(90deg, var(--coral-primary), var(--coral-light)); }
 .pillar-group[data-pillar="3"] .offer-card::before { background: linear-gradient(90deg, var(--gold-primary), var(--gold-light)); }
 
-/* CARD IMAGE - SQUARE */
+/* ═══════════════════════════════════════════════════════════════════════════
+   CARD VISUAL AREA - Subtle gradient background for depth
+   ═══════════════════════════════════════════════════════════════════════════ */
 .card-visual {
   position: relative;
 }
@@ -280,10 +302,36 @@ html, body { width: 100%; overflow-x: hidden; }
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 12px;
+  padding: 16px;
   overflow: hidden;
+  background: linear-gradient(
+    165deg,
+    rgba(248, 246, 243, 0.9) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(248, 246, 243, 0.6) 100%
+  );
+  position: relative;
 }
 
+/* Subtle inner glow at top */
+.card-media::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.6) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PREMIUM MEDIA STYLING - Images/video that float with depth
+   ═══════════════════════════════════════════════════════════════════════════ */
 .card-media img, .card-media video, .card-media iframe, .card-media svg {
   max-height: 100%;
   max-width: 100%;
@@ -291,17 +339,32 @@ html, body { width: 100%; overflow-x: hidden; }
   height: auto;
   object-fit: contain;
   display: block;
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.offer-card:hover .card-media img { transform: none; }
 
-/* CARD CONTENT */
+.card-media img {
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.08))
+          drop-shadow(0 2px 6px rgba(0,0,0,0.04));
+}
+
+.offer-card:hover .card-media img {
+  transform: translateY(-6px) scale(1.02);
+  filter: drop-shadow(0 16px 40px rgba(0,0,0,0.14))
+          drop-shadow(0 6px 12px rgba(0,0,0,0.08));
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CARD CONTENT - Asymmetric alignment guides the eye naturally
+   ═══════════════════════════════════════════════════════════════════════════ */
 .card-content {
-  padding: clamp(0.9rem, 1.5vw, 1.1rem);
+  padding: clamp(1.1rem, 2vw, 1.5rem);
+  padding-left: clamp(1.25rem, 2.2vw, 1.75rem);
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-  text-align: center;
+  gap: 0.45rem;
+  text-align: left;
 }
 
 .card-title {
@@ -311,16 +374,16 @@ html, body { width: 100%; overflow-x: hidden; }
   line-height: 1.25;
   color: var(--text-primary);
   letter-spacing: -0.01em;
-  text-align: center;
+  text-align: left;
 }
 
 .card-subtitle {
   font-family: 'Satoshi Variable';
-  font-weight: 600;
+  font-weight: 500;
   font-size: clamp(0.95rem, 1.8vw, 1.05rem);
   line-height: 1.55;
   color: var(--text-secondary);
-  text-align: center;
+  text-align: left;
 }
 
 .card-list {
@@ -350,47 +413,181 @@ html, body { width: 100%; overflow-x: hidden; }
   margin-top: 0.05rem;
 }
 
-/* Pillar card typography refinements */
+/* ═══════════════════════════════════════════════════════════════════════════
+   VISUAL HIERARCHY - Title commands, subtitle supports, list delivers
+   Creates the "read this first → then this → then this" flow
+   ═══════════════════════════════════════════════════════════════════════════ */
 .pillar-group .card-title {
   font-family: 'Ogg', serif;
   font-weight: 700;
   font-synthesis: weight;
-  font-size: clamp(26px, 2.3vw, 40px);
-  line-height: 1.15;
+  font-size: clamp(22px, 2.2vw, 32px);
+  line-height: 1.2;
   color: var(--teal-deep);
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.75rem;
+  text-align: left;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-left: 0;
+}
+
+/* Subtle left accent bar for asymmetry + eye guidance */
+.pillar-group .card-title::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 0.15em;
+  width: 3px;
+  height: 1.1em;
+  background: linear-gradient(180deg, var(--teal-primary), var(--teal-light));
+  border-radius: 2px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.3s ease;
+}
+
+.offer-card:hover .card-title::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* Pillar-specific title accents */
+.pillar-group[data-pillar="2"] .card-title { color: var(--coral-deep); }
+.pillar-group[data-pillar="2"] .card-title::before {
+  background: linear-gradient(180deg, var(--coral-primary), var(--coral-light));
+}
+
+.pillar-group[data-pillar="3"] .card-title { color: var(--gold-deep); }
+.pillar-group[data-pillar="3"] .card-title::before {
+  background: linear-gradient(180deg, var(--gold-primary), var(--gold-light));
 }
 
 .pillar-group .card-subtitle {
   font-family: 'Satoshi Variable', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-weight: 400;
-  font-size: clamp(16px, 1.6vw, 18px);
+  font-weight: 450;
+  font-size: clamp(14.5px, 1.5vw, 16.5px);
   line-height: 1.6;
-  color: rgba(0,0,0,0.72);
-  margin: 0 0 0.65rem;
+  color: rgba(0,0,0,0.68);
+  margin: 0 0 0.5rem;
+  text-align: left;
+  font-style: italic;
+  position: relative;
+  padding-left: 0;
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   PREMIUM STEP SYSTEM - Transform bullets into visual deliverables
+   Each item feels like a tangible outcome, not an afterthought
+   ═══════════════════════════════════════════════════════════════════════════ */
 .pillar-group .card-list {
-  list-style: disc;
-  margin: 18px auto 0;
-  padding-left: 1.1em;
-  max-width: 38ch;
-  display: block;
-  font-family: 'Satoshi Variable', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-weight: 400;
-  font-size: clamp(15px, 1.5vw, 17px);
-  line-height: 1.5;
-  color: rgba(0,0,0,0.72);
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  counter-reset: step-counter;
+  position: relative;
+}
+
+/* Vertical connecting thread - creates timeline feel */
+.pillar-group .card-list::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 30px;
+  bottom: 14px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--teal-light) 0%, rgba(74,139,135,0.15) 100%);
+  border-radius: 2px;
 }
 
 .pillar-group .card-list li {
-  display: list-item;
-  margin: 8px 0;
+  counter-increment: step-counter;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  position: relative;
+  margin: 0;
+  font-family: 'Satoshi Variable', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: clamp(14px, 1.45vw, 15.5px);
+  line-height: 1.5;
+  color: rgba(0,0,0,0.75);
+  text-align: left;
+  transition: all 0.25s ease;
 }
 
-.pillar-group .card-list li::before { content: none; }
+.pillar-group .card-list li:hover {
+  transform: translateX(6px);
+  color: rgba(0,0,0,0.9);
+}
 
-.pillar-group .card-list li::marker { color: var(--teal-deep); }
+/* Numbered step indicator - the "premium deliverable" feel */
+.pillar-group .card-list li::before {
+  content: counter(step-counter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  background: linear-gradient(145deg, var(--teal-primary), var(--teal-deep));
+  color: white;
+  font-family: 'Ogg', serif;
+  font-weight: 700;
+  font-size: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(74, 139, 135, 0.4),
+              0 1px 3px rgba(0,0,0,0.1),
+              inset 0 1px 0 rgba(255,255,255,0.15);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: all 0.25s ease;
+}
+
+.pillar-group .card-list li:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(74, 139, 135, 0.5),
+              0 2px 6px rgba(0,0,0,0.15),
+              inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+/* Pillar 2 - Coral accent */
+.pillar-group[data-pillar="2"] .card-list::before {
+  background: linear-gradient(180deg, var(--coral-light) 0%, rgba(224,122,95,0.15) 100%);
+}
+.pillar-group[data-pillar="2"] .card-list li::before {
+  background: linear-gradient(145deg, var(--coral-primary), var(--coral-deep));
+  box-shadow: 0 4px 14px rgba(224, 122, 95, 0.4),
+              0 1px 3px rgba(0,0,0,0.1),
+              inset 0 1px 0 rgba(255,255,255,0.15);
+}
+.pillar-group[data-pillar="2"] .card-list li:hover::before {
+  box-shadow: 0 6px 20px rgba(224, 122, 95, 0.5),
+              0 2px 6px rgba(0,0,0,0.15),
+              inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+/* Pillar 3 - Gold accent */
+.pillar-group[data-pillar="3"] .card-list::before {
+  background: linear-gradient(180deg, var(--gold-light) 0%, rgba(212,175,55,0.15) 100%);
+}
+.pillar-group[data-pillar="3"] .card-list li::before {
+  background: linear-gradient(145deg, var(--gold-primary), var(--gold-deep));
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4),
+              0 1px 3px rgba(0,0,0,0.1),
+              inset 0 1px 0 rgba(255,255,255,0.15);
+}
+.pillar-group[data-pillar="3"] .card-list li:hover::before {
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5),
+              0 2px 6px rgba(0,0,0,0.15),
+              inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.pillar-group .card-list li::marker { display: none; }
 
 .card-label {
   display: inline-flex;
@@ -494,16 +691,102 @@ html, body { width: 100%; overflow-x: hidden; }
 .pillar-group[data-pillar="2"] .emphasis { background: linear-gradient(180deg, transparent 60%, var(--coral-light) 60%); }
 .pillar-group[data-pillar="3"] .emphasis { background: linear-gradient(180deg, transparent 60%, var(--gold-light) 60%); }
 
-/* GRAPHIC CONTAINER */
+/* ═══════════════════════════════════════════════════════════════════════════
+   PREMIUM GRAPHIC CONTAINER - Makes mockups "pop" with depth
+   ═══════════════════════════════════════════════════════════════════════════ */
 .graphic-container {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem;
+  padding: 1rem;
+  position: relative;
 }
-.graphic-container svg { width: 100%; height: 100%; max-width: 200px; }
+
+/* Subtle ambient glow behind graphics */
+.graphic-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 75%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(74, 139, 135, 0.12) 0%,
+    rgba(74, 139, 135, 0.05) 40%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.offer-card:hover .graphic-container::before {
+  width: 85%;
+  height: 85%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(74, 139, 135, 0.18) 0%,
+    rgba(74, 139, 135, 0.08) 40%,
+    transparent 70%
+  );
+}
+
+/* Pillar-specific glow colors */
+.pillar-group[data-pillar="2"] .graphic-container::before {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(224, 122, 95, 0.12) 0%,
+    rgba(224, 122, 95, 0.05) 40%,
+    transparent 70%
+  );
+}
+.pillar-group[data-pillar="2"] .offer-card:hover .graphic-container::before {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(224, 122, 95, 0.18) 0%,
+    rgba(224, 122, 95, 0.08) 40%,
+    transparent 70%
+  );
+}
+
+.pillar-group[data-pillar="3"] .graphic-container::before {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(212, 175, 55, 0.12) 0%,
+    rgba(212, 175, 55, 0.05) 40%,
+    transparent 70%
+  );
+}
+.pillar-group[data-pillar="3"] .offer-card:hover .graphic-container::before {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(212, 175, 55, 0.18) 0%,
+    rgba(212, 175, 55, 0.08) 40%,
+    transparent 70%
+  );
+}
+
+.graphic-container svg {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.08))
+          drop-shadow(0 2px 6px rgba(0,0,0,0.04));
+  transition: all 0.35s ease;
+}
+
+.offer-card:hover .graphic-container svg {
+  transform: translateY(-4px) scale(1.02);
+  filter: drop-shadow(0 14px 32px rgba(0,0,0,0.12))
+          drop-shadow(0 4px 10px rgba(0,0,0,0.06));
+}
 
 .featured-card {
   grid-column: auto;
