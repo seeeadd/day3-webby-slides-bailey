@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -50,14 +49,18 @@
     html {
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
+      overflow: hidden;
     }
-    
+
     body {
       font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 16px;
       line-height: 1.6;
       color: var(--text-body);
       background: var(--bg-cream);
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
     }
 
     .nowrap { white-space: nowrap; }
@@ -132,70 +135,57 @@
       transform: translateX(-50%);
       display: flex;
       align-items: center;
-      gap: 20px;
-      font-weight: 450;
-      font-size: 13px;
-      color: var(--text-secondary);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .top-bar__center::before,
-    .top-bar__center::after {
-      content: '';
-      width: 40px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(45, 42, 38, 0.15), transparent);
-    }
-
-    /* Premium understated CTA - dark with coral hover */
-    .top-bar__cta {
-      height: 48px;
-      padding: 0 36px;
-      background: var(--text-primary);
-      color: var(--bg-cream);
+      gap: 12px;
       font-weight: 600;
+      font-size: 14px;
+      color: var(--text-primary);
+      letter-spacing: 0.04em;
+    }
+
+    .top-bar__sparkle {
+      color: var(--accent-coral);
+      font-size: 10px;
+      opacity: 0.8;
+      animation: sparkle-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes sparkle-pulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    /* Premium CTA - Coral with glow */
+    .top-bar__cta {
+      height: 46px;
+      padding: 0 28px;
+      background: linear-gradient(135deg, #E07A5F 0%, #D56B4F 100%);
+      color: white;
+      font-weight: 700;
       font-size: 12px;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       text-decoration: none;
       border: none;
-      border-radius: 6px;
+      border-radius: 10px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       position: relative;
       overflow: hidden;
+      box-shadow:
+        0 4px 16px rgba(224, 122, 95, 0.35),
+        0 2px 8px rgba(224, 122, 95, 0.2);
       transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    /* Shimmer effect */
-    .top-bar__cta::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg,
-        transparent,
-        rgba(255,255,255,0.15),
-        transparent);
-      transition: left 0.6s ease;
-    }
-
     .top-bar__cta:hover {
-      background: var(--accent-coral);
-      transform: translateY(-2px);
+      transform: translateY(-2px) scale(1.02);
       box-shadow:
-        0 8px 24px rgba(224, 122, 95, 0.35),
-        0 4px 12px rgba(224, 122, 95, 0.2);
-    }
-
-    .top-bar__cta:hover::before {
-      left: 100%;
+        0 8px 24px rgba(224, 122, 95, 0.45),
+        0 4px 12px rgba(224, 122, 95, 0.3);
+      background: linear-gradient(135deg, #E88A70 0%, #E07A5F 100%);
     }
 
     /* Arrow icon */
@@ -254,16 +244,15 @@
       z-index: 0;
     }
 
-    /* DRAMATIC WATERCOLOR BACKGROUND - BLURRED + LOWER OPACITY */
+    /* WATERCOLOR BACKGROUND - SUBTLE */
     .hero-bg-watercolor {
       position: absolute;
       inset: 0;
       background-image: url('https://i.imgur.com/FlNBaqq.png');
       background-size: cover;
       background-position: center top;
-      opacity: 0.25;
+      opacity: 0.15;
       mix-blend-mode: multiply;
-      filter: blur(2px);
       pointer-events: none;
       z-index: 1;
     }
@@ -335,14 +324,10 @@
 
     .trust-badge__stars {
       display: flex;
-      gap: 3px;
-    }
-
-    .trust-badge__stars svg {
-      width: 18px;
-      height: 18px;
-      fill: #F5A623;
-      filter: drop-shadow(0 1px 2px rgba(245, 166, 35, 0.3));
+      gap: 2px;
+      font-size: 16px;
+      color: #F5A623;
+      text-shadow: 0 1px 2px rgba(245, 166, 35, 0.3);
     }
 
     .trust-badge__text {
@@ -419,23 +404,41 @@
       font-family: 'OGG', Georgia, serif;
       font-weight: 630;
       font-size: clamp(40px, 5.8vw, 68px);
-      line-height: 1.04;
+      line-height: 1.08;
       color: var(--text-primary);
       letter-spacing: -0.03em;
       max-width: 960px;
       margin: 0 auto;
-      /* Editorial text treatment */
       text-wrap: balance;
     }
 
-    /* First line emphasis - make it feel like magazine typography */
-    .headline__text .headline-accent {
-      display: block;
-      font-size: 0.95em;
-      background: linear-gradient(180deg, var(--text-primary) 0%, #4A453E 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    /* Coral emphasis text */
+    .headline__text .headline-coral {
+      color: var(--accent-coral);
+      position: relative;
+    }
+
+    /* Italic emphasis */
+    .headline__text .headline-italic {
+      font-style: italic;
+      color: var(--text-primary);
+    }
+
+    /* Underline emphasis */
+    .headline__text .headline-underline {
+      position: relative;
+      display: inline-block;
+    }
+
+    .headline__text .headline-underline::after {
+      content: '';
+      position: absolute;
+      bottom: 0.05em;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-coral), rgba(224, 122, 95, 0.3));
+      border-radius: 2px;
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
@@ -702,38 +705,53 @@
       border: 1px solid rgba(232, 226, 217, 0.3);
     }
 
-    /* CTA Button - PREMIUM CREATIVE DESIGN */
+    /* CTA Button - ENGAGING CORAL WITH GLOW */
     .cta-button {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
       width: 100%;
-      height: 58px;
+      height: 60px;
       background: linear-gradient(135deg,
-        var(--text-primary) 0%,
-        #3D3935 50%,
-        var(--text-primary) 100%);
-      background-size: 200% 200%;
-      color: var(--bg-cream);
+        #E07A5F 0%,
+        #D56B4F 50%,
+        #C85A40 100%);
+      color: white;
       font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 0.12em;
+      font-size: 15px;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       text-decoration: none;
       border: none;
-      border-radius: 8px;
+      border-radius: 14px;
       cursor: pointer;
       position: relative;
       overflow: hidden;
       box-shadow:
-        0 4px 16px rgba(45, 42, 38, 0.2),
-        0 8px 32px rgba(45, 42, 38, 0.1),
-        0 1px 0 rgba(255,255,255,0.05) inset;
-      transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        0 4px 20px rgba(224, 122, 95, 0.4),
+        0 8px 40px rgba(224, 122, 95, 0.25),
+        0 1px 0 rgba(255,255,255,0.2) inset;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      animation: button-glow 3s ease-in-out infinite;
     }
 
-    /* Animated gradient shimmer */
+    @keyframes button-glow {
+      0%, 100% {
+        box-shadow:
+          0 4px 20px rgba(224, 122, 95, 0.4),
+          0 8px 40px rgba(224, 122, 95, 0.25),
+          0 1px 0 rgba(255,255,255,0.2) inset;
+      }
+      50% {
+        box-shadow:
+          0 6px 28px rgba(224, 122, 95, 0.55),
+          0 12px 48px rgba(224, 122, 95, 0.35),
+          0 1px 0 rgba(255,255,255,0.25) inset;
+      }
+    }
+
+    /* Shimmer sweep */
     .cta-button::before {
       content: '';
       position: absolute;
@@ -743,61 +761,47 @@
       height: 100%;
       background: linear-gradient(90deg,
         transparent,
-        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.25),
         transparent);
-      transition: left 0.7s ease;
+      animation: shimmer-sweep 3s ease-in-out infinite;
     }
 
-    /* Coral accent border on hover */
-    .cta-button::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 8px;
-      border: 2px solid var(--accent-coral);
-      opacity: 0;
-      transition: opacity 0.3s ease;
+    @keyframes shimmer-sweep {
+      0% { left: -100%; }
+      50%, 100% { left: 100%; }
     }
 
     .cta-button:hover {
-      transform: translateY(-3px);
-      background-position: 100% 100%;
+      transform: translateY(-4px) scale(1.02);
       box-shadow:
-        0 8px 24px rgba(224, 122, 95, 0.3),
-        0 16px 48px rgba(45, 42, 38, 0.15),
-        0 1px 0 rgba(255,255,255,0.1) inset;
+        0 8px 32px rgba(224, 122, 95, 0.5),
+        0 16px 56px rgba(224, 122, 95, 0.3),
+        0 1px 0 rgba(255,255,255,0.3) inset;
       background: linear-gradient(135deg,
-        var(--accent-coral) 0%,
+        #E88A70 0%,
+        #E07A5F 50%,
         #D56B4F 100%);
     }
 
-    .cta-button:hover::before {
-      left: 100%;
-    }
-
-    .cta-button:hover::after {
-      opacity: 0.5;
-    }
-
     .cta-button:active {
-      transform: translateY(-1px);
+      transform: translateY(-2px) scale(1.01);
     }
 
     .cta-button:focus {
-      outline: 2px solid rgba(224, 122, 95, 0.5);
+      outline: 3px solid rgba(224, 122, 95, 0.5);
       outline-offset: 4px;
     }
 
     /* Arrow icon in CTA */
     .cta-button svg {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       stroke-width: 2.5;
       transition: transform 0.3s ease;
     }
 
     .cta-button:hover svg {
-      transform: translateX(4px);
+      transform: translateX(5px);
     }
 
     /* Microcopy - Bigger for readability */
@@ -892,9 +896,13 @@
   <!-- TOP BAR - PREMIUM HEADER WITH LOGO -->
   <header class="top-bar" id="topBar">
     <div class="top-bar__logo">
-      <img src="https://i.imgur.com/MajDYwT.png" alt="AI Design & Grow Experience" />
+      <img src="https://i.imgur.com/IpRdQqw.png" alt="AI Design & Grow Experience" />
     </div>
-    <span class="top-bar__center"><span class="nowrap">$67/month</span> · Cancel anytime</span>
+    <span class="top-bar__center">
+      <span class="top-bar__sparkle">✦</span>
+      <span class="nowrap">$67/month</span>
+      <span class="top-bar__sparkle">✦</span>
+    </span>
     <a href="#" class="top-bar__cta">
       Start Now
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -916,13 +924,7 @@
         <!-- Trust Badge - 5 Stars + Trusted By -->
         <div class="trust-strip animate-fade-up delay-1">
           <div class="trust-badge">
-            <div class="trust-badge__stars">
-              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            </div>
+            <div class="trust-badge__stars">★★★★★</div>
             <span class="trust-badge__text">Trusted by <span class="trust-badge__count">5,000+</span> Etsy sellers</span>
           </div>
         </div>
@@ -930,8 +932,8 @@
         <!-- Headline -->
         <div class="headline animate-fade-up delay-2">
           <h1 class="headline__text">
-            I'll show you what I actually sell<br>
-            on Etsy and how I'd do it again today.
+            I'll show you <span class="headline-coral">what I actually sell</span><br>
+            on Etsy and how I'd do it <span class="headline-underline">again today</span>.
           </h1>
         </div>
 
