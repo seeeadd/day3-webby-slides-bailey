@@ -25,7 +25,7 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       CSS - COMPACT ABOVE-THE-FOLD LAYOUT
+       CSS - COMPACT BUT COMPLETE
        ═══════════════════════════════════════════════════════════════════════════ */
     :root {
       --bg-cream: #FAF8F5;
@@ -33,8 +33,10 @@
       --text-body: #2D2A26;
       --text-secondary: #3D3935;
       --text-muted: #6B635A;
+      --text-faint: #8A847B;
       --accent-coral: #E07A5F;
       --accent-coral-hover: #D46A4E;
+      --accent-teal: #1D6B6B;
       --border-light: #E8E2D9;
       --border-medium: #D4CEC4;
     }
@@ -53,7 +55,7 @@
     body {
       font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 16px;
-      line-height: 1.5;
+      line-height: 1.6;
       color: var(--text-body);
       background: var(--bg-cream);
     }
@@ -61,21 +63,21 @@
     .nowrap { white-space: nowrap; }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       TOP BAR - SLIM 48px
+       TOP BAR - 56px STICKY
        ═══════════════════════════════════════════════════════════════════════════ */
     .top-bar {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      height: 48px;
+      height: 56px;
       background: rgba(250, 248, 245, 0.95);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(232, 226, 217, 0.8);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 24px;
+      padding: 0 32px;
       z-index: 1000;
       transform: translateY(-100%);
       opacity: 0;
@@ -89,40 +91,58 @@
     
     .top-bar__logo {
       font-weight: 500;
-      font-size: 13px;
+      font-size: 14px;
       color: var(--text-primary);
     }
     
     .top-bar__center {
       font-weight: 500;
-      font-size: 13px;
+      font-size: 14px;
       color: var(--text-secondary);
     }
     
     .top-bar__cta {
-      height: 36px;
-      padding: 0 20px;
+      height: 40px;
+      padding: 0 24px;
       background: var(--accent-coral);
       color: white;
       font-weight: 700;
-      font-size: 12px;
+      font-size: 13px;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       text-decoration: none;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
+      box-shadow: 0 4px 12px rgba(224, 122, 95, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        top: auto;
+        bottom: 0;
+        height: auto;
+        padding: 12px 20px;
+        transform: translateY(100%);
+        flex-direction: column;
+        gap: 8px;
+        border-top: 1px solid var(--border-light);
+        border-bottom: none;
+      }
+      .top-bar.visible { transform: translateY(0); }
+      .top-bar__logo, .top-bar__center { display: none; }
+      .top-bar__cta { width: 100%; height: 52px; font-size: 15px; }
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       HERO SECTION - COMPACT, NO SCROLL
+       HERO SECTION - COMPACT, ABOVE FOLD
        ═══════════════════════════════════════════════════════════════════════════ */
     .hero-section {
       position: relative;
       width: 100vw;
-      height: 100vh;
+      min-height: 100vh;
       margin-left: calc(50% - 50vw);
-      overflow: hidden;
+      overflow: visible;
     }
 
     .hero-bg-base {
@@ -132,13 +152,14 @@
       z-index: 0;
     }
 
+    /* NEW WATERCOLOR BACKGROUND */
     .hero-bg-watercolor {
       position: absolute;
       inset: 0;
-      background-image: url('https://i.imgur.com/NHj3YId.png');
+      background-image: url('https://i.imgur.com/t2VQzmG.png');
       background-size: cover;
       background-position: center top;
-      opacity: 0.18;
+      opacity: 0.22;
       mix-blend-mode: multiply;
       pointer-events: none;
       z-index: 1;
@@ -149,29 +170,37 @@
       inset: 0;
       background: linear-gradient(180deg, 
         transparent 0%, 
-        transparent 60%,
-        rgba(255,255,255,0.8) 90%,
+        transparent 50%,
+        rgba(255,255,255,0.7) 80%,
         #FFFFFF 100%
       );
       pointer-events: none;
       z-index: 2;
     }
 
+    .hero-bg-grain {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 3;
+    }
+
     .hero-content {
       position: relative;
       z-index: 10;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
+      padding: 20px 0 40px;
     }
 
     .hero-container {
-      max-width: 1400px;
+      max-width: 1320px;
       margin: 0 auto;
       padding: 0 32px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+      .hero-container { padding: 0 20px; }
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
@@ -179,63 +208,73 @@
        ═══════════════════════════════════════════════════════════════════════════ */
     .trust-strip {
       text-align: center;
-      padding: 16px 0 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      padding: 16px 0 20px;
     }
 
     .trust-strip__stars {
       display: flex;
-      gap: 3px;
+      justify-content: center;
+      gap: 4px;
+      margin-bottom: 8px;
     }
 
     .trust-strip__stars svg {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       fill: var(--accent-coral);
     }
 
-    .trust-strip__text {
-      font-weight: 600;
+    .trust-strip__tagline {
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    .trust-strip__stats {
+      font-weight: 500;
       font-size: 12px;
       color: var(--text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.04em;
+    }
+
+    .trust-strip__dot {
+      margin: 0 10px;
+      opacity: 0.4;
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       HEADLINE - THICK TEXT
+       HEADLINE - FONT-WEIGHT 580
        ═══════════════════════════════════════════════════════════════════════════ */
     .headline {
       text-align: center;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .headline__text {
       font-family: 'OGG', Georgia, serif;
-      font-weight: 700;
-      font-size: clamp(32px, 5vw, 56px);
-      line-height: 1.1;
+      font-weight: 580;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.08;
       color: var(--text-primary);
       letter-spacing: -0.02em;
-      -webkit-text-stroke: 1px currentColor;
-      text-stroke: 1px currentColor;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       SUBHEAD - COMPACT
+       SUBHEAD - WITH EMPHASIS
        ═══════════════════════════════════════════════════════════════════════════ */
     .subhead {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
     }
 
     .subhead__text {
-      font-size: 15px;
-      line-height: 1.5;
+      font-size: 16px;
+      line-height: 1.6;
       color: var(--text-secondary);
       max-width: 640px;
       margin: 0 auto;
@@ -247,82 +286,52 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       TWO-COLUMN - FILLS REMAINING SPACE
+       TWO-COLUMN LAYOUT - 55%/45%
        ═══════════════════════════════════════════════════════════════════════════ */
     .two-column {
-      flex: 1;
       display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 32px;
-      min-height: 0;
-      padding-bottom: 24px;
+      grid-template-columns: 55% 45%;
+      gap: 36px;
+      align-items: start;
     }
 
     @media (max-width: 1024px) {
       .two-column {
-        grid-template-columns: 1fr 340px;
-        gap: 24px;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
       }
     }
 
     @media (max-width: 900px) {
       .two-column {
         grid-template-columns: 1fr;
+        gap: 24px;
       }
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       VIDEO - FILLS AVAILABLE HEIGHT
+       VIDEO CONTAINER - LANDSCAPE 16:9 WITH VIMEO EMBED
        ═══════════════════════════════════════════════════════════════════════════ */
-    .video-container {
+    .video-wrapper {
       position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
       background: linear-gradient(135deg, #F5F0EA 0%, #EBE5DD 100%);
       border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 20px rgba(45, 42, 38, 0.1);
-      min-height: 280px;
+      overflow: hidden;
+      box-shadow: 
+        0 4px 12px rgba(45, 42, 38, 0.06),
+        0 12px 28px rgba(45, 42, 38, 0.1);
     }
 
-    .play-button {
-      position: relative;
-      width: 64px;
-      height: 64px;
-      background: var(--accent-coral);
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 20px rgba(224, 122, 95, 0.4);
-      transition: transform 0.2s ease;
-    }
-
-    .play-button::before {
-      content: '';
+    .video-wrapper iframe {
       position: absolute;
-      inset: -8px;
-      border: 2px solid rgba(224, 122, 95, 0.3);
-      border-radius: 50%;
-      animation: pulse-ring 2s ease-out infinite;
-    }
-
-    @keyframes pulse-ring {
-      0% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(1.3); opacity: 0; }
-    }
-
-    .play-button:hover { transform: scale(1.05); }
-
-    .play-icon {
-      width: 0;
-      height: 0;
-      border-left: 16px solid white;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      margin-left: 3px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 16px;
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
@@ -330,39 +339,49 @@
        ═══════════════════════════════════════════════════════════════════════════ */
     .offer-card {
       background: white;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 4px 24px rgba(45, 42, 38, 0.1);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 
+        0 4px 12px rgba(45, 42, 38, 0.04),
+        0 12px 32px rgba(45, 42, 38, 0.08);
       border: 1px solid rgba(232, 226, 217, 0.6);
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 
+        0 8px 20px rgba(45, 42, 38, 0.06),
+        0 20px 48px rgba(45, 42, 38, 0.12);
     }
 
     /* Mockup */
+    .offer-card__mockup {
+      margin-bottom: 20px;
+    }
+
     .mockup-placeholder {
-      height: 100px;
+      height: 120px;
       background: linear-gradient(145deg, #F5F1EB 0%, #EBE6E0 100%);
-      border-radius: 12px;
+      border-radius: 14px;
       border: 1px dashed var(--border-medium);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 16px;
     }
 
     .mockup-placeholder span {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 500;
-      color: var(--text-muted);
+      color: var(--text-faint);
     }
 
     /* Price Block */
     .price-block {
       text-align: center;
-      padding: 12px 0;
+      padding: 16px 0;
       border-bottom: 1px solid var(--border-light);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .price-label {
@@ -372,7 +391,7 @@
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .price-amount {
@@ -384,40 +403,39 @@
 
     .price-value {
       font-family: 'OGG', Georgia, serif;
-      font-size: 42px;
-      font-weight: 700;
+      font-weight: 580;
+      font-size: 48px;
       color: var(--text-primary);
       line-height: 1;
-      -webkit-text-stroke: 0.5px currentColor;
     }
 
     .price-period {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
       color: var(--text-secondary);
     }
 
     .price-reframe {
       display: block;
-      font-size: 12px;
+      font-size: 13px;
       color: var(--text-muted);
-      margin-top: 2px;
+      margin-top: 4px;
     }
 
-    /* Bullets - TIGHT */
+    /* Bullets */
     .offer-bullets {
       list-style: none;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .offer-bullets li {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      padding: 8px 0;
+      gap: 12px;
+      padding: 10px 0;
       border-bottom: 1px solid var(--border-light);
-      font-size: 13px;
-      line-height: 1.4;
+      font-size: 14px;
+      line-height: 1.45;
       color: var(--text-body);
     }
 
@@ -431,63 +449,77 @@
     }
 
     .bullet-marker {
-      width: 6px;
-      height: 6px;
-      min-width: 6px;
+      width: 7px;
+      height: 7px;
+      min-width: 7px;
       background: var(--accent-coral);
       border-radius: 2px;
-      margin-top: 5px;
+      margin-top: 6px;
+      box-shadow: 0 0 6px rgba(224, 122, 95, 0.4);
     }
 
     /* Plus Line */
     .offer-card__plus {
-      font-size: 12px;
+      font-size: 13px;
       font-style: italic;
       color: var(--text-secondary);
       text-align: center;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
-    /* CTA - 56px */
+    /* CTA Button */
     .cta-button {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 52px;
+      height: 56px;
       background: linear-gradient(180deg, #E07A5F 0%, #D46A4E 100%);
       color: white;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 15px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       text-decoration: none;
       border: none;
-      border-radius: 12px;
+      border-radius: 14px;
       cursor: pointer;
-      box-shadow: 0 4px 16px rgba(224, 122, 95, 0.35);
-      transition: all 0.2s ease;
+      box-shadow: 
+        0 4px 12px rgba(224, 122, 95, 0.3),
+        0 8px 24px rgba(224, 122, 95, 0.2);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(224, 122, 95, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 
+        0 8px 20px rgba(224, 122, 95, 0.4),
+        0 16px 40px rgba(224, 122, 95, 0.25);
+    }
+
+    .cta-button:active {
+      transform: translateY(-1px);
+    }
+
+    .cta-button:focus {
+      outline: 3px solid rgba(224, 122, 95, 0.5);
+      outline-offset: 3px;
     }
 
     /* Microcopy */
     .offer-card__microcopy {
       text-align: center;
-      margin-top: 12px;
+      margin-top: 16px;
     }
 
     .microcopy-line {
-      font-size: 11px;
+      font-size: 12px;
       color: var(--text-secondary);
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .microcopy-urgency {
-      font-size: 11px;
+      font-size: 12px;
       color: var(--accent-coral);
       font-style: italic;
     }
@@ -495,56 +527,76 @@
     /* Link */
     .offer-card__link {
       text-align: center;
-      margin-top: 12px;
+      margin-top: 16px;
     }
 
     .offer-card__link a {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
-      color: #1D6B6B;
+      color: var(--accent-teal);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
+      transition: color 0.2s ease;
+    }
+
+    .offer-card__link a:hover {
+      color: var(--accent-coral);
     }
 
     .offer-card__link svg {
-      width: 14px;
-      height: 14px;
+      width: 15px;
+      height: 15px;
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       MOBILE RESPONSIVE
+       ANIMATIONS
        ═══════════════════════════════════════════════════════════════════════════ */
-    @media (max-width: 768px) {
-      .hero-section { height: auto; min-height: 100vh; }
-      .hero-container { padding: 0 16px; }
-      .headline__text { font-size: 32px; }
-      .subhead__text { font-size: 14px; }
-      .two-column { padding-bottom: 16px; }
-      .offer-card { padding: 20px; }
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-up {
+      opacity: 0;
+      animation: fade-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.15s; }
+    .delay-3 { animation-delay: 0.2s; }
+    .delay-4 { animation-delay: 0.25s; }
+    .delay-5 { animation-delay: 0.3s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
 <body>
   <!-- TOP BAR -->
   <header class="top-bar" id="topBar">
-    <span class="top-bar__logo">AI Design & Grow</span>
-    <span class="top-bar__center">$67/month - Cancel anytime</span>
-    <a href="#" class="top-bar__cta">Start Now</a>
+    <span class="top-bar__logo">AI Design & Grow Experience</span>
+    <span class="top-bar__center"><span class="nowrap">$67/month</span> - Cancel anytime</span>
+    <a href="#" class="top-bar__cta">Start Selling Now</a>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="hero-bg-base"></div>
     <div class="hero-bg-watercolor"></div>
     <div class="hero-bg-fade"></div>
+    <div class="hero-bg-grain"></div>
     
     <div class="hero-content">
       <div class="hero-container">
         
         <!-- Trust Strip -->
-        <div class="trust-strip">
+        <div class="trust-strip animate-fade-up delay-1">
           <div class="trust-strip__stars">
             <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -552,39 +604,51 @@
             <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
             <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           </div>
-          <span class="trust-strip__text">Trusted by 387K+ Etsy sellers - $1M+ in digital products</span>
+          <p class="trust-strip__tagline">Trusted by thousands of Etsy sellers</p>
+          <p class="trust-strip__stats">
+            <span class="nowrap">387K+ Sales</span><span class="trust-strip__dot">-</span><span class="nowrap">$1M+ from digital products</span><span class="trust-strip__dot">-</span>Yes, I still run my shop
+          </p>
         </div>
 
-        <!-- Headline - THICK -->
-        <div class="headline">
+        <!-- Headline -->
+        <div class="headline animate-fade-up delay-2">
           <h1 class="headline__text">
-            I'll show you what I actually sell on Etsy<br>and how I'd do it again today.
+            I'll show you what I actually sell<br>
+            on Etsy and how I'd do it again today.
           </h1>
         </div>
 
         <!-- Subhead -->
-        <div class="subhead">
+        <div class="subhead animate-fade-up delay-3">
           <p class="subhead__text">
-            Get the <strong>shortcuts I earned</strong>: <strong>product decisions</strong>, 
-            <strong>listing recipe</strong>, and <strong>traffic routine</strong> 
-            when Etsy gets moody. <strong>Borrow my experience</strong> to start with what works.
+            Get the <strong>shortcuts I earned</strong>: the <strong>product decisions</strong>, 
+            the <strong>listing recipe</strong>, and the <strong>traffic routine</strong> 
+            I use when Etsy's algorithm gets moody. <strong>Borrow my experience</strong> 
+            so you start with what I know works.
           </p>
         </div>
 
         <!-- Two Column -->
-        <div class="two-column">
+        <div class="two-column animate-fade-up delay-4">
           
-          <!-- Video -->
-          <div class="video-container">
-            <button class="play-button" aria-label="Play video">
-              <span class="play-icon"></span>
-            </button>
+          <!-- Video - LANDSCAPE 16:9 with Vimeo -->
+          <div class="video-wrapper">
+            <iframe 
+              title="vimeo-player" 
+              src="https://player.vimeo.com/video/1142453443?h=5b44b04547" 
+              frameborder="0" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+              allowfullscreen>
+            </iframe>
           </div>
 
           <!-- Offer Card -->
           <div class="offer-card">
-            <div class="mockup-placeholder">
-              <span>Product Preview</span>
+            <div class="offer-card__mockup">
+              <div class="mockup-placeholder">
+                <span>Product Preview</span>
+              </div>
             </div>
             
             <div class="price-block">
@@ -599,7 +663,7 @@
             <ul class="offer-bullets">
               <li>
                 <span class="bullet-marker"></span>
-                <span><strong>Daily product drops</strong> - trending ideas + AI prompts</span>
+                <span><strong>Daily product drops</strong> - trending ideas + AI prompts, tags & titles</span>
               </li>
               <li>
                 <span class="bullet-marker"></span>
@@ -607,31 +671,33 @@
               </li>
               <li>
                 <span class="bullet-marker"></span>
-                <span><strong>$10K shop formula</strong> - plus traffic backup</span>
+                <span><strong>$10K shop formula</strong> - plus traffic backup when Etsy dips</span>
               </li>
               <li>
                 <span class="bullet-marker"></span>
-                <span><strong>Pinterest system</strong> - stop depending on Etsy alone</span>
+                <span><strong>Pinterest system</strong> - stop depending on Etsy search alone</span>
               </li>
               <li>
                 <span class="bullet-marker"></span>
-                <span><strong>Twice-monthly calls</strong> - ask anything, get clarity</span>
+                <span><strong>Twice-monthly calls</strong> - ask anything, leave with clarity</span>
               </li>
             </ul>
 
-            <p class="offer-card__plus">Plus PLR vault, tools library, and more.</p>
+            <p class="offer-card__plus">Plus the PLR vault, the build with me shop, the full tools library, and more.</p>
 
             <a href="#" class="cta-button" id="heroCta">Start Selling Now</a>
 
             <div class="offer-card__microcopy">
-              <p class="microcopy-line">$67/month - Instant access - Cancel anytime</p>
+              <p class="microcopy-line"><span class="nowrap">$67/month</span> - Instant access - Cancel anytime</p>
               <p class="microcopy-urgency">Price goes up as we add more.</p>
             </div>
 
             <div class="offer-card__link">
               <a href="#">
                 See everything included
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
               </a>
             </div>
           </div>
@@ -652,7 +718,7 @@
             topBar.classList.toggle('visible', !entry.isIntersecting);
           });
         },
-        { threshold: 0, rootMargin: '-48px 0px 0px 0px' }
+        { threshold: 0, rootMargin: '-56px 0px 0px 0px' }
       );
       observer.observe(ctaButton);
     });
