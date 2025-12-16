@@ -23,30 +23,27 @@
       font-style: normal;
       font-display: swap;
     }
+    /* ═══════════════════════════════════════════════════════════════════════════
        CSS CUSTOM PROPERTIES - HIGH CONTRAST FUNNEL STYLE
-       Per design system + Information Architecture requirements
        ═══════════════════════════════════════════════════════════════════════════ */
     :root {
       /* BACKGROUNDS */
       --bg-cream: #FAF8F5;
-      --bg-warm: #F2EDE6;
-      --bg-sand: #EDE8E0;
+      --bg-warm: #F2E9DF;
       --bg-card: #FFFFFF;
       
-      /* TEXT - DARKER FOR CONTRAST (per IA addendum) */
+      /* TEXT - DARKER FOR CONTRAST */
       --text-primary: #1F1D1A;
       --text-body: #2D2A26;
       --text-secondary: #5A544C;
-      --text-muted: #7A746C;
-      --text-faint: #A9A49C;
+      --text-muted: #6B635A;
+      --text-faint: #8A847B;
       
       /* ACCENT COLORS */
       --accent-coral: #E07A5F;
-      --accent-coral-hover: #C96A52;
-      --accent-coral-soft: rgba(224, 122, 95, 0.1);
-      --accent-coral-glow: rgba(224, 122, 95, 0.35);
+      --accent-coral-hover: #D6705A;
+      --accent-coral-light: #E8826A;
       --accent-teal: #1D6B6B;
-      --accent-teal-hover: #165656;
       
       /* BORDERS & SHADOWS */
       --border-light: #E8E2D9;
@@ -57,18 +54,14 @@
         0 12px 32px rgba(45, 42, 38, 0.06),
         0 24px 56px rgba(45, 42, 38, 0.04);
       
-      /* TYPOGRAPHY SIZES - MINIMUM 18px body (per prompt requirements) */
-      --text-h1: 76px;
+      /* TYPOGRAPHY SIZES */
+      --text-h1: 72px;
       --text-h1-tablet: 56px;
       --text-h1-mobile: 42px;
       --text-subhead: 20px;
-      --text-subhead-mobile: 18px;
       --text-body-size: 18px;
-      --text-body-mobile: 17px;
-      --text-bullets: 18px;
-      --text-bullets-mobile: 17px;
+      --text-bullets: 16px;
       --text-button: 18px;
-      --text-button-mobile: 17px;
       
       /* CONTAINER */
       --container-max: 1320px;
@@ -99,12 +92,10 @@
       background: var(--bg-cream);
     }
 
-    .nowrap {
-      white-space: nowrap;
-    }
+    .nowrap { white-space: nowrap; }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       TOP BAR - Control Panel Style (72px height per spec)
+       TOP BAR - Control Panel Style (72px height)
        ═══════════════════════════════════════════════════════════════════════════ */
     .top-bar {
       position: fixed;
@@ -173,9 +164,7 @@
       box-shadow: 0 6px 20px rgba(224, 122, 95, 0.4);
     }
     
-    .top-bar__price-mobile {
-      display: none;
-    }
+    .top-bar__price-mobile { display: none; }
     
     @media (max-width: 768px) {
       .top-bar {
@@ -189,18 +178,9 @@
         border-bottom: none;
         border-top: 1px solid var(--border-light);
       }
-      .top-bar.visible {
-        transform: translateY(0);
-      }
-      .top-bar__logo,
-      .top-bar__center {
-        display: none;
-      }
-      .top-bar__cta {
-        width: 100%;
-        height: 56px;
-        font-size: var(--text-button-mobile);
-      }
+      .top-bar.visible { transform: translateY(0); }
+      .top-bar__logo, .top-bar__center { display: none; }
+      .top-bar__cta { width: 100%; height: 56px; }
       .top-bar__price-mobile {
         display: block;
         font-family: 'Satoshi', sans-serif;
@@ -211,57 +191,77 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       HERO SECTION - FULL BLEED (100vw, min-height 100vh per spec)
+       HERO SECTION - FULL BLEED with 3-LAYER BACKGROUND
+       Layer A: Base gradient wash
+       Layer B: Two watercolor blobs (visible!)
+       Layer C: Noise texture overlay
        ═══════════════════════════════════════════════════════════════════════════ */
     .hero-section {
-      width: 100%;
+      position: relative;
+      width: 100vw;
       min-height: 100vh;
-      background: var(--bg-cream);
-      position: relative;
-      overflow: hidden;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      overflow: visible; /* DO NOT clip blobs */
       padding: 48px 0 96px;
+      /* Layer A: Base gradient wash */
+      background: linear-gradient(180deg, 
+        #F2E9DF 0%,
+        #FAF8F5 55%,
+        #FFFFFF 100%
+      );
     }
 
-    /* WATERCOLOR BLOB - TOP RIGHT - LARGER & MORE VISIBLE (per spec: 0.12 opacity) */
-    .hero-section::before {
-      content: '';
+    /* Layer B: Coral Watercolor Blob - TOP RIGHT - VISIBLE */
+    .hero-blob-coral {
       position: absolute;
-      top: -20%;
-      right: -15%;
-      width: 85%;
-      height: 95%;
-      background: radial-gradient(
-        ellipse 70% 60% at 60% 40%,
-        rgba(224, 122, 95, 0.15) 0%,
-        rgba(224, 122, 95, 0.08) 25%,
-        rgba(224, 122, 95, 0.04) 45%,
-        transparent 65%
+      top: -15%;
+      right: -10%;
+      width: 1000px;
+      height: 800px;
+      background: radial-gradient(ellipse at center, 
+        rgba(224, 122, 95, 0.22) 0%,
+        rgba(224, 122, 95, 0.12) 40%,
+        transparent 70%
       );
+      filter: blur(80px);
+      mix-blend-mode: multiply;
       pointer-events: none;
       z-index: 0;
     }
 
-    /* WATERCOLOR BLOB - BOTTOM LEFT - LARGER & MORE VISIBLE */
-    .hero-section::after {
-      content: '';
+    /* Layer B: Sage/Teal Watercolor Blob - BOTTOM LEFT - VISIBLE */
+    .hero-blob-sage {
       position: absolute;
-      bottom: -30%;
-      left: -20%;
-      width: 75%;
-      height: 85%;
-      background: radial-gradient(
-        ellipse 60% 50% at 40% 60%,
-        rgba(29, 107, 107, 0.12) 0%,
-        rgba(29, 107, 107, 0.06) 35%,
-        transparent 60%
+      bottom: -20%;
+      left: -15%;
+      width: 900px;
+      height: 700px;
+      background: radial-gradient(ellipse at center, 
+        rgba(29, 107, 107, 0.18) 0%,
+        rgba(29, 107, 107, 0.08) 45%,
+        transparent 70%
       );
+      filter: blur(70px);
+      mix-blend-mode: multiply;
       pointer-events: none;
       z-index: 0;
     }
 
-    .hero-section > * {
-      position: relative;
+    /* Layer C: Noise Texture Overlay */
+    .hero-texture {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.07;
+      pointer-events: none;
       z-index: 1;
+    }
+
+    /* Hero content sits above background layers */
+    .hero-content {
+      position: relative;
+      z-index: 2;
     }
 
     .hero-container {
@@ -269,141 +269,113 @@
       margin: 0 auto;
       padding: 0 var(--container-padding);
     }
-
+    
     @media (max-width: 768px) {
-      .hero-section {
-        padding: 32px 0 120px;
-      }
-      .hero-container {
-        padding: 0 var(--container-padding-mobile);
-      }
+      .hero-container { padding: 0 var(--container-padding-mobile); }
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       TRUST STRIP - Stars + Tagline + Stats (NEW COMPONENT per spec)
+       TRUST STRIP
        ═══════════════════════════════════════════════════════════════════════════ */
     .trust-strip {
       text-align: center;
-      padding: 40px 0;
+      margin-bottom: 32px;
     }
 
     .trust-strip__stars {
       display: flex;
       justify-content: center;
-      gap: 6px;
-      margin-bottom: 12px;
+      gap: 4px;
+      margin-bottom: 8px;
     }
 
     .trust-strip__stars svg {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
       fill: var(--accent-coral);
     }
 
     .trust-strip__tagline {
       font-family: 'Satoshi', sans-serif;
-      font-weight: 600;
-      font-size: 16px;
+      font-weight: 700;
+      font-size: 14px;
       color: var(--text-primary);
-      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
     }
 
     .trust-strip__stats {
       font-family: 'Satoshi', sans-serif;
       font-weight: 500;
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-secondary);
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
     }
 
     .trust-strip__dot {
-      margin: 0 16px;
-      opacity: 0.4;
+      margin: 0 12px;
+      color: var(--text-faint);
     }
 
     .trust-strip__divider {
-      width: 80px;
-      height: 1px;
-      margin: 32px auto 0;
-      background: linear-gradient(90deg, transparent, var(--border-medium), transparent);
+      width: 48px;
+      height: 2px;
+      background: var(--accent-coral);
+      margin: 24px auto 0;
+      opacity: 0.4;
     }
 
     @media (max-width: 768px) {
-      .trust-strip__stats {
-        font-size: 12px;
-        letter-spacing: 0.08em;
-      }
-      .trust-strip__dot {
-        margin: 0 10px;
-      }
+      .trust-strip__stats { display: flex; flex-direction: column; gap: 4px; }
+      .trust-strip__dot { display: none; }
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       PREHEADER - Audience Identification (Detail level in hierarchy)
+       PREHEADER & HEADLINE
        ═══════════════════════════════════════════════════════════════════════════ */
     .preheader {
       text-align: center;
-      padding: 20px 0 16px;
+      margin-bottom: 24px;
     }
 
     .preheader__text {
       font-family: 'Satoshi', sans-serif;
       font-weight: 500;
-      font-size: var(--text-subhead);
+      font-size: 16px;
       color: var(--text-secondary);
-      letter-spacing: 0.01em;
     }
 
-    @media (max-width: 768px) {
-      .preheader__text {
-        font-size: var(--text-subhead-mobile);
-      }
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════════
-       HEADLINE - MASSIVE (76px desktop per spec) - DOMINANT in hierarchy
-       ═══════════════════════════════════════════════════════════════════════════ */
     .headline {
       text-align: center;
-      padding: 16px 24px 24px;
-      max-width: 1000px;
-      margin: 0 auto;
+      margin-bottom: 28px;
     }
 
     .headline__text {
       font-family: 'OGG', Georgia, serif;
-      font-weight: 700;
+      font-weight: 400;
       font-size: var(--text-h1);
-      line-height: 1.08;
+      line-height: 1.1;
       color: var(--text-primary);
-      letter-spacing: -0.02em;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     @media (max-width: 1024px) {
-      .headline__text {
-        font-size: var(--text-h1-tablet);
-      }
+      .headline__text { font-size: var(--text-h1-tablet); }
     }
 
-    @media (max-width: 768px) {
-      .headline {
-        padding: 12px 0 20px;
-      }
-      .headline__text {
-        font-size: var(--text-h1-mobile);
-        line-height: 1.12;
-      }
+    @media (max-width: 600px) {
+      .headline__text { font-size: var(--text-h1-mobile); }
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       SUBHEAD - Supporting level in hierarchy (max-width 720px)
+       SUBHEAD - with emphasis
        ═══════════════════════════════════════════════════════════════════════════ */
     .subhead {
       text-align: center;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 24px 56px;
+      margin-bottom: 56px;
     }
 
     .subhead__text {
@@ -412,399 +384,370 @@
       font-size: var(--text-subhead);
       line-height: 1.7;
       color: var(--text-body);
+      max-width: 720px;
+      margin: 0 auto;
     }
 
-    @media (max-width: 768px) {
-      .subhead {
-        padding: 0 0 40px;
-      }
-      .subhead__text {
-        font-size: var(--text-subhead-mobile);
-      }
+    .subhead__text strong {
+      font-weight: 600;
+      color: var(--text-primary);
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       TWO-COLUMN LAYOUT - LARGE & DOMINANT (55-60% video / 40-45% card)
-       Gap: 48-56px per spec
+       TWO COLUMN LAYOUT - 60%/40% split
        ═══════════════════════════════════════════════════════════════════════════ */
     .two-column {
       display: grid;
-      grid-template-columns: 57% 43%;
-      gap: 56px;
+      grid-template-columns: 60% 40%;
+      gap: 52px;
       align-items: start;
     }
 
     @media (max-width: 1024px) {
-      .two-column {
-        grid-template-columns: 55% 45%;
-        gap: 40px;
-      }
+      .two-column { grid-template-columns: 55% 45%; gap: 40px; }
     }
 
     @media (max-width: 900px) {
-      .two-column {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
+      .two-column { grid-template-columns: 1fr; gap: 40px; }
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       VIDEO CONTAINER - LARGE (min-height 480px per spec)
+       MEDIA COLUMN - Video + Image placeholder
        ═══════════════════════════════════════════════════════════════════════════ */
+    .media-column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
     .video-container {
       position: relative;
-      aspect-ratio: 16 / 9;
       min-height: 480px;
-      background: linear-gradient(145deg, #EDE9E3 0%, #E2DED6 100%);
+      background: linear-gradient(145deg, #F0EBE5 0%, #E8E2DA 50%, #DDD6CC 100%);
       border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    .video-container::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-      opacity: 0.03;
-      pointer-events: none;
+      overflow: hidden;
+      box-shadow: 
+        0 4px 12px rgba(45, 42, 38, 0.04),
+        0 12px 32px rgba(45, 42, 38, 0.06);
     }
 
     .play-button {
+      position: relative;
       width: 88px;
       height: 88px;
-      background: var(--bg-card);
+      background: white;
+      border: none;
       border-radius: 50%;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-      cursor: pointer;
-      border: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 
+        0 4px 12px rgba(45, 42, 38, 0.08),
+        0 12px 32px rgba(45, 42, 38, 0.12);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Play button pulse ring */
+    .play-button::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border: 2px solid rgba(224, 122, 95, 0.3);
+      border-radius: 50%;
+      animation: pulse-ring 2s ease-out infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.3); opacity: 0; }
     }
 
     .play-button:hover {
-      transform: scale(1.08);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+      transform: scale(1.05);
+      box-shadow: 
+        0 6px 16px rgba(45, 42, 38, 0.1),
+        0 16px 40px rgba(45, 42, 38, 0.15);
     }
 
     .play-button__icon {
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 16px 0 16px 26px;
+      border-width: 14px 0 14px 22px;
       border-color: transparent transparent transparent var(--accent-coral);
-      margin-left: 6px;
+      margin-left: 4px;
     }
 
     @media (max-width: 900px) {
-      .video-container {
-        min-height: 320px;
-      }
+      .video-container { min-height: 400px; }
     }
 
     @media (max-width: 480px) {
-      .video-container {
-        min-height: 220px;
-        border-radius: 20px;
-      }
-      .play-button {
-        width: 72px;
-        height: 72px;
-      }
-      .play-button__icon {
-        border-width: 12px 0 12px 20px;
-      }
+      .video-container { min-height: 280px; }
+      .play-button { width: 72px; height: 72px; }
+      .play-button__icon { border-width: 11px 0 11px 18px; }
     }
 
-    /* ═══════════════════════════════════════════════════════════════════════════
-       OFFER CARD - PURCHASE MODULE STYLE (bigger per spec)
-       Padding: 48px, border-radius: 28px
-       ═══════════════════════════════════════════════════════════════════════════ */
-    .offer-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-light);
-      border-radius: 28px;
-      padding: 48px;
-      box-shadow: var(--shadow-card);
-      position: relative;
-    }
-
-    .offer-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 28px;
-      right: 28px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9), transparent);
-      border-radius: 28px 28px 0 0;
-    }
-
-    @media (max-width: 768px) {
-      .offer-card {
-        padding: 32px 24px;
-        border-radius: 24px;
-      }
-    }
-
-    /* PRODUCT MOCKUP PLACEHOLDER (NEW - per spec) */
-    .offer-card__mockup {
-      margin-bottom: 28px;
-    }
-
-    .mockup-placeholder {
+    /* Image placeholder under video */
+    .image-placeholder {
+      height: 220px;
       background: linear-gradient(135deg, #F0EBE5 0%, #E8E2DA 100%);
-      border-radius: 16px;
-      height: 140px;
+      border-radius: 20px;
+      border: 1px dashed var(--border-medium);
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .image-placeholder span {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-faint);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       OFFER CARD - with hover lift
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .offer-card {
+      background: var(--bg-card);
+      border-radius: 28px;
+      padding: 48px;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 
+        0 8px 24px rgba(45, 42, 38, 0.08),
+        0 24px 48px rgba(45, 42, 38, 0.12);
+    }
+
+    @media (max-width: 600px) {
+      .offer-card { padding: 32px 24px; border-radius: 24px; }
+    }
+
+    /* Product mockup placeholder */
+    .offer-card__mockup {
+      margin-bottom: 32px;
+    }
+
+    .mockup-placeholder {
+      height: 180px;
+      background: linear-gradient(145deg, #F5F2EE 0%, #EBE6E0 100%);
+      border-radius: 16px;
       border: 1px dashed var(--border-medium);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .mockup-placeholder span {
       font-family: 'Satoshi', sans-serif;
       font-size: 14px;
-      color: var(--text-muted);
-      letter-spacing: 0.02em;
+      font-weight: 500;
+      color: var(--text-faint);
     }
 
-    /* PRICE BLOCK - PROMINENT (per spec) */
+    /* Price block */
     .offer-card__price {
       text-align: center;
-      padding: 24px 0;
-      border-bottom: 1px solid var(--border-light);
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
 
     .price-label {
       display: block;
       font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 12px;
       color: var(--text-secondary);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       margin-bottom: 8px;
     }
 
     .price-value {
       font-family: 'OGG', Georgia, serif;
+      font-weight: 400;
       font-size: 56px;
-      font-weight: 700;
       color: var(--text-primary);
       line-height: 1;
     }
 
     .price-period {
       font-family: 'Satoshi', sans-serif;
-      font-size: 22px;
       font-weight: 500;
+      font-size: 20px;
       color: var(--text-secondary);
     }
 
-    /* BULLETS - 18px minimum (per spec) */
+    .price-reframe {
+      display: block;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* Bullets - SHORTENED with bold lead-ins */
     .offer-card__bullets {
       list-style: none;
-      padding: 0;
-      margin: 0 0 24px 0;
+      margin-bottom: 24px;
     }
 
     .offer-card__bullet {
       display: flex;
-      gap: 16px;
-      padding: 16px 0;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
       border-bottom: 1px solid var(--border-light);
+      font-family: 'Satoshi', sans-serif;
+      font-size: var(--text-bullets);
+      line-height: 1.5;
+      color: var(--text-body);
     }
 
     .offer-card__bullet:last-child {
       border-bottom: none;
     }
 
+    .offer-card__bullet strong {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
     .offer-card__marker {
-      width: 10px;
-      height: 10px;
-      min-width: 10px;
-      background: var(--accent-coral);
-      border-radius: 3px;
       flex-shrink: 0;
-      margin-top: 7px;
+      width: 8px;
+      height: 8px;
+      background: var(--accent-coral);
+      border-radius: 2px;
+      margin-top: 6px;
     }
 
-    .offer-card__bullet-text {
-      font-family: 'Satoshi', sans-serif;
-      font-size: var(--text-bullets);
-      line-height: 1.6;
-      color: var(--text-body);
-    }
-
-    @media (max-width: 768px) {
-      .offer-card__bullet-text {
-        font-size: var(--text-bullets-mobile);
-      }
-    }
-
-    /* PLUS LINE */
+    /* Plus line */
     .offer-card__plus {
       font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
-      font-weight: 500;
+      font-size: 14px;
+      font-style: italic;
       color: var(--text-secondary);
-      padding: 20px 0 28px;
-      border-top: 1px solid var(--border-light);
+      text-align: center;
+      margin-bottom: 28px;
     }
 
-    /* CTA BUTTON - 64px height (per spec) */
+    /* CTA Button - 64px height with interactions */
     .offer-card__cta {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
       height: 64px;
-      background: var(--accent-coral);
+      background: linear-gradient(180deg, var(--accent-coral) 0%, var(--accent-coral-hover) 100%);
       color: white;
       font-family: 'Satoshi', sans-serif;
       font-weight: 700;
       font-size: var(--text-button);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       text-decoration: none;
       border: none;
       border-radius: 16px;
       cursor: pointer;
-      box-shadow: 0 6px 20px var(--accent-coral-glow);
+      box-shadow: 
+        0 4px 12px rgba(224, 122, 95, 0.3),
+        0 8px 24px rgba(224, 122, 95, 0.2);
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .offer-card__cta:hover {
-      background: var(--accent-coral-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 32px var(--accent-coral-glow);
+      transform: translateY(-3px);
+      box-shadow: 
+        0 8px 24px rgba(224, 122, 95, 0.4),
+        0 16px 40px rgba(224, 122, 95, 0.25);
+      background: linear-gradient(180deg, var(--accent-coral-light) 0%, var(--accent-coral-hover) 100%);
     }
 
     .offer-card__cta:active {
-      transform: translateY(0);
+      transform: translateY(-1px);
     }
 
-    @media (max-width: 768px) {
-      .offer-card__cta {
-        height: 60px;
-        font-size: var(--text-button-mobile);
-      }
+    .offer-card__cta:focus {
+      outline: 3px solid rgba(224, 122, 95, 0.5);
+      outline-offset: 3px;
     }
 
-    /* MICROCOPY */
+    /* Microcopy */
     .offer-card__microcopy {
       text-align: center;
-      padding: 20px 0 0;
+      margin-top: 20px;
     }
 
     .microcopy-line {
       font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-muted);
-      margin-bottom: 6px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
     }
 
     .microcopy-reassurance {
       font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-secondary);
+      font-size: 13px;
+      color: var(--text-muted);
       margin-bottom: 4px;
     }
 
     .microcopy-urgency {
       font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 13px;
       color: var(--accent-coral);
       font-style: italic;
     }
 
-    /* SECONDARY LINK */
+    /* Secondary link */
     .offer-card__link {
       text-align: center;
-      padding-top: 24px;
+      margin-top: 20px;
     }
 
     .offer-card__link a {
       font-family: 'Satoshi', sans-serif;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
       color: var(--accent-teal);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      position: relative;
+      transition: all 0.2s ease;
     }
 
     .offer-card__link a::after {
       content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 0;
+      display: block;
+      width: 100%;
       height: 1px;
       background: currentColor;
-      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      position: absolute;
+      bottom: -2px;
+      transition: opacity 0.2s ease;
     }
 
-    .offer-card__link a:hover::after {
-      width: calc(100% - 22px);
-    }
-
-    .offer-card__link svg {
-      transition: transform 0.2s ease;
-    }
-
-    .offer-card__link a:hover svg {
-      transform: translateX(4px);
-    }
+    .offer-card__link a:hover { color: var(--accent-coral); }
+    .offer-card__link svg { width: 16px; height: 16px; }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       START HERE LINE
+       ANIMATIONS
        ═══════════════════════════════════════════════════════════════════════════ */
-    .start-here {
-      text-align: center;
-      padding: 56px 0 0;
-    }
-
-    .start-here__text {
-      font-family: 'Satoshi', sans-serif;
-      font-size: var(--text-body-size);
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    .start-here__bold {
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    @media (max-width: 768px) {
-      .start-here {
-        padding: 40px 0 0;
-      }
-      .start-here__text {
-        font-size: var(--text-body-mobile);
-      }
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════════
-       ANIMATIONS - Entry animations with stagger
-       ═══════════════════════════════════════════════════════════════════════════ */
-    @keyframes fadeUp {
+    @keyframes fade-up {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(24px);
       }
       to {
         opacity: 1;
@@ -813,8 +756,8 @@
     }
 
     .animate-fade-up {
-      animation: fadeUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
       opacity: 0;
+      animation: fade-up 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 
     .delay-1 { animation-delay: 0.1s; }
@@ -822,7 +765,6 @@
     .delay-3 { animation-delay: 0.2s; }
     .delay-4 { animation-delay: 0.3s; }
     .delay-5 { animation-delay: 0.4s; }
-    .delay-6 { animation-delay: 0.5s; }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -834,146 +776,146 @@
   </style>
 </head>
 <body>
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-       TOP BAR - Control Panel Style (72px height, slides in when CTA leaves viewport)
-       ═══════════════════════════════════════════════════════════════════════════ -->
+  <!-- TOP BAR -->
   <header class="top-bar" id="topBar">
     <span class="top-bar__logo">AI Design & Grow Experience</span>
-    <span class="top-bar__center"><span class="nowrap">$67/month</span> · Cancel anytime</span>
+    <span class="top-bar__center"><span class="nowrap">$67/month</span> - Cancel anytime</span>
     <a href="#" class="top-bar__cta">Start Selling Now</a>
-    <span class="top-bar__price-mobile"><span class="nowrap">$67/month</span> · Cancel anytime</span>
+    <span class="top-bar__price-mobile"><span class="nowrap">$67/month</span> - Cancel anytime</span>
   </header>
 
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-       HERO SECTION - FULL BLEED (100vw, min-height 100vh)
-       Watercolor blobs in ::before and ::after pseudo-elements
-       ═══════════════════════════════════════════════════════════════════════════ -->
+  <!-- HERO SECTION with 3-LAYER BACKGROUND -->
   <section class="hero-section">
-    <div class="hero-container">
-      
-      <!-- Trust Strip with Stars + Tagline + Stats (per spec) -->
-      <div class="trust-strip animate-fade-up delay-1">
-        <div class="trust-strip__stars">
-          <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-        </div>
-        <p class="trust-strip__tagline">Trusted by thousands of Etsy sellers</p>
-        <p class="trust-strip__stats">
-          <span class="nowrap">387K+ Sales</span><span class="trust-strip__dot">·</span><span class="nowrap">$1M+ from digital products</span><span class="trust-strip__dot">·</span>Yes, I still run my shop
-        </p>
-        <div class="trust-strip__divider"></div>
-      </div>
-
-      <!-- Preheader - Audience identification -->
-      <div class="preheader animate-fade-up delay-2">
-        <p class="preheader__text">For busy people who want Etsy income without Etsy stress.</p>
-      </div>
-
-      <!-- Headline - MASSIVE 76px (DOMINANT in visual hierarchy) -->
-      <div class="headline animate-fade-up delay-3">
-        <h1 class="headline__text">
-          I'll show you what I actually sell<br>
-          on Etsy and how I'd do it again today.
-        </h1>
-      </div>
-
-      <!-- Subhead - SUPPORTING level (max-width 720px) -->
-      <div class="subhead animate-fade-up delay-4">
-        <p class="subhead__text">
-          I spent years learning what actually moves on Etsy. Now you get the shortcuts I earned: the product decisions, the listing recipe, and the traffic routine I use when Etsy's algorithm gets moody, plus the steps I use to grow beyond Etsy too. Borrow my experience so you start with what I know works.
-        </p>
-      </div>
-
-      <!-- Two Column Layout - LARGE & DOMINANT (57%/43% split, 56px gap) -->
-      <div class="two-column animate-fade-up delay-5">
+    <!-- Background layers -->
+    <div class="hero-blob-coral"></div>
+    <div class="hero-blob-sage"></div>
+    <div class="hero-texture"></div>
+    
+    <!-- Content -->
+    <div class="hero-content">
+      <div class="hero-container">
         
-        <!-- Video Container - min-height 480px -->
-        <div class="video-container">
-          <button class="play-button" aria-label="Play video">
-            <span class="play-button__icon"></span>
-          </button>
+        <!-- Trust Strip -->
+        <div class="trust-strip animate-fade-up delay-1">
+          <div class="trust-strip__stars">
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="trust-strip__tagline">Trusted by thousands of Etsy sellers</p>
+          <p class="trust-strip__stats">
+            <span class="nowrap">387K+ Sales</span><span class="trust-strip__dot">-</span><span class="nowrap">$1M+ from digital products</span><span class="trust-strip__dot">-</span>Yes, I still run my shop
+          </p>
+          <div class="trust-strip__divider"></div>
         </div>
 
-        <!-- Offer Card - Purchase Module Style (per spec) -->
-        <div class="offer-card">
-          <!-- Product Mockup Placeholder -->
-          <div class="offer-card__mockup">
-            <div class="mockup-placeholder">
-              <span>Product Preview</span>
+        <!-- Preheader -->
+        <div class="preheader animate-fade-up delay-2">
+          <p class="preheader__text">For busy people who want Etsy income without Etsy stress.</p>
+        </div>
+
+        <!-- Headline - controlled line breaks -->
+        <div class="headline animate-fade-up delay-3">
+          <h1 class="headline__text">
+            I'll show you what I actually sell<br>
+            on Etsy and how I'd do it again today.
+          </h1>
+        </div>
+
+        <!-- Subhead with emphasis -->
+        <div class="subhead animate-fade-up delay-4">
+          <p class="subhead__text">
+            I spent years learning what actually moves on Etsy. Now you get the <strong>shortcuts I earned</strong>: the <strong>product decisions</strong>, the <strong>listing recipe</strong>, and the <strong>traffic routine</strong> I use when Etsy's algorithm gets moody, plus the steps I use to <strong>grow beyond Etsy too</strong>. <strong>Borrow my experience</strong> so you start with what I know works.
+          </p>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="two-column animate-fade-up delay-5">
+          
+          <!-- Media Column: Video + Image placeholder -->
+          <div class="media-column">
+            <div class="video-container">
+              <button class="play-button" aria-label="Play video">
+                <span class="play-button__icon"></span>
+              </button>
+            </div>
+            <div class="image-placeholder">
+              <span>Testimonial or Product Showcase</span>
             </div>
           </div>
-          
-          <!-- Price Block - PROMINENT -->
-          <div class="offer-card__price">
-            <span class="price-label">Join today for</span>
-            <span class="price-value">$67<span class="price-period">/month</span></span>
-          </div>
-          
-          <!-- Bullets - 18px (SUPPORTING info) -->
-          <ul class="offer-card__bullets">
-            <li class="offer-card__bullet">
-              <span class="offer-card__marker"></span>
-              <span class="offer-card__bullet-text">Every morning I post what I would sell next, the exact AI prompt I'd use, and the tags and titles I'd list it with. You pick one and go.</span>
-            </li>
-            <li class="offer-card__bullet">
-              <span class="offer-card__marker"></span>
-              <span class="offer-card__bullet-text">Choose your path to <span class="nowrap">$5K per month</span> based on your life: audience, bundles, or social, with the same decision rules I used to scale.</span>
-            </li>
-            <li class="offer-card__bullet">
-              <span class="offer-card__marker"></span>
-              <span class="offer-card__bullet-text">My full <span class="nowrap">$10K shop formula</span>, plus the traffic routine I lean on so sales don't disappear when Etsy traffic dips.</span>
-            </li>
-            <li class="offer-card__bullet">
-              <span class="offer-card__marker"></span>
-              <span class="offer-card__bullet-text">Pinterest setup the way I actually run it, so you are not relying on Etsy search as your only source of buyers.</span>
-            </li>
-            <li class="offer-card__bullet">
-              <span class="offer-card__marker"></span>
-              <span class="offer-card__bullet-text">Twice-monthly calls to get real feedback and get unstuck fast. Ask me anything, leave with a clear next move.</span>
-            </li>
-          </ul>
 
-          <!-- Plus Line (TERTIARY) -->
-          <p class="offer-card__plus">Plus the PLR vault, the build with me shop, the full tools library, and more.</p>
+          <!-- Offer Card -->
+          <div class="offer-card">
+            <!-- Product Mockup -->
+            <div class="offer-card__mockup">
+              <div class="mockup-placeholder">
+                <span>Product Preview</span>
+              </div>
+            </div>
+            
+            <!-- Price Block with reframe -->
+            <div class="offer-card__price">
+              <span class="price-label">Join today for</span>
+              <span class="price-value">$67<span class="price-period">/month</span></span>
+              <span class="price-reframe">about $2.20/day</span>
+            </div>
+            
+            <!-- Shortened Bullets with bold lead-ins -->
+            <ul class="offer-card__bullets">
+              <li class="offer-card__bullet">
+                <span class="offer-card__marker"></span>
+                <span><strong>Daily product drops</strong> - trending ideas + AI prompts, tags & titles</span>
+              </li>
+              <li class="offer-card__bullet">
+                <span class="offer-card__marker"></span>
+                <span><strong>3 paths to $5K/month</strong> - audience, bundles, or social</span>
+              </li>
+              <li class="offer-card__bullet">
+                <span class="offer-card__marker"></span>
+                <span><strong>$10K shop formula</strong> - plus traffic backup when Etsy dips</span>
+              </li>
+              <li class="offer-card__bullet">
+                <span class="offer-card__marker"></span>
+                <span><strong>Pinterest system</strong> - stop depending on Etsy search alone</span>
+              </li>
+              <li class="offer-card__bullet">
+                <span class="offer-card__marker"></span>
+                <span><strong>Twice-monthly calls</strong> - ask anything, leave with clarity</span>
+              </li>
+            </ul>
 
-          <!-- CTA - 64px height (EXIT point) -->
-          <a href="#" class="offer-card__cta" id="heroCta">START SELLING NOW</a>
+            <!-- Plus line -->
+            <p class="offer-card__plus">Plus the PLR vault, the build with me shop, the full tools library, and more.</p>
 
-          <!-- Microcopy (REASSURANCE) -->
-          <div class="offer-card__microcopy">
-            <p class="microcopy-line"><span class="nowrap">$67/month</span> · Instant access · Cancel anytime</p>
-            <p class="microcopy-reassurance">Everything's included. No surprises.</p>
-            <p class="microcopy-urgency">Price goes up as we add more.</p>
-          </div>
+            <!-- CTA -->
+            <a href="#" class="offer-card__cta" id="heroCta">START SELLING NOW</a>
 
-          <!-- Secondary Link (SECONDARY EXIT) -->
-          <div class="offer-card__link">
-            <a href="#">
-              See everything included
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
+            <!-- Microcopy -->
+            <div class="offer-card__microcopy">
+              <p class="microcopy-line"><span class="nowrap">$67/month</span> - Instant access - Cancel anytime</p>
+              <p class="microcopy-reassurance">Everything's included. No surprises.</p>
+              <p class="microcopy-urgency">Price goes up as we add more.</p>
+            </div>
+
+            <!-- Secondary link -->
+            <div class="offer-card__link">
+              <a href="#">
+                See everything included
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Start Here Line -->
-      <div class="start-here animate-fade-up delay-6">
-        <p class="start-here__text">
-          <span class="start-here__bold">Start here:</span> 15 minute setup, then pick your first product tonight.
-        </p>
       </div>
-
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════════════════
-       JAVASCRIPT - Top Bar with Intersection Observer
-       ═══════════════════════════════════════════════════════════════════════════ -->
+  <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const ctaButton = document.getElementById('heroCta');
@@ -991,10 +933,7 @@
             }
           });
         },
-        { 
-          threshold: 0, 
-          rootMargin: '-72px 0px 0px 0px' 
-        }
+        { threshold: 0, rootMargin: '-72px 0px 0px 0px' }
       );
       
       observer.observe(ctaButton);
