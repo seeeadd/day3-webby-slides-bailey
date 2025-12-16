@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Design & Grow Experience | Bailey</title>
+  <style>
+    /* ========================================
+       BASE64 FONT EMBEDS
+       ======================================== */
+    @font-face {
+      font-family: 'OGG';
+      font-weight: 700;
+      font-style: normal;
+      src: url('data:font/otf;base64,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awAgAG8AcgAgAGEAIAB0AHIAYQBkAGUAbQBhAHIAawAgAG8AZgAgAFMAaABhAHIAcAAgAFQAeQBwAGUAIABDAG8AcgBwAG8AcgBhAHQAaQBvAG4AUwBoAGEAcgBwACAAVAB5AHAAZQAgAEMAbwByAHAAbwByAGEAdABpAG8AbgBMAHUAYwBhAHMAIABTAGgAYQByAHAAIAB3AGkAdABoACAAQwBvAG4AbgBvAHIAIABEAGEAdgBlAG4AcABvAHIAdAAgAGEAbgBkACAAVwBlAGkAIABIAHUAYQBuAGcAaAB0AHQAcABzADoALwAvAHMAaABhAHIAcAB0AHkAcABlAC4AYwBvAGgAdAB0AHAAOgAvAC8AdwB3AHcALgBzAGgAYQByAHAAdAB5AHAAZQAuAGMAbwBTAGUAZQAgAHMAaABhAHIAcAB0AHkAcABlAC4AYwBvAC8AbABpAGMAZQBuAHMAaQBuAGcALwAgAGYAbwByACAAYQBwAHAAbABpAGMAYQBiAGwAZQAgAEUAbgBkACAAVQBzAGUAcgAgAEwAaQBjAGUAbgBzAGUAIABBAGcAcgBlAGUAbQBlAG4AdAAuAGgAdAB0AHAAcwA6AC8ALwB3AHcAdwAuAHMAaABhAHIAcAB0AHkAcABlAC4AYwBvAC8AbABpAGMAZQBuAHMAaQBuAGcALwBPAGcAZwAgAFQAUgBJAEEATAAKACAAYgB5ACAATAB1AGMAYQBzACAAUwBoAGEAcgBwAAoAIAB3AGkAdABoACAAQwBvAG4AbgBvAHIAIABEAGEAdgBlAG4AcABvAHIAdAAKACAAYQBuAGQAIABXAGUAaQAgAEgAdQBhAG4AZwAKACAAUwBoAGEAcgBwACAAVAB5AHAAZQAsACAAMgAwADEAOQBBAGwAdABlAHIAbgBhAHQAZQAgAE8ARQBSAGUAdgBlAHIAcwBlACAATABlAGYAdAAgAFEAdQBvAHQAZQBzAAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABABAAAAADAAIAAIABAAgAC4AOQBaAHr//wAAACAALgAwAEEAYf///+EACAAH/8H/uwABAAAAAAAAAAAAAAAAAAMAAAAAAAD/zgAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAAA==') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      font-weight: 400;
+      font-style: normal;
+      src: url('/home/user/day3-webby-slides-bailey/Satoshi-Variable.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      font-weight: 500;
+      font-style: normal;
+      src: url('/home/user/day3-webby-slides-bailey/Satoshi-Variable.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      font-weight: 700;
+      font-style: normal;
+      src: url('/home/user/day3-webby-slides-bailey/Satoshi-Variable.ttf') format('truetype');
+    }
+
+    /* ========================================
+       CSS CUSTOM PROPERTIES
+       ======================================== */
+    :root {
+      /* Colors - The Quiet Luxury Palette */
+      --color-bg: #FDFCFA;
+      --color-bg-alt: #F7F5F0;
+      --color-card: #FFFFFF;
+      --color-card-border: #EAE6DE;
+      --color-text-primary: #1A1918;
+      --color-text-secondary: #7D7670;
+      --color-accent: #B8565C;
+      --color-accent-hover: #9E4A4F;
+      --color-link: #2D5B5B;
+      --color-bullet: #B8565C;
+
+      /* Typography */
+      --font-headline: 'OGG', 'Georgia', serif;
+      --font-body: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      /* Spacing */
+      --space-xs: 8px;
+      --space-sm: 16px;
+      --space-md: 24px;
+      --space-lg: 40px;
+      --space-xl: 64px;
+      --space-2xl: 96px;
+
+      /* Layout */
+      --max-width: 1000px;
+      --max-width-narrow: 600px;
+    }
+
+    /* ========================================
+       RESET & BASE STYLES
+       ======================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ========================================
+       ANIMATIONS
+       ======================================== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-up {
+      animation: fadeUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      opacity: 0;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.15s; }
+    .delay-3 { animation-delay: 0.2s; }
+    .delay-4 { animation-delay: 0.25s; }
+    .delay-5 { animation-delay: 0.35s; }
+
+    /* ========================================
+       HERO SECTION
+       ======================================== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: var(--space-2xl);
+      overflow: hidden;
+    }
+
+    /* Subtle organic background wash */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -15%;
+      width: 70%;
+      height: 90%;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(216, 195, 182, 0.12) 0%,
+        transparent 65%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ========================================
+       UTILITY STRIP
+       ======================================== */
+    .utility-strip {
+      padding: var(--space-sm) var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .utility-strip__brand {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--color-text-primary);
+    }
+
+    .utility-strip__help {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      position: relative;
+    }
+
+    .utility-strip__help::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .utility-strip__help:hover::after {
+      width: 100%;
+    }
+
+    /* ========================================
+       TRUST ROW
+       ======================================== */
+    .trust-section {
+      text-align: center;
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    .trust-row {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+    }
+
+    .trust-row__separator {
+      margin: 0 1em;
+      opacity: 0.4;
+    }
+
+    /* Hairline separator that fades at edges */
+    .trust-separator {
+      width: 140px;
+      height: 1px;
+      margin: var(--space-lg) auto;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(221, 216, 206, 0.8) 50%,
+        transparent 100%
+      );
+    }
+
+    /* ========================================
+       HEADER CONTENT
+       ======================================== */
+    .header-content {
+      text-align: center;
+      padding: 0 var(--space-md);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .preheader {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-md);
+    }
+
+    .headline {
+      font-family: var(--font-headline);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-lg);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .subhead {
+      font-family: var(--font-body);
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+      max-width: var(--max-width-narrow);
+      margin: 0 auto var(--space-xl);
+      letter-spacing: 0.01em;
+    }
+
+    /* ========================================
+       TWO COLUMN LAYOUT
+       ======================================== */
+    .two-column {
+      display: grid;
+      grid-template-columns: 58% 42%;
+      gap: 48px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .two-column {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+      }
+    }
+
+    /* ========================================
+       VIDEO PLACEHOLDER
+       ======================================== */
+    .video-container {
+      position: relative;
+    }
+
+    .video-placeholder {
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(145deg, #F0EDE6 0%, #E5E1D8 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow:
+        0 4px 12px rgba(26, 25, 24, 0.04),
+        0 16px 32px rgba(26, 25, 24, 0.06);
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .video-placeholder:hover {
+      transform: scale(1.01);
+    }
+
+    .video-placeholder:hover .play-icon {
+      opacity: 0.6;
+      transform: scale(1.05);
+    }
+
+    .play-icon {
+      width: 72px;
+      height: 72px;
+      border: 2px solid var(--color-text-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.25;
+      transition: all 0.3s ease;
+    }
+
+    .play-icon svg {
+      width: 24px;
+      height: 24px;
+      margin-left: 4px;
+      fill: var(--color-text-primary);
+    }
+
+    /* ========================================
+       OFFER CARD
+       ======================================== */
+    .offer-card {
+      background: var(--color-card);
+      border: 1px solid var(--color-card-border);
+      border-radius: 20px;
+      padding: 40px;
+      position: relative;
+      box-shadow:
+        0 2px 4px rgba(26, 25, 24, 0.02),
+        0 8px 16px rgba(26, 25, 24, 0.04),
+        0 24px 48px rgba(26, 25, 24, 0.06);
+    }
+
+    /* Subtle inner glow at top */
+    .offer-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, transparent 100%);
+      border-radius: 20px 20px 0 0;
+      pointer-events: none;
+    }
+
+    .offer-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ========================================
+       BULLET LIST
+       ======================================== */
+    .bullet-list {
+      list-style: none;
+      margin-bottom: var(--space-lg);
+    }
+
+    .bullet-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.55;
+      color: var(--color-text-primary);
+    }
+
+    .bullet-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Small square bullet accent */
+    .bullet-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--color-bullet);
+      border-radius: 1px;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    /* ========================================
+       PLUS LINE
+       ======================================== */
+    .plus-line {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      letter-spacing: 0.01em;
+      margin-bottom: var(--space-lg);
+      padding-left: 22px;
+    }
+
+    /* ========================================
+       CTA BUTTON
+       ======================================== */
+    .cta-button {
+      display: block;
+      width: 100%;
+      background: var(--color-accent);
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none;
+      padding: 20px 40px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .cta-button:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(184, 86, 92, 0.25);
+    }
+
+    .cta-button:active {
+      transform: translateY(0);
+    }
+
+    /* ========================================
+       MICROCOPY & REASSURANCE
+       ======================================== */
+    .microcopy {
+      text-align: center;
+      margin-top: var(--space-sm);
+    }
+
+    .microcopy__price {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      letter-spacing: 0.02em;
+    }
+
+    .microcopy__separator {
+      margin: 0 0.5em;
+      opacity: 0.4;
+    }
+
+    .reassurance {
+      text-align: center;
+      margin-top: var(--space-md);
+    }
+
+    .reassurance__text {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      margin-bottom: 4px;
+    }
+
+    .reassurance__urgency {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-accent);
+      letter-spacing: 0.01em;
+    }
+
+    /* ========================================
+       SECONDARY LINK
+       ======================================== */
+    .secondary-link {
+      display: block;
+      text-align: center;
+      margin-top: var(--space-md);
+    }
+
+    .secondary-link a {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-link);
+      text-decoration: none;
+      position: relative;
+      letter-spacing: 0.01em;
+    }
+
+    .secondary-link a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .secondary-link a:hover::after {
+      width: 100%;
+    }
+
+    /* ========================================
+       START HERE LINE
+       ======================================== */
+    .start-here {
+      text-align: center;
+      padding: var(--space-xl) var(--space-md);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .start-here__text {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      letter-spacing: 0.01em;
+    }
+
+    .start-here__text strong {
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    /* ========================================
+       STICKY BAR - DESKTOP
+       ======================================== */
+    .sticky-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-card-border);
+      z-index: 1000;
+      transform: translateY(-100%);
+      opacity: 0;
+      transition:
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease;
+    }
+
+    .sticky-bar.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .sticky-bar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+
+    .sticky-bar__brand {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      letter-spacing: 0.02em;
+    }
+
+    .sticky-bar__price {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+    }
+
+    .sticky-bar__cta {
+      display: inline-block;
+      background: var(--color-accent);
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .sticky-bar__cta:hover {
+      background: var(--color-accent-hover);
+    }
+
+    /* Mobile sticky bar at bottom */
+    @media (max-width: 768px) {
+      .sticky-bar {
+        top: auto;
+        bottom: 0;
+        height: auto;
+        padding: var(--space-sm);
+        transform: translateY(100%);
+        border-bottom: none;
+        border-top: 1px solid var(--color-card-border);
+      }
+
+      .sticky-bar.visible {
+        transform: translateY(0);
+      }
+
+      .sticky-bar__inner {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .sticky-bar__brand {
+        display: none;
+      }
+
+      .sticky-bar__price {
+        font-size: 12px;
+      }
+
+      .sticky-bar__cta {
+        width: 100%;
+        text-align: center;
+        padding: 14px 24px;
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE TYPOGRAPHY
+       ======================================== */
+    @media (max-width: 768px) {
+      .utility-strip__brand,
+      .utility-strip__help {
+        font-size: 11px;
+      }
+
+      .trust-row {
+        font-size: 10px;
+      }
+
+      .preheader {
+        font-size: 14px;
+      }
+
+      .subhead {
+        font-size: 16px;
+      }
+
+      .bullet-item {
+        font-size: 14px;
+      }
+
+      .plus-line {
+        font-size: 12px;
+      }
+
+      .cta-button {
+        font-size: 13px;
+        padding: 18px 32px;
+      }
+
+      .offer-card {
+        padding: 32px 24px;
+      }
+    }
+
+    /* ========================================
+       RESPONSIVE LAYOUT
+       ======================================== */
+    @media (max-width: 768px) {
+      :root {
+        --space-xl: 48px;
+        --space-2xl: 64px;
+      }
+
+      .trust-row__separator {
+        display: none;
+      }
+
+      .trust-row {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .trust-section {
+        padding: var(--space-md);
+      }
+
+      .header-content {
+        padding: 0 var(--space-sm);
+      }
+
+      .two-column {
+        padding: 0 var(--space-sm);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Utility Strip -->
+    <header class="utility-strip animate-fade-up">
+      <span class="utility-strip__brand">AI Design & Grow Experience</span>
+      <a href="mailto:support@example.com" class="utility-strip__help">Questions? Email us</a>
+    </header>
+
+    <!-- Trust Row -->
+    <div class="trust-section animate-fade-up delay-1">
+      <p class="trust-row">
+        <span>387K+ Etsy Sales</span>
+        <span class="trust-row__separator">·</span>
+        <span>$1M+ From Digital Products</span>
+        <span class="trust-row__separator">·</span>
+        <span>Yes, I Still Run My Shop</span>
+      </p>
+      <div class="trust-separator"></div>
+    </div>
+
+    <!-- Header Content -->
+    <div class="header-content">
+      <p class="preheader animate-fade-up delay-2">For busy people who want Etsy income without Etsy stress.</p>
+      <h1 class="headline animate-fade-up delay-3">I'll show you what I actually sell on Etsy and how I'd do it again today.</h1>
+      <p class="subhead animate-fade-up delay-4">I spent years learning what actually moves on Etsy. Now you get the shortcuts I earned: the product decisions, the listing recipe, and the traffic routine I use when Etsy's algorithm gets moody, plus the steps I use to grow beyond Etsy too. Borrow my experience so you start with what I know works.</p>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="two-column animate-fade-up delay-5">
+      <!-- Video Placeholder -->
+      <div class="video-container">
+        <div class="video-placeholder">
+          <div class="play-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="8,5 19,12 8,19"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offer Card -->
+      <div class="offer-card">
+        <ul class="bullet-list">
+          <li class="bullet-item">Every morning I post what I would sell next, the exact AI prompt I'd use, and the tags and titles I'd list it with. You pick one and go.</li>
+          <li class="bullet-item">Choose your path to $5K per month based on your life: audience, bundles, or social, with the same decision rules I used to scale.</li>
+          <li class="bullet-item">My full $10K shop formula, plus the traffic routine I lean on so sales don't disappear when Etsy traffic dips.</li>
+          <li class="bullet-item">Pinterest setup the way I actually run it, so you are not relying on Etsy search as your only source of buyers.</li>
+          <li class="bullet-item">Twice-monthly calls to get real feedback and get unstuck fast. Ask me anything, leave with a clear next move.</li>
+        </ul>
+
+        <p class="plus-line">Plus the PLR vault, the build with me shop, the full tools library, and more.</p>
+
+        <a href="#" class="cta-button" id="mainCta">Start Selling Now</a>
+
+        <div class="microcopy">
+          <span class="microcopy__price">$67/month</span>
+          <span class="microcopy__separator">·</span>
+          <span class="microcopy__price">Instant access</span>
+          <span class="microcopy__separator">·</span>
+          <span class="microcopy__price">Cancel anytime</span>
+        </div>
+
+        <div class="reassurance">
+          <p class="reassurance__text">Everything's included. No surprises.</p>
+          <p class="reassurance__urgency">Price goes up as we add more.</p>
+        </div>
+
+        <div class="secondary-link">
+          <a href="#">See everything included</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Here Line -->
+    <div class="start-here animate-fade-up delay-5">
+      <p class="start-here__text"><strong>Start here:</strong> 15 minute setup, then pick your first product tonight.</p>
+    </div>
+  </section>
+
+  <!-- Sticky Bar -->
+  <div class="sticky-bar" id="stickyBar">
+    <div class="sticky-bar__inner">
+      <span class="sticky-bar__brand">AI Design & Grow Experience</span>
+      <span class="sticky-bar__price">$67/month · Cancel anytime</span>
+      <a href="#" class="sticky-bar__cta">Start Now</a>
+    </div>
+  </div>
+
+  <!-- JavaScript for Sticky Bar -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mainCta = document.getElementById('mainCta');
+      const stickyBar = document.getElementById('stickyBar');
+
+      if (!mainCta || !stickyBar) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            // When CTA is NOT visible, show sticky bar
+            if (!entry.isIntersecting) {
+              stickyBar.classList.add('visible');
+            } else {
+              stickyBar.classList.remove('visible');
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0
+        }
+      );
+
+      observer.observe(mainCta);
+    });
+  </script>
+</body>
+</html>
