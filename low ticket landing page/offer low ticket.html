@@ -803,6 +803,354 @@
         margin-bottom: 20px;
       }
     }
+
+    /* ==========================================
+       TESTIMONIALS SECTION STYLES
+       ========================================== */
+
+    #testimonials-section {
+      position: relative;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      padding: 100px 0 120px;
+      background: linear-gradient(180deg, var(--bg-cream) 0%, #FAF8F5 50%, var(--bg-cream) 100%);
+      overflow: hidden;
+    }
+
+    /* Subtle texture overlay */
+    #testimonials-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+    }
+
+    .testimonials-inner {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    /* Testimonials Header */
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .testimonials-eyebrow {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-teal);
+      margin-bottom: 16px;
+    }
+
+    .testimonials-headline {
+      font-family: 'OGG', serif;
+      font-weight: 400;
+      font-size: clamp(36px, 5vw, 48px);
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    .testimonials-headline .headline-coral {
+      color: var(--accent-coral);
+    }
+
+    .testimonials-subhead {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Featured Testimonial */
+    .featured-testimonial {
+      position: relative;
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 56px 64px;
+      margin-bottom: 48px;
+      box-shadow:
+        0 2px 4px rgba(45, 42, 38, 0.04),
+        0 8px 24px rgba(45, 42, 38, 0.08),
+        0 24px 48px rgba(45, 42, 38, 0.06);
+      border: 1px solid rgba(45, 42, 38, 0.06);
+      overflow: hidden;
+    }
+
+    .featured-testimonial::before {
+      content: '"';
+      position: absolute;
+      top: 24px;
+      left: 40px;
+      font-family: 'OGG', serif;
+      font-size: 180px;
+      line-height: 1;
+      color: var(--accent-coral);
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .featured-content {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .featured-quote {
+      font-family: 'OGG', serif;
+      font-size: clamp(24px, 3vw, 32px);
+      line-height: 1.4;
+      color: var(--text-primary);
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .featured-quote .result-number {
+      color: var(--accent-coral);
+      font-weight: 500;
+    }
+
+    .featured-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .featured-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-teal) 0%, #2A8585 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Satoshi', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #FFFFFF;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(29, 107, 107, 0.3);
+    }
+
+    .featured-info h4 {
+      font-family: 'Satoshi', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .featured-info p {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .featured-stat {
+      background: linear-gradient(135deg, #FFF5F3 0%, #FFEDE8 100%);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      border: 1px solid rgba(232, 134, 114, 0.15);
+      min-width: 180px;
+    }
+
+    .featured-stat .stat-number {
+      font-family: 'OGG', serif;
+      font-size: 42px;
+      font-weight: 500;
+      color: var(--accent-coral);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .featured-stat .stat-label {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Testimonials Grid */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow:
+        0 2px 4px rgba(45, 42, 38, 0.04),
+        0 6px 16px rgba(45, 42, 38, 0.06);
+      border: 1px solid rgba(45, 42, 38, 0.05);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 4px 8px rgba(45, 42, 38, 0.06),
+        0 12px 28px rgba(45, 42, 38, 0.1),
+        0 24px 48px rgba(45, 42, 38, 0.08);
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      font-family: 'OGG', serif;
+      font-size: 72px;
+      line-height: 1;
+      color: var(--accent-teal);
+      opacity: 0.08;
+    }
+
+    .card-quote {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-quote .result-highlight {
+      color: var(--accent-coral);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(45, 42, 38, 0.08);
+    }
+
+    .card-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-teal) 0%, #2A8585 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Satoshi', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .card-avatar.coral-bg {
+      background: linear-gradient(135deg, var(--accent-coral) 0%, #D4705A 100%);
+    }
+
+    .card-avatar.warm-bg {
+      background: linear-gradient(135deg, #8B7355 0%, #6B5A45 100%);
+    }
+
+    .card-info h5 {
+      font-family: 'Satoshi', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+
+    .card-info p {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .card-badge {
+      margin-left: auto;
+      background: linear-gradient(135deg, #F0FAF9 0%, #E5F5F4 100%);
+      border-radius: 20px;
+      padding: 6px 12px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-teal);
+      border: 1px solid rgba(29, 107, 107, 0.15);
+    }
+
+    /* Responsive Testimonials */
+    @media (max-width: 1024px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .featured-stat {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #testimonials-section {
+        padding: 72px 0 88px;
+      }
+
+      .testimonials-inner {
+        padding: 0 24px;
+      }
+
+      .testimonials-header {
+        margin-bottom: 48px;
+      }
+
+      .featured-testimonial {
+        padding: 32px 28px;
+        border-radius: 20px;
+      }
+
+      .featured-quote {
+        font-size: 22px;
+        margin-bottom: 24px;
+      }
+
+      .featured-avatar {
+        width: 56px;
+        height: 56px;
+        font-size: 20px;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .testimonial-card {
+        padding: 28px 24px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1085,5 +1433,141 @@
 
     </div>
   </section>
+
+  <!-- SECTION 3: TESTIMONIALS -->
+  <section id="testimonials-section">
+    <div class="testimonials-inner">
+
+      <!-- Section Header -->
+      <header class="testimonials-header">
+        <p class="testimonials-eyebrow">Real Results</p>
+        <h2 class="testimonials-headline">
+          Real members. <span class="headline-coral">Real revenue.</span>
+        </h2>
+        <p class="testimonials-subhead">
+          These Etsy sellers are doing exactly what we're sharing inside—and the numbers speak for themselves.
+        </p>
+      </header>
+
+      <!-- Featured Testimonial -->
+      <article class="featured-testimonial">
+        <div class="featured-content">
+          <div class="featured-text">
+            <p class="featured-quote">
+              "I was stuck at $500/month for two years. Then I joined Bailey's membership, implemented the SEO framework, and hit <span class="result-number">$8,247</span> in my first 4 months. This isn't hype—it's just what happens when you stop guessing."
+            </p>
+            <div class="featured-meta">
+              <div class="featured-avatar">JR</div>
+              <div class="featured-info">
+                <h4>Jessica R.</h4>
+                <p>Digital planners • Member since March 2024</p>
+              </div>
+            </div>
+          </div>
+          <div class="featured-stat">
+            <div class="stat-number">16x</div>
+            <div class="stat-label">Revenue Growth</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Testimonials Grid -->
+      <div class="testimonials-grid">
+
+        <!-- Testimonial 1: Marcus T. -->
+        <article class="testimonial-card">
+          <p class="card-quote">
+            "The listing audit alone was worth 10x the membership. Found 23 issues I never knew existed. <span class="result-highlight">Revenue up 340%</span> in 60 days."
+          </p>
+          <div class="card-meta">
+            <div class="card-avatar">MT</div>
+            <div class="card-info">
+              <h5>Marcus T.</h5>
+              <p>Vintage prints</p>
+            </div>
+            <span class="card-badge">340% ↑</span>
+          </div>
+        </article>
+
+        <!-- Testimonial 2: Sarah K. -->
+        <article class="testimonial-card">
+          <p class="card-quote">
+            "The weekly trend alerts are gold. Launched a collection based on one tip and made <span class="result-highlight">$3,200</span> in a single weekend. Still pinching myself."
+          </p>
+          <div class="card-meta">
+            <div class="card-avatar coral-bg">SK</div>
+            <div class="card-info">
+              <h5>Sarah K.</h5>
+              <p>Home decor</p>
+            </div>
+            <span class="card-badge">$3.2K weekend</span>
+          </div>
+        </article>
+
+        <!-- Testimonial 3: Emma L. -->
+        <article class="testimonial-card">
+          <p class="card-quote">
+            "Went from 2 sales a week to <span class="result-highlight">2-3 sales daily</span>. The pricing psychology training completely changed my approach. Wish I'd found this sooner."
+          </p>
+          <div class="card-meta">
+            <div class="card-avatar warm-bg">EL</div>
+            <div class="card-info">
+              <h5>Emma L.</h5>
+              <p>Stickers & journals</p>
+            </div>
+            <span class="card-badge">10x orders</span>
+          </div>
+        </article>
+
+        <!-- Testimonial 4: David M. -->
+        <article class="testimonial-card">
+          <p class="card-quote">
+            "I almost gave up on Etsy. Implemented Bailey's photo framework, <span class="result-highlight">tripled my conversion rate</span> in two weeks. Now I'm booked out for custom orders."
+          </p>
+          <div class="card-meta">
+            <div class="card-avatar">DM</div>
+            <div class="card-info">
+              <h5>David M.</h5>
+              <p>Custom woodwork</p>
+            </div>
+            <span class="card-badge">3x conversion</span>
+          </div>
+        </article>
+
+        <!-- Testimonial 5: Rachel P. -->
+        <article class="testimonial-card">
+          <p class="card-quote">
+            "Finally quit my day job. The shop review showed me exactly what to fix. <span class="result-highlight">From $800 to $4,500/month</span> in 90 days. Life-changing."
+          </p>
+          <div class="card-meta">
+            <div class="card-avatar coral-bg">RP</div>
+            <div class="card-info">
+              <h5>Rachel P.</h5>
+              <p>Wedding templates</p>
+            </div>
+            <span class="card-badge">Quit 9-5</span>
+          </div>
+        </article>
+
+        <!-- Testimonial 6: Mike C. -->
+        <article class="testimonial-card">
+          <p class="card-quote">
+            "The private podcast is my secret weapon. Bailey shared a tag strategy that <span class="result-highlight">doubled my search visibility</span> overnight. Obsessed."
+          </p>
+          <div class="card-meta">
+            <div class="card-avatar warm-bg">MC</div>
+            <div class="card-info">
+              <h5>Mike C.</h5>
+              <p>Digital downloads</p>
+            </div>
+            <span class="card-badge">2x visibility</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
 </body>
 </html>
