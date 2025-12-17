@@ -66,54 +66,22 @@
     .nowrap { white-space: nowrap; }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       TOP BAR - AESOP/KINFOLK EDITORIAL LUXURY NAV
+       TOP BAR - CLEAN PREMIUM HEADER (ALWAYS VISIBLE FOR EMBED)
        ═══════════════════════════════════════════════════════════════════════════ */
     .top-bar {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      height: 76px;
-      background: linear-gradient(180deg,
-        rgba(250, 248, 245, 0.96) 0%,
-        rgba(245, 241, 235, 0.94) 100%);
-      backdrop-filter: blur(28px) saturate(200%);
-      -webkit-backdrop-filter: blur(28px) saturate(200%);
-      border-bottom: 1px solid rgba(45, 42, 38, 0.05);
+      height: 72px;
+      background: #FFFFFF;
+      border-bottom: 1px solid rgba(45, 42, 38, 0.08);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 56px;
+      padding: 0 40px;
       z-index: 1000;
-      transform: translateY(-100%);
-      opacity: 0;
-      transition:
-        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    /* Luxury coral accent line */
-    .top-bar::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 120px;
-      height: 2px;
-      background: linear-gradient(90deg,
-        transparent 0%,
-        var(--accent-coral) 50%,
-        transparent 100%);
-      opacity: 0.5;
-    }
-
-    .top-bar.visible {
-      transform: translateY(0);
-      opacity: 1;
-      box-shadow:
-        0 4px 24px rgba(45, 42, 38, 0.03),
-        0 12px 48px rgba(45, 42, 38, 0.06);
+      box-shadow: 0 2px 20px rgba(45, 42, 38, 0.06);
     }
 
     .top-bar__logo {
@@ -122,46 +90,38 @@
     }
 
     .top-bar__logo img {
-      height: 38px;
+      height: 44px;
       width: auto;
       object-fit: contain;
-      filter: contrast(1.05);
     }
 
-    /* Editorial centered text - absolute positioned */
+    /* Center price display */
     .top-bar__center {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 600;
-      font-size: 14px;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 16px;
       color: var(--text-primary);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
     }
 
     .top-bar__sparkle {
       color: var(--accent-coral);
-      font-size: 10px;
-      opacity: 0.8;
-      animation: sparkle-pulse 2s ease-in-out infinite;
+      font-size: 18px;
     }
 
-    @keyframes sparkle-pulse {
-      0%, 100% { opacity: 0.5; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.2); }
-    }
-
-    /* Premium CTA - Understated luxury */
+    /* Premium CTA Button */
     .top-bar__cta {
-      height: 42px;
-      padding: 0 24px;
+      height: 44px;
+      padding: 0 28px;
       background: var(--accent-coral);
       color: white;
       font-weight: 700;
-      font-size: 12px;
+      font-size: 17px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       text-decoration: none;
@@ -214,7 +174,7 @@
       .top-bar__cta {
         width: 100%;
         height: 60px;
-        font-size: 14px;
+        font-size: 17px;
         border-radius: 14px;
         letter-spacing: 0.1em;
       }
@@ -276,7 +236,7 @@
     .hero-content {
       position: relative;
       z-index: 10;
-      padding: 20px 0 40px;
+      padding: 100px 0 40px;
     }
 
     .hero-container {
@@ -327,7 +287,7 @@
 
     .trust-badge__text {
       font-weight: 600;
-      font-size: 15px;
+      font-size: 18px;
       color: var(--text-primary);
       letter-spacing: 0.01em;
     }
@@ -344,7 +304,7 @@
       gap: 8px;
       margin-top: 14px;
       font-weight: 500;
-      font-size: 13px;
+      font-size: 16px;
       color: var(--text-secondary);
       letter-spacing: 0.04em;
     }
@@ -446,7 +406,7 @@
     }
 
     .subhead__text {
-      font-size: 19px;
+      font-size: 22px;
       line-height: 1.75;
       color: var(--text-body);
       max-width: 640px;
@@ -561,44 +521,41 @@
         0 24px 64px rgba(45, 42, 38, 0.1);
     }
 
-    /* Mockup - more minimal */
+    /* Image Gallery - Premium Product Grid */
     .offer-card__mockup {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
-    .mockup-placeholder {
-      height: 80px;
+    .product-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .product-gallery__item {
+      aspect-ratio: 1;
       background: linear-gradient(145deg, #FAF8F5 0%, #F5F1EB 100%);
-      border-radius: 12px;
-      border: 1px solid rgba(232, 226, 217, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+      border-radius: 10px;
+      border: 1px solid rgba(232, 226, 217, 0.5);
       overflow: hidden;
-    }
-
-    .mockup-placeholder::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.5) 50%, transparent 60%);
-      animation: shimmer 3s ease-in-out infinite;
-    }
-
-    @keyframes shimmer {
-      0%, 100% { transform: translateX(-100%); }
-      50% { transform: translateX(100%); }
-    }
-
-    .mockup-placeholder span {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
       position: relative;
-      z-index: 1;
+    }
+
+    .product-gallery__item:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: 1;
+    }
+
+    .product-gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product-gallery__item:hover img {
+      transform: scale(1.05);
     }
 
     /* Price Block - Elegant Compact */
@@ -613,7 +570,7 @@
     .price-label {
       display: block;
       font-weight: 500;
-      font-size: 10px;
+      font-size: 14px;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.16em;
@@ -644,7 +601,7 @@
 
     .price-reframe {
       display: block;
-      font-size: 11px;
+      font-size: 15px;
       font-weight: 500;
       color: var(--text-secondary);
       margin-top: 6px;
@@ -663,7 +620,7 @@
       gap: 14px;
       padding: 12px 0;
       border-bottom: 1px solid rgba(232, 226, 217, 0.35);
-      font-size: 15px;
+      font-size: 18px;
       line-height: 1.6;
       color: var(--text-body);
     }
@@ -689,7 +646,7 @@
 
     /* Plus Line - Subtle but readable */
     .offer-card__plus {
-      font-size: 14px;
+      font-size: 17px;
       font-style: italic;
       color: var(--text-secondary);
       text-align: center;
@@ -760,14 +717,14 @@
     }
 
     .microcopy-line {
-      font-size: 13px;
+      font-size: 16px;
       color: var(--text-secondary);
       margin-bottom: 6px;
       letter-spacing: 0.02em;
     }
 
     .microcopy-urgency {
-      font-size: 13px;
+      font-size: 16px;
       font-weight: 600;
       color: var(--accent-coral);
       font-style: italic;
@@ -782,7 +739,7 @@
     }
 
     .offer-card__link a {
-      font-size: 14px;
+      font-size: 17px;
       font-weight: 600;
       color: var(--accent-teal);
       text-decoration: none;
@@ -920,8 +877,22 @@
           <!-- Offer Card -->
           <div class="offer-card">
             <div class="offer-card__mockup">
-              <div class="mockup-placeholder">
-                <span>Product Preview</span>
+              <div class="product-gallery">
+                <div class="product-gallery__item">
+                  <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=400&fit=crop" alt="Digital product mockup">
+                </div>
+                <div class="product-gallery__item">
+                  <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200&h=200&fit=crop" alt="Etsy shop preview">
+                </div>
+                <div class="product-gallery__item">
+                  <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=200&h=200&fit=crop" alt="Creative design">
+                </div>
+                <div class="product-gallery__item">
+                  <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=200&h=200&fit=crop" alt="Brand mockup">
+                </div>
+                <div class="product-gallery__item">
+                  <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=200&h=200&fit=crop" alt="Digital download">
+                </div>
               </div>
             </div>
             
