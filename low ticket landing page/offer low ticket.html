@@ -1090,7 +1090,7 @@
 
     .testimonial-strip {
       background: linear-gradient(135deg, #1D6B6B 0%, #1A5F5F 50%, #175555 100%);
-      padding: 80px 24px;
+      padding: 56px 32px;
       margin-top: 80px;
       width: 100vw;
       margin-left: calc(-50vw + 50%);
@@ -1127,12 +1127,12 @@
     }
 
     .strip-container {
-      max-width: 1000px;
+      max-width: 1400px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       align-items: stretch;
-      gap: 24px;
+      gap: 20px;
       position: relative;
       z-index: 1;
     }
@@ -1141,8 +1141,8 @@
     .testimonial-card {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 24px;
-      padding: 32px 28px;
+      border-radius: 20px;
+      padding: 24px 22px;
       text-align: left;
       backdrop-filter: blur(12px);
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1166,29 +1166,108 @@
       margin-bottom: 20px;
     }
 
-    /* Premium Photo Avatar */
+    /* Creative Illustrated Avatar */
     .testimonial-avatar {
-      width: 52px;
-      height: 52px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
       position: relative;
       flex-shrink: 0;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-      background-size: cover;
-      background-position: center;
-      border: 3px solid rgba(255,255,255,0.3);
+      overflow: visible;
+      background: linear-gradient(145deg, #FAF8F5 0%, #F0EBE3 100%);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      border: 3px solid rgba(255,255,255,0.4);
     }
 
-    /* Photo avatars using placeholder images */
-    .avatar-1 {
-      background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face');
+    /* Illustrated face base */
+    .testimonial-avatar::before {
+      content: '';
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(145deg, #F5D0C5 0%, #E8B8A8 100%);
+      border-radius: 50%;
+      top: 14px;
+      left: 14px;
     }
-    .avatar-2 {
-      background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face');
+
+    /* Hair/style element */
+    .testimonial-avatar::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
     }
-    .avatar-3 {
-      background-image: url('https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&h=100&fit=crop&crop=face');
+
+    /* Sarah - brunette with side part */
+    .avatar-1::after {
+      width: 36px;
+      height: 24px;
+      background: linear-gradient(180deg, #5D4037 0%, #4E342E 100%);
+      top: 6px;
+      left: 10px;
+      border-radius: 50% 50% 40% 40%;
+    }
+    .avatar-1::before {
+      background: linear-gradient(145deg, #FFCBA4 0%, #E8B89D 100%);
+    }
+
+    /* Katie - blonde waves */
+    .avatar-2::after {
+      width: 40px;
+      height: 28px;
+      background: linear-gradient(180deg, #D4A853 0%, #C49A47 100%);
+      top: 4px;
+      left: 8px;
+      border-radius: 50% 50% 45% 45%;
+    }
+    .avatar-2::before {
+      background: linear-gradient(145deg, #FFE4C4 0%, #F5D5B5 100%);
+    }
+
+    /* Michelle - redhead */
+    .avatar-3::after {
+      width: 38px;
+      height: 26px;
+      background: linear-gradient(180deg, #B55239 0%, #8B4513 100%);
+      top: 5px;
+      left: 9px;
+      border-radius: 50% 50% 42% 42%;
+    }
+    .avatar-3::before {
+      background: linear-gradient(145deg, #FFE0D0 0%, #F5D0C0 100%);
+    }
+
+    /* Eyes for all avatars */
+    .testimonial-avatar .avatar-eyes {
+      position: absolute;
+      top: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 2;
+    }
+    .testimonial-avatar .avatar-eyes::before,
+    .testimonial-avatar .avatar-eyes::after {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: #3E2723;
+      border-radius: 50%;
+    }
+
+    /* Smile */
+    .testimonial-avatar .avatar-smile {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 5px;
+      border: 2px solid #C96A52;
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      z-index: 2;
     }
 
     .testimonial-meta {
@@ -1313,12 +1392,12 @@
       .cards-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1100px) {
       .also-row { flex-wrap: wrap; }
       .also-card { width: 260px; }
       .strip-container {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 700px;
+        max-width: 800px;
       }
     }
 
@@ -1863,7 +1942,10 @@
       <!-- Testimonial 1: First Sale Story -->
       <div class="testimonial-card">
         <div class="testimonial-header">
-          <div class="testimonial-avatar avatar-1" data-initials="S"></div>
+          <div class="testimonial-avatar avatar-1">
+            <span class="avatar-eyes"></span>
+            <span class="avatar-smile"></span>
+          </div>
           <div class="testimonial-meta">
             <span class="testimonial-name">Sarah M.</span>
             <span class="testimonial-stars">★★★★★</span>
@@ -1880,7 +1962,10 @@
       <!-- Testimonial 2: October Results -->
       <div class="testimonial-card">
         <div class="testimonial-header">
-          <div class="testimonial-avatar avatar-2" data-initials="K"></div>
+          <div class="testimonial-avatar avatar-2">
+            <span class="avatar-eyes"></span>
+            <span class="avatar-smile"></span>
+          </div>
           <div class="testimonial-meta">
             <span class="testimonial-name">Katie L.</span>
             <span class="testimonial-stars">★★★★★</span>
@@ -1897,7 +1982,10 @@
       <!-- Testimonial 3: Autopilot Sales -->
       <div class="testimonial-card">
         <div class="testimonial-header">
-          <div class="testimonial-avatar avatar-3" data-initials="M"></div>
+          <div class="testimonial-avatar avatar-3">
+            <span class="avatar-eyes"></span>
+            <span class="avatar-smile"></span>
+          </div>
           <div class="testimonial-meta">
             <span class="testimonial-name">Michelle R.</span>
             <span class="testimonial-stars">★★★★★</span>
