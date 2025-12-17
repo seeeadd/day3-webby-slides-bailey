@@ -1090,7 +1090,7 @@
 
     .testimonial-strip {
       background: linear-gradient(135deg, #1D6B6B 0%, #1A5F5F 50%, #175555 100%);
-      padding: 64px 24px;
+      padding: 80px 24px;
       margin-top: 80px;
       width: 100vw;
       margin-left: calc(-50vw + 50%);
@@ -1126,188 +1126,145 @@
     .strip-container {
       max-width: 1200px;
       margin: 0 auto;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) auto;
       align-items: stretch;
-      justify-content: center;
-      gap: 28px;
+      gap: 24px;
       position: relative;
       z-index: 1;
     }
 
-    /* Result Hero Cards */
-    .result-card {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 28px;
-      padding: 32px 28px 36px;
-      text-align: center;
+    /* Testimonial Story Cards */
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 32px 28px;
+      text-align: left;
       backdrop-filter: blur(12px);
-      flex: 1;
-      max-width: 300px;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
     }
 
-    .result-card:hover {
+    .testimonial-card:hover {
       transform: translateY(-6px);
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
     }
 
-    /* Decorative quote mark */
-    .result-card::before {
-      content: '"';
-      position: absolute;
-      top: 16px;
-      left: 20px;
-      font-family: 'OGG', Georgia, serif;
-      font-size: 80px;
-      line-height: 1;
-      color: rgba(224,122,95,0.15);
-      pointer-events: none;
-    }
-
-    /* THE BIG NUMBER */
-    .result-number {
-      font-family: 'OGG', Georgia, serif;
-      font-size: 56px;
-      font-weight: 700;
-      color: #FFFFFF;
-      line-height: 1;
-      margin-bottom: 8px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-
-    .result-number .arrow {
-      font-size: 32px;
-      color: rgba(255,255,255,0.4);
-      margin: 0 2px;
-    }
-
-    .result-label {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.45);
-      margin-bottom: 20px;
-    }
-
-    .result-quote {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 15px;
-      font-style: italic;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 20px;
-      line-height: 1.55;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Attribution with Avatar */
-    .result-attribution {
+    /* Card Header */
+    .testimonial-header {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
+      gap: 14px;
+      margin-bottom: 20px;
     }
 
-    /* PERSONALIZED AVATAR GRAPHICS */
-    .result-avatar {
-      width: 44px;
-      height: 44px;
+    /* Premium Photo Avatar */
+    .testimonial-avatar {
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       position: relative;
       flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
     }
 
-    /* Avatar base */
-    .result-avatar::before {
-      content: '';
+    /* Photo-realistic gradient backgrounds */
+    .avatar-1 {
+      background: linear-gradient(145deg, #E07A5F 0%, #C45C42 100%);
+    }
+    .avatar-2 {
+      background: linear-gradient(145deg, #D4A853 0%, #B8903D 100%);
+    }
+    .avatar-3 {
+      background: linear-gradient(145deg, #1D6B6B 0%, #155555 100%);
+    }
+
+    /* Initials inside avatar */
+    .testimonial-avatar::before {
+      content: attr(data-initials);
       position: absolute;
       inset: 0;
-      border-radius: 50%;
-    }
-
-    /* Jessica - Coral hair, warm skin */
-    .avatar-jessica {
-      background: linear-gradient(180deg, #E07A5F 0%, #D4705A 60%, #F5DDD5 60%, #EECFC5 100%);
-    }
-    .avatar-jessica::before {
-      background: radial-gradient(ellipse at 50% 35%, #F5DDD5 0%, #F5DDD5 25%, transparent 25%);
-    }
-    .avatar-jessica::after {
-      content: '';
-      position: absolute;
-      top: 8px; left: 8px; right: 8px;
-      height: 20px;
-      background: linear-gradient(180deg, #C96B50 0%, #E07A5F 100%);
-      border-radius: 50% 50% 0 0;
-    }
-
-    /* Amanda - Teal/dark hair, warm skin */
-    .avatar-amanda {
-      background: linear-gradient(180deg, #2A4A4A 0%, #1D3A3A 60%, #E8D5C8 60%, #DBC8BB 100%);
-    }
-    .avatar-amanda::before {
-      background: radial-gradient(ellipse at 50% 35%, #E8D5C8 0%, #E8D5C8 25%, transparent 25%);
-    }
-    .avatar-amanda::after {
-      content: '';
-      position: absolute;
-      top: 6px; left: 6px; right: 6px;
-      height: 24px;
-      background: linear-gradient(180deg, #1D3A3A 0%, #2A4A4A 100%);
-      border-radius: 50% 50% 40% 40%;
-    }
-
-    /* Stephanie - Golden/blonde hair, fair skin */
-    .avatar-stephanie {
-      background: linear-gradient(180deg, #D4A853 0%, #C9983F 60%, #FAE8D8 60%, #F0DCC8 100%);
-    }
-    .avatar-stephanie::before {
-      background: radial-gradient(ellipse at 50% 35%, #FAE8D8 0%, #FAE8D8 25%, transparent 25%);
-    }
-    .avatar-stephanie::after {
-      content: '';
-      position: absolute;
-      top: 5px; left: 5px; right: 5px;
-      height: 22px;
-      background: linear-gradient(180deg, #C9983F 0%, #D4A853 100%);
-      border-radius: 50% 50% 30% 30%;
-    }
-
-    /* Avatar eyes */
-    .result-avatar .eyes {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -20%);
       display: flex;
-      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      font-family: 'OGG', Georgia, serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: white;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
 
-    .result-avatar .eye {
-      width: 4px;
-      height: 4px;
-      background: #3D3A36;
-      border-radius: 50%;
-    }
-
-    /* Avatar smile */
-    .result-avatar .smile {
+    /* Subtle ring effect */
+    .testimonial-avatar::after {
+      content: '';
       position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 8px;
-      height: 4px;
-      border-bottom: 2px solid #D4705A;
-      border-radius: 0 0 50% 50%;
+      inset: 2px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+
+    .testimonial-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .testimonial-name {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .testimonial-stars {
+      color: #D4A853;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    /* Testimonial Title */
+    .testimonial-title {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 18px;
+      color: var(--accent-coral);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    /* Testimonial Body */
+    .testimonial-body {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .testimonial-body p {
+      margin-bottom: 12px;
+    }
+
+    .testimonial-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Highlight key results */
+    .highlight-result {
+      color: white;
+      font-weight: 700;
+      background: linear-gradient(180deg, transparent 60%, rgba(212, 168, 83, 0.35) 60%);
+      padding: 0 4px;
+    }
+
+    .mention {
+      color: var(--accent-coral);
+      font-weight: 600;
     }
 
     .result-name {
@@ -1377,7 +1334,16 @@
     @media (max-width: 1000px) {
       .also-row { flex-wrap: wrap; }
       .also-card { width: 260px; }
-      .strip-testimonial { max-width: 240px; }
+      .strip-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .strip-member-stat {
+        grid-column: span 2;
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.12);
+        padding-top: 24px;
+        margin-top: 8px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -1393,11 +1359,32 @@
       .also-card { width: 100%; max-width: 320px; }
       
       .testimonial-strip { padding: 48px 16px; margin-top: 56px; }
-      .strip-container { flex-direction: column; gap: 20px; }
-      .result-card { max-width: 100%; padding: 28px 24px; }
-      .result-card::before { font-size: 60px; top: 12px; left: 16px; }
-      .result-number { font-size: 44px; }
-      .result-avatar { width: 40px; height: 40px; }
+      .strip-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 500px;
+      }
+      .testimonial-card {
+        padding: 24px 20px;
+      }
+      .testimonial-header {
+        margin-bottom: 16px;
+      }
+      .testimonial-avatar {
+        width: 44px;
+        height: 44px;
+      }
+      .testimonial-avatar::before {
+        font-size: 17px;
+      }
+      .testimonial-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+      .testimonial-body {
+        font-size: 13px;
+        line-height: 1.6;
+      }
       .strip-member-stat {
         border-left: none;
         border-top: 1px solid rgba(255,255,255,0.12);
@@ -1906,58 +1893,57 @@
     </div>
   </section>
 
-  <!-- Testimonial Strip - NUMBERS FIRST + ALIVE -->
+  <!-- Testimonial Strip - REAL MEMBER STORIES -->
   <div class="testimonial-strip">
     <div class="strip-container">
 
-      <!-- Result Card 1: Jessica R. - $8,247 -->
-      <div class="result-card">
-        <div class="result-number">$8,247</div>
-        <div class="result-label">In 4 Months</div>
-        <p class="result-quote">"Hit this after being stuck at $500/month for 2 years"</p>
-        <div class="result-attribution">
-          <div class="result-avatar avatar-jessica">
-            <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-            <div class="smile"></div>
+      <!-- Testimonial 1: First Sale Story -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar avatar-1" data-initials="S"></div>
+          <div class="testimonial-meta">
+            <span class="testimonial-name">Sarah M.</span>
+            <span class="testimonial-stars">★★★★★</span>
           </div>
-          <div>
-            <span class="result-name">Jessica R.</span>
-            <span class="result-stars">★★★★★</span>
-          </div>
+        </div>
+        <h4 class="testimonial-title">Well it happened....</h4>
+        <div class="testimonial-body">
+          <p>Hey guys! Sorry for the dramatic title haha, but it HAPPENED!</p>
+          <p>I got my <span class="highlight-result">first sale</span> using a prompt listed here in the daily's we get from the group! I don't even think I am a week in...</p>
+          <p>We can do it guys!!!!</p>
         </div>
       </div>
 
-      <!-- Result Card 2: Amanda K. - 12 → 340 -->
-      <div class="result-card">
-        <div class="result-number">12<span class="arrow">→</span>340</div>
-        <div class="result-label">Sales / Month</div>
-        <p class="result-quote">"Using the listing optimization framework"</p>
-        <div class="result-attribution">
-          <div class="result-avatar avatar-amanda">
-            <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-            <div class="smile"></div>
+      <!-- Testimonial 2: October Results -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar avatar-2" data-initials="K"></div>
+          <div class="testimonial-meta">
+            <span class="testimonial-name">Katie L.</span>
+            <span class="testimonial-stars">★★★★★</span>
           </div>
-          <div>
-            <span class="result-name">Amanda K.</span>
-            <span class="result-stars">★★★★★</span>
-          </div>
+        </div>
+        <h4 class="testimonial-title">OMG - My October Results</h4>
+        <div class="testimonial-body">
+          <p>Just checked my numbers for October and oh my gosh. I ended the month with <span class="highlight-result">1,760 sales</span> - just in the month of October, alone! I'm in shock.</p>
+          <p>Before I joined this group on 7/3/24, I only had 166 sales over a six-month period.</p>
+          <p>Learning from the G.O.A.T. <span class="mention">@Bailey V</span>, soaking up the tips and tricks, believing in myself, trusting the process... my shop is doing so well!</p>
         </div>
       </div>
 
-      <!-- Result Card 3: Stephanie W. - $5K Months -->
-      <div class="result-card">
-        <div class="result-number">$5K</div>
-        <div class="result-label">Months Are Normal</div>
-        <p class="result-quote">"The Daily Drop alone is worth 10x the price"</p>
-        <div class="result-attribution">
-          <div class="result-avatar avatar-stephanie">
-            <div class="eyes"><span class="eye"></span><span class="eye"></span></div>
-            <div class="smile"></div>
+      <!-- Testimonial 3: Autopilot Sales -->
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar avatar-3" data-initials="M"></div>
+          <div class="testimonial-meta">
+            <span class="testimonial-name">Michelle R.</span>
+            <span class="testimonial-stars">★★★★★</span>
           </div>
-          <div>
-            <span class="result-name">Stephanie W.</span>
-            <span class="result-stars">★★★★★</span>
-          </div>
+        </div>
+        <h4 class="testimonial-title">Now Over 600 Sales On Complete Autopilot!</h4>
+        <div class="testimonial-body">
+          <p>Have been busy with work and haven't touched my store in months, yet now passed <span class="highlight-result">600 sales</span> on autopilot!</p>
+          <p>If you want to learn how, get <span class="mention">@Bailey V Design Club For Etsy</span>! It simply works!!</p>
         </div>
       </div>
 
