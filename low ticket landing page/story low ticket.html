@@ -683,6 +683,316 @@
         padding: 0 24px;
       }
     }
+
+    /* ==========================================
+       STORY CTA - PRICING BLOCK
+       ========================================== */
+
+    #story-cta {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      padding: 88px 24px;
+      background: linear-gradient(180deg,
+        #F7F3EE 0%,
+        #FAF8F5 50%,
+        #F7F3EE 100%
+      );
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Real Watercolor Blobs */
+    #story-cta .watercolor-blob {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.65;
+    }
+
+    /* Watercolor Blob 1 - Coral (Top Right) */
+    #story-cta .blob-1 {
+      top: -40px;
+      right: -20px;
+      width: 280px;
+      height: 220px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 220'%3E%3Cdefs%3E%3Cfilter id='watercolor1' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='4' seed='15' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='30' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3C/defs%3E%3Cellipse cx='140' cy='110' rx='100' ry='75' fill='%23E07A5F' filter='url(%23watercolor1)' opacity='0.35'/%3E%3Cellipse cx='160' cy='95' rx='70' ry='55' fill='%23E07A5F' filter='url(%23watercolor1)' opacity='0.25'/%3E%3Cellipse cx='125' cy='120' rx='50' ry='40' fill='%23D4A574' filter='url(%23watercolor1)' opacity='0.15'/%3E%3C/svg%3E") no-repeat center;
+      background-size: contain;
+    }
+
+    /* Watercolor Blob 2 - Teal (Bottom Left) */
+    #story-cta .blob-2 {
+      bottom: -30px;
+      left: -30px;
+      width: 240px;
+      height: 200px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 200'%3E%3Cdefs%3E%3Cfilter id='watercolor2' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.035' numOctaves='5' seed='42' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='25' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3C/defs%3E%3Cellipse cx='120' cy='100' rx='85' ry='70' fill='%231D6B6B' filter='url(%23watercolor2)' opacity='0.3'/%3E%3Cellipse cx='100' cy='115' rx='60' ry='50' fill='%231D6B6B' filter='url(%23watercolor2)' opacity='0.2'/%3E%3Cellipse cx='135' cy='90' rx='45' ry='35' fill='%2329A1A1' filter='url(%23watercolor2)' opacity='0.15'/%3E%3C/svg%3E") no-repeat center;
+      background-size: contain;
+    }
+
+    /* Watercolor Blob 3 - Gold (Center Right) */
+    #story-cta .blob-3 {
+      top: 50%;
+      right: 5%;
+      transform: translateY(-50%);
+      width: 180px;
+      height: 160px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 160'%3E%3Cdefs%3E%3Cfilter id='watercolor3' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.045' numOctaves='4' seed='88' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='22' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3C/defs%3E%3Cellipse cx='90' cy='80' rx='65' ry='55' fill='%23D4A574' filter='url(%23watercolor3)' opacity='0.28'/%3E%3Cellipse cx='75' cy='90' rx='45' ry='40' fill='%23D4A574' filter='url(%23watercolor3)' opacity='0.18'/%3E%3C/svg%3E") no-repeat center;
+      background-size: contain;
+    }
+
+    #story-cta .cta-container {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Headline */
+    #story-cta .cta-headline {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1F1D1A;
+      margin-bottom: 16px;
+      -webkit-text-stroke: 0.5px currentColor;
+    }
+
+    /* Subline */
+    #story-cta .cta-subline {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #2D2A26;
+      max-width: 580px;
+      margin: 0 auto 40px;
+    }
+
+    /* Divider */
+    #story-cta .cta-divider {
+      width: 64px;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        #E8E2D9 20%,
+        #E8E2D9 80%,
+        transparent 100%
+      );
+      margin: 0 auto 40px;
+    }
+
+    /* Pricing Stack */
+    #story-cta .pricing-stack {
+      margin-bottom: 48px;
+    }
+
+    #story-cta .pricing-label {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #5A544C;
+      margin-bottom: 8px;
+    }
+
+    #story-cta .pricing-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    #story-cta .price-amount {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 96px;
+      font-weight: 700;
+      line-height: 1;
+      color: #1F1D1A;
+      -webkit-text-stroke: 0.75px currentColor;
+      white-space: nowrap;
+    }
+
+    #story-cta .price-discount {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #E07A5F;
+    }
+
+    #story-cta .price-billing {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #5A544C;
+      margin-bottom: 4px;
+    }
+
+    #story-cta .price-daily {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 17px;
+      font-weight: 500;
+      font-style: italic;
+      color: #2D2A26;
+      margin-bottom: 16px;
+    }
+
+    #story-cta .price-urgency {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #E07A5F;
+    }
+
+    /* CTA Button */
+    #story-cta .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 280px;
+      height: 64px;
+      padding: 0 48px;
+      background: #E07A5F;
+      color: #FFFFFF;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow:
+        0 2px 4px rgba(224, 122, 95, 0.2),
+        0 8px 24px rgba(224, 122, 95, 0.25);
+      transition:
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        background 0.3s ease;
+    }
+
+    #story-cta .cta-button:hover {
+      transform: translateY(-3px);
+      background: #D4694E;
+      box-shadow:
+        0 4px 8px rgba(224, 122, 95, 0.25),
+        0 16px 40px rgba(224, 122, 95, 0.3);
+    }
+
+    #story-cta .cta-button:active {
+      transform: translateY(-1px);
+    }
+
+    /* Trust Microcopy */
+    #story-cta .trust-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    #story-cta .trust-item {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #5A544C;
+    }
+
+    #story-cta .trust-dot {
+      width: 4px;
+      height: 4px;
+      background: #D4CEC4;
+      border-radius: 50%;
+    }
+
+    /* Story CTA Responsive */
+    @media (max-width: 768px) {
+      #story-cta {
+        padding: 64px 20px;
+      }
+
+      #story-cta .cta-headline {
+        font-size: 32px;
+      }
+
+      #story-cta .cta-subline {
+        font-size: 17px;
+        margin-bottom: 32px;
+      }
+
+      #story-cta .cta-divider {
+        margin-bottom: 32px;
+      }
+
+      #story-cta .price-amount {
+        font-size: 72px;
+      }
+
+      #story-cta .pricing-row {
+        gap: 12px;
+      }
+
+      #story-cta .price-discount {
+        font-size: 16px;
+      }
+
+      #story-cta .cta-button {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      #story-cta .trust-dot {
+        display: none;
+      }
+
+      #story-cta .trust-row {
+        gap: 16px;
+      }
+
+      /* Hide side blob on small screens */
+      #story-cta .blob-3 {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #story-cta .cta-headline {
+        font-size: 28px;
+      }
+
+      #story-cta .price-amount {
+        font-size: 64px;
+      }
+
+      #story-cta .pricing-row {
+        flex-direction: column;
+        gap: 4px;
+        align-items: center;
+      }
+
+      /* Scale down watercolor blobs */
+      #story-cta .blob-1 {
+        width: 180px;
+        height: 140px;
+        top: -20px;
+        right: -40px;
+      }
+
+      #story-cta .blob-2 {
+        width: 160px;
+        height: 130px;
+        bottom: -20px;
+        left: -40px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -873,6 +1183,42 @@
         <li>Grows and compounds over time</li>
       </ul>
 
+    </div>
+  </section>
+
+  <!-- Story CTA Section -->
+  <section id="story-cta">
+    <div class="watercolor-blob blob-1"></div>
+    <div class="watercolor-blob blob-2"></div>
+    <div class="watercolor-blob blob-3"></div>
+
+    <div class="cta-container">
+      <h2 class="cta-headline">Ready to build your shop<br>the way I actually run mine?</h2>
+      <p class="cta-subline">Click below to join. You will see exactly what to make, how to list it, and what to do next.</p>
+
+      <div class="cta-divider"></div>
+
+      <div class="pricing-stack">
+        <div class="pricing-label">Join For</div>
+        <div class="pricing-row">
+          <span class="price-amount">$27</span>
+          <span class="price-period">/mo</span>
+          <span class="price-discount">($477 discount)</span>
+        </div>
+        <div class="price-billing">(billed annually)</div>
+        <div class="price-daily">just $0.90/day</div>
+        <div class="price-urgency">Prices raising soon to $67/mo</div>
+      </div>
+
+      <a href="#checkout" class="cta-button">Get Instant Access</a>
+
+      <div class="trust-row">
+        <span class="trust-item">Secure checkout</span>
+        <span class="trust-dot"></span>
+        <span class="trust-item">Instant access</span>
+        <span class="trust-dot"></span>
+        <span class="trust-item">No surprises</span>
+      </div>
     </div>
   </section>
 
