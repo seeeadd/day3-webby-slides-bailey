@@ -91,47 +91,118 @@
     }
 
     .part1-container {
-      max-width: 100%;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 60px;
+      padding: 0 48px;
       position: relative;
       z-index: 1;
     }
 
-    /* Hero Header */
+    /* Hero Header - Editorial Magazine Style */
     .story-hero {
       text-align: center;
       margin-bottom: 80px;
+      position: relative;
     }
 
-    .story-hero .eyebrow {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--coral);
-      margin-bottom: 16px;
+    /* Radial glow behind header */
+    .story-hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse at center,
+        rgba(212, 165, 116, 0.12) 0%,
+        rgba(212, 165, 116, 0.05) 40%,
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 0;
     }
 
     .story-hero h1 {
       font-family: 'OGG', Georgia, serif;
-      font-size: 3.2rem;
+      font-size: 3.5rem;
       font-weight: 400;
       line-height: 1.15;
       color: var(--text-primary);
+      position: relative;
+      z-index: 1;
     }
 
+    /* Small lead-in text */
     .story-hero h1 .small-line {
       display: block;
-      font-size: 1.5rem;
+      font-family: 'OGG', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      font-style: italic;
       color: var(--text-secondary);
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
     }
 
+    /* Hero moment - 7-Figure with hand-drawn underline */
     .story-hero h1 .emphasis {
       color: var(--coral);
       font-style: italic;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 8px;
+    }
+
+    .story-hero h1 .emphasis::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -5%;
+      width: 110%;
+      height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 15' preserveAspectRatio='none'%3E%3Cpath d='M2 8 Q30 2, 60 9 T120 7 T180 10 Q195 11, 198 8' stroke='%23E07A5F' stroke-width='3' fill='none' stroke-linecap='round' opacity='0.7'/%3E%3C/svg%3E");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    /* Etsy Shop Owner with gold stars */
+    .story-hero h1 .title-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .story-hero h1 .star {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      color: var(--gold);
+      animation: twinkle 2s ease-in-out infinite;
+    }
+
+    .story-hero h1 .star--left {
+      animation-delay: 0s;
+    }
+
+    .story-hero h1 .star--right {
+      animation-delay: 1s;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.4;
+        transform: scale(0.9) rotate(0deg);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.1) rotate(10deg);
+      }
+    }
+
+    .story-hero h1 .title-text {
+      display: inline-block;
     }
 
     /* Two-Column Layout */
@@ -360,9 +431,9 @@
     }
 
     .part2-container {
-      max-width: 100%;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 60px;
+      padding: 0 48px;
       position: relative;
       z-index: 1;
       text-align: center;
@@ -658,11 +729,25 @@
 
     @media (max-width: 600px) {
       .story-hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
       }
 
       .story-hero h1 .small-line {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+      }
+
+      .story-hero h1 .title-line {
+        gap: 10px;
+      }
+
+      .story-hero h1 .star {
+        width: 14px;
+        height: 14px;
+      }
+
+      .story-hero::before {
+        width: 350px;
+        height: 250px;
       }
 
       .pull-quote {
@@ -1244,12 +1329,20 @@
   <section class="story-part1-section">
     <div class="part1-container">
 
-      <!-- Hero Header -->
+      <!-- Hero Header - Editorial Magazine Style -->
       <header class="story-hero">
         <h1>
           <span class="small-line">From Stay-at-Home Mom to</span>
-          <span class="emphasis">7-Figure</span><br>
-          Etsy Shop Owner
+          <span class="emphasis">7-Figure</span>
+          <span class="title-line">
+            <svg class="star star--left" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+            </svg>
+            <span class="title-text">Etsy Shop Owner</span>
+            <svg class="star star--right" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+            </svg>
+          </span>
         </h1>
       </header>
 
