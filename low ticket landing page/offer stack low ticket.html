@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pitch CTA - Ready When You Are</title>
+  <style>
+    /* ==========================================
+       BASE64 FONT EMBEDDINGS
+       ========================================== */
+
+    @font-face {
+      font-family: 'OGG';
+      src: url(data:font/truetype;base64,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) format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIAAAABqiwAAIZBAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGjYbjQIcgzAGYACGEAhUCZ8cEQwKg+dcg6oNC4UKAAE2AiQDiVQEIAWOUgeFfAyBZhsCJGezD2K8bGAE2I0B0ByQ+N+/fN+/PXPvPLd7nqSyqKKD8OE/W+MbG9q8+3/b/lU4qm2BoKqpY4qC7sJ3JH0rEohIQkB1FYQQEolInYv+SjuBEb1ZFRvCJjAM/+f3X7tnq6rKe+L3z+bXlb9CKRSSoIxCFCxRiEIIJYRQwk4l7JSSQqMQQiWESlQhVEJaqqRmb9b9X3Vn/7e/Ax0g9ACe9HsAOACbAQJgFbYBdgAcAPYB4AFg9o89/8/91Pf1KhKJREqRKqQm6UE6Eg0UMZ0kkCUkkFXBRJCQQlaCBJDQSgIJBVKplFKqQ5nKKGMRZZY8i46xhprPxlT+2w8AAA=) format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIAAAABqiwAAIZBAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGjYbjQIcgzAGYACGEAhUCZ8cEQwKg+dcg6oNC4UKAAE2AiQDiVQEIAWOUgeFfAyBZhsCJGezD2K8bGAE2I0B0ByQ+N+/fN+/PXPvPLd7nqSyqKKD8OE/W+MbG9q8+3/b/lU4qm2BoKqpY4qC7sJ3JH0rEohIQkB1FYQQEolInYv+SjuBEb1ZFRvCJjAM/+f3X7tnq6rKe+L3z+bXlb9CKRSSoIxCFCxRiEIIJYRQwk4l7JSSQqMQQiWESlQhVEJaqqRmb9b9X3Vn/7e/Ax0g9ACe9HsAOACbAQJgFbYBdgAcAPYB4AFg9o89/8/91Pf1KhKJREqRKqQm6UE6Eg0UMZ0kkCUkkFXBRJCQQlaCBJDQSgIJBVKplFKqQ5nKKGMRZZY8i46xhprPxlT+2w8AAA=) format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIAAAABqiwAAIZBAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGjYbjQIcgzAGYACGEAhUCZ8cEQwKg+dcg6oNC4UKAAE2AiQDiVQEIAWOUgeFfAyBZhsCJGezD2K8bGAE2I0B0ByQ+N+/fN+/PXPvPLd7nqSyqKKD8OE/W+MbG9q8+3/b/lU4qm2BoKqpY4qC7sJ3JH0rEohIQkB1FYQQEolInYv+SjuBEb1ZFRvCJjAM/+f3X7tnq6rKe+L3z+bXlb9CKRSSoIxCFCxRiEIIJYRQwk4l7JSSQqMQQiWESlQhVEJaqqRmb9b9X3Vn/7e/Ax0g9ACe9HsAOACbAQJgFbYBdgAcAPYB4AFg9o89/8/91Pf1KhKJREqRKqQm6UE6Eg0UMZ0kkCUkkFXBRJCQQlaCBJDQSgIJBVKplFKqQ5nKKGMRZZY8i46xhprPxlT+2w8AAA=) format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIAAAABqiwAAIZBAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGjYbjQIcgzAGYACGEAhUCZ8cEQwKg+dcg6oNC4UKAAE2AiQDiVQEIAWOUgeFfAyBZhsCJGezD2K8bGAE2I0B0ByQ+N+/fN+/PXPvPLd7nqSyqKKD8OE/W+MbG9q8+3/b/lU4qm2BoKqpY4qC7sJ3JH0rEohIQkB1FYQQEolInYv+SjuBEb1ZFRvCJjAM/+f3X7tnq6rKe+L3z+bXlb9CKRSSoIxCFCxRiEIIJYRQwk4l7JSSQqMQQiWESlQhVEJaqqRmb9b9X3Vn/7e/Ax0g9ACe9HsAOACbAQJgFbYBdgAcAPYB4AFg9o89/8/91Pf1KhKJREqRKqQm6UE6Eg0UMZ0kkCUkkFXBRJCQQlaCBJDQSgIJBVKplFKqQ5nKKGMRZZY8i46xhprPxlT+2w8AAA=) format('woff2');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ==========================================
+       RESET & BASE
+       ========================================== */
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ==========================================
+       PITCH CTA SECTION - DARK CHARCOAL
+       All styles scoped under #pitch-cta
+       ========================================== */
+
+    #pitch-cta {
+      width: 100%;
+      padding: 72px 24px;
+      background: linear-gradient(180deg,
+        #1F1D1A 0%,
+        #2D2A26 50%,
+        #1F1D1A 100%
+      );
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle noise texture overlay */
+    #pitch-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Coral watercolor blob - top right */
+    #pitch-cta .blob-coral {
+      position: absolute;
+      top: -100px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(ellipse at 40% 40%,
+        rgba(224, 122, 95, 0.20) 0%,
+        rgba(224, 122, 95, 0.10) 40%,
+        rgba(224, 122, 95, 0.03) 70%,
+        transparent 100%
+      );
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Teal/sage watercolor blob - bottom left */
+    #pitch-cta .blob-teal {
+      position: absolute;
+      bottom: -80px;
+      left: -100px;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(ellipse at 60% 60%,
+        rgba(29, 107, 107, 0.18) 0%,
+        rgba(29, 107, 107, 0.08) 40%,
+        rgba(29, 107, 107, 0.02) 70%,
+        transparent 100%
+      );
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Container */
+    #pitch-cta .pitch-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Two-column grid */
+    #pitch-cta .pitch-grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 56px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 968px) {
+      #pitch-cta .pitch-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* Mockup placeholder */
+    #pitch-cta .mockup-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(145deg,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(224, 122, 95, 0.05) 50%,
+        rgba(29, 107, 107, 0.05) 100%
+      );
+      border: 2px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 968px) {
+      #pitch-cta .mockup-placeholder {
+        max-width: 360px;
+        margin: 0 auto;
+        order: 2;
+      }
+    }
+
+    /* Content column */
+    #pitch-cta .pitch-content {
+      /* Right column content */
+    }
+
+    @media (max-width: 968px) {
+      #pitch-cta .pitch-content {
+        text-align: center;
+      }
+    }
+
+    /* Eyebrow pill */
+    #pitch-cta .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #E07A5F 0%, #C96A52 100%);
+      border-radius: 100px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+      box-shadow:
+        0 2px 8px rgba(224, 122, 95, 0.3),
+        0 8px 24px rgba(224, 122, 95, 0.2);
+    }
+
+    /* Headline */
+    #pitch-cta .pitch-headline {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.15;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      -webkit-text-stroke: 0.5px currentColor;
+    }
+
+    @media (max-width: 768px) {
+      #pitch-cta .pitch-headline {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #pitch-cta .pitch-headline {
+        font-size: 30px;
+      }
+    }
+
+    /* Subline */
+    #pitch-cta .pitch-subline {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 28px;
+      max-width: 520px;
+    }
+
+    @media (max-width: 968px) {
+      #pitch-cta .pitch-subline {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #pitch-cta .pitch-subline {
+        font-size: 17px;
+      }
+    }
+
+    /* Chips container */
+    #pitch-cta .chips-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media (max-width: 968px) {
+      #pitch-cta .chips-container {
+        justify-content: center;
+      }
+    }
+
+    /* Individual chip */
+    #pitch-cta .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 100px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      white-space: nowrap;
+      backdrop-filter: blur(8px);
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    #pitch-cta .chip:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Accent chip for "+more" */
+    #pitch-cta .chip--accent {
+      background: rgba(29, 107, 107, 0.2);
+      border-color: rgba(29, 107, 107, 0.3);
+      color: #4ECDC4;
+    }
+
+    @media (max-width: 768px) {
+      #pitch-cta .chip {
+        font-size: 14px;
+        padding: 8px 14px;
+      }
+    }
+
+    /* CTA Slab */
+    #pitch-cta .cta-slab {
+      display: block;
+      width: 100%;
+      padding: 36px 48px;
+      background: linear-gradient(135deg, #E07A5F 0%, #C96A52 100%);
+      border-radius: 20px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 4px 16px rgba(224, 122, 95, 0.3),
+        0 12px 40px rgba(224, 122, 95, 0.25),
+        0 0 80px rgba(224, 122, 95, 0.15);
+      transition:
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-bottom: 24px;
+    }
+
+    /* Shimmer effect */
+    #pitch-cta .cta-slab::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.15) 50%,
+        transparent 100%
+      );
+      transition: left 0.6s ease;
+    }
+
+    #pitch-cta .cta-slab:hover::before {
+      left: 100%;
+    }
+
+    #pitch-cta .cta-slab:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 8px 24px rgba(224, 122, 95, 0.35),
+        0 20px 56px rgba(224, 122, 95, 0.3),
+        0 0 100px rgba(224, 122, 95, 0.2);
+    }
+
+    #pitch-cta .cta-slab:active {
+      transform: translateY(-1px);
+    }
+
+    #pitch-cta .cta-slab-line1 {
+      display: block;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    #pitch-cta .cta-slab-line2 {
+      display: block;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      #pitch-cta .cta-slab {
+        padding: 28px 24px;
+        border-radius: 16px;
+      }
+
+      #pitch-cta .cta-slab-line1 {
+        font-size: 24px;
+      }
+
+      #pitch-cta .cta-slab-line2 {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #pitch-cta .cta-slab-line1 {
+        font-size: 22px;
+      }
+    }
+
+    /* Microcopy row */
+    #pitch-cta .microcopy-row {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    #pitch-cta .microcopy {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    #pitch-cta .microcopy-dot {
+      display: inline-block;
+      margin: 0 14px;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 520px) {
+      #pitch-cta .microcopy {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      #pitch-cta .microcopy-dot {
+        display: none;
+      }
+    }
+
+    /* Urgency line */
+    #pitch-cta .urgency-line {
+      text-align: center;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #E07A5F;
+    }
+
+    @media (max-width: 768px) {
+      #pitch-cta .urgency-line {
+        font-size: 14px;
+      }
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      #pitch-cta .cta-slab,
+      #pitch-cta .cta-slab::before,
+      #pitch-cta .chip {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PITCH CTA SECTION -->
+<section id="pitch-cta">
+
+  <!-- Watercolor blobs -->
+  <div class="blob-coral"></div>
+  <div class="blob-teal"></div>
+
+  <div class="pitch-container">
+
+    <!-- Two Column Grid -->
+    <div class="pitch-grid">
+
+      <!-- Left: Mockup Placeholder -->
+      <div class="mockup-placeholder">
+        Mockup placeholder
+      </div>
+
+      <!-- Right: Content -->
+      <div class="pitch-content">
+
+        <!-- Eyebrow -->
+        <div class="eyebrow-pill">Ready When You Are</div>
+
+        <!-- Headline -->
+        <h2 class="pitch-headline">
+          Ready to build your shop<br>
+          the way I actually run mine?
+        </h2>
+
+        <!-- Subline -->
+        <p class="pitch-subline">
+          Get the Daily Drop, the $10K Month Blueprint, my Traffic Loop, and the calls where you can ask me what to do next.
+        </p>
+
+        <!-- Chips -->
+        <div class="chips-container">
+          <span class="chip">Daily Drop</span>
+          <span class="chip">3 Paths to $5K</span>
+          <span class="chip">$10K Month Blueprint</span>
+          <span class="chip">Traffic Loop</span>
+          <span class="chip">Ask Bailey Calls</span>
+          <span class="chip">Steal My Bestsellers</span>
+          <span class="chip">PLR Vault</span>
+          <span class="chip chip--accent">Tools Stack + more</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CTA Slab -->
+    <a href="#checkout" class="cta-slab">
+      <span class="cta-slab-line1">Get Instant Access Now →</span>
+      <span class="cta-slab-line2">+ Get Bailey's Daily Drop, Blueprints, Traffic Loop, and everything included</span>
+    </a>
+
+    <!-- Microcopy -->
+    <div class="microcopy-row">
+      <span class="microcopy">$27/mo billed annually</span>
+      <span class="microcopy-dot">•</span>
+      <span class="microcopy">Instant access</span>
+      <span class="microcopy-dot">•</span>
+      <span class="microcopy">Secure checkout</span>
+    </div>
+
+    <!-- Urgency -->
+    <div class="urgency-line">Prices raising soon to $67/mo</div>
+
+  </div>
+</section>
+
+</body>
+</html>
