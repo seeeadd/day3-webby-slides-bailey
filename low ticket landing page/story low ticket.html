@@ -91,9 +91,9 @@
     }
 
     .part1-container {
-      max-width: 1200px;
+      max-width: 100%;
       margin: 0 auto;
-      padding: 0 40px;
+      padding: 0 60px;
       position: relative;
       z-index: 1;
     }
@@ -137,9 +137,11 @@
     /* Two-Column Layout */
     .story-columns {
       display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 80px;
+      grid-template-columns: 1fr 420px;
+      gap: 60px;
       align-items: start;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     /* Left Column - Text Content */
@@ -252,12 +254,9 @@
     .polaroid-image {
       width: 100%;
       aspect-ratio: 1;
-      background: linear-gradient(135deg, var(--cream) 0%, var(--cream-warm) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
+      object-fit: cover;
       border-radius: 4px;
+      display: block;
     }
 
     .polaroid-caption {
@@ -359,9 +358,9 @@
     }
 
     .part2-container {
-      max-width: 720px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 40px;
+      padding: 0 60px;
       position: relative;
       z-index: 1;
     }
@@ -718,34 +717,26 @@
             
             <div class="polaroid polaroid-1">
               <div class="tape"></div>
-              <div class="polaroid-image">
-                <span style="font-size: 2.5rem; filter: grayscale(0.3) sepia(0.2);">📦</span>
-              </div>
-              <p class="polaroid-caption">Midnight packaging</p>
+              <img src="https://i.imgur.com/aPJ5FOE.png" alt="Bailey photo" class="polaroid-image">
+              <p class="polaroid-caption">The beginning</p>
             </div>
 
             <div class="polaroid polaroid-2">
               <div class="tape"></div>
-              <div class="polaroid-image">
-                <span style="font-size: 2.5rem; filter: grayscale(0.3) sepia(0.2);">🏠</span>
-              </div>
-              <p class="polaroid-caption">Garage = warehouse</p>
+              <img src="https://i.imgur.com/YyqpD9Z.jpeg" alt="Bailey photo" class="polaroid-image">
+              <p class="polaroid-caption">Building the dream</p>
             </div>
 
             <div class="polaroid polaroid-3">
               <div class="tape"></div>
-              <div class="polaroid-image">
-                <span style="font-size: 2.5rem; filter: grayscale(0.3) sepia(0.2);">😴</span>
-              </div>
-              <p class="polaroid-caption">Exhausted mom</p>
+              <img src="https://i.imgur.com/Dpkm5PH.png" alt="Bailey photo" class="polaroid-image">
+              <p class="polaroid-caption">The journey</p>
             </div>
 
             <div class="polaroid polaroid-4">
               <div class="tape"></div>
-              <div class="polaroid-image">
-                <span style="font-size: 2.5rem; filter: grayscale(0.3) sepia(0.2);">💡</span>
-              </div>
-              <p class="polaroid-caption">The turning point</p>
+              <img src="https://i.imgur.com/zUNPA8Q.jpeg" alt="Bailey photo" class="polaroid-image">
+              <p class="polaroid-caption">Living the life</p>
             </div>
 
             <!-- Watercolor blob stickers -->
