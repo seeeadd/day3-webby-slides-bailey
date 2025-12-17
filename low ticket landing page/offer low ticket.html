@@ -1481,6 +1481,615 @@
       .tablet-mockup { width: 160px; }
       .laptop-mockup { width: 180px; }
     }
+
+    /* ==========================================
+       BONUS STACK SECTION — CHARCOAL + WATERCOLOR
+       ========================================== */
+
+    #bonus-stack {
+      width: 100%;
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg,
+        #FAF8F5 0%,
+        #F7F3EE 30%,
+        #F7F3EE 70%,
+        #FAF8F5 100%
+      );
+    }
+
+    /* Watercolor texture overlay */
+    #bonus-stack::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://i.imgur.com/NHj3YId.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.06;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Coral blob - top right */
+    #bonus-stack .watercolor-blob-coral {
+      position: absolute;
+      top: -120px;
+      right: -100px;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(ellipse at 40% 40%,
+        rgba(224, 122, 95, 0.18) 0%,
+        rgba(224, 122, 95, 0.10) 35%,
+        rgba(224, 122, 95, 0.04) 60%,
+        transparent 80%
+      );
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Teal blob - left side, middle */
+    #bonus-stack .watercolor-blob-teal {
+      position: absolute;
+      top: 40%;
+      left: -150px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(ellipse at 60% 50%,
+        rgba(29, 107, 107, 0.15) 0%,
+        rgba(29, 107, 107, 0.08) 35%,
+        rgba(29, 107, 107, 0.03) 60%,
+        transparent 80%
+      );
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Gold blob - bottom right */
+    #bonus-stack .watercolor-blob-gold {
+      position: absolute;
+      bottom: -100px;
+      right: 10%;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(ellipse at 50% 50%,
+        rgba(212, 165, 116, 0.14) 0%,
+        rgba(212, 165, 116, 0.07) 40%,
+        rgba(212, 165, 116, 0.02) 70%,
+        transparent 100%
+      );
+      border-radius: 50%;
+      filter: blur(50px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Paper grain overlay */
+    #bonus-stack .paper-grain {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #bonus-stack .bonus-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* === HERO AREA === */
+    #bonus-stack .hero-area {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    #bonus-stack .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #E07A5F 0%, #C96A52 100%);
+      border-radius: 100px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 28px;
+      box-shadow:
+        0 2px 8px rgba(224, 122, 95, 0.25),
+        0 8px 24px rgba(224, 122, 95, 0.15);
+    }
+
+    #bonus-stack .hero-headline {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1F1D1A;
+      margin-bottom: 48px;
+      -webkit-text-stroke: 0.5px currentColor;
+    }
+
+    #bonus-stack .hero-headline .highlight {
+      display: inline-block;
+      background: linear-gradient(135deg, #E07A5F 0%, #C96A52 100%);
+      color: #FFFFFF;
+      padding: 6px 18px;
+      border-radius: 8px;
+      margin-left: 8px;
+    }
+
+    /* Hero mockup placeholder */
+    #bonus-stack .mockup-hero {
+      width: 100%;
+      max-width: 900px;
+      aspect-ratio: 16/9;
+      margin: 0 auto 36px;
+      background: linear-gradient(145deg,
+        rgba(45, 42, 38, 0.03) 0%,
+        rgba(29, 107, 107, 0.04) 50%,
+        rgba(224, 122, 95, 0.04) 100%
+      );
+      border: 2px dashed #D4CEC4;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8A847B;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    #bonus-stack .trust-line {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #5A544C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    #bonus-stack .trust-line .dot {
+      width: 5px;
+      height: 5px;
+      background: #D4CEC4;
+      border-radius: 50%;
+    }
+
+    /* === BONUS CARDS CONTAINER === */
+    #bonus-stack .bonus-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-bottom: 72px;
+    }
+
+    /* === INDIVIDUAL BONUS CARD === */
+    #bonus-stack .bonus-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow:
+        0 1px 2px rgba(45, 42, 38, 0.04),
+        0 4px 12px rgba(45, 42, 38, 0.05),
+        0 16px 40px rgba(45, 42, 38, 0.06);
+      transition:
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #bonus-stack .bonus-card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 2px 4px rgba(45, 42, 38, 0.04),
+        0 8px 20px rgba(45, 42, 38, 0.06),
+        0 24px 56px rgba(45, 42, 38, 0.08);
+    }
+
+    /* === CHARCOAL HEADER BAR === */
+    #bonus-stack .bonus-header {
+      background: linear-gradient(135deg, #2D2A26 0%, #1F1D1A 100%);
+      padding: 24px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle texture on header */
+    #bonus-stack .bonus-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+    }
+
+    #bonus-stack .bonus-title {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+      -webkit-text-stroke: 0.3px currentColor;
+    }
+
+    /* === CORAL BADGE for Bonus Number === */
+    #bonus-stack .bonus-number {
+      display: inline-flex;
+      align-items: center;
+      background: #E07A5F;
+      color: #FFFFFF;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      box-shadow: 0 2px 8px rgba(224, 122, 95, 0.3);
+    }
+
+    #bonus-stack .bonus-subtitle {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.65);
+      margin-left: 2px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* === CARD BODY - Two Columns === */
+    #bonus-stack .bonus-body {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 40px;
+      padding: 36px 32px;
+      align-items: start;
+    }
+
+    #bonus-stack .bonus-description {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.75;
+      color: #2D2A26;
+      margin-bottom: 28px;
+    }
+
+    #bonus-stack .bonus-features-label {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #1F1D1A;
+      margin-bottom: 16px;
+    }
+
+    #bonus-stack .bonus-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    #bonus-stack .bonus-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #2D2A26;
+      line-height: 1.5;
+    }
+
+    /* === CORAL CHECKMARK === */
+    #bonus-stack .check-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(135deg, rgba(224, 122, 95, 0.15) 0%, rgba(224, 122, 95, 0.08) 100%);
+      border: 1px solid rgba(224, 122, 95, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    #bonus-stack .check-icon svg {
+      width: 12px;
+      height: 12px;
+      color: #E07A5F;
+      stroke-width: 2.5;
+    }
+
+    /* === MOCKUP PLACEHOLDER === */
+    #bonus-stack .bonus-mockup {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(145deg,
+        rgba(45, 42, 38, 0.02) 0%,
+        rgba(29, 107, 107, 0.03) 50%,
+        rgba(224, 122, 95, 0.03) 100%
+      );
+      border: 2px dashed #E8E2D9;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8A847B;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* === CTA AREA === */
+    #bonus-stack .cta-area {
+      text-align: center;
+    }
+
+    #bonus-stack .cta-slab {
+      display: block;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto 28px;
+      padding: 40px 48px;
+      background: linear-gradient(135deg, #E07A5F 0%, #C96A52 100%);
+      border-radius: 24px;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 4px 12px rgba(224, 122, 95, 0.2),
+        0 12px 32px rgba(224, 122, 95, 0.2),
+        0 24px 64px rgba(224, 122, 95, 0.15);
+      transition:
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Subtle shimmer effect */
+    #bonus-stack .cta-slab::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+      );
+      transition: left 0.6s ease;
+    }
+
+    #bonus-stack .cta-slab:hover::before {
+      left: 100%;
+    }
+
+    #bonus-stack .cta-slab:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 8px 20px rgba(224, 122, 95, 0.25),
+        0 20px 48px rgba(224, 122, 95, 0.25),
+        0 32px 80px rgba(224, 122, 95, 0.2);
+    }
+
+    #bonus-stack .cta-slab:active {
+      transform: translateY(-2px);
+    }
+
+    #bonus-stack .cta-slab-line1 {
+      display: block;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    #bonus-stack .cta-slab-line2 {
+      display: block;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Microcopy */
+    #bonus-stack .microcopy-row {
+      margin-bottom: 10px;
+    }
+
+    #bonus-stack .microcopy {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #5A544C;
+    }
+
+    #bonus-stack .microcopy-dot {
+      display: inline-block;
+      margin: 0 14px;
+      color: #D4CEC4;
+    }
+
+    /* Urgency */
+    #bonus-stack .urgency-line {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: #E07A5F;
+    }
+
+    /* === RESPONSIVE STYLES === */
+    @media (max-width: 868px) {
+      #bonus-stack .bonus-body {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      #bonus-stack .bonus-mockup {
+        order: -1;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #bonus-stack {
+        padding: 72px 20px;
+      }
+
+      #bonus-stack .hero-headline {
+        font-size: 36px;
+      }
+
+      #bonus-stack .hero-headline .highlight {
+        display: block;
+        margin: 8px auto 0;
+        width: fit-content;
+      }
+
+      #bonus-stack .bonus-header {
+        padding: 20px 24px;
+      }
+
+      #bonus-stack .bonus-title {
+        font-size: 20px;
+      }
+
+      #bonus-stack .bonus-body {
+        padding: 28px 24px;
+      }
+
+      #bonus-stack .bonus-description {
+        font-size: 16px;
+      }
+
+      #bonus-stack .cta-slab {
+        padding: 32px 28px;
+        border-radius: 20px;
+      }
+
+      #bonus-stack .cta-slab-line1 {
+        font-size: 24px;
+      }
+
+      #bonus-stack .cta-slab-line2 {
+        font-size: 15px;
+      }
+
+      #bonus-stack .trust-line {
+        font-size: 14px;
+      }
+
+      #bonus-stack .watercolor-blob-coral {
+        width: 300px;
+        height: 300px;
+        top: -80px;
+        right: -80px;
+      }
+
+      #bonus-stack .watercolor-blob-teal {
+        width: 280px;
+        height: 280px;
+        left: -100px;
+      }
+
+      #bonus-stack .watercolor-blob-gold {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      #bonus-stack .cta-slab-line1 {
+        font-size: 22px;
+      }
+
+      #bonus-stack .microcopy {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      #bonus-stack .microcopy-dot {
+        display: none;
+      }
+
+      #bonus-stack .trust-line .dot {
+        display: none;
+      }
+
+      #bonus-stack .trust-line {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      #bonus-stack .hero-headline {
+        font-size: 32px;
+      }
+
+      #bonus-stack .bonus-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      #bonus-stack .watercolor-blob-gold {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #bonus-stack .hero-headline {
+        font-size: 28px;
+      }
+
+      #bonus-stack .eyebrow-pill {
+        font-size: 11px;
+        padding: 10px 18px;
+      }
+
+      #bonus-stack .bonus-features li {
+        font-size: 15px;
+      }
+
+      #bonus-stack .cta-slab-line1 {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -2033,6 +2642,477 @@
 
     </div>
   </div>
+
+  <!-- ==========================================
+       BONUS STACK SECTION
+       ========================================== -->
+  <section id="bonus-stack">
+
+    <!-- Watercolor blobs -->
+    <div class="watercolor-blob-coral"></div>
+    <div class="watercolor-blob-teal"></div>
+    <div class="watercolor-blob-gold"></div>
+    <div class="paper-grain"></div>
+
+    <div class="bonus-container">
+
+      <!-- ============ PART 1: HERO AREA ============ -->
+      <div class="hero-area">
+
+        <div class="eyebrow-pill">With Your Order Today</div>
+
+        <h2 class="hero-headline">
+          Unlock Instant Access To Everything<br>
+          Inside The <span class="highlight">Membership</span>
+        </h2>
+
+        <div class="mockup-hero">
+          Product mockup collage placeholder
+        </div>
+
+        <div class="trust-line">
+          <span>Daily Drop</span>
+          <span class="dot"></span>
+          <span>$10K Blueprint</span>
+          <span class="dot"></span>
+          <span>Traffic Loop</span>
+          <span class="dot"></span>
+          <span>Ask Bailey Calls</span>
+          <span class="dot"></span>
+          <span>PLR Vault</span>
+          <span class="dot"></span>
+          <span>and more</span>
+        </div>
+
+      </div>
+
+      <!-- ============ PART 2: BONUS CARDS ============ -->
+      <div class="bonus-cards">
+
+        <!-- Bonus #1 -->
+        <article class="bonus-card">
+          <div class="bonus-header">
+            <h3 class="bonus-title">
+              <span class="bonus-number">Bonus #1:</span>
+              Bailey's Daily Drop
+            </h3>
+            <div class="bonus-subtitle">(Posted Every Morning)</div>
+          </div>
+          <div class="bonus-body">
+            <div class="bonus-content">
+              <p class="bonus-description">
+                Every morning I post the exact product I would list next - before I list it myself.
+                <br><br>
+                This isn't theory. It's what I'm actually doing in my own shop, shared with you first.
+              </p>
+              <div class="bonus-features-label">What you get each day:</div>
+              <ul class="bonus-features">
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  The trending idea I spotted
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  The AI prompt I'd use
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  The tags I'd copy straight into Etsy
+                </li>
+              </ul>
+            </div>
+            <div class="bonus-mockup">
+              Mockup placeholder
+            </div>
+          </div>
+        </article>
+
+        <!-- Bonus #2 -->
+        <article class="bonus-card">
+          <div class="bonus-header">
+            <h3 class="bonus-title">
+              <span class="bonus-number">Bonus #2:</span>
+              The 3 Paths to $5K
+            </h3>
+            <div class="bonus-subtitle">(Choose Your Road)</div>
+          </div>
+          <div class="bonus-body">
+            <div class="bonus-content">
+              <p class="bonus-description">
+                If I had to rebuild from zero, these are the three roads I'd pick from. Choose the one that fits your life.
+                <br><br>
+                Not everyone starts from the same place. Pick your path based on where you are - and follow it.
+              </p>
+              <div class="bonus-features-label">Your options:</div>
+              <ul class="bonus-features">
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Audience path - build a following first
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Bundle path - stack value fast
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Social path - leverage platforms you already use
+                </li>
+              </ul>
+            </div>
+            <div class="bonus-mockup">
+              Mockup placeholder
+            </div>
+          </div>
+        </article>
+
+        <!-- Bonus #3 -->
+        <article class="bonus-card">
+          <div class="bonus-header">
+            <h3 class="bonus-title">
+              <span class="bonus-number">Bonus #3:</span>
+              My $10K Month Blueprint
+            </h3>
+            <div class="bonus-subtitle">(With Receipts)</div>
+          </div>
+          <div class="bonus-body">
+            <div class="bonus-content">
+              <p class="bonus-description">
+                The exact shop setup behind my consistent five-figure months. Not theory - you'll see the receipts.
+                <br><br>
+                I'll show you how I mix hero products, bundles, and quiet earners so income stays steady.
+              </p>
+              <div class="bonus-features-label">Inside the blueprint:</div>
+              <ul class="bonus-features">
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  How I structure my shop for $10K months
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  The pricing and retirement rules I follow
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  What I focus on vs. what I ignore
+                </li>
+              </ul>
+            </div>
+            <div class="bonus-mockup">
+              Mockup placeholder
+            </div>
+          </div>
+        </article>
+
+        <!-- Bonus #4 -->
+        <article class="bonus-card">
+          <div class="bonus-header">
+            <h3 class="bonus-title">
+              <span class="bonus-number">Bonus #4:</span>
+              Ask Bailey - Live Twice a Month
+            </h3>
+            <div class="bonus-subtitle">(Bring Your Questions)</div>
+          </div>
+          <div class="bonus-body">
+            <div class="bonus-content">
+              <p class="bonus-description">
+                Bring your shop, your stuck point, your weird question. I'll give you real feedback on actual listings.
+                <br><br>
+                This isn't scripted Q&A. You ask, I answer, and you leave knowing exactly what to do next.
+              </p>
+              <div class="bonus-features-label">What happens on calls:</div>
+              <ul class="bonus-features">
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Real feedback on your actual listings
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Answers to your specific situation
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Replays posted if you can't make it live
+                </li>
+              </ul>
+            </div>
+            <div class="bonus-mockup">
+              Mockup placeholder
+            </div>
+          </div>
+        </article>
+
+        <!-- Bonus #5 -->
+        <article class="bonus-card">
+          <div class="bonus-header">
+            <h3 class="bonus-title">
+              <span class="bonus-number">Bonus #5:</span>
+              Steal My Bestsellers
+            </h3>
+            <div class="bonus-subtitle">(Full Tutorials)</div>
+          </div>
+          <div class="bonus-body">
+            <div class="bonus-content">
+              <p class="bonus-description">
+                I walk you through exactly how I made my top-selling products. The actual files, the actual decisions.
+                <br><br>
+                These aren't generic tutorials. They're the products currently making me money.
+              </p>
+              <div class="bonus-features-label">What's included:</div>
+              <ul class="bonus-features">
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Step-by-step creation walkthroughs
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  The product types selling THIS month
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  My actual design files to learn from
+                </li>
+              </ul>
+            </div>
+            <div class="bonus-mockup">
+              Mockup placeholder
+            </div>
+          </div>
+        </article>
+
+        <!-- Bonus #6 -->
+        <article class="bonus-card">
+          <div class="bonus-header">
+            <h3 class="bonus-title">
+              <span class="bonus-number">Bonus #6:</span>
+              My Traffic Loop
+            </h3>
+            <div class="bonus-subtitle">(Pinterest + Email on Autopilot)</div>
+          </div>
+          <div class="bonus-body">
+            <div class="bonus-content">
+              <p class="bonus-description">
+                The Pinterest and email setup running in my business on autopilot today.
+                <br><br>
+                My real Pinterest approach - updated when the algorithm shifts. Plus the simple email piece that brings buyers back.
+              </p>
+              <div class="bonus-features-label">What you get:</div>
+              <ul class="bonus-features">
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  My Pinterest strategy (updated live)
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Simple email automation that works
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  The exact flow that drives repeat buyers
+                </li>
+              </ul>
+            </div>
+            <div class="bonus-mockup">
+              Mockup placeholder
+            </div>
+          </div>
+        </article>
+
+        <!-- Bonus #7 -->
+        <article class="bonus-card">
+          <div class="bonus-header">
+            <h3 class="bonus-title">
+              <span class="bonus-number">Bonus #7:</span>
+              The PLR Vault
+            </h3>
+            <div class="bonus-subtitle">(150+ Products to List Today)</div>
+          </div>
+          <div class="bonus-body">
+            <div class="bonus-content">
+              <p class="bonus-description">
+                Products you can edit and list today. I add new ones when I spot gaps in the market.
+                <br><br>
+                These aren't junk files. They're products I'd actually sell - ready for you to customize and list.
+              </p>
+              <div class="bonus-features-label">Inside the vault:</div>
+              <ul class="bonus-features">
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  150+ ready-to-edit products
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  New products added regularly
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Covers trending niches and evergreen sellers
+                </li>
+              </ul>
+            </div>
+            <div class="bonus-mockup">
+              Mockup placeholder
+            </div>
+          </div>
+        </article>
+
+        <!-- Bonus #8 -->
+        <article class="bonus-card">
+          <div class="bonus-header">
+            <h3 class="bonus-title">
+              <span class="bonus-number">Bonus #8:</span>
+              Bailey's Tool Stack
+            </h3>
+            <div class="bonus-subtitle">(What I Actually Pay For)</div>
+          </div>
+          <div class="bonus-body">
+            <div class="bonus-content">
+              <p class="bonus-description">
+                The exact apps and subscriptions I pay for - and the ones I cancelled.
+                <br><br>
+                No affiliate nonsense. Just the tools that actually help me run a 7-figure Etsy business.
+              </p>
+              <div class="bonus-features-label">What's inside:</div>
+              <ul class="bonus-features">
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Every tool I currently use
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  What I've tried and dropped
+                </li>
+                <li>
+                  <span class="check-icon">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor">
+                      <path d="M2 6l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Why I chose each one
+                </li>
+              </ul>
+            </div>
+            <div class="bonus-mockup">
+              Mockup placeholder
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ============ PART 3: CTA AREA ============ -->
+      <div class="cta-area">
+
+        <a href="#checkout" class="cta-slab">
+          <span class="cta-slab-line1">Get Instant Access Now →</span>
+          <span class="cta-slab-line2">+ Get Bailey's Daily Drop, Blueprints, Traffic Loop, and everything included</span>
+        </a>
+
+        <div class="microcopy-row">
+          <span class="microcopy">$27/mo billed annually</span>
+          <span class="microcopy-dot">•</span>
+          <span class="microcopy">Instant access</span>
+          <span class="microcopy-dot">•</span>
+          <span class="microcopy">Secure checkout</span>
+        </div>
+
+        <div class="urgency-line">Prices raising soon to $67/mo</div>
+
+      </div>
+
+    </div>
+  </section>
 
 </body>
 </html>
