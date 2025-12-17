@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offer Stack - Everything You Get</title>
+  <style>
+    /* ==========================================
+       BASE64 FONT EMBEDDINGS (truncated for brevity)
+       ========================================== */
+
+    @font-face {
+      font-family: 'OGG';
+      src: url(data:font/truetype;base64,AAEAAAAQAQAABAAARFNJRw) format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIA) format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIA) format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIA) format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Satoshi';
+      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIA) format('woff2');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ==========================================
+       RESET & BASE
+       ========================================== */
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: #FAF8F5;
+    }
+
+    /* ==========================================
+       OFFER STACK SECTION - CHARCOAL BASE
+       ========================================== */
+
+    #bf-offerstack {
+      width: 100%;
+      padding: 100px 24px 120px;
+      background: #1F1D1A;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle noise texture */
+    #bf-offerstack::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Watercolor blob - coral top right */
+    #bf-offerstack .wc-blob-1 {
+      position: absolute;
+      top: -120px;
+      right: -100px;
+      width: 500px;
+      height: 450px;
+      background: radial-gradient(ellipse at 40% 50%,
+        rgba(224, 122, 95, 0.15) 0%,
+        rgba(224, 122, 95, 0.06) 50%,
+        transparent 80%
+      );
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Watercolor blob - teal bottom left */
+    #bf-offerstack .wc-blob-2 {
+      position: absolute;
+      bottom: -100px;
+      left: -120px;
+      width: 450px;
+      height: 400px;
+      background: radial-gradient(ellipse at 60% 50%,
+        rgba(29, 107, 107, 0.12) 0%,
+        rgba(29, 107, 107, 0.05) 50%,
+        transparent 80%
+      );
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Container */
+    .offer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ==========================================
+       SECTION HEADER
+       ========================================== */
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E07A5F;
+      background: rgba(224, 122, 95, 0.1);
+      border: 1px solid rgba(224, 122, 95, 0.2);
+      padding: 10px 20px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .section-headline {
+      font-family: 'OGG', Georgia, serif;
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #FAF8F5;
+      margin-bottom: 20px;
+    }
+
+    .section-headline em {
+      font-style: italic;
+      color: #E07A5F;
+    }
+
+    .section-subhead {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: rgba(250, 248, 245, 0.6);
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================
+       CARDS STACK
+       ========================================== */
+
+    .cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      margin-bottom: 80px;
+    }
+
+    /* ==========================================
+       OFFER CARD - BASE
+       ========================================== */
+
+    .offer-card {
+      background: #FAF8F5;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.15),
+        0 12px 48px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .offer-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .offer-card:hover {
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.18),
+        0 20px 64px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Stagger animation */
+    .offer-card:nth-child(1) { transition-delay: 0s; }
+    .offer-card:nth-child(2) { transition-delay: 0.1s; }
+    .offer-card:nth-child(3) { transition-delay: 0.2s; }
+    .offer-card:nth-child(4) { transition-delay: 0.3s; }
+    .offer-card:nth-child(5) { transition-delay: 0.4s; }
+    .offer-card:nth-child(6) { transition-delay: 0.5s; }
+
+    /* ==========================================
+       CARD HEADER - BASE
+       ========================================== */
+
+    .card-header {
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+      border-left: 4px solid transparent;
+    }
+
+    .card-title {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .card-badge {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    /* ==========================================
+       HEADER TREATMENTS BY TYPE
+       ========================================== */
+
+    /* CORE - Deep Teal */
+    .card-core .card-header {
+      background: linear-gradient(135deg, #1D6B6B 0%, #165858 100%);
+      border-left-color: #E07A5F;
+    }
+
+    .card-core .card-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+    }
+
+    .card-core .card-title {
+      color: #FAF8F5;
+    }
+
+    .card-core .card-badge {
+      background: #E07A5F;
+      color: #fff;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+
+    /* STRATEGY - Warm Charcoal with Glow */
+    .card-strategy .card-header {
+      background: linear-gradient(135deg, #2D2A26 0%, #1F1D1A 100%);
+      border-left-color: #D4A574;
+      box-shadow: inset 0 0 80px rgba(224, 122, 95, 0.06);
+    }
+
+    .card-strategy .card-title {
+      color: #FAF8F5;
+    }
+
+    .card-strategy .card-badge {
+      background: linear-gradient(135deg, #D4A574 0%, #C49A68 100%);
+      color: #1F1D1A;
+    }
+
+    /* RESOURCE - Rich Dark with Shimmer */
+    .card-resource .card-header {
+      background: linear-gradient(135deg, #1F1D1A 0%, #2D2A26 50%, #1F1D1A 100%);
+      border-left-color: #E07A5F;
+    }
+
+    .card-resource .card-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.008) 10px,
+        rgba(255,255,255,0.008) 20px
+      );
+      pointer-events: none;
+    }
+
+    .card-resource .card-title {
+      color: #FAF8F5;
+    }
+
+    .card-resource .card-badge {
+      background: transparent;
+      color: #E07A5F;
+      border: 1.5px solid #E07A5F;
+    }
+
+    /* BONUS - Light/Cream */
+    .card-bonus .card-header {
+      background: linear-gradient(135deg, #FAF8F5 0%, #F0EBE3 100%);
+      border: 1px solid rgba(29, 107, 107, 0.12);
+      border-left: 4px solid #1D6B6B;
+    }
+
+    .card-bonus .card-title {
+      color: #1F1D1A;
+    }
+
+    .card-bonus .card-badge {
+      background: transparent;
+      color: #1D6B6B;
+      border: 1.5px solid #1D6B6B;
+    }
+
+    /* ==========================================
+       CARD BODY - TWO COLUMN LAYOUT
+       ========================================== */
+
+    .card-body {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      min-height: 260px;
+    }
+
+    @media (max-width: 800px) {
+      .card-body {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Content Zone */
+    .card-content {
+      padding: 32px 40px 36px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-description {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.65;
+      color: #5A544C;
+      margin-bottom: 24px;
+      max-width: 440px;
+    }
+
+    /* Feature List - Custom Bullets */
+    .card-features {
+      list-style: none;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .card-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: #3D3935;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .card-features li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Numbered Bullets */
+    .bullet-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 26px;
+      height: 26px;
+      background: rgba(29, 107, 107, 0.08);
+      color: #1D6B6B;
+      border-radius: 50%;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* Square Bullets */
+    .bullet-sq {
+      width: 8px;
+      height: 8px;
+      background: #E07A5F;
+      border-radius: 2px;
+      transform: rotate(45deg);
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* Micro Stat */
+    .micro-stat {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .stat-num {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #E07A5F;
+      line-height: 1;
+      background: linear-gradient(180deg, transparent 55%, rgba(224, 122, 95, 0.12) 55%);
+      padding: 0 4px;
+    }
+
+    .stat-label {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #8A847B;
+    }
+
+    /* ==========================================
+       VISUAL ZONE
+       ========================================== */
+
+    .card-visual {
+      background: linear-gradient(145deg, #F5F1EB 0%, #EDE8E0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      position: relative;
+    }
+
+    @media (max-width: 800px) {
+      .card-visual {
+        min-height: 200px;
+        order: -1;
+      }
+    }
+
+    .visual-tag {
+      position: absolute;
+      bottom: 12px;
+      right: 16px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #8A847B;
+      background: rgba(255,255,255,0.7);
+      padding: 5px 10px;
+      border-radius: 100px;
+    }
+
+    /* ==========================================
+       MOCKUP FRAMES
+       ========================================== */
+
+    .mockup-browser {
+      background: #1F1D1A;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 280px;
+      transition: transform 0.4s ease;
+    }
+
+    .offer-card:hover .mockup-browser {
+      transform: perspective(800px) rotateY(-2deg) scale(1.02);
+    }
+
+    .browser-bar {
+      height: 28px;
+      background: #2D2A26;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      gap: 6px;
+    }
+
+    .browser-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #5A544C;
+    }
+
+    .browser-dot:nth-child(1) { background: #E07A5F; }
+    .browser-dot:nth-child(2) { background: #D4A574; }
+    .browser-dot:nth-child(3) { background: #1D6B6B; }
+
+    .browser-content {
+      background: #FAF8F5;
+      padding: 16px;
+      min-height: 140px;
+    }
+
+    /* Custom Visual: Calendar Grid */
+    .viz-calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+    }
+
+    .cal-cell {
+      aspect-ratio: 1;
+      background: rgba(29, 107, 107, 0.08);
+      border-radius: 3px;
+    }
+
+    .cal-cell.filled {
+      background: rgba(224, 122, 95, 0.25);
+    }
+
+    .cal-cell.today {
+      background: #E07A5F;
+      position: relative;
+    }
+
+    .cal-cell.today::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border: 1px solid #E07A5F;
+      border-radius: 5px;
+      opacity: 0.4;
+    }
+
+    /* Custom Visual: Paths */
+    .viz-paths {
+      width: 100%;
+      max-width: 200px;
+      position: relative;
+    }
+
+    .viz-paths svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .path-label {
+      position: absolute;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #8A847B;
+    }
+
+    .path-label.l1 { top: 8px; left: 5%; }
+    .path-label.l2 { top: 0; left: 50%; transform: translateX(-50%); color: #E07A5F; }
+    .path-label.l3 { top: 8px; right: 5%; }
+
+    /* Custom Visual: Chart */
+    .viz-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      height: 100px;
+      padding: 16px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 8px;
+      border: 1px solid rgba(29, 107, 107, 0.1);
+    }
+
+    .chart-bar {
+      flex: 1;
+      background: linear-gradient(180deg, #1D6B6B 0%, rgba(29, 107, 107, 0.4) 100%);
+      border-radius: 2px 2px 0 0;
+      position: relative;
+    }
+
+    .chart-bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #1D6B6B;
+    }
+
+    .chart-bar.accent {
+      background: linear-gradient(180deg, #E07A5F 0%, rgba(224, 122, 95, 0.4) 100%);
+    }
+
+    .chart-bar.accent::after {
+      background: #E07A5F;
+    }
+
+    /* Custom Visual: Video Frame */
+    .viz-video {
+      width: 100%;
+      max-width: 200px;
+      background: #1F1D1A;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-bar {
+      height: 24px;
+      background: #2D2A26;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      gap: 5px;
+    }
+
+    .video-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #5A544C;
+    }
+
+    .video-dot:first-child { background: rgba(224, 122, 95, 0.7); }
+
+    .video-body {
+      aspect-ratio: 4/3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #2D2A26 0%, #1F1D1A 100%);
+      position: relative;
+    }
+
+    .video-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1D6B6B 0%, #165858 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'OGG', Georgia, serif;
+      font-size: 22px;
+      color: #FAF8F5;
+    }
+
+    .video-live {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #E07A5F;
+    }
+
+    .video-live::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #E07A5F;
+      animation: livePulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes livePulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* Custom Visual: Folder Stack */
+    .viz-folders {
+      position: relative;
+      width: 160px;
+      height: 120px;
+    }
+
+    .folder {
+      position: absolute;
+      width: 120px;
+      height: 80px;
+      background: rgba(250, 248, 245, 0.8);
+      border: 1px solid rgba(29, 107, 107, 0.15);
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+
+    .folder::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      width: 36px;
+      height: 10px;
+      background: inherit;
+      border: 1px solid rgba(29, 107, 107, 0.15);
+      border-bottom: none;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .folder-1 { bottom: 0; left: 0; transform: rotate(-4deg); }
+    .folder-2 { bottom: 8px; left: 16px; transform: rotate(-2deg); }
+    .folder-3 {
+      bottom: 16px;
+      left: 32px;
+      background: rgba(224, 122, 95, 0.1);
+      border-color: rgba(224, 122, 95, 0.25);
+    }
+
+    .folder-3::before {
+      background: rgba(224, 122, 95, 0.1);
+      border-color: rgba(224, 122, 95, 0.25);
+    }
+
+    .offer-card:hover .folder-1 { transform: rotate(-6deg) translateY(-2px); }
+    .offer-card:hover .folder-2 { transform: rotate(-3deg) translateY(-1px); }
+
+    .folder-label {
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #D4A574;
+    }
+
+    /* Custom Visual: Tools Grid */
+    .viz-tools {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .tool-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(29, 107, 107, 0.12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1D6B6B;
+      transition: transform 0.3s ease;
+    }
+
+    .tool-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .offer-card:hover .tool-icon:nth-child(1) { transform: translateY(-3px) rotate(-2deg); }
+    .offer-card:hover .tool-icon:nth-child(2) { transform: translateY(-2px) rotate(2deg); }
+    .offer-card:hover .tool-icon:nth-child(3) { transform: translateY(-4px) rotate(-1deg); }
+    .offer-card:hover .tool-icon:nth-child(4) { transform: translateY(-2px) rotate(3deg); }
+
+    /* ==========================================
+       CTA AREA
+       ========================================== */
+
+    .cta-area {
+      text-align: center;
+      padding-top: 16px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 48px;
+      background: linear-gradient(135deg, #E8856A 0%, #E07A5F 50%, #C96A52 100%);
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.2),
+        0 4px 16px rgba(224, 122, 95, 0.35),
+        0 12px 40px rgba(224, 122, 95, 0.2);
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 20%;
+      right: 20%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+    }
+
+    .cta-button::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .cta-button:hover::after {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.25),
+        0 6px 20px rgba(224, 122, 95, 0.4),
+        0 16px 48px rgba(224, 122, 95, 0.25);
+    }
+
+    .cta-arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .cta-arrow {
+      transform: translateX(4px);
+    }
+
+    .cta-meta {
+      margin-top: 20px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      color: rgba(250, 248, 245, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cta-dot {
+      width: 4px;
+      height: 4px;
+      background: rgba(250, 248, 245, 0.25);
+      border-radius: 50%;
+    }
+
+    .cta-urgency {
+      margin-top: 14px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #E07A5F;
+    }
+
+    /* ==========================================
+       RESPONSIVE
+       ========================================== */
+
+    @media (max-width: 900px) {
+      #bf-offerstack {
+        padding: 80px 20px 100px;
+      }
+
+      .section-header {
+        margin-bottom: 56px;
+      }
+
+      .cards-stack {
+        gap: 36px;
+      }
+
+      .card-header {
+        padding: 20px 24px;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .card-title {
+        font-size: 22px;
+      }
+
+      .card-content {
+        padding: 24px;
+      }
+
+      .stat-num {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .section-headline {
+        font-size: 32px;
+      }
+
+      .card-title {
+        font-size: 20px;
+      }
+
+      .card-description {
+        font-size: 15px;
+      }
+
+      .cta-button {
+        width: 100%;
+        justify-content: center;
+        padding: 18px 32px;
+      }
+
+      .cta-meta {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .cta-dot {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section id="bf-offerstack">
+  <!-- Watercolor Blobs -->
+  <div class="wc-blob-1"></div>
+  <div class="wc-blob-2"></div>
+
+  <div class="offer-container">
+
+    <!-- Section Header -->
+    <header class="section-header">
+      <span class="section-eyebrow">Everything You Get</span>
+      <h2 class="section-headline">The <em>Complete System,</em> Delivered</h2>
+      <p class="section-subhead">
+        Your all-in-one stack for building a profitable digital product shop. Blueprints, templates, calls, and everything you need to start selling.
+      </p>
+    </header>
+
+    <!-- Cards Stack -->
+    <div class="cards-stack">
+
+      <!-- CARD 1: Daily Drop Vault (CORE) -->
+      <article class="offer-card card-core">
+        <div class="card-header">
+          <h3 class="card-title">Daily Drop Vault</h3>
+          <span class="card-badge">Core</span>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            <p class="card-description">
+              365 days of done-for-you product ideas, hooks, and marketing angles delivered straight to your inbox.
+            </p>
+            <ul class="card-features">
+              <li>
+                <span class="bullet-num">01</span>
+                <span>Daily product ideas with proven hooks</span>
+              </li>
+              <li>
+                <span class="bullet-num">02</span>
+                <span>Caption templates and CTAs included</span>
+              </li>
+              <li>
+                <span class="bullet-num">03</span>
+                <span>Seasonal and trending topics covered</span>
+              </li>
+            </ul>
+            <div class="micro-stat">
+              <span class="stat-num">365</span>
+              <span class="stat-label">days of ideas</span>
+            </div>
+          </div>
+          <div class="card-visual">
+            <div class="mockup-browser">
+              <div class="browser-bar">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+              </div>
+              <div class="browser-content">
+                <div class="viz-calendar">
+                  <span class="cal-cell filled"></span>
+                  <span class="cal-cell filled"></span>
+                  <span class="cal-cell filled"></span>
+                  <span class="cal-cell filled"></span>
+                  <span class="cal-cell filled"></span>
+                  <span class="cal-cell filled"></span>
+                  <span class="cal-cell today"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                  <span class="cal-cell"></span>
+                </div>
+              </div>
+            </div>
+            <span class="visual-tag">New drops daily</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 2: 3 Paths to $5K (STRATEGY) -->
+      <article class="offer-card card-strategy">
+        <div class="card-header">
+          <h3 class="card-title">3 Paths to $5K Playbook</h3>
+          <span class="card-badge">Strategy</span>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            <p class="card-description">
+              Three different routes to your first $5K month, so you can pick the path that matches your situation.
+            </p>
+            <ul class="card-features">
+              <li>
+                <span class="bullet-sq"></span>
+                <span><strong>Path 1:</strong> The Sprint - fast launch, test fast</span>
+              </li>
+              <li>
+                <span class="bullet-sq"></span>
+                <span><strong>Path 2:</strong> The Build - steady compound growth</span>
+              </li>
+              <li>
+                <span class="bullet-sq"></span>
+                <span><strong>Path 3:</strong> The Scale - multiply what works</span>
+              </li>
+            </ul>
+            <div class="micro-stat">
+              <span class="stat-num">$5K</span>
+              <span class="stat-label">first milestone</span>
+            </div>
+          </div>
+          <div class="card-visual">
+            <div class="viz-paths">
+              <span class="path-label l1">Sprint</span>
+              <span class="path-label l2">Build</span>
+              <span class="path-label l3">Scale</span>
+              <svg viewBox="0 0 180 100" fill="none">
+                <path d="M90 95 L90 60 L25 15" stroke="rgba(212,165,116,0.4)" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+                <path d="M90 95 L90 60 L90 10" stroke="#E07A5F" stroke-width="2.5" fill="none"/>
+                <path d="M90 95 L90 60 L155 15" stroke="rgba(212,165,116,0.4)" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+                <circle cx="90" cy="95" r="5" fill="#E07A5F"/>
+                <circle cx="25" cy="12" r="4" fill="#D4A574" opacity="0.6"/>
+                <circle cx="90" cy="8" r="5" fill="#E07A5F"/>
+                <circle cx="155" cy="12" r="4" fill="#D4A574" opacity="0.6"/>
+              </svg>
+            </div>
+            <span class="visual-tag">Choose your path</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 3: $10K Month Blueprint (CORE) -->
+      <article class="offer-card card-core">
+        <div class="card-header">
+          <h3 class="card-title">$10K Month Blueprint</h3>
+          <span class="card-badge">Core</span>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            <p class="card-description">
+              The exact shop setup behind my consistent five-figure months. Not theory - you'll see the receipts.
+            </p>
+            <ul class="card-features">
+              <li>
+                <span class="bullet-num">01</span>
+                <span>Hero products, bundles, and quiet earners mix</span>
+              </li>
+              <li>
+                <span class="bullet-num">02</span>
+                <span>Pricing and retirement rules that work</span>
+              </li>
+              <li>
+                <span class="bullet-num">03</span>
+                <span>Traffic routine when Etsy algorithm dips</span>
+              </li>
+            </ul>
+            <div class="micro-stat">
+              <span class="stat-num">$10K</span>
+              <span class="stat-label">monthly formula</span>
+            </div>
+          </div>
+          <div class="card-visual">
+            <div class="viz-chart">
+              <div class="chart-bar" style="height: 30%;"></div>
+              <div class="chart-bar" style="height: 45%;"></div>
+              <div class="chart-bar" style="height: 40%;"></div>
+              <div class="chart-bar" style="height: 60%;"></div>
+              <div class="chart-bar" style="height: 55%;"></div>
+              <div class="chart-bar accent" style="height: 85%;"></div>
+              <div class="chart-bar accent" style="height: 80%;"></div>
+            </div>
+            <span class="visual-tag">Revenue growth</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 4: Ask Bailey Calls (CORE) -->
+      <article class="offer-card card-core">
+        <div class="card-header">
+          <h3 class="card-title">Ask Bailey (Twice Monthly)</h3>
+          <span class="card-badge">Core</span>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            <p class="card-description">
+              Bring your shop, your stuck point, your weird question. I'll tell you what I'd do if it were my shop.
+            </p>
+            <ul class="card-features">
+              <li>
+                <span class="bullet-num">01</span>
+                <span>Real feedback on your actual listings</span>
+              </li>
+              <li>
+                <span class="bullet-num">02</span>
+                <span>Replays posted if you can't make it live</span>
+              </li>
+              <li>
+                <span class="bullet-num">03</span>
+                <span>Ask anything, leave with a clear next move</span>
+              </li>
+            </ul>
+            <div class="micro-stat">
+              <span class="stat-num">2×</span>
+              <span class="stat-label">per month live</span>
+            </div>
+          </div>
+          <div class="card-visual">
+            <div class="viz-video">
+              <div class="video-bar">
+                <span class="video-dot"></span>
+                <span class="video-dot"></span>
+                <span class="video-dot"></span>
+              </div>
+              <div class="video-body">
+                <div class="video-avatar">B</div>
+                <span class="video-live">LIVE</span>
+              </div>
+            </div>
+            <span class="visual-tag">Live calls</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 5: PLR Vault (RESOURCE) -->
+      <article class="offer-card card-resource">
+        <div class="card-header">
+          <h3 class="card-title">The PLR Vault</h3>
+          <span class="card-badge">Resource</span>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            <p class="card-description">
+              Products you can edit and list today. I add new ones when I spot gaps in what's selling.
+            </p>
+            <ul class="card-features">
+              <li>
+                <span class="bullet-sq"></span>
+                <span>150+ ready-to-sell digital products</span>
+              </li>
+              <li>
+                <span class="bullet-sq"></span>
+                <span>Full commercial license included</span>
+              </li>
+              <li>
+                <span class="bullet-sq"></span>
+                <span>Updated when I find new opportunities</span>
+              </li>
+            </ul>
+            <div class="micro-stat">
+              <span class="stat-num">150+</span>
+              <span class="stat-label">products ready</span>
+            </div>
+          </div>
+          <div class="card-visual">
+            <div class="viz-folders">
+              <div class="folder folder-1"></div>
+              <div class="folder folder-2"></div>
+              <div class="folder folder-3"></div>
+              <span class="folder-label">PLR Library</span>
+            </div>
+            <span class="visual-tag">Growing library</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 6: Tools Stack (RESOURCE) -->
+      <article class="offer-card card-resource">
+        <div class="card-header">
+          <h3 class="card-title">The Full Tools Library</h3>
+          <span class="card-badge">Resource</span>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            <p class="card-description">
+              Every tool, template, and shortcut I actually use to run my shop in 3 hours a week.
+            </p>
+            <ul class="card-features">
+              <li>
+                <span class="bullet-sq"></span>
+                <span>AI prompt library for designs</span>
+              </li>
+              <li>
+                <span class="bullet-sq"></span>
+                <span>SEO templates and tag formulas</span>
+              </li>
+              <li>
+                <span class="bullet-sq"></span>
+                <span>Pinterest scheduler setup guides</span>
+              </li>
+            </ul>
+            <div class="micro-stat">
+              <span class="stat-num">30+</span>
+              <span class="stat-label">tools included</span>
+            </div>
+          </div>
+          <div class="card-visual">
+            <div class="viz-tools">
+              <div class="tool-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              </div>
+              <div class="tool-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+              </div>
+              <div class="tool-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg>
+              </div>
+              <div class="tool-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+            </div>
+            <span class="visual-tag">Full toolkit</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- CTA Area -->
+    <div class="cta-area">
+      <a href="#checkout" class="cta-button">
+        Get Instant Access
+        <span class="cta-arrow">→</span>
+      </a>
+      <p class="cta-meta">
+        <span>$27/mo billed annually</span>
+        <span class="cta-dot"></span>
+        <span>Instant access</span>
+        <span class="cta-dot"></span>
+        <span>Secure checkout</span>
+      </p>
+      <p class="cta-urgency">Prices raising soon to $67/mo</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Scroll reveal animation
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.offer-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    cards.forEach(card => observer.observe(card));
+  });
+</script>
+
+</body>
+</html>
