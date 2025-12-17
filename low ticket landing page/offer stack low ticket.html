@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pitch CTA - Ready When You Are</title>
+  <title>Bonus Stack - Everything You Get</title>
   <style>
     /* ==========================================
        BASE64 FONT EMBEDDINGS
@@ -66,13 +66,13 @@
     }
 
     /* ==========================================
-       PITCH CTA SECTION - DARK CHARCOAL
-       All styles scoped under #pitch-cta
+       BONUS STACK SECTION - DARK CHARCOAL
+       All styles scoped under #bonus-stack
        ========================================== */
 
-    #pitch-cta {
+    #bonus-stack {
       width: 100%;
-      padding: 72px 24px;
+      padding: 80px 24px;
       background: linear-gradient(180deg,
         #1F1D1A 0%,
         #2D2A26 50%,
@@ -83,7 +83,7 @@
     }
 
     /* Subtle noise texture overlay */
-    #pitch-cta::before {
+    #bonus-stack::before {
       content: '';
       position: absolute;
       inset: 0;
@@ -94,12 +94,12 @@
     }
 
     /* Coral watercolor blob - top right */
-    #pitch-cta .blob-coral {
+    #bonus-stack .blob-coral {
       position: absolute;
       top: -100px;
       right: -80px;
-      width: 400px;
-      height: 400px;
+      width: 450px;
+      height: 450px;
       background: radial-gradient(ellipse at 40% 40%,
         rgba(224, 122, 95, 0.20) 0%,
         rgba(224, 122, 95, 0.10) 40%,
@@ -113,12 +113,12 @@
     }
 
     /* Teal/sage watercolor blob - bottom left */
-    #pitch-cta .blob-teal {
+    #bonus-stack .blob-teal {
       position: absolute;
       bottom: -80px;
       left: -100px;
-      width: 350px;
-      height: 350px;
+      width: 400px;
+      height: 400px;
       background: radial-gradient(ellipse at 60% 60%,
         rgba(29, 107, 107, 0.18) 0%,
         rgba(29, 107, 107, 0.08) 40%,
@@ -131,71 +131,45 @@
       z-index: 0;
     }
 
+    /* Gold watercolor blob - middle right */
+    #bonus-stack .blob-gold {
+      position: absolute;
+      top: 50%;
+      right: -150px;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(ellipse at 50% 50%,
+        rgba(212, 175, 55, 0.15) 0%,
+        rgba(212, 175, 55, 0.08) 40%,
+        rgba(212, 175, 55, 0.02) 70%,
+        transparent 100%
+      );
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+      transform: translateY(-50%);
+    }
+
     /* Container */
-    #pitch-cta .pitch-container {
+    #bonus-stack .stack-container {
       max-width: 1200px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
     }
 
-    /* Two-column grid */
-    #pitch-cta .pitch-grid {
-      display: grid;
-      grid-template-columns: 420px 1fr;
-      gap: 56px;
-      align-items: center;
-      margin-bottom: 48px;
-    }
+    /* ==========================================
+       HERO AREA
+       ========================================== */
 
-    @media (max-width: 968px) {
-      #pitch-cta .pitch-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-    }
-
-    /* Mockup placeholder */
-    #pitch-cta .mockup-placeholder {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: linear-gradient(145deg,
-        rgba(255, 255, 255, 0.03) 0%,
-        rgba(224, 122, 95, 0.05) 50%,
-        rgba(29, 107, 107, 0.05) 100%
-      );
-      border: 2px dashed rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255, 255, 255, 0.4);
-      font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-    }
-
-    @media (max-width: 968px) {
-      #pitch-cta .mockup-placeholder {
-        max-width: 360px;
-        margin: 0 auto;
-        order: 2;
-      }
-    }
-
-    /* Content column */
-    #pitch-cta .pitch-content {
-      /* Right column content */
-    }
-
-    @media (max-width: 968px) {
-      #pitch-cta .pitch-content {
-        text-align: center;
-      }
+    #bonus-stack .hero-area {
+      text-align: center;
+      margin-bottom: 64px;
     }
 
     /* Eyebrow pill */
-    #pitch-cta .eyebrow-pill {
+    #bonus-stack .eyebrow-pill {
       display: inline-flex;
       align-items: center;
       padding: 10px 20px;
@@ -213,10 +187,10 @@
         0 8px 24px rgba(224, 122, 95, 0.2);
     }
 
-    /* Headline */
-    #pitch-cta .pitch-headline {
+    /* Hero Headline */
+    #bonus-stack .hero-headline {
       font-family: 'OGG', Georgia, serif;
-      font-size: 44px;
+      font-size: 52px;
       font-weight: 700;
       line-height: 1.15;
       color: #FFFFFF;
@@ -225,96 +199,228 @@
     }
 
     @media (max-width: 768px) {
-      #pitch-cta .pitch-headline {
-        font-size: 34px;
+      #bonus-stack .hero-headline {
+        font-size: 38px;
       }
     }
 
     @media (max-width: 480px) {
-      #pitch-cta .pitch-headline {
-        font-size: 30px;
+      #bonus-stack .hero-headline {
+        font-size: 32px;
       }
     }
 
-    /* Subline */
-    #pitch-cta .pitch-subline {
+    /* Hero Subline */
+    #bonus-stack .hero-subline {
       font-family: 'Satoshi', sans-serif;
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 400;
       line-height: 1.65;
       color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 28px;
-      max-width: 520px;
-    }
-
-    @media (max-width: 968px) {
-      #pitch-cta .pitch-subline {
-        margin-left: auto;
-        margin-right: auto;
-      }
+      margin-bottom: 32px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @media (max-width: 768px) {
-      #pitch-cta .pitch-subline {
+      #bonus-stack .hero-subline {
         font-size: 17px;
       }
     }
 
-    /* Chips container */
-    #pitch-cta .chips-container {
+    /* Hero Mockup */
+    #bonus-stack .hero-mockup {
+      width: 100%;
+      max-width: 500px;
+      aspect-ratio: 16/10;
+      margin: 0 auto 32px;
+      background: linear-gradient(145deg,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(224, 122, 95, 0.05) 50%,
+        rgba(29, 107, 107, 0.05) 100%
+      );
+      border: 2px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    @media (max-width: 968px) {
-      #pitch-cta .chips-container {
-        justify-content: center;
-      }
-    }
-
-    /* Individual chip */
-    #pitch-cta .chip {
-      display: inline-flex;
       align-items: center;
-      padding: 10px 18px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 100px;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.4);
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    /* Trust line */
+    #bonus-stack .trust-line {
       font-family: 'Satoshi', sans-serif;
       font-size: 15px;
       font-weight: 500;
-      color: rgba(255, 255, 255, 0.9);
-      white-space: nowrap;
-      backdrop-filter: blur(8px);
-      transition:
-        background 0.2s ease,
-        border-color 0.2s ease;
+      color: rgba(255, 255, 255, 0.6);
     }
 
-    #pitch-cta .chip:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.15);
+    /* ==========================================
+       BONUS CARDS GRID
+       ========================================== */
+
+    #bonus-stack .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 56px;
     }
 
-    /* Accent chip for "+more" */
-    #pitch-cta .chip--accent {
-      background: rgba(29, 107, 107, 0.2);
-      border-color: rgba(29, 107, 107, 0.3);
-      color: #4ECDC4;
-    }
-
-    @media (max-width: 768px) {
-      #pitch-cta .chip {
-        font-size: 14px;
-        padding: 8px 14px;
+    @media (max-width: 968px) {
+      #bonus-stack .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
       }
     }
 
-    /* CTA Slab */
-    #pitch-cta .cta-slab {
+    /* Individual Bonus Card */
+    #bonus-stack .bonus-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.08),
+        0 12px 48px rgba(0, 0, 0, 0.12);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #bonus-stack .bonus-card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.12),
+        0 20px 64px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Card Header - Charcoal */
+    #bonus-stack .card-header {
+      background: linear-gradient(135deg, #2D2A26 0%, #1F1D1A 100%);
+      padding: 24px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #bonus-stack .card-title {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #FFFFFF;
+      -webkit-text-stroke: 0.3px currentColor;
+    }
+
+    @media (max-width: 768px) {
+      #bonus-stack .card-title {
+        font-size: 20px;
+      }
+    }
+
+    /* Coral badge */
+    #bonus-stack .card-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      background: linear-gradient(135deg, #E07A5F 0%, #C96A52 100%);
+      border-radius: 100px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      white-space: nowrap;
+    }
+
+    /* Card Body */
+    #bonus-stack .card-body {
+      padding: 28px;
+    }
+
+    /* Card Description */
+    #bonus-stack .card-description {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #4A4A4A;
+      margin-bottom: 20px;
+    }
+
+    /* Feature List */
+    #bonus-stack .feature-list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    #bonus-stack .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: #2D2A26;
+      margin-bottom: 12px;
+    }
+
+    #bonus-stack .feature-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Checkmark */
+    #bonus-stack .check-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(135deg, #1D6B6B 0%, #156060 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    #bonus-stack .check-icon svg {
+      width: 12px;
+      height: 12px;
+      stroke: #FFFFFF;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    /* Card Mockup Placeholder */
+    #bonus-stack .card-mockup {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: linear-gradient(145deg,
+        rgba(45, 42, 38, 0.03) 0%,
+        rgba(224, 122, 95, 0.05) 50%,
+        rgba(29, 107, 107, 0.05) 100%
+      );
+      border: 2px dashed rgba(45, 42, 38, 0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(45, 42, 38, 0.4);
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* ==========================================
+       CTA SLAB
+       ========================================== */
+
+    #bonus-stack .cta-slab {
       display: block;
       width: 100%;
+      max-width: 800px;
+      margin: 0 auto 24px;
       padding: 36px 48px;
       background: linear-gradient(135deg, #E07A5F 0%, #C96A52 100%);
       border-radius: 20px;
@@ -330,11 +436,10 @@
       transition:
         transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      margin-bottom: 24px;
     }
 
     /* Shimmer effect */
-    #pitch-cta .cta-slab::before {
+    #bonus-stack .cta-slab::before {
       content: '';
       position: absolute;
       top: 0;
@@ -349,11 +454,11 @@
       transition: left 0.6s ease;
     }
 
-    #pitch-cta .cta-slab:hover::before {
+    #bonus-stack .cta-slab:hover::before {
       left: 100%;
     }
 
-    #pitch-cta .cta-slab:hover {
+    #bonus-stack .cta-slab:hover {
       transform: translateY(-3px);
       box-shadow:
         0 8px 24px rgba(224, 122, 95, 0.35),
@@ -361,11 +466,11 @@
         0 0 100px rgba(224, 122, 95, 0.2);
     }
 
-    #pitch-cta .cta-slab:active {
+    #bonus-stack .cta-slab:active {
       transform: translateY(-1px);
     }
 
-    #pitch-cta .cta-slab-line1 {
+    #bonus-stack .cta-slab-line1 {
       display: block;
       font-family: 'Satoshi', sans-serif;
       font-size: 32px;
@@ -378,7 +483,7 @@
       z-index: 1;
     }
 
-    #pitch-cta .cta-slab-line2 {
+    #bonus-stack .cta-slab-line2 {
       display: block;
       font-family: 'Satoshi', sans-serif;
       font-size: 16px;
@@ -389,58 +494,58 @@
     }
 
     @media (max-width: 768px) {
-      #pitch-cta .cta-slab {
+      #bonus-stack .cta-slab {
         padding: 28px 24px;
         border-radius: 16px;
       }
 
-      #pitch-cta .cta-slab-line1 {
+      #bonus-stack .cta-slab-line1 {
         font-size: 24px;
       }
 
-      #pitch-cta .cta-slab-line2 {
+      #bonus-stack .cta-slab-line2 {
         font-size: 15px;
       }
     }
 
     @media (max-width: 480px) {
-      #pitch-cta .cta-slab-line1 {
+      #bonus-stack .cta-slab-line1 {
         font-size: 22px;
       }
     }
 
     /* Microcopy row */
-    #pitch-cta .microcopy-row {
+    #bonus-stack .microcopy-row {
       text-align: center;
       margin-bottom: 10px;
     }
 
-    #pitch-cta .microcopy {
+    #bonus-stack .microcopy {
       font-family: 'Satoshi', sans-serif;
       font-size: 14px;
       font-weight: 500;
       color: rgba(255, 255, 255, 0.6);
     }
 
-    #pitch-cta .microcopy-dot {
+    #bonus-stack .microcopy-dot {
       display: inline-block;
       margin: 0 14px;
       color: rgba(255, 255, 255, 0.3);
     }
 
     @media (max-width: 520px) {
-      #pitch-cta .microcopy {
+      #bonus-stack .microcopy {
         display: block;
         margin-bottom: 4px;
       }
 
-      #pitch-cta .microcopy-dot {
+      #bonus-stack .microcopy-dot {
         display: none;
       }
     }
 
     /* Urgency line */
-    #pitch-cta .urgency-line {
+    #bonus-stack .urgency-line {
       text-align: center;
       font-family: 'Satoshi', sans-serif;
       font-size: 15px;
@@ -449,16 +554,16 @@
     }
 
     @media (max-width: 768px) {
-      #pitch-cta .urgency-line {
+      #bonus-stack .urgency-line {
         font-size: 14px;
       }
     }
 
     /* Reduced motion support */
     @media (prefers-reduced-motion: reduce) {
-      #pitch-cta .cta-slab,
-      #pitch-cta .cta-slab::before,
-      #pitch-cta .chip {
+      #bonus-stack .cta-slab,
+      #bonus-stack .cta-slab::before,
+      #bonus-stack .bonus-card {
         transition: none;
       }
     }
@@ -466,68 +571,281 @@
 </head>
 <body>
 
-<!-- PITCH CTA SECTION -->
-<section id="pitch-cta">
+<!-- BONUS STACK SECTION -->
+<section id="bonus-stack">
 
   <!-- Watercolor blobs -->
   <div class="blob-coral"></div>
   <div class="blob-teal"></div>
+  <div class="blob-gold"></div>
 
-  <div class="pitch-container">
+  <div class="stack-container">
 
-    <!-- Two Column Grid -->
-    <div class="pitch-grid">
+    <!-- HERO AREA -->
+    <div class="hero-area">
 
-      <!-- Left: Mockup Placeholder -->
-      <div class="mockup-placeholder">
-        Mockup placeholder
+      <!-- Eyebrow -->
+      <div class="eyebrow-pill">Everything You Get</div>
+
+      <!-- Headline -->
+      <h2 class="hero-headline">The Complete System, Delivered</h2>
+
+      <!-- Subline -->
+      <p class="hero-subline">
+        Your all-in-one stack for building a profitable digital product shop. Blueprints, templates, calls, and everything you need to start selling.
+      </p>
+
+      <!-- Hero Mockup -->
+      <div class="hero-mockup">
+        Full stack mockup placeholder
       </div>
 
-      <!-- Right: Content -->
-      <div class="pitch-content">
+      <!-- Trust Line -->
+      <p class="trust-line">Join 2,000+ shop owners already inside</p>
 
-        <!-- Eyebrow -->
-        <div class="eyebrow-pill">Ready When You Are</div>
+    </div>
 
-        <!-- Headline -->
-        <h2 class="pitch-headline">
-          Ready to build your shop<br>
-          the way I actually run mine?
-        </h2>
+    <!-- BONUS CARDS GRID -->
+    <div class="cards-grid">
 
-        <!-- Subline -->
-        <p class="pitch-subline">
-          Get the Daily Drop, the $10K Month Blueprint, my Traffic Loop, and the calls where you can ask me what to do next.
-        </p>
-
-        <!-- Chips -->
-        <div class="chips-container">
-          <span class="chip">Daily Drop</span>
-          <span class="chip">3 Paths to $5K</span>
-          <span class="chip">$10K Month Blueprint</span>
-          <span class="chip">Traffic Loop</span>
-          <span class="chip">Ask Bailey Calls</span>
-          <span class="chip">Steal My Bestsellers</span>
-          <span class="chip">PLR Vault</span>
-          <span class="chip chip--accent">Tools Stack + more</span>
+      <!-- BONUS 1: Daily Drop Vault -->
+      <div class="bonus-card">
+        <div class="card-header">
+          <h3 class="card-title">Daily Drop Vault</h3>
+          <span class="card-badge">Core</span>
         </div>
+        <div class="card-body">
+          <p class="card-description">
+            365 days of done-for-you product ideas, hooks, and marketing angles delivered straight to your inbox. Never wonder what to post or sell again.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Daily product ideas with proven hooks</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Caption templates and CTAs included</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Seasonal and trending topics covered</span>
+            </li>
+          </ul>
+          <div class="card-mockup">Daily Drop mockup</div>
+        </div>
+      </div>
 
+      <!-- BONUS 2: 3 Paths to $5K Playbook -->
+      <div class="bonus-card">
+        <div class="card-header">
+          <h3 class="card-title">3 Paths to $5K Playbook</h3>
+          <span class="card-badge">Strategy</span>
+        </div>
+        <div class="card-body">
+          <p class="card-description">
+            Three different routes to your first $5K month, so you can pick the path that fits your life. No cookie-cutter advice here.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>The Volume Path for quick wins</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>The Premium Path for bigger tickets</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>The Hybrid Path for balanced growth</span>
+            </li>
+          </ul>
+          <div class="card-mockup">3 Paths mockup</div>
+        </div>
+      </div>
+
+      <!-- BONUS 3: $10K Month Blueprint -->
+      <div class="bonus-card">
+        <div class="card-header">
+          <h3 class="card-title">$10K Month Blueprint</h3>
+          <span class="card-badge">Blueprint</span>
+        </div>
+        <div class="card-body">
+          <p class="card-description">
+            The exact week-by-week system I used to hit consistent $10K months. Product mix, pricing strategy, and launch timing all mapped out.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>4-week launch calendar template</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Product pricing calculator included</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Bundle strategy for higher AOV</span>
+            </li>
+          </ul>
+          <div class="card-mockup">$10K Blueprint mockup</div>
+        </div>
+      </div>
+
+      <!-- BONUS 4: Traffic Loop System -->
+      <div class="bonus-card">
+        <div class="card-header">
+          <h3 class="card-title">Traffic Loop System</h3>
+          <span class="card-badge">Traffic</span>
+        </div>
+        <div class="card-body">
+          <p class="card-description">
+            Stop chasing followers. This system turns every piece of content into a traffic loop that brings buyers back to your shop on repeat.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Content-to-cart funnel templates</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Email sequence swipe files</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Retargeting strategy walkthrough</span>
+            </li>
+          </ul>
+          <div class="card-mockup">Traffic Loop mockup</div>
+        </div>
+      </div>
+
+      <!-- BONUS 5: Ask Bailey Calls -->
+      <div class="bonus-card">
+        <div class="card-header">
+          <h3 class="card-title">Ask Bailey Calls</h3>
+          <span class="card-badge">Live</span>
+        </div>
+        <div class="card-body">
+          <p class="card-description">
+            Monthly live calls where you can ask me anything. Get real feedback on your products, pricing, and strategy from someone who does this every day.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Monthly live Q&A sessions</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Submit questions in advance</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Replays available if you miss it</span>
+            </li>
+          </ul>
+          <div class="card-mockup">Ask Bailey mockup</div>
+        </div>
+      </div>
+
+      <!-- BONUS 6: Steal My Bestsellers -->
+      <div class="bonus-card">
+        <div class="card-header">
+          <h3 class="card-title">Steal My Bestsellers</h3>
+          <span class="card-badge">Templates</span>
+        </div>
+        <div class="card-body">
+          <p class="card-description">
+            My actual best-selling product templates, fully editable. See exactly how I structure, price, and present products that sell on repeat.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>10+ proven product templates</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Canva files included</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Listing copy breakdowns</span>
+            </li>
+          </ul>
+          <div class="card-mockup">Bestsellers mockup</div>
+        </div>
+      </div>
+
+      <!-- BONUS 7: PLR Vault -->
+      <div class="bonus-card">
+        <div class="card-header">
+          <h3 class="card-title">PLR Vault</h3>
+          <span class="card-badge">Assets</span>
+        </div>
+        <div class="card-body">
+          <p class="card-description">
+            A growing library of private label rights products you can rebrand and sell as your own. New assets added monthly.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>50+ ready-to-sell products</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Full commercial rights included</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>New drops every month</span>
+            </li>
+          </ul>
+          <div class="card-mockup">PLR Vault mockup</div>
+        </div>
+      </div>
+
+      <!-- BONUS 8: Tools + Ops Stack -->
+      <div class="bonus-card">
+        <div class="card-header">
+          <h3 class="card-title">Tools + Ops Stack</h3>
+          <span class="card-badge">Systems</span>
+        </div>
+        <div class="card-body">
+          <p class="card-description">
+            Every tool, app, and system I use to run my shop. Plus SOPs so you can set up the same workflows without the guesswork.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Complete tech stack breakdown</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Notion SOPs and workflows</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Automation setup guides</span>
+            </li>
+          </ul>
+          <div class="card-mockup">Tools Stack mockup</div>
+        </div>
       </div>
 
     </div>
 
-    <!-- CTA Slab -->
+    <!-- CTA SLAB -->
     <a href="#checkout" class="cta-slab">
-      <span class="cta-slab-line1">Get Instant Access Now →</span>
-      <span class="cta-slab-line2">+ Get Bailey's Daily Drop, Blueprints, Traffic Loop, and everything included</span>
+      <span class="cta-slab-line1">Get Instant Access Now</span>
+      <span class="cta-slab-line2">+ Everything above included</span>
     </a>
 
     <!-- Microcopy -->
     <div class="microcopy-row">
       <span class="microcopy">$27/mo billed annually</span>
-      <span class="microcopy-dot">•</span>
+      <span class="microcopy-dot">&#8226;</span>
       <span class="microcopy">Instant access</span>
-      <span class="microcopy-dot">•</span>
+      <span class="microcopy-dot">&#8226;</span>
       <span class="microcopy">Secure checkout</span>
     </div>
 
