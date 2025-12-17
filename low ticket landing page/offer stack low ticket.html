@@ -1,1336 +1,1526 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Offer Stack - Everything You Get</title>
-  <style>
-    /* ==========================================
-       BASE64 FONT EMBEDDINGS (truncated for brevity)
-       ========================================== */
+<!-- PREMIUM OFFER STACK - Framer Embed Format -->
+<div id="offer-stack">
 
-    @font-face {
-      font-family: 'OGG';
-      src: url(data:font/truetype;base64,AAEAAAAQAQAABAAARFNJRw) format('truetype');
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
+  <!-- Ambient Background Elements -->
+  <div class="os-ambient os-ambient-1"></div>
+  <div class="os-ambient os-ambient-2"></div>
 
-    @font-face {
-      font-family: 'Satoshi';
-      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIA) format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Satoshi';
-      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIA) format('woff2');
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Satoshi';
-      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIA) format('woff2');
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Satoshi';
-      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIA) format('woff2');
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    /* ==========================================
-       RESET & BASE
-       ========================================== */
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      background: #FAF8F5;
-    }
-
-    /* ==========================================
-       OFFER STACK SECTION - CHARCOAL BASE
-       ========================================== */
-
-    #bf-offerstack {
-      width: 100%;
-      padding: 100px 24px 120px;
-      background: #1F1D1A;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Subtle noise texture */
-    #bf-offerstack::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-      opacity: 0.025;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Watercolor blob - coral top right */
-    #bf-offerstack .wc-blob-1 {
-      position: absolute;
-      top: -120px;
-      right: -100px;
-      width: 500px;
-      height: 450px;
-      background: radial-gradient(ellipse at 40% 50%,
-        rgba(224, 122, 95, 0.15) 0%,
-        rgba(224, 122, 95, 0.06) 50%,
-        transparent 80%
-      );
-      filter: blur(80px);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Watercolor blob - teal bottom left */
-    #bf-offerstack .wc-blob-2 {
-      position: absolute;
-      bottom: -100px;
-      left: -120px;
-      width: 450px;
-      height: 400px;
-      background: radial-gradient(ellipse at 60% 50%,
-        rgba(29, 107, 107, 0.12) 0%,
-        rgba(29, 107, 107, 0.05) 50%,
-        transparent 80%
-      );
-      filter: blur(80px);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Container */
-    .offer-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ==========================================
-       SECTION HEADER
-       ========================================== */
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 72px;
-    }
-
-    .section-eyebrow {
-      display: inline-block;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #E07A5F;
-      background: rgba(224, 122, 95, 0.1);
-      border: 1px solid rgba(224, 122, 95, 0.2);
-      padding: 10px 20px;
-      border-radius: 100px;
-      margin-bottom: 28px;
-    }
-
-    .section-headline {
-      font-family: 'OGG', Georgia, serif;
-      font-size: clamp(36px, 5vw, 52px);
-      font-weight: 700;
-      line-height: 1.15;
-      color: #FAF8F5;
-      margin-bottom: 20px;
-    }
-
-    .section-headline em {
-      font-style: italic;
-      color: #E07A5F;
-    }
-
-    .section-subhead {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 1.7;
-      color: rgba(250, 248, 245, 0.6);
-      max-width: 580px;
-      margin: 0 auto;
-    }
-
-    /* ==========================================
-       CARDS STACK
-       ========================================== */
-
-    .cards-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
-      margin-bottom: 80px;
-    }
-
-    /* ==========================================
-       OFFER CARD - BASE
-       ========================================== */
-
-    .offer-card {
-      background: #FAF8F5;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow:
-        0 4px 24px rgba(0, 0, 0, 0.15),
-        0 12px 48px rgba(0, 0, 0, 0.1);
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    .offer-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .offer-card:hover {
-      box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.18),
-        0 20px 64px rgba(0, 0, 0, 0.12);
-    }
-
-    /* Stagger animation */
-    .offer-card:nth-child(1) { transition-delay: 0s; }
-    .offer-card:nth-child(2) { transition-delay: 0.1s; }
-    .offer-card:nth-child(3) { transition-delay: 0.2s; }
-    .offer-card:nth-child(4) { transition-delay: 0.3s; }
-    .offer-card:nth-child(5) { transition-delay: 0.4s; }
-    .offer-card:nth-child(6) { transition-delay: 0.5s; }
-
-    /* ==========================================
-       CARD HEADER - BASE
-       ========================================== */
-
-    .card-header {
-      padding: 24px 40px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      position: relative;
-      border-left: 4px solid transparent;
-    }
-
-    .card-title {
-      font-family: 'OGG', Georgia, serif;
-      font-size: 26px;
-      font-weight: 700;
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    .card-badge {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 100px;
-      white-space: nowrap;
-    }
-
-    /* ==========================================
-       HEADER TREATMENTS BY TYPE
-       ========================================== */
-
-    /* CORE - Deep Teal */
-    .card-core .card-header {
-      background: linear-gradient(135deg, #1D6B6B 0%, #165858 100%);
-      border-left-color: #E07A5F;
-    }
-
-    .card-core .card-header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      opacity: 0.03;
-      pointer-events: none;
-    }
-
-    .card-core .card-title {
-      color: #FAF8F5;
-    }
-
-    .card-core .card-badge {
-      background: #E07A5F;
-      color: #fff;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
-    }
-
-    /* STRATEGY - Warm Charcoal with Glow */
-    .card-strategy .card-header {
-      background: linear-gradient(135deg, #2D2A26 0%, #1F1D1A 100%);
-      border-left-color: #D4A574;
-      box-shadow: inset 0 0 80px rgba(224, 122, 95, 0.06);
-    }
-
-    .card-strategy .card-title {
-      color: #FAF8F5;
-    }
-
-    .card-strategy .card-badge {
-      background: linear-gradient(135deg, #D4A574 0%, #C49A68 100%);
-      color: #1F1D1A;
-    }
-
-    /* RESOURCE - Rich Dark with Shimmer */
-    .card-resource .card-header {
-      background: linear-gradient(135deg, #1F1D1A 0%, #2D2A26 50%, #1F1D1A 100%);
-      border-left-color: #E07A5F;
-    }
-
-    .card-resource .card-header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(255,255,255,0.008) 10px,
-        rgba(255,255,255,0.008) 20px
-      );
-      pointer-events: none;
-    }
-
-    .card-resource .card-title {
-      color: #FAF8F5;
-    }
-
-    .card-resource .card-badge {
-      background: transparent;
-      color: #E07A5F;
-      border: 1.5px solid #E07A5F;
-    }
-
-    /* BONUS - Light/Cream */
-    .card-bonus .card-header {
-      background: linear-gradient(135deg, #FAF8F5 0%, #F0EBE3 100%);
-      border: 1px solid rgba(29, 107, 107, 0.12);
-      border-left: 4px solid #1D6B6B;
-    }
-
-    .card-bonus .card-title {
-      color: #1F1D1A;
-    }
-
-    .card-bonus .card-badge {
-      background: transparent;
-      color: #1D6B6B;
-      border: 1.5px solid #1D6B6B;
-    }
-
-    /* ==========================================
-       CARD BODY - TWO COLUMN LAYOUT
-       ========================================== */
-
-    .card-body {
-      display: grid;
-      grid-template-columns: 55% 45%;
-      min-height: 260px;
-    }
-
-    @media (max-width: 800px) {
-      .card-body {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Content Zone */
-    .card-content {
-      padding: 32px 40px 36px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-description {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.65;
-      color: #5A544C;
-      margin-bottom: 24px;
-      max-width: 440px;
-    }
-
-    /* Feature List - Custom Bullets */
-    .card-features {
-      list-style: none;
-      margin-bottom: 24px;
-      flex-grow: 1;
-    }
-
-    .card-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      color: #3D3935;
-      line-height: 1.5;
-      margin-bottom: 14px;
-    }
-
-    .card-features li:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Numbered Bullets */
-    .bullet-num {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 26px;
-      height: 26px;
-      background: rgba(29, 107, 107, 0.08);
-      color: #1D6B6B;
-      border-radius: 50%;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    /* Square Bullets */
-    .bullet-sq {
-      width: 8px;
-      height: 8px;
-      background: #E07A5F;
-      border-radius: 2px;
-      transform: rotate(45deg);
-      flex-shrink: 0;
-      margin-top: 6px;
-    }
-
-    /* Micro Stat */
-    .micro-stat {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-      margin-top: auto;
-    }
-
-    .stat-num {
-      font-family: 'OGG', Georgia, serif;
-      font-size: 32px;
-      font-weight: 700;
-      color: #E07A5F;
-      line-height: 1;
-      background: linear-gradient(180deg, transparent 55%, rgba(224, 122, 95, 0.12) 55%);
-      padding: 0 4px;
-    }
-
-    .stat-label {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      color: #8A847B;
-    }
-
-    /* ==========================================
-       VISUAL ZONE
-       ========================================== */
-
-    .card-visual {
-      background: linear-gradient(145deg, #F5F1EB 0%, #EDE8E0 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px;
-      position: relative;
-    }
-
-    @media (max-width: 800px) {
-      .card-visual {
-        min-height: 200px;
-        order: -1;
-      }
-    }
-
-    .visual-tag {
-      position: absolute;
-      bottom: 12px;
-      right: 16px;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      color: #8A847B;
-      background: rgba(255,255,255,0.7);
-      padding: 5px 10px;
-      border-radius: 100px;
-    }
-
-    /* ==========================================
-       MOCKUP FRAMES
-       ========================================== */
-
-    .mockup-browser {
-      background: #1F1D1A;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.15),
-        0 2px 8px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 280px;
-      transition: transform 0.4s ease;
-    }
-
-    .offer-card:hover .mockup-browser {
-      transform: perspective(800px) rotateY(-2deg) scale(1.02);
-    }
-
-    .browser-bar {
-      height: 28px;
-      background: #2D2A26;
-      display: flex;
-      align-items: center;
-      padding: 0 12px;
-      gap: 6px;
-    }
-
-    .browser-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #5A544C;
-    }
-
-    .browser-dot:nth-child(1) { background: #E07A5F; }
-    .browser-dot:nth-child(2) { background: #D4A574; }
-    .browser-dot:nth-child(3) { background: #1D6B6B; }
-
-    .browser-content {
-      background: #FAF8F5;
-      padding: 16px;
-      min-height: 140px;
-    }
-
-    /* Custom Visual: Calendar Grid */
-    .viz-calendar {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 4px;
-    }
-
-    .cal-cell {
-      aspect-ratio: 1;
-      background: rgba(29, 107, 107, 0.08);
-      border-radius: 3px;
-    }
-
-    .cal-cell.filled {
-      background: rgba(224, 122, 95, 0.25);
-    }
-
-    .cal-cell.today {
-      background: #E07A5F;
-      position: relative;
-    }
-
-    .cal-cell.today::after {
-      content: '';
-      position: absolute;
-      inset: -3px;
-      border: 1px solid #E07A5F;
-      border-radius: 5px;
-      opacity: 0.4;
-    }
-
-    /* Custom Visual: Paths */
-    .viz-paths {
-      width: 100%;
-      max-width: 200px;
-      position: relative;
-    }
-
-    .viz-paths svg {
-      width: 100%;
-      height: auto;
-    }
-
-    .path-label {
-      position: absolute;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #8A847B;
-    }
-
-    .path-label.l1 { top: 8px; left: 5%; }
-    .path-label.l2 { top: 0; left: 50%; transform: translateX(-50%); color: #E07A5F; }
-    .path-label.l3 { top: 8px; right: 5%; }
-
-    /* Custom Visual: Chart */
-    .viz-chart {
-      display: flex;
-      align-items: flex-end;
-      gap: 8px;
-      height: 100px;
-      padding: 16px;
-      background: rgba(255,255,255,0.5);
-      border-radius: 8px;
-      border: 1px solid rgba(29, 107, 107, 0.1);
-    }
-
-    .chart-bar {
-      flex: 1;
-      background: linear-gradient(180deg, #1D6B6B 0%, rgba(29, 107, 107, 0.4) 100%);
-      border-radius: 2px 2px 0 0;
-      position: relative;
-    }
-
-    .chart-bar::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #1D6B6B;
-    }
-
-    .chart-bar.accent {
-      background: linear-gradient(180deg, #E07A5F 0%, rgba(224, 122, 95, 0.4) 100%);
-    }
-
-    .chart-bar.accent::after {
-      background: #E07A5F;
-    }
-
-    /* Custom Visual: Video Frame */
-    .viz-video {
-      width: 100%;
-      max-width: 200px;
-      background: #1F1D1A;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    }
-
-    .video-bar {
-      height: 24px;
-      background: #2D2A26;
-      display: flex;
-      align-items: center;
-      padding: 0 10px;
-      gap: 5px;
-    }
-
-    .video-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #5A544C;
-    }
-
-    .video-dot:first-child { background: rgba(224, 122, 95, 0.7); }
-
-    .video-body {
-      aspect-ratio: 4/3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(180deg, #2D2A26 0%, #1F1D1A 100%);
-      position: relative;
-    }
-
-    .video-avatar {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #1D6B6B 0%, #165858 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'OGG', Georgia, serif;
-      font-size: 22px;
-      color: #FAF8F5;
-    }
-
-    .video-live {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: #E07A5F;
-    }
-
-    .video-live::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #E07A5F;
-      animation: livePulse 1.5s ease-in-out infinite;
-    }
-
-    @keyframes livePulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    /* Custom Visual: Folder Stack */
-    .viz-folders {
-      position: relative;
-      width: 160px;
-      height: 120px;
-    }
-
-    .folder {
-      position: absolute;
-      width: 120px;
-      height: 80px;
-      background: rgba(250, 248, 245, 0.8);
-      border: 1px solid rgba(29, 107, 107, 0.15);
-      border-radius: 4px;
-      transition: transform 0.3s ease;
-    }
-
-    .folder::before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      left: 10px;
-      width: 36px;
-      height: 10px;
-      background: inherit;
-      border: 1px solid rgba(29, 107, 107, 0.15);
-      border-bottom: none;
-      border-radius: 3px 3px 0 0;
-    }
-
-    .folder-1 { bottom: 0; left: 0; transform: rotate(-4deg); }
-    .folder-2 { bottom: 8px; left: 16px; transform: rotate(-2deg); }
-    .folder-3 {
-      bottom: 16px;
-      left: 32px;
-      background: rgba(224, 122, 95, 0.1);
-      border-color: rgba(224, 122, 95, 0.25);
-    }
-
-    .folder-3::before {
-      background: rgba(224, 122, 95, 0.1);
-      border-color: rgba(224, 122, 95, 0.25);
-    }
-
-    .offer-card:hover .folder-1 { transform: rotate(-6deg) translateY(-2px); }
-    .offer-card:hover .folder-2 { transform: rotate(-3deg) translateY(-1px); }
-
-    .folder-label {
-      position: absolute;
-      bottom: 20px;
-      right: 0;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #D4A574;
-    }
-
-    /* Custom Visual: Tools Grid */
-    .viz-tools {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .tool-icon {
-      width: 56px;
-      height: 56px;
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(29, 107, 107, 0.12);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #1D6B6B;
-      transition: transform 0.3s ease;
-    }
-
-    .tool-icon svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .offer-card:hover .tool-icon:nth-child(1) { transform: translateY(-3px) rotate(-2deg); }
-    .offer-card:hover .tool-icon:nth-child(2) { transform: translateY(-2px) rotate(2deg); }
-    .offer-card:hover .tool-icon:nth-child(3) { transform: translateY(-4px) rotate(-1deg); }
-    .offer-card:hover .tool-icon:nth-child(4) { transform: translateY(-2px) rotate(3deg); }
-
-    /* ==========================================
-       CTA AREA
-       ========================================== */
-
-    .cta-area {
-      text-align: center;
-      padding-top: 16px;
-    }
-
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      padding: 20px 48px;
-      background: linear-gradient(135deg, #E8856A 0%, #E07A5F 50%, #C96A52 100%);
-      border-radius: 100px;
-      border: 1px solid rgba(255,255,255,0.1);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.2),
-        0 4px 16px rgba(224, 122, 95, 0.35),
-        0 12px 40px rgba(224, 122, 95, 0.2);
-      font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #fff;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-button::before {
-      content: '';
-      position: absolute;
-      top: 1px;
-      left: 20%;
-      right: 20%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
-    }
-
-    .cta-button::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
-      transition: left 0.5s ease;
-    }
-
-    .cta-button:hover::after {
-      left: 100%;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.25),
-        0 6px 20px rgba(224, 122, 95, 0.4),
-        0 16px 48px rgba(224, 122, 95, 0.25);
-    }
-
-    .cta-arrow {
-      transition: transform 0.3s ease;
-    }
-
-    .cta-button:hover .cta-arrow {
-      transform: translateX(4px);
-    }
-
-    .cta-meta {
-      margin-top: 20px;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      color: rgba(250, 248, 245, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .cta-dot {
-      width: 4px;
-      height: 4px;
-      background: rgba(250, 248, 245, 0.25);
-      border-radius: 50%;
-    }
-
-    .cta-urgency {
-      margin-top: 14px;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      color: #E07A5F;
-    }
-
-    /* ==========================================
-       RESPONSIVE
-       ========================================== */
-
-    @media (max-width: 900px) {
-      #bf-offerstack {
-        padding: 80px 20px 100px;
-      }
-
-      .section-header {
-        margin-bottom: 56px;
-      }
-
-      .cards-stack {
-        gap: 36px;
-      }
-
-      .card-header {
-        padding: 20px 24px;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .card-title {
-        font-size: 22px;
-      }
-
-      .card-content {
-        padding: 24px;
-      }
-
-      .stat-num {
-        font-size: 28px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .section-headline {
-        font-size: 32px;
-      }
-
-      .card-title {
-        font-size: 20px;
-      }
-
-      .card-description {
-        font-size: 15px;
-      }
-
-      .cta-button {
-        width: 100%;
-        justify-content: center;
-        padding: 18px 32px;
-      }
-
-      .cta-meta {
-        flex-direction: column;
-        gap: 6px;
-      }
-
-      .cta-dot {
-        display: none;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<section id="bf-offerstack">
-  <!-- Watercolor Blobs -->
-  <div class="wc-blob-1"></div>
-  <div class="wc-blob-2"></div>
-
-  <div class="offer-container">
+  <div class="os-container">
 
     <!-- Section Header -->
-    <header class="section-header">
-      <span class="section-eyebrow">Everything You Get</span>
-      <h2 class="section-headline">The <em>Complete System,</em> Delivered</h2>
-      <p class="section-subhead">
-        Your all-in-one stack for building a profitable digital product shop. Blueprints, templates, calls, and everything you need to start selling.
-      </p>
+    <header class="os-header">
+      <span class="os-eyebrow">Everything You Get</span>
+      <h2 class="os-headline">The <em>Complete System,</em> Delivered</h2>
+      <p class="os-subhead">Your all-in-one stack for building a profitable digital product shop. Blueprints, templates, calls, and everything you need to start selling.</p>
     </header>
 
-    <!-- Cards Stack -->
-    <div class="cards-stack">
+    <!-- Cards Grid -->
+    <div class="os-cards">
 
       <!-- CARD 1: Daily Drop Vault (CORE) -->
-      <article class="offer-card card-core">
-        <div class="card-header">
-          <h3 class="card-title">Daily Drop Vault</h3>
-          <span class="card-badge">Core</span>
+      <article class="os-card os-card--core">
+        <div class="os-card__header">
+          <div class="os-card__header-content">
+            <h3 class="os-card__title">Daily Drop Vault</h3>
+            <span class="os-badge os-badge--core">Core</span>
+          </div>
+          <div class="os-card__header-texture"></div>
+          <div class="os-card__header-shine"></div>
         </div>
-        <div class="card-body">
-          <div class="card-content">
-            <p class="card-description">
-              365 days of done-for-you product ideas, hooks, and marketing angles delivered straight to your inbox.
-            </p>
-            <ul class="card-features">
-              <li>
-                <span class="bullet-num">01</span>
+        <div class="os-card__body">
+          <div class="os-card__content">
+            <p class="os-card__desc">365 days of done-for-you product ideas, hooks, and marketing angles delivered straight to your inbox.</p>
+            <ul class="os-features">
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--num">01</span>
                 <span>Daily product ideas with proven hooks</span>
               </li>
-              <li>
-                <span class="bullet-num">02</span>
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--num">02</span>
                 <span>Caption templates and CTAs included</span>
               </li>
-              <li>
-                <span class="bullet-num">03</span>
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--num">03</span>
                 <span>Seasonal and trending topics covered</span>
               </li>
             </ul>
-            <div class="micro-stat">
-              <span class="stat-num">365</span>
-              <span class="stat-label">days of ideas</span>
+            <div class="os-stat">
+              <span class="os-stat__num">365</span>
+              <span class="os-stat__label">days of ideas</span>
             </div>
           </div>
-          <div class="card-visual">
-            <div class="mockup-browser">
-              <div class="browser-bar">
-                <span class="browser-dot"></span>
-                <span class="browser-dot"></span>
-                <span class="browser-dot"></span>
+          <div class="os-card__visual">
+            <div class="os-mockup os-mockup--browser">
+              <div class="os-browser__bar">
+                <span class="os-browser__dot os-browser__dot--red"></span>
+                <span class="os-browser__dot os-browser__dot--yellow"></span>
+                <span class="os-browser__dot os-browser__dot--green"></span>
+                <div class="os-browser__address">
+                  <span class="os-browser__url">dropvault.app</span>
+                </div>
               </div>
-              <div class="browser-content">
-                <div class="viz-calendar">
-                  <span class="cal-cell filled"></span>
-                  <span class="cal-cell filled"></span>
-                  <span class="cal-cell filled"></span>
-                  <span class="cal-cell filled"></span>
-                  <span class="cal-cell filled"></span>
-                  <span class="cal-cell filled"></span>
-                  <span class="cal-cell today"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
-                  <span class="cal-cell"></span>
+              <div class="os-browser__content">
+                <div class="os-viz-calendar">
+                  <div class="os-cal__header">
+                    <span class="os-cal__month">December 2024</span>
+                    <div class="os-cal__nav">
+                      <span class="os-cal__arrow">‹</span>
+                      <span class="os-cal__arrow">›</span>
+                    </div>
+                  </div>
+                  <div class="os-cal__days">
+                    <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                  </div>
+                  <div class="os-cal__grid">
+                    <span class="os-cal__cell os-cal__cell--muted">29</span>
+                    <span class="os-cal__cell os-cal__cell--muted">30</span>
+                    <span class="os-cal__cell os-cal__cell--filled">1</span>
+                    <span class="os-cal__cell os-cal__cell--filled">2</span>
+                    <span class="os-cal__cell os-cal__cell--filled">3</span>
+                    <span class="os-cal__cell os-cal__cell--filled">4</span>
+                    <span class="os-cal__cell os-cal__cell--filled">5</span>
+                    <span class="os-cal__cell os-cal__cell--filled">6</span>
+                    <span class="os-cal__cell os-cal__cell--filled">7</span>
+                    <span class="os-cal__cell os-cal__cell--filled">8</span>
+                    <span class="os-cal__cell os-cal__cell--filled">9</span>
+                    <span class="os-cal__cell os-cal__cell--filled">10</span>
+                    <span class="os-cal__cell os-cal__cell--filled">11</span>
+                    <span class="os-cal__cell os-cal__cell--filled">12</span>
+                    <span class="os-cal__cell os-cal__cell--filled">13</span>
+                    <span class="os-cal__cell os-cal__cell--filled">14</span>
+                    <span class="os-cal__cell os-cal__cell--filled">15</span>
+                    <span class="os-cal__cell os-cal__cell--today">16</span>
+                    <span class="os-cal__cell">17</span>
+                    <span class="os-cal__cell">18</span>
+                    <span class="os-cal__cell">19</span>
+                    <span class="os-cal__cell">20</span>
+                    <span class="os-cal__cell">21</span>
+                    <span class="os-cal__cell">22</span>
+                    <span class="os-cal__cell">23</span>
+                    <span class="os-cal__cell">24</span>
+                    <span class="os-cal__cell">25</span>
+                    <span class="os-cal__cell">26</span>
+                    <span class="os-cal__cell">27</span>
+                    <span class="os-cal__cell">28</span>
+                    <span class="os-cal__cell">29</span>
+                    <span class="os-cal__cell">30</span>
+                    <span class="os-cal__cell">31</span>
+                    <span class="os-cal__cell os-cal__cell--muted">1</span>
+                  </div>
+                </div>
+                <div class="os-browser__indicator">
+                  <span class="os-browser__pulse"></span>
+                  <span class="os-browser__indicator-text">New drop ready</span>
                 </div>
               </div>
             </div>
-            <span class="visual-tag">New drops daily</span>
+            <span class="os-visual-tag">New drops daily</span>
           </div>
         </div>
       </article>
 
       <!-- CARD 2: 3 Paths to $5K (STRATEGY) -->
-      <article class="offer-card card-strategy">
-        <div class="card-header">
-          <h3 class="card-title">3 Paths to $5K Playbook</h3>
-          <span class="card-badge">Strategy</span>
+      <article class="os-card os-card--strategy">
+        <div class="os-card__header">
+          <div class="os-card__header-content">
+            <h3 class="os-card__title">3 Paths to $5K Playbook</h3>
+            <span class="os-badge os-badge--strategy">Strategy</span>
+          </div>
+          <div class="os-card__header-texture"></div>
+          <div class="os-card__header-lines"></div>
         </div>
-        <div class="card-body">
-          <div class="card-content">
-            <p class="card-description">
-              Three different routes to your first $5K month, so you can pick the path that matches your situation.
-            </p>
-            <ul class="card-features">
-              <li>
-                <span class="bullet-sq"></span>
-                <span><strong>Path 1:</strong> The Sprint - fast launch, test fast</span>
+        <div class="os-card__body">
+          <div class="os-card__content">
+            <p class="os-card__desc">Three different routes to your first $5K month, so you can pick the path that matches your situation.</p>
+            <ul class="os-features">
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--sq"></span>
+                <span><strong>The Sprint</strong> — Fast launch, test fast, iterate faster</span>
               </li>
-              <li>
-                <span class="bullet-sq"></span>
-                <span><strong>Path 2:</strong> The Build - steady compound growth</span>
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--sq os-bullet--sq-gold"></span>
+                <span><strong>The Build</strong> — Steady compound growth, sustainable</span>
               </li>
-              <li>
-                <span class="bullet-sq"></span>
-                <span><strong>Path 3:</strong> The Scale - multiply what works</span>
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--sq os-bullet--sq-teal"></span>
+                <span><strong>The Scale</strong> — Multiply what's already working</span>
               </li>
             </ul>
-            <div class="micro-stat">
-              <span class="stat-num">$5K</span>
-              <span class="stat-label">first milestone</span>
+            <div class="os-stat os-stat--glow">
+              <span class="os-stat__num">$5K</span>
+              <span class="os-stat__label">first milestone</span>
             </div>
           </div>
-          <div class="card-visual">
-            <div class="viz-paths">
-              <span class="path-label l1">Sprint</span>
-              <span class="path-label l2">Build</span>
-              <span class="path-label l3">Scale</span>
-              <svg viewBox="0 0 180 100" fill="none">
-                <path d="M90 95 L90 60 L25 15" stroke="rgba(212,165,116,0.4)" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
-                <path d="M90 95 L90 60 L90 10" stroke="#E07A5F" stroke-width="2.5" fill="none"/>
-                <path d="M90 95 L90 60 L155 15" stroke="rgba(212,165,116,0.4)" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
-                <circle cx="90" cy="95" r="5" fill="#E07A5F"/>
-                <circle cx="25" cy="12" r="4" fill="#D4A574" opacity="0.6"/>
-                <circle cx="90" cy="8" r="5" fill="#E07A5F"/>
-                <circle cx="155" cy="12" r="4" fill="#D4A574" opacity="0.6"/>
+          <div class="os-card__visual os-card__visual--strategy">
+            <div class="os-viz-paths">
+              <svg viewBox="0 0 200 140" fill="none" class="os-paths-svg">
+                <!-- Origin node -->
+                <circle cx="100" cy="120" r="8" fill="#E07A5F"/>
+                <circle cx="100" cy="120" r="12" fill="none" stroke="#E07A5F" stroke-width="1" opacity="0.3"/>
+
+                <!-- Path 1: Sprint (left) -->
+                <path d="M100 112 Q60 80, 35 45" stroke="#D4A853" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <circle cx="35" cy="40" r="6" fill="#D4A853"/>
+                <text x="35" y="26" class="os-path-label" text-anchor="middle" fill="#D4A853">SPRINT</text>
+
+                <!-- Path 2: Build (center) -->
+                <path d="M100 112 L100 50" stroke="#E07A5F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <circle cx="100" cy="42" r="7" fill="#E07A5F"/>
+                <text x="100" y="26" class="os-path-label" text-anchor="middle" fill="#E07A5F">BUILD</text>
+
+                <!-- Path 3: Scale (right) -->
+                <path d="M100 112 Q140 80, 165 45" stroke="#1D6B6B" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <circle cx="165" cy="40" r="6" fill="#1D6B6B"/>
+                <text x="165" y="26" class="os-path-label" text-anchor="middle" fill="#1D6B6B">SCALE</text>
+
+                <!-- $5K badge -->
+                <rect x="70" y="2" width="60" height="18" rx="3" fill="#1F1D1A"/>
+                <text x="100" y="14" class="os-path-goal" text-anchor="middle" fill="#FAF8F5">$5K/mo</text>
               </svg>
             </div>
-            <span class="visual-tag">Choose your path</span>
+            <span class="os-visual-tag">Choose your path</span>
           </div>
         </div>
       </article>
 
-      <!-- CARD 3: $10K Month Blueprint (CORE) -->
-      <article class="offer-card card-core">
-        <div class="card-header">
-          <h3 class="card-title">$10K Month Blueprint</h3>
-          <span class="card-badge">Core</span>
+      <!-- CARD 3: PLR Vault (RESOURCE) -->
+      <article class="os-card os-card--resource">
+        <div class="os-card__header os-card__header--light">
+          <div class="os-card__header-content">
+            <h3 class="os-card__title os-card__title--dark">PLR Design Vault</h3>
+            <span class="os-badge os-badge--resource">Resource</span>
+          </div>
         </div>
-        <div class="card-body">
-          <div class="card-content">
-            <p class="card-description">
-              The exact shop setup behind my consistent five-figure months. Not theory - you'll see the receipts.
-            </p>
-            <ul class="card-features">
-              <li>
-                <span class="bullet-num">01</span>
-                <span>Hero products, bundles, and quiet earners mix</span>
+        <div class="os-card__body">
+          <div class="os-card__content">
+            <p class="os-card__desc">Hundreds of ready-to-customize designs you can make your own and list immediately. Full commercial rights.</p>
+            <ul class="os-features">
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--num">01</span>
+                <span>Full commercial rights included</span>
               </li>
-              <li>
-                <span class="bullet-num">02</span>
-                <span>Pricing and retirement rules that work</span>
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--num">02</span>
+                <span>Editable source files (Canva, Figma)</span>
               </li>
-              <li>
-                <span class="bullet-num">03</span>
-                <span>Traffic routine when Etsy algorithm dips</span>
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--num">03</span>
+                <span>Growing library — new additions monthly</span>
               </li>
             </ul>
-            <div class="micro-stat">
-              <span class="stat-num">$10K</span>
-              <span class="stat-label">monthly formula</span>
+            <div class="os-stat">
+              <span class="os-stat__num">200+</span>
+              <span class="os-stat__label">designs ready</span>
             </div>
           </div>
-          <div class="card-visual">
-            <div class="viz-chart">
-              <div class="chart-bar" style="height: 30%;"></div>
-              <div class="chart-bar" style="height: 45%;"></div>
-              <div class="chart-bar" style="height: 40%;"></div>
-              <div class="chart-bar" style="height: 60%;"></div>
-              <div class="chart-bar" style="height: 55%;"></div>
-              <div class="chart-bar accent" style="height: 85%;"></div>
-              <div class="chart-bar accent" style="height: 80%;"></div>
+          <div class="os-card__visual">
+            <div class="os-viz-stack">
+              <div class="os-stack-card os-stack-card--1">
+                <div class="os-stack-card__preview os-stack-card__preview--planner"></div>
+                <span class="os-stack-card__label">Planners</span>
+              </div>
+              <div class="os-stack-card os-stack-card--2">
+                <div class="os-stack-card__preview os-stack-card__preview--social"></div>
+                <span class="os-stack-card__label">Social</span>
+              </div>
+              <div class="os-stack-card os-stack-card--3">
+                <div class="os-stack-card__preview os-stack-card__preview--ebook"></div>
+                <span class="os-stack-card__label">Ebooks</span>
+              </div>
+              <div class="os-stack-card os-stack-card--4">
+                <div class="os-stack-card__preview os-stack-card__preview--tracker"></div>
+                <span class="os-stack-card__label">Trackers</span>
+              </div>
             </div>
-            <span class="visual-tag">Revenue growth</span>
+            <span class="os-visual-tag">Growing library</span>
           </div>
         </div>
       </article>
 
-      <!-- CARD 4: Ask Bailey Calls (CORE) -->
-      <article class="offer-card card-core">
-        <div class="card-header">
-          <h3 class="card-title">Ask Bailey (Twice Monthly)</h3>
-          <span class="card-badge">Core</span>
+      <!-- CARD 4: Implementation Support (BONUS) -->
+      <article class="os-card os-card--bonus">
+        <div class="os-card__header os-card__header--bonus">
+          <div class="os-card__header-content">
+            <h3 class="os-card__title">Full Implementation Support</h3>
+            <span class="os-badge os-badge--bonus">Bonus</span>
+          </div>
+          <div class="os-card__header-shimmer"></div>
         </div>
-        <div class="card-body">
-          <div class="card-content">
-            <p class="card-description">
-              Bring your shop, your stuck point, your weird question. I'll tell you what I'd do if it were my shop.
-            </p>
-            <ul class="card-features">
-              <li>
-                <span class="bullet-num">01</span>
-                <span>Real feedback on your actual listings</span>
+        <div class="os-card__body">
+          <div class="os-card__content">
+            <p class="os-card__desc">You're never stuck figuring things out alone. Real support, real humans, real accountability.</p>
+            <ul class="os-features">
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--sq"></span>
+                <span>12 weekly live implementation calls</span>
               </li>
-              <li>
-                <span class="bullet-num">02</span>
-                <span>Replays posted if you can't make it live</span>
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--sq"></span>
+                <span>Skool community (24/7 async support)</span>
               </li>
-              <li>
-                <span class="bullet-num">03</span>
-                <span>Ask anything, leave with a clear next move</span>
+              <li class="os-feature">
+                <span class="os-bullet os-bullet--sq"></span>
+                <span>Replays available within 24 hours</span>
               </li>
             </ul>
-            <div class="micro-stat">
-              <span class="stat-num">2×</span>
-              <span class="stat-label">per month live</span>
+            <div class="os-stat">
+              <span class="os-stat__num">12</span>
+              <span class="os-stat__label">weeks of calls</span>
             </div>
           </div>
-          <div class="card-visual">
-            <div class="viz-video">
-              <div class="video-bar">
-                <span class="video-dot"></span>
-                <span class="video-dot"></span>
-                <span class="video-dot"></span>
+          <div class="os-card__visual os-card__visual--bonus">
+            <div class="os-viz-support">
+              <div class="os-support-hub">
+                <div class="os-support-avatar">B</div>
+                <div class="os-support-pulse"></div>
               </div>
-              <div class="video-body">
-                <div class="video-avatar">B</div>
-                <span class="video-live">LIVE</span>
+              <div class="os-support-node os-support-node--1">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M15 10l5 5-5 5"/>
+                  <path d="M4 4v7a4 4 0 004 4h12"/>
+                </svg>
+                <span>Live Calls</span>
               </div>
+              <div class="os-support-node os-support-node--2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                </svg>
+                <span>Community</span>
+              </div>
+              <div class="os-support-node os-support-node--3">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                <span>Replays</span>
+              </div>
+              <svg class="os-support-lines" viewBox="0 0 200 160">
+                <line x1="100" y1="80" x2="50" y2="30" stroke="rgba(224,122,95,0.3)" stroke-width="1" stroke-dasharray="4 4"/>
+                <line x1="100" y1="80" x2="150" y2="30" stroke="rgba(224,122,95,0.3)" stroke-width="1" stroke-dasharray="4 4"/>
+                <line x1="100" y1="80" x2="100" y2="140" stroke="rgba(224,122,95,0.3)" stroke-width="1" stroke-dasharray="4 4"/>
+              </svg>
             </div>
-            <span class="visual-tag">Live calls</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- CARD 5: PLR Vault (RESOURCE) -->
-      <article class="offer-card card-resource">
-        <div class="card-header">
-          <h3 class="card-title">The PLR Vault</h3>
-          <span class="card-badge">Resource</span>
-        </div>
-        <div class="card-body">
-          <div class="card-content">
-            <p class="card-description">
-              Products you can edit and list today. I add new ones when I spot gaps in what's selling.
-            </p>
-            <ul class="card-features">
-              <li>
-                <span class="bullet-sq"></span>
-                <span>150+ ready-to-sell digital products</span>
-              </li>
-              <li>
-                <span class="bullet-sq"></span>
-                <span>Full commercial license included</span>
-              </li>
-              <li>
-                <span class="bullet-sq"></span>
-                <span>Updated when I find new opportunities</span>
-              </li>
-            </ul>
-            <div class="micro-stat">
-              <span class="stat-num">150+</span>
-              <span class="stat-label">products ready</span>
-            </div>
-          </div>
-          <div class="card-visual">
-            <div class="viz-folders">
-              <div class="folder folder-1"></div>
-              <div class="folder folder-2"></div>
-              <div class="folder folder-3"></div>
-              <span class="folder-label">PLR Library</span>
-            </div>
-            <span class="visual-tag">Growing library</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- CARD 6: Tools Stack (RESOURCE) -->
-      <article class="offer-card card-resource">
-        <div class="card-header">
-          <h3 class="card-title">The Full Tools Library</h3>
-          <span class="card-badge">Resource</span>
-        </div>
-        <div class="card-body">
-          <div class="card-content">
-            <p class="card-description">
-              Every tool, template, and shortcut I actually use to run my shop in 3 hours a week.
-            </p>
-            <ul class="card-features">
-              <li>
-                <span class="bullet-sq"></span>
-                <span>AI prompt library for designs</span>
-              </li>
-              <li>
-                <span class="bullet-sq"></span>
-                <span>SEO templates and tag formulas</span>
-              </li>
-              <li>
-                <span class="bullet-sq"></span>
-                <span>Pinterest scheduler setup guides</span>
-              </li>
-            </ul>
-            <div class="micro-stat">
-              <span class="stat-num">30+</span>
-              <span class="stat-label">tools included</span>
-            </div>
-          </div>
-          <div class="card-visual">
-            <div class="viz-tools">
-              <div class="tool-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-              </div>
-              <div class="tool-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-              </div>
-              <div class="tool-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg>
-              </div>
-              <div class="tool-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-              </div>
-            </div>
-            <span class="visual-tag">Full toolkit</span>
+            <span class="os-visual-tag">Never alone</span>
           </div>
         </div>
       </article>
 
     </div>
 
-    <!-- CTA Area -->
-    <div class="cta-area">
-      <a href="#checkout" class="cta-button">
-        Get Instant Access
-        <span class="cta-arrow">→</span>
+    <!-- CTA Section -->
+    <div class="os-cta">
+      <a href="#checkout" class="os-cta__button">
+        <span class="os-cta__text">Get Instant Access</span>
+        <span class="os-cta__arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
       </a>
-      <p class="cta-meta">
+      <p class="os-cta__meta">
         <span>$27/mo billed annually</span>
-        <span class="cta-dot"></span>
+        <span class="os-cta__dot"></span>
         <span>Instant access</span>
-        <span class="cta-dot"></span>
+        <span class="os-cta__dot"></span>
         <span>Secure checkout</span>
       </p>
-      <p class="cta-urgency">Prices raising soon to $67/mo</p>
+      <p class="os-cta__urgency">Price increases to $67/mo soon</p>
     </div>
 
   </div>
-</section>
+</div>
+
+<style>
+  /* ==========================================
+     PREMIUM OFFER STACK - Framer Embed
+     ========================================== */
+
+  #offer-stack {
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  #offer-stack *,
+  #offer-stack *::before,
+  #offer-stack *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ==========================================
+     FONT FACES
+     ========================================== */
+
+  @font-face {
+    font-family: 'OGG';
+    src: url(data:font/truetype;base64,AAEAAAAQAQAABAAARFNJRw) format('truetype');
+    font-weight: 400 580;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Satoshi';
+    src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIA) format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* ==========================================
+     CSS CUSTOM PROPERTIES
+     ========================================== */
+
+  #offer-stack {
+    --teal-deep: #1D6B6B;
+    --teal-dark: #165858;
+    --teal-darker: #0F4545;
+
+    --coral: #E07A5F;
+    --coral-dark: #C96A52;
+    --coral-light: #E8856A;
+
+    --gold: #D4A853;
+    --gold-dark: #B8923F;
+    --gold-light: #E4C67A;
+
+    --charcoal: #1F1D1A;
+    --charcoal-light: #2D2A26;
+    --charcoal-warm: #3D3A35;
+
+    --cream: #FAF8F5;
+    --cream-dark: #F0EBE3;
+    --cream-darker: #E8E2D9;
+
+    --text-primary: #1F1D1A;
+    --text-secondary: #5A544C;
+    --text-muted: #8A847B;
+    --text-inverse: #FFFFFF;
+
+    --radius-card: 6px;
+    --radius-inner: 4px;
+    --radius-badge: 3px;
+  }
+
+  /* ==========================================
+     SECTION WRAPPER
+     ========================================== */
+
+  #offer-stack {
+    position: relative;
+    width: 100%;
+    padding: 100px 24px 120px;
+    background: var(--cream);
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* Ambient blobs */
+  .os-ambient {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .os-ambient-1 {
+    top: 5%;
+    right: -5%;
+    width: 600px;
+    height: 500px;
+    background: radial-gradient(ellipse at center,
+      rgba(224, 122, 95, 0.06) 0%,
+      rgba(224, 122, 95, 0.02) 50%,
+      transparent 70%
+    );
+    filter: blur(60px);
+  }
+
+  .os-ambient-2 {
+    bottom: 10%;
+    left: -10%;
+    width: 500px;
+    height: 450px;
+    background: radial-gradient(ellipse at center,
+      rgba(29, 107, 107, 0.05) 0%,
+      rgba(29, 107, 107, 0.02) 50%,
+      transparent 70%
+    );
+    filter: blur(60px);
+  }
+
+  /* Container */
+  .os-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ==========================================
+     SECTION HEADER
+     ========================================== */
+
+  .os-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .os-eyebrow {
+    display: inline-block;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 20px;
+  }
+
+  .os-headline {
+    font-family: 'OGG', Georgia, serif;
+    font-size: clamp(36px, 5vw, 48px);
+    font-weight: 500;
+    line-height: 1.15;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .os-headline em {
+    font-style: italic;
+    color: var(--coral);
+  }
+
+  .os-subhead {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* ==========================================
+     CARDS CONTAINER
+     ========================================== */
+
+  .os-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 80px;
+  }
+
+  /* ==========================================
+     CARD BASE
+     ========================================== */
+
+  .os-card {
+    background: var(--cream);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+
+    /* 4-LAYER SHADOW SYSTEM */
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.06),
+      0 4px 8px rgba(0, 0, 0, 0.04),
+      0 12px 24px rgba(0, 0, 0, 0.04),
+      0 24px 48px rgba(0, 0, 0, 0.03);
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      box-shadow 0.3s ease-out;
+  }
+
+  .os-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .os-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.08),
+      0 8px 16px rgba(0, 0, 0, 0.06),
+      0 16px 32px rgba(0, 0, 0, 0.05),
+      0 32px 64px rgba(0, 0, 0, 0.04);
+  }
+
+  .os-card.visible:hover {
+    transform: translateY(-6px);
+  }
+
+  /* Stagger delays */
+  .os-card:nth-child(1) { transition-delay: 0ms; }
+  .os-card:nth-child(2) { transition-delay: 150ms; }
+  .os-card:nth-child(3) { transition-delay: 300ms; }
+  .os-card:nth-child(4) { transition-delay: 450ms; }
+
+  /* ==========================================
+     CARD HEADER - BASE
+     ========================================== */
+
+  .os-card__header {
+    position: relative;
+    padding: 24px 40px;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid transparent;
+    overflow: hidden;
+  }
+
+  .os-card__header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+    flex-wrap: wrap;
+  }
+
+  .os-card__title {
+    font-family: 'OGG', Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--text-inverse);
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .os-card__title--dark {
+    color: var(--text-primary);
+  }
+
+  /* ==========================================
+     HEADER TYPE 1: CORE (Teal)
+     ========================================== */
+
+  .os-card--core .os-card__header {
+    background: linear-gradient(135deg,
+      var(--teal-deep) 0%,
+      var(--teal-dark) 60%,
+      var(--teal-darker) 100%
+    );
+    border-left-color: var(--coral);
+  }
+
+  .os-card--core .os-card__header-texture {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .os-card--core .os-card__header-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255,255,255,0.12) 20%,
+      rgba(255,255,255,0.12) 80%,
+      transparent 100%
+    );
+    z-index: 3;
+  }
+
+  /* CORE glow shadow on hover */
+  .os-card--core:hover {
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.08),
+      0 8px 16px rgba(0, 0, 0, 0.06),
+      0 16px 32px rgba(29, 107, 107, 0.08),
+      0 32px 64px rgba(29, 107, 107, 0.04);
+  }
+
+  /* ==========================================
+     HEADER TYPE 2: STRATEGY (Charcoal + Gold)
+     ========================================== */
+
+  .os-card--strategy .os-card__header {
+    background: linear-gradient(135deg,
+      var(--charcoal) 0%,
+      var(--charcoal-light) 100%
+    );
+    border-left-color: var(--gold);
+  }
+
+  .os-card--strategy .os-card__header-texture {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.02;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .os-card--strategy .os-card__header-lines {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255,255,255,0.015) 10px,
+      rgba(255,255,255,0.015) 11px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ==========================================
+     HEADER TYPE 3: RESOURCE (Light/Cream)
+     ========================================== */
+
+  .os-card--resource .os-card__header--light {
+    background: linear-gradient(135deg,
+      var(--cream) 0%,
+      var(--cream-dark) 100%
+    );
+    border-left-color: var(--teal-deep);
+    border-bottom: 1px solid var(--cream-darker);
+  }
+
+  /* ==========================================
+     HEADER TYPE 4: BONUS (Dark Shimmer)
+     ========================================== */
+
+  .os-card--bonus .os-card__header--bonus {
+    background: linear-gradient(135deg,
+      #1A1816 0%,
+      var(--charcoal) 50%,
+      #1A1816 100%
+    );
+    border-left-color: var(--coral);
+  }
+
+  .os-card--bonus .os-card__header-shimmer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255,255,255,0.03) 50%,
+      transparent 100%
+    );
+    animation: shimmer 8s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { left: -100%; }
+    50% { left: 200%; }
+  }
+
+  /* ==========================================
+     BADGES
+     ========================================== */
+
+  .os-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: var(--radius-badge);
+    font-family: 'Satoshi', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .os-badge--core {
+    background: var(--coral);
+    color: white;
+    box-shadow:
+      0 1px 2px rgba(224, 122, 95, 0.3),
+      inset 0 1px 0 rgba(255,255,255,0.15);
+    animation: badge-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes badge-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(224, 122, 95, 0.4), 0 1px 2px rgba(224, 122, 95, 0.3), inset 0 1px 0 rgba(255,255,255,0.15); }
+    50% { box-shadow: 0 0 0 6px rgba(224, 122, 95, 0), 0 1px 2px rgba(224, 122, 95, 0.3), inset 0 1px 0 rgba(255,255,255,0.15); }
+  }
+
+  .os-badge--strategy {
+    background: transparent;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+  }
+
+  .os-badge--resource {
+    background: var(--teal-deep);
+    color: white;
+  }
+
+  .os-badge--bonus {
+    background: var(--coral);
+    color: white;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+
+  /* ==========================================
+     CARD BODY
+     ========================================== */
+
+  .os-card__body {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    min-height: 320px;
+    background: white;
+  }
+
+  /* ==========================================
+     CARD CONTENT ZONE
+     ========================================== */
+
+  .os-card__content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .os-card__desc {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin-bottom: 28px;
+  }
+
+  /* Features list */
+  .os-features {
+    list-style: none;
+    margin-bottom: 28px;
+    flex-grow: 1;
+  }
+
+  .os-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+
+  .os-feature strong {
+    font-weight: 700;
+    color: var(--charcoal);
+  }
+
+  /* Bullet styles */
+  .os-bullet--num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, var(--cream-dark) 0%, var(--cream-darker) 100%);
+    border-radius: 50%;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--teal-deep);
+    flex-shrink: 0;
+  }
+
+  .os-bullet--sq {
+    width: 8px;
+    height: 8px;
+    background: var(--coral);
+    border-radius: 2px;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  .os-bullet--sq-gold {
+    background: var(--gold);
+  }
+
+  .os-bullet--sq-teal {
+    background: var(--teal-deep);
+  }
+
+  /* Micro stat */
+  .os-stat {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: auto;
+  }
+
+  .os-stat__num {
+    font-family: 'OGG', Georgia, serif;
+    font-size: 42px;
+    font-weight: 500;
+    color: var(--coral);
+    line-height: 1;
+    transition: transform 0.3s ease-out;
+  }
+
+  .os-card:hover .os-stat__num {
+    transform: scale(1.05);
+  }
+
+  .os-stat__label {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: lowercase;
+  }
+
+  .os-stat--glow .os-stat__num {
+    text-shadow: 0 0 40px rgba(224, 122, 95, 0.3);
+  }
+
+  /* ==========================================
+     VISUAL ZONE
+     ========================================== */
+
+  .os-card__visual {
+    background: linear-gradient(145deg, #F8F6F3 0%, #F0EDE8 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    position: relative;
+    border-left: 1px solid rgba(0,0,0,0.04);
+  }
+
+  .os-card__visual--strategy {
+    background: linear-gradient(145deg, #FAF9F7 0%, #F5F3EF 100%);
+  }
+
+  .os-card__visual--bonus {
+    background: linear-gradient(145deg, var(--cream-dark) 0%, var(--cream-darker) 100%);
+  }
+
+  .os-visual-tag {
+    position: absolute;
+    bottom: 14px;
+    right: 18px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.8);
+    padding: 5px 12px;
+    border-radius: 100px;
+    backdrop-filter: blur(4px);
+  }
+
+  /* ==========================================
+     MOCKUP: Browser Frame
+     ========================================== */
+
+  .os-mockup--browser {
+    background: var(--charcoal);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    box-shadow:
+      0 4px 6px rgba(0, 0, 0, 0.1),
+      0 12px 24px rgba(0, 0, 0, 0.15),
+      0 24px 48px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateY(-3deg) rotateX(2deg);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .os-card:hover .os-mockup--browser {
+    transform: perspective(1000px) rotateY(-1deg) rotateX(1deg) scale(1.02);
+  }
+
+  .os-browser__bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 14px;
+    background: linear-gradient(180deg, var(--charcoal-warm) 0%, var(--charcoal-light) 100%);
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+  }
+
+  .os-browser__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .os-browser__dot--red { background: #FF5F57; }
+  .os-browser__dot--yellow { background: #FFBD2E; }
+  .os-browser__dot--green { background: #28CA41; }
+
+  .os-browser__address {
+    flex: 1;
+    margin-left: 8px;
+    padding: 4px 10px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 4px;
+  }
+
+  .os-browser__url {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .os-browser__content {
+    padding: 16px;
+    background: var(--cream);
+    min-height: 180px;
+  }
+
+  .os-browser__indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: rgba(29, 107, 107, 0.08);
+    border-radius: 4px;
+    border-left: 2px solid var(--teal-deep);
+  }
+
+  .os-browser__pulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--teal-deep);
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.9); }
+  }
+
+  .os-browser__indicator-text {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--teal-deep);
+  }
+
+  /* ==========================================
+     VISUALIZATION: Calendar
+     ========================================== */
+
+  .os-viz-calendar {
+    background: white;
+    border-radius: 6px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .os-cal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--cream-darker);
+  }
+
+  .os-cal__month {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .os-cal__nav {
+    display: flex;
+    gap: 8px;
+  }
+
+  .os-cal__arrow {
+    font-size: 12px;
+    color: var(--text-muted);
+    cursor: pointer;
+  }
+
+  .os-cal__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-bottom: 6px;
+  }
+
+  .os-cal__days span {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 2px;
+  }
+
+  .os-cal__grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+  }
+
+  .os-cal__cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--cream);
+    border-radius: 3px;
+    transition: all 0.2s ease;
+  }
+
+  .os-cal__cell--muted {
+    color: var(--text-muted);
+    opacity: 0.5;
+  }
+
+  .os-cal__cell--filled {
+    background: rgba(224, 122, 95, 0.15);
+    color: var(--coral-dark);
+  }
+
+  .os-cal__cell--today {
+    background: var(--coral);
+    color: white;
+    font-weight: 700;
+    position: relative;
+  }
+
+  .os-cal__cell--today::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border: 1.5px solid var(--coral);
+    border-radius: 5px;
+    opacity: 0.4;
+    animation: today-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes today-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.1); opacity: 0.2; }
+  }
+
+  /* ==========================================
+     VISUALIZATION: Paths
+     ========================================== */
+
+  .os-viz-paths {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .os-paths-svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .os-path-label {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .os-path-goal {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  /* ==========================================
+     VISUALIZATION: Stack Cards
+     ========================================== */
+
+  .os-viz-stack {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .os-stack-card {
+    background: white;
+    border-radius: var(--radius-inner);
+    overflow: hidden;
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.08),
+      0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .os-card:hover .os-stack-card--1 { transform: translateY(-4px) rotate(-1deg); }
+  .os-card:hover .os-stack-card--2 { transform: translateY(-3px) rotate(1deg); }
+  .os-card:hover .os-stack-card--3 { transform: translateY(-5px) rotate(-0.5deg); }
+  .os-card:hover .os-stack-card--4 { transform: translateY(-2px) rotate(0.5deg); }
+
+  .os-stack-card__preview {
+    height: 48px;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+  }
+
+  .os-stack-card__preview--planner {
+    background: linear-gradient(135deg, #E8F4F4 0%, #D4EBEB 100%);
+  }
+
+  .os-stack-card__preview--social {
+    background: linear-gradient(135deg, #FEF3EF 0%, #FBDED4 100%);
+  }
+
+  .os-stack-card__preview--ebook {
+    background: linear-gradient(135deg, #FFF9F0 0%, #F5EBDB 100%);
+  }
+
+  .os-stack-card__preview--tracker {
+    background: linear-gradient(135deg, #F4F2F8 0%, #E8E4F0 100%);
+  }
+
+  .os-stack-card__label {
+    display: block;
+    padding: 8px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: center;
+    background: white;
+  }
+
+  /* ==========================================
+     VISUALIZATION: Support Hub
+     ========================================== */
+
+  .os-viz-support {
+    position: relative;
+    width: 200px;
+    height: 160px;
+  }
+
+  .os-support-hub {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  .os-support-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal-deep) 0%, var(--teal-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'OGG', Georgia, serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    box-shadow:
+      0 4px 12px rgba(29, 107, 107, 0.3),
+      0 8px 24px rgba(29, 107, 107, 0.15);
+  }
+
+  .os-support-pulse {
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 2px solid var(--teal-deep);
+    opacity: 0;
+    animation: support-pulse 2s ease-out infinite;
+  }
+
+  @keyframes support-pulse {
+    0% { transform: scale(0.8); opacity: 0.6; }
+    100% { transform: scale(1.4); opacity: 0; }
+  }
+
+  .os-support-node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    z-index: 2;
+  }
+
+  .os-support-node svg {
+    width: 20px;
+    height: 20px;
+    color: var(--coral);
+  }
+
+  .os-support-node span {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .os-support-node--1 { top: 10px; left: 20px; }
+  .os-support-node--2 { top: 10px; right: 20px; }
+  .os-support-node--3 { bottom: 10px; left: 50%; transform: translateX(-50%); }
+
+  .os-support-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  /* ==========================================
+     CTA SECTION
+     ========================================== */
+
+  .os-cta {
+    text-align: center;
+    padding-top: 16px;
+  }
+
+  .os-cta__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px 48px;
+
+    background: linear-gradient(180deg,
+      var(--coral-light) 0%,
+      var(--coral) 50%,
+      var(--coral-dark) 100%
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-card);
+
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+      0 4px 12px rgba(224, 122, 95, 0.35),
+      0 8px 24px rgba(224, 122, 95, 0.2);
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .os-cta__button::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 100%
+    );
+  }
+
+  .os-cta__button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.15) 50%,
+      transparent 100%
+    );
+    transition: left 0.6s ease;
+  }
+
+  .os-cta__button:hover::after {
+    left: 100%;
+  }
+
+  .os-cta__button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.25),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+      0 6px 16px rgba(224, 122, 95, 0.45),
+      0 12px 32px rgba(224, 122, 95, 0.25);
+  }
+
+  .os-cta__text {
+    position: relative;
+    z-index: 1;
+  }
+
+  .os-cta__arrow {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+
+  .os-cta__button:hover .os-cta__arrow {
+    transform: translateX(4px);
+  }
+
+  .os-cta__meta {
+    margin-top: 20px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .os-cta__dot {
+    width: 4px;
+    height: 4px;
+    background: var(--cream-darker);
+    border-radius: 50%;
+  }
+
+  .os-cta__urgency {
+    margin-top: 12px;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--coral);
+  }
+
+  /* ==========================================
+     RESPONSIVE
+     ========================================== */
+
+  @media (max-width: 900px) {
+    #offer-stack {
+      padding: 80px 20px 100px;
+    }
+
+    .os-header {
+      margin-bottom: 56px;
+    }
+
+    .os-cards {
+      gap: 36px;
+    }
+
+    .os-card__header {
+      padding: 20px 24px;
+    }
+
+    .os-card__title {
+      font-size: 24px;
+    }
+
+    .os-card__content {
+      padding: 28px 24px;
+    }
+
+    .os-stat__num {
+      font-size: 36px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .os-card__body {
+      grid-template-columns: 1fr;
+    }
+
+    .os-card__visual {
+      order: -1;
+      min-height: 200px;
+      border-left: none;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .os-headline {
+      font-size: 32px;
+    }
+
+    .os-card__title {
+      font-size: 20px;
+    }
+
+    .os-card__desc {
+      font-size: 15px;
+    }
+
+    .os-cta__button {
+      width: 100%;
+      padding: 16px 32px;
+    }
+
+    .os-cta__meta {
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .os-cta__dot {
+      display: none;
+    }
+  }
+</style>
 
 <script>
-  // Scroll reveal animation
-  document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.offer-card');
-
+  // Scroll reveal animation with stagger
+  (function() {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
+          // Stagger is handled by CSS transition-delay
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
     });
 
-    cards.forEach(card => observer.observe(card));
-  });
+    document.querySelectorAll('#offer-stack .os-card').forEach(card => {
+      observer.observe(card);
+    });
+  })();
 </script>
-
-</body>
-</html>
