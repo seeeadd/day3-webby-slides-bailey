@@ -53,24 +53,46 @@
       overflow: hidden;
     }
 
+    /* Watercolor blob decorations */
     #included-section::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 20% 30%, rgba(29,107,107,0.03) 0%, transparent 50%),
-                  radial-gradient(ellipse at 80% 70%, rgba(224,122,95,0.03) 0%, transparent 50%);
-      opacity: 0.5;
-      mix-blend-mode: soft-light;
+      top: -100px;
+      left: -80px;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(ellipse at center, rgba(29,107,107,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(60px);
       pointer-events: none;
     }
 
     #included-section::after {
       content: '';
       position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      opacity: 0.02;
+      bottom: -120px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(ellipse at center, rgba(224,122,95,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(70px);
       pointer-events: none;
+    }
+
+    /* Additional decorative blob */
+    .included-inner::before {
+      content: '';
+      position: absolute;
+      top: 40%;
+      right: -150px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(ellipse at center, rgba(212,168,83,0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(50px);
+      pointer-events: none;
+      z-index: 0;
     }
 
     .included-inner {
@@ -972,13 +994,26 @@
     .flow-arrow-icon svg { width: 10px; height: 10px; fill: var(--accent-teal); }
 
     /* ==========================================
-       ALSO INCLUDED - 2 ROW LAYOUT
+       ALSO INCLUDED - 2 ROW LAYOUT WITH WARMTH
        ========================================== */
-    
+
     .also-included {
       margin-top: 64px;
       padding-top: 56px;
-      border-top: 1px solid rgba(45,42,38,0.08);
+      position: relative;
+    }
+
+    /* Decorative divider */
+    .also-included::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(224,122,95,0.3), rgba(29,107,107,0.2), transparent);
+      border-radius: 2px;
     }
 
     .also-header {
@@ -1085,110 +1120,108 @@
     }
 
     /* ==========================================
-       TESTIMONIAL STRIP - NUMBERS FIRST + ALIVE
+       TESTIMONIAL STRIP - COMPACT & ELEGANT
        ========================================== */
 
     .testimonial-strip {
       background: linear-gradient(135deg, #1D6B6B 0%, #1A5F5F 50%, #175555 100%);
-      padding: 56px 32px;
-      margin-top: 80px;
+      padding: 40px 32px;
+      margin-top: 64px;
       width: 100vw;
       margin-left: calc(-50vw + 50%);
       position: relative;
       overflow: hidden;
     }
 
-    /* Subtle animated gradient overlay */
+    /* Watercolor blob decorations */
     .testimonial-strip::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 30% 20%, rgba(224,122,95,0.08) 0%, transparent 50%),
-                  radial-gradient(ellipse at 70% 80%, rgba(212,168,83,0.06) 0%, transparent 50%);
-      animation: shimmer 8s ease-in-out infinite alternate;
+      top: -60px;
+      left: -40px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(ellipse at center, rgba(224,122,95,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(40px);
+      pointer-events: none;
     }
 
-    @keyframes shimmer {
-      0% { opacity: 0.5; }
-      100% { opacity: 1; }
-    }
-
-    /* Watercolor texture overlay */
     .testimonial-strip::after {
       content: '';
       position: absolute;
-      inset: 0;
-      background-image: url("https://i.imgur.com/zxH7JdN.jpeg");
-      background-size: cover;
-      background-position: center;
-      opacity: 0.08;
-      mix-blend-mode: soft-light;
+      bottom: -80px;
+      right: -60px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(ellipse at center, rgba(212,165,116,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(50px);
       pointer-events: none;
     }
 
     .strip-container {
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       align-items: stretch;
-      gap: 20px;
+      gap: 16px;
       position: relative;
       z-index: 1;
     }
 
-    /* Testimonial Story Cards */
+    /* Testimonial Cards - Compact */
     .testimonial-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 20px;
-      padding: 24px 22px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 20px 18px;
       text-align: left;
-      backdrop-filter: blur(12px);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(8px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
       display: flex;
       flex-direction: column;
     }
 
     .testimonial-card:hover {
-      transform: translateY(-6px);
-      background: rgba(255, 255, 255, 0.12);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
     }
 
-    /* Card Header */
+    /* Card Header - Compact */
     .testimonial-header {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 20px;
+      gap: 12px;
+      margin-bottom: 14px;
     }
 
-    /* Creative Illustrated Avatar */
+    /* Compact Avatar */
     .testimonial-avatar {
-      width: 56px;
-      height: 56px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       position: relative;
       flex-shrink: 0;
       overflow: visible;
       background: linear-gradient(145deg, #FAF8F5 0%, #F0EBE3 100%);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-      border: 3px solid rgba(255,255,255,0.4);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+      border: 2px solid rgba(255,255,255,0.3);
     }
 
-    /* Illustrated face base */
+    /* Illustrated face base - compact */
     .testimonial-avatar::before {
       content: '';
       position: absolute;
-      width: 28px;
-      height: 28px;
+      width: 22px;
+      height: 22px;
       background: linear-gradient(145deg, #F5D0C5 0%, #E8B8A8 100%);
       border-radius: 50%;
-      top: 14px;
-      left: 14px;
+      top: 11px;
+      left: 11px;
     }
 
     /* Hair/style element */
@@ -1198,26 +1231,26 @@
       border-radius: 50%;
     }
 
-    /* Sarah - brunette with side part */
+    /* Sarah - brunette */
     .avatar-1::after {
-      width: 36px;
-      height: 24px;
+      width: 28px;
+      height: 18px;
       background: linear-gradient(180deg, #5D4037 0%, #4E342E 100%);
-      top: 6px;
-      left: 10px;
+      top: 5px;
+      left: 8px;
       border-radius: 50% 50% 40% 40%;
     }
     .avatar-1::before {
       background: linear-gradient(145deg, #FFCBA4 0%, #E8B89D 100%);
     }
 
-    /* Katie - blonde waves */
+    /* Katie - blonde */
     .avatar-2::after {
-      width: 40px;
-      height: 28px;
+      width: 30px;
+      height: 20px;
       background: linear-gradient(180deg, #D4A853 0%, #C49A47 100%);
       top: 4px;
-      left: 8px;
+      left: 7px;
       border-radius: 50% 50% 45% 45%;
     }
     .avatar-2::before {
@@ -1226,89 +1259,89 @@
 
     /* Michelle - redhead */
     .avatar-3::after {
-      width: 38px;
-      height: 26px;
+      width: 29px;
+      height: 19px;
       background: linear-gradient(180deg, #B55239 0%, #8B4513 100%);
       top: 5px;
-      left: 9px;
+      left: 8px;
       border-radius: 50% 50% 42% 42%;
     }
     .avatar-3::before {
       background: linear-gradient(145deg, #FFE0D0 0%, #F5D0C0 100%);
     }
 
-    /* Eyes for all avatars */
+    /* Eyes - compact */
     .testimonial-avatar .avatar-eyes {
       position: absolute;
-      top: 22px;
+      top: 17px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
-      gap: 8px;
+      gap: 6px;
       z-index: 2;
     }
     .testimonial-avatar .avatar-eyes::before,
     .testimonial-avatar .avatar-eyes::after {
       content: '';
-      width: 5px;
-      height: 5px;
+      width: 4px;
+      height: 4px;
       background: #3E2723;
       border-radius: 50%;
     }
 
-    /* Smile */
+    /* Smile - compact */
     .testimonial-avatar .avatar-smile {
       position: absolute;
-      bottom: 16px;
+      bottom: 12px;
       left: 50%;
       transform: translateX(-50%);
-      width: 10px;
-      height: 5px;
+      width: 8px;
+      height: 4px;
       border: 2px solid #C96A52;
       border-top: none;
-      border-radius: 0 0 10px 10px;
+      border-radius: 0 0 8px 8px;
       z-index: 2;
     }
 
     .testimonial-meta {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 2px;
     }
 
     .testimonial-name {
       font-family: 'Satoshi', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 14px;
+      font-weight: 600;
       color: white;
     }
 
     .testimonial-stars {
       color: #D4A853;
-      font-size: 13px;
-      letter-spacing: 2px;
+      font-size: 11px;
+      letter-spacing: 1px;
     }
 
-    /* Testimonial Title */
+    /* Testimonial Title - Compact */
     .testimonial-title {
       font-family: 'OGG', Georgia, serif;
-      font-size: 18px;
+      font-size: 15px;
       color: #FFFFFF;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
       line-height: 1.3;
     }
 
-    /* Testimonial Body */
+    /* Testimonial Body - Compact */
     .testimonial-body {
       font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.85);
-      line-height: 1.7;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.55;
       flex: 1;
     }
 
     .testimonial-body p {
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .testimonial-body p:last-child {
@@ -1318,14 +1351,14 @@
     /* Highlight key results */
     .highlight-result {
       color: white;
-      font-weight: 700;
-      background: linear-gradient(180deg, transparent 60%, rgba(212, 168, 83, 0.35) 60%);
-      padding: 0 4px;
+      font-weight: 600;
+      background: linear-gradient(180deg, transparent 60%, rgba(212, 168, 83, 0.3) 60%);
+      padding: 0 3px;
     }
 
     .mention {
       color: #D4A574;
-      font-weight: 600;
+      font-weight: 500;
     }
 
     .result-name {
@@ -1413,29 +1446,29 @@
       .also-row { flex-direction: column; align-items: center; }
       .also-card { width: 100%; max-width: 320px; }
       
-      .testimonial-strip { padding: 48px 16px; margin-top: 56px; }
+      .testimonial-strip { padding: 32px 16px; margin-top: 48px; }
       .strip-container {
         grid-template-columns: 1fr;
-        gap: 20px;
-        max-width: 500px;
+        gap: 12px;
+        max-width: 400px;
       }
       .testimonial-card {
-        padding: 24px 20px;
+        padding: 18px 16px;
       }
       .testimonial-header {
-        margin-bottom: 16px;
-      }
-      .testimonial-avatar {
-        width: 44px;
-        height: 44px;
-      }
-      .testimonial-title {
-        font-size: 16px;
         margin-bottom: 12px;
       }
+      .testimonial-avatar {
+        width: 40px;
+        height: 40px;
+      }
+      .testimonial-title {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
       .testimonial-body {
-        font-size: 13px;
-        line-height: 1.6;
+        font-size: 12px;
+        line-height: 1.5;
       }
       
       .phone-mockup { width: 140px; }
