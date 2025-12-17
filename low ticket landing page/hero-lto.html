@@ -154,38 +154,32 @@
       50% { opacity: 1; transform: scale(1.2); }
     }
 
-    /* Premium CTA - Coral with glow */
+    /* Premium CTA - Understated luxury */
     .top-bar__cta {
-      height: 46px;
-      padding: 0 28px;
-      background: linear-gradient(135deg, #E07A5F 0%, #D56B4F 100%);
+      height: 42px;
+      padding: 0 24px;
+      background: var(--accent-coral);
       color: white;
       font-weight: 700;
       font-size: 12px;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       text-decoration: none;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      position: relative;
-      overflow: hidden;
-      box-shadow:
-        0 4px 16px rgba(224, 122, 95, 0.35),
-        0 2px 8px rgba(224, 122, 95, 0.2);
-      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: 0 2px 12px rgba(224, 122, 95, 0.25);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .top-bar__cta:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow:
-        0 8px 24px rgba(224, 122, 95, 0.45),
-        0 4px 12px rgba(224, 122, 95, 0.3);
-      background: linear-gradient(135deg, #E88A70 0%, #E07A5F 100%);
+      transform: translateY(-2px);
+      background: #D56B4F;
+      box-shadow: 0 6px 20px rgba(224, 122, 95, 0.35);
     }
 
     /* Arrow icon */
@@ -193,7 +187,7 @@
       width: 14px;
       height: 14px;
       stroke-width: 2.5;
-      transition: transform 0.3s ease;
+      transition: transform 0.25s ease;
     }
 
     .top-bar__cta:hover svg {
@@ -302,39 +296,40 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px 0 28px;
+      padding: 24px 0 32px;
       position: relative;
     }
 
     .trust-badge {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
-      padding: 14px 28px;
-      background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.9) 0%,
-        rgba(250, 248, 245, 0.85) 100%);
-      border: 1px solid rgba(224, 122, 95, 0.15);
+      gap: 16px;
+      padding: 16px 32px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(224, 122, 95, 0.2);
       border-radius: 100px;
       box-shadow:
         0 2px 8px rgba(45, 42, 38, 0.04),
-        0 4px 16px rgba(45, 42, 38, 0.06),
-        0 1px 0 rgba(255, 255, 255, 0.8) inset;
+        0 8px 24px rgba(45, 42, 38, 0.08);
     }
 
     .trust-badge__stars {
       display: flex;
-      gap: 2px;
-      font-size: 16px;
-      color: #F5A623;
-      text-shadow: 0 1px 2px rgba(245, 166, 35, 0.3);
+      gap: 4px;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .trust-badge__star {
+      color: #FFB800;
+      text-shadow: 0 1px 3px rgba(255, 184, 0, 0.4);
     }
 
     .trust-badge__text {
       font-weight: 600;
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text-primary);
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
 
     .trust-badge__count {
@@ -705,103 +700,57 @@
       border: 1px solid rgba(232, 226, 217, 0.3);
     }
 
-    /* CTA Button - ENGAGING CORAL WITH GLOW */
+    /* CTA Button - PREMIUM UNDERSTATED (The Row / Aesop Energy) */
     .cta-button {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
       width: 100%;
-      height: 60px;
-      background: linear-gradient(135deg,
-        #E07A5F 0%,
-        #D56B4F 50%,
-        #C85A40 100%);
+      height: 56px;
+      background: var(--accent-coral);
       color: white;
       font-weight: 700;
-      font-size: 15px;
-      letter-spacing: 0.1em;
+      font-size: 16px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       text-decoration: none;
       border: none;
-      border-radius: 14px;
+      border-radius: 12px;
       cursor: pointer;
-      position: relative;
-      overflow: hidden;
       box-shadow:
-        0 4px 20px rgba(224, 122, 95, 0.4),
-        0 8px 40px rgba(224, 122, 95, 0.25),
-        0 1px 0 rgba(255,255,255,0.2) inset;
-      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-      animation: button-glow 3s ease-in-out infinite;
-    }
-
-    @keyframes button-glow {
-      0%, 100% {
-        box-shadow:
-          0 4px 20px rgba(224, 122, 95, 0.4),
-          0 8px 40px rgba(224, 122, 95, 0.25),
-          0 1px 0 rgba(255,255,255,0.2) inset;
-      }
-      50% {
-        box-shadow:
-          0 6px 28px rgba(224, 122, 95, 0.55),
-          0 12px 48px rgba(224, 122, 95, 0.35),
-          0 1px 0 rgba(255,255,255,0.25) inset;
-      }
-    }
-
-    /* Shimmer sweep */
-    .cta-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg,
-        transparent,
-        rgba(255,255,255,0.25),
-        transparent);
-      animation: shimmer-sweep 3s ease-in-out infinite;
-    }
-
-    @keyframes shimmer-sweep {
-      0% { left: -100%; }
-      50%, 100% { left: 100%; }
+        0 4px 16px rgba(224, 122, 95, 0.25),
+        0 1px 0 rgba(255,255,255,0.15) inset;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .cta-button:hover {
-      transform: translateY(-4px) scale(1.02);
+      transform: translateY(-2px);
+      background: #D56B4F;
       box-shadow:
-        0 8px 32px rgba(224, 122, 95, 0.5),
-        0 16px 56px rgba(224, 122, 95, 0.3),
-        0 1px 0 rgba(255,255,255,0.3) inset;
-      background: linear-gradient(135deg,
-        #E88A70 0%,
-        #E07A5F 50%,
-        #D56B4F 100%);
+        0 8px 24px rgba(224, 122, 95, 0.35),
+        0 1px 0 rgba(255,255,255,0.2) inset;
     }
 
     .cta-button:active {
-      transform: translateY(-2px) scale(1.01);
+      transform: translateY(-1px);
     }
 
     .cta-button:focus {
-      outline: 3px solid rgba(224, 122, 95, 0.5);
-      outline-offset: 4px;
+      outline: 2px solid rgba(224, 122, 95, 0.4);
+      outline-offset: 3px;
     }
 
     /* Arrow icon in CTA */
     .cta-button svg {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       stroke-width: 2.5;
-      transition: transform 0.3s ease;
+      transition: transform 0.25s ease;
     }
 
     .cta-button:hover svg {
-      transform: translateX(5px);
+      transform: translateX(3px);
     }
 
     /* Microcopy - Bigger for readability */
@@ -924,7 +873,13 @@
         <!-- Trust Badge - 5 Stars + Trusted By -->
         <div class="trust-strip animate-fade-up delay-1">
           <div class="trust-badge">
-            <div class="trust-badge__stars">★★★★★</div>
+            <div class="trust-badge__stars">
+              <span class="trust-badge__star">★</span>
+              <span class="trust-badge__star">★</span>
+              <span class="trust-badge__star">★</span>
+              <span class="trust-badge__star">★</span>
+              <span class="trust-badge__star">★</span>
+            </div>
             <span class="trust-badge__text">Trusted by <span class="trust-badge__count">5,000+</span> Etsy sellers</span>
           </div>
         </div>
