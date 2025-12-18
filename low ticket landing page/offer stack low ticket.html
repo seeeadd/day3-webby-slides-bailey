@@ -392,24 +392,37 @@
       fill: none;
     }
 
-    /* Card Mockup Placeholder */
-    #bonus-stack .card-mockup {
-      width: 100%;
-      aspect-ratio: 16/9;
-      background: linear-gradient(145deg,
-        rgba(45, 42, 38, 0.03) 0%,
-        rgba(224, 122, 95, 0.05) 50%,
-        rgba(29, 107, 107, 0.05) 100%
-      );
-      border: 2px dashed rgba(45, 42, 38, 0.15);
-      border-radius: 12px;
+    /* Card Footer with "Use it when" and Stat */
+    #bonus-stack .card-footer {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(45, 42, 38, 0.4);
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(45, 42, 38, 0.1);
+    }
+
+    #bonus-stack .use-it-when {
       font-family: 'Satoshi', sans-serif;
       font-size: 14px;
       font-weight: 500;
+      color: #5E5E5E;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    #bonus-stack .card-stat {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #1D6B6B 0%, #156060 100%);
+      border-radius: 100px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
     }
 
     /* ==========================================
@@ -608,227 +621,282 @@
     <!-- BONUS CARDS GRID -->
     <div class="cards-grid">
 
-      <!-- BONUS 1: Daily Drop Vault -->
+      <!-- CARD 1: My $10K Etsy Digital Product Profit Formula -->
       <div class="bonus-card">
         <div class="card-header">
-          <h3 class="card-title">Daily Drop Vault</h3>
+          <h3 class="card-title">My $10K Etsy Digital Product Profit Formula</h3>
           <span class="card-badge">Core</span>
         </div>
         <div class="card-body">
           <p class="card-description">
-            365 days of done-for-you product ideas, hooks, and marketing angles delivered straight to your inbox. Never wonder what to post or sell again.
+            This is what's actually running my shop right now. Not something I learned from a course. I built this from 4 years of figuring out what works and what's a waste of time.
           </p>
           <ul class="feature-list">
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Daily product ideas with proven hooks</span>
+              <span>The product pipeline I use so I never run out of ideas</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Caption templates and CTAs included</span>
+              <span>My traffic loop that took 2 years to figure out (you get it in an afternoon)</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Seasonal and trending topics covered</span>
+              <span>The listing structure behind my best-sellers, the one I've never shared publicly</span>
             </li>
           </ul>
-          <div class="card-mockup">Daily Drop mockup</div>
+          <div class="card-footer">
+            <span class="use-it-when">Use it when: you want the thing that's actually working right now.</span>
+            <span class="card-stat">4 years of refinement</span>
+          </div>
         </div>
       </div>
 
-      <!-- BONUS 2: 3 Paths to $5K Playbook -->
+      <!-- CARD 2: 3 Paths to $5K/Month with AI Designs on Etsy -->
       <div class="bonus-card">
         <div class="card-header">
-          <h3 class="card-title">3 Paths to $5K Playbook</h3>
-          <span class="card-badge">Strategy</span>
+          <h3 class="card-title">3 Paths to $5K/Month with AI Designs on Etsy</h3>
+          <span class="card-badge">Paths</span>
         </div>
         <div class="card-body">
           <p class="card-description">
-            Three different routes to your first $5K month, so you can pick the path that fits your life. No cookie-cutter advice here.
+            These are the three routes I've watched work over and over in my shop and in my students' shops. I mapped them out so you can pick the one that fits and stop reinventing everything.
           </p>
           <ul class="feature-list">
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>The Volume Path for quick wins</span>
+              <span><strong>Audience Path:</strong> The exact way I built my first profitable niche</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>The Premium Path for bigger tickets</span>
+              <span><strong>Bundle Path:</strong> How I 2x'd my average order value without more traffic</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>The Hybrid Path for balanced growth</span>
+              <span><strong>Social Path:</strong> The method my top students use to pull traffic from outside Etsy</span>
             </li>
           </ul>
-          <div class="card-mockup">3 Paths mockup</div>
+          <div class="card-footer">
+            <span class="use-it-when">Use it when: you're tired of piecing together random advice that doesn't connect.</span>
+            <span class="card-stat">3 paths, pick one or stack all</span>
+          </div>
         </div>
       </div>
 
-      <!-- BONUS 3: $10K Month Blueprint -->
+      <!-- CARD 3: Full A-Z Tools Library -->
       <div class="bonus-card">
         <div class="card-header">
-          <h3 class="card-title">$10K Month Blueprint</h3>
-          <span class="card-badge">Blueprint</span>
+          <h3 class="card-title">Full A-Z Tools Library</h3>
+          <span class="card-badge">Resource</span>
         </div>
         <div class="card-body">
           <p class="card-description">
-            The exact week-by-week system I used to hit consistent $10K months. Product mix, pricing strategy, and launch timing all mapped out.
+            This is my actual toolkit. The prompts I use. The docs I built. The SOPs I follow. I'm handing you the backend of my business.
           </p>
           <ul class="feature-list">
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>4-week launch calendar template</span>
+              <span>My personal prompts, the ones that generate my real products</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Product pricing calculator included</span>
+              <span>The listing formats I've refined over 4 years and 10,000+ sales</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Bundle strategy for higher AOV</span>
+              <span>Internal docs I've never released outside my paid programs</span>
             </li>
           </ul>
-          <div class="card-mockup">$10K Blueprint mockup</div>
+          <div class="card-footer">
+            <span class="use-it-when">Use it when: you want to skip the years of trial and error and just use what's already working.</span>
+            <span class="card-stat">10,000+ sales behind these</span>
+          </div>
         </div>
       </div>
 
-      <!-- BONUS 4: Traffic Loop System -->
+      <!-- CARD 4: Pinterest Profit Formula -->
       <div class="bonus-card">
         <div class="card-header">
-          <h3 class="card-title">Traffic Loop System</h3>
+          <h3 class="card-title">Pinterest Profit Formula</h3>
           <span class="card-badge">Traffic</span>
         </div>
         <div class="card-body">
           <p class="card-description">
-            Stop chasing followers. This system turns every piece of content into a traffic loop that brings buyers back to your shop on repeat.
+            I spent a full year cracking Pinterest for digital products. This is exactly how I set it up: the board structure, the pin approach, the posting rhythm. All of it.
           </p>
           <ul class="feature-list">
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Content-to-cart funnel templates</span>
+              <span>My exact board setup that feeds my Etsy shop every week</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Email sequence swipe files</span>
+              <span>The pin formula I tested until it actually converted</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Retargeting strategy walkthrough</span>
+              <span>The 30-min weekly routine I still use today</span>
             </li>
           </ul>
-          <div class="card-mockup">Traffic Loop mockup</div>
+          <div class="card-footer">
+            <span class="use-it-when">Use it when: you want Pinterest traffic without spending a year figuring out what works.</span>
+            <span class="card-stat">142K monthly views</span>
+          </div>
         </div>
       </div>
 
-      <!-- BONUS 5: Ask Bailey Calls -->
+      <!-- CARD 5: NEW Summer Hybrid Shop Build -->
       <div class="bonus-card">
         <div class="card-header">
-          <h3 class="card-title">Ask Bailey Calls</h3>
-          <span class="card-badge">Live</span>
+          <h3 class="card-title">NEW Summer Hybrid Shop Build</h3>
+          <span class="card-badge">Build</span>
         </div>
         <div class="card-body">
           <p class="card-description">
-            Monthly live calls where you can ask me anything. Get real feedback on your products, pricing, and strategy from someone who does this every day.
+            I'm building a brand new shop this summer and you're watching every decision live. The niche selection, the product approach, the launch. Nothing edited out.
           </p>
           <ul class="feature-list">
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Monthly live Q&A sessions</span>
+              <span>Watch me pick a niche in real-time and hear why I'm choosing it</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Submit questions in advance</span>
+              <span>See exactly how I create products and structure listings for Q4</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Replays available if you miss it</span>
+              <span>Get access to a build you literally cannot find anywhere else because it's happening now</span>
             </li>
           </ul>
-          <div class="card-mockup">Ask Bailey mockup</div>
+          <div class="card-footer">
+            <span class="use-it-when">Use it when: you want to build alongside me instead of guessing alone.</span>
+            <span class="card-stat">LIVE, building now</span>
+          </div>
         </div>
       </div>
 
-      <!-- BONUS 6: Steal My Bestsellers -->
+      <!-- CARD 6: 150+ PLR Products (Resell-Ready) -->
       <div class="bonus-card">
         <div class="card-header">
-          <h3 class="card-title">Steal My Bestsellers</h3>
-          <span class="card-badge">Templates</span>
+          <h3 class="card-title">150+ PLR Products (Resell-Ready)</h3>
+          <span class="card-badge">Vault</span>
         </div>
         <div class="card-body">
           <p class="card-description">
-            My actual best-selling product templates, fully editable. See exactly how I structure, price, and present products that sell on repeat.
+            These aren't random PLR files from some bundle. I curated these specifically for the niches and styles that are working right now on Etsy.
           </p>
           <ul class="feature-list">
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>10+ proven product templates</span>
+              <span>Products selected based on what's actually selling right now</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Canva files included</span>
+              <span>Designed to match the aesthetic buyers are paying for in 2024</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Listing copy breakdowns</span>
+              <span>Exclusive to this membership, you won't see these flooding the market</span>
             </li>
           </ul>
-          <div class="card-mockup">Bestsellers mockup</div>
+          <div class="card-footer">
+            <span class="use-it-when">Use it when: you need quality inventory fast, without competing against 10,000 identical listings.</span>
+            <span class="card-stat">200+ designs ready</span>
+          </div>
         </div>
       </div>
 
-      <!-- BONUS 7: PLR Vault -->
+      <!-- CARD 7: The Daily Trending Products & Prompts -->
       <div class="bonus-card">
         <div class="card-header">
-          <h3 class="card-title">PLR Vault</h3>
-          <span class="card-badge">Assets</span>
+          <h3 class="card-title">The Daily Trending Products & Prompts</h3>
+          <span class="card-badge">Daily</span>
         </div>
         <div class="card-body">
           <p class="card-description">
-            A growing library of private label rights products you can rebrand and sell as your own. New assets added monthly.
+            Every day, I drop what's trending with the prompt to make it and the SEO to list it. This comes from my daily research. Same info I'm acting on, same day.
           </p>
           <ul class="feature-list">
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>50+ ready-to-sell products</span>
+              <span>Trends I'm tracking personally, from my own research</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Full commercial rights included</span>
+              <span>Prompts I've tested and refined so the output actually looks good</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>New drops every month</span>
+              <span>SEO pulled from my own keyword research</span>
             </li>
           </ul>
-          <div class="card-mockup">PLR Vault mockup</div>
+          <div class="card-footer">
+            <span class="use-it-when">Use it when: you want to move on the same trends I'm moving on, at the same time.</span>
+            <span class="card-stat">365 days of ideas</span>
+          </div>
         </div>
       </div>
 
-      <!-- BONUS 8: Tools + Ops Stack -->
+      <!-- CARD 8: Bi-Weekly Group Coaching Calls -->
       <div class="bonus-card">
         <div class="card-header">
-          <h3 class="card-title">Tools + Ops Stack</h3>
-          <span class="card-badge">Systems</span>
+          <h3 class="card-title">Bi-Weekly Group Coaching Calls</h3>
+          <span class="card-badge">Coaching</span>
         </div>
         <div class="card-body">
           <p class="card-description">
-            Every tool, app, and system I use to run my shop. Plus SOPs so you can set up the same workflows without the guesswork.
+            This is direct access to me. Not a team. Not a moderator. You bring your shop, I give you answers.
           </p>
           <ul class="feature-list">
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Complete tech stack breakdown</span>
+              <span>Ask me anything, I'm the one on the call, every time</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Notion SOPs and workflows</span>
+              <span>Get my eyes on your listings, your niches, your pricing</span>
             </li>
             <li>
               <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Automation setup guides</span>
+              <span>Real feedback from someone who's actively selling every day</span>
             </li>
           </ul>
-          <div class="card-mockup">Tools Stack mockup</div>
+          <div class="card-footer">
+            <span class="use-it-when">Use it when: you want answers from the person who built the thing.</span>
+            <span class="card-stat">24 calls per year</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 9: My Secret Podcast -->
+      <div class="bonus-card">
+        <div class="card-header">
+          <h3 class="card-title">My Secret Podcast</h3>
+          <span class="card-badge">Behind the Scenes</span>
+        </div>
+        <div class="card-body">
+          <p class="card-description">
+            This is the stuff I don't post publicly. The real decisions. The experiments. What's working in my shop right now. I keep this for members only because it's too specific to give away.
+          </p>
+          <ul class="feature-list">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Behind-the-scenes of what I'm testing, changing, doubling down on</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>Thoughts I'm not sharing on YouTube or Instagram</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
+              <span>The unfiltered version of how I actually think about my business</span>
+            </li>
+          </ul>
+          <div class="card-footer">
+            <span class="use-it-when">Use it when: you want to know what's really happening behind the scenes.</span>
+            <span class="card-stat">55 episodes deep</span>
+          </div>
         </div>
       </div>
 
