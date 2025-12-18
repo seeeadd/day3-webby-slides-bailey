@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bonus Stack - Everything You Get</title>
+  <title>Offer Stack - Everything You Get</title>
   <style>
     /* ==========================================
-       BASE64 FONT EMBEDDINGS
+       FONT EMBEDDINGS
        ========================================== */
-
     @font-face {
       font-family: 'OGG';
-      src: url(data:font/truetype;base64,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) format('truetype');
+      src: url('https://seanthea.github.io/bailey-fonts/Ogg-Bold.woff2') format('woff2');
       font-weight: 700;
       font-style: normal;
       font-display: swap;
@@ -19,32 +18,8 @@
 
     @font-face {
       font-family: 'Satoshi';
-      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIAAAABqiwAAIZBAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGjYbjQIcgzAGYACGEAhUCZ8cEQwKg+dcg6oNC4UKAAE2AiQDiVQEIAWOUgeFfAyBZhsCJGezD2K8bGAE2I0B0ByQ+N+/fN+/PXPvPLd7nqSyqKKD8OE/W+MbG9q8+3/b/lU4qm2BoKqpY4qC7sJ3JH0rEohIQkB1FYQQEolInYv+SjuBEb1ZFRvCJjAM/+f3X7tnq6rKe+L3z+bXlb9CKRSSoIxCFCxRiEIIJYRQwk4l7JSSQqMQQiWESlQhVEJaqqRmb9b9X3Vn/7e/Ax0g9ACe9HsAOACbAQJgFbYBdgAcAPYB4AFg9o89/8/91Pf1KhKJREqRKqQm6UE6Eg0UMZ0kkCUkkFXBRJCQQlaCBJDQSgIJBVKplFKqQ5nKKGMRZZY8i46xhprPxlT+2w8AAA=) format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Satoshi';
-      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIAAAABqiwAAIZBAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGjYbjQIcgzAGYACGEAhUCZ8cEQwKg+dcg6oNC4UKAAE2AiQDiVQEIAWOUgeFfAyBZhsCJGezD2K8bGAE2I0B0ByQ+N+/fN+/PXPvPLd7nqSyqKKD8OE/W+MbG9q8+3/b/lU4qm2BoKqpY4qC7sJ3JH0rEohIQkB1FYQQEolInYv+SjuBEb1ZFRvCJjAM/+f3X7tnq6rKe+L3z+bXlb9CKRSSoIxCFCxRiEIIJYRQwk4l7JSSQqMQQiWESlQhVEJaqqRmb9b9X3Vn/7e/Ax0g9ACe9HsAOACbAQJgFbYBdgAcAPYB4AFg9o89/8/91Pf1KhKJREqRKqQm6UE6Eg0UMZ0kkCUkkFXBRJCQQlaCBJDQSgIJBVKplFKqQ5nKKGMRZZY8i46xhprPxlT+2w8AAA=) format('woff2');
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Satoshi';
-      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIAAAABqiwAAIZBAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGjYbjQIcgzAGYACGEAhUCZ8cEQwKg+dcg6oNC4UKAAE2AiQDiVQEIAWOUgeFfAyBZhsCJGezD2K8bGAE2I0B0ByQ+N+/fN+/PXPvPLd7nqSyqKKD8OE/W+MbG9q8+3/b/lU4qm2BoKqpY4qC7sJ3JH0rEohIQkB1FYQQEolInYv+SjuBEb1ZFRvCJjAM/+f3X7tnq6rKe+L3z+bXlb9CKRSSoIxCFCxRiEIIJYRQwk4l7JSSQqMQQiWESlQhVEJaqqRmb9b9X3Vn/7e/Ax0g9ACe9HsAOACbAQJgFbYBdgAcAPYB4AFg9o89/8/91Pf1KhKJREqRKqQm6UE6Eg0UMZ0kkCUkkFXBRJCQQlaCBJDQSgIJBVKplFKqQ5nKKGMRZZY8i46xhprPxlT+2w8AAA=) format('woff2');
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: 'Satoshi';
-      src: url(data:font/woff2;base64,d09GMgABAAAAAIaoABIAAAABqiwAAIZBAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGjYbjQIcgzAGYACGEAhUCZ8cEQwKg+dcg6oNC4UKAAE2AiQDiVQEIAWOUgeFfAyBZhsCJGezD2K8bGAE2I0B0ByQ+N+/fN+/PXPvPLd7nqSyqKKD8OE/W+MbG9q8+3/b/lU4qm2BoKqpY4qC7sJ3JH0rEohIQkB1FYQQEolInYv+SjuBEb1ZFRvCJjAM/+f3X7tnq6rKe+L3z+bXlb9CKRSSoIxCFCxRiEIIJYRQwk4l7JSSQqMQQiWESlQhVEJaqqRmb9b9X3Vn/7e/Ax0g9ACe9HsAOACbAQJgFbYBdgAcAPYB4AFg9o89/8/91Pf1KhKJREqRKqQm6UE6Eg0UMZ0kkCUkkFXBRJCQQlaCBJDQSgIJBVKplFKqQ5nKKGMRZZY8i46xhprPxlT+2w8AAA=) format('woff2');
-      font-weight: 800;
+      src: url('https://seanthea.github.io/bailey-fonts/Satoshi-Variable.woff2') format('woff2');
+      font-weight: 100 900;
       font-style: normal;
       font-display: swap;
     }
@@ -52,7 +27,6 @@
     /* ==========================================
        RESET & BASE
        ========================================== */
-
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -66,94 +40,71 @@
     }
 
     /* ==========================================
-       BONUS STACK SECTION - DARK CHARCOAL
-       All styles scoped under #bonus-stack
+       OFFER STACK SECTION - WARM CREAM (Calm Clarity)
        ========================================== */
-
-    #bonus-stack {
+    #offer-stack {
       width: 100%;
-      padding: 80px 24px;
-      background: linear-gradient(180deg,
-        #1F1D1A 0%,
-        #2D2A26 50%,
-        #1F1D1A 100%
-      );
+      padding: 100px 24px;
+      background: linear-gradient(180deg, #FAF8F5 0%, #F5F2ED 50%, #FAF8F5 100%);
       position: relative;
       overflow: hidden;
     }
 
-    /* Subtle noise texture overlay */
-    #bonus-stack::before {
+    /* Paper grain texture */
+    #offer-stack::before {
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
       opacity: 0.03;
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Coral watercolor blob - top right */
-    #bonus-stack .blob-coral {
+    /* Watercolor blobs - Soft and warm */
+    #offer-stack .blob-coral {
       position: absolute;
-      top: -100px;
-      right: -80px;
+      top: -150px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(ellipse at 40% 40%, rgba(224, 122, 95, 0.12) 0%, transparent 60%);
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #offer-stack .blob-teal {
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
       width: 450px;
       height: 450px;
-      background: radial-gradient(ellipse at 40% 40%,
-        rgba(224, 122, 95, 0.20) 0%,
-        rgba(224, 122, 95, 0.10) 40%,
-        rgba(224, 122, 95, 0.03) 70%,
-        transparent 100%
-      );
+      background: radial-gradient(ellipse at 50% 50%, rgba(29, 107, 107, 0.08) 0%, transparent 60%);
       border-radius: 50%;
-      filter: blur(60px);
+      filter: blur(80px);
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Teal/sage watercolor blob - bottom left */
-    #bonus-stack .blob-teal {
+    #offer-stack .blob-gold {
       position: absolute;
-      bottom: -80px;
-      left: -100px;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(ellipse at 60% 60%,
-        rgba(29, 107, 107, 0.18) 0%,
-        rgba(29, 107, 107, 0.08) 40%,
-        rgba(29, 107, 107, 0.02) 70%,
-        transparent 100%
-      );
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 300px;
+      background: radial-gradient(ellipse at 50% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 60%);
       border-radius: 50%;
-      filter: blur(60px);
+      filter: blur(100px);
       pointer-events: none;
       z-index: 0;
-    }
-
-    /* Gold watercolor blob - middle right */
-    #bonus-stack .blob-gold {
-      position: absolute;
-      top: 50%;
-      right: -150px;
-      width: 380px;
-      height: 380px;
-      background: radial-gradient(ellipse at 50% 50%,
-        rgba(212, 175, 55, 0.15) 0%,
-        rgba(212, 175, 55, 0.08) 40%,
-        rgba(212, 175, 55, 0.02) 70%,
-        transparent 100%
-      );
-      border-radius: 50%;
-      filter: blur(60px);
-      pointer-events: none;
-      z-index: 0;
-      transform: translateY(-50%);
     }
 
     /* Container */
-    #bonus-stack .stack-container {
-      max-width: 1200px;
+    #offer-stack .stack-container {
+      max-width: 900px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
@@ -162,186 +113,250 @@
     /* ==========================================
        HERO AREA
        ========================================== */
-
-    #bonus-stack .hero-area {
+    #offer-stack .hero-area {
       text-align: center;
       margin-bottom: 64px;
     }
 
-    /* Eyebrow pill */
-    #bonus-stack .eyebrow-pill {
+    #offer-stack .eyebrow-pill {
       display: inline-flex;
       align-items: center;
-      padding: 10px 20px;
-      background: linear-gradient(135deg, #E07A5F 0%, #C96A52 100%);
+      padding: 8px 20px;
+      background: transparent;
+      border: 1.5px solid rgba(224, 122, 95, 0.4);
       border-radius: 100px;
       font-family: 'Satoshi', sans-serif;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #FFFFFF;
+      color: #E07A5F;
       margin-bottom: 24px;
-      box-shadow:
-        0 2px 8px rgba(224, 122, 95, 0.3),
-        0 8px 24px rgba(224, 122, 95, 0.2);
     }
 
-    /* Hero Headline */
-    #bonus-stack .hero-headline {
+    #offer-stack .hero-headline {
       font-family: 'OGG', Georgia, serif;
-      font-size: 52px;
+      font-size: clamp(32px, 4.5vw, 48px);
       font-weight: 700;
       line-height: 1.15;
-      color: #FFFFFF;
+      color: #2D2A26;
       margin-bottom: 20px;
-      -webkit-text-stroke: 0.5px currentColor;
     }
 
-    @media (max-width: 768px) {
-      #bonus-stack .hero-headline {
-        font-size: 38px;
-      }
+    #offer-stack .hero-headline em {
+      font-style: italic;
+      color: #E07A5F;
     }
 
-    @media (max-width: 480px) {
-      #bonus-stack .hero-headline {
-        font-size: 32px;
-      }
-    }
-
-    /* Hero Subline */
-    #bonus-stack .hero-subline {
+    #offer-stack .hero-subline {
       font-family: 'Satoshi', sans-serif;
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 400;
-      line-height: 1.65;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 32px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    @media (max-width: 768px) {
-      #bonus-stack .hero-subline {
-        font-size: 17px;
-      }
-    }
-
-    /* Hero Mockup */
-    #bonus-stack .hero-mockup {
-      width: 100%;
-      max-width: 500px;
-      aspect-ratio: 16/10;
-      margin: 0 auto 32px;
-      background: linear-gradient(145deg,
-        rgba(255, 255, 255, 0.03) 0%,
-        rgba(224, 122, 95, 0.05) 50%,
-        rgba(29, 107, 107, 0.05) 100%
-      );
-      border: 2px dashed rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(255, 255, 255, 0.4);
-      font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-    }
-
-    /* Trust line */
-    #bonus-stack .trust-line {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.7;
+      color: #6B635A;
+      max-width: 560px;
+      margin: 0 auto;
     }
 
     /* ==========================================
-       BONUS CARDS GRID
+       SIGNATURE DETAIL: Hairline Gradient Divider
        ========================================== */
+    .hairline-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(224, 122, 95, 0.3) 20%, rgba(29, 107, 107, 0.3) 50%, rgba(212, 175, 55, 0.3) 80%, transparent 100%);
+      margin: 48px 0;
+    }
 
-    #bonus-stack .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
+    /* ==========================================
+       OFFER CARDS - CALM & SCANNABLE
+       ========================================== */
+    #offer-stack .cards-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
       margin-bottom: 56px;
     }
 
-    @media (max-width: 968px) {
-      #bonus-stack .cards-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-    }
-
-    /* Individual Bonus Card */
-    #bonus-stack .bonus-card {
-      background: #FFFFFF;
-      border-radius: 24px;
+    /* Individual Card - Warm Surface with Subtle Refinement */
+    #offer-stack .offer-card {
+      background: #FFFDFB;
+      border-radius: 16px;
+      border: 1px solid rgba(45, 42, 38, 0.06);
       overflow: hidden;
+      position: relative;
       box-shadow:
-        0 4px 20px rgba(0, 0, 0, 0.08),
-        0 12px 48px rgba(0, 0, 0, 0.12);
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                  box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        0 1px 3px rgba(0, 0, 0, 0.02),
+        0 2px 6px rgba(0, 0, 0, 0.02);
+      transition: all 0.25s ease;
     }
 
-    #bonus-stack .bonus-card:hover {
-      transform: translateY(-4px);
-      box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.12),
-        0 20px 64px rgba(0, 0, 0, 0.15);
+    /* Subtle left accent line for visual hierarchy */
+    #offer-stack .offer-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 20px;
+      bottom: 20px;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(29, 107, 107, 0.3) 0%, rgba(29, 107, 107, 0.1) 100%);
+      border-radius: 0 2px 2px 0;
+      opacity: 0;
+      transition: opacity 0.25s ease;
     }
 
-    /* Card Header - Charcoal */
-    #bonus-stack .card-header {
-      background: linear-gradient(135deg, #2D2A26 0%, #1F1D1A 100%);
-      padding: 24px 28px;
+    #offer-stack .offer-card:hover::before {
+      opacity: 1;
+    }
+
+    #offer-stack .offer-card:hover {
+      border-color: rgba(45, 42, 38, 0.1);
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Featured Card (Core) - Prominent but elegant */
+    #offer-stack .offer-card.featured {
+      border: 1px solid rgba(224, 122, 95, 0.15);
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.03),
+        0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Featured card left accent - always visible, coral */
+    #offer-stack .offer-card.featured::before {
+      background: linear-gradient(180deg, #E07A5F 0%, rgba(224, 122, 95, 0.4) 100%);
+      opacity: 1;
+      top: 24px;
+      bottom: 24px;
+    }
+
+    /* ==========================================
+       CARD HEADER - Clean Row Layout
+       ========================================== */
+    #offer-stack .card-header {
+      padding: 20px 28px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      cursor: pointer;
+      transition: background 0.2s ease;
     }
 
-    #bonus-stack .card-title {
-      font-family: 'OGG', Georgia, serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: #FFFFFF;
-      -webkit-text-stroke: 0.3px currentColor;
+    #offer-stack .card-header:hover {
+      background: rgba(250, 248, 245, 0.5);
     }
 
-    @media (max-width: 768px) {
-      #bonus-stack .card-title {
-        font-size: 20px;
-      }
-    }
-
-    /* Coral badge */
-    #bonus-stack .card-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 6px 14px;
-      background: linear-gradient(135deg, #E07A5F 0%, #C96A52 100%);
-      border-radius: 100px;
+    /* Label Pill (CORE, BONUS) */
+    #offer-stack .card-label {
       font-family: 'Satoshi', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #FFFFFF;
+      padding: 5px 12px;
+      border-radius: 6px;
       white-space: nowrap;
     }
 
-    /* Card Body */
-    #bonus-stack .card-body {
-      padding: 28px;
+    #offer-stack .card-label.core {
+      background: linear-gradient(135deg, #E07A5F 0%, #D06A50 100%);
+      color: #FFFFFF;
     }
 
-    /* Card Description */
-    #bonus-stack .card-description {
+    #offer-stack .card-label.bonus {
+      background: rgba(29, 107, 107, 0.1);
+      color: #1D6B6B;
+      border: 1px solid rgba(29, 107, 107, 0.2);
+    }
+
+    /* Card Title */
+    #offer-stack .card-title {
+      font-family: 'OGG', Georgia, serif;
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 700;
+      color: #2D2A26;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    /* Best For Pill */
+    #offer-stack .best-for {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      color: #6B635A;
+      padding: 6px 14px;
+      background: rgba(45, 42, 38, 0.04);
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    /* Expand/Collapse Indicator */
+    #offer-stack .expand-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9B9590;
+      transition: transform 0.3s ease;
+    }
+
+    #offer-stack .offer-card.expanded .expand-icon {
+      transform: rotate(180deg);
+    }
+
+    /* ==========================================
+       CARD BODY - Collapsed by Default
+       ========================================== */
+    #offer-stack .card-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      padding: 0 28px;
+    }
+
+    #offer-stack .offer-card.expanded .card-body {
+      max-height: 800px;
+      padding: 0 28px 28px;
+    }
+
+    /* Featured card always expanded */
+    #offer-stack .offer-card.featured .card-body {
+      max-height: none;
+      padding: 0 28px 28px;
+    }
+
+    /* Two Column Layout for Featured Card */
+    #offer-stack .card-body-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    #offer-stack .offer-card.featured .card-body-inner {
+      grid-template-columns: 1fr 280px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    @media (max-width: 800px) {
+      #offer-stack .offer-card.featured .card-body-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Card Content */
+    #offer-stack .card-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* One-liner "What it is" */
+    #offer-stack .card-oneliner {
       font-family: 'Satoshi', sans-serif;
       font-size: 16px;
       font-weight: 400;
@@ -350,220 +365,265 @@
       margin-bottom: 20px;
     }
 
-    /* Feature List */
-    #bonus-stack .feature-list {
+    /* ==========================================
+       FEATURE LIST - Hook:Clarifier Format
+       ========================================== */
+    #offer-stack .feature-list {
       list-style: none;
       margin-bottom: 24px;
     }
 
-    #bonus-stack .feature-list li {
+    #offer-stack .feature-list li {
       display: flex;
       align-items: flex-start;
       gap: 12px;
       font-family: 'Satoshi', sans-serif;
       font-size: 15px;
-      font-weight: 500;
       color: #2D2A26;
       margin-bottom: 12px;
+      line-height: 1.5;
     }
 
-    #bonus-stack .feature-list li:last-child {
+    #offer-stack .feature-list li:last-child {
       margin-bottom: 0;
     }
 
-    /* Checkmark */
-    #bonus-stack .check-icon {
+    /* Bullet dot */
+    #offer-stack .bullet-dot {
       flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      background: linear-gradient(135deg, #1D6B6B 0%, #156060 100%);
+      width: 6px;
+      height: 6px;
+      background: #1D6B6B;
       border-radius: 50%;
+      margin-top: 8px;
+    }
+
+    /* Hook text (bold) */
+    #offer-stack .feature-list li strong {
+      font-weight: 700;
+      color: #2D2A26;
+    }
+
+    /* Clarifier (regular) */
+    #offer-stack .feature-list li span {
+      color: #6B635A;
+      font-weight: 400;
+    }
+
+    /* ==========================================
+       CARD FOOTER - Use it when + Stat
+       ========================================== */
+    #offer-stack .card-footer {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      justify-content: center;
-      margin-top: 2px;
+      justify-content: space-between;
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(45, 42, 38, 0.06);
     }
 
-    #bonus-stack .check-icon svg {
-      width: 12px;
-      height: 12px;
-      stroke: #FFFFFF;
-      stroke-width: 2.5;
-      fill: none;
+    #offer-stack .use-it-when {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #9B9590;
+      font-style: italic;
     }
 
-    /* Card Mockup Placeholder */
-    #bonus-stack .card-mockup {
+    #offer-stack .card-stat {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: #E07A5F;
+      padding: 6px 14px;
+      background: rgba(224, 122, 95, 0.08);
+      border-radius: 100px;
+    }
+
+    /* ==========================================
+       CARD GRAPHIC (Featured Card Only)
+       ========================================== */
+    #offer-stack .card-graphic {
       width: 100%;
-      aspect-ratio: 16/9;
-      background: linear-gradient(145deg,
-        rgba(45, 42, 38, 0.03) 0%,
-        rgba(224, 122, 95, 0.05) 50%,
-        rgba(29, 107, 107, 0.05) 100%
-      );
-      border: 2px dashed rgba(45, 42, 38, 0.15);
+      aspect-ratio: 1;
+      max-width: 280px;
+      background: linear-gradient(145deg, #F5F2ED 0%, #EBE7E2 100%);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: rgba(45, 42, 38, 0.4);
-      font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
+      overflow: hidden;
+    }
+
+    #offer-stack .card-graphic svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 800px) {
+      #offer-stack .card-graphic {
+        max-width: 100%;
+        aspect-ratio: 16/10;
+        order: -1;
+      }
     }
 
     /* ==========================================
-       CTA SLAB
+       CTA CARD - Premium & Clickable
        ========================================== */
-
-    #bonus-stack .cta-slab {
-      display: block;
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto 24px;
-      padding: 36px 48px;
-      background: linear-gradient(135deg, #E07A5F 0%, #C96A52 100%);
-      border-radius: 20px;
-      text-align: center;
-      text-decoration: none;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
+    #offer-stack .cta-card {
+      background: #FFFDFB;
+      border-radius: 16px;
+      border: 1.5px solid rgba(224, 122, 95, 0.15);
+      padding: 32px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+      max-width: 700px;
+      margin: 0 auto 32px;
       box-shadow:
-        0 4px 16px rgba(224, 122, 95, 0.3),
-        0 12px 40px rgba(224, 122, 95, 0.25),
-        0 0 80px rgba(224, 122, 95, 0.15);
-      transition:
-        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        0 2px 4px rgba(0, 0, 0, 0.02),
+        0 4px 8px rgba(0, 0, 0, 0.03),
+        0 8px 16px rgba(0, 0, 0, 0.04);
     }
 
-    /* Shimmer effect */
-    #bonus-stack .cta-slab::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.15) 50%,
-        transparent 100%
-      );
-      transition: left 0.6s ease;
+    #offer-stack .cta-info {
+      flex: 1;
+      min-width: 200px;
     }
 
-    #bonus-stack .cta-slab:hover::before {
-      left: 100%;
-    }
-
-    #bonus-stack .cta-slab:hover {
-      transform: translateY(-3px);
-      box-shadow:
-        0 8px 24px rgba(224, 122, 95, 0.35),
-        0 20px 56px rgba(224, 122, 95, 0.3),
-        0 0 100px rgba(224, 122, 95, 0.2);
-    }
-
-    #bonus-stack .cta-slab:active {
-      transform: translateY(-1px);
-    }
-
-    #bonus-stack .cta-slab-line1 {
-      display: block;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 32px;
-      font-weight: 800;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
-    }
-
-    #bonus-stack .cta-slab-line2 {
-      display: block;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.9);
-      position: relative;
-      z-index: 1;
-    }
-
-    @media (max-width: 768px) {
-      #bonus-stack .cta-slab {
-        padding: 28px 24px;
-        border-radius: 16px;
-      }
-
-      #bonus-stack .cta-slab-line1 {
-        font-size: 24px;
-      }
-
-      #bonus-stack .cta-slab-line2 {
-        font-size: 15px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      #bonus-stack .cta-slab-line1 {
-        font-size: 22px;
-      }
-    }
-
-    /* Microcopy row */
-    #bonus-stack .microcopy-row {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    #bonus-stack .microcopy {
+    #offer-stack .cta-label {
       font-family: 'Satoshi', sans-serif;
       font-size: 14px;
       font-weight: 500;
-      color: rgba(255, 255, 255, 0.6);
+      color: #6B635A;
+      margin-bottom: 8px;
     }
 
-    #bonus-stack .microcopy-dot {
-      display: inline-block;
-      margin: 0 14px;
-      color: rgba(255, 255, 255, 0.3);
+    #offer-stack .cta-price {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #2D2A26;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
     }
 
-    @media (max-width: 520px) {
-      #bonus-stack .microcopy {
-        display: block;
-        margin-bottom: 4px;
-      }
-
-      #bonus-stack .microcopy-dot {
-        display: none;
-      }
+    #offer-stack .cta-price span {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #9B9590;
     }
 
-    /* Urgency line */
-    #bonus-stack .urgency-line {
-      text-align: center;
+    #offer-stack .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #E07A5F 0%, #D06A50 100%);
+      border-radius: 12px;
       font-family: 'Satoshi', sans-serif;
       font-size: 15px;
-      font-weight: 600;
-      color: #E07A5F;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 2px 4px rgba(224, 122, 95, 0.2),
+        0 4px 8px rgba(224, 122, 95, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      transition: all 0.2s ease;
     }
 
-    @media (max-width: 768px) {
-      #bonus-stack .urgency-line {
-        font-size: 14px;
+    #offer-stack .cta-button:hover {
+      transform: translateY(-1px);
+      box-shadow:
+        0 4px 8px rgba(224, 122, 95, 0.25),
+        0 8px 16px rgba(224, 122, 95, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    #offer-stack .cta-button:active {
+      transform: translateY(1px);
+      box-shadow:
+        0 1px 2px rgba(224, 122, 95, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    /* Trust Row */
+    #offer-stack .trust-row {
+      text-align: center;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #6B635A;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    #offer-stack .trust-row span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #offer-stack .trust-row svg {
+      width: 16px;
+      height: 16px;
+      color: #1D6B6B;
+    }
+
+    /* ==========================================
+       RESPONSIVE
+       ========================================== */
+    @media (max-width: 600px) {
+      #offer-stack {
+        padding: 64px 16px;
+      }
+
+      #offer-stack .card-header {
+        padding: 16px 20px;
+      }
+
+      #offer-stack .offer-card.expanded .card-body,
+      #offer-stack .offer-card.featured .card-body {
+        padding: 0 20px 20px;
+      }
+
+      #offer-stack .cta-card {
+        padding: 24px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #offer-stack .cta-info {
+        text-align: center;
+      }
+
+      #offer-stack .cta-price {
+        justify-content: center;
+      }
+
+      #offer-stack .cta-button {
+        width: 100%;
       }
     }
 
-    /* Reduced motion support */
+    /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      #bonus-stack .cta-slab,
-      #bonus-stack .cta-slab::before,
-      #bonus-stack .bonus-card {
+      #offer-stack .offer-card,
+      #offer-stack .cta-button,
+      #offer-stack .card-body {
         transition: none;
       }
     }
@@ -571,10 +631,7 @@
 </head>
 <body>
 
-<!-- BONUS STACK SECTION -->
-<section id="bonus-stack">
-
-  <!-- Watercolor blobs -->
+<section id="offer-stack">
   <div class="blob-coral"></div>
   <div class="blob-teal"></div>
   <div class="blob-gold"></div>
@@ -583,277 +640,437 @@
 
     <!-- HERO AREA -->
     <div class="hero-area">
-
-      <!-- Eyebrow -->
       <div class="eyebrow-pill">Everything You Get</div>
+      <h2 class="hero-headline">The <em>Complete System,</em> Delivered</h2>
+      <p class="hero-subline">Your all-in-one stack for building a profitable digital product shop. Blueprints, templates, calls, and everything you need to start selling.</p>
+    </div>
 
-      <!-- Headline -->
-      <h2 class="hero-headline">The Complete System, Delivered</h2>
+    <!-- OFFER CARDS LIST -->
+    <div class="cards-list">
 
-      <!-- Subline -->
-      <p class="hero-subline">
-        Your all-in-one stack for building a profitable digital product shop. Blueprints, templates, calls, and everything you need to start selling.
-      </p>
+      <!-- CARD 1: CORE - Featured & Expanded -->
+      <article class="offer-card featured expanded">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+          <span class="card-label core">Core</span>
+          <h3 class="card-title">My $10K Etsy Digital Product Profit Formula</h3>
+          <span class="best-for">Best for: Getting started</span>
+          <div class="expand-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 4L6 8L10 4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <div class="card-content">
+              <p class="card-oneliner">This is what's actually running my shop right now. Not something I learned from a course. I built this from 4 years of figuring out what works.</p>
+              <ul class="feature-list">
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Never run out of product ideas</strong> <span>with my pipeline system</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Skip 2 years of traffic guesswork</strong> <span>with my proven loop</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Use my exact listing structure</strong> <span>behind every best-seller</span></div>
+                </li>
+              </ul>
+              <div class="card-footer">
+                <span class="use-it-when">Use it when: you want the thing that's actually working right now.</span>
+                <span class="card-stat">4 years refined</span>
+              </div>
+            </div>
+            <div class="card-graphic">
+              <!-- Dashboard SVG -->
+              <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="30" width="240" height="160" rx="12" fill="#2D2A26"/>
+                <circle cx="40" cy="46" r="5" fill="#E07A5F"/>
+                <circle cx="56" cy="46" r="5" fill="#D4AF37"/>
+                <circle cx="72" cy="46" r="5" fill="#1D6B6B"/>
+                <rect x="28" y="60" width="224" height="122" rx="8" fill="#FFFFFF"/>
+                <rect x="40" y="72" width="65" height="40" rx="6" fill="#FAF8F5"/>
+                <text x="48" y="88" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Sales</text>
+                <text x="48" y="104" font-family="Satoshi, sans-serif" font-size="14" font-weight="700" fill="#2D2A26">10,247</text>
+                <rect x="115" y="72" width="65" height="40" rx="6" fill="#FAF8F5"/>
+                <text x="123" y="88" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Revenue</text>
+                <text x="123" y="104" font-family="Satoshi, sans-serif" font-size="14" font-weight="700" fill="#1D6B6B">$87.4K</text>
+                <rect x="190" y="72" width="55" height="40" rx="6" fill="#FAF8F5"/>
+                <text x="198" y="88" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Rating</text>
+                <text x="198" y="104" font-family="Satoshi, sans-serif" font-size="14" font-weight="700" fill="#E07A5F">4.9 ★</text>
+                <rect x="40" y="120" width="200" height="55" rx="6" fill="#FAF8F5"/>
+                <polyline points="55,160 80,150 105,155 130,140 155,145 180,130 205,135 225,125" stroke="#1D6B6B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="225" cy="125" r="4" fill="#E07A5F"/>
+                <rect x="60" y="210" width="160" height="50" rx="8" fill="#FFFDFB" stroke="#E8E2D9"/>
+                <text x="140" y="240" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A" text-anchor="middle">Bailey's actual dashboard</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </article>
 
-      <!-- Hero Mockup -->
-      <div class="hero-mockup">
-        Full stack mockup placeholder
-      </div>
+      <div class="hairline-divider"></div>
 
-      <!-- Trust Line -->
-      <p class="trust-line">Join 2,000+ shop owners already inside</p>
+      <!-- CARD 2: 3 Paths - Collapsed -->
+      <article class="offer-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+          <span class="card-label bonus">Bonus</span>
+          <h3 class="card-title">3 Paths to $5K/Month with AI Designs</h3>
+          <span class="best-for">Best for: Picking your strategy</span>
+          <div class="expand-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 4L6 8L10 4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <div class="card-content">
+              <p class="card-oneliner">Three routes I've watched work over and over. Pick the one that fits and stop reinventing everything.</p>
+              <ul class="feature-list">
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Audience Path:</strong> <span>build your first profitable niche</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Bundle Path:</strong> <span>2x your order value without more traffic</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Social Path:</strong> <span>pull traffic from outside Etsy</span></div>
+                </li>
+              </ul>
+              <div class="card-footer">
+                <span class="use-it-when">Use it when: you're tired of piecing together random advice.</span>
+                <span class="card-stat">3 proven paths</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 3: Tools Library - Collapsed -->
+      <article class="offer-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+          <span class="card-label bonus">Bonus</span>
+          <h3 class="card-title">Full A-Z Tools Library</h3>
+          <span class="best-for">Best for: Skipping trial & error</span>
+          <div class="expand-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 4L6 8L10 4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <div class="card-content">
+              <p class="card-oneliner">My actual toolkit. The prompts, docs, and SOPs from my business backend.</p>
+              <ul class="feature-list">
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Use my personal prompts</strong> <span>that generate real products</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Copy my listing formats</strong> <span>refined over 10,000+ sales</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Access internal docs</strong> <span>never released publicly</span></div>
+                </li>
+              </ul>
+              <div class="card-footer">
+                <span class="use-it-when">Use it when: you want to skip years of trial and error.</span>
+                <span class="card-stat">10,000+ sales behind these</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 4: Pinterest - Collapsed -->
+      <article class="offer-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+          <span class="card-label bonus">Bonus</span>
+          <h3 class="card-title">Pinterest Profit Formula</h3>
+          <span class="best-for">Best for: Free traffic</span>
+          <div class="expand-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 4L6 8L10 4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <div class="card-content">
+              <p class="card-oneliner">A full year of cracking Pinterest for digital products. Board structure, pin approach, posting rhythm.</p>
+              <ul class="feature-list">
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Set up boards that feed sales</strong> <span>every single week</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Use my tested pin formula</strong> <span>that actually converts</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Follow my 30-min weekly routine</strong> <span>I still use today</span></div>
+                </li>
+              </ul>
+              <div class="card-footer">
+                <span class="use-it-when">Use it when: you want Pinterest traffic without a year of figuring it out.</span>
+                <span class="card-stat">142K monthly views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 5: Summer Build - Collapsed -->
+      <article class="offer-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+          <span class="card-label bonus">Bonus</span>
+          <h3 class="card-title">NEW Summer Hybrid Shop Build</h3>
+          <span class="best-for">Best for: Learning by watching</span>
+          <div class="expand-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 4L6 8L10 4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <div class="card-content">
+              <p class="card-oneliner">I'm building a brand new shop this summer and you're watching every decision live.</p>
+              <ul class="feature-list">
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Watch me pick a niche</strong> <span>and hear exactly why</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>See how I structure listings</strong> <span>for Q4 success</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Get something you can't find</strong> <span>anywhere else</span></div>
+                </li>
+              </ul>
+              <div class="card-footer">
+                <span class="use-it-when">Use it when: you want to build alongside me instead of guessing alone.</span>
+                <span class="card-stat">LIVE, building now</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 6: PLR Products - Collapsed -->
+      <article class="offer-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+          <span class="card-label bonus">Bonus</span>
+          <h3 class="card-title">150+ PLR Products (Resell-Ready)</h3>
+          <span class="best-for">Best for: Fast inventory</span>
+          <div class="expand-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 4L6 8L10 4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <div class="card-content">
+              <p class="card-oneliner">Curated specifically for niches and styles working right now on Etsy. Not random bundle files.</p>
+              <ul class="feature-list">
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Products selected for what's selling</strong> <span>right now</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Matches the aesthetic</strong> <span>buyers are paying for in 2024</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Exclusive to this membership</strong> <span>not flooding the market</span></div>
+                </li>
+              </ul>
+              <div class="card-footer">
+                <span class="use-it-when">Use it when: you need quality inventory fast.</span>
+                <span class="card-stat">200+ designs ready</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 7: Daily Drops - Collapsed -->
+      <article class="offer-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+          <span class="card-label bonus">Bonus</span>
+          <h3 class="card-title">The Daily Trending Products & Prompts</h3>
+          <span class="best-for">Best for: Never guessing what to list</span>
+          <div class="expand-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 4L6 8L10 4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <div class="card-content">
+              <p class="card-oneliner">Every day, I drop what's trending with the prompt to make it and the SEO to list it.</p>
+              <ul class="feature-list">
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Never guess what to list</strong> <span>with daily trends + prompts</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>List faster</strong> <span>using my exact titles + tags</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Move on trends</strong> <span>the same day I do</span></div>
+                </li>
+              </ul>
+              <div class="card-footer">
+                <span class="use-it-when">Use it when: you want to move on the same trends I'm moving on.</span>
+                <span class="card-stat">365 days of ideas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 8: Coaching Calls - Collapsed -->
+      <article class="offer-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+          <span class="card-label bonus">Bonus</span>
+          <h3 class="card-title">Bi-Weekly Group Coaching Calls</h3>
+          <span class="best-for">Best for: Direct answers</span>
+          <div class="expand-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 4L6 8L10 4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <div class="card-content">
+              <p class="card-oneliner">Direct access to me. Not a team. Not a moderator. You bring your shop, I give you answers.</p>
+              <ul class="feature-list">
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Ask me anything</strong> <span>I'm on every call</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Get my eyes on your work</strong> <span>listings, niches, pricing</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Real feedback</strong> <span>from someone selling every day</span></div>
+                </li>
+              </ul>
+              <div class="card-footer">
+                <span class="use-it-when">Use it when: you want answers from the person who built the thing.</span>
+                <span class="card-stat">24 calls per year</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 9: Secret Podcast - Collapsed -->
+      <article class="offer-card">
+        <div class="card-header" onclick="toggleCard(this.parentElement)">
+          <span class="card-label bonus">Bonus</span>
+          <h3 class="card-title">My Secret Podcast</h3>
+          <span class="best-for">Best for: Behind the scenes</span>
+          <div class="expand-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 4L6 8L10 4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-body-inner">
+            <div class="card-content">
+              <p class="card-oneliner">The stuff I don't post publicly. Real decisions, experiments, what's working right now.</p>
+              <ul class="feature-list">
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Hear what I'm testing</strong> <span>changing, doubling down on</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>Thoughts I don't share publicly</strong> <span>on YouTube or Instagram</span></div>
+                </li>
+                <li>
+                  <span class="bullet-dot"></span>
+                  <div><strong>The unfiltered version</strong> <span>of how I think about my business</span></div>
+                </li>
+              </ul>
+              <div class="card-footer">
+                <span class="use-it-when">Use it when: you want to know what's really happening behind the scenes.</span>
+                <span class="card-stat">55 episodes deep</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
 
     </div>
 
-    <!-- BONUS CARDS GRID -->
-    <div class="cards-grid">
+    <div class="hairline-divider"></div>
 
-      <!-- BONUS 1: Daily Drop Vault -->
-      <div class="bonus-card">
-        <div class="card-header">
-          <h3 class="card-title">Daily Drop Vault</h3>
-          <span class="card-badge">Core</span>
-        </div>
-        <div class="card-body">
-          <p class="card-description">
-            365 days of done-for-you product ideas, hooks, and marketing angles delivered straight to your inbox. Never wonder what to post or sell again.
-          </p>
-          <ul class="feature-list">
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Daily product ideas with proven hooks</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Caption templates and CTAs included</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Seasonal and trending topics covered</span>
-            </li>
-          </ul>
-          <div class="card-mockup">Daily Drop mockup</div>
-        </div>
+    <!-- CTA CARD -->
+    <div class="cta-card">
+      <div class="cta-info">
+        <p class="cta-label">Join today</p>
+        <p class="cta-price">$67<span>/ month</span></p>
       </div>
-
-      <!-- BONUS 2: 3 Paths to $5K Playbook -->
-      <div class="bonus-card">
-        <div class="card-header">
-          <h3 class="card-title">3 Paths to $5K Playbook</h3>
-          <span class="card-badge">Strategy</span>
-        </div>
-        <div class="card-body">
-          <p class="card-description">
-            Three different routes to your first $5K month, so you can pick the path that fits your life. No cookie-cutter advice here.
-          </p>
-          <ul class="feature-list">
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>The Volume Path for quick wins</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>The Premium Path for bigger tickets</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>The Hybrid Path for balanced growth</span>
-            </li>
-          </ul>
-          <div class="card-mockup">3 Paths mockup</div>
-        </div>
-      </div>
-
-      <!-- BONUS 3: $10K Month Blueprint -->
-      <div class="bonus-card">
-        <div class="card-header">
-          <h3 class="card-title">$10K Month Blueprint</h3>
-          <span class="card-badge">Blueprint</span>
-        </div>
-        <div class="card-body">
-          <p class="card-description">
-            The exact week-by-week system I used to hit consistent $10K months. Product mix, pricing strategy, and launch timing all mapped out.
-          </p>
-          <ul class="feature-list">
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>4-week launch calendar template</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Product pricing calculator included</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Bundle strategy for higher AOV</span>
-            </li>
-          </ul>
-          <div class="card-mockup">$10K Blueprint mockup</div>
-        </div>
-      </div>
-
-      <!-- BONUS 4: Traffic Loop System -->
-      <div class="bonus-card">
-        <div class="card-header">
-          <h3 class="card-title">Traffic Loop System</h3>
-          <span class="card-badge">Traffic</span>
-        </div>
-        <div class="card-body">
-          <p class="card-description">
-            Stop chasing followers. This system turns every piece of content into a traffic loop that brings buyers back to your shop on repeat.
-          </p>
-          <ul class="feature-list">
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Content-to-cart funnel templates</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Email sequence swipe files</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Retargeting strategy walkthrough</span>
-            </li>
-          </ul>
-          <div class="card-mockup">Traffic Loop mockup</div>
-        </div>
-      </div>
-
-      <!-- BONUS 5: Ask Bailey Calls -->
-      <div class="bonus-card">
-        <div class="card-header">
-          <h3 class="card-title">Ask Bailey Calls</h3>
-          <span class="card-badge">Live</span>
-        </div>
-        <div class="card-body">
-          <p class="card-description">
-            Monthly live calls where you can ask me anything. Get real feedback on your products, pricing, and strategy from someone who does this every day.
-          </p>
-          <ul class="feature-list">
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Monthly live Q&A sessions</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Submit questions in advance</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Replays available if you miss it</span>
-            </li>
-          </ul>
-          <div class="card-mockup">Ask Bailey mockup</div>
-        </div>
-      </div>
-
-      <!-- BONUS 6: Steal My Bestsellers -->
-      <div class="bonus-card">
-        <div class="card-header">
-          <h3 class="card-title">Steal My Bestsellers</h3>
-          <span class="card-badge">Templates</span>
-        </div>
-        <div class="card-body">
-          <p class="card-description">
-            My actual best-selling product templates, fully editable. See exactly how I structure, price, and present products that sell on repeat.
-          </p>
-          <ul class="feature-list">
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>10+ proven product templates</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Canva files included</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Listing copy breakdowns</span>
-            </li>
-          </ul>
-          <div class="card-mockup">Bestsellers mockup</div>
-        </div>
-      </div>
-
-      <!-- BONUS 7: PLR Vault -->
-      <div class="bonus-card">
-        <div class="card-header">
-          <h3 class="card-title">PLR Vault</h3>
-          <span class="card-badge">Assets</span>
-        </div>
-        <div class="card-body">
-          <p class="card-description">
-            A growing library of private label rights products you can rebrand and sell as your own. New assets added monthly.
-          </p>
-          <ul class="feature-list">
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>50+ ready-to-sell products</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Full commercial rights included</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>New drops every month</span>
-            </li>
-          </ul>
-          <div class="card-mockup">PLR Vault mockup</div>
-        </div>
-      </div>
-
-      <!-- BONUS 8: Tools + Ops Stack -->
-      <div class="bonus-card">
-        <div class="card-header">
-          <h3 class="card-title">Tools + Ops Stack</h3>
-          <span class="card-badge">Systems</span>
-        </div>
-        <div class="card-body">
-          <p class="card-description">
-            Every tool, app, and system I use to run my shop. Plus SOPs so you can set up the same workflows without the guesswork.
-          </p>
-          <ul class="feature-list">
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Complete tech stack breakdown</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Notion SOPs and workflows</span>
-            </li>
-            <li>
-              <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></span>
-              <span>Automation setup guides</span>
-            </li>
-          </ul>
-          <div class="card-mockup">Tools Stack mockup</div>
-        </div>
-      </div>
-
+      <a href="#checkout" class="cta-button">Start selling now</a>
     </div>
 
-    <!-- CTA SLAB -->
-    <a href="#checkout" class="cta-slab">
-      <span class="cta-slab-line1">Get Instant Access Now</span>
-      <span class="cta-slab-line2">+ Everything above included</span>
-    </a>
-
-    <!-- Microcopy -->
-    <div class="microcopy-row">
-      <span class="microcopy">$27/mo billed annually</span>
-      <span class="microcopy-dot">&#8226;</span>
-      <span class="microcopy">Instant access</span>
-      <span class="microcopy-dot">&#8226;</span>
-      <span class="microcopy">Secure checkout</span>
+    <!-- Trust Row -->
+    <div class="trust-row">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        Secure checkout
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 6v6l4 2"/>
+        </svg>
+        Instant access
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+        Cancel anytime
+      </span>
     </div>
-
-    <!-- Urgency -->
-    <div class="urgency-line">Prices raising soon to $67/mo</div>
 
   </div>
 </section>
+
+<script>
+  function toggleCard(card) {
+    // Don't toggle featured cards
+    if (card.classList.contains('featured')) return;
+    card.classList.toggle('expanded');
+  }
+</script>
 
 </body>
 </html>
