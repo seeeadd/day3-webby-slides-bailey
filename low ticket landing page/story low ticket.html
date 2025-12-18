@@ -71,6 +71,9 @@
 
     .story-part1-section {
       position: relative;
+      width: 100%;
+      min-width: 100vw;
+      margin-left: calc(-50vw + 50%);
       padding: 80px 0 120px;
       background: linear-gradient(180deg, #FAF8F5 0%, #F7F3EE 50%, #FAF8F5 100%);
       overflow: hidden;
@@ -91,47 +94,118 @@
     }
 
     .part1-container {
-      max-width: 100%;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 60px;
+      padding: 0 48px;
       position: relative;
       z-index: 1;
     }
 
-    /* Hero Header */
+    /* Hero Header - Editorial Magazine Style */
     .story-hero {
       text-align: center;
       margin-bottom: 80px;
+      position: relative;
     }
 
-    .story-hero .eyebrow {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--coral);
-      margin-bottom: 16px;
+    /* Radial glow behind header */
+    .story-hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse at center,
+        rgba(212, 165, 116, 0.12) 0%,
+        rgba(212, 165, 116, 0.05) 40%,
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 0;
     }
 
     .story-hero h1 {
       font-family: 'OGG', Georgia, serif;
-      font-size: 3.2rem;
+      font-size: 3.5rem;
       font-weight: 400;
       line-height: 1.15;
       color: var(--text-primary);
+      position: relative;
+      z-index: 1;
     }
 
+    /* Small lead-in text */
     .story-hero h1 .small-line {
       display: block;
-      font-size: 1.5rem;
+      font-family: 'OGG', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      font-style: italic;
       color: var(--text-secondary);
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
     }
 
+    /* Hero moment - 7-Figure with hand-drawn underline */
     .story-hero h1 .emphasis {
       color: var(--coral);
       font-style: italic;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 8px;
+    }
+
+    .story-hero h1 .emphasis::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -5%;
+      width: 110%;
+      height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 15' preserveAspectRatio='none'%3E%3Cpath d='M2 8 Q30 2, 60 9 T120 7 T180 10 Q195 11, 198 8' stroke='%23E07A5F' stroke-width='3' fill='none' stroke-linecap='round' opacity='0.7'/%3E%3C/svg%3E");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    /* Etsy Shop Owner with gold stars */
+    .story-hero h1 .title-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .story-hero h1 .star {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      color: var(--gold);
+      animation: twinkle 2s ease-in-out infinite;
+    }
+
+    .story-hero h1 .star--left {
+      animation-delay: 0s;
+    }
+
+    .story-hero h1 .star--right {
+      animation-delay: 1s;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.4;
+        transform: scale(0.9) rotate(0deg);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.1) rotate(10deg);
+      }
+    }
+
+    .story-hero h1 .title-text {
+      display: inline-block;
     }
 
     /* Two-Column Layout */
@@ -151,7 +225,7 @@
 
     .story-greeting {
       font-family: 'Caveat', cursive;
-      font-size: 1.6rem;
+      font-size: 2rem;
       color: var(--teal);
       margin-bottom: 32px;
     }
@@ -211,7 +285,7 @@
     /* Script Text */
     .script-text {
       font-family: 'Caveat', cursive;
-      font-size: 1.8rem;
+      font-size: 2.2rem;
       color: var(--teal);
       margin: 32px 0;
       line-height: 1.4;
@@ -261,7 +335,7 @@
 
     .polaroid-caption {
       font-family: 'Caveat', cursive;
-      font-size: 1rem;
+      font-size: 1.4rem;
       color: var(--text-secondary);
       text-align: center;
       margin-top: 12px;
@@ -360,9 +434,9 @@
     }
 
     .part2-container {
-      max-width: 100%;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 60px;
+      padding: 0 48px;
       position: relative;
       z-index: 1;
       text-align: center;
@@ -451,7 +525,7 @@
 
     .viral-moment .card-intro {
       font-family: 'Caveat', cursive;
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       color: var(--teal);
       margin-bottom: 8px;
     }
@@ -535,7 +609,7 @@
 
     .big-result .result-label {
       font-family: 'Caveat', cursive;
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       color: var(--gold);
       margin-bottom: 8px;
       position: relative;
@@ -658,11 +732,25 @@
 
     @media (max-width: 600px) {
       .story-hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
       }
 
       .story-hero h1 .small-line {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+      }
+
+      .story-hero h1 .title-line {
+        gap: 10px;
+      }
+
+      .story-hero h1 .star {
+        width: 14px;
+        height: 14px;
+      }
+
+      .story-hero::before {
+        width: 350px;
+        height: 250px;
       }
 
       .pull-quote {
@@ -685,13 +773,13 @@
     }
 
     /* ==========================================
-       STORY CTA - PRICING BLOCK
+       STORY CTA - PREMIUM COMPACT PRICING BLOCK
        ========================================== */
 
     #story-cta {
       width: 100vw;
       margin-left: calc(-50vw + 50%);
-      padding: 88px 24px;
+      padding: 48px 24px 56px;
       background: linear-gradient(180deg,
         #F7F3EE 0%,
         #FAF8F5 50%,
@@ -701,12 +789,36 @@
       overflow: hidden;
     }
 
-    /* Real Watercolor Blobs */
+    /* Real Watercolor Blobs with micro-interaction */
     #story-cta .watercolor-blob {
       position: absolute;
       pointer-events: none;
       z-index: 0;
       opacity: 0.65;
+      transition: transform 8s ease-in-out, opacity 3s ease;
+    }
+
+    #story-cta:hover .watercolor-blob {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    /* Deer Watercolor Art */
+    #story-cta .deer-watercolor {
+      position: absolute;
+      bottom: 20px;
+      left: 5%;
+      width: 180px;
+      height: auto;
+      opacity: 0.5;
+      z-index: 0;
+      pointer-events: none;
+      filter: drop-shadow(0 4px 12px rgba(224, 122, 95, 0.15));
+      animation: deerFloat 12s ease-in-out infinite;
+    }
+
+    @keyframes deerFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(1deg); }
     }
 
     /* Watercolor Blob 1 - Coral (Top Right) */
@@ -741,210 +853,415 @@
     }
 
     #story-cta .cta-container {
-      max-width: 820px;
+      max-width: 720px;
       margin: 0 auto;
       text-align: center;
       position: relative;
       z-index: 1;
     }
 
+    /* Premium headline with decorative flourishes */
+    #story-cta .headline-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    #story-cta .headline-wrapper::before,
+    #story-cta .headline-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 24px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 24'%3E%3Cpath d='M2 12 C8 6, 16 6, 20 12 C24 18, 32 18, 38 12' stroke='%23E07A5F' stroke-width='1.5' fill='none' opacity='0.6'/%3E%3Ccircle cx='20' cy='12' r='2' fill='%23E07A5F' opacity='0.4'/%3E%3C/svg%3E") no-repeat center;
+      transform: translateY(-50%);
+      opacity: 0.7;
+    }
+
+    #story-cta .headline-wrapper::before {
+      left: -56px;
+      transform: translateY(-50%) scaleX(-1);
+    }
+
+    #story-cta .headline-wrapper::after {
+      right: -56px;
+    }
+
     /* Headline */
     #story-cta .cta-headline {
       font-family: 'OGG', Georgia, serif;
-      font-size: 44px;
+      font-size: 38px;
       font-weight: 700;
       line-height: 1.2;
       color: #1F1D1A;
-      margin-bottom: 16px;
+      margin-bottom: 0;
       -webkit-text-stroke: 0.5px currentColor;
+      animation: headlineShine 4s ease-in-out infinite;
+    }
+
+    @keyframes headlineShine {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.92; }
     }
 
     /* Subline */
     #story-cta .cta-subline {
       font-family: 'Satoshi', sans-serif;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 400;
       line-height: 1.6;
       color: #2D2A26;
-      max-width: 580px;
-      margin: 0 auto 40px;
+      max-width: 520px;
+      margin: 0 auto 28px;
     }
 
-    /* Divider */
+    /* Divider with premium detail */
     #story-cta .cta-divider {
-      width: 64px;
-      height: 2px;
+      width: 80px;
+      height: 1px;
       background: linear-gradient(90deg,
         transparent 0%,
-        #E8E2D9 20%,
-        #E8E2D9 80%,
+        #D4CEC4 20%,
+        #E07A5F 50%,
+        #D4CEC4 80%,
         transparent 100%
       );
-      margin: 0 auto 40px;
+      margin: 0 auto 24px;
+      position: relative;
     }
 
-    /* Pricing Stack */
-    #story-cta .pricing-stack {
-      margin-bottom: 48px;
+    #story-cta .cta-divider::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px;
+      height: 6px;
+      background: #E07A5F;
+      border-radius: 50%;
+      opacity: 0.8;
     }
 
-    #story-cta .pricing-label {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #5A544C;
-      margin-bottom: 8px;
+    /* Premium Two-Column Pricing Layout */
+    #story-cta .pricing-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 540px;
+      margin: 0 auto 20px;
+      padding: 24px 28px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 16px;
+      border: 1px solid rgba(228, 222, 214, 0.8);
+      box-shadow:
+        0 2px 8px rgba(45, 42, 38, 0.04),
+        0 4px 16px rgba(45, 42, 38, 0.03),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    #story-cta .pricing-row {
+    #story-cta .pricing-columns:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 4px 12px rgba(45, 42, 38, 0.06),
+        0 8px 24px rgba(45, 42, 38, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    /* Left Column - Dominant */
+    #story-cta .price-left {
+      text-align: center;
+      padding-right: 20px;
+      border-right: 1px solid rgba(228, 222, 214, 0.6);
       display: flex;
-      align-items: baseline;
+      flex-direction: column;
       justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
     }
 
-    #story-cta .price-amount {
+    #story-cta .price-main {
       font-family: 'OGG', Georgia, serif;
-      font-size: 96px;
+      font-size: 52px;
       font-weight: 700;
       line-height: 1;
       color: #1F1D1A;
-      -webkit-text-stroke: 0.75px currentColor;
-      white-space: nowrap;
-    }
-
-    #story-cta .price-discount {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: #E07A5F;
-    }
-
-    #story-cta .price-billing {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 15px;
-      font-weight: 400;
-      color: #5A544C;
+      -webkit-text-stroke: 0.5px currentColor;
       margin-bottom: 4px;
+      letter-spacing: -0.02em;
     }
 
-    #story-cta .price-daily {
-      font-family: 'OGG', Georgia, serif;
-      font-size: 17px;
+    #story-cta .price-today {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #5A544C;
+      margin-bottom: 8px;
+    }
+
+    #story-cta .price-access {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
       font-weight: 500;
-      font-style: italic;
-      color: #2D2A26;
-      margin-bottom: 16px;
+      color: #E07A5F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
 
-    #story-cta .price-urgency {
+    #story-cta .price-access::before {
+      content: '✓';
+      font-size: 12px;
+    }
+
+    /* Right Column - Supporting Stack */
+    #story-cta .price-right {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      padding-left: 4px;
+    }
+
+    #story-cta .price-equiv {
       font-family: 'Satoshi', sans-serif;
       font-size: 16px;
       font-weight: 600;
-      color: #E07A5F;
+      color: #2D2A26;
     }
 
-    /* CTA Button */
+    #story-cta .price-daily {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #5A544C;
+    }
+
+    #story-cta .price-savings {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1D6B6B;
+      background: rgba(29, 107, 107, 0.08);
+      padding: 4px 10px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    /* Tiny billing note */
+    #story-cta .billing-note {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #8A847B;
+      text-align: center;
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+
+    /* Premium Artistic CTA Button */
     #story-cta .cta-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 280px;
-      height: 64px;
-      padding: 0 48px;
-      background: #E07A5F;
+      gap: 10px;
+      min-width: 300px;
+      height: 58px;
+      padding: 0 40px;
+      background: linear-gradient(135deg, #E07A5F 0%, #D4694E 50%, #C25E45 100%);
       color: #FFFFFF;
       font-family: 'Satoshi', sans-serif;
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 700;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       text-decoration: none;
       border: none;
       border-radius: 12px;
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
       box-shadow:
         0 2px 4px rgba(224, 122, 95, 0.2),
-        0 8px 24px rgba(224, 122, 95, 0.25);
+        0 8px 20px rgba(224, 122, 95, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
       transition:
         transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-        background 0.3s ease;
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Premium shimmer effect */
+    #story-cta .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+      );
+      transition: left 0.6s ease;
+    }
+
+    #story-cta .cta-button:hover::before {
+      left: 100%;
+    }
+
+    /* Watercolor accent on button */
+    #story-cta .cta-button::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+      border-radius: 50%;
+      opacity: 0.8;
     }
 
     #story-cta .cta-button:hover {
-      transform: translateY(-3px);
-      background: #D4694E;
+      transform: translateY(-3px) scale(1.02);
       box-shadow:
-        0 4px 8px rgba(224, 122, 95, 0.25),
-        0 16px 40px rgba(224, 122, 95, 0.3);
+        0 4px 8px rgba(224, 122, 95, 0.3),
+        0 16px 36px rgba(224, 122, 95, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
     }
 
     #story-cta .cta-button:active {
-      transform: translateY(-1px);
+      transform: translateY(-1px) scale(1.01);
     }
 
-    /* Trust Microcopy */
+    /* Button icon/arrow */
+    #story-cta .cta-button .btn-arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    #story-cta .cta-button:hover .btn-arrow {
+      transform: translateX(4px);
+    }
+
+    /* Credit Card Trust Image */
+    #story-cta .payment-cards {
+      display: block;
+      max-width: 260px;
+      height: auto;
+      margin: 14px auto 0;
+      opacity: 0.85;
+      transition: opacity 0.3s ease;
+    }
+
+    #story-cta .payment-cards:hover {
+      opacity: 1;
+    }
+
+    /* Trust Microcopy - Compact */
     #story-cta .trust-row {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 24px;
-      margin-top: 20px;
+      gap: 14px;
+      margin-top: 12px;
       flex-wrap: wrap;
     }
 
     #story-cta .trust-item {
       font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 500;
       color: #5A544C;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Lock icon for secure */
+    #story-cta .trust-item.secure::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A544C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2' ry='2'/%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'/%3E%3C/svg%3E") no-repeat center;
+      background-size: contain;
     }
 
     #story-cta .trust-dot {
-      width: 4px;
-      height: 4px;
-      background: #D4CEC4;
+      width: 3px;
+      height: 3px;
+      background: #C5BDB2;
       border-radius: 50%;
     }
 
     /* Story CTA Responsive */
     @media (max-width: 768px) {
       #story-cta {
-        padding: 64px 20px;
+        padding: 40px 20px 48px;
+      }
+
+      #story-cta .headline-wrapper::before,
+      #story-cta .headline-wrapper::after {
+        display: none;
       }
 
       #story-cta .cta-headline {
-        font-size: 32px;
+        font-size: 30px;
       }
 
       #story-cta .cta-subline {
-        font-size: 17px;
-        margin-bottom: 32px;
+        font-size: 16px;
+        margin-bottom: 24px;
       }
 
       #story-cta .cta-divider {
-        margin-bottom: 32px;
+        margin-bottom: 20px;
       }
 
-      #story-cta .price-amount {
-        font-size: 72px;
+      #story-cta .pricing-columns {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 20px 24px;
       }
 
-      #story-cta .pricing-row {
-        gap: 12px;
+      #story-cta .price-left {
+        padding-right: 0;
+        border-right: none;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(228, 222, 214, 0.6);
       }
 
-      #story-cta .price-discount {
-        font-size: 16px;
+      #story-cta .price-main {
+        font-size: 44px;
+      }
+
+      #story-cta .price-right {
+        padding-left: 0;
+        text-align: center;
+        align-items: center;
       }
 
       #story-cta .cta-button {
         width: 100%;
         max-width: 320px;
+        min-width: auto;
+      }
+
+      #story-cta .deer-watercolor {
+        width: 140px;
+        left: -20px;
+        bottom: 10px;
+        opacity: 0.35;
       }
     }
 
@@ -954,43 +1271,55 @@
       }
 
       #story-cta .trust-row {
-        gap: 16px;
+        gap: 12px;
+        flex-direction: column;
       }
 
       /* Hide side blob on small screens */
       #story-cta .blob-3 {
         display: none;
       }
+
+      #story-cta .payment-cards {
+        max-width: 220px;
+      }
     }
 
     @media (max-width: 480px) {
+      #story-cta {
+        padding: 36px 16px 44px;
+      }
+
       #story-cta .cta-headline {
-        font-size: 28px;
+        font-size: 26px;
       }
 
-      #story-cta .price-amount {
-        font-size: 64px;
+      #story-cta .price-main {
+        font-size: 40px;
       }
 
-      #story-cta .pricing-row {
-        flex-direction: column;
-        gap: 4px;
-        align-items: center;
+      #story-cta .pricing-columns {
+        padding: 16px 20px;
+        margin-bottom: 16px;
       }
 
       /* Scale down watercolor blobs */
       #story-cta .blob-1 {
-        width: 180px;
-        height: 140px;
+        width: 160px;
+        height: 120px;
         top: -20px;
         right: -40px;
       }
 
       #story-cta .blob-2 {
-        width: 160px;
-        height: 130px;
+        width: 140px;
+        height: 110px;
         bottom: -20px;
         left: -40px;
+      }
+
+      #story-cta .deer-watercolor {
+        display: none;
       }
     }
   </style>
@@ -1003,12 +1332,20 @@
   <section class="story-part1-section">
     <div class="part1-container">
 
-      <!-- Hero Header -->
+      <!-- Hero Header - Editorial Magazine Style -->
       <header class="story-hero">
         <h1>
           <span class="small-line">From Stay-at-Home Mom to</span>
-          <span class="emphasis">7-Figure</span><br>
-          Etsy Shop Owner
+          <span class="emphasis">7-Figure</span>
+          <span class="title-line">
+            <svg class="star star--left" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+            </svg>
+            <span class="title-text">Etsy Shop Owner</span>
+            <svg class="star star--right" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
+            </svg>
+          </span>
         </h1>
       </header>
 
@@ -1186,34 +1523,57 @@
     </div>
   </section>
 
-  <!-- Story CTA Section -->
+  <!-- Story CTA Section - Premium Compact -->
   <section id="story-cta">
+    <!-- Watercolor decorations -->
     <div class="watercolor-blob blob-1"></div>
     <div class="watercolor-blob blob-2"></div>
     <div class="watercolor-blob blob-3"></div>
 
+    <!-- Deer watercolor art -->
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 240'%3E%3Cdefs%3E%3Cfilter id='watercolorDeer' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.03' numOctaves='4' seed='5' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='8' xChannelSelector='R' yChannelSelector='G'/%3E%3CfeGaussianBlur stdDeviation='1'/%3E%3C/filter%3E%3ClinearGradient id='deerGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23D4A574;stop-opacity:0.7'/%3E%3Cstop offset='50%25' style='stop-color:%23E07A5F;stop-opacity:0.5'/%3E%3Cstop offset='100%25' style='stop-color:%23C5937A;stop-opacity:0.4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg filter='url(%23watercolorDeer)'%3E%3Cellipse cx='100' cy='180' rx='35' ry='50' fill='url(%23deerGrad)'/%3E%3Cellipse cx='100' cy='120' rx='25' ry='30' fill='url(%23deerGrad)'/%3E%3Cellipse cx='100' cy='85' rx='18' ry='22' fill='url(%23deerGrad)'/%3E%3Cpath d='M85 70 Q75 50 70 30 Q72 35 80 45 Q78 40 75 25 Q78 32 85 42' fill='url(%23deerGrad)'/%3E%3Cpath d='M115 70 Q125 50 130 30 Q128 35 120 45 Q122 40 125 25 Q122 32 115 42' fill='url(%23deerGrad)'/%3E%3Cellipse cx='80' cy='200' rx='8' ry='35' fill='url(%23deerGrad)'/%3E%3Cellipse cx='120' cy='200' rx='8' ry='35' fill='url(%23deerGrad)'/%3E%3Cellipse cx='90' cy='205' rx='7' ry='30' fill='url(%23deerGrad)'/%3E%3Cellipse cx='110' cy='205' rx='7' ry='30' fill='url(%23deerGrad)'/%3E%3C/g%3E%3C/svg%3E" alt="" class="deer-watercolor" aria-hidden="true">
+
     <div class="cta-container">
-      <h2 class="cta-headline">Ready to build your shop<br>the way I actually run mine?</h2>
+      <!-- Premium headline with decorative wrapper -->
+      <div class="headline-wrapper">
+        <h2 class="cta-headline">Ready to build your shop<br>the way I actually run mine?</h2>
+      </div>
       <p class="cta-subline">Click below to join. You will see exactly what to make, how to list it, and what to do next.</p>
 
       <div class="cta-divider"></div>
 
-      <div class="pricing-stack">
-        <div class="pricing-label">Join For</div>
-        <div class="pricing-row">
-          <span class="price-amount">$27</span>
-          <span class="price-period">/mo</span>
-          <span class="price-discount">($477 discount)</span>
+      <!-- Two-column pricing layout -->
+      <div class="pricing-columns">
+        <!-- Left column - dominant -->
+        <div class="price-left">
+          <div class="price-today">Today</div>
+          <div class="price-main">$324</div>
+          <div class="price-access">12 months access</div>
         </div>
-        <div class="price-billing">(billed annually)</div>
-        <div class="price-daily">just $0.90/day</div>
-        <div class="price-urgency">Prices raising soon to $67/mo</div>
+
+        <!-- Right column - supporting stack -->
+        <div class="price-right">
+          <div class="price-equiv">$27/mo equivalent</div>
+          <div class="price-daily">~$0.90/day</div>
+          <div class="price-savings">Save $480 vs $67/mo</div>
+        </div>
       </div>
 
-      <a href="#checkout" class="cta-button">Get Instant Access</a>
+      <!-- Billing note -->
+      <div class="billing-note">Billed annually. Renews yearly. Cancel before renewal.</div>
 
+      <!-- Premium CTA Button -->
+      <a href="#checkout" class="cta-button">
+        Get Instant Access
+        <span class="btn-arrow">→</span>
+      </a>
+
+      <!-- Payment cards image -->
+      <img src="https://i.imgur.com/881hYo3.png" alt="Secure payment methods" class="payment-cards">
+
+      <!-- Trust row with lock icon -->
       <div class="trust-row">
-        <span class="trust-item">Secure checkout</span>
+        <span class="trust-item secure">Secure checkout</span>
         <span class="trust-dot"></span>
         <span class="trust-item">Instant access</span>
         <span class="trust-dot"></span>
