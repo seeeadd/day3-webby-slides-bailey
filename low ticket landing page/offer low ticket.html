@@ -373,101 +373,189 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       CARD VISUALS - UNIQUE ILLUSTRATIONS
+       CARD VISUALS - DEVICE MOCKUPS
        ═══════════════════════════════════════════════════════════════════════════ */
-    
-    /* Card 1: Bailey's Daily Drop - Calendar with sunrise motif */
+
+    /* Card 1: Bailey's Daily Drop - Phone with notification */
     .visual-daily-drop {
       background: linear-gradient(135deg, #FFF6F2 0%, #FEF0E8 100%);
+      padding: 20px;
     }
 
-    .visual-daily-drop .icon-container {
+    .visual-daily-drop .phone-mockup {
       position: relative;
-      width: 72px;
-      height: 72px;
+      width: 100px;
+      height: 140px;
+      background: #2D2A26;
+      border-radius: 16px;
+      padding: 8px;
+      box-shadow:
+        0 8px 24px rgba(45, 42, 38, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
-    .visual-daily-drop .calendar-base {
-      width: 64px;
-      height: 64px;
+    .visual-daily-drop .phone-screen {
+      width: 100%;
+      height: 100%;
+      background: #FAF8F5;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .visual-daily-drop .notif-card {
+      margin: 8px;
       background: white;
       border-radius: 10px;
-      border: 2px solid var(--coral);
-      position: relative;
-      box-shadow: 0 4px 12px rgba(224, 122, 95, 0.2);
+      padding: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
-    .visual-daily-drop .calendar-header {
-      height: 18px;
-      background: var(--coral);
-      border-radius: 8px 8px 0 0;
+    .visual-daily-drop .notif-header {
       display: flex;
-      justify-content: space-around;
       align-items: center;
-      padding: 0 8px;
+      gap: 6px;
+      margin-bottom: 6px;
     }
 
-    .visual-daily-drop .calendar-dot {
-      width: 4px;
-      height: 4px;
-      background: white;
-      border-radius: 50%;
-    }
-
-    .visual-daily-drop .calendar-body {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 3px;
-      padding: 8px 6px;
-    }
-
-    .visual-daily-drop .calendar-day {
-      width: 8px;
-      height: 8px;
-      background: #FAE7E0;
-      border-radius: 2px;
-    }
-
-    .visual-daily-drop .calendar-day.active {
+    .visual-daily-drop .notif-icon {
+      width: 20px;
+      height: 20px;
       background: var(--coral);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .visual-daily-drop .notif-title {
+      font-size: 8px;
+      font-weight: 700;
+      color: #2D2A26;
     }
 
     .visual-daily-drop .fresh-badge {
-      position: absolute;
-      top: -8px;
-      right: -8px;
-      background: var(--teal);
+      background: var(--coral);
       color: white;
-      font-size: 9px;
+      font-size: 6px;
       font-weight: 700;
-      padding: 4px 8px;
-      border-radius: 10px;
+      padding: 2px 5px;
+      border-radius: 8px;
+      margin-left: auto;
+    }
+
+    .visual-daily-drop .notif-content {
+      font-size: 7px;
+      color: #6B6660;
+      line-height: 1.4;
+    }
+
+    .visual-daily-drop .notif-trending {
+      font-weight: 600;
+      color: #2D2A26;
+    }
+
+    /* Card 2: 3 Paths to $5K - Tabbed interface */
+    .visual-three-paths {
+      background: linear-gradient(135deg, #F0F7F7 0%, #E8F2F2 100%);
+      padding: 20px;
+    }
+
+    .visual-three-paths .paths-card {
+      background: white;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 4px 16px rgba(29, 107, 107, 0.15);
+      width: 130px;
+    }
+
+    .visual-three-paths .paths-tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .visual-three-paths .paths-tab {
+      flex: 1;
+      padding: 4px 2px;
+      font-size: 6px;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 4px;
+      background: #E8F2F2;
+      color: var(--teal);
+    }
+
+    .visual-three-paths .paths-tab.active {
+      background: var(--coral);
+      color: white;
+    }
+
+    .visual-three-paths .paths-goal {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .visual-three-paths .paths-amount {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--teal);
+    }
+
+    .visual-three-paths .paths-label {
+      font-size: 8px;
+      color: #6B6660;
+    }
+
+    /* Card 3: $10K Blueprint - Monitor with revenue */
+    .visual-blueprint {
+      background: linear-gradient(135deg, #FFF8F5 0%, #FFF3ED 100%);
+      padding: 20px;
+    }
+
+    .visual-blueprint .monitor {
+      position: relative;
+      width: 120px;
+    }
+
+    .visual-blueprint .monitor-screen {
+      background: #2D2A26;
+      border-radius: 8px 8px 0 0;
+      padding: 6px;
+      box-shadow: 0 4px 16px rgba(45, 42, 38, 0.2);
+    }
+
+    .visual-blueprint .monitor-content {
+      background: #FAF8F5;
+      border-radius: 4px;
+      padding: 10px;
+    }
+
+    .visual-blueprint .monitor-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .visual-blueprint .monitor-label {
+      font-size: 6px;
+      font-weight: 700;
+      color: #8A847C;
+      text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
-    /* Card 2: 3 Paths to $5K - Three diverging paths */
-    .visual-three-paths {
-      background: linear-gradient(135deg, #F0F7F7 0%, #E8F2F2 100%);
-    }
-
-    .visual-three-paths svg {
-      width: 100px;
-      height: 80px;
-    }
-
-    /* Card 3: $10K Blueprint - Dashboard/receipt visual */
-    .visual-blueprint {
-      background: linear-gradient(135deg, #FFF8F5 0%, #FFF3ED 100%);
-    }
-
-    .visual-blueprint .dashboard {
-      width: 80px;
-      height: 60px;
-      background: white;
-      border-radius: 8px;
-      border: 2px solid var(--coral);
-      padding: 8px;
-      box-shadow: 0 4px 12px rgba(224, 122, 95, 0.15);
+    .visual-blueprint .monitor-revenue {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--teal);
     }
 
     .visual-blueprint .chart-bar {
@@ -499,139 +587,199 @@
       width: 60%;
     }
 
-    /* Card 4: Ask Bailey - Video call frame */
+    /* Card 4: Ask Bailey - Phone with Live session */
     .visual-ask-bailey {
       background: linear-gradient(135deg, #F5F0F7 0%, #EDE6F2 100%);
+      padding: 20px;
     }
 
-    .visual-ask-bailey .video-frame {
-      width: 80px;
-      height: 56px;
-      background: white;
-      border-radius: 8px;
-      border: 2px solid var(--teal);
+    .visual-ask-bailey .phone-mockup {
       position: relative;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(29, 107, 107, 0.15);
+      width: 100px;
+      height: 140px;
+      background: #2D2A26;
+      border-radius: 16px;
+      padding: 8px;
+      box-shadow: 0 8px 24px rgba(45, 42, 38, 0.25);
     }
 
-    .visual-ask-bailey .video-header {
-      height: 12px;
+    .visual-ask-bailey .phone-screen {
+      width: 100%;
+      height: 100%;
       background: var(--teal);
+      border-radius: 10px;
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding-right: 6px;
-      gap: 3px;
-    }
-
-    .visual-ask-bailey .video-dot {
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-    }
-
-    .visual-ask-bailey .video-dot.red { background: #E07A5F; }
-    .visual-ask-bailey .video-dot.yellow { background: #F4D35E; }
-    .visual-ask-bailey .video-dot.green { background: #4A9F6E; }
-
-    .visual-ask-bailey .video-content {
-      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: calc(100% - 12px);
+      gap: 8px;
+    }
+
+    .visual-ask-bailey .live-header {
+      font-size: 7px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
     }
 
     .visual-ask-bailey .avatar-circle {
-      width: 28px;
-      height: 28px;
+      width: 40px;
+      height: 40px;
       background: linear-gradient(135deg, var(--coral) 0%, var(--coral-hover) 100%);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .visual-ask-bailey .avatar-circle span {
       color: white;
       font-weight: 700;
-      font-size: 11px;
+      font-size: 16px;
     }
 
     .visual-ask-bailey .live-badge {
-      position: absolute;
-      bottom: 4px;
-      right: 4px;
       background: #E07A5F;
       color: white;
-      font-size: 8px;
+      font-size: 7px;
       font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 4px;
+      padding: 3px 8px;
+      border-radius: 10px;
       letter-spacing: 0.05em;
     }
 
-    /* Card 5: Steal My Bestsellers - File folder opening */
+    .visual-ask-bailey .watching-count {
+      font-size: 7px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* Card 5: Steal My Bestsellers - Template grid */
     .visual-bestsellers {
       background: linear-gradient(135deg, #FFF6F2 0%, #FEF0E8 100%);
+      padding: 20px;
     }
 
-    .visual-bestsellers .folder-stack {
-      position: relative;
-      width: 80px;
-      height: 60px;
-    }
-
-    .visual-bestsellers .folder {
-      position: absolute;
-      width: 70px;
-      height: 50px;
-      border-radius: 4px 12px 4px 4px;
-      box-shadow: 0 2px 8px rgba(45, 42, 38, 0.1);
-    }
-
-    .visual-bestsellers .folder-back {
-      background: #F5C4B5;
-      left: 0;
-      bottom: 0;
-      transform: rotate(-3deg);
-    }
-
-    .visual-bestsellers .folder-middle {
-      background: #FAD5C8;
-      left: 5px;
-      bottom: 3px;
-    }
-
-    .visual-bestsellers .folder-front {
+    .visual-bestsellers .templates-card {
       background: white;
-      border: 2px solid var(--coral);
-      left: 10px;
-      bottom: 6px;
-      transform: rotate(2deg);
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 4px 16px rgba(224, 122, 95, 0.15);
+      width: 120px;
+    }
+
+    .visual-bestsellers .templates-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .visual-bestsellers .templates-icon {
+      width: 16px;
+      height: 16px;
+      background: var(--teal);
+      border-radius: 4px;
+    }
+
+    .visual-bestsellers .templates-title {
+      font-size: 8px;
+      font-weight: 600;
+      color: #2D2A26;
+    }
+
+    .visual-bestsellers .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+    }
+
+    .visual-bestsellers .template-item {
+      aspect-ratio: 1;
+      border-radius: 6px;
+      background: #FAF8F5;
+      border: 1px solid #E8E2D9;
+    }
+
+    .visual-bestsellers .template-item.coral {
+      background: #FAE7E0;
+      border-color: var(--coral);
+    }
+
+    .visual-bestsellers .template-item.teal {
+      background: #E8F2F2;
+      border-color: var(--teal);
     }
 
     .visual-bestsellers .top-badge {
       position: absolute;
-      top: -5px;
-      right: 0;
+      bottom: 10px;
+      right: 10px;
       background: var(--coral);
       color: white;
-      font-size: 8px;
+      font-size: 6px;
       font-weight: 700;
       padding: 3px 6px;
       border-radius: 8px;
       letter-spacing: 0.05em;
     }
 
-    /* Card 6: My Traffic Loop - Circular flow */
+    /* Card 6: My Traffic Loop - Dashboard stats */
     .visual-traffic-loop {
       background: linear-gradient(135deg, #F0F7F7 0%, #E8F2F2 100%);
+      padding: 20px;
     }
 
-    .visual-traffic-loop svg {
-      width: 90px;
-      height: 80px;
+    .visual-traffic-loop .stats-container {
+      display: flex;
+      gap: 8px;
+    }
+
+    .visual-traffic-loop .stat-card {
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(29, 107, 107, 0.1);
+      width: 60px;
+    }
+
+    .visual-traffic-loop .stat-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .visual-traffic-loop .stat-icon.pinterest {
+      background: #E07A5F;
+    }
+
+    .visual-traffic-loop .stat-icon.email {
+      background: var(--teal);
+    }
+
+    .visual-traffic-loop .stat-label {
+      font-size: 7px;
+      font-weight: 600;
+      color: #8A847C;
+      margin-bottom: 2px;
+    }
+
+    .visual-traffic-loop .stat-value {
+      font-size: 12px;
+      font-weight: 700;
+      color: #2D2A26;
+    }
+
+    .visual-traffic-loop .stat-change {
+      font-size: 8px;
+      font-weight: 600;
+      color: #4A9F6E;
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
@@ -1181,25 +1329,20 @@
         <!-- Card 1: Bailey's Daily Drop -->
         <article class="feature-card">
           <div class="card-visual visual-daily-drop">
-            <div class="icon-container">
-              <div class="calendar-base">
-                <div class="calendar-header">
-                  <span class="calendar-dot"></span>
-                  <span class="calendar-dot"></span>
-                  <span class="calendar-dot"></span>
-                </div>
-                <div class="calendar-body">
-                  <span class="calendar-day"></span>
-                  <span class="calendar-day"></span>
-                  <span class="calendar-day active"></span>
-                  <span class="calendar-day"></span>
-                  <span class="calendar-day"></span>
-                  <span class="calendar-day"></span>
-                  <span class="calendar-day"></span>
-                  <span class="calendar-day"></span>
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="notif-card">
+                  <div class="notif-header">
+                    <div class="notif-icon">B</div>
+                    <span class="notif-title">Bailey's<br>Daily Drop</span>
+                    <span class="fresh-badge">FRESH</span>
+                  </div>
+                  <div class="notif-content">
+                    <div class="notif-trending">Trending:</div>
+                    Meal Planner
+                  </div>
                 </div>
               </div>
-              <span class="fresh-badge">FRESH</span>
             </div>
           </div>
           <span class="card-label">Daily</span>
@@ -1214,22 +1357,17 @@
         <!-- Card 2: The 3 Paths I'd Take to $5K -->
         <article class="feature-card">
           <div class="card-visual visual-three-paths">
-            <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Three diverging paths -->
-              <path d="M50 75 L50 50 L25 20" stroke="#1D6B6B" stroke-width="3" stroke-linecap="round" fill="none"/>
-              <path d="M50 75 L50 50 L50 15" stroke="#E07A5F" stroke-width="3" stroke-linecap="round" fill="none"/>
-              <path d="M50 75 L50 50 L75 20" stroke="#1D6B6B" stroke-width="3" stroke-linecap="round" fill="none"/>
-              <!-- Path endpoints -->
-              <circle cx="25" cy="16" r="8" fill="#E8F2F2" stroke="#1D6B6B" stroke-width="2"/>
-              <circle cx="50" cy="11" r="8" fill="#FEF0E8" stroke="#E07A5F" stroke-width="2"/>
-              <circle cx="75" cy="16" r="8" fill="#E8F2F2" stroke="#1D6B6B" stroke-width="2"/>
-              <!-- Dollar signs -->
-              <text x="25" y="20" text-anchor="middle" font-family="Satoshi" font-size="10" font-weight="700" fill="#1D6B6B">$</text>
-              <text x="50" y="15" text-anchor="middle" font-family="Satoshi" font-size="10" font-weight="700" fill="#E07A5F">$</text>
-              <text x="75" y="20" text-anchor="middle" font-family="Satoshi" font-size="10" font-weight="700" fill="#1D6B6B">$</text>
-              <!-- Start point -->
-              <circle cx="50" cy="75" r="5" fill="#1D6B6B"/>
-            </svg>
+            <div class="paths-card">
+              <div class="paths-tabs">
+                <span class="paths-tab">AUDIENCE</span>
+                <span class="paths-tab active">BUNDLE</span>
+                <span class="paths-tab">SOCIAL</span>
+              </div>
+              <div class="paths-goal">
+                <div class="paths-amount">$5K</div>
+                <div class="paths-label">monthly goal</div>
+              </div>
+            </div>
           </div>
           <span class="card-label">Paths</span>
           <h3 class="card-title">The 3 Paths I'd Take to $5K</h3>
@@ -1243,15 +1381,22 @@
         <!-- Card 3: My $10K Month Blueprint -->
         <article class="feature-card">
           <div class="card-visual visual-blueprint">
-            <div class="dashboard">
-              <div class="chart-bar">
-                <span class="bar bar-1"></span>
-                <span class="bar bar-2"></span>
-                <span class="bar bar-3"></span>
-                <span class="bar bar-4"></span>
+            <div class="monitor">
+              <div class="monitor-screen">
+                <div class="monitor-content">
+                  <div class="monitor-header">
+                    <span class="monitor-label">Revenue</span>
+                  </div>
+                  <div class="monitor-revenue">$10,847</div>
+                  <div class="chart-bar">
+                    <span class="bar bar-1"></span>
+                    <span class="bar bar-2"></span>
+                    <span class="bar bar-3"></span>
+                    <span class="bar bar-4"></span>
+                  </div>
+                </div>
               </div>
-              <div class="receipt-line"></div>
-              <div class="receipt-line short"></div>
+              <div class="monitor-stand" style="width: 40px; height: 8px; background: #2D2A26; margin: 0 auto; border-radius: 0 0 4px 4px;"></div>
             </div>
           </div>
           <span class="card-label">Blueprint</span>
@@ -1266,16 +1411,13 @@
         <!-- Card 4: Ask Bailey (Twice a Month) -->
         <article class="feature-card">
           <div class="card-visual visual-ask-bailey">
-            <div class="video-frame">
-              <div class="video-header">
-                <span class="video-dot red"></span>
-                <span class="video-dot yellow"></span>
-                <span class="video-dot green"></span>
-              </div>
-              <div class="video-content">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <span class="live-header">Live Session</span>
                 <div class="avatar-circle"><span>B</span></div>
+                <span class="live-badge">LIVE</span>
+                <span class="watching-count">47 watching</span>
               </div>
-              <span class="live-badge">LIVE</span>
             </div>
           </div>
           <span class="card-label">Live</span>
@@ -1290,12 +1432,19 @@
         <!-- Card 5: Steal My Bestsellers -->
         <article class="feature-card">
           <div class="card-visual visual-bestsellers">
-            <div class="folder-stack">
-              <div class="folder folder-back"></div>
-              <div class="folder folder-middle"></div>
-              <div class="folder folder-front"></div>
-              <span class="top-badge">TOP SELLER</span>
+            <div class="templates-card">
+              <div class="templates-header">
+                <div class="templates-icon"></div>
+                <span class="templates-title">My Templates</span>
+              </div>
+              <div class="templates-grid">
+                <div class="template-item coral"></div>
+                <div class="template-item teal"></div>
+                <div class="template-item"></div>
+                <div class="template-item coral"></div>
+              </div>
             </div>
+            <span class="top-badge">TOP SELLER</span>
           </div>
           <span class="card-label">Tutorials</span>
           <h3 class="card-title">Steal My Bestsellers</h3>
@@ -1309,19 +1458,20 @@
         <!-- Card 6: My Traffic Loop -->
         <article class="feature-card">
           <div class="card-visual visual-traffic-loop">
-            <svg viewBox="0 0 90 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Infinity loop / cycle -->
-              <ellipse cx="30" cy="40" rx="22" ry="18" stroke="#1D6B6B" stroke-width="3" fill="none"/>
-              <ellipse cx="60" cy="40" rx="22" ry="18" stroke="#E07A5F" stroke-width="3" fill="none"/>
-              <!-- Arrow heads -->
-              <path d="M20 26 L26 22 L24 30" fill="#1D6B6B"/>
-              <path d="M70 54 L64 58 L66 50" fill="#E07A5F"/>
-              <!-- Icons -->
-              <rect x="22" y="34" width="16" height="12" rx="2" fill="#E8F2F2" stroke="#1D6B6B" stroke-width="1.5"/>
-              <text x="30" y="43" text-anchor="middle" font-size="7" fill="#1D6B6B">P</text>
-              <rect x="52" y="34" width="16" height="12" rx="2" fill="#FEF0E8" stroke="#E07A5F" stroke-width="1.5"/>
-              <text x="60" y="43" text-anchor="middle" font-size="7" fill="#E07A5F">@</text>
-            </svg>
+            <div class="stats-container">
+              <div class="stat-card">
+                <div class="stat-icon pinterest">P</div>
+                <div class="stat-label">Pinterest</div>
+                <div class="stat-value">+847%</div>
+                <div class="stat-change">Impressions</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon email">@</div>
+                <div class="stat-label">Email</div>
+                <div class="stat-value">42%</div>
+                <div class="stat-change">Open Rate</div>
+              </div>
+            </div>
           </div>
           <span class="card-label">Traffic</span>
           <h3 class="card-title">My Traffic Loop</h3>
