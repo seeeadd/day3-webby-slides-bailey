@@ -240,8 +240,8 @@
       position: relative;
     }
 
-            /* ═══════════════════════════════════════════════════════════════════════════
-       DEVICE MOCKUPS - Clean SVG-based Graphics
+                /* ═══════════════════════════════════════════════════════════════════════════
+       DEVICE MOCKUPS - Clean Abstract Graphics
        ═══════════════════════════════════════════════════════════════════════════ */
 
     .card-visual-area {
@@ -253,40 +253,568 @@
       padding: 16px;
     }
 
-    /* Card 1: iPhone Mockup */
-    .mockup-phone-svg {
-      width: 130px;
+    /* ===================== PHONE MOCKUP ===================== */
+    .mockup-phone {
+      width: 100px;
       height: 140px;
+      background: linear-gradient(180deg, #1F1D1A 0%, #0D0C0B 100%);
+      border-radius: 20px;
+      padding: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2), 0 16px 48px rgba(0,0,0,0.15);
+      position: relative;
     }
 
-    /* Card 2: Tablet Mockup */
-    .mockup-tablet-svg {
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #FAF8F5 0%, #F5F2EE 100%);
+      border-radius: 14px;
+      padding: 24px 8px 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Dynamic island */
+    .mockup-phone::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 12px;
+      background: #000;
+      border-radius: 10px;
+      z-index: 10;
+    }
+
+    .phone-notif {
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .notif-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .notif-avatar {
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(135deg, #E07A5F 0%, #C96B52 100%);
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .notif-lines {
+      flex: 1;
+    }
+
+    .notif-line {
+      height: 6px;
+      background: #E5E2DD;
+      border-radius: 3px;
+      margin-bottom: 4px;
+    }
+
+    .notif-line:last-child {
+      width: 60%;
+      margin-bottom: 0;
+    }
+
+    .notif-preview {
+      display: flex;
+      gap: 8px;
+    }
+
+    .preview-thumb {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #E8F2F2 0%, #D4E8E8 100%);
+      border-radius: 6px;
+    }
+
+    .preview-lines {
+      flex: 1;
+      padding-top: 4px;
+    }
+
+    .phone-badge {
+      position: absolute;
+      top: 28px;
+      right: 12px;
+      width: 28px;
+      height: 12px;
+      background: #E07A5F;
+      border-radius: 4px;
+    }
+
+    /* ===================== TABLET MOCKUP ===================== */
+    .mockup-tablet {
+      width: 160px;
+      height: 120px;
+      background: linear-gradient(180deg, #E8E5E0 0%, #D5D2CD 100%);
+      border-radius: 14px;
+      padding: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .tablet-screen {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #FAF8F5 0%, #F5F2EE 100%);
+      border-radius: 6px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .path-row {
+      display: flex;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .path-box {
+      flex: 1;
+      background: #F0EDEA;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .path-box.active {
+      background: #E8F2F2;
+      border-color: #1D6B6B;
+    }
+
+    .path-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #D5D2CD;
+    }
+
+    .path-box.active .path-icon {
+      background: #1D6B6B;
+    }
+
+    .path-label {
+      width: 24px;
+      height: 4px;
+      background: #C5C2BD;
+      border-radius: 2px;
+    }
+
+    .progress-row {
+      height: 20px;
+      background: #F0EDEA;
+      border-radius: 10px;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .progress-fill {
+      flex: 1;
+      height: 100%;
+      background: linear-gradient(90deg, #1D6B6B 0%, #2A8585 100%);
+      border-radius: 6px;
+      max-width: 75%;
+    }
+
+    .progress-end {
+      width: 24px;
+      height: 12px;
+      background: #1D6B6B;
+      border-radius: 6px;
+    }
+
+    /* ===================== IMAC MOCKUP ===================== */
+    .mockup-imac {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .imac-body {
+      width: 140px;
+      height: 90px;
+      background: linear-gradient(180deg, #2D2A26 0%, #1F1D1A 100%);
+      border-radius: 8px 8px 0 0;
+      padding: 6px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    .imac-screen {
+      width: 100%;
+      height: 100%;
+      background: #0D0C0B;
+      border-radius: 4px;
+      padding: 6px;
+    }
+
+    .imac-dashboard {
+      width: 100%;
+      height: 100%;
+      background: #FAF8F5;
+      border-radius: 3px;
+      padding: 8px;
+    }
+
+    .dash-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #E5E2DD;
+    }
+
+    .dash-label {
+      width: 30px;
+      height: 6px;
+      background: #D5D2CD;
+      border-radius: 3px;
+    }
+
+    .dash-amount {
+      width: 50px;
+      height: 12px;
+      background: #1D6B6B;
+      border-radius: 4px;
+    }
+
+    .dash-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      height: 36px;
+    }
+
+    .chart-bar {
+      flex: 1;
+      background: #E5E2DD;
+      border-radius: 2px;
+    }
+
+    .chart-bar.highlight {
+      background: linear-gradient(180deg, #1D6B6B 0%, #165555 100%);
+    }
+
+    .imac-chin {
+      width: 140px;
+      height: 8px;
+      background: linear-gradient(180deg, #D5D2CD 0%, #C5C2BD 100%);
+    }
+
+    .imac-stand {
+      width: 50px;
+      height: 30px;
+      background: linear-gradient(180deg, #D5D2CD 0%, #C5C2BD 100%);
+      clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
+    }
+
+    .imac-base {
+      width: 70px;
+      height: 6px;
+      background: #C5C2BD;
+      border-radius: 0 0 3px 3px;
+    }
+
+    /* ===================== LAPTOP MOCKUP ===================== */
+    .mockup-laptop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .laptop-lid {
+      width: 160px;
+      height: 95px;
+      background: linear-gradient(180deg, #2D2A26 0%, #1F1D1A 100%);
+      border-radius: 8px 8px 0 0;
+      padding: 6px 6px 0;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.1);
+    }
+
+    .laptop-screen {
+      width: 100%;
+      height: 100%;
+      background: #18171A;
+      border-radius: 4px 4px 0 0;
+      padding: 8px;
+    }
+
+    .zoom-ui {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .zoom-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .zoom-title {
+      width: 50px;
+      height: 8px;
+      background: #3D3D40;
+      border-radius: 4px;
+    }
+
+    .zoom-count {
+      width: 36px;
+      height: 10px;
+      background: #2D2D30;
+      border-radius: 4px;
+    }
+
+    .zoom-video {
+      flex: 1;
+      background: #2D2D30;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-avatar {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #E07A5F 0%, #C96B52 100%);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .live-dot {
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 8px;
+      background: rgba(255, 68, 68, 0.3);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .live-dot::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: #FF4444;
+      border-radius: 50%;
+    }
+
+    .zoom-chat {
+      height: 12px;
+      background: #2D2D30;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      padding: 0 6px;
+      gap: 4px;
+    }
+
+    .chat-dot {
+      width: 4px;
+      height: 4px;
+      background: #1D6B6B;
+      border-radius: 50%;
+    }
+
+    .chat-line {
+      flex: 1;
+      height: 3px;
+      background: #3D3D40;
+      border-radius: 2px;
+    }
+
+    .laptop-base {
+      width: 180px;
+      height: 8px;
+      background: linear-gradient(180deg, #D5D2CD 0%, #C5C2BD 100%);
+      border-radius: 0 0 4px 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .base-notch {
+      width: 40px;
+      height: 4px;
+      background: #B5B2AD;
+      border-radius: 2px;
+    }
+
+    /* ===================== CANVA MOCKUP ===================== */
+    .mockup-canva {
+      width: 140px;
+      height: 120px;
+      background: #FAF8F5;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      border: 1px solid #E5E2DD;
+    }
+
+    .canva-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #E5E2DD;
+    }
+
+    .canva-logo {
+      width: 18px;
+      height: 18px;
+      background: linear-gradient(135deg, #00C4CC 0%, #7D2AE8 100%);
+      border-radius: 4px;
+    }
+
+    .canva-title {
+      width: 50px;
+      height: 8px;
+      background: #D5D2CD;
+      border-radius: 4px;
+    }
+
+    .canva-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .canva-item {
+      aspect-ratio: 1;
+      background: #E8F2F2;
+      border-radius: 4px;
+    }
+
+    .canva-item.featured {
+      background: #FEF0E8;
+      border: 2px solid #E07A5F;
+      position: relative;
+    }
+
+    .canva-item.featured::after {
+      content: '★';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      font-size: 8px;
+      color: #E07A5F;
+    }
+
+    .canva-badge {
+      margin-top: 8px;
+      height: 16px;
+      background: linear-gradient(90deg, #E07A5F 0%, #C96B52 100%);
+      border-radius: 8px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70px;
+    }
+
+    /* ===================== SPLIT MOCKUP ===================== */
+    .mockup-split {
+      display: flex;
+      gap: 10px;
       width: 170px;
-      height: 130px;
     }
 
-    /* Card 3: iMac Mockup */
-    .mockup-imac-svg {
-      width: 160px;
-      height: 130px;
+    .split-panel {
+      flex: 1;
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      border: 1px solid #E5E2DD;
     }
 
-    /* Card 4: Laptop Mockup */
-    .mockup-laptop-svg {
-      width: 180px;
-      height: 120px;
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #F0EDEA;
     }
 
-    /* Card 5: Screen Mockup */
-    .mockup-screen-svg {
-      width: 160px;
-      height: 130px;
+    .panel-icon {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
     }
 
-    /* Card 6: Split Screen */
-    .mockup-split-svg {
-      width: 180px;
-      height: 120px;
+    .panel-icon.pinterest { background: #E60023; }
+    .panel-icon.email { background: #1D6B6B; }
+
+    .panel-label {
+      width: 28px;
+      height: 6px;
+      background: #D5D2CD;
+      border-radius: 3px;
+    }
+
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .metric-label {
+      width: 32px;
+      height: 5px;
+      background: #E5E2DD;
+      border-radius: 2px;
+    }
+
+    .metric-value {
+      width: 24px;
+      height: 8px;
+      background: #1D6B6B;
+      border-radius: 3px;
+    }
+
+    .metric-value.coral { background: #E07A5F; }
+
+    .mini-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 28px;
+      margin-top: 8px;
+    }
+
+    .mini-bar {
+      flex: 1;
+      background: #E8F2F2;
+      border-radius: 2px;
+    }
+
+    .mini-bar.active {
+      background: linear-gradient(180deg, #1D6B6B 0%, #165555 100%);
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
@@ -1497,48 +2025,56 @@
   
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       TESTIMONIAL MASONRY - True CSS Columns Masonry
+       TESTIMONIAL MASONRY - CSS Grid with Row Spans
        ═══════════════════════════════════════════════════════════════════════════ */
     .testimonial-masonry {
-      background: linear-gradient(180deg, #1D6B6B 0%, #165555 50%, #1D6B6B 100%);
-      padding: 48px 24px;
+      background: linear-gradient(180deg, #1D6B6B 0%, #165555 100%);
+      padding: 60px 24px;
       width: 100vw;
       margin-left: calc(-50vw + 50%);
     }
 
-    .masonry-container {
-      max-width: 900px;
+    .masonry-grid {
+      max-width: 800px;
       margin: 0 auto;
-      column-count: 2;
-      column-gap: 16px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 10px;
+      gap: 16px;
     }
 
-    .testimonial-card-img {
-      width: 100%;
+    .masonry-item {
       border-radius: 12px;
-      box-shadow:
-        0 4px 12px rgba(0,0,0,0.15),
-        0 8px 24px rgba(0,0,0,0.1);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .masonry-item:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    .masonry-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
-      margin-bottom: 16px;
-      break-inside: avoid;
     }
 
-    .testimonial-card-img:hover {
-      transform: scale(1.02) translateY(-4px);
-      box-shadow:
-        0 8px 24px rgba(0,0,0,0.2),
-        0 16px 48px rgba(0,0,0,0.15);
-    }
+    /* Different heights for Tetris effect */
+    .masonry-item.tall { grid-row: span 22; }
+    .masonry-item.medium { grid-row: span 18; }
+    .masonry-item.short { grid-row: span 14; }
 
-    /* Responsive */
     @media (max-width: 600px) {
-      .masonry-container {
-        column-count: 1;
+      .masonry-grid {
+        grid-template-columns: 1fr;
       }
-      .testimonial-masonry {
-        padding: 32px 16px;
+      .masonry-item.tall,
+      .masonry-item.medium,
+      .masonry-item.short {
+        grid-row: span 20;
       }
     }
 
@@ -1591,38 +2127,27 @@
         <!-- Card 1: Bailey's Daily Drop -->
         <article class="feature-card">
           <div class="card-visual-area">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 160" class="mockup-phone-svg">
-  <!-- Phone body -->
-  <rect x="15" y="5" width="100" height="150" rx="18" fill="#1F1D1A"/>
-  <rect x="20" y="10" width="90" height="140" rx="14" fill="#FAF8F5"/>
-  <!-- Dynamic Island -->
-  <rect x="45" y="14" width="40" height="12" rx="6" fill="#000"/>
-  <!-- Status bar -->
-  <text x="28" y="38" font-family="sans-serif" font-size="8" font-weight="600" fill="#1F1D1A">9:41</text>
-  <text x="88" y="38" font-family="sans-serif" font-size="6" fill="#1F1D1A">●●●● ▮</text>
-  <!-- Notification card -->
-  <rect x="26" y="46" width="78" height="70" rx="10" fill="#FFF" stroke="#E5E2DD" stroke-width="1"/>
-  <!-- Avatar -->
-  <rect x="32" y="52" width="22" height="22" rx="5" fill="url(#coralGrad)"/>
-  <text x="40" y="67" font-family="sans-serif" font-size="10" font-weight="700" fill="#FFF">B</text>
-  <!-- Title -->
-  <text x="58" y="60" font-family="sans-serif" font-size="7" font-weight="700" fill="#1F1D1A">Bailey's Daily Drop</text>
-  <text x="58" y="70" font-family="sans-serif" font-size="6" fill="#8A8279">Just now</text>
-  <!-- Product preview -->
-  <rect x="32" y="80" width="28" height="28" rx="5" fill="#E8F2F2"/>
-  <text x="40" y="98" font-family="sans-serif" font-size="12">📋</text>
-  <text x="64" y="92" font-family="sans-serif" font-size="6" font-weight="600" fill="#2D2A26">Trending: Meal Planner</text>
-  <text x="64" y="102" font-family="sans-serif" font-size="5" fill="#8A8279">AI prompt + tags included</text>
-  <!-- Badge -->
-  <rect x="80" y="44" width="28" height="14" rx="4" fill="#E07A5F"/>
-  <text x="86" y="54" font-family="sans-serif" font-size="6" font-weight="700" fill="#FFF">FRESH</text>
-  <defs>
-    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E07A5F"/>
-      <stop offset="100%" stop-color="#C96B52"/>
-    </linearGradient>
-  </defs>
-</svg>
+            <div class="mockup-phone">
+              <div class="phone-screen">
+                <div class="phone-notif">
+                  <div class="notif-row">
+                    <div class="notif-avatar"></div>
+                    <div class="notif-lines">
+                      <div class="notif-line"></div>
+                      <div class="notif-line"></div>
+                    </div>
+                  </div>
+                  <div class="notif-preview">
+                    <div class="preview-thumb"></div>
+                    <div class="preview-lines">
+                      <div class="notif-line"></div>
+                      <div class="notif-line"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="phone-badge"></div>
+              </div>
+            </div>
           </div>
         <div class="card-content">
           <span class="card-label">Daily</span>
@@ -1638,34 +2163,28 @@
         <!-- Card 2: The 3 Paths I'd Take to $5K -->
         <article class="feature-card">
           <div class="card-visual-area">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 130" class="mockup-tablet-svg">
-  <!-- Tablet body -->
-  <rect x="5" y="5" width="160" height="120" rx="12" fill="#E8E5E0"/>
-  <rect x="12" y="12" width="146" height="106" rx="6" fill="#FAF8F5"/>
-  <!-- Path cards -->
-  <rect x="20" y="20" width="40" height="50" rx="6" fill="#F5F3F0" stroke="#E5E2DD" stroke-width="1"/>
-  <text x="32" y="42" font-family="sans-serif" font-size="14">🎯</text>
-  <text x="24" y="60" font-family="sans-serif" font-size="6" font-weight="700" fill="#2D2A26">AUDIENCE</text>
-
-  <rect x="65" y="20" width="40" height="50" rx="6" fill="#E8F2F2" stroke="#1D6B6B" stroke-width="2"/>
-  <text x="77" y="42" font-family="sans-serif" font-size="14">📦</text>
-  <text x="72" y="60" font-family="sans-serif" font-size="6" font-weight="700" fill="#1D6B6B">BUNDLE</text>
-
-  <rect x="110" y="20" width="40" height="50" rx="6" fill="#F5F3F0" stroke="#E5E2DD" stroke-width="1"/>
-  <text x="122" y="42" font-family="sans-serif" font-size="14">📱</text>
-  <text x="118" y="60" font-family="sans-serif" font-size="6" font-weight="700" fill="#2D2A26">SOCIAL</text>
-
-  <!-- Progress bar -->
-  <rect x="20" y="80" width="130" height="28" rx="14" fill="#F5F3F0"/>
-  <rect x="24" y="84" width="90" height="20" rx="10" fill="url(#tealGrad2)"/>
-  <text x="124" y="98" font-family="sans-serif" font-size="10" font-weight="800" fill="#1D6B6B">$5K</text>
-  <defs>
-    <linearGradient id="tealGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1D6B6B"/>
-      <stop offset="100%" stop-color="#2A8585"/>
-    </linearGradient>
-  </defs>
-</svg>
+            <div class="mockup-tablet">
+              <div class="tablet-screen">
+                <div class="path-row">
+                  <div class="path-box">
+                    <div class="path-icon"></div>
+                    <div class="path-label"></div>
+                  </div>
+                  <div class="path-box active">
+                    <div class="path-icon"></div>
+                    <div class="path-label"></div>
+                  </div>
+                  <div class="path-box">
+                    <div class="path-icon"></div>
+                    <div class="path-label"></div>
+                  </div>
+                </div>
+                <div class="progress-row">
+                  <div class="progress-fill"></div>
+                  <div class="progress-end"></div>
+                </div>
+              </div>
+            </div>
           </div>
         <div class="card-content">
           <span class="card-label">Paths</span>
@@ -1681,31 +2200,27 @@
         <!-- Card 3: My $10K Month Blueprint -->
         <article class="feature-card">
           <div class="card-visual-area">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" class="mockup-imac-svg">
-  <!-- iMac body -->
-  <rect x="10" y="5" width="140" height="95" rx="8" fill="#2D2A26"/>
-  <rect x="16" y="11" width="128" height="78" rx="4" fill="#0D0C0B"/>
-  <!-- Dashboard -->
-  <rect x="22" y="17" width="116" height="66" rx="4" fill="#FAF8F5"/>
-  <!-- Header -->
-  <text x="28" y="32" font-family="sans-serif" font-size="7" fill="#8A8279">REVENUE</text>
-  <text x="90" y="36" font-family="sans-serif" font-size="14" font-weight="800" fill="#1D6B6B">$10,847</text>
-  <!-- Chart bars -->
-  <rect x="28" y="60" width="18" height="18" rx="2" fill="#E5E2DD"/>
-  <rect x="52" y="52" width="18" height="26" rx="2" fill="#E5E2DD"/>
-  <rect x="76" y="44" width="18" height="34" rx="2" fill="#E5E2DD"/>
-  <rect x="100" y="30" width="18" height="48" rx="2" fill="url(#tealGrad3)"/>
-  <line x1="28" y1="78" x2="125" y2="78" stroke="#E5E2DD" stroke-width="2"/>
-  <!-- Stand -->
-  <path d="M60 100 L100 100 L110 130 L50 130 Z" fill="#D5D2CD"/>
-  <rect x="45" y="130" width="70" height="5" rx="2" fill="#C5C2BD"/>
-  <defs>
-    <linearGradient id="tealGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1D6B6B"/>
-      <stop offset="100%" stop-color="#165555"/>
-    </linearGradient>
-  </defs>
-</svg>
+            <div class="mockup-imac">
+              <div class="imac-body">
+                <div class="imac-screen">
+                  <div class="imac-dashboard">
+                    <div class="dash-header">
+                      <div class="dash-label"></div>
+                      <div class="dash-amount"></div>
+                    </div>
+                    <div class="dash-chart">
+                      <div class="chart-bar" style="height: 40%"></div>
+                      <div class="chart-bar" style="height: 55%"></div>
+                      <div class="chart-bar" style="height: 70%"></div>
+                      <div class="chart-bar highlight" style="height: 100%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="imac-chin"></div>
+              <div class="imac-stand"></div>
+              <div class="imac-base"></div>
+            </div>
           </div>
         <div class="card-content">
           <span class="card-label">Blueprint</span>
@@ -1721,35 +2236,30 @@
         <!-- Card 4: Ask Bailey (Twice a Month) -->
         <article class="feature-card">
           <div class="card-visual-area">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 125" class="mockup-laptop-svg">
-  <!-- Laptop screen -->
-  <rect x="15" y="5" width="150" height="95" rx="6" fill="#2D2A26"/>
-  <rect x="21" y="11" width="138" height="83" rx="3" fill="#18171A"/>
-  <!-- Zoom UI -->
-  <rect x="27" y="17" width="126" height="71" rx="4" fill="#1F1F22"/>
-  <!-- Header -->
-  <text x="33" y="30" font-family="sans-serif" font-size="8" font-weight="700" fill="#FFF">Live Session</text>
-  <rect x="110" y="22" width="36" height="12" rx="4" fill="#2D2D30"/>
-  <text x="114" y="31" font-family="sans-serif" font-size="6" fill="#8B8B8B">47 watching</text>
-  <!-- Video area -->
-  <rect x="33" y="38" width="114" height="40" rx="4" fill="#2D2D30"/>
-  <!-- Bailey avatar -->
-  <circle cx="90" cy="54" r="14" fill="url(#coralGrad4)"/>
-  <text x="86" y="59" font-family="sans-serif" font-size="12" font-weight="700" fill="#FFF">B</text>
-  <!-- Live badge -->
-  <rect x="75" y="66" width="30" height="10" rx="4" fill="rgba(255,68,68,0.2)"/>
-  <circle cx="82" cy="71" r="2" fill="#FF4444"/>
-  <text x="87" y="74" font-family="sans-serif" font-size="6" font-weight="700" fill="#FF4444">LIVE</text>
-  <!-- Laptop base -->
-  <rect x="5" y="100" width="170" height="10" rx="2" fill="#D5D2CD"/>
-  <rect x="70" y="103" width="40" height="4" rx="2" fill="#B5B2AD"/>
-  <defs>
-    <linearGradient id="coralGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#E07A5F"/>
-      <stop offset="100%" stop-color="#C96B52"/>
-    </linearGradient>
-  </defs>
-</svg>
+            <div class="mockup-laptop">
+              <div class="laptop-lid">
+                <div class="laptop-screen">
+                  <div class="zoom-ui">
+                    <div class="zoom-header">
+                      <div class="zoom-title"></div>
+                      <div class="zoom-count"></div>
+                    </div>
+                    <div class="zoom-video">
+                      <div class="video-avatar">
+                        <div class="live-dot"></div>
+                      </div>
+                    </div>
+                    <div class="zoom-chat">
+                      <div class="chat-dot"></div>
+                      <div class="chat-line"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="laptop-base">
+                <div class="base-notch"></div>
+              </div>
+            </div>
           </div>
         <div class="card-content">
           <span class="card-label">Live</span>
@@ -1765,37 +2275,21 @@
         <!-- Card 5: Steal My Bestsellers -->
         <article class="feature-card">
           <div class="card-visual-area">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" class="mockup-screen-svg">
-  <!-- Screen -->
-  <rect x="10" y="10" width="140" height="120" rx="10" fill="#FAF8F5" stroke="#E5E2DD" stroke-width="2"/>
-  <!-- Header -->
-  <rect x="20" y="20" width="18" height="18" rx="4" fill="url(#canvaGrad)"/>
-  <text x="26" y="33" font-family="sans-serif" font-size="10" font-weight="700" fill="#FFF">C</text>
-  <text x="44" y="33" font-family="sans-serif" font-size="9" font-weight="600" fill="#2D2A26">My Templates</text>
-  <line x1="20" y1="44" x2="140" y2="44" stroke="#E5E2DD" stroke-width="1"/>
-  <!-- Grid -->
-  <rect x="20" y="52" width="36" height="36" rx="4" fill="#E8F2F2"/>
-  <rect x="62" y="52" width="36" height="36" rx="4" fill="#FEF0E8" stroke="#E07A5F" stroke-width="2"/>
-  <text x="88" y="60" font-family="sans-serif" font-size="8">⭐</text>
-  <rect x="104" y="52" width="36" height="36" rx="4" fill="#E8F2F2"/>
-  <rect x="20" y="94" width="36" height="36" rx="4" fill="#E8F2F2"/>
-  <rect x="62" y="94" width="36" height="36" rx="4" fill="#FEF0E8" stroke="#E07A5F" stroke-width="2"/>
-  <text x="88" y="102" font-family="sans-serif" font-size="8">⭐</text>
-  <rect x="104" y="94" width="36" height="36" rx="4" fill="#E8F2F2"/>
-  <!-- Badge -->
-  <rect x="52" y="125" width="56" height="18" rx="9" fill="url(#coralGrad5)"/>
-  <text x="60" y="137" font-family="sans-serif" font-size="7" font-weight="800" fill="#FFF">TOP SELLER</text>
-  <defs>
-    <linearGradient id="canvaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00C4CC"/>
-      <stop offset="100%" stop-color="#7D2AE8"/>
-    </linearGradient>
-    <linearGradient id="coralGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#E07A5F"/>
-      <stop offset="100%" stop-color="#C96B52"/>
-    </linearGradient>
-  </defs>
-</svg>
+            <div class="mockup-canva">
+              <div class="canva-header">
+                <div class="canva-logo"></div>
+                <div class="canva-title"></div>
+              </div>
+              <div class="canva-grid">
+                <div class="canva-item"></div>
+                <div class="canva-item featured"></div>
+                <div class="canva-item"></div>
+                <div class="canva-item"></div>
+                <div class="canva-item featured"></div>
+                <div class="canva-item"></div>
+              </div>
+              <div class="canva-badge"></div>
+            </div>
           </div>
         <div class="card-content">
           <span class="card-label">Tutorials</span>
@@ -1811,45 +2305,48 @@
         <!-- Card 6: My Traffic Loop -->
         <article class="feature-card">
           <div class="card-visual-area">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 125" class="mockup-split-svg">
-  <!-- Pinterest panel -->
-  <rect x="5" y="10" width="82" height="105" rx="8" fill="#FFF" stroke="#E5E2DD" stroke-width="1"/>
-  <rect x="12" y="18" width="14" height="14" rx="3" fill="#E60023"/>
-  <text x="16" y="29" font-family="sans-serif" font-size="8" font-weight="700" fill="#FFF">P</text>
-  <text x="30" y="28" font-family="sans-serif" font-size="7" font-weight="700" fill="#2D2A26">Pinterest</text>
-  <line x1="12" y1="38" x2="80" y2="38" stroke="#F0EDEA" stroke-width="1"/>
-  <text x="12" y="52" font-family="sans-serif" font-size="6" fill="#8A8279">Impressions</text>
-  <text x="58" y="52" font-family="sans-serif" font-size="8" font-weight="700" fill="#1D6B6B">+847%</text>
-  <text x="12" y="68" font-family="sans-serif" font-size="6" fill="#8A8279">Clicks</text>
-  <text x="62" y="68" font-family="sans-serif" font-size="8" font-weight="700" fill="#E07A5F">2.4K</text>
-  <!-- Mini chart -->
-  <rect x="12" y="80" width="12" height="12" rx="2" fill="#E8F2F2"/>
-  <rect x="28" y="76" width="12" height="16" rx="2" fill="#E8F2F2"/>
-  <rect x="44" y="72" width="12" height="20" rx="2" fill="#E8F2F2"/>
-  <rect x="60" y="62" width="12" height="30" rx="2" fill="url(#tealGrad6)"/>
-
-  <!-- Email panel -->
-  <rect x="93" y="10" width="82" height="105" rx="8" fill="#FFF" stroke="#E5E2DD" stroke-width="1"/>
-  <rect x="100" y="18" width="14" height="14" rx="3" fill="#1D6B6B"/>
-  <text x="104" y="29" font-family="sans-serif" font-size="8" font-weight="700" fill="#FFF">@</text>
-  <text x="118" y="28" font-family="sans-serif" font-size="7" font-weight="700" fill="#2D2A26">Email</text>
-  <line x1="100" y1="38" x2="168" y2="38" stroke="#F0EDEA" stroke-width="1"/>
-  <text x="100" y="52" font-family="sans-serif" font-size="6" fill="#8A8279">Open Rate</text>
-  <text x="152" y="52" font-family="sans-serif" font-size="8" font-weight="700" fill="#1D6B6B">42%</text>
-  <text x="100" y="68" font-family="sans-serif" font-size="6" fill="#8A8279">Click Rate</text>
-  <text x="150" y="68" font-family="sans-serif" font-size="8" font-weight="700" fill="#E07A5F">8.2%</text>
-  <!-- Mini chart -->
-  <rect x="100" y="76" width="12" height="16" rx="2" fill="#E8F2F2"/>
-  <rect x="116" y="68" width="12" height="24" rx="2" fill="url(#tealGrad6)"/>
-  <rect x="132" y="80" width="12" height="12" rx="2" fill="#E8F2F2"/>
-  <rect x="148" y="72" width="12" height="20" rx="2" fill="#E8F2F2"/>
-  <defs>
-    <linearGradient id="tealGrad6" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1D6B6B"/>
-      <stop offset="100%" stop-color="#165555"/>
-    </linearGradient>
-  </defs>
-</svg>
+            <div class="mockup-split">
+              <div class="split-panel">
+                <div class="panel-header">
+                  <div class="panel-icon pinterest"></div>
+                  <div class="panel-label"></div>
+                </div>
+                <div class="metric-row">
+                  <div class="metric-label"></div>
+                  <div class="metric-value"></div>
+                </div>
+                <div class="metric-row">
+                  <div class="metric-label"></div>
+                  <div class="metric-value coral"></div>
+                </div>
+                <div class="mini-chart">
+                  <div class="mini-bar" style="height: 40%"></div>
+                  <div class="mini-bar" style="height: 60%"></div>
+                  <div class="mini-bar" style="height: 75%"></div>
+                  <div class="mini-bar active" style="height: 100%"></div>
+                </div>
+              </div>
+              <div class="split-panel">
+                <div class="panel-header">
+                  <div class="panel-icon email"></div>
+                  <div class="panel-label"></div>
+                </div>
+                <div class="metric-row">
+                  <div class="metric-label"></div>
+                  <div class="metric-value"></div>
+                </div>
+                <div class="metric-row">
+                  <div class="metric-label"></div>
+                  <div class="metric-value coral"></div>
+                </div>
+                <div class="mini-chart">
+                  <div class="mini-bar" style="height: 60%"></div>
+                  <div class="mini-bar active" style="height: 90%"></div>
+                  <div class="mini-bar" style="height: 50%"></div>
+                  <div class="mini-bar" style="height: 70%"></div>
+                </div>
+              </div>
+            </div>
           </div>
         <div class="card-content">
           <span class="card-label">Traffic</span>
@@ -1988,14 +2485,24 @@
     </div>
   </section>
 
-    <!-- SECTION 3: TESTIMONIALS - Masonry Layout -->
+    <!-- SECTION 3: TESTIMONIALS - Masonry Grid -->
   <div class="testimonial-masonry">
-    <div class="masonry-container">
-      <img src="https://i.imgur.com/YcO5jYM.png" alt="Going all in - 8000 sales" class="testimonial-card-img">
-      <img src="https://i.imgur.com/NfMKFk5.png" alt="1000 sales in 5 months" class="testimonial-card-img">
-      <img src="https://i.imgur.com/GHXVqbr.png" alt="Great day testimonial" class="testimonial-card-img">
-      <img src="https://i.imgur.com/hnKzPUy.png" alt="34 items ordered" class="testimonial-card-img">
-      <img src="https://i.imgur.com/T3CiReh.png" alt="100 Sales milestone" class="testimonial-card-img">
+    <div class="masonry-grid">
+      <div class="masonry-item tall">
+        <img src="https://i.imgur.com/YcO5jYM.png" alt="Going all in - 8000 sales">
+      </div>
+      <div class="masonry-item medium">
+        <img src="https://i.imgur.com/NfMKFk5.png" alt="1000 sales">
+      </div>
+      <div class="masonry-item short">
+        <img src="https://i.imgur.com/GHXVqbr.png" alt="Great day">
+      </div>
+      <div class="masonry-item tall">
+        <img src="https://i.imgur.com/hnKzPUy.png" alt="34 items ordered">
+      </div>
+      <div class="masonry-item medium">
+        <img src="https://i.imgur.com/T3CiReh.png" alt="100 Sales">
+      </div>
     </div>
   </div>
 
