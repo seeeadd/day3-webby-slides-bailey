@@ -1748,6 +1748,13 @@ html, body {
   // SCROLL ANIMATIONS
   // ========================================
   function initScrollAnimations() {
+    // Fallback: show items after short delay (iframe fix)
+    setTimeout(function() {
+      document.querySelectorAll(".faq-item, .faq-left-column").forEach(function(el) {
+        el.classList.add("visible");
+      });
+    }, 100);
+
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.querySelectorAll('.faq-item, .faq-left-column').forEach(function(el) {
         el.classList.add('visible');
