@@ -289,7 +289,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: #1A1816;
-  min-height: 100vh;
+  
   overflow-x: hidden;
 }
 
@@ -339,21 +339,10 @@ html, body {
 
   overflow: hidden;
   isolation: isolate;
-  min-height: 100vh;
+  
 }
 
 /* Noise/grain texture overlay */
-/* Extend dark background beyond section */
-.faq-section::after {
-  content: "";
-  position: absolute;
-  bottom: -200vh;
-  left: 0;
-  right: 0;
-  height: 200vh;
-  background: #1A1816;
-  z-index: -1;
-}
 
 .faq-bg-grain {
   position: absolute;
