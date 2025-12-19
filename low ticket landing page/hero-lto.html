@@ -357,6 +357,33 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
+       CREDENTIAL BANNER
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .credential-banner {
+      text-align: center;
+      padding: 0 0 20px;
+    }
+
+    .credential-text {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+      line-height: 1.6;
+    }
+
+    .credential-text strong {
+      font-weight: 700;
+      color: var(--accent-coral);
+    }
+
+    .credential-text .credential-highlight {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
        SOCIAL PROOF - REIMAGINED
        Not avatar stack + stars. Something fresh and minimal.
        ═══════════════════════════════════════════════════════════════════════════ */
@@ -491,7 +518,7 @@
       font-size: 20px;
       line-height: 1.75;
       color: var(--text-secondary);
-      max-width: 600px;
+      max-width: 720px;
       margin: 0 auto;
       letter-spacing: 0.01em;
       font-weight: 400;
@@ -1061,6 +1088,14 @@
 
     <div class="hero-content">
       <div class="hero-container">
+
+        <!-- Credential Banner -->
+        <div class="credential-banner animate-fade-up delay-1">
+          <p class="credential-text">
+            Learn From A <strong>Top .01% Etsy Seller</strong> With <span class="credential-highlight">387K+ Sales</span><br>
+            And <span class="credential-highlight">$1M+ Earned</span> From A $3 Digital Product
+          </p>
+        </div>
 
         <!-- Social Proof - Reimagined -->
         <div class="trust-strip animate-fade-up delay-1">
