@@ -285,11 +285,12 @@
     /* Script Text - Large Handwriting Style */
     .script-text {
       font-family: 'Caveat', cursive;
-      font-size: 4.5rem;
+      font-size: 8rem;
       color: var(--teal);
-      margin: 48px 0;
-      line-height: 1.2;
-      letter-spacing: 0.02em;
+      margin: 60px 0;
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+      font-weight: 600;
     }
 
     /* Highlight */
@@ -1271,111 +1272,35 @@
       letter-spacing: 0.01em;
     }
 
-    /* Premium Artistic CTA Button with Intricate Border */
+    /* Premium CTA Button */
     #story-cta .cta-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
-      min-width: 340px;
-      height: 64px;
-      padding: 0 48px;
-      background: linear-gradient(145deg, #E07A5F 0%, #D4694E 35%, #C25E45 70%, #B85540 100%);
+      min-width: 380px;
+      height: 68px;
+      padding: 0 56px;
+      background: linear-gradient(145deg, #E07A5F 0%, #D4694E 50%, #C25E45 100%);
       color: #FFFFFF;
       font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       text-decoration: none;
-      border: 2px solid transparent;
-      border-radius: 14px;
+      border: none;
+      border-radius: 12px;
       cursor: pointer;
       position: relative;
-      overflow: visible;
+      overflow: hidden;
       box-shadow:
-        0 2px 4px rgba(224, 122, 95, 0.2),
-        0 8px 24px rgba(224, 122, 95, 0.3),
-        0 12px 40px rgba(224, 122, 95, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-      transition:
-        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        0 4px 6px rgba(224, 122, 95, 0.25),
+        0 10px 30px rgba(224, 122, 95, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
     }
 
-    /* Intricate decorative border frame */
-    #story-cta .cta-button-wrapper {
-      position: relative;
-      display: inline-block;
-    }
-
-    #story-cta .cta-button-wrapper::before {
-      content: '';
-      position: absolute;
-      top: -6px;
-      left: -6px;
-      right: -6px;
-      bottom: -6px;
-      border: 1px solid rgba(224, 122, 95, 0.3);
-      border-radius: 18px;
-      pointer-events: none;
-    }
-
-    #story-cta .cta-button-wrapper::after {
-      content: '';
-      position: absolute;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
-      border: 1px dashed rgba(212, 165, 116, 0.25);
-      border-radius: 22px;
-      pointer-events: none;
-    }
-
-    /* Corner decorations */
-    #story-cta .btn-corner {
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      pointer-events: none;
-    }
-
-    #story-cta .btn-corner::before,
-    #story-cta .btn-corner::after {
-      content: '';
-      position: absolute;
-      background: rgba(212, 165, 116, 0.6);
-    }
-
-    #story-cta .btn-corner::before {
-      width: 100%;
-      height: 1px;
-    }
-
-    #story-cta .btn-corner::after {
-      width: 1px;
-      height: 100%;
-    }
-
-    #story-cta .btn-corner.top-left { top: -14px; left: -14px; }
-    #story-cta .btn-corner.top-left::before { top: 0; left: 0; }
-    #story-cta .btn-corner.top-left::after { top: 0; left: 0; }
-
-    #story-cta .btn-corner.top-right { top: -14px; right: -14px; }
-    #story-cta .btn-corner.top-right::before { top: 0; right: 0; }
-    #story-cta .btn-corner.top-right::after { top: 0; right: 0; }
-
-    #story-cta .btn-corner.bottom-left { bottom: -14px; left: -14px; }
-    #story-cta .btn-corner.bottom-left::before { bottom: 0; left: 0; }
-    #story-cta .btn-corner.bottom-left::after { bottom: 0; left: 0; }
-
-    #story-cta .btn-corner.bottom-right { bottom: -14px; right: -14px; }
-    #story-cta .btn-corner.bottom-right::before { bottom: 0; right: 0; }
-    #story-cta .btn-corner.bottom-right::after { bottom: 0; right: 0; }
-
-    /* Premium shimmer effect */
     #story-cta .cta-button::before {
       content: '';
       position: absolute;
@@ -1383,78 +1308,34 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.15) 25%,
-        rgba(255, 255, 255, 0.3) 50%,
-        rgba(255, 255, 255, 0.15) 75%,
-        transparent 100%
-      );
-      transition: left 0.8s ease;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      transition: left 0.6s ease;
     }
 
     #story-cta .cta-button:hover::before {
       left: 100%;
     }
 
-    /* Subtle inner glow */
-    #story-cta .cta-button::after {
-      content: '';
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      right: 2px;
-      bottom: 2px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      pointer-events: none;
-    }
-
     #story-cta .cta-button:hover {
-      transform: translateY(-4px) scale(1.02);
+      transform: translateY(-3px);
       box-shadow:
-        0 6px 12px rgba(224, 122, 95, 0.35),
-        0 20px 50px rgba(224, 122, 95, 0.4),
-        0 0 0 1px rgba(224, 122, 95, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.25),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+        0 6px 12px rgba(224, 122, 95, 0.3),
+        0 15px 40px rgba(224, 122, 95, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
     }
 
     #story-cta .cta-button:active {
-      transform: translateY(-2px) scale(1.01);
+      transform: translateY(-1px);
     }
 
-    /* Button icon/arrow with sparkle */
     #story-cta .cta-button .btn-arrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
+      display: inline-block;
       transition: transform 0.3s ease;
-      font-size: 18px;
+      font-size: 20px;
     }
 
     #story-cta .cta-button:hover .btn-arrow {
-      transform: translateX(6px);
-    }
-
-    /* Button sparkle decorations */
-    #story-cta .btn-sparkle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 50%;
-      animation: sparkle 2s ease-in-out infinite;
-    }
-
-    #story-cta .btn-sparkle:nth-child(1) { top: 8px; right: 12px; animation-delay: 0s; }
-    #story-cta .btn-sparkle:nth-child(2) { top: 16px; right: 8px; animation-delay: 0.5s; }
-    #story-cta .btn-sparkle:nth-child(3) { bottom: 10px; left: 16px; animation-delay: 1s; }
-
-    @keyframes sparkle {
-      0%, 100% { opacity: 0.3; transform: scale(0.8); }
-      50% { opacity: 1; transform: scale(1.2); }
+      transform: translateX(5px);
     }
 
     /* Credit Card Trust Image */
@@ -1902,20 +1783,11 @@
       <!-- Billing note -->
       <div class="billing-note">Billed annually. Renews yearly. Cancel before renewal.</div>
 
-      <!-- Premium CTA Button with intricate wrapper -->
-      <div class="cta-button-wrapper">
-        <span class="btn-corner top-left"></span>
-        <span class="btn-corner top-right"></span>
-        <span class="btn-corner bottom-left"></span>
-        <span class="btn-corner bottom-right"></span>
-        <a href="#checkout" class="cta-button">
-          <span class="btn-sparkle"></span>
-          <span class="btn-sparkle"></span>
-          <span class="btn-sparkle"></span>
-          Get Instant Access
-          <span class="btn-arrow">→</span>
-        </a>
-      </div>
+      <!-- Premium CTA Button -->
+      <a href="#checkout" class="cta-button">
+        Get Instant Access
+        <span class="btn-arrow">→</span>
+      </a>
 
       <!-- Payment cards image -->
       <img src="https://i.imgur.com/881hYo3.png" alt="Secure payment methods" class="payment-cards">
