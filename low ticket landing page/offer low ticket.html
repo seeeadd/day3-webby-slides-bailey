@@ -240,205 +240,238 @@
       position: relative;
     }
 
-                /* ═══════════════════════════════════════════════════════════════════════════
-       DEVICE MOCKUPS - Clean Abstract Graphics
+                    /* ═══════════════════════════════════════════════════════════════════════════
+       DEVICE MOCKUPS - Detailed Realistic Graphics
        ═══════════════════════════════════════════════════════════════════════════ */
 
     .card-visual-area {
-      height: 160px;
+      height: 180px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
-      padding: 16px;
+      padding: 20px;
     }
 
     /* ===================== PHONE MOCKUP ===================== */
     .mockup-phone {
-      width: 100px;
-      height: 140px;
-      background: linear-gradient(180deg, #1F1D1A 0%, #0D0C0B 100%);
-      border-radius: 20px;
-      padding: 6px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2), 0 16px 48px rgba(0,0,0,0.15);
+      width: 120px;
+      height: 160px;
+      background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+      border-radius: 24px;
+      padding: 8px;
+      box-shadow:
+        0 20px 40px rgba(0,0,0,0.3),
+        0 0 0 1px rgba(255,255,255,0.1) inset;
       position: relative;
     }
 
-    .phone-screen {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(180deg, #FAF8F5 0%, #F5F2EE 100%);
-      border-radius: 14px;
-      padding: 24px 8px 8px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Dynamic island */
     .mockup-phone::before {
       content: '';
       position: absolute;
-      top: 10px;
+      top: 12px;
       left: 50%;
       transform: translateX(-50%);
-      width: 40px;
-      height: 12px;
+      width: 50px;
+      height: 14px;
       background: #000;
       border-radius: 10px;
       z-index: 10;
     }
 
-    .phone-notif {
-      background: white;
-      border-radius: 10px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      background: #faf8f5;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
     }
 
-    .notif-row {
+    .phone-status {
+      height: 24px;
+      padding: 6px 12px 0;
       display: flex;
-      align-items: center;
+      justify-content: space-between;
+      font-size: 9px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .phone-notif {
+      margin: 6px;
+      background: white;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .notif-header {
+      display: flex;
       gap: 8px;
       margin-bottom: 8px;
     }
 
     .notif-avatar {
-      width: 24px;
-      height: 24px;
-      background: linear-gradient(135deg, #E07A5F 0%, #C96B52 100%);
-      border-radius: 6px;
-      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #E07A5F 0%, #c96b52 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
     }
 
-    .notif-lines {
+    .notif-text {
       flex: 1;
     }
 
-    .notif-line {
-      height: 6px;
-      background: #E5E2DD;
-      border-radius: 3px;
-      margin-bottom: 4px;
+    .notif-title {
+      font-size: 9px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 2px;
     }
 
-    .notif-line:last-child {
-      width: 60%;
-      margin-bottom: 0;
+    .notif-time {
+      font-size: 7px;
+      color: #888;
+    }
+
+    .notif-body {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .notif-thumb {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #e8f2f2 0%, #d4e8e8 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
     }
 
     .notif-preview {
-      display: flex;
-      gap: 8px;
-    }
-
-    .preview-thumb {
-      width: 32px;
-      height: 32px;
-      background: linear-gradient(135deg, #E8F2F2 0%, #D4E8E8 100%);
-      border-radius: 6px;
-    }
-
-    .preview-lines {
       flex: 1;
-      padding-top: 4px;
+      font-size: 8px;
+      color: #444;
+      line-height: 1.3;
     }
 
     .phone-badge {
       position: absolute;
-      top: 28px;
-      right: 12px;
-      width: 28px;
-      height: 12px;
+      top: 32px;
+      right: 14px;
       background: #E07A5F;
+      color: white;
+      font-size: 6px;
+      font-weight: 800;
+      padding: 3px 6px;
       border-radius: 4px;
+      letter-spacing: 0.5px;
     }
 
     /* ===================== TABLET MOCKUP ===================== */
     .mockup-tablet {
-      width: 160px;
-      height: 120px;
-      background: linear-gradient(180deg, #E8E5E0 0%, #D5D2CD 100%);
-      border-radius: 14px;
-      padding: 8px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      width: 180px;
+      height: 130px;
+      background: linear-gradient(180deg, #e5e5e5 0%, #d0d0d0 100%);
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow:
+        0 20px 40px rgba(0,0,0,0.2),
+        0 0 0 1px rgba(255,255,255,0.5) inset;
     }
 
     .tablet-screen {
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, #FAF8F5 0%, #F5F2EE 100%);
-      border-radius: 6px;
+      background: #faf8f5;
+      border-radius: 8px;
       padding: 12px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
     }
 
-    .path-row {
+    .tablet-paths {
       display: flex;
       gap: 8px;
       flex: 1;
     }
 
-    .path-box {
+    .path-card {
       flex: 1;
-      background: #F0EDEA;
-      border-radius: 8px;
+      background: #f5f3f0;
+      border-radius: 10px;
+      padding: 8px 4px;
+      text-align: center;
+      border: 2px solid transparent;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 4px;
-      border: 2px solid transparent;
       transition: all 0.2s;
     }
 
-    .path-box.active {
-      background: #E8F2F2;
+    .path-card.active {
+      background: #e8f2f2;
       border-color: #1D6B6B;
+      box-shadow: 0 4px 12px rgba(29,107,107,0.2);
     }
 
-    .path-icon {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #D5D2CD;
+    .path-emoji {
+      font-size: 18px;
     }
 
-    .path-box.active .path-icon {
-      background: #1D6B6B;
+    .path-name {
+      font-size: 7px;
+      font-weight: 700;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
     }
 
-    .path-label {
-      width: 24px;
-      height: 4px;
-      background: #C5C2BD;
-      border-radius: 2px;
+    .path-card.active .path-name {
+      color: #1D6B6B;
     }
 
-    .progress-row {
-      height: 20px;
-      background: #F0EDEA;
-      border-radius: 10px;
-      padding: 4px;
+    .tablet-progress {
+      margin-top: 10px;
+      background: #f0ede9;
+      border-radius: 12px;
+      padding: 6px 10px;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+    }
+
+    .progress-bar {
+      flex: 1;
+      height: 10px;
+      background: #e5e2dd;
+      border-radius: 5px;
+      overflow: hidden;
     }
 
     .progress-fill {
-      flex: 1;
+      width: 75%;
       height: 100%;
-      background: linear-gradient(90deg, #1D6B6B 0%, #2A8585 100%);
-      border-radius: 6px;
-      max-width: 75%;
+      background: linear-gradient(90deg, #1D6B6B 0%, #2a8585 100%);
+      border-radius: 5px;
     }
 
-    .progress-end {
-      width: 24px;
-      height: 12px;
-      background: #1D6B6B;
-      border-radius: 6px;
+    .progress-goal {
+      font-size: 11px;
+      font-weight: 800;
+      color: #1D6B6B;
     }
 
     /* ===================== IMAC MOCKUP ===================== */
@@ -448,89 +481,93 @@
       align-items: center;
     }
 
-    .imac-body {
-      width: 140px;
-      height: 90px;
-      background: linear-gradient(180deg, #2D2A26 0%, #1F1D1A 100%);
-      border-radius: 8px 8px 0 0;
-      padding: 6px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    .imac-frame {
+      width: 160px;
+      height: 100px;
+      background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+      border-radius: 10px 10px 0 0;
+      padding: 8px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
     }
 
     .imac-screen {
       width: 100%;
       height: 100%;
-      background: #0D0C0B;
+      background: #111;
       border-radius: 4px;
       padding: 6px;
     }
 
-    .imac-dashboard {
+    .imac-content {
       width: 100%;
       height: 100%;
-      background: #FAF8F5;
+      background: #faf8f5;
       border-radius: 3px;
-      padding: 8px;
+      padding: 10px;
     }
 
-    .dash-header {
+    .dashboard-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 8px;
       padding-bottom: 6px;
-      border-bottom: 1px solid #E5E2DD;
+      border-bottom: 1px solid #e5e2dd;
     }
 
     .dash-label {
-      width: 30px;
-      height: 6px;
-      background: #D5D2CD;
-      border-radius: 3px;
+      font-size: 7px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    .dash-amount {
-      width: 50px;
-      height: 12px;
-      background: #1D6B6B;
-      border-radius: 4px;
+    .dash-value {
+      font-size: 14px;
+      font-weight: 800;
+      color: #1D6B6B;
     }
 
-    .dash-chart {
+    .dashboard-chart {
       display: flex;
       align-items: flex-end;
-      gap: 6px;
-      height: 36px;
+      gap: 8px;
+      height: 40px;
     }
 
     .chart-bar {
       flex: 1;
-      background: #E5E2DD;
-      border-radius: 2px;
+      background: #e5e2dd;
+      border-radius: 3px;
+      transition: all 0.3s;
     }
 
-    .chart-bar.highlight {
+    .chart-bar:nth-child(1) { height: 35%; }
+    .chart-bar:nth-child(2) { height: 50%; }
+    .chart-bar:nth-child(3) { height: 70%; }
+    .chart-bar:nth-child(4) {
+      height: 100%;
       background: linear-gradient(180deg, #1D6B6B 0%, #165555 100%);
     }
 
     .imac-chin {
-      width: 140px;
-      height: 8px;
-      background: linear-gradient(180deg, #D5D2CD 0%, #C5C2BD 100%);
+      width: 160px;
+      height: 12px;
+      background: linear-gradient(180deg, #d5d5d5 0%, #c5c5c5 100%);
     }
 
     .imac-stand {
-      width: 50px;
-      height: 30px;
-      background: linear-gradient(180deg, #D5D2CD 0%, #C5C2BD 100%);
-      clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
+      width: 60px;
+      height: 35px;
+      background: linear-gradient(180deg, #d0d0d0 0%, #b5b5b5 100%);
+      clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
     }
 
     .imac-base {
-      width: 70px;
-      height: 6px;
-      background: #C5C2BD;
-      border-radius: 0 0 3px 3px;
+      width: 80px;
+      height: 8px;
+      background: linear-gradient(180deg, #c5c5c5 0%, #a5a5a5 100%);
+      border-radius: 0 0 4px 4px;
     }
 
     /* ===================== LAPTOP MOCKUP ===================== */
@@ -540,140 +577,160 @@
       align-items: center;
     }
 
-    .laptop-lid {
-      width: 160px;
-      height: 95px;
-      background: linear-gradient(180deg, #2D2A26 0%, #1F1D1A 100%);
-      border-radius: 8px 8px 0 0;
-      padding: 6px 6px 0;
-      box-shadow: 0 -4px 16px rgba(0,0,0,0.1);
+    .laptop-top {
+      width: 180px;
+      height: 110px;
+      background: linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 100%);
+      border-radius: 10px 10px 0 0;
+      padding: 8px 8px 0;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
     }
 
     .laptop-screen {
       width: 100%;
       height: 100%;
-      background: #18171A;
-      border-radius: 4px 4px 0 0;
+      background: #1e1e20;
+      border-radius: 6px 6px 0 0;
       padding: 8px;
     }
 
-    .zoom-ui {
+    .zoom-container {
       width: 100%;
       height: 100%;
+      background: #25252a;
+      border-radius: 4px;
+      padding: 8px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
     }
 
-    .zoom-header {
+    .zoom-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 8px;
     }
 
     .zoom-title {
-      width: 50px;
-      height: 8px;
-      background: #3D3D40;
-      border-radius: 4px;
+      font-size: 9px;
+      font-weight: 600;
+      color: white;
     }
 
     .zoom-count {
-      width: 36px;
-      height: 10px;
-      background: #2D2D30;
+      font-size: 7px;
+      color: #888;
+      background: #333;
+      padding: 2px 6px;
       border-radius: 4px;
     }
 
-    .zoom-video {
+    .zoom-main {
       flex: 1;
-      background: #2D2D30;
+      background: #333;
       border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 6px;
     }
 
-    .video-avatar {
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(135deg, #E07A5F 0%, #C96B52 100%);
+    .zoom-avatar {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #E07A5F 0%, #c96b52 100%);
       border-radius: 50%;
-      position: relative;
-    }
-
-    .live-dot {
-      position: absolute;
-      bottom: -6px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 24px;
-      height: 8px;
-      background: rgba(255, 68, 68, 0.3);
-      border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      position: relative;
     }
 
-    .live-dot::before {
-      content: '';
-      width: 4px;
-      height: 4px;
-      background: #FF4444;
-      border-radius: 50%;
-    }
-
-    .zoom-chat {
-      height: 12px;
-      background: #2D2D30;
+    .live-badge {
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,68,68,0.2);
+      padding: 2px 8px;
       border-radius: 4px;
       display: flex;
       align-items: center;
-      padding: 0 6px;
-      gap: 4px;
+      gap: 3px;
     }
 
-    .chat-dot {
-      width: 4px;
-      height: 4px;
+    .live-dot {
+      width: 5px;
+      height: 5px;
+      background: #ff4444;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .live-text {
+      font-size: 6px;
+      font-weight: 700;
+      color: #ff4444;
+    }
+
+    .zoom-chat {
+      background: #333;
+      border-radius: 4px;
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chat-indicator {
+      width: 6px;
+      height: 6px;
       background: #1D6B6B;
       border-radius: 50%;
     }
 
-    .chat-line {
+    .chat-preview {
       flex: 1;
-      height: 3px;
-      background: #3D3D40;
+      height: 4px;
+      background: #444;
       border-radius: 2px;
     }
 
-    .laptop-base {
-      width: 180px;
-      height: 8px;
-      background: linear-gradient(180deg, #D5D2CD 0%, #C5C2BD 100%);
-      border-radius: 0 0 4px 4px;
+    .laptop-bottom {
+      width: 200px;
+      height: 10px;
+      background: linear-gradient(180deg, #d5d5d5 0%, #c0c0c0 100%);
+      border-radius: 0 0 6px 6px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .base-notch {
-      width: 40px;
-      height: 4px;
-      background: #B5B2AD;
-      border-radius: 2px;
+    .laptop-notch {
+      width: 50px;
+      height: 5px;
+      background: #aaa;
+      border-radius: 3px;
     }
 
     /* ===================== CANVA MOCKUP ===================== */
     .mockup-canva {
-      width: 140px;
-      height: 120px;
-      background: #FAF8F5;
-      border-radius: 12px;
-      padding: 10px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-      border: 1px solid #E5E2DD;
+      width: 160px;
+      height: 140px;
+      background: white;
+      border-radius: 14px;
+      padding: 12px;
+      box-shadow:
+        0 20px 40px rgba(0,0,0,0.12),
+        0 0 0 1px #e5e5e5;
     }
 
     .canva-header {
@@ -682,37 +739,43 @@
       gap: 8px;
       margin-bottom: 10px;
       padding-bottom: 8px;
-      border-bottom: 1px solid #E5E2DD;
+      border-bottom: 1px solid #eee;
     }
 
     .canva-logo {
-      width: 18px;
-      height: 18px;
-      background: linear-gradient(135deg, #00C4CC 0%, #7D2AE8 100%);
-      border-radius: 4px;
+      width: 22px;
+      height: 22px;
+      background: linear-gradient(135deg, #00c4cc 0%, #7d2ae8 100%);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
     }
 
     .canva-title {
-      width: 50px;
-      height: 8px;
-      background: #D5D2CD;
-      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      color: #333;
     }
 
     .canva-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 6px;
+      margin-bottom: 10px;
     }
 
     .canva-item {
       aspect-ratio: 1;
-      background: #E8F2F2;
-      border-radius: 4px;
+      background: linear-gradient(135deg, #e8f2f2 0%, #d8e8e8 100%);
+      border-radius: 6px;
     }
 
     .canva-item.featured {
-      background: #FEF0E8;
+      background: linear-gradient(135deg, #fef0e8 0%, #fdd 100%);
       border: 2px solid #E07A5F;
       position: relative;
     }
@@ -721,99 +784,104 @@
       content: '★';
       position: absolute;
       top: 2px;
-      right: 2px;
-      font-size: 8px;
+      right: 3px;
+      font-size: 10px;
       color: #E07A5F;
     }
 
     .canva-badge {
-      margin-top: 8px;
-      height: 16px;
-      background: linear-gradient(90deg, #E07A5F 0%, #C96B52 100%);
-      border-radius: 8px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 70px;
+      background: linear-gradient(90deg, #E07A5F 0%, #c96b52 100%);
+      color: white;
+      font-size: 8px;
+      font-weight: 800;
+      text-align: center;
+      padding: 6px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
     }
 
-    /* ===================== SPLIT MOCKUP ===================== */
-    .mockup-split {
+    /* ===================== ANALYTICS MOCKUP ===================== */
+    .mockup-analytics {
       display: flex;
       gap: 10px;
-      width: 170px;
+      width: 190px;
     }
 
-    .split-panel {
+    .analytics-panel {
       flex: 1;
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 10px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      border: 1px solid #E5E2DD;
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.1),
+        0 0 0 1px #eee;
     }
 
-    .panel-header {
+    .panel-head {
       display: flex;
       align-items: center;
       gap: 6px;
       margin-bottom: 10px;
       padding-bottom: 8px;
-      border-bottom: 1px solid #F0EDEA;
+      border-bottom: 1px solid #f0f0f0;
     }
 
     .panel-icon {
-      width: 14px;
-      height: 14px;
-      border-radius: 3px;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8px;
+      font-weight: 700;
+      color: white;
     }
 
-    .panel-icon.pinterest { background: #E60023; }
+    .panel-icon.pinterest { background: #e60023; }
     .panel-icon.email { background: #1D6B6B; }
 
-    .panel-label {
-      width: 28px;
-      height: 6px;
-      background: #D5D2CD;
-      border-radius: 3px;
+    .panel-name {
+      font-size: 8px;
+      font-weight: 700;
+      color: #333;
     }
 
-    .metric-row {
+    .stat-row {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 6px;
     }
 
-    .metric-label {
-      width: 32px;
-      height: 5px;
-      background: #E5E2DD;
-      border-radius: 2px;
+    .stat-label {
+      font-size: 7px;
+      color: #888;
     }
 
-    .metric-value {
-      width: 24px;
-      height: 8px;
-      background: #1D6B6B;
-      border-radius: 3px;
+    .stat-value {
+      font-size: 9px;
+      font-weight: 800;
     }
 
-    .metric-value.coral { background: #E07A5F; }
+    .stat-value.teal { color: #1D6B6B; }
+    .stat-value.coral { color: #E07A5F; }
 
-    .mini-chart {
+    .mini-graph {
       display: flex;
       align-items: flex-end;
       gap: 3px;
-      height: 28px;
+      height: 30px;
       margin-top: 8px;
     }
 
-    .mini-bar {
+    .graph-bar {
       flex: 1;
-      background: #E8F2F2;
+      background: #e8f2f2;
       border-radius: 2px;
     }
 
-    .mini-bar.active {
+    .graph-bar.active {
       background: linear-gradient(180deg, #1D6B6B 0%, #165555 100%);
     }
 
@@ -2025,56 +2093,51 @@
   
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       TESTIMONIAL MASONRY - CSS Grid with Row Spans
+       TESTIMONIAL MASONRY - Flexbox Columns
        ═══════════════════════════════════════════════════════════════════════════ */
     .testimonial-masonry {
       background: linear-gradient(180deg, #1D6B6B 0%, #165555 100%);
-      padding: 60px 24px;
+      padding: 48px 24px;
       width: 100vw;
       margin-left: calc(-50vw + 50%);
     }
 
-    .masonry-grid {
-      max-width: 800px;
+    .masonry-wrapper {
+      max-width: 900px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: 10px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .masonry-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
       gap: 16px;
     }
 
     .masonry-item {
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: white;
     }
 
     .masonry-item:hover {
-      transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
     }
 
     .masonry-item img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
     }
 
-    /* Different heights for Tetris effect */
-    .masonry-item.tall { grid-row: span 22; }
-    .masonry-item.medium { grid-row: span 18; }
-    .masonry-item.short { grid-row: span 14; }
-
     @media (max-width: 600px) {
-      .masonry-grid {
-        grid-template-columns: 1fr;
-      }
-      .masonry-item.tall,
-      .masonry-item.medium,
-      .masonry-item.short {
-        grid-row: span 20;
+      .masonry-wrapper {
+        flex-direction: column;
       }
     }
 
@@ -2129,23 +2192,24 @@
           <div class="card-visual-area">
             <div class="mockup-phone">
               <div class="phone-screen">
+                <div class="phone-status">
+                  <span>9:41</span>
+                  <span>●●●● ▮</span>
+                </div>
                 <div class="phone-notif">
-                  <div class="notif-row">
-                    <div class="notif-avatar"></div>
-                    <div class="notif-lines">
-                      <div class="notif-line"></div>
-                      <div class="notif-line"></div>
+                  <div class="notif-header">
+                    <div class="notif-avatar">B</div>
+                    <div class="notif-text">
+                      <div class="notif-title">Bailey's Daily Drop</div>
+                      <div class="notif-time">Just now</div>
                     </div>
                   </div>
-                  <div class="notif-preview">
-                    <div class="preview-thumb"></div>
-                    <div class="preview-lines">
-                      <div class="notif-line"></div>
-                      <div class="notif-line"></div>
-                    </div>
+                  <div class="notif-body">
+                    <div class="notif-thumb">📋</div>
+                    <div class="notif-preview">Trending: Meal Planner<br>AI prompt + tags</div>
                   </div>
                 </div>
-                <div class="phone-badge"></div>
+                <div class="phone-badge">FRESH</div>
               </div>
             </div>
           </div>
@@ -2165,23 +2229,23 @@
           <div class="card-visual-area">
             <div class="mockup-tablet">
               <div class="tablet-screen">
-                <div class="path-row">
-                  <div class="path-box">
-                    <div class="path-icon"></div>
-                    <div class="path-label"></div>
+                <div class="tablet-paths">
+                  <div class="path-card">
+                    <span class="path-emoji">🎯</span>
+                    <span class="path-name">Audience</span>
                   </div>
-                  <div class="path-box active">
-                    <div class="path-icon"></div>
-                    <div class="path-label"></div>
+                  <div class="path-card active">
+                    <span class="path-emoji">📦</span>
+                    <span class="path-name">Bundle</span>
                   </div>
-                  <div class="path-box">
-                    <div class="path-icon"></div>
-                    <div class="path-label"></div>
+                  <div class="path-card">
+                    <span class="path-emoji">📱</span>
+                    <span class="path-name">Social</span>
                   </div>
                 </div>
-                <div class="progress-row">
-                  <div class="progress-fill"></div>
-                  <div class="progress-end"></div>
+                <div class="tablet-progress">
+                  <div class="progress-bar"><div class="progress-fill"></div></div>
+                  <span class="progress-goal">$5K</span>
                 </div>
               </div>
             </div>
@@ -2201,18 +2265,18 @@
         <article class="feature-card">
           <div class="card-visual-area">
             <div class="mockup-imac">
-              <div class="imac-body">
+              <div class="imac-frame">
                 <div class="imac-screen">
-                  <div class="imac-dashboard">
-                    <div class="dash-header">
-                      <div class="dash-label"></div>
-                      <div class="dash-amount"></div>
+                  <div class="imac-content">
+                    <div class="dashboard-header">
+                      <span class="dash-label">REVENUE</span>
+                      <span class="dash-value">$10,847</span>
                     </div>
-                    <div class="dash-chart">
-                      <div class="chart-bar" style="height: 40%"></div>
-                      <div class="chart-bar" style="height: 55%"></div>
-                      <div class="chart-bar" style="height: 70%"></div>
-                      <div class="chart-bar highlight" style="height: 100%"></div>
+                    <div class="dashboard-chart">
+                      <div class="chart-bar"></div>
+                      <div class="chart-bar"></div>
+                      <div class="chart-bar"></div>
+                      <div class="chart-bar"></div>
                     </div>
                   </div>
                 </div>
@@ -2237,27 +2301,31 @@
         <article class="feature-card">
           <div class="card-visual-area">
             <div class="mockup-laptop">
-              <div class="laptop-lid">
+              <div class="laptop-top">
                 <div class="laptop-screen">
-                  <div class="zoom-ui">
-                    <div class="zoom-header">
-                      <div class="zoom-title"></div>
-                      <div class="zoom-count"></div>
+                  <div class="zoom-container">
+                    <div class="zoom-top">
+                      <span class="zoom-title">Live Session</span>
+                      <span class="zoom-count">47 watching</span>
                     </div>
-                    <div class="zoom-video">
-                      <div class="video-avatar">
-                        <div class="live-dot"></div>
+                    <div class="zoom-main">
+                      <div class="zoom-avatar">
+                        B
+                        <div class="live-badge">
+                          <span class="live-dot"></span>
+                          <span class="live-text">LIVE</span>
+                        </div>
                       </div>
                     </div>
                     <div class="zoom-chat">
-                      <div class="chat-dot"></div>
-                      <div class="chat-line"></div>
+                      <span class="chat-indicator"></span>
+                      <span class="chat-preview"></span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="laptop-base">
-                <div class="base-notch"></div>
+              <div class="laptop-bottom">
+                <div class="laptop-notch"></div>
               </div>
             </div>
           </div>
@@ -2277,8 +2345,8 @@
           <div class="card-visual-area">
             <div class="mockup-canva">
               <div class="canva-header">
-                <div class="canva-logo"></div>
-                <div class="canva-title"></div>
+                <div class="canva-logo">C</div>
+                <span class="canva-title">My Templates</span>
               </div>
               <div class="canva-grid">
                 <div class="canva-item"></div>
@@ -2288,7 +2356,7 @@
                 <div class="canva-item featured"></div>
                 <div class="canva-item"></div>
               </div>
-              <div class="canva-badge"></div>
+              <div class="canva-badge">TOP SELLER</div>
             </div>
           </div>
         <div class="card-content">
@@ -2305,45 +2373,45 @@
         <!-- Card 6: My Traffic Loop -->
         <article class="feature-card">
           <div class="card-visual-area">
-            <div class="mockup-split">
-              <div class="split-panel">
-                <div class="panel-header">
-                  <div class="panel-icon pinterest"></div>
-                  <div class="panel-label"></div>
+            <div class="mockup-analytics">
+              <div class="analytics-panel">
+                <div class="panel-head">
+                  <div class="panel-icon pinterest">P</div>
+                  <span class="panel-name">Pinterest</span>
                 </div>
-                <div class="metric-row">
-                  <div class="metric-label"></div>
-                  <div class="metric-value"></div>
+                <div class="stat-row">
+                  <span class="stat-label">Impressions</span>
+                  <span class="stat-value teal">+847%</span>
                 </div>
-                <div class="metric-row">
-                  <div class="metric-label"></div>
-                  <div class="metric-value coral"></div>
+                <div class="stat-row">
+                  <span class="stat-label">Clicks</span>
+                  <span class="stat-value coral">2.4K</span>
                 </div>
-                <div class="mini-chart">
-                  <div class="mini-bar" style="height: 40%"></div>
-                  <div class="mini-bar" style="height: 60%"></div>
-                  <div class="mini-bar" style="height: 75%"></div>
-                  <div class="mini-bar active" style="height: 100%"></div>
+                <div class="mini-graph">
+                  <div class="graph-bar" style="height: 35%"></div>
+                  <div class="graph-bar" style="height: 55%"></div>
+                  <div class="graph-bar" style="height: 75%"></div>
+                  <div class="graph-bar active" style="height: 100%"></div>
                 </div>
               </div>
-              <div class="split-panel">
-                <div class="panel-header">
-                  <div class="panel-icon email"></div>
-                  <div class="panel-label"></div>
+              <div class="analytics-panel">
+                <div class="panel-head">
+                  <div class="panel-icon email">@</div>
+                  <span class="panel-name">Email</span>
                 </div>
-                <div class="metric-row">
-                  <div class="metric-label"></div>
-                  <div class="metric-value"></div>
+                <div class="stat-row">
+                  <span class="stat-label">Open Rate</span>
+                  <span class="stat-value teal">42%</span>
                 </div>
-                <div class="metric-row">
-                  <div class="metric-label"></div>
-                  <div class="metric-value coral"></div>
+                <div class="stat-row">
+                  <span class="stat-label">Click Rate</span>
+                  <span class="stat-value coral">8.2%</span>
                 </div>
-                <div class="mini-chart">
-                  <div class="mini-bar" style="height: 60%"></div>
-                  <div class="mini-bar active" style="height: 90%"></div>
-                  <div class="mini-bar" style="height: 50%"></div>
-                  <div class="mini-bar" style="height: 70%"></div>
+                <div class="mini-graph">
+                  <div class="graph-bar" style="height: 50%"></div>
+                  <div class="graph-bar active" style="height: 90%"></div>
+                  <div class="graph-bar" style="height: 45%"></div>
+                  <div class="graph-bar" style="height: 70%"></div>
                 </div>
               </div>
             </div>
@@ -2485,23 +2553,27 @@
     </div>
   </section>
 
-    <!-- SECTION 3: TESTIMONIALS - Masonry Grid -->
+    <!-- SECTION 3: TESTIMONIALS -->
   <div class="testimonial-masonry">
-    <div class="masonry-grid">
-      <div class="masonry-item tall">
-        <img src="https://i.imgur.com/YcO5jYM.png" alt="Going all in - 8000 sales">
+    <div class="masonry-wrapper">
+      <div class="masonry-col">
+        <div class="masonry-item">
+          <img src="https://i.imgur.com/YcO5jYM.png" alt="Going all in - 8000 sales">
+        </div>
+        <div class="masonry-item">
+          <img src="https://i.imgur.com/GHXVqbr.png" alt="Great day">
+        </div>
+        <div class="masonry-item">
+          <img src="https://i.imgur.com/T3CiReh.png" alt="100 Sales">
+        </div>
       </div>
-      <div class="masonry-item medium">
-        <img src="https://i.imgur.com/NfMKFk5.png" alt="1000 sales">
-      </div>
-      <div class="masonry-item short">
-        <img src="https://i.imgur.com/GHXVqbr.png" alt="Great day">
-      </div>
-      <div class="masonry-item tall">
-        <img src="https://i.imgur.com/hnKzPUy.png" alt="34 items ordered">
-      </div>
-      <div class="masonry-item medium">
-        <img src="https://i.imgur.com/T3CiReh.png" alt="100 Sales">
+      <div class="masonry-col">
+        <div class="masonry-item">
+          <img src="https://i.imgur.com/NfMKFk5.png" alt="1000 sales">
+        </div>
+        <div class="masonry-item">
+          <img src="https://i.imgur.com/hnKzPUy.png" alt="34 items ordered">
+        </div>
       </div>
     </div>
   </div>
