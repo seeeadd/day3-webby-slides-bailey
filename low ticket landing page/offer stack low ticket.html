@@ -249,7 +249,7 @@
       background: rgba(250, 248, 245, 0.5);
     }
 
-    /* Label Pill (CORE, BONUS) */
+    /* Label Pill (CORE, PATHS, etc.) */
     #offer-stack .card-label {
       font-family: 'Satoshi', sans-serif;
       font-size: 10px;
@@ -266,10 +266,52 @@
       color: #FFFFFF;
     }
 
-    #offer-stack .card-label.bonus {
+    #offer-stack .card-label.paths {
+      background: rgba(212, 175, 55, 0.15);
+      color: #B8860B;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    #offer-stack .card-label.resource {
       background: rgba(29, 107, 107, 0.1);
       color: #1D6B6B;
       border: 1px solid rgba(29, 107, 107, 0.2);
+    }
+
+    #offer-stack .card-label.traffic {
+      background: rgba(224, 122, 95, 0.1);
+      color: #D06A50;
+      border: 1px solid rgba(224, 122, 95, 0.2);
+    }
+
+    #offer-stack .card-label.build {
+      background: rgba(107, 142, 107, 0.15);
+      color: #4A5D4A;
+      border: 1px solid rgba(107, 142, 107, 0.3);
+    }
+
+    #offer-stack .card-label.vault {
+      background: rgba(139, 129, 120, 0.12);
+      color: #5C4827;
+      border: 1px solid rgba(139, 129, 120, 0.25);
+    }
+
+    #offer-stack .card-label.daily {
+      background: rgba(212, 175, 55, 0.12);
+      color: #8B7355;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    #offer-stack .card-label.coaching {
+      background: rgba(29, 107, 107, 0.12);
+      color: #1D6B6B;
+      border: 1px solid rgba(29, 107, 107, 0.25);
+    }
+
+    #offer-stack .card-label.behind {
+      background: rgba(92, 72, 39, 0.1);
+      color: #5C4827;
+      border: 1px solid rgba(92, 72, 39, 0.2);
     }
 
     /* Card Title */
@@ -320,7 +362,7 @@
     }
 
     #offer-stack .offer-card.expanded .card-body {
-      max-height: 800px;
+      max-height: 1000px;
       padding: 0 28px 28px;
     }
 
@@ -366,7 +408,7 @@
     }
 
     /* ==========================================
-       FEATURE LIST - Hook:Clarifier Format
+       FEATURE LIST - Clean bullets
        ========================================== */
     #offer-stack .feature-list {
       list-style: none;
@@ -411,13 +453,11 @@
     }
 
     /* ==========================================
-       CARD FOOTER - Use it when + Stat
+       CARD FOOTER - Outcome + Stat
        ========================================== */
     #offer-stack .card-footer {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
       gap: 16px;
       padding-top: 20px;
       border-top: 1px solid rgba(45, 42, 38, 0.06);
@@ -429,6 +469,22 @@
       font-weight: 400;
       color: #9B9590;
       font-style: italic;
+    }
+
+    #offer-stack .card-outcome {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #2D2A26;
+      line-height: 1.5;
+    }
+
+    #offer-stack .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
     }
 
     #offer-stack .card-stat {
@@ -642,18 +698,20 @@
     <div class="hero-area">
       <div class="eyebrow-pill">Everything You Get</div>
       <h2 class="hero-headline">The <em>Complete System,</em> Delivered</h2>
-      <p class="hero-subline">Your all-in-one stack for building a profitable digital product shop. Blueprints, templates, calls, and everything you need to start selling.</p>
+      <p class="hero-subline">Your all-in-one stack for building a profitable digital product shop. My actual tools, my daily research, and direct access to me.</p>
     </div>
 
     <!-- OFFER CARDS LIST -->
     <div class="cards-list">
 
-      <!-- CARD 1: CORE - Featured & Expanded -->
+      <!-- ========================================
+           CARD 1: CORE - My $10K Profit Formula
+           ======================================== -->
       <article class="offer-card featured expanded">
         <div class="card-header" onclick="toggleCard(this.parentElement)">
           <span class="card-label core">Core</span>
           <h3 class="card-title">My $10K Etsy Digital Product Profit Formula</h3>
-          <span class="best-for">Best for: Getting started</span>
+          <span class="best-for">Best for: Getting started right</span>
           <div class="expand-icon">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M2 4L6 8L10 4"/>
@@ -663,48 +721,74 @@
         <div class="card-body">
           <div class="card-body-inner">
             <div class="card-content">
-              <p class="card-oneliner">This is what's actually running my shop right now. Not something I learned from a course. I built this from 4 years of figuring out what works.</p>
+              <p class="card-oneliner">This is what's actually running my shop right now. Not something I learned from a course. I built this from 4 years of figuring out what works and what's a waste of time.</p>
               <ul class="feature-list">
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Never run out of product ideas</strong> <span>with my pipeline system</span></div>
+                  <div>The product pipeline I use so I never run out of ideas</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Skip 2 years of traffic guesswork</strong> <span>with my proven loop</span></div>
+                  <div>My traffic loop that took 2 years to figure out (you get it in an afternoon)</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Use my exact listing structure</strong> <span>behind every best-seller</span></div>
+                  <div>The listing structure behind my best-sellers, the one I've never shared publicly</div>
                 </li>
               </ul>
               <div class="card-footer">
                 <span class="use-it-when">Use it when: you want the thing that's actually working right now.</span>
-                <span class="card-stat">4 years refined</span>
+                <p class="card-outcome">Same setup I run. Same decisions. Same structure.</p>
+                <div class="footer-row">
+                  <span class="card-stat">4 years of refinement</span>
+                </div>
               </div>
             </div>
             <div class="card-graphic">
-              <!-- Dashboard SVG -->
+              <!-- Bailey's Actual Dashboard SVG -->
               <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="20" y="30" width="240" height="160" rx="12" fill="#2D2A26"/>
-                <circle cx="40" cy="46" r="5" fill="#E07A5F"/>
-                <circle cx="56" cy="46" r="5" fill="#D4AF37"/>
-                <circle cx="72" cy="46" r="5" fill="#1D6B6B"/>
-                <rect x="28" y="60" width="224" height="122" rx="8" fill="#FFFFFF"/>
-                <rect x="40" y="72" width="65" height="40" rx="6" fill="#FAF8F5"/>
-                <text x="48" y="88" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Sales</text>
-                <text x="48" y="104" font-family="Satoshi, sans-serif" font-size="14" font-weight="700" fill="#2D2A26">10,247</text>
-                <rect x="115" y="72" width="65" height="40" rx="6" fill="#FAF8F5"/>
-                <text x="123" y="88" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Revenue</text>
-                <text x="123" y="104" font-family="Satoshi, sans-serif" font-size="14" font-weight="700" fill="#1D6B6B">$87.4K</text>
-                <rect x="190" y="72" width="55" height="40" rx="6" fill="#FAF8F5"/>
-                <text x="198" y="88" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Rating</text>
-                <text x="198" y="104" font-family="Satoshi, sans-serif" font-size="14" font-weight="700" fill="#E07A5F">4.9 ★</text>
-                <rect x="40" y="120" width="200" height="55" rx="6" fill="#FAF8F5"/>
-                <polyline points="55,160 80,150 105,155 130,140 155,145 180,130 205,135 225,125" stroke="#1D6B6B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="225" cy="125" r="4" fill="#E07A5F"/>
-                <rect x="60" y="210" width="160" height="50" rx="8" fill="#FFFDFB" stroke="#E8E2D9"/>
-                <text x="140" y="240" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A" text-anchor="middle">Bailey's actual dashboard</text>
+                <!-- Browser Frame -->
+                <rect x="16" y="24" width="248" height="180" rx="12" fill="#2D2A26"/>
+                <circle cx="34" cy="40" r="5" fill="#E07A5F"/>
+                <circle cx="50" cy="40" r="5" fill="#D4AF37"/>
+                <circle cx="66" cy="40" r="5" fill="#1D6B6B"/>
+
+                <!-- Dashboard Content Area -->
+                <rect x="24" y="54" width="232" height="142" rx="8" fill="#FFFFFF"/>
+
+                <!-- Stats Row -->
+                <rect x="34" y="64" width="68" height="44" rx="6" fill="#FAF8F5"/>
+                <text x="42" y="78" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Sales</text>
+                <text x="42" y="96" font-family="Satoshi, sans-serif" font-size="15" font-weight="700" fill="#2D2A26">10,247</text>
+
+                <rect x="110" y="64" width="68" height="44" rx="6" fill="#FAF8F5"/>
+                <text x="118" y="78" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Revenue</text>
+                <text x="118" y="96" font-family="Satoshi, sans-serif" font-size="15" font-weight="700" fill="#1D6B6B">$87.4K</text>
+
+                <rect x="186" y="64" width="60" height="44" rx="6" fill="#FAF8F5"/>
+                <text x="194" y="78" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Rating</text>
+                <text x="194" y="96" font-family="Satoshi, sans-serif" font-size="15" font-weight="700" fill="#E07A5F">4.9 ★</text>
+
+                <!-- Graph Area -->
+                <rect x="34" y="116" width="212" height="70" rx="6" fill="#FAF8F5"/>
+                <polyline points="50,165 80,155 110,158 140,142 170,148 200,132 230,138" stroke="#1D6B6B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="230" cy="138" r="5" fill="#E07A5F"/>
+
+                <!-- Hand-drawn circle annotation -->
+                <ellipse cx="118" cy="84" rx="42" ry="28" stroke="#E07A5F" stroke-width="2" stroke-dasharray="4 3" fill="none" transform="rotate(-3 118 84)"/>
+
+                <!-- Arrow pointing to revenue -->
+                <path d="M165 75 L175 68" stroke="#E07A5F" stroke-width="2" stroke-linecap="round"/>
+                <path d="M175 68 L172 74 L178 72" fill="#E07A5F"/>
+
+                <!-- Sticky Note -->
+                <rect x="54" y="212" width="172" height="48" rx="4" fill="#FDF6E3" stroke="#D4AF37" stroke-width="1"/>
+                <text x="140" y="232" font-family="Satoshi, sans-serif" font-size="10" fill="#5C4827" text-anchor="middle" font-style="italic">"this is what consistent</text>
+                <text x="140" y="246" font-family="Satoshi, sans-serif" font-size="10" fill="#5C4827" text-anchor="middle" font-style="italic">looks like"</text>
+
+                <!-- Small Bailey indicator -->
+                <circle cx="240" cy="44" r="8" fill="#FAF8F5" stroke="#E07A5F" stroke-width="1.5"/>
+                <text x="240" y="47" font-family="Satoshi, sans-serif" font-size="7" fill="#E07A5F" text-anchor="middle">B</text>
               </svg>
             </div>
           </div>
@@ -713,12 +797,14 @@
 
       <div class="hairline-divider"></div>
 
-      <!-- CARD 2: 3 Paths - Collapsed -->
+      <!-- ========================================
+           CARD 2: PATHS - 3 Paths to $5K/Month
+           ======================================== -->
       <article class="offer-card">
         <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label bonus">Bonus</span>
-          <h3 class="card-title">3 Paths to $5K/Month with AI Designs</h3>
-          <span class="best-for">Best for: Picking your strategy</span>
+          <span class="card-label paths">Paths</span>
+          <h3 class="card-title">3 Paths to $5K/Month with AI Designs on Etsy</h3>
+          <span class="best-for">Best for: Picking your lane</span>
           <div class="expand-icon">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M2 4L6 8L10 4"/>
@@ -728,36 +814,41 @@
         <div class="card-body">
           <div class="card-body-inner">
             <div class="card-content">
-              <p class="card-oneliner">Three routes I've watched work over and over. Pick the one that fits and stop reinventing everything.</p>
+              <p class="card-oneliner">These are the three routes I've watched work over and over in my shop and in my students' shops. I mapped them out so you can pick the one that fits and stop reinventing everything.</p>
               <ul class="feature-list">
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Audience Path:</strong> <span>build your first profitable niche</span></div>
+                  <div><strong>Audience Path:</strong> The exact way I built my first profitable niche</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Bundle Path:</strong> <span>2x your order value without more traffic</span></div>
+                  <div><strong>Bundle Path:</strong> How I 2x'd my average order value without more traffic</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Social Path:</strong> <span>pull traffic from outside Etsy</span></div>
+                  <div><strong>Social Path:</strong> The method my top students use to pull traffic from outside Etsy</div>
                 </li>
               </ul>
               <div class="card-footer">
-                <span class="use-it-when">Use it when: you're tired of piecing together random advice.</span>
-                <span class="card-stat">3 proven paths</span>
+                <span class="use-it-when">Use it when: you're tired of piecing together random advice that doesn't connect.</span>
+                <p class="card-outcome">One lane, locked in. I've already proven each one works.</p>
+                <div class="footer-row">
+                  <span class="card-stat">3 paths, pick one or stack all</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- CARD 3: Tools Library - Collapsed -->
+      <!-- ========================================
+           CARD 3: RESOURCE - Full A-Z Tools Library
+           ======================================== -->
       <article class="offer-card">
         <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label bonus">Bonus</span>
+          <span class="card-label resource">Resource</span>
           <h3 class="card-title">Full A-Z Tools Library</h3>
-          <span class="best-for">Best for: Skipping trial & error</span>
+          <span class="best-for">Best for: Skipping trial and error</span>
           <div class="expand-icon">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M2 4L6 8L10 4"/>
@@ -767,34 +858,39 @@
         <div class="card-body">
           <div class="card-body-inner">
             <div class="card-content">
-              <p class="card-oneliner">My actual toolkit. The prompts, docs, and SOPs from my business backend.</p>
+              <p class="card-oneliner">This is my actual toolkit. The prompts I use. The docs I built. The SOPs I follow. I'm handing you the backend of my business.</p>
               <ul class="feature-list">
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Use my personal prompts</strong> <span>that generate real products</span></div>
+                  <div>My personal prompts, the ones that generate my real products</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Copy my listing formats</strong> <span>refined over 10,000+ sales</span></div>
+                  <div>The listing formats I've refined over 4 years and 10,000+ sales</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Access internal docs</strong> <span>never released publicly</span></div>
+                  <div>Internal docs I've never released outside my paid programs</div>
                 </li>
               </ul>
               <div class="card-footer">
-                <span class="use-it-when">Use it when: you want to skip years of trial and error.</span>
-                <span class="card-stat">10,000+ sales behind these</span>
+                <span class="use-it-when">Use it when: you want to skip the years of trial and error and just use what's already working.</span>
+                <p class="card-outcome">My actual tools in your hands. The same ones I use every day.</p>
+                <div class="footer-row">
+                  <span class="card-stat">10,000+ sales behind these</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- CARD 4: Pinterest - Collapsed -->
+      <!-- ========================================
+           CARD 4: TRAFFIC - Pinterest Profit Formula
+           ======================================== -->
       <article class="offer-card">
         <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label bonus">Bonus</span>
+          <span class="card-label traffic">Traffic</span>
           <h3 class="card-title">Pinterest Profit Formula</h3>
           <span class="best-for">Best for: Free traffic</span>
           <div class="expand-icon">
@@ -806,34 +902,39 @@
         <div class="card-body">
           <div class="card-body-inner">
             <div class="card-content">
-              <p class="card-oneliner">A full year of cracking Pinterest for digital products. Board structure, pin approach, posting rhythm.</p>
+              <p class="card-oneliner">I spent a full year cracking Pinterest for digital products. This is exactly how I set it up: the board structure, the pin approach, the posting rhythm. All of it.</p>
               <ul class="feature-list">
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Set up boards that feed sales</strong> <span>every single week</span></div>
+                  <div>My exact board setup that feeds my Etsy shop every week</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Use my tested pin formula</strong> <span>that actually converts</span></div>
+                  <div>The pin formula I tested until it actually converted</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Follow my 30-min weekly routine</strong> <span>I still use today</span></div>
+                  <div>The 30-min weekly routine I still use today</div>
                 </li>
               </ul>
               <div class="card-footer">
-                <span class="use-it-when">Use it when: you want Pinterest traffic without a year of figuring it out.</span>
-                <span class="card-stat">142K monthly views</span>
+                <span class="use-it-when">Use it when: you want Pinterest traffic without spending a year figuring out what works.</span>
+                <p class="card-outcome">My Pinterest setup, copied. Already built, already working.</p>
+                <div class="footer-row">
+                  <span class="card-stat">142K monthly views</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- CARD 5: Summer Build - Collapsed -->
+      <!-- ========================================
+           CARD 5: BUILD - Summer Hybrid Shop Build
+           ======================================== -->
       <article class="offer-card">
         <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label bonus">Bonus</span>
+          <span class="card-label build">Build</span>
           <h3 class="card-title">NEW Summer Hybrid Shop Build</h3>
           <span class="best-for">Best for: Learning by watching</span>
           <div class="expand-icon">
@@ -845,34 +946,39 @@
         <div class="card-body">
           <div class="card-body-inner">
             <div class="card-content">
-              <p class="card-oneliner">I'm building a brand new shop this summer and you're watching every decision live.</p>
+              <p class="card-oneliner">I'm building a brand new shop this summer and you're watching every decision live. The niche selection, the product approach, the launch. Nothing edited out.</p>
               <ul class="feature-list">
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Watch me pick a niche</strong> <span>and hear exactly why</span></div>
+                  <div>Watch me pick a niche in real-time and hear why I'm choosing it</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>See how I structure listings</strong> <span>for Q4 success</span></div>
+                  <div>See exactly how I create products and structure listings for Q4</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Get something you can't find</strong> <span>anywhere else</span></div>
+                  <div>Get access to a build you literally cannot find anywhere else because it's happening now</div>
                 </li>
               </ul>
               <div class="card-footer">
                 <span class="use-it-when">Use it when: you want to build alongside me instead of guessing alone.</span>
-                <span class="card-stat">LIVE, building now</span>
+                <p class="card-outcome">A repeatable model pulled directly from a live, working build.</p>
+                <div class="footer-row">
+                  <span class="card-stat">LIVE, building now</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- CARD 6: PLR Products - Collapsed -->
+      <!-- ========================================
+           CARD 6: VAULT - 150+ PLR Products
+           ======================================== -->
       <article class="offer-card">
         <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label bonus">Bonus</span>
+          <span class="card-label vault">Vault</span>
           <h3 class="card-title">150+ PLR Products (Resell-Ready)</h3>
           <span class="best-for">Best for: Fast inventory</span>
           <div class="expand-icon">
@@ -884,34 +990,39 @@
         <div class="card-body">
           <div class="card-body-inner">
             <div class="card-content">
-              <p class="card-oneliner">Curated specifically for niches and styles working right now on Etsy. Not random bundle files.</p>
+              <p class="card-oneliner">These aren't random PLR files from some bundle. I curated these specifically for the niches and styles that are working right now on Etsy.</p>
               <ul class="feature-list">
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Products selected for what's selling</strong> <span>right now</span></div>
+                  <div>Products selected based on what's actually selling right now</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Matches the aesthetic</strong> <span>buyers are paying for in 2024</span></div>
+                  <div>Designed to match the aesthetic buyers are paying for in 2024</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Exclusive to this membership</strong> <span>not flooding the market</span></div>
+                  <div>Exclusive to this membership, you won't see these flooding the market</div>
                 </li>
               </ul>
               <div class="card-footer">
-                <span class="use-it-when">Use it when: you need quality inventory fast.</span>
-                <span class="card-stat">200+ designs ready</span>
+                <span class="use-it-when">Use it when: you need quality inventory fast, without competing against 10,000 identical listings.</span>
+                <p class="card-outcome">Products I hand-picked, ready to list. Quality stuff that actually sells.</p>
+                <div class="footer-row">
+                  <span class="card-stat">200+ designs ready</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- CARD 7: Daily Drops - Collapsed -->
+      <!-- ========================================
+           CARD 7: DAILY - Daily Trending Products
+           ======================================== -->
       <article class="offer-card">
         <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label bonus">Bonus</span>
+          <span class="card-label daily">Daily</span>
           <h3 class="card-title">The Daily Trending Products & Prompts</h3>
           <span class="best-for">Best for: Never guessing what to list</span>
           <div class="expand-icon">
@@ -923,34 +1034,39 @@
         <div class="card-body">
           <div class="card-body-inner">
             <div class="card-content">
-              <p class="card-oneliner">Every day, I drop what's trending with the prompt to make it and the SEO to list it.</p>
+              <p class="card-oneliner">Every day, I drop what's trending with the prompt to make it and the SEO to list it. This comes from my daily research. Same info I'm acting on, same day.</p>
               <ul class="feature-list">
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Never guess what to list</strong> <span>with daily trends + prompts</span></div>
+                  <div>Trends I'm tracking personally, from my own research</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>List faster</strong> <span>using my exact titles + tags</span></div>
+                  <div>Prompts I've tested and refined so the output actually looks good</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Move on trends</strong> <span>the same day I do</span></div>
+                  <div>SEO pulled from my own keyword research</div>
                 </li>
               </ul>
               <div class="card-footer">
-                <span class="use-it-when">Use it when: you want to move on the same trends I'm moving on.</span>
-                <span class="card-stat">365 days of ideas</span>
+                <span class="use-it-when">Use it when: you want to move on the same trends I'm moving on, at the same time.</span>
+                <p class="card-outcome">Insider info. Fresh, current, from my desk.</p>
+                <div class="footer-row">
+                  <span class="card-stat">365 days of ideas</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- CARD 8: Coaching Calls - Collapsed -->
+      <!-- ========================================
+           CARD 8: COACHING - Bi-Weekly Coaching Calls
+           ======================================== -->
       <article class="offer-card">
         <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label bonus">Bonus</span>
+          <span class="card-label coaching">Coaching</span>
           <h3 class="card-title">Bi-Weekly Group Coaching Calls</h3>
           <span class="best-for">Best for: Direct answers</span>
           <div class="expand-icon">
@@ -962,36 +1078,41 @@
         <div class="card-body">
           <div class="card-body-inner">
             <div class="card-content">
-              <p class="card-oneliner">Direct access to me. Not a team. Not a moderator. You bring your shop, I give you answers.</p>
+              <p class="card-oneliner">This is direct access to me. Not a team. Not a moderator. You bring your shop, I give you answers.</p>
               <ul class="feature-list">
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Ask me anything</strong> <span>I'm on every call</span></div>
+                  <div>Ask me anything, I'm the one on the call, every time</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Get my eyes on your work</strong> <span>listings, niches, pricing</span></div>
+                  <div>Get my eyes on your listings, your niches, your pricing</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Real feedback</strong> <span>from someone selling every day</span></div>
+                  <div>Real feedback from someone who's actively selling every day</div>
                 </li>
               </ul>
               <div class="card-footer">
                 <span class="use-it-when">Use it when: you want answers from the person who built the thing.</span>
-                <span class="card-stat">24 calls per year</span>
+                <p class="card-outcome">Coached by me. Directly. No middleman.</p>
+                <div class="footer-row">
+                  <span class="card-stat">24 calls per year</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- CARD 9: Secret Podcast - Collapsed -->
+      <!-- ========================================
+           CARD 9: BEHIND THE SCENES - Secret Podcast
+           ======================================== -->
       <article class="offer-card">
         <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label bonus">Bonus</span>
+          <span class="card-label behind">Behind the Scenes</span>
           <h3 class="card-title">My Secret Podcast</h3>
-          <span class="best-for">Best for: Behind the scenes</span>
+          <span class="best-for">Best for: The unfiltered version</span>
           <div class="expand-icon">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M2 4L6 8L10 4"/>
@@ -1001,24 +1122,27 @@
         <div class="card-body">
           <div class="card-body-inner">
             <div class="card-content">
-              <p class="card-oneliner">The stuff I don't post publicly. Real decisions, experiments, what's working right now.</p>
+              <p class="card-oneliner">This is the stuff I don't post publicly. The real decisions. The experiments. What's working in my shop right now. I keep this for members only because it's too specific to give away.</p>
               <ul class="feature-list">
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Hear what I'm testing</strong> <span>changing, doubling down on</span></div>
+                  <div>Behind-the-scenes of what I'm testing, changing, doubling down on</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>Thoughts I don't share publicly</strong> <span>on YouTube or Instagram</span></div>
+                  <div>Thoughts I'm not sharing on YouTube or Instagram</div>
                 </li>
                 <li>
                   <span class="bullet-dot"></span>
-                  <div><strong>The unfiltered version</strong> <span>of how I think about my business</span></div>
+                  <div>The unfiltered version of how I actually think about my business</div>
                 </li>
               </ul>
               <div class="card-footer">
                 <span class="use-it-when">Use it when: you want to know what's really happening behind the scenes.</span>
-                <span class="card-stat">55 episodes deep</span>
+                <p class="card-outcome">In the room with me. Hearing what my public audience doesn't.</p>
+                <div class="footer-row">
+                  <span class="card-stat">55 episodes deep</span>
+                </div>
               </div>
             </div>
           </div>
