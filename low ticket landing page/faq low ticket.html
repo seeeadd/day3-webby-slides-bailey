@@ -1,62 +1,88 @@
 <!-- FAQ Section - Bailey's 90-Day Etsy Empire Accelerator -->
-<!-- Complete Premium Rebuild - Warm Dusk Theme -->
+<!-- FULL-BLEED Premium Rebuild - Warm Dusk Theme -->
+<!-- "whoever made this actually gives a shit" -->
 
 <section class="faq-section" id="faq">
-  <!-- Coral glow behind left column -->
-  <div class="faq-left-glow"></div>
+  <!-- Background layers for depth -->
+  <div class="faq-bg-grain"></div>
+  <div class="faq-bg-glow-teal"></div>
+  <div class="faq-bg-glow-coral"></div>
+  <div class="faq-bg-glow-gold"></div>
+
+  <!-- Decorative lines -->
+  <div class="faq-deco-line faq-deco-line-1"></div>
+  <div class="faq-deco-line faq-deco-line-2"></div>
 
   <div class="faq-container">
-    <!-- Left Column: Header + CTA Card -->
+    <!-- Left Column -->
     <div class="faq-left-column">
+      <!-- Eyebrow -->
       <div class="faq-eyebrow">
         <span class="eyebrow-dot"></span>
         <span class="eyebrow-text">FAQs</span>
       </div>
 
+      <!-- Headline with flourish -->
       <div class="faq-headline-wrapper">
-        <svg class="headline-flourish" viewBox="0 0 150 100" aria-hidden="true">
-          <path d="M10,80 Q40,20 80,50 T140,30"
-                stroke="#D4A853"
-                stroke-width="2"
+        <svg class="headline-flourish" viewBox="0 0 180 120" aria-hidden="true">
+          <path d="M15,100 Q50,30 100,60 T170,35"
+                stroke="url(#goldGradient)"
+                stroke-width="2.5"
                 fill="none"
-                stroke-linecap="round"
-                opacity="0.25"/>
-          <path d="M20,90 Q60,40 100,60 T145,45"
-                stroke="#D4A853"
+                stroke-linecap="round"/>
+          <path d="M25,110 Q70,50 120,70 T175,50"
+                stroke="url(#goldGradient)"
                 stroke-width="1.5"
                 fill="none"
                 stroke-linecap="round"
-                opacity="0.15"/>
+                opacity="0.5"/>
+          <path d="M5,95 Q35,45 75,55 T130,25"
+                stroke="url(#goldGradient)"
+                stroke-width="1"
+                fill="none"
+                stroke-linecap="round"
+                opacity="0.3"/>
+          <defs>
+            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#D4A853" stop-opacity="0.4"/>
+              <stop offset="50%" stop-color="#E8C477" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#D4A853" stop-opacity="0.3"/>
+            </linearGradient>
+          </defs>
         </svg>
         <h2 class="faq-headline">Frequently asked<br/>questions</h2>
+        <div class="headline-underline"></div>
       </div>
 
-      <!-- Still Have a Question Card -->
+      <!-- Help Card -->
       <div class="help-card-wrapper">
         <div class="help-card-glow"></div>
         <div class="help-card">
           <div class="help-card-shine"></div>
+          <div class="help-card-inner-glow"></div>
 
           <h3 class="help-card-title">Still have a question?</h3>
           <p class="help-card-text">Can't find the answer? Email us and we'll get back to you.</p>
 
           <a href="mailto:support@baileyvann.com" class="help-card-button">
-            <span>Email us</span>
-            <svg class="button-arrow" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
-              <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <span class="button-text">Email us</span>
+            <svg class="button-arrow" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
+            <div class="button-glow"></div>
           </a>
 
-          <!-- Hand-drawn arrow pointing to button -->
-          <svg class="help-arrow" width="50" height="35" viewBox="0 0 50 35" aria-hidden="true">
-            <path d="M5,30 Q25,5 45,18"
+          <!-- Hand-drawn arrow -->
+          <svg class="help-arrow" width="60" height="45" viewBox="0 0 60 45" aria-hidden="true">
+            <path d="M8,38 Q30,8 52,22"
                   stroke="#D4A853"
-                  stroke-width="1.5"
+                  stroke-width="2"
                   fill="none"
-                  stroke-linecap="round"/>
-            <path d="M40,14 L45,18 L40,23"
+                  stroke-linecap="round"
+                  stroke-dasharray="4,4"/>
+            <path d="M46,17 L52,22 L46,28"
                   stroke="#D4A853"
-                  stroke-width="1.5"
+                  stroke-width="2"
                   fill="none"
                   stroke-linecap="round"
                   stroke-linejoin="round"/>
@@ -65,15 +91,16 @@
       </div>
     </div>
 
-    <!-- Right Column: Accordion Stack -->
+    <!-- Right Column: Accordion -->
     <div class="faq-right-column">
       <div class="faq-accordion-wrapper">
-        <div class="accordion-glow"></div>
+        <div class="accordion-ambient-glow"></div>
         <div class="faq-accordion" role="list">
 
-          <!-- FAQ Item 1 -->
+          <!-- FAQ 1 -->
           <div class="faq-item" data-number="01" data-expanded="false">
             <span class="faq-number">01</span>
+            <div class="faq-item-shine"></div>
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-question-1">
               <span class="faq-question-text">Is this beginner friendly?</span>
               <span class="faq-indicator" aria-hidden="true">
@@ -90,9 +117,10 @@
             </div>
           </div>
 
-          <!-- FAQ Item 2 -->
+          <!-- FAQ 2 -->
           <div class="faq-item" data-number="02" data-expanded="false">
             <span class="faq-number">02</span>
+            <div class="faq-item-shine"></div>
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2">
               <span class="faq-question-text">If I don't know what to sell, where do I start?</span>
               <span class="faq-indicator" aria-hidden="true">
@@ -109,9 +137,10 @@
             </div>
           </div>
 
-          <!-- FAQ Item 3 -->
+          <!-- FAQ 3 -->
           <div class="faq-item" data-number="03" data-expanded="false">
             <span class="faq-number">03</span>
+            <div class="faq-item-shine"></div>
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3">
               <span class="faq-question-text">Will I need expensive tools or design skills?</span>
               <span class="faq-indicator" aria-hidden="true">
@@ -128,9 +157,10 @@
             </div>
           </div>
 
-          <!-- FAQ Item 4 -->
+          <!-- FAQ 4 -->
           <div class="faq-item" data-number="04" data-expanded="false">
             <span class="faq-number">04</span>
+            <div class="faq-item-shine"></div>
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4" id="faq-question-4">
               <span class="faq-question-text">Is this safe with Etsy policies?</span>
               <span class="faq-indicator" aria-hidden="true">
@@ -147,9 +177,10 @@
             </div>
           </div>
 
-          <!-- FAQ Item 5 -->
+          <!-- FAQ 5 -->
           <div class="faq-item" data-number="05" data-expanded="false">
             <span class="faq-number">05</span>
+            <div class="faq-item-shine"></div>
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5" id="faq-question-5">
               <span class="faq-question-text">Can I do this with a busy schedule?</span>
               <span class="faq-indicator" aria-hidden="true">
@@ -166,9 +197,10 @@
             </div>
           </div>
 
-          <!-- FAQ Item 6 -->
+          <!-- FAQ 6 -->
           <div class="faq-item" data-number="06" data-expanded="false">
             <span class="faq-number">06</span>
+            <div class="faq-item-shine"></div>
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6" id="faq-question-6">
               <span class="faq-question-text">How long do I have access?</span>
               <span class="faq-indicator" aria-hidden="true">
@@ -185,9 +217,10 @@
             </div>
           </div>
 
-          <!-- FAQ Item 7 -->
+          <!-- FAQ 7 -->
           <div class="faq-item" data-number="07" data-expanded="false">
             <span class="faq-number">07</span>
+            <div class="faq-item-shine"></div>
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7" id="faq-question-7">
               <span class="faq-question-text">What if I miss a call or fall behind?</span>
               <span class="faq-indicator" aria-hidden="true">
@@ -204,9 +237,10 @@
             </div>
           </div>
 
-          <!-- FAQ Item 8 -->
+          <!-- FAQ 8 -->
           <div class="faq-item" data-number="08" data-expanded="false">
             <span class="faq-number">08</span>
+            <div class="faq-item-shine"></div>
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-8" id="faq-question-8">
               <span class="faq-question-text">Is there a refund policy?</span>
               <span class="faq-indicator" aria-hidden="true">
@@ -231,79 +265,142 @@
 
 <style>
 /* ========================================
-   FAQ SECTION - PREMIUM REBUILD
-   Warm Dusk Theme with Full Polish
+   FAQ SECTION - FULL-BLEED PREMIUM REBUILD
+   "whoever made this actually gives a shit"
    ======================================== */
 
 /* ----------------------------------------
-   1. SECTION BACKGROUND
+   1. FULL-BLEED SECTION (Edge to Edge)
    ---------------------------------------- */
 .faq-section {
   position: relative;
-  padding: 120px 64px;
-  background: linear-gradient(180deg,
-    #252320 0%,
-    #2D2A26 35%,
-    #2D2A26 65%,
-    #252320 100%
-  );
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 140px 0;
+
+  /* Rich layered background */
+  background:
+    linear-gradient(180deg,
+      #1F1D1A 0%,
+      #252320 8%,
+      #2D2A26 25%,
+      #2D2A26 75%,
+      #252320 92%,
+      #1F1D1A 100%
+    );
+
   overflow: hidden;
+  isolation: isolate;
 }
 
-/* Noise texture overlay */
-.faq-section::before {
-  content: '';
+/* Noise/grain texture overlay */
+.faq-bg-grain {
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.035;
   mix-blend-mode: overlay;
   pointer-events: none;
   z-index: 1;
 }
 
-/* Soft teal glow behind accordion */
-.faq-section::after {
-  content: '';
+/* Teal glow - behind accordion */
+.faq-bg-glow-teal {
   position: absolute;
-  top: 15%;
-  right: 15%;
-  width: 600px;
-  height: 600px;
+  top: 10%;
+  right: 8%;
+  width: 700px;
+  height: 700px;
   background: radial-gradient(ellipse at center,
-    rgba(29, 107, 107, 0.08) 0%,
-    rgba(29, 107, 107, 0.03) 40%,
+    rgba(29, 107, 107, 0.12) 0%,
+    rgba(29, 107, 107, 0.06) 30%,
+    rgba(29, 107, 107, 0.02) 50%,
     transparent 70%
   );
+  filter: blur(60px);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Secondary warm glow behind left column */
-.faq-left-glow {
+/* Coral glow - behind left column */
+.faq-bg-glow-coral {
   position: absolute;
-  top: 40%;
-  left: 5%;
-  width: 400px;
-  height: 400px;
+  top: 35%;
+  left: 3%;
+  width: 500px;
+  height: 500px;
   background: radial-gradient(ellipse at center,
-    rgba(224, 122, 95, 0.06) 0%,
-    transparent 60%
+    rgba(224, 122, 95, 0.08) 0%,
+    rgba(224, 122, 95, 0.04) 40%,
+    transparent 70%
   );
+  filter: blur(50px);
   pointer-events: none;
   z-index: 0;
+}
+
+/* Gold accent glow - subtle, top area */
+.faq-bg-glow-gold {
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  width: 400px;
+  height: 300px;
+  background: radial-gradient(ellipse at center,
+    rgba(212, 168, 83, 0.05) 0%,
+    transparent 60%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Decorative diagonal lines */
+.faq-deco-line {
+  position: absolute;
+  height: 1px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.faq-deco-line-1 {
+  top: 15%;
+  left: -5%;
+  width: 30%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(212, 168, 83, 0.15) 30%,
+    rgba(212, 168, 83, 0.08) 70%,
+    transparent 100%
+  );
+  transform: rotate(-8deg);
+}
+
+.faq-deco-line-2 {
+  bottom: 20%;
+  right: -5%;
+  width: 25%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(29, 107, 107, 0.12) 40%,
+    rgba(29, 107, 107, 0.06) 80%,
+    transparent 100%
+  );
+  transform: rotate(5deg);
 }
 
 /* ----------------------------------------
-   2. CONTAINER & GRID
+   2. CONTAINER (Centered Content)
    ---------------------------------------- */
 .faq-container {
   position: relative;
   z-index: 2;
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1320px;
   margin: 0 auto;
+  padding: 0 64px;
   display: grid;
-  grid-template-columns: 38% 58%;
+  grid-template-columns: 36% 60%;
   gap: 4%;
   align-items: start;
 }
@@ -313,17 +410,17 @@
    ---------------------------------------- */
 .faq-left-column {
   position: sticky;
-  top: 100px;
+  top: 80px;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(40px);
 }
 
 .faq-left-column.visible {
   opacity: 1;
   transform: translateY(0);
   transition:
-    opacity 0.6s ease,
-    transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* ----------------------------------------
@@ -332,48 +429,53 @@
 .faq-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 18px 10px 14px;
+  gap: 12px;
+  padding: 12px 20px 12px 16px;
   background: linear-gradient(135deg,
-    rgba(224, 122, 95, 0.14) 0%,
-    rgba(224, 122, 95, 0.06) 100%
+    rgba(224, 122, 95, 0.16) 0%,
+    rgba(224, 122, 95, 0.08) 100%
   );
-  border: 1px solid rgba(224, 122, 95, 0.25);
+  border: 1px solid rgba(224, 122, 95, 0.3);
   border-radius: 100px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
+  position: relative;
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.05),
-    0 1px 3px rgba(0, 0, 0, 0.12);
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(224, 122, 95, 0.1);
 }
 
 .eyebrow-dot {
-  width: 8px;
-  height: 8px;
-  background: linear-gradient(135deg, #E8917A 0%, #E07A5F 100%);
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, #F09A7D 0%, #E07A5F 50%, #C96A52 100%);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(224, 122, 95, 0.5);
-  animation: dot-pulse 3s ease-in-out infinite;
+  box-shadow:
+    0 0 10px rgba(224, 122, 95, 0.6),
+    0 0 20px rgba(224, 122, 95, 0.3);
+  animation: dot-pulse 2.5s ease-in-out infinite;
 }
 
 @keyframes dot-pulse {
   0%, 100% {
-    box-shadow: 0 0 8px rgba(224, 122, 95, 0.5);
+    box-shadow: 0 0 10px rgba(224, 122, 95, 0.6), 0 0 20px rgba(224, 122, 95, 0.3);
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 12px rgba(224, 122, 95, 0.7);
-    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(224, 122, 95, 0.8), 0 0 30px rgba(224, 122, 95, 0.5);
+    transform: scale(1.15);
   }
 }
 
 .eyebrow-text {
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #E07A5F;
+  color: #E8917A;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* ----------------------------------------
@@ -381,29 +483,47 @@
    ---------------------------------------- */
 .faq-headline-wrapper {
   position: relative;
-  margin-bottom: 56px;
+  margin-bottom: 64px;
 }
 
 .headline-flourish {
   position: absolute;
-  top: -20px;
-  left: -30px;
-  width: 150px;
-  height: 100px;
+  top: -35px;
+  left: -40px;
+  width: 180px;
+  height: 120px;
   z-index: 0;
+  opacity: 0.9;
 }
 
 .faq-headline {
   position: relative;
   z-index: 1;
   font-family: 'OGG', Georgia, serif;
-  font-size: 56px;
+  font-size: 58px;
   font-weight: 500;
-  line-height: 1.08;
+  line-height: 1.05;
   color: #FDFCFA;
-  max-width: 420px;
+  max-width: 450px;
   margin: 0;
-  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+.headline-underline {
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg,
+    #E07A5F 0%,
+    rgba(224, 122, 95, 0.3) 100%
+  );
+  border-radius: 2px;
 }
 
 /* ----------------------------------------
@@ -411,21 +531,21 @@
    ---------------------------------------- */
 .help-card-wrapper {
   position: relative;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .help-card-glow {
   position: absolute;
-  top: -40px;
-  right: -40px;
-  width: 250px;
-  height: 250px;
+  top: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
   background: radial-gradient(ellipse at center,
-    rgba(212, 168, 83, 0.15) 0%,
-    rgba(224, 122, 95, 0.1) 30%,
+    rgba(212, 168, 83, 0.2) 0%,
+    rgba(224, 122, 95, 0.12) 35%,
     transparent 70%
   );
-  filter: blur(40px);
+  filter: blur(50px);
   pointer-events: none;
   z-index: 0;
 }
@@ -434,19 +554,22 @@
   position: relative;
   z-index: 1;
   background: linear-gradient(180deg,
-    #FDFCFA 0%,
+    #FFFFFF 0%,
+    #FDFCFA 40%,
     #FAF8F5 100%
   );
   border-radius: 6px;
-  padding: 36px 32px;
+  padding: 40px 36px;
 
+  /* 5-layer shadow for serious depth */
   box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.08),
-    0 4px 8px rgba(0, 0, 0, 0.06),
-    0 12px 24px rgba(0, 0, 0, 0.06),
-    0 24px 48px rgba(0, 0, 0, 0.05);
+    0 1px 2px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 8px 16px rgba(0, 0, 0, 0.08),
+    0 16px 32px rgba(0, 0, 0, 0.06),
+    0 32px 64px rgba(0, 0, 0, 0.04);
 
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   overflow: hidden;
 }
 
@@ -458,40 +581,56 @@
   height: 1px;
   background: linear-gradient(90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.6) 30%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.6) 70%,
     transparent 100%
   );
 }
 
+.help-card-inner-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
 .help-card-title {
   font-family: 'OGG', Georgia, serif;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 500;
   color: #1F1D1A;
-  margin: 0 0 12px 0;
+  margin: 0 0 14px 0;
   line-height: 1.2;
 }
 
 .help-card-text {
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.7;
   color: #5A544C;
-  margin: 0 0 28px 0;
-  max-width: 280px;
+  margin: 0 0 32px 0;
+  max-width: 300px;
 }
 
 .help-arrow {
   position: absolute;
-  bottom: 60px;
-  right: 32px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  bottom: 70px;
+  right: 36px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .help-card:hover .help-arrow {
   opacity: 1;
+  transform: translateX(3px);
 }
 
 /* ----------------------------------------
@@ -500,12 +639,14 @@
 .help-card-button {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 16px 28px;
+  gap: 12px;
+  padding: 18px 32px;
+  position: relative;
+  overflow: hidden;
 
   background: linear-gradient(180deg,
-    #E8917A 0%,
-    #E07A5F 40%,
+    #F09A7D 0%,
+    #E07A5F 35%,
     #D46B50 100%
   );
 
@@ -513,23 +654,22 @@
   border-radius: 6px;
 
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: white;
-
   text-decoration: none;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
 
+  /* 6-layer shadow with glow */
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    inset 0 -2px 6px rgba(0, 0, 0, 0.1),
-    0 2px 4px rgba(201, 106, 82, 0.3),
-    0 4px 12px rgba(201, 106, 82, 0.25),
-    0 8px 24px rgba(201, 106, 82, 0.15);
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -2px 8px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(201, 106, 82, 0.35),
+    0 4px 8px rgba(201, 106, 82, 0.3),
+    0 8px 16px rgba(201, 106, 82, 0.25),
+    0 16px 32px rgba(201, 106, 82, 0.15);
 
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .help-card-button::before {
@@ -541,7 +681,7 @@
   height: 1px;
   background: linear-gradient(90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.5) 50%,
     transparent 100%
   );
 }
@@ -555,36 +695,59 @@
   height: 100%;
   background: linear-gradient(90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.2) 50%,
     transparent 100%
   );
-  transition: left 0.5s ease;
+  transition: left 0.6s ease;
 }
 
 .help-card-button:hover::after {
   left: 100%;
 }
 
+.button-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.help-card-button:hover .button-glow {
+  opacity: 1;
+}
+
 .help-card-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.25),
-    inset 0 -2px 6px rgba(0, 0, 0, 0.1),
-    0 4px 8px rgba(201, 106, 82, 0.35),
-    0 8px 20px rgba(201, 106, 82, 0.3),
-    0 16px 40px rgba(201, 106, 82, 0.2);
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 8px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(201, 106, 82, 0.4),
+    0 8px 16px rgba(201, 106, 82, 0.35),
+    0 16px 32px rgba(201, 106, 82, 0.25),
+    0 24px 48px rgba(201, 106, 82, 0.15);
 }
 
 .help-card-button:active {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+}
+
+.button-text {
+  position: relative;
+  z-index: 1;
 }
 
 .button-arrow {
+  position: relative;
+  z-index: 1;
   transition: transform 0.3s ease;
 }
 
 .help-card-button:hover .button-arrow {
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 .help-card-button:focus {
@@ -592,27 +755,27 @@
 }
 
 .help-card-button:focus-visible {
-  outline: 2px solid #D4A853;
-  outline-offset: 3px;
+  outline: 3px solid #D4A853;
+  outline-offset: 4px;
 }
 
 /* ----------------------------------------
-   8. ACCORDION CONTAINER
+   8. ACCORDION WRAPPER
    ---------------------------------------- */
 .faq-accordion-wrapper {
   position: relative;
 }
 
-.accordion-glow {
+.accordion-ambient-glow {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120%;
-  height: 120%;
+  width: 130%;
+  height: 130%;
   background: radial-gradient(ellipse at center,
-    rgba(29, 107, 107, 0.04) 0%,
-    transparent 60%
+    rgba(29, 107, 107, 0.05) 0%,
+    transparent 55%
   );
   pointer-events: none;
   z-index: 0;
@@ -623,7 +786,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 /* ----------------------------------------
@@ -632,70 +795,91 @@
 .faq-item {
   position: relative;
   background: linear-gradient(180deg,
-    #FDFCFA 0%,
+    #FFFFFF 0%,
+    #FDFCFA 50%,
     #FAF8F5 100%
   );
   border-radius: 6px;
   overflow: hidden;
-  margin-left: 16px;
+  margin-left: 20px;
 
-  border-left: 3px solid transparent;
+  border-left: 4px solid transparent;
 
+  /* 5-layer shadow */
   box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.06),
-    0 2px 4px rgba(0, 0, 0, 0.04),
-    0 4px 8px rgba(0, 0, 0, 0.04),
-    0 8px 16px rgba(0, 0, 0, 0.03);
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.06),
+    0 4px 8px rgba(0, 0, 0, 0.05),
+    0 8px 16px rgba(0, 0, 0, 0.04),
+    0 16px 32px rgba(0, 0, 0, 0.03);
 
-  outline: 1px solid rgba(0, 0, 0, 0.03);
+  outline: 1px solid rgba(255, 255, 255, 0.05);
 
-  /* Animation initial state */
   opacity: 0;
-  transform: translateY(25px);
+  transform: translateY(30px);
 
   transition:
-    box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    border-color 0.3s ease;
+    box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.35s ease;
 }
 
 .faq-item.visible {
   opacity: 1;
   transform: translateY(0);
   transition:
-    opacity 0.5s ease,
-    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    border-color 0.3s ease;
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.35s ease;
 }
 
-/* Stagger delays */
-.faq-item:nth-child(1).visible { transition-delay: 0ms, 0ms, 0ms, 0ms; }
-.faq-item:nth-child(2).visible { transition-delay: 80ms, 80ms, 0ms, 0ms; }
-.faq-item:nth-child(3).visible { transition-delay: 160ms, 160ms, 0ms, 0ms; }
-.faq-item:nth-child(4).visible { transition-delay: 240ms, 240ms, 0ms, 0ms; }
-.faq-item:nth-child(5).visible { transition-delay: 320ms, 320ms, 0ms, 0ms; }
-.faq-item:nth-child(6).visible { transition-delay: 400ms, 400ms, 0ms, 0ms; }
-.faq-item:nth-child(7).visible { transition-delay: 480ms, 480ms, 0ms, 0ms; }
-.faq-item:nth-child(8).visible { transition-delay: 560ms, 560ms, 0ms, 0ms; }
+/* Staggered entrance */
+.faq-item:nth-child(1).visible { transition-delay: 0ms; }
+.faq-item:nth-child(2).visible { transition-delay: 70ms; }
+.faq-item:nth-child(3).visible { transition-delay: 140ms; }
+.faq-item:nth-child(4).visible { transition-delay: 210ms; }
+.faq-item:nth-child(5).visible { transition-delay: 280ms; }
+.faq-item:nth-child(6).visible { transition-delay: 350ms; }
+.faq-item:nth-child(7).visible { transition-delay: 420ms; }
+.faq-item:nth-child(8).visible { transition-delay: 490ms; }
+
+/* Shine line at top of each card */
+.faq-item-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 30%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.4) 70%,
+    transparent 100%
+  );
+  z-index: 3;
+}
 
 .faq-item:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.08),
-    0 4px 8px rgba(0, 0, 0, 0.06),
-    0 8px 16px rgba(0, 0, 0, 0.05),
-    0 16px 32px rgba(0, 0, 0, 0.04);
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 8px 16px rgba(0, 0, 0, 0.06),
+    0 16px 32px rgba(0, 0, 0, 0.05),
+    0 24px 48px rgba(0, 0, 0, 0.03);
 }
 
 .faq-item[data-expanded="true"] {
   border-left-color: #1D6B6B;
   box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.08),
-    0 4px 8px rgba(0, 0, 0, 0.06),
-    0 8px 16px rgba(0, 0, 0, 0.05),
-    0 16px 32px rgba(0, 0, 0, 0.04),
-    0 0 0 1px rgba(29, 107, 107, 0.1);
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    0 8px 16px rgba(0, 0, 0, 0.06),
+    0 16px 32px rgba(0, 0, 0, 0.05),
+    0 24px 48px rgba(0, 0, 0, 0.03),
+    0 0 0 1px rgba(29, 107, 107, 0.15);
 }
 
 /* ----------------------------------------
@@ -703,13 +887,13 @@
    ---------------------------------------- */
 .faq-number {
   position: absolute;
-  top: 20px;
-  left: -16px;
-  width: 32px;
-  height: 32px;
+  top: 22px;
+  left: -20px;
+  width: 36px;
+  height: 36px;
 
-  background: linear-gradient(135deg, #2D2A26 0%, #252320 100%);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, #2D2A26 0%, #1F1D1A 100%);
+  border: 2px solid rgba(255, 255, 255, 0.12);
   border-radius: 50%;
 
   display: flex;
@@ -717,25 +901,27 @@
   justify-content: center;
 
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.55);
 
   box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    0 2px 6px rgba(0, 0, 0, 0.3),
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
-  transition: all 0.3s ease;
-  z-index: 2;
+  transition: all 0.35s ease;
+  z-index: 4;
 }
 
 .faq-item[data-expanded="true"] .faq-number {
-  background: linear-gradient(135deg, #1D6B6B 0%, #165858 100%);
-  border-color: rgba(29, 107, 107, 0.3);
-  color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(145deg, #1D6B6B 0%, #155858 100%);
+  border-color: rgba(29, 107, 107, 0.4);
+  color: rgba(255, 255, 255, 0.95);
   box-shadow:
-    0 2px 8px rgba(29, 107, 107, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 2px 8px rgba(29, 107, 107, 0.4),
+    0 4px 16px rgba(29, 107, 107, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 /* ----------------------------------------
@@ -745,21 +931,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   width: 100%;
-  padding: 26px 28px;
+  padding: 28px 32px;
 
   background: transparent;
   border: none;
   cursor: pointer;
   text-align: left;
 
-  transition: background 0.2s ease;
+  transition: background 0.25s ease;
 }
 
 .faq-question-text {
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.4;
   color: #1F1D1A;
@@ -767,7 +953,10 @@
 }
 
 .faq-question:hover {
-  background: rgba(29, 107, 107, 0.03);
+  background: linear-gradient(90deg,
+    rgba(29, 107, 107, 0.04) 0%,
+    rgba(29, 107, 107, 0.02) 100%
+  );
 }
 
 .faq-question:focus {
@@ -777,27 +966,27 @@
 .faq-question:focus-visible {
   outline: 2px solid #1D6B6B;
   outline-offset: -2px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 /* ----------------------------------------
-   12. PLUS/MINUS INDICATOR (Morphing)
+   12. PLUS/MINUS INDICATOR
    ---------------------------------------- */
 .faq-indicator {
   position: relative;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 6px;
   flex-shrink: 0;
 
-  background: linear-gradient(135deg, #F5F0EA 0%, #E8E2D9 100%);
+  background: linear-gradient(145deg, #F8F4EE 0%, #E8E2D9 100%);
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.03),
-    0 1px 3px rgba(0, 0, 0, 0.08);
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.04),
+    0 2px 6px rgba(0, 0, 0, 0.1);
 
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
 }
 
 .indicator-line {
@@ -805,35 +994,35 @@
   top: 50%;
   left: 50%;
   background: #1D6B6B;
-  border-radius: 1px;
-  transition: all 0.3s ease;
+  border-radius: 1.5px;
+  transition: all 0.35s ease;
 }
 
 .indicator-h {
-  width: 14px;
-  height: 2px;
+  width: 16px;
+  height: 2.5px;
   transform: translate(-50%, -50%);
 }
 
 .indicator-v {
-  width: 2px;
-  height: 14px;
+  width: 2.5px;
+  height: 16px;
   transform: translate(-50%, -50%);
 }
 
 .faq-question:hover .faq-indicator {
-  background: linear-gradient(135deg, #EBE6DF 0%, #DED8CF 100%);
+  background: linear-gradient(145deg, #F0EBE4 0%, #DED8CE 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.9),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.04),
-    0 2px 6px rgba(0, 0, 0, 0.1);
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.05),
+    0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
 .faq-item[data-expanded="true"] .faq-indicator {
-  background: linear-gradient(135deg, #1D6B6B 0%, #165858 100%);
+  background: linear-gradient(145deg, #1D6B6B 0%, #155858 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.15),
-    0 2px 8px rgba(29, 107, 107, 0.35);
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 2px 10px rgba(29, 107, 107, 0.4);
 }
 
 .faq-item[data-expanded="true"] .indicator-line {
@@ -851,7 +1040,7 @@
 .faq-answer {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: grid-template-rows 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .faq-item[data-expanded="true"] .faq-answer {
@@ -863,26 +1052,26 @@
 }
 
 .faq-answer-content {
-  padding: 0 28px 26px 28px;
+  padding: 0 32px 28px 32px;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   margin-top: 0;
-  padding-top: 22px;
+  padding-top: 24px;
 
   background: linear-gradient(180deg,
-    rgba(29, 107, 107, 0.02) 0%,
+    rgba(29, 107, 107, 0.025) 0%,
     transparent 100%
   );
-  margin-left: -3px;
-  padding-left: 31px;
+  margin-left: -4px;
+  padding-left: 36px;
 }
 
 .faq-answer-content p {
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 1.75;
   color: #5A544C;
-  max-width: 580px;
+  max-width: 600px;
   margin: 0;
 }
 
@@ -916,22 +1105,27 @@
    RESPONSIVE - 1440px
    ======================================== */
 @media (max-width: 1440px) {
-  .faq-section {
-    padding: 120px 48px;
+  .faq-container {
+    padding: 0 48px;
+  }
+
+  .faq-headline {
+    font-size: 52px;
   }
 }
 
 /* ========================================
-   RESPONSIVE - TABLET (1024px)
+   RESPONSIVE - 1024px (Tablet)
    ======================================== */
 @media (max-width: 1024px) {
   .faq-section {
-    padding: 100px 32px;
+    padding: 100px 0;
   }
 
   .faq-container {
-    grid-template-columns: 35% 60%;
-    gap: 5%;
+    padding: 0 36px;
+    grid-template-columns: 34% 62%;
+    gap: 4%;
   }
 
   .faq-headline {
@@ -944,8 +1138,10 @@
   }
 
   .headline-flourish {
-    width: 120px;
-    height: 80px;
+    width: 140px;
+    height: 100px;
+    left: -25px;
+    top: -25px;
   }
 
   .faq-number {
@@ -955,19 +1151,26 @@
   .faq-item {
     margin-left: 0;
   }
+
+  .faq-bg-glow-teal,
+  .faq-bg-glow-coral,
+  .faq-bg-glow-gold {
+    opacity: 0.7;
+  }
 }
 
 /* ========================================
-   RESPONSIVE - MOBILE (768px)
+   RESPONSIVE - 768px (Mobile)
    ======================================== */
 @media (max-width: 768px) {
   .faq-section {
-    padding: 80px 24px;
+    padding: 80px 0;
   }
 
   .faq-container {
+    padding: 0 24px;
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 56px;
   }
 
   .faq-left-column {
@@ -984,14 +1187,19 @@
   }
 
   .faq-headline {
-    font-size: 38px;
+    font-size: 40px;
   }
 
   .headline-flourish {
-    width: 100px;
-    height: 70px;
-    top: -15px;
+    width: 120px;
+    height: 85px;
+    top: -20px;
     left: -15px;
+  }
+
+  .headline-underline {
+    width: 60px;
+    bottom: -12px;
   }
 
   .faq-right-column {
@@ -1000,15 +1208,19 @@
 
   .help-card-wrapper {
     order: 4;
-    margin-top: 48px;
+    margin-top: 56px;
   }
 
   .help-card {
-    padding: 28px 24px;
+    padding: 32px 28px;
   }
 
   .help-card-title {
-    font-size: 24px;
+    font-size: 26px;
+  }
+
+  .help-card-text {
+    font-size: 15px;
   }
 
   .help-arrow {
@@ -1016,22 +1228,30 @@
   }
 
   .faq-question {
-    padding: 22px 24px;
+    padding: 24px 24px;
   }
 
   .faq-question-text {
     font-size: 16px;
   }
 
+  .faq-indicator {
+    width: 36px;
+    height: 36px;
+  }
+
+  .indicator-h { width: 14px; }
+  .indicator-v { height: 14px; }
+
   .faq-answer-content {
-    padding: 0 24px 22px 24px;
-    padding-top: 18px;
-    padding-left: 27px;
-    margin-left: -3px;
+    padding: 0 24px 24px 24px;
+    padding-top: 20px;
+    padding-left: 28px;
+    margin-left: -4px;
   }
 
   .faq-answer-content p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.7;
   }
 
@@ -1043,47 +1263,57 @@
     margin-left: 0;
   }
 
-  .faq-left-glow,
-  .accordion-glow {
+  .faq-deco-line-1,
+  .faq-deco-line-2 {
+    display: none;
+  }
+
+  .accordion-ambient-glow {
     display: none;
   }
 }
 
 /* ========================================
-   RESPONSIVE - SMALL MOBILE (375px)
+   RESPONSIVE - 375px (Small Mobile)
    ======================================== */
 @media (max-width: 375px) {
   .faq-section {
-    padding: 64px 20px;
+    padding: 64px 0;
+  }
+
+  .faq-container {
+    padding: 0 20px;
+    gap: 48px;
   }
 
   .faq-headline {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   .faq-eyebrow {
-    padding: 8px 14px 8px 12px;
+    padding: 10px 16px 10px 14px;
   }
 
   .eyebrow-text {
-    font-size: 10px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+
+  .help-card {
+    padding: 28px 24px;
   }
 
   .help-card-title {
-    font-size: 22px;
-  }
-
-  .help-card-text {
-    font-size: 14px;
+    font-size: 24px;
   }
 
   .help-card-button {
-    padding: 14px 24px;
-    font-size: 14px;
+    padding: 16px 28px;
+    font-size: 15px;
   }
 
   .faq-question {
-    padding: 20px 20px;
+    padding: 22px 20px;
   }
 
   .faq-question-text {
@@ -1091,22 +1321,17 @@
   }
 
   .faq-indicator {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
   }
 
-  .indicator-h {
-    width: 12px;
-  }
-
-  .indicator-v {
-    height: 12px;
-  }
+  .indicator-h { width: 12px; height: 2px; }
+  .indicator-v { width: 2px; height: 12px; }
 
   .faq-answer-content {
-    padding: 0 20px 20px 20px;
-    padding-top: 16px;
-    padding-left: 23px;
+    padding: 0 20px 22px 20px;
+    padding-top: 18px;
+    padding-left: 24px;
   }
 
   .faq-answer-content p {
@@ -1119,7 +1344,6 @@
 (function() {
   'use strict';
 
-  // Initialize when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
@@ -1132,7 +1356,7 @@
   }
 
   // ========================================
-  // ACCORDION FUNCTIONALITY
+  // ACCORDION
   // ========================================
   function initAccordion() {
     const accordion = document.querySelector('.faq-accordion');
@@ -1144,12 +1368,10 @@
       const button = item.querySelector('.faq-question');
       if (!button) return;
 
-      // Click handler
       button.addEventListener('click', function() {
         toggleItem(item, items);
       });
 
-      // Keyboard handler
       button.addEventListener('keydown', function(e) {
         handleKeyboard(e, item, items);
       });
@@ -1160,14 +1382,12 @@
     const isExpanded = targetItem.getAttribute('data-expanded') === 'true';
     const button = targetItem.querySelector('.faq-question');
 
-    // Close all items first
     allItems.forEach(function(item) {
       item.setAttribute('data-expanded', 'false');
       const btn = item.querySelector('.faq-question');
       if (btn) btn.setAttribute('aria-expanded', 'false');
     });
 
-    // Open target if it was closed
     if (!isExpanded) {
       targetItem.setAttribute('data-expanded', 'true');
       if (button) button.setAttribute('aria-expanded', 'true');
@@ -1184,22 +1404,18 @@
         e.preventDefault();
         toggleItem(currentItem, allItems);
         break;
-
       case 'ArrowDown':
         e.preventDefault();
         focusItem(itemsArray[(currentIndex + 1) % itemsArray.length]);
         break;
-
       case 'ArrowUp':
         e.preventDefault();
         focusItem(itemsArray[(currentIndex - 1 + itemsArray.length) % itemsArray.length]);
         break;
-
       case 'Home':
         e.preventDefault();
         focusItem(itemsArray[0]);
         break;
-
       case 'End':
         e.preventDefault();
         focusItem(itemsArray[itemsArray.length - 1]);
@@ -1213,12 +1429,10 @@
   }
 
   // ========================================
-  // SCROLL-TRIGGERED ANIMATIONS
+  // SCROLL ANIMATIONS
   // ========================================
   function initScrollAnimations() {
-    // Check for reduced motion preference
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      // Show everything immediately
       document.querySelectorAll('.faq-item, .faq-left-column').forEach(function(el) {
         el.classList.add('visible');
       });
@@ -1227,7 +1441,7 @@
 
     const observerOptions = {
       root: null,
-      rootMargin: '-50px',
+      rootMargin: '-80px',
       threshold: 0.1
     };
 
@@ -1239,13 +1453,11 @@
       });
     }, observerOptions);
 
-    // Observe left column
     const leftColumn = document.querySelector('.faq-left-column');
     if (leftColumn) {
       observer.observe(leftColumn);
     }
 
-    // Observe each FAQ item
     document.querySelectorAll('.faq-item').forEach(function(item) {
       observer.observe(item);
     });
