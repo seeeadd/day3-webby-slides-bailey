@@ -13,6 +13,26 @@
   <div class="faq-deco-line faq-deco-line-1"></div>
   <div class="faq-deco-line faq-deco-line-2"></div>
 
+  <!-- Floating particles -->
+  <div class="faq-particles">
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+    <div class="particle particle-6"></div>
+    <div class="particle particle-7"></div>
+    <div class="particle particle-8"></div>
+  </div>
+
+  <!-- Scattered stars -->
+  <div class="faq-stars">
+    <svg class="star star-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z" fill="currentColor"/></svg>
+    <svg class="star star-2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z" fill="currentColor"/></svg>
+    <svg class="star star-3" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z" fill="currentColor"/></svg>
+    <svg class="star star-4" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z" fill="currentColor"/></svg>
+  </div>
+
   <div class="faq-container">
     <!-- Left Column -->
     <div class="faq-left-column">
@@ -27,12 +47,12 @@
         <svg class="headline-flourish" viewBox="0 0 180 120" aria-hidden="true">
           <path d="M15,100 Q50,30 100,60 T170,35"
                 stroke="url(#goldGradient)"
-                stroke-width="2.5"
+                stroke-width="3"
                 fill="none"
                 stroke-linecap="round"/>
           <path d="M25,110 Q70,50 120,70 T175,50"
                 stroke="url(#goldGradient)"
-                stroke-width="1.5"
+                stroke-width="2"
                 fill="none"
                 stroke-linecap="round"
                 opacity="0.5"/>
@@ -44,9 +64,9 @@
                 opacity="0.3"/>
           <defs>
             <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#D4A853" stop-opacity="0.4"/>
-              <stop offset="50%" stop-color="#E8C477" stop-opacity="0.6"/>
-              <stop offset="100%" stop-color="#D4A853" stop-opacity="0.3"/>
+              <stop offset="0%" stop-color="#D4A853" stop-opacity="0.7"/>
+              <stop offset="50%" stop-color="#E8C477" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#D4A853" stop-opacity="0.6"/>
             </linearGradient>
           </defs>
         </svg>
@@ -295,7 +315,7 @@
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  padding: 140px 0;
+  padding: 140px 0 0 0; /* No bottom padding - flush with next section */
 
   /* Rich layered background */
   background:
@@ -303,8 +323,8 @@
       #1F1D1A 0%,
       #252320 8%,
       #2D2A26 25%,
-      #2D2A26 75%,
-      #252320 92%,
+      #2D2A26 65%,
+      #252320 80%,
       #1F1D1A 100%
     );
 
@@ -331,9 +351,9 @@
   width: 700px;
   height: 700px;
   background: radial-gradient(ellipse at center,
-    rgba(29, 107, 107, 0.12) 0%,
-    rgba(29, 107, 107, 0.06) 30%,
-    rgba(29, 107, 107, 0.02) 50%,
+    rgba(29, 107, 107, 0.25) 0%,
+    rgba(29, 107, 107, 0.15) 30%,
+    rgba(29, 107, 107, 0.08) 50%,
     transparent 70%
   );
   filter: blur(60px);
@@ -349,8 +369,8 @@
   width: 500px;
   height: 500px;
   background: radial-gradient(ellipse at center,
-    rgba(224, 122, 95, 0.08) 0%,
-    rgba(224, 122, 95, 0.04) 40%,
+    rgba(224, 122, 95, 0.20) 0%,
+    rgba(224, 122, 95, 0.12) 40%,
     transparent 70%
   );
   filter: blur(50px);
@@ -366,7 +386,7 @@
   width: 400px;
   height: 300px;
   background: radial-gradient(ellipse at center,
-    rgba(212, 168, 83, 0.05) 0%,
+    rgba(212, 168, 83, 0.15) 0%,
     transparent 60%
   );
   filter: blur(40px);
@@ -388,8 +408,8 @@
   width: 30%;
   background: linear-gradient(90deg,
     transparent 0%,
-    rgba(212, 168, 83, 0.15) 30%,
-    rgba(212, 168, 83, 0.08) 70%,
+    rgba(212, 168, 83, 0.35) 30%,
+    rgba(212, 168, 83, 0.20) 70%,
     transparent 100%
   );
   transform: rotate(-8deg);
@@ -401,8 +421,8 @@
   width: 25%;
   background: linear-gradient(90deg,
     transparent 0%,
-    rgba(29, 107, 107, 0.12) 40%,
-    rgba(29, 107, 107, 0.06) 80%,
+    rgba(29, 107, 107, 0.30) 40%,
+    rgba(29, 107, 107, 0.18) 80%,
     transparent 100%
   );
   transform: rotate(5deg);
@@ -417,7 +437,7 @@
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 64px;
+  padding: 0 64px 0 64px;
   display: grid;
   grid-template-columns: 36% 60%;
   gap: 4%;
@@ -573,9 +593,9 @@
   position: relative;
   z-index: 1;
   background: linear-gradient(180deg,
-    #FFFFFF 0%,
+    #FDF9F3 0%,
     #FDFCFA 40%,
-    #FAF8F5 100%
+    #F7F2EA 100%
   );
   border-radius: 6px;
   padding: 40px 36px;
@@ -814,13 +834,13 @@
 .faq-item {
   position: relative;
   background: linear-gradient(180deg,
-    #FFFFFF 0%,
-    #FDFCFA 50%,
-    #FAF8F5 100%
+    #FDF9F3 0%,
+    #FAF6F0 50%,
+    #F7F2EA 100%
   );
   border-radius: 6px;
   overflow: hidden;
-  margin-left: 20px;
+  margin-left: 0;
 
   border-left: 4px solid transparent;
 
@@ -906,14 +926,14 @@
    ---------------------------------------- */
 .faq-number {
   position: absolute;
-  top: 22px;
-  left: -20px;
-  width: 36px;
-  height: 36px;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 100%;
 
   background: linear-gradient(145deg, #2D2A26 0%, #1F1D1A 100%);
   border: 2px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50%;
+  border-radius: 6px 0 0 6px;
 
   display: flex;
   align-items: center;
@@ -952,7 +972,7 @@
   justify-content: space-between;
   gap: 24px;
   width: 100%;
-  padding: 28px 32px;
+  padding: 28px 32px 28px 48px;
 
   background: transparent;
   border: none;
@@ -1071,7 +1091,7 @@
 }
 
 .faq-answer-content {
-  padding: 0 32px 28px 32px;
+  padding: 0 32px 28px 48px;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   margin-top: 0;
   padding-top: 24px;
@@ -1080,7 +1100,7 @@
     rgba(29, 107, 107, 0.025) 0%,
     transparent 100%
   );
-  margin-left: -4px;
+  margin-left: 0;
   padding-left: 36px;
 }
 
@@ -1125,7 +1145,7 @@
    ======================================== */
 @media (max-width: 1440px) {
   .faq-container {
-    padding: 0 48px;
+    padding: 0 48px 0 48px;
   }
 
   .faq-headline {
@@ -1138,11 +1158,11 @@
    ======================================== */
 @media (max-width: 1024px) {
   .faq-section {
-    padding: 100px 0;
+    padding: 100px 0 0 0;
   }
 
   .faq-container {
-    padding: 0 36px;
+    padding: 0 36px 0 36px;
     grid-template-columns: 34% 62%;
     gap: 4%;
   }
@@ -1167,6 +1187,14 @@
     display: none;
   }
 
+  .faq-question {
+    padding: 24px 24px;
+  }
+
+  .faq-answer-content {
+    padding: 0 24px 24px 24px;
+  }
+
   .faq-item {
     margin-left: 0;
   }
@@ -1183,11 +1211,11 @@
    ======================================== */
 @media (max-width: 768px) {
   .faq-section {
-    padding: 80px 0;
+    padding: 80px 0 0 0;
   }
 
   .faq-container {
-    padding: 0 24px;
+    padding: 0 24px 0 24px;
     grid-template-columns: 1fr;
     gap: 56px;
   }
@@ -1266,7 +1294,7 @@
     padding: 0 24px 24px 24px;
     padding-top: 20px;
     padding-left: 28px;
-    margin-left: -4px;
+    margin-left: 0;
   }
 
   .faq-answer-content p {
@@ -1276,6 +1304,14 @@
 
   .faq-number {
     display: none;
+  }
+
+  .faq-question {
+    padding: 24px 24px;
+  }
+
+  .faq-answer-content {
+    padding: 0 24px 24px 24px;
   }
 
   .faq-item {
@@ -1297,11 +1333,11 @@
    ======================================== */
 @media (max-width: 375px) {
   .faq-section {
-    padding: 64px 0;
+    padding: 64px 0 0 0;
   }
 
   .faq-container {
-    padding: 0 20px;
+    padding: 0 20px 0 20px;
     gap: 48px;
   }
 
@@ -1356,6 +1392,236 @@
   .faq-answer-content p {
     font-size: 15px;
   }
+}
+
+/* ========================================
+   FLOATING PARTICLES
+   ======================================== */
+.faq-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(212, 168, 83, 0.4);
+  animation: float-particle 15s ease-in-out infinite;
+}
+
+.particle-1 { top: 15%; left: 10%; animation-delay: 0s; background: rgba(212, 168, 83, 0.5); }
+.particle-2 { top: 25%; right: 15%; animation-delay: -2s; width: 6px; height: 6px; background: rgba(29, 107, 107, 0.5); }
+.particle-3 { top: 45%; left: 5%; animation-delay: -4s; background: rgba(224, 122, 95, 0.4); }
+.particle-4 { top: 60%; right: 8%; animation-delay: -6s; width: 5px; height: 5px; background: rgba(212, 168, 83, 0.4); }
+.particle-5 { top: 75%; left: 12%; animation-delay: -8s; background: rgba(29, 107, 107, 0.4); }
+.particle-6 { top: 35%; right: 25%; animation-delay: -10s; width: 3px; height: 3px; background: rgba(224, 122, 95, 0.5); }
+.particle-7 { top: 85%; right: 20%; animation-delay: -12s; background: rgba(212, 168, 83, 0.3); }
+.particle-8 { top: 10%; left: 35%; animation-delay: -14s; width: 5px; height: 5px; background: rgba(29, 107, 107, 0.4); }
+
+@keyframes float-particle {
+  0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.4; }
+  25% { transform: translateY(-20px) translateX(10px) scale(1.2); opacity: 0.7; }
+  50% { transform: translateY(-10px) translateX(-5px) scale(0.8); opacity: 0.5; }
+  75% { transform: translateY(-30px) translateX(15px) scale(1.1); opacity: 0.6; }
+}
+
+/* ========================================
+   SCATTERED STARS
+   ======================================== */
+.faq-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  color: rgba(212, 168, 83, 0.3);
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.star-1 { width: 12px; height: 12px; top: 8%; left: 20%; animation-delay: 0s; }
+.star-2 { width: 10px; height: 10px; top: 22%; right: 12%; animation-delay: -0.7s; color: rgba(29, 107, 107, 0.35); }
+.star-3 { width: 8px; height: 8px; top: 70%; left: 8%; animation-delay: -1.4s; }
+.star-4 { width: 14px; height: 14px; top: 55%; right: 5%; animation-delay: -2.1s; color: rgba(224, 122, 95, 0.3); }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1) rotate(0deg); }
+  50% { opacity: 0.8; transform: scale(1.2) rotate(15deg); }
+}
+
+/* ========================================
+   CARD SHIMMER EFFECT
+   ======================================== */
+.faq-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  transition: left 0.6s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.faq-item:hover::before {
+  left: 100%;
+}
+
+/* ========================================
+   ANIMATED GRADIENT BORDER ON HOVER
+   ======================================== */
+.faq-item::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(29, 107, 107, 0.4) 0%,
+    rgba(212, 168, 83, 0.4) 50%,
+    rgba(224, 122, 95, 0.4) 100%
+  );
+  background-size: 200% 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.faq-item:hover::after {
+  opacity: 1;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ========================================
+   EXPANDED ITEM GLOW PULSE
+   ======================================== */
+.faq-item[data-expanded="true"]::after {
+  opacity: 1;
+  animation: glow-pulse 2s ease-in-out infinite, gradient-shift 3s ease infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(29, 107, 107, 0.3); }
+  50% { box-shadow: 0 0 35px rgba(29, 107, 107, 0.5); }
+}
+
+/* ========================================
+   ENHANCED +/- INDICATOR ANIMATION
+   ======================================== */
+.faq-question:hover .indicator-line {
+  background: #155858;
+}
+
+.faq-item[data-expanded="true"] .faq-indicator {
+  animation: indicator-bounce 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes indicator-bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* ========================================
+   HEADLINE FLOURISH ANIMATION
+   ======================================== */
+.headline-flourish path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw-flourish 2s ease forwards;
+}
+
+.headline-flourish path:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.headline-flourish path:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes draw-flourish {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ========================================
+   ENHANCED HELP CARD (GLASS MORPHISM)
+   ======================================== */
+.help-card {
+  background: linear-gradient(135deg,
+    rgba(253, 252, 250, 0.95) 0%,
+    rgba(250, 248, 245, 0.9) 100%
+  ) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.help-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg,
+    rgba(212, 168, 83, 0.08) 0%,
+    rgba(224, 122, 95, 0.05) 50%,
+    rgba(29, 107, 107, 0.08) 100%
+  );
+  z-index: 0;
+}
+
+.help-card-glow {
+  background: radial-gradient(ellipse at center,
+    rgba(224, 122, 95, 0.25) 0%,
+    rgba(224, 122, 95, 0.1) 40%,
+    transparent 70%
+  ) !important;
+}
+
+/* ========================================
+   SQUIGGLY UNDERLINE ANIMATION
+   ======================================== */
+.headline-underline {
+  position: relative;
+  overflow: visible;
+}
+
+.headline-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10'%3E%3Cpath d='M0,5 Q25,0 50,5 T100,5' stroke='%23D4A853' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x;
+  background-size: 30px 6px;
+  animation: wave-underline 2s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes wave-underline {
+  from { background-position-x: 0; }
+  to { background-position-x: 30px; }
 }
 </style>
 
