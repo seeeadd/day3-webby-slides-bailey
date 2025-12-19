@@ -6,22 +6,22 @@
   <title>Offer Stack - Everything You Get</title>
   <style>
     /* ==========================================
-       FONT EMBEDDINGS
+       FONT EMBEDDINGS - BASE64 EMBEDDED
        ========================================== */
     @font-face {
       font-family: 'OGG';
-      src: url('https://seanthea.github.io/bailey-fonts/Ogg-Bold.woff2') format('woff2');
       font-weight: 700;
       font-style: normal;
       font-display: swap;
+      src: url('data:font/otf;base64,T1RUTwALAIAAAwAwQ0ZGIITtffcAAApkAAAtF0RTSUcAAAACAABREAAAAAhHUE9Tx0yr5AAAN3wAABiQT1MvMnPvj6oAAAEgAAAAYGNtYXAA8AGHAAAJ8AAAAFRoZWFkF3DZpgAAALwAAAA2aGhlYQh+AxYAAAD0AAAAJGhtdHiWagI0AABQDAAAAQRtYXhwAEFQAAAAARgAAAAGbmFtZXsLsh4AAAGAAAAIbXBvc3T/0QAyAAAKRAAAACAAAQAAAAIAAHYT0VFfDzz1AAMD6AAAAADZ3Ju2AAAAANpE+l//AP63BTYD+gABAAMAAgAAAAAAAAABAAAERf5MAAAFhv8A/wIFNgABAAAAAAAAAAAAAAAAAAAAQQAAUAAAQQAAAAQCSAK8AAUAAAKKAlgAAABLAooCWAAAAV4AMgEsAAACCQgECAcGAwIDAAAAAQAAAAAAAAAAAAAAAFNIUlABIAAgAHoDcP7pAhEERQG0IAAAkwAAAAAB9AM9AAAAIAAMAAAAIgGeAAEAAAAAAAAANwAAAAEAAAAAAAEACQA3AAEAAAAAAAIABABAAAEAAAAAAAMAGABEAAEAAAAAAAQADgBcAAEAAAAAAAUAMgBqAAEAAAAAAAYADQCcAAEAAAAAAAcAUwCpAAEAAAAAAAgAFgD8AAEAAAAAAAkALwESAAEAAAAAAAsAFAFBAAEAAAAAAAwAFwFVAAEAAAAAAA0ARgFsAAEAAAAAAA4AIwGyAAEAAAAAABMAUQHVAAEAAAAAAQAADAImAAEAAAAAAQEAEwIyAAMAAQQJAAAAbgJFAAMAAQQJAAEAEgKzAAMAAQQJAAIACALFAAMAAQQJAAMAMALNAAMAAQQJAAQAHAL9AAMAAQQJAAUAZAMZAAMAAQQJAAYAGgN9AAMAAQQJAAcApgOXAAMAAQQJAAgALAQ9AAMAAQQJAAkAXgRpAAMAAQQJAAsAKATHAAMAAQQJAAwALgTvAAMAAQQJAA0AjAUdAAMAAQQJAA4ARgWpAAMAAQQJABMAogXvAAMAAQQJAQAAGAaRAAMAAQQJAQEAJgapQ29weXJpZ2h0IChjKSAyMDE5IGJ5IEx1Y2FzIFNoYXJwLiBBbGwgcmlnaHRzIHJlc2VydmVkLk9nZyBUUklBTEJvbGQyLjAwMDtTSFJQO09nZ1RSSUFMLUJvbGRPZ2cgVFJJQUwgQm9sZFZlcnNpb24gMi4wMDA7aG90Y29udiAxLjAuMTA5O21ha2VvdGZleGUgMi41LjY1NTk2T2dnVFJJQUwtQm9sZE9nZyBUUklBTCBpcyBlaXRoZXIgYSByZWdpc3RlcmVkIHRyYWRlbWFyayBvciBhIHRyYWRlbWFyayBvZiBTaGFycCBUeXBlIENvcnBvcmF0aW9uU2hhcnAgVHlwZSBDb3Jwb3JhdGlvbkx1Y2FzIFNoYXJwIHdpdGggQ29ubm9yIERhdmVucG9ydCBhbmQgV2VpIEh1YW5naHR0cHM6Ly9zaGFycHR5cGUuY29odHRwOi8vd3d3LnNoYXJwdHlwZS5jb1NlZSBzaGFycHR5cGUuY28vbGljZW5zaW5nLyBmb3IgYXBwbGljYWJsZSBFbmQgVXNlciBMaWNlbnNlIEFncmVlbWVudC5odHRwczovL3d3dy5zaGFycHR5cGUuY28vbGljZW5zaW5nL09nZyBUUklBTAogYnkgTHVjYXMgU2hhcnAKIHdpdGggQ29ubm9yIERhdmVucG9ydAogYW5kIFdlaSBIdWFuZwogU2hhcnAgVHlwZSwgMjAxOUFsdGVybmF0ZSBPRVJldmVyc2UgTGVmdCBRdW90ZXMAQwBvAHAAeQByAGkAZwBoAHQAIAAoAGMAKQAgADIAMAAxADkAIABiAHkAIABMAHUAYwBhAHMAIABTAGgAYQByAHAALgAgAEEAbABsACAAcgBpAGcAaAB0AHMAIAByAGUAcwBlAHIAdgBlAGQALgBPAGcAZwAgAFQAUgBJAEEATABCAG8AbABkADIALgAwADAAMAA7AFMASABSAFAAOwBPAGcAZwBUAFIASQBBAEwALQBCAG8AbABkAE8AZwBnACAAVABSAEkAQQBMACAAQgBvAGwAZABWAGUAcgBzAGkAbwBuACAAMgAuADAAMAAwADsAaABvAHQAYwBvAG4AdgAgADEALgAwAC4AMQAwADkAOwBtAGEAawBlAG8AdABmAGUAeABlACAAMgAuADUALgA2ADUANQA5ADYATwBnAGcAVABSAEkAQQBMAC0AQgBvAGwAZABPAGcAZwAgAFQAUgBJAEEATAAgAGkAcwAgAGUAaQB0AGgAZQByACAAYQAgAHIAZQBnAGkAcwB0AGUAcgBlAGQAIAB0AHIAYQBkAGUAbQBhAHIAawAgAG8AcgAgAGEAIAB0AHIAYQBkAGUAbQBhAHIAawAgAG8AZgAgAFMAaABhAHIAcAAgAFQAeQBwAGUAIABDAG8AcgBwAG8AcgBhAHQAaQBvAG4AUwBoAGEAcgBwACAAVAB5AHAAZQAgAEMAbwByAHAAbwByAGEAdABpAG8AbgBMAHUAYwBhAHMAIABTAGgAYQByAHAAIAB3AGkAdABoACAAQwBvAG4AbgBvAHIAIABEAGEAdgBlAG4AcABvAHIAdAAgAGEAbgBkACAAVwBlAGkAIABIAHUAYQBuAGcAaAB0AHQAcABzADoALwAvAHMAaABhAHIAcAB0AHkAcABlAC4AYwBvAGgAdAB0AHAAOgAvAC8AdwB3AHcALgBzAGgAYQByAHAAdAB5AHAAZQAuAGMAbwBTAGUAZQAgAHMAaABhAHIAcAB0AHkAcABlAC4AYwBvAC8AbABpAGMAZQBuAHMAaQBuAGcALwAgAGYAbwByACAAYQBwAHAAbABpAGMAYQBiAGwAZQAgAEUAbgBkACAAVQBzAGUAcgAgAEwAaQBjAGUAbgBzAGUAIABBAGcAcgBlAGUAbQBlAG4AdAAuAGgAdAB0AHAAcwA6AC8ALwB3AHcAdwAuAHMAaABhAHIAcAB0AHkAcABlAC4AYwBvAC8AbABpAGMAZQBuAHMAaQBuAGcALwBPAGcAZwAgAFQAUgBJAEEATAAKACAAYgB5ACAATAB1AGMAYQBzACAAUwBoAGEAcgBwAAoAIAB3AGkAdABoACAAQwBvAG4AbgBvAHIAIABEAGEAdgBlAG4AcABvAHIAdAAKACAAYQBuAGQAIABXAGUAaQAgAEgAdQBhAG4AZwAKACAAUwBoAGEAcgBwACAAVAB5AHAAZQAsACAAMgAwADEAOQBBAGwAdABlAHIAbgBhAHQAZQAgAE8ARQBSAGUAdgBlAHIAcwBlACAATABlAGYAdAAgAFEAdQBvAHQAZQBzAAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABABAAAAADAAIAAIABAAgAC4AOQBaAHr//wAAACAALgAwAEEAYf///+EACAAH/8H/uwABAAAAAAAAAAAAAAAAAAMAAAAAAAD/zgAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAAA==') format('opentype');
     }
 
     @font-face {
       font-family: 'Satoshi';
-      src: url('https://seanthea.github.io/bailey-fonts/Satoshi-Variable.woff2') format('woff2');
       font-weight: 100 900;
       font-style: normal;
       font-display: swap;
+      src: url('https://seanthea.github.io/bailey-fonts/Satoshi-Variable.woff2') format('woff2');
     }
 
     /* ==========================================
@@ -40,7 +40,7 @@
     }
 
     /* ==========================================
-       OFFER STACK SECTION - WARM CREAM (Calm Clarity)
+       OFFER STACK SECTION - WARM CREAM
        ========================================== */
     #offer-stack {
       width: 100%;
@@ -61,7 +61,7 @@
       z-index: 0;
     }
 
-    /* Watercolor blobs - Soft and warm */
+    /* Watercolor blobs */
     #offer-stack .blob-coral {
       position: absolute;
       top: -150px;
@@ -104,7 +104,7 @@
 
     /* Container */
     #offer-stack .stack-container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       position: relative;
       z-index: 1;
@@ -115,7 +115,7 @@
        ========================================== */
     #offer-stack .hero-area {
       text-align: center;
-      margin-bottom: 64px;
+      margin-bottom: 72px;
     }
 
     #offer-stack .eyebrow-pill {
@@ -159,7 +159,7 @@
     }
 
     /* ==========================================
-       SIGNATURE DETAIL: Hairline Gradient Divider
+       HAIRLINE DIVIDER
        ========================================== */
     .hairline-divider {
       width: 100%;
@@ -169,94 +169,64 @@
     }
 
     /* ==========================================
-       OFFER CARDS - CALM & SCANNABLE
+       OFFER CARDS - NON-COLLAPSIBLE
        ========================================== */
     #offer-stack .cards-list {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 32px;
       margin-bottom: 56px;
     }
 
-    /* Individual Card - Warm Surface with Subtle Refinement */
+    /* Individual Card */
     #offer-stack .offer-card {
       background: #FFFDFB;
-      border-radius: 16px;
-      border: 1px solid rgba(45, 42, 38, 0.06);
+      border-radius: 20px;
+      border: 1px solid rgba(45, 42, 38, 0.08);
       overflow: hidden;
       position: relative;
-      box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.02),
-        0 2px 6px rgba(0, 0, 0, 0.02);
-      transition: all 0.25s ease;
-    }
-
-    /* Subtle left accent line for visual hierarchy */
-    #offer-stack .offer-card::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 20px;
-      bottom: 20px;
-      width: 3px;
-      background: linear-gradient(180deg, rgba(29, 107, 107, 0.3) 0%, rgba(29, 107, 107, 0.1) 100%);
-      border-radius: 0 2px 2px 0;
-      opacity: 0;
-      transition: opacity 0.25s ease;
-    }
-
-    #offer-stack .offer-card:hover::before {
-      opacity: 1;
-    }
-
-    #offer-stack .offer-card:hover {
-      border-color: rgba(45, 42, 38, 0.1);
-      box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.04),
-        0 4px 16px rgba(0, 0, 0, 0.04);
-    }
-
-    /* Featured Card (Core) - Prominent but elegant */
-    #offer-stack .offer-card.featured {
-      border: 1px solid rgba(224, 122, 95, 0.15);
       box-shadow:
         0 2px 8px rgba(0, 0, 0, 0.03),
         0 4px 16px rgba(0, 0, 0, 0.04);
     }
 
-    /* Featured card left accent - always visible, coral */
-    #offer-stack .offer-card.featured::before {
-      background: linear-gradient(180deg, #E07A5F 0%, rgba(224, 122, 95, 0.4) 100%);
-      opacity: 1;
-      top: 24px;
-      bottom: 24px;
+    /* Card Inner Layout - Two Column */
+    #offer-stack .card-inner {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 0;
     }
 
-    /* ==========================================
-       CARD HEADER - Clean Row Layout
-       ========================================== */
-    #offer-stack .card-header {
-      padding: 20px 28px;
+    @media (max-width: 800px) {
+      #offer-stack .card-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Card Content Side */
+    #offer-stack .card-content {
+      padding: 32px 36px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Card Header Row */
+    #offer-stack .card-header-row {
       display: flex;
       align-items: center;
       gap: 16px;
       flex-wrap: wrap;
-      cursor: pointer;
-      transition: background 0.2s ease;
+      margin-bottom: 20px;
     }
 
-    #offer-stack .card-header:hover {
-      background: rgba(250, 248, 245, 0.5);
-    }
-
-    /* Label Pill (CORE, PATHS, etc.) */
+    /* Label Pill */
     #offer-stack .card-label {
       font-family: 'Satoshi', sans-serif;
       font-size: 10px;
       font-weight: 800;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      padding: 5px 12px;
+      padding: 6px 14px;
       border-radius: 6px;
       white-space: nowrap;
     }
@@ -317,99 +287,23 @@
     /* Card Title */
     #offer-stack .card-title {
       font-family: 'OGG', Georgia, serif;
-      font-size: clamp(18px, 2vw, 22px);
+      font-size: clamp(20px, 2.5vw, 26px);
       font-weight: 700;
       color: #2D2A26;
-      flex: 1;
-      min-width: 200px;
+      line-height: 1.2;
     }
 
-    /* Best For Pill */
-    #offer-stack .best-for {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      color: #6B635A;
-      padding: 6px 14px;
-      background: rgba(45, 42, 38, 0.04);
-      border-radius: 100px;
-      white-space: nowrap;
-    }
-
-    /* Expand/Collapse Indicator */
-    #offer-stack .expand-icon {
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #9B9590;
-      transition: transform 0.3s ease;
-    }
-
-    #offer-stack .offer-card.expanded .expand-icon {
-      transform: rotate(180deg);
-    }
-
-    /* ==========================================
-       CARD BODY - Collapsed by Default
-       ========================================== */
-    #offer-stack .card-body {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.3s ease;
-      padding: 0 28px;
-    }
-
-    #offer-stack .offer-card.expanded .card-body {
-      max-height: 1000px;
-      padding: 0 28px 28px;
-    }
-
-    /* Featured card always expanded */
-    #offer-stack .offer-card.featured .card-body {
-      max-height: none;
-      padding: 0 28px 28px;
-    }
-
-    /* Two Column Layout for Featured Card */
-    #offer-stack .card-body-inner {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-
-    #offer-stack .offer-card.featured .card-body-inner {
-      grid-template-columns: 1fr 280px;
-      gap: 32px;
-      align-items: start;
-    }
-
-    @media (max-width: 800px) {
-      #offer-stack .offer-card.featured .card-body-inner {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Card Content */
-    #offer-stack .card-content {
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* One-liner "What it is" */
-    #offer-stack .card-oneliner {
+    /* Card Intro */
+    #offer-stack .card-intro {
       font-family: 'Satoshi', sans-serif;
       font-size: 16px;
       font-weight: 400;
-      line-height: 1.6;
+      line-height: 1.65;
       color: #4A4A4A;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
-    /* ==========================================
-       FEATURE LIST - Clean bullets
-       ========================================== */
+    /* Feature List */
     #offer-stack .feature-list {
       list-style: none;
       margin-bottom: 24px;
@@ -430,7 +324,6 @@
       margin-bottom: 0;
     }
 
-    /* Bullet dot */
     #offer-stack .bullet-dot {
       flex-shrink: 0;
       width: 6px;
@@ -440,25 +333,14 @@
       margin-top: 8px;
     }
 
-    /* Hook text (bold) */
     #offer-stack .feature-list li strong {
       font-weight: 700;
       color: #2D2A26;
     }
 
-    /* Clarifier (regular) */
-    #offer-stack .feature-list li span {
-      color: #6B635A;
-      font-weight: 400;
-    }
-
-    /* ==========================================
-       CARD FOOTER - Outcome + Stat
-       ========================================== */
+    /* Card Footer */
     #offer-stack .card-footer {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+      margin-top: auto;
       padding-top: 20px;
       border-top: 1px solid rgba(45, 42, 38, 0.06);
     }
@@ -469,6 +351,7 @@
       font-weight: 400;
       color: #9B9590;
       font-style: italic;
+      margin-bottom: 12px;
     }
 
     #offer-stack .card-outcome {
@@ -477,17 +360,11 @@
       font-weight: 600;
       color: #2D2A26;
       line-height: 1.5;
-    }
-
-    #offer-stack .footer-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
+      margin-bottom: 16px;
     }
 
     #offer-stack .card-stat {
+      display: inline-block;
       font-family: 'Satoshi', sans-serif;
       font-size: 12px;
       font-weight: 600;
@@ -498,35 +375,38 @@
     }
 
     /* ==========================================
-       CARD GRAPHIC (Featured Card Only)
+       CARD GRAPHIC SIDE
        ========================================== */
     #offer-stack .card-graphic {
-      width: 100%;
-      aspect-ratio: 1;
-      max-width: 280px;
       background: linear-gradient(145deg, #F5F2ED 0%, #EBE7E2 100%);
-      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      padding: 24px;
+      min-height: 320px;
     }
 
     #offer-stack .card-graphic svg {
       width: 100%;
-      height: 100%;
+      height: auto;
+      max-width: 280px;
     }
 
     @media (max-width: 800px) {
       #offer-stack .card-graphic {
-        max-width: 100%;
-        aspect-ratio: 16/10;
         order: -1;
+        min-height: 240px;
+        padding: 20px;
       }
     }
 
+    /* Dark graphic background for podcast */
+    #offer-stack .card-graphic.dark-bg {
+      background: linear-gradient(145deg, #1E1E26 0%, #141418 100%);
+    }
+
     /* ==========================================
-       CTA CARD - Premium & Clickable
+       CTA CARD
        ========================================== */
     #offer-stack .cta-card {
       background: #FFFDFB;
@@ -590,12 +470,9 @@
       text-decoration: none;
       cursor: pointer;
       border: none;
-      position: relative;
-      overflow: hidden;
       box-shadow:
         0 2px 4px rgba(224, 122, 95, 0.2),
-        0 4px 8px rgba(224, 122, 95, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        0 4px 8px rgba(224, 122, 95, 0.15);
       transition: all 0.2s ease;
     }
 
@@ -603,15 +480,7 @@
       transform: translateY(-1px);
       box-shadow:
         0 4px 8px rgba(224, 122, 95, 0.25),
-        0 8px 16px rgba(224, 122, 95, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    }
-
-    #offer-stack .cta-button:active {
-      transform: translateY(1px);
-      box-shadow:
-        0 1px 2px rgba(224, 122, 95, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        0 8px 16px rgba(224, 122, 95, 0.2);
     }
 
     /* Trust Row */
@@ -647,13 +516,8 @@
         padding: 64px 16px;
       }
 
-      #offer-stack .card-header {
-        padding: 16px 20px;
-      }
-
-      #offer-stack .offer-card.expanded .card-body,
-      #offer-stack .offer-card.featured .card-body {
-        padding: 0 20px 20px;
+      #offer-stack .card-content {
+        padding: 24px 20px;
       }
 
       #offer-stack .cta-card {
@@ -675,11 +539,8 @@
       }
     }
 
-    /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      #offer-stack .offer-card,
-      #offer-stack .cta-button,
-      #offer-stack .card-body {
+      #offer-stack .cta-button {
         transition: none;
       }
     }
@@ -707,136 +568,168 @@
       <!-- ========================================
            CARD 1: CORE - My $10K Profit Formula
            ======================================== -->
-      <article class="offer-card featured expanded">
-        <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label core">Core</span>
-          <h3 class="card-title">My $10K Etsy Digital Product Profit Formula</h3>
-          <span class="best-for">Best for: Getting started right</span>
-          <div class="expand-icon">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 4L6 8L10 4"/>
+      <article class="offer-card">
+        <div class="card-inner">
+          <div class="card-content">
+            <div class="card-header-row">
+              <span class="card-label core">Core</span>
+              <h3 class="card-title">My $10K Etsy Digital Product Profit Formula</h3>
+            </div>
+            <p class="card-intro">This is what's actually running my shop right now. Not something I learned from a course. I built this from 4 years of figuring out what works and what's a waste of time.</p>
+            <ul class="feature-list">
+              <li>
+                <span class="bullet-dot"></span>
+                <div>The product pipeline I use so I never run out of ideas</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>My traffic loop that took 2 years to figure out (you get it in an afternoon)</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>The listing structure behind my best-sellers, the one I've never shared publicly</div>
+              </li>
+            </ul>
+            <div class="card-footer">
+              <p class="use-it-when">Use it when: you want the thing that's actually working right now.</p>
+              <p class="card-outcome">Same setup I run. Same decisions. Same structure.</p>
+              <span class="card-stat">4 years of refinement</span>
+            </div>
+          </div>
+          <div class="card-graphic">
+            <!-- Bailey's Actual Dashboard -->
+            <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Browser Frame -->
+              <rect x="8" y="16" width="264" height="200" rx="12" fill="#2D2A26"/>
+              <circle cx="26" cy="32" r="5" fill="#E07A5F"/>
+              <circle cx="42" cy="32" r="5" fill="#D4AF37"/>
+              <circle cx="58" cy="32" r="5" fill="#1D6B6B"/>
+
+              <!-- Dashboard Content -->
+              <rect x="16" y="46" width="248" height="162" rx="8" fill="#FFFFFF"/>
+
+              <!-- Stats Row -->
+              <rect x="26" y="56" width="72" height="48" rx="6" fill="#FAF8F5"/>
+              <text x="34" y="72" font-family="Satoshi, sans-serif" font-size="9" fill="#6B635A">Sales</text>
+              <text x="34" y="92" font-family="Satoshi, sans-serif" font-size="16" font-weight="700" fill="#2D2A26">10,247</text>
+
+              <rect x="104" y="56" width="72" height="48" rx="6" fill="#FAF8F5"/>
+              <text x="112" y="72" font-family="Satoshi, sans-serif" font-size="9" fill="#6B635A">Revenue</text>
+              <text x="112" y="92" font-family="Satoshi, sans-serif" font-size="16" font-weight="700" fill="#1D6B6B">$87.4K</text>
+
+              <rect x="182" y="56" width="72" height="48" rx="6" fill="#FAF8F5"/>
+              <text x="190" y="72" font-family="Satoshi, sans-serif" font-size="9" fill="#6B635A">Rating</text>
+              <text x="190" y="92" font-family="Satoshi, sans-serif" font-size="16" font-weight="700" fill="#E07A5F">4.9 ★</text>
+
+              <!-- Graph Area -->
+              <rect x="26" y="112" width="228" height="88" rx="6" fill="#FAF8F5"/>
+              <polyline points="42,175 72,160 102,165 132,145 162,150 192,130 222,135 238,120" stroke="#1D6B6B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="238" cy="120" r="5" fill="#E07A5F"/>
+
+              <!-- Hand-drawn circle annotation around revenue -->
+              <ellipse cx="140" cy="80" rx="52" ry="32" stroke="#E07A5F" stroke-width="2" stroke-dasharray="5 4" fill="none" transform="rotate(-2 140 80)"/>
+
+              <!-- Arrow -->
+              <path d="M195 70 L210 58" stroke="#E07A5F" stroke-width="2" stroke-linecap="round"/>
+              <polygon points="210,58 205,64 212,63" fill="#E07A5F"/>
+
+              <!-- Sticky Note -->
+              <rect x="44" y="230" width="192" height="56" rx="6" fill="#FDF6E3" stroke="#D4AF37" stroke-width="1"/>
+              <text x="140" y="254" font-family="Satoshi, sans-serif" font-size="11" fill="#5C4827" text-anchor="middle" font-style="italic">"this is what consistent</text>
+              <text x="140" y="270" font-family="Satoshi, sans-serif" font-size="11" fill="#5C4827" text-anchor="middle" font-style="italic">looks like"</text>
+
+              <!-- Bailey indicator -->
+              <circle cx="248" cy="36" r="10" fill="#FAF8F5" stroke="#E07A5F" stroke-width="1.5"/>
+              <text x="248" y="40" font-family="Satoshi, sans-serif" font-size="9" fill="#E07A5F" text-anchor="middle" font-weight="600">B</text>
             </svg>
           </div>
         </div>
-        <div class="card-body">
-          <div class="card-body-inner">
-            <div class="card-content">
-              <p class="card-oneliner">This is what's actually running my shop right now. Not something I learned from a course. I built this from 4 years of figuring out what works and what's a waste of time.</p>
-              <ul class="feature-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>The product pipeline I use so I never run out of ideas</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>My traffic loop that took 2 years to figure out (you get it in an afternoon)</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>The listing structure behind my best-sellers, the one I've never shared publicly</div>
-                </li>
-              </ul>
-              <div class="card-footer">
-                <span class="use-it-when">Use it when: you want the thing that's actually working right now.</span>
-                <p class="card-outcome">Same setup I run. Same decisions. Same structure.</p>
-                <div class="footer-row">
-                  <span class="card-stat">4 years of refinement</span>
-                </div>
-              </div>
-            </div>
-            <div class="card-graphic">
-              <!-- Bailey's Actual Dashboard SVG -->
-              <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Browser Frame -->
-                <rect x="16" y="24" width="248" height="180" rx="12" fill="#2D2A26"/>
-                <circle cx="34" cy="40" r="5" fill="#E07A5F"/>
-                <circle cx="50" cy="40" r="5" fill="#D4AF37"/>
-                <circle cx="66" cy="40" r="5" fill="#1D6B6B"/>
-
-                <!-- Dashboard Content Area -->
-                <rect x="24" y="54" width="232" height="142" rx="8" fill="#FFFFFF"/>
-
-                <!-- Stats Row -->
-                <rect x="34" y="64" width="68" height="44" rx="6" fill="#FAF8F5"/>
-                <text x="42" y="78" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Sales</text>
-                <text x="42" y="96" font-family="Satoshi, sans-serif" font-size="15" font-weight="700" fill="#2D2A26">10,247</text>
-
-                <rect x="110" y="64" width="68" height="44" rx="6" fill="#FAF8F5"/>
-                <text x="118" y="78" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Revenue</text>
-                <text x="118" y="96" font-family="Satoshi, sans-serif" font-size="15" font-weight="700" fill="#1D6B6B">$87.4K</text>
-
-                <rect x="186" y="64" width="60" height="44" rx="6" fill="#FAF8F5"/>
-                <text x="194" y="78" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">Rating</text>
-                <text x="194" y="96" font-family="Satoshi, sans-serif" font-size="15" font-weight="700" fill="#E07A5F">4.9 ★</text>
-
-                <!-- Graph Area -->
-                <rect x="34" y="116" width="212" height="70" rx="6" fill="#FAF8F5"/>
-                <polyline points="50,165 80,155 110,158 140,142 170,148 200,132 230,138" stroke="#1D6B6B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="230" cy="138" r="5" fill="#E07A5F"/>
-
-                <!-- Hand-drawn circle annotation -->
-                <ellipse cx="118" cy="84" rx="42" ry="28" stroke="#E07A5F" stroke-width="2" stroke-dasharray="4 3" fill="none" transform="rotate(-3 118 84)"/>
-
-                <!-- Arrow pointing to revenue -->
-                <path d="M165 75 L175 68" stroke="#E07A5F" stroke-width="2" stroke-linecap="round"/>
-                <path d="M175 68 L172 74 L178 72" fill="#E07A5F"/>
-
-                <!-- Sticky Note -->
-                <rect x="54" y="212" width="172" height="48" rx="4" fill="#FDF6E3" stroke="#D4AF37" stroke-width="1"/>
-                <text x="140" y="232" font-family="Satoshi, sans-serif" font-size="10" fill="#5C4827" text-anchor="middle" font-style="italic">"this is what consistent</text>
-                <text x="140" y="246" font-family="Satoshi, sans-serif" font-size="10" fill="#5C4827" text-anchor="middle" font-style="italic">looks like"</text>
-
-                <!-- Small Bailey indicator -->
-                <circle cx="240" cy="44" r="8" fill="#FAF8F5" stroke="#E07A5F" stroke-width="1.5"/>
-                <text x="240" y="47" font-family="Satoshi, sans-serif" font-size="7" fill="#E07A5F" text-anchor="middle">B</text>
-              </svg>
-            </div>
-          </div>
-        </div>
       </article>
-
-      <div class="hairline-divider"></div>
 
       <!-- ========================================
            CARD 2: PATHS - 3 Paths to $5K/Month
            ======================================== -->
       <article class="offer-card">
-        <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label paths">Paths</span>
-          <h3 class="card-title">3 Paths to $5K/Month with AI Designs on Etsy</h3>
-          <span class="best-for">Best for: Picking your lane</span>
-          <div class="expand-icon">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 4L6 8L10 4"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-body-inner">
-            <div class="card-content">
-              <p class="card-oneliner">These are the three routes I've watched work over and over in my shop and in my students' shops. I mapped them out so you can pick the one that fits and stop reinventing everything.</p>
-              <ul class="feature-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div><strong>Audience Path:</strong> The exact way I built my first profitable niche</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div><strong>Bundle Path:</strong> How I 2x'd my average order value without more traffic</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div><strong>Social Path:</strong> The method my top students use to pull traffic from outside Etsy</div>
-                </li>
-              </ul>
-              <div class="card-footer">
-                <span class="use-it-when">Use it when: you're tired of piecing together random advice that doesn't connect.</span>
-                <p class="card-outcome">One lane, locked in. I've already proven each one works.</p>
-                <div class="footer-row">
-                  <span class="card-stat">3 paths, pick one or stack all</span>
-                </div>
-              </div>
+        <div class="card-inner">
+          <div class="card-content">
+            <div class="card-header-row">
+              <span class="card-label paths">Paths</span>
+              <h3 class="card-title">3 Paths to $5K/Month with AI Designs on Etsy</h3>
             </div>
+            <p class="card-intro">These are the three routes I've watched work over and over in my shop and in my students' shops. I mapped them out so you can pick the one that fits and stop reinventing everything.</p>
+            <ul class="feature-list">
+              <li>
+                <span class="bullet-dot"></span>
+                <div><strong>Audience Path:</strong> The exact way I built my first profitable niche</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div><strong>Bundle Path:</strong> How I 2x'd my average order value without more traffic</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div><strong>Social Path:</strong> The method my top students use to pull traffic from outside Etsy</div>
+              </li>
+            </ul>
+            <div class="card-footer">
+              <p class="use-it-when">Use it when: you're tired of piecing together random advice that doesn't connect.</p>
+              <p class="card-outcome">One lane, locked in. I've already proven each one works.</p>
+              <span class="card-stat">3 paths, pick one or stack all</span>
+            </div>
+          </div>
+          <div class="card-graphic">
+            <!-- Three Roads Map -->
+            <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Starting Point - Shop Icon -->
+              <rect x="120" y="260" width="40" height="36" rx="4" fill="#FFFDFB" stroke="#2D2A26" stroke-width="2"/>
+              <path d="M120 272 L140 258 L160 272" stroke="#2D2A26" stroke-width="2" fill="#FAF8F5"/>
+              <rect x="132" y="280" width="16" height="16" fill="#E07A5F" rx="2"/>
+              <text x="140" y="310" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A" text-anchor="middle" font-weight="600">You</text>
+
+              <!-- "You are here" dot -->
+              <circle cx="140" cy="248" r="6" fill="#E07A5F"/>
+              <circle cx="140" cy="248" r="10" fill="none" stroke="#E07A5F" stroke-width="1" stroke-dasharray="3 2"/>
+
+              <!-- Path 1 - Audience (Coral) - Left -->
+              <path d="M130 240 Q80 200 60 140 Q50 100 70 60" stroke="#E07A5F" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="8 4"/>
+              <!-- Icons on Audience Path -->
+              <circle cx="75" cy="180" r="12" fill="#E07A5F" opacity="0.2"/>
+              <circle cx="75" cy="180" r="6" fill="#E07A5F"/>
+              <circle cx="58" cy="120" r="10" fill="#E07A5F" opacity="0.15"/>
+              <path d="M54 120 L62 120 M58 116 L58 124" stroke="#E07A5F" stroke-width="2"/>
+
+              <!-- Path 2 - Bundle (Gold) - Middle -->
+              <path d="M140 240 Q140 180 140 120 Q140 80 140 50" stroke="#D4AF37" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="8 4"/>
+              <!-- Icons on Bundle Path -->
+              <rect x="130" y="170" width="20" height="16" rx="2" fill="#D4AF37" opacity="0.3"/>
+              <rect x="133" y="167" width="14" height="12" rx="2" fill="#D4AF37"/>
+              <text x="140" y="130" font-family="Satoshi, sans-serif" font-size="14" fill="#D4AF37" text-anchor="middle">$</text>
+
+              <!-- Path 3 - Social (Teal) - Right -->
+              <path d="M150 240 Q200 200 220 140 Q235 100 210 60" stroke="#1D6B6B" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="8 4"/>
+              <!-- Icons on Social Path -->
+              <circle cx="210" cy="170" r="10" fill="#1D6B6B" opacity="0.2"/>
+              <path d="M205 170 L215 170 M210 165 L210 170 L215 175" stroke="#1D6B6B" stroke-width="2" fill="none"/>
+              <circle cx="225" cy="115" r="8" fill="#1D6B6B" opacity="0.15"/>
+              <path d="M222 115 L228 115 M222 112 L228 118" stroke="#1D6B6B" stroke-width="1.5"/>
+
+              <!-- Destination - $5K Circle -->
+              <circle cx="140" cy="35" r="28" fill="#FFFDFB" stroke="#D4AF37" stroke-width="2"/>
+              <text x="140" y="32" font-family="Satoshi, sans-serif" font-size="12" fill="#2D2A26" text-anchor="middle" font-weight="700">$5K</text>
+              <text x="140" y="44" font-family="Satoshi, sans-serif" font-size="9" fill="#6B635A" text-anchor="middle">/mo</text>
+
+              <!-- Sparkle rays -->
+              <path d="M112 35 L102 35" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M168 35 L178 35" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M140 7 L140 -3" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M120 15 L112 7" stroke="#D4AF37" stroke-width="1.5"/>
+              <path d="M160 15 L168 7" stroke="#D4AF37" stroke-width="1.5"/>
+
+              <!-- Path Labels -->
+              <text x="45" y="75" font-family="Satoshi, sans-serif" font-size="8" fill="#E07A5F" font-weight="600">AUDIENCE</text>
+              <text x="125" y="95" font-family="Satoshi, sans-serif" font-size="8" fill="#D4AF37" font-weight="600">BUNDLE</text>
+              <text x="200" y="75" font-family="Satoshi, sans-serif" font-size="8" fill="#1D6B6B" font-weight="600">SOCIAL</text>
+            </svg>
           </div>
         </div>
       </article>
@@ -845,42 +738,104 @@
            CARD 3: RESOURCE - Full A-Z Tools Library
            ======================================== -->
       <article class="offer-card">
-        <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label resource">Resource</span>
-          <h3 class="card-title">Full A-Z Tools Library</h3>
-          <span class="best-for">Best for: Skipping trial and error</span>
-          <div class="expand-icon">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 4L6 8L10 4"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-body-inner">
-            <div class="card-content">
-              <p class="card-oneliner">This is my actual toolkit. The prompts I use. The docs I built. The SOPs I follow. I'm handing you the backend of my business.</p>
-              <ul class="feature-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>My personal prompts, the ones that generate my real products</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>The listing formats I've refined over 4 years and 10,000+ sales</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Internal docs I've never released outside my paid programs</div>
-                </li>
-              </ul>
-              <div class="card-footer">
-                <span class="use-it-when">Use it when: you want to skip the years of trial and error and just use what's already working.</span>
-                <p class="card-outcome">My actual tools in your hands. The same ones I use every day.</p>
-                <div class="footer-row">
-                  <span class="card-stat">10,000+ sales behind these</span>
-                </div>
-              </div>
+        <div class="card-inner">
+          <div class="card-content">
+            <div class="card-header-row">
+              <span class="card-label resource">Resource</span>
+              <h3 class="card-title">Full A-Z Tools Library</h3>
             </div>
+            <p class="card-intro">This is my actual toolkit. The prompts I use. The docs I built. The SOPs I follow. I'm handing you the backend of my business.</p>
+            <ul class="feature-list">
+              <li>
+                <span class="bullet-dot"></span>
+                <div>My personal prompts, the ones that generate my real products</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>The listing formats I've refined over 4 years and 10,000+ sales</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Internal docs I've never released outside my paid programs</div>
+              </li>
+            </ul>
+            <div class="card-footer">
+              <p class="use-it-when">Use it when: you want to skip the years of trial and error and just use what's already working.</p>
+              <p class="card-outcome">My actual tools in your hands. The same ones I use every day.</p>
+              <span class="card-stat">10,000+ sales behind these</span>
+            </div>
+          </div>
+          <div class="card-graphic">
+            <!-- Bailey's Google Drive Folder -->
+            <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Finder Window -->
+              <rect x="16" y="24" width="248" height="240" rx="10" fill="#FFFFFF" stroke="#E8E2D9" stroke-width="1"/>
+
+              <!-- Window Header -->
+              <rect x="16" y="24" width="248" height="28" rx="10" fill="#F5F2ED"/>
+              <rect x="16" y="42" width="248" height="10" fill="#F5F2ED"/>
+              <circle cx="32" cy="38" r="5" fill="#E07A5F"/>
+              <circle cx="48" cy="38" r="5" fill="#D4AF37"/>
+              <circle cx="64" cy="38" r="5" fill="#1D6B6B"/>
+              <text x="140" y="42" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A" text-anchor="middle" font-weight="600">Bailey's Toolkit</text>
+
+              <!-- Folder Structure -->
+              <!-- Main Folder -->
+              <rect x="28" y="64" width="20" height="16" rx="2" fill="#1D6B6B"/>
+              <rect x="28" y="60" width="10" height="6" rx="1" fill="#1D6B6B"/>
+              <text x="54" y="76" font-family="Satoshi, sans-serif" font-size="11" fill="#2D2A26" font-weight="600">Prompts</text>
+
+              <!-- Files under Prompts -->
+              <rect x="44" y="88" width="16" height="20" rx="2" fill="#FAF8F5" stroke="#D4D0C8"/>
+              <line x1="48" y1="94" x2="56" y2="94" stroke="#D4D0C8" stroke-width="1"/>
+              <line x1="48" y1="98" x2="54" y2="98" stroke="#D4D0C8" stroke-width="1"/>
+              <text x="66" y="102" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A">Product Idea Generator.txt</text>
+
+              <rect x="44" y="114" width="16" height="20" rx="2" fill="#FAF8F5" stroke="#D4D0C8"/>
+              <line x1="48" y1="120" x2="56" y2="120" stroke="#D4D0C8" stroke-width="1"/>
+              <line x1="48" y1="124" x2="54" y2="124" stroke="#D4D0C8" stroke-width="1"/>
+              <text x="66" y="128" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A">Variation Expander.txt</text>
+
+              <!-- Listing Templates Folder -->
+              <rect x="28" y="144" width="20" height="16" rx="2" fill="#1D6B6B"/>
+              <rect x="28" y="140" width="10" height="6" rx="1" fill="#1D6B6B"/>
+              <text x="54" y="156" font-family="Satoshi, sans-serif" font-size="11" fill="#2D2A26" font-weight="600">Listing Formats</text>
+
+              <!-- Files under Listing -->
+              <rect x="44" y="168" width="16" height="20" rx="2" fill="#FAF8F5" stroke="#D4D0C8"/>
+              <text x="66" y="182" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A">SEO Title Formula.doc</text>
+
+              <!-- SOPs Folder -->
+              <rect x="28" y="198" width="20" height="16" rx="2" fill="#1D6B6B"/>
+              <rect x="28" y="194" width="10" height="6" rx="1" fill="#1D6B6B"/>
+              <text x="54" y="210" font-family="Satoshi, sans-serif" font-size="11" fill="#2D2A26" font-weight="600">SOPs</text>
+
+              <rect x="44" y="222" width="16" height="20" rx="2" fill="#FAF8F5" stroke="#D4D0C8"/>
+              <text x="66" y="236" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A">Daily Workflow.pdf</text>
+
+              <!-- Floating dragged file with glow -->
+              <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              <g filter="url(#glow)">
+                <rect x="180" y="270" width="72" height="36" rx="4" fill="#FFFDFB" stroke="#E07A5F" stroke-width="2"/>
+                <rect x="186" y="278" width="12" height="16" rx="2" fill="#E07A5F" opacity="0.3"/>
+                <text x="202" y="292" font-family="Satoshi, sans-serif" font-size="8" fill="#2D2A26">SEO Formula</text>
+              </g>
+
+              <!-- Cursor -->
+              <path d="M172 280 L172 298 L178 292 L184 298 L186 296 L180 290 L186 286 Z" fill="#2D2A26"/>
+
+              <!-- Shared indicator -->
+              <rect x="180" y="48" width="70" height="18" rx="9" fill="#1D6B6B" opacity="0.1"/>
+              <text x="215" y="60" font-family="Satoshi, sans-serif" font-size="8" fill="#1D6B6B" text-anchor="middle">Shared with you</text>
+            </svg>
           </div>
         </div>
       </article>
@@ -889,42 +844,95 @@
            CARD 4: TRAFFIC - Pinterest Profit Formula
            ======================================== -->
       <article class="offer-card">
-        <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label traffic">Traffic</span>
-          <h3 class="card-title">Pinterest Profit Formula</h3>
-          <span class="best-for">Best for: Free traffic</span>
-          <div class="expand-icon">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 4L6 8L10 4"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-body-inner">
-            <div class="card-content">
-              <p class="card-oneliner">I spent a full year cracking Pinterest for digital products. This is exactly how I set it up: the board structure, the pin approach, the posting rhythm. All of it.</p>
-              <ul class="feature-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>My exact board setup that feeds my Etsy shop every week</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>The pin formula I tested until it actually converted</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>The 30-min weekly routine I still use today</div>
-                </li>
-              </ul>
-              <div class="card-footer">
-                <span class="use-it-when">Use it when: you want Pinterest traffic without spending a year figuring out what works.</span>
-                <p class="card-outcome">My Pinterest setup, copied. Already built, already working.</p>
-                <div class="footer-row">
-                  <span class="card-stat">142K monthly views</span>
-                </div>
-              </div>
+        <div class="card-inner">
+          <div class="card-content">
+            <div class="card-header-row">
+              <span class="card-label traffic">Traffic</span>
+              <h3 class="card-title">Pinterest Profit Formula</h3>
             </div>
+            <p class="card-intro">I spent a full year cracking Pinterest for digital products. This is exactly how I set it up: the board structure, the pin approach, the posting rhythm. All of it.</p>
+            <ul class="feature-list">
+              <li>
+                <span class="bullet-dot"></span>
+                <div>My exact board setup that feeds my Etsy shop every week</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>The pin formula I tested until it actually converted</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>The 30-min weekly routine I still use today</div>
+              </li>
+            </ul>
+            <div class="card-footer">
+              <p class="use-it-when">Use it when: you want Pinterest traffic without spending a year figuring out what works.</p>
+              <p class="card-outcome">My Pinterest setup, copied. Already built, already working.</p>
+              <span class="card-stat">142K monthly views</span>
+            </div>
+          </div>
+          <div class="card-graphic">
+            <!-- Pinterest Analytics -->
+            <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Analytics Card -->
+              <rect x="16" y="16" width="248" height="200" rx="12" fill="#FFFFFF" stroke="#E8E2D9"/>
+
+              <!-- Header -->
+              <rect x="24" y="24" width="32" height="32" rx="16" fill="#E60023"/>
+              <text x="40" y="44" font-family="Satoshi, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="700">P</text>
+              <text x="68" y="36" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A">Analytics</text>
+              <text x="68" y="50" font-family="Satoshi, sans-serif" font-size="12" fill="#2D2A26" font-weight="600">Outbound clicks</text>
+
+              <!-- Stats -->
+              <text x="200" y="36" font-family="Satoshi, sans-serif" font-size="9" fill="#6B635A" text-anchor="end">Monthly views</text>
+              <text x="200" y="52" font-family="Satoshi, sans-serif" font-size="14" fill="#E07A5F" text-anchor="end" font-weight="700">142K</text>
+              <text x="240" y="36" font-family="Satoshi, sans-serif" font-size="9" fill="#6B635A" text-anchor="end">Saves</text>
+              <text x="240" y="52" font-family="Satoshi, sans-serif" font-size="14" fill="#1D6B6B" text-anchor="end" font-weight="700">3.2K</text>
+
+              <!-- Graph -->
+              <rect x="24" y="64" width="224" height="80" rx="6" fill="#FAF8F5"/>
+              <polyline points="34,125 60,115 90,120 120,100 150,105 180,85 210,90 238,75" stroke="#E60023" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <circle cx="238" cy="75" r="4" fill="#E60023"/>
+
+              <!-- Mini board previews -->
+              <rect x="24" y="152" width="52" height="52" rx="6" fill="#F5F2ED"/>
+              <rect x="28" y="156" width="44" height="32" rx="3" fill="#E07A5F" opacity="0.3"/>
+              <text x="50" y="196" font-family="Satoshi, sans-serif" font-size="7" fill="#6B635A" text-anchor="middle">Planners</text>
+
+              <rect x="84" y="152" width="52" height="52" rx="6" fill="#F5F2ED"/>
+              <rect x="88" y="156" width="44" height="32" rx="3" fill="#1D6B6B" opacity="0.3"/>
+              <text x="110" y="196" font-family="Satoshi, sans-serif" font-size="7" fill="#6B635A" text-anchor="middle">Wall Art</text>
+
+              <rect x="144" y="152" width="52" height="52" rx="6" fill="#F5F2ED"/>
+              <rect x="148" y="156" width="44" height="32" rx="3" fill="#D4AF37" opacity="0.3"/>
+              <text x="170" y="196" font-family="Satoshi, sans-serif" font-size="7" fill="#6B635A" text-anchor="middle">Stickers</text>
+
+              <rect x="204" y="152" width="52" height="52" rx="6" fill="#F5F2ED"/>
+              <rect x="208" y="156" width="44" height="32" rx="3" fill="#E07A5F" opacity="0.2"/>
+              <text x="230" y="196" font-family="Satoshi, sans-serif" font-size="7" fill="#6B635A" text-anchor="middle">Templates</text>
+
+              <!-- Traffic Flow Arrow -->
+              <g transform="translate(0, 230)">
+                <!-- Pinterest Logo -->
+                <circle cx="60" cy="30" r="24" fill="#E60023"/>
+                <text x="60" y="36" font-family="Satoshi, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle" font-weight="700">P</text>
+
+                <!-- Arrow -->
+                <path d="M92 30 L168 30" stroke="#2D2A26" stroke-width="2" stroke-dasharray="6 4"/>
+                <polygon points="168,30 160,25 160,35" fill="#2D2A26"/>
+
+                <!-- Etsy Logo -->
+                <rect x="176" cy="10" width="48" height="40" rx="6" fill="#F56400"/>
+                <text x="200" y="36" font-family="Satoshi, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="700">Etsy</text>
+              </g>
+
+              <!-- Hand-drawn annotation -->
+              <text x="130" y="260" font-family="Satoshi, sans-serif" font-size="10" fill="#E07A5F" text-anchor="middle" font-style="italic">"free traffic, every week"</text>
+
+              <!-- Arrow pointing to annotation -->
+              <path d="M130 268 Q130 280 140 285" stroke="#E07A5F" stroke-width="1.5" fill="none"/>
+              <polygon points="140,285 136,280 142,280" fill="#E07A5F"/>
+            </svg>
           </div>
         </div>
       </article>
@@ -933,42 +941,91 @@
            CARD 5: BUILD - Summer Hybrid Shop Build
            ======================================== -->
       <article class="offer-card">
-        <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label build">Build</span>
-          <h3 class="card-title">NEW Summer Hybrid Shop Build</h3>
-          <span class="best-for">Best for: Learning by watching</span>
-          <div class="expand-icon">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 4L6 8L10 4"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-body-inner">
-            <div class="card-content">
-              <p class="card-oneliner">I'm building a brand new shop this summer and you're watching every decision live. The niche selection, the product approach, the launch. Nothing edited out.</p>
-              <ul class="feature-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Watch me pick a niche in real-time and hear why I'm choosing it</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>See exactly how I create products and structure listings for Q4</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Get access to a build you literally cannot find anywhere else because it's happening now</div>
-                </li>
-              </ul>
-              <div class="card-footer">
-                <span class="use-it-when">Use it when: you want to build alongside me instead of guessing alone.</span>
-                <p class="card-outcome">A repeatable model pulled directly from a live, working build.</p>
-                <div class="footer-row">
-                  <span class="card-stat">LIVE, building now</span>
-                </div>
-              </div>
+        <div class="card-inner">
+          <div class="card-content">
+            <div class="card-header-row">
+              <span class="card-label build">Build</span>
+              <h3 class="card-title">NEW Summer Hybrid Shop Build</h3>
             </div>
+            <p class="card-intro">I'm building a brand new shop this summer and you're watching every decision live. The niche selection, the product approach, the launch. Nothing edited out.</p>
+            <ul class="feature-list">
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Watch me pick a niche in real-time and hear why I'm choosing it</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>See exactly how I create products and structure listings for Q4</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Get access to a build you literally cannot find anywhere else because it's happening now</div>
+              </li>
+            </ul>
+            <div class="card-footer">
+              <p class="use-it-when">Use it when: you want to build alongside me instead of guessing alone.</p>
+              <p class="card-outcome">A repeatable model pulled directly from a live, working build.</p>
+              <span class="card-stat">LIVE, building now</span>
+            </div>
+          </div>
+          <div class="card-graphic">
+            <!-- Live Build Recording -->
+            <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Screen Recording Frame -->
+              <rect x="12" y="20" width="256" height="180" rx="10" fill="#2D2A26"/>
+
+              <!-- Browser inside -->
+              <rect x="20" y="36" width="240" height="156" rx="6" fill="#FFFFFF"/>
+
+              <!-- Canva-style interface -->
+              <rect x="20" y="36" width="50" height="156" fill="#F5F2ED"/>
+              <rect x="28" y="48" width="34" height="24" rx="3" fill="#E07A5F" opacity="0.3"/>
+              <rect x="28" y="80" width="34" height="24" rx="3" fill="#1D6B6B" opacity="0.3"/>
+              <rect x="28" y="112" width="34" height="24" rx="3" fill="#D4AF37" opacity="0.3"/>
+
+              <!-- Canvas area -->
+              <rect x="78" y="48" width="174" height="136" fill="#FFFDFB" stroke="#E8E2D9"/>
+
+              <!-- Product being designed -->
+              <rect x="108" y="68" width="114" height="96" rx="4" fill="#FAF8F5" stroke="#D4D0C8"/>
+              <text x="165" y="100" font-family="Satoshi, sans-serif" font-size="9" fill="#6B635A" text-anchor="middle">2025 PLANNER</text>
+              <rect x="128" y="108" width="74" height="40" rx="2" fill="#E07A5F" opacity="0.2"/>
+              <text x="165" y="132" font-family="Satoshi, sans-serif" font-size="8" fill="#2D2A26" text-anchor="middle">Goals & Dreams</text>
+
+              <!-- LIVE indicator -->
+              <rect x="22" y="22" width="42" height="16" rx="8" fill="#E07A5F"/>
+              <circle cx="32" cy="30" r="4" fill="#FFFFFF">
+                <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+              </circle>
+              <text x="52" y="33" font-family="Satoshi, sans-serif" font-size="8" fill="#FFFFFF" font-weight="700">LIVE</text>
+
+              <!-- Timestamp -->
+              <text x="248" y="33" font-family="Satoshi, sans-serif" font-size="9" fill="#9B9590" text-anchor="end">47:23</text>
+
+              <!-- Bailey's face cam circle -->
+              <circle cx="232" cy="168" r="24" fill="#FAF8F5" stroke="#E07A5F" stroke-width="2"/>
+              <circle cx="232" cy="162" r="10" fill="#E07A5F" opacity="0.3"/>
+              <ellipse cx="232" cy="180" rx="14" ry="8" fill="#E07A5F" opacity="0.3"/>
+              <text x="232" y="166" font-family="Satoshi, sans-serif" font-size="8" fill="#E07A5F" text-anchor="middle" font-weight="600">B</text>
+
+              <!-- Title bar -->
+              <rect x="12" y="208" width="256" height="28" rx="0" fill="#F5F2ED"/>
+              <text x="140" y="226" font-family="Satoshi, sans-serif" font-size="10" fill="#2D2A26" text-anchor="middle" font-weight="600">Summer Shop Build — Session 4: First Listings</text>
+
+              <!-- Session thumbnails -->
+              <rect x="32" y="250" width="60" height="40" rx="4" fill="#2D2A26"/>
+              <text x="62" y="274" font-family="Satoshi, sans-serif" font-size="8" fill="#9B9590" text-anchor="middle">Session 1</text>
+
+              <rect x="110" y="250" width="60" height="40" rx="4" fill="#2D2A26"/>
+              <text x="140" y="274" font-family="Satoshi, sans-serif" font-size="8" fill="#9B9590" text-anchor="middle">Session 2</text>
+
+              <rect x="188" y="250" width="60" height="40" rx="4" fill="#2D2A26"/>
+              <text x="218" y="274" font-family="Satoshi, sans-serif" font-size="8" fill="#9B9590" text-anchor="middle">Session 3</text>
+
+              <!-- Play overlay -->
+              <circle cx="140" y="300" r="12" fill="#E07A5F" opacity="0.9"/>
+              <polygon points="136,295 136,305 148,300" fill="#FFFFFF"/>
+            </svg>
           </div>
         </div>
       </article>
@@ -977,42 +1034,114 @@
            CARD 6: VAULT - 150+ PLR Products
            ======================================== -->
       <article class="offer-card">
-        <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label vault">Vault</span>
-          <h3 class="card-title">150+ PLR Products (Resell-Ready)</h3>
-          <span class="best-for">Best for: Fast inventory</span>
-          <div class="expand-icon">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 4L6 8L10 4"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-body-inner">
-            <div class="card-content">
-              <p class="card-oneliner">These aren't random PLR files from some bundle. I curated these specifically for the niches and styles that are working right now on Etsy.</p>
-              <ul class="feature-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Products selected based on what's actually selling right now</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Designed to match the aesthetic buyers are paying for in 2024</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Exclusive to this membership, you won't see these flooding the market</div>
-                </li>
-              </ul>
-              <div class="card-footer">
-                <span class="use-it-when">Use it when: you need quality inventory fast, without competing against 10,000 identical listings.</span>
-                <p class="card-outcome">Products I hand-picked, ready to list. Quality stuff that actually sells.</p>
-                <div class="footer-row">
-                  <span class="card-stat">200+ designs ready</span>
-                </div>
-              </div>
+        <div class="card-inner">
+          <div class="card-content">
+            <div class="card-header-row">
+              <span class="card-label vault">Vault</span>
+              <h3 class="card-title">150+ PLR Products (Resell-Ready)</h3>
             </div>
+            <p class="card-intro">These aren't random PLR files from some bundle. I curated these specifically for the niches and styles that are working right now on Etsy.</p>
+            <ul class="feature-list">
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Products selected based on what's actually selling right now</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Designed to match the aesthetic buyers are paying for in 2024</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Exclusive to this membership, you won't see these flooding the market</div>
+              </li>
+            </ul>
+            <div class="card-footer">
+              <p class="use-it-when">Use it when: you need quality inventory fast, without competing against 10,000 identical listings.</p>
+              <p class="card-outcome">Products I hand-picked, ready to list. Quality stuff that actually sells.</p>
+              <span class="card-stat">200+ designs ready</span>
+            </div>
+          </div>
+          <div class="card-graphic">
+            <!-- Product Vault Stack -->
+            <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Glow/sparkle effect -->
+              <defs>
+                <filter id="sparkle" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- Product 5 - Back (Sticker Sheet) -->
+              <g transform="translate(30, 200) rotate(-8)">
+                <rect width="100" height="120" rx="6" fill="#FFFDFB" stroke="#E8E2D9"/>
+                <rect x="10" y="10" width="25" height="25" rx="12" fill="#E07A5F" opacity="0.4"/>
+                <rect x="40" y="10" width="25" height="25" rx="12" fill="#1D6B6B" opacity="0.4"/>
+                <rect x="65" y="10" width="25" height="25" rx="12" fill="#D4AF37" opacity="0.4"/>
+                <rect x="10" y="40" width="25" height="25" rx="12" fill="#D4AF37" opacity="0.4"/>
+                <rect x="40" y="40" width="25" height="25" rx="12" fill="#E07A5F" opacity="0.4"/>
+                <text x="50" y="100" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A" text-anchor="middle">Sticker Sheet</text>
+              </g>
+
+              <!-- Product 4 (Social Template) -->
+              <g transform="translate(50, 170) rotate(-4)">
+                <rect width="100" height="120" rx="6" fill="#FFFDFB" stroke="#E8E2D9"/>
+                <rect x="10" y="10" width="80" height="60" rx="4" fill="#1D6B6B" opacity="0.2"/>
+                <text x="50" y="45" font-family="Satoshi, sans-serif" font-size="10" fill="#1D6B6B" text-anchor="middle" font-weight="600">QUOTE</text>
+                <rect x="10" y="80" width="80" height="8" rx="2" fill="#E8E2D9"/>
+                <rect x="10" y="92" width="50" height="6" rx="2" fill="#E8E2D9"/>
+                <text x="50" y="110" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A" text-anchor="middle">Social Template</text>
+              </g>
+
+              <!-- Product 3 (Wall Art) -->
+              <g transform="translate(70, 140) rotate(-1)">
+                <rect width="100" height="120" rx="6" fill="#FFFDFB" stroke="#E8E2D9"/>
+                <rect x="10" y="10" width="80" height="80" rx="4" fill="#FAF8F5"/>
+                <circle cx="50" cy="50" r="25" fill="#D4AF37" opacity="0.3"/>
+                <path d="M35 60 L50 40 L65 60" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                <text x="50" y="105" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A" text-anchor="middle">Wall Art Print</text>
+              </g>
+
+              <!-- Product 2 (Tumbler Wrap) -->
+              <g transform="translate(90, 110) rotate(2)">
+                <rect width="100" height="120" rx="6" fill="#FFFDFB" stroke="#E8E2D9"/>
+                <rect x="10" y="10" width="80" height="80" rx="4" fill="#E07A5F" opacity="0.15"/>
+                <rect x="20" y="30" width="60" height="40" rx="4" fill="#E07A5F" opacity="0.3"/>
+                <text x="50" y="55" font-family="Satoshi, sans-serif" font-size="9" fill="#E07A5F" text-anchor="middle" font-weight="600">DESIGN</text>
+                <text x="50" y="105" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A" text-anchor="middle">Tumbler Wrap</text>
+              </g>
+
+              <!-- Product 1 - Front (Digital Planner) -->
+              <g transform="translate(110, 80) rotate(4)" filter="url(#sparkle)">
+                <rect width="100" height="120" rx="6" fill="#FFFDFB" stroke="#D4AF37" stroke-width="1.5"/>
+                <rect x="10" y="10" width="80" height="20" rx="4" fill="#1D6B6B"/>
+                <text x="50" y="24" font-family="Satoshi, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="600">2025</text>
+                <rect x="10" y="35" width="80" height="55" rx="4" fill="#FAF8F5"/>
+                <text x="50" y="55" font-family="Satoshi, sans-serif" font-size="8" fill="#2D2A26" text-anchor="middle">Digital</text>
+                <text x="50" y="68" font-family="Satoshi, sans-serif" font-size="12" fill="#2D2A26" text-anchor="middle" font-weight="700">PLANNER</text>
+                <text x="50" y="105" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A" text-anchor="middle">Digital Planner</text>
+              </g>
+
+              <!-- Download cursor on top product -->
+              <g transform="translate(195, 120)">
+                <path d="M0 0 L0 18 L6 12 L12 18 L14 16 L8 10 L14 6 Z" fill="#2D2A26"/>
+                <circle cx="7" cy="30" r="10" fill="#E07A5F" opacity="0.2"/>
+                <path d="M3 30 L7 34 L11 30 M7 26 L7 34" stroke="#E07A5F" stroke-width="1.5" fill="none"/>
+              </g>
+
+              <!-- Badge -->
+              <rect x="20" y="24" width="48" height="24" rx="12" fill="#D4AF37"/>
+              <text x="44" y="40" font-family="Satoshi, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="700">150+</text>
+
+              <!-- Sparkles -->
+              <circle cx="240" cy="60" r="3" fill="#D4AF37" opacity="0.6"/>
+              <circle cx="250" cy="90" r="2" fill="#D4AF37" opacity="0.4"/>
+              <circle cx="230" cy="140" r="2.5" fill="#E07A5F" opacity="0.5"/>
+              <circle cx="260" cy="180" r="2" fill="#1D6B6B" opacity="0.4"/>
+            </svg>
           </div>
         </div>
       </article>
@@ -1021,42 +1150,87 @@
            CARD 7: DAILY - Daily Trending Products
            ======================================== -->
       <article class="offer-card">
-        <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label daily">Daily</span>
-          <h3 class="card-title">The Daily Trending Products & Prompts</h3>
-          <span class="best-for">Best for: Never guessing what to list</span>
-          <div class="expand-icon">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 4L6 8L10 4"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-body-inner">
-            <div class="card-content">
-              <p class="card-oneliner">Every day, I drop what's trending with the prompt to make it and the SEO to list it. This comes from my daily research. Same info I'm acting on, same day.</p>
-              <ul class="feature-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Trends I'm tracking personally, from my own research</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Prompts I've tested and refined so the output actually looks good</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>SEO pulled from my own keyword research</div>
-                </li>
-              </ul>
-              <div class="card-footer">
-                <span class="use-it-when">Use it when: you want to move on the same trends I'm moving on, at the same time.</span>
-                <p class="card-outcome">Insider info. Fresh, current, from my desk.</p>
-                <div class="footer-row">
-                  <span class="card-stat">365 days of ideas</span>
-                </div>
-              </div>
+        <div class="card-inner">
+          <div class="card-content">
+            <div class="card-header-row">
+              <span class="card-label daily">Daily</span>
+              <h3 class="card-title">The Daily Trending Products & Prompts</h3>
             </div>
+            <p class="card-intro">Every day, I drop what's trending with the prompt to make it and the SEO to list it. This comes from my daily research. Same info I'm acting on, same day.</p>
+            <ul class="feature-list">
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Trends I'm tracking personally, from my own research</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Prompts I've tested and refined so the output actually looks good</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>SEO pulled from my own keyword research</div>
+              </li>
+            </ul>
+            <div class="card-footer">
+              <p class="use-it-when">Use it when: you want to move on the same trends I'm moving on, at the same time.</p>
+              <p class="card-outcome">Insider info. Fresh, current, from my desk.</p>
+              <span class="card-stat">365 days of ideas</span>
+            </div>
+          </div>
+          <div class="card-graphic">
+            <!-- Skool Community Post -->
+            <svg viewBox="0 0 280 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Post Card -->
+              <rect x="12" y="12" width="256" height="316" rx="12" fill="#FFFFFF" stroke="#E8E2D9"/>
+
+              <!-- Header -->
+              <circle cx="36" cy="40" r="18" fill="#E07A5F"/>
+              <text x="36" y="45" font-family="Satoshi, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="700">B</text>
+
+              <text x="62" y="36" font-family="Satoshi, sans-serif" font-size="12" fill="#2D2A26" font-weight="600">Bailey Vann</text>
+              <circle cx="130" cy="32" r="6" fill="#1D6B6B"/>
+              <path d="M127 32 L129 34 L133 30" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+              <text x="62" y="50" font-family="Satoshi, sans-serif" font-size="10" fill="#9B9590">@baileyvann · 2h ago</text>
+
+              <!-- Pinned indicator -->
+              <rect x="200" y="28" width="52" height="18" rx="9" fill="#D4AF37" opacity="0.15"/>
+              <text x="226" y="40" font-family="Satoshi, sans-serif" font-size="8" fill="#D4AF37" text-anchor="middle" font-weight="600">PINNED</text>
+
+              <!-- Post Content -->
+              <text x="24" y="80" font-family="Satoshi, sans-serif" font-size="11" fill="#E07A5F" font-weight="600">Today's Drop — December 18</text>
+
+              <text x="24" y="104" font-family="Satoshi, sans-serif" font-size="11" fill="#2D2A26" font-weight="600">Trending: "2025 Goal Planners"</text>
+              <rect x="24" y="112" width="100" height="16" rx="8" fill="#1D6B6B" opacity="0.1"/>
+              <text x="74" y="124" font-family="Satoshi, sans-serif" font-size="9" fill="#1D6B6B" text-anchor="middle" font-weight="600">search volume up 340%</text>
+
+              <!-- Prompt Block -->
+              <rect x="24" y="136" width="220" height="56" rx="6" fill="#FDF6E3"/>
+              <text x="32" y="152" font-family="Satoshi, sans-serif" font-size="9" fill="#5C4827" font-weight="600">The prompt:</text>
+              <text x="32" y="166" font-family="Satoshi, sans-serif" font-size="9" fill="#5C4827">"Minimal 2025 yearly planner, clean</text>
+              <text x="32" y="180" font-family="Satoshi, sans-serif" font-size="9" fill="#5C4827">sans-serif, soft beige aesthetic..."</text>
+
+              <!-- SEO Block -->
+              <rect x="24" y="200" width="220" height="48" rx="6" fill="#FAF8F5"/>
+              <text x="32" y="216" font-family="Satoshi, sans-serif" font-size="9" fill="#6B635A" font-weight="600">SEO ready:</text>
+              <text x="32" y="230" font-family="Satoshi, sans-serif" font-size="8" fill="#2D2A26">Title: 2025 Printable Planner | Minimal Goal...</text>
+              <text x="32" y="242" font-family="Satoshi, sans-serif" font-size="8" fill="#2D2A26">Tags: 2025 planner, goal setting, minimal...</text>
+
+              <!-- Product Preview -->
+              <rect x="24" y="256" width="80" height="50" rx="6" fill="#F5F2ED" stroke="#E8E2D9"/>
+              <rect x="32" y="264" width="64" height="32" rx="3" fill="#1D6B6B" opacity="0.2"/>
+              <text x="64" y="284" font-family="Satoshi, sans-serif" font-size="8" fill="#1D6B6B" text-anchor="middle" font-weight="600">2025</text>
+
+              <!-- Engagement -->
+              <g transform="translate(24, 312)">
+                <circle cx="8" cy="4" r="8" fill="#1D6B6B" opacity="0.1"/>
+                <text x="8" y="7" font-family="Satoshi, sans-serif" font-size="8" fill="#1D6B6B" text-anchor="middle">💬</text>
+                <text x="24" y="8" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A">24</text>
+
+                <circle cx="60" cy="4" r="8" fill="#E07A5F" opacity="0.1"/>
+                <text x="60" y="7" font-family="Satoshi, sans-serif" font-size="8" fill="#E07A5F" text-anchor="middle">❤️</text>
+                <text x="76" y="8" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A">89</text>
+              </g>
+            </svg>
           </div>
         </div>
       </article>
@@ -1065,42 +1239,107 @@
            CARD 8: COACHING - Bi-Weekly Coaching Calls
            ======================================== -->
       <article class="offer-card">
-        <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label coaching">Coaching</span>
-          <h3 class="card-title">Bi-Weekly Group Coaching Calls</h3>
-          <span class="best-for">Best for: Direct answers</span>
-          <div class="expand-icon">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 4L6 8L10 4"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-body-inner">
-            <div class="card-content">
-              <p class="card-oneliner">This is direct access to me. Not a team. Not a moderator. You bring your shop, I give you answers.</p>
-              <ul class="feature-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Ask me anything, I'm the one on the call, every time</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Get my eyes on your listings, your niches, your pricing</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Real feedback from someone who's actively selling every day</div>
-                </li>
-              </ul>
-              <div class="card-footer">
-                <span class="use-it-when">Use it when: you want answers from the person who built the thing.</span>
-                <p class="card-outcome">Coached by me. Directly. No middleman.</p>
-                <div class="footer-row">
-                  <span class="card-stat">24 calls per year</span>
-                </div>
-              </div>
+        <div class="card-inner">
+          <div class="card-content">
+            <div class="card-header-row">
+              <span class="card-label coaching">Coaching</span>
+              <h3 class="card-title">Bi-Weekly Group Coaching Calls</h3>
             </div>
+            <p class="card-intro">This is direct access to me. Not a team. Not a moderator. You bring your shop, I give you answers.</p>
+            <ul class="feature-list">
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Ask me anything, I'm the one on the call, every time</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Get my eyes on your listings, your niches, your pricing</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Real feedback from someone who's actively selling every day</div>
+              </li>
+            </ul>
+            <div class="card-footer">
+              <p class="use-it-when">Use it when: you want answers from the person who built the thing.</p>
+              <p class="card-outcome">Coached by me. Directly. No middleman.</p>
+              <span class="card-stat">24 calls per year</span>
+            </div>
+          </div>
+          <div class="card-graphic">
+            <!-- Zoom Call Interface -->
+            <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Main Window -->
+              <rect x="12" y="16" width="256" height="220" rx="10" fill="#1E1E26"/>
+
+              <!-- Bailey's main video -->
+              <rect x="20" y="44" width="172" height="120" rx="6" fill="#2D2A26"/>
+              <circle cx="106" cy="90" r="28" fill="#E07A5F" opacity="0.3"/>
+              <circle cx="106" cy="82" r="14" fill="#FAF8F5"/>
+              <ellipse cx="106" cy="108" rx="18" ry="10" fill="#FAF8F5"/>
+              <text x="106" y="86" font-family="Satoshi, sans-serif" font-size="10" fill="#E07A5F" text-anchor="middle" font-weight="600">Bailey</text>
+
+              <!-- Speaking indicator -->
+              <rect x="24" y="144" width="60" height="14" rx="7" fill="#1D6B6B"/>
+              <text x="54" y="154" font-family="Satoshi, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="600">Speaking</text>
+
+              <!-- Participant gallery -->
+              <rect x="200" y="44" width="60" height="36" rx="4" fill="#2D2A26"/>
+              <circle cx="230" cy="58" r="10" fill="#D4AF37" opacity="0.3"/>
+              <text x="230" y="75" font-family="Satoshi, sans-serif" font-size="6" fill="#9B9590" text-anchor="middle">Sarah</text>
+
+              <rect x="200" y="84" width="60" height="36" rx="4" fill="#2D2A26"/>
+              <circle cx="230" cy="98" r="10" fill="#1D6B6B" opacity="0.3"/>
+              <text x="230" y="115" font-family="Satoshi, sans-serif" font-size="6" fill="#9B9590" text-anchor="middle">Maria</text>
+
+              <rect x="200" y="124" width="60" height="36" rx="4" fill="#2D2A26"/>
+              <circle cx="230" cy="138" r="10" fill="#E07A5F" opacity="0.3"/>
+              <text x="230" y="155" font-family="Satoshi, sans-serif" font-size="6" fill="#9B9590" text-anchor="middle">Jess</text>
+              <text x="230" y="148" font-family="Satoshi, sans-serif" font-size="10" fill="#D4AF37" text-anchor="middle">✋</text>
+
+              <!-- Header bar -->
+              <rect x="12" y="16" width="256" height="24" rx="10" fill="#2D2A26"/>
+              <rect x="12" y="30" width="256" height="10" fill="#2D2A26"/>
+
+              <!-- Recording indicator -->
+              <circle cx="28" cy="28" r="4" fill="#E07A5F">
+                <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+              </circle>
+              <text x="40" y="32" font-family="Satoshi, sans-serif" font-size="8" fill="#E07A5F">REC</text>
+
+              <!-- Meeting title -->
+              <text x="140" y="32" font-family="Satoshi, sans-serif" font-size="9" fill="#9B9590" text-anchor="middle">Q&A Call — Shop Reviews</text>
+
+              <!-- Participant count -->
+              <text x="248" y="32" font-family="Satoshi, sans-serif" font-size="8" fill="#9B9590" text-anchor="end">34</text>
+              <circle cx="232" cy="28" r="6" fill="#1D6B6B" opacity="0.3"/>
+
+              <!-- Chat bubble -->
+              <rect x="20" y="168" width="140" height="26" rx="6" fill="#2D2A26" stroke="#3D3D47"/>
+              <text x="28" y="184" font-family="Satoshi, sans-serif" font-size="8" fill="#9B9590">"Can you look at my listing?"</text>
+
+              <!-- Bottom controls -->
+              <rect x="20" y="200" width="240" height="28" rx="6" fill="#2D2A26"/>
+              <circle cx="60" cy="214" r="10" fill="#3D3D47"/>
+              <rect x="56" y="210" width="8" height="8" rx="1" fill="#9B9590"/>
+              <circle cx="100" cy="214" r="10" fill="#3D3D47"/>
+              <circle cx="100" cy="214" r="4" fill="#9B9590"/>
+              <circle cx="140" cy="214" r="10" fill="#1D6B6B"/>
+              <rect x="136" y="210" width="8" height="8" rx="1" fill="#FFFFFF"/>
+              <circle cx="180" cy="214" r="10" fill="#3D3D47"/>
+              <rect x="176" y="212" width="8" height="4" rx="1" fill="#9B9590"/>
+              <circle cx="220" cy="214" r="10" fill="#E07A5F"/>
+              <text x="220" y="218" font-family="Satoshi, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">×</text>
+
+              <!-- Chat notification -->
+              <circle cx="186" cy="206" r="6" fill="#E07A5F"/>
+              <text x="186" y="210" font-family="Satoshi, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">3</text>
+
+              <!-- Stats below -->
+              <rect x="40" y="250" width="200" height="50" rx="8" fill="#FFFDFB" stroke="#E8E2D9"/>
+              <text x="140" y="270" font-family="Satoshi, sans-serif" font-size="10" fill="#6B635A" text-anchor="middle">Every other week, live with Bailey</text>
+              <text x="140" y="288" font-family="Satoshi, sans-serif" font-size="12" fill="#2D2A26" text-anchor="middle" font-weight="600">24 calls per year</text>
+            </svg>
           </div>
         </div>
       </article>
@@ -1109,42 +1348,79 @@
            CARD 9: BEHIND THE SCENES - Secret Podcast
            ======================================== -->
       <article class="offer-card">
-        <div class="card-header" onclick="toggleCard(this.parentElement)">
-          <span class="card-label behind">Behind the Scenes</span>
-          <h3 class="card-title">My Secret Podcast</h3>
-          <span class="best-for">Best for: The unfiltered version</span>
-          <div class="expand-icon">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 4L6 8L10 4"/>
-            </svg>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-body-inner">
-            <div class="card-content">
-              <p class="card-oneliner">This is the stuff I don't post publicly. The real decisions. The experiments. What's working in my shop right now. I keep this for members only because it's too specific to give away.</p>
-              <ul class="feature-list">
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Behind-the-scenes of what I'm testing, changing, doubling down on</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>Thoughts I'm not sharing on YouTube or Instagram</div>
-                </li>
-                <li>
-                  <span class="bullet-dot"></span>
-                  <div>The unfiltered version of how I actually think about my business</div>
-                </li>
-              </ul>
-              <div class="card-footer">
-                <span class="use-it-when">Use it when: you want to know what's really happening behind the scenes.</span>
-                <p class="card-outcome">In the room with me. Hearing what my public audience doesn't.</p>
-                <div class="footer-row">
-                  <span class="card-stat">55 episodes deep</span>
-                </div>
-              </div>
+        <div class="card-inner">
+          <div class="card-content">
+            <div class="card-header-row">
+              <span class="card-label behind">Behind the Scenes</span>
+              <h3 class="card-title">My Secret Podcast</h3>
             </div>
+            <p class="card-intro">This is the stuff I don't post publicly. The real decisions. The experiments. What's working in my shop right now. I keep this for members only because it's too specific to give away.</p>
+            <ul class="feature-list">
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Behind-the-scenes of what I'm testing, changing, doubling down on</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>Thoughts I'm not sharing on YouTube or Instagram</div>
+              </li>
+              <li>
+                <span class="bullet-dot"></span>
+                <div>The unfiltered version of how I actually think about my business</div>
+              </li>
+            </ul>
+            <div class="card-footer">
+              <p class="use-it-when">Use it when: you want to know what's really happening behind the scenes.</p>
+              <p class="card-outcome">In the room with me. Hearing what my public audience doesn't.</p>
+              <span class="card-stat">55 episodes deep</span>
+            </div>
+          </div>
+          <div class="card-graphic dark-bg">
+            <!-- Private Podcast Player (Spotify-style dark) -->
+            <svg viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Album Art -->
+              <rect x="60" y="24" width="160" height="160" rx="8" fill="#2D2A26"/>
+              <rect x="68" y="32" width="144" height="144" rx="6" fill="linear-gradient(135deg, #E07A5F 0%, #D06A50 100%)"/>
+              <rect x="68" y="32" width="144" height="144" rx="6" fill="#E07A5F"/>
+
+              <!-- Bailey silhouette/icon -->
+              <circle cx="140" cy="90" r="32" fill="#D06A50"/>
+              <circle cx="140" cy="80" r="16" fill="#FFFDFB"/>
+              <ellipse cx="140" cy="110" rx="22" ry="14" fill="#FFFDFB"/>
+
+              <!-- Podcast title on artwork -->
+              <text x="140" y="150" font-family="Satoshi, sans-serif" font-size="11" fill="#FFFDFB" text-anchor="middle" font-weight="700">BEHIND THE</text>
+              <text x="140" y="166" font-family="Satoshi, sans-serif" font-size="11" fill="#FFFDFB" text-anchor="middle" font-weight="700">SCENES</text>
+
+              <!-- Members Only badge -->
+              <rect x="95" y="130" width="90" height="18" rx="9" fill="#D4AF37"/>
+              <rect x="101" y="134" width="8" height="10" rx="2" fill="#FFFFFF" opacity="0.8"/>
+              <text x="145" y="143" font-family="Satoshi, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="700">MEMBERS ONLY</text>
+
+              <!-- Episode List -->
+              <rect x="24" y="196" width="232" height="36" rx="6" fill="#2D2A26"/>
+              <circle cx="44" cy="214" r="12" fill="#E07A5F"/>
+              <polygon points="41,210 41,218 48,214" fill="#FFFFFF"/>
+              <text x="64" y="208" font-family="Satoshi, sans-serif" font-size="9" fill="#FFFFFF" font-weight="600">Ep 55: What I'd do differently</text>
+              <text x="64" y="222" font-family="Satoshi, sans-serif" font-size="8" fill="#9B9590">12 min · Dec 15</text>
+
+              <rect x="24" y="238" width="232" height="32" rx="6" fill="#2D2A26" opacity="0.6"/>
+              <circle cx="44" cy="254" r="10" fill="#3D3D47"/>
+              <polygon points="41,250 41,258 48,254" fill="#9B9590"/>
+              <text x="64" y="250" font-family="Satoshi, sans-serif" font-size="9" fill="#FFFFFF" font-weight="500">Ep 54: The $2K day breakdown</text>
+              <text x="64" y="262" font-family="Satoshi, sans-serif" font-size="8" fill="#9B9590">8 min · Dec 10</text>
+
+              <rect x="24" y="276" width="232" height="32" rx="6" fill="#2D2A26" opacity="0.4"/>
+              <circle cx="44" cy="292" r="10" fill="#3D3D47"/>
+              <polygon points="41,288 41,296 48,292" fill="#9B9590"/>
+              <text x="64" y="288" font-family="Satoshi, sans-serif" font-size="9" fill="#9B9590" font-weight="500">Ep 53: Why I'm doubling down</text>
+              <text x="64" y="300" font-family="Satoshi, sans-serif" font-size="8" fill="#6B635A">15 min · Dec 3</text>
+
+              <!-- Lock icon -->
+              <rect x="232" y="24" width="24" height="24" rx="12" fill="#D4AF37" opacity="0.2"/>
+              <rect x="240" y="32" width="8" height="8" rx="1" fill="#D4AF37"/>
+              <path d="M240 32 L240 28 A4 4 0 0 1 248 28 L248 32" stroke="#D4AF37" stroke-width="1.5" fill="none"/>
+            </svg>
           </div>
         </div>
       </article>
@@ -1187,14 +1463,6 @@
 
   </div>
 </section>
-
-<script>
-  function toggleCard(card) {
-    // Don't toggle featured cards
-    if (card.classList.contains('featured')) return;
-    card.classList.toggle('expanded');
-  }
-</script>
 
 </body>
 </html>
