@@ -285,12 +285,13 @@
     /* Script Text - Large Handwriting Style */
     .script-text {
       font-family: 'Caveat', cursive;
-      font-size: 8rem;
+      font-size: 14rem !important;
       color: var(--teal);
-      margin: 60px 0;
-      line-height: 1.1;
-      letter-spacing: 0.01em;
-      font-weight: 600;
+      margin: 80px 0;
+      line-height: 1;
+      letter-spacing: 0;
+      font-weight: 700;
+      display: block;
     }
 
     /* Highlight */
@@ -788,6 +789,16 @@
       .part2-container {
         padding: 0 24px;
       }
+
+      .script-text {
+        font-size: 6rem !important;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .script-text {
+        font-size: 4rem !important;
+      }
     }
 
     /* ==========================================
@@ -1274,68 +1285,32 @@
 
     /* Premium CTA Button */
     #story-cta .cta-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      min-width: 380px;
-      height: 68px;
-      padding: 0 56px;
-      background: linear-gradient(145deg, #E07A5F 0%, #D4694E 50%, #C25E45 100%);
-      color: #FFFFFF;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      box-shadow:
-        0 4px 6px rgba(224, 122, 95, 0.25),
-        0 10px 30px rgba(224, 122, 95, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    #story-cta .cta-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
-      transition: left 0.6s ease;
-    }
-
-    #story-cta .cta-button:hover::before {
-      left: 100%;
+      display: inline-block !important;
+      padding: 22px 60px !important;
+      background: #E07A5F !important;
+      color: #FFFFFF !important;
+      font-family: 'Satoshi', sans-serif !important;
+      font-size: 18px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.15em !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+      border: none !important;
+      border-radius: 8px !important;
+      cursor: pointer !important;
+      box-shadow: 0 8px 30px rgba(224, 122, 95, 0.4) !important;
+      transition: all 0.3s ease !important;
     }
 
     #story-cta .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow:
-        0 6px 12px rgba(224, 122, 95, 0.3),
-        0 15px 40px rgba(224, 122, 95, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.25);
-    }
-
-    #story-cta .cta-button:active {
-      transform: translateY(-1px);
+      background: #D4694E !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 12px 40px rgba(224, 122, 95, 0.5) !important;
     }
 
     #story-cta .cta-button .btn-arrow {
+      margin-left: 10px;
       display: inline-block;
-      transition: transform 0.3s ease;
-      font-size: 20px;
-    }
-
-    #story-cta .cta-button:hover .btn-arrow {
-      transform: translateX(5px);
     }
 
     /* Credit Card Trust Image */
