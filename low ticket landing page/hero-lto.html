@@ -306,10 +306,10 @@
     .hero-bg-watercolor {
       position: absolute;
       inset: 0;
-      background-image: url('https://i.imgur.com/fqufbZe.png');
+      background-image: url('https://i.imgur.com/olw2Sp4.jpeg');
       background-size: cover;
       background-position: center top;
-      opacity: 0.08;
+      opacity: 0.18;
       mix-blend-mode: multiply;
       pointer-events: none;
       z-index: 2;
@@ -548,8 +548,8 @@
     .offer-card {
       position: relative;
       background: linear-gradient(180deg, #FFFFFF 0%, #FDFCFB 100%);
-      border-radius: 28px;
-      padding: 32px;
+      border-radius: 20px;
+      padding: 20px;
       border: 1px solid rgba(232, 226, 217, 0.5);
       /* Multiple shadow layers = expensive feel */
       box-shadow:
@@ -607,93 +607,111 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       PRICE BLOCK - DEAL ENERGY
+       PRICE BLOCK - COMPACT TWO-COLUMN LAYOUT
        ═══════════════════════════════════════════════════════════════════════════ */
     .price-block {
-      text-align: center;
-      padding: 20px 0;
-      margin-bottom: 24px;
+      display: flex;
+      align-items: stretch;
+      gap: 16px;
+      padding: 12px 0 16px;
+      margin-bottom: 16px;
       position: relative;
       border-bottom: 1px solid rgba(232, 226, 217, 0.5);
     }
 
+    .price-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-col--left {
+      padding-right: 16px;
+      border-right: 1px solid rgba(232, 226, 217, 0.5);
+    }
+
+    .price-col--right {
+      justify-content: center;
+      gap: 4px;
+    }
+
     .price-label {
       display: block;
-      font-weight: 500;
-      font-size: 13px;
-      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 11px;
+      color: var(--accent-coral);
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      margin-bottom: 8px;
+      letter-spacing: 0.15em;
+      margin-bottom: 2px;
     }
 
     .price-amount {
       display: flex;
       align-items: baseline;
-      justify-content: center;
-      gap: 4px;
-      margin-bottom: 8px;
+      gap: 2px;
+      margin-bottom: 4px;
     }
 
     .price-value {
       font-family: 'OGG', Georgia, serif;
       font-weight: 630;
-      font-size: 56px;
+      font-size: 42px;
       color: var(--text-primary);
       line-height: 1;
       letter-spacing: -0.02em;
     }
 
     .price-period {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 500;
       color: var(--text-secondary);
     }
 
-    /* Savings callout - the deal feel */
+    .price-access {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .price-access svg {
+      width: 14px;
+      height: 14px;
+      color: #3D9970;
+    }
+
+    .price-equiv {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .price-daily {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    /* Savings badge - compact pill */
     .price-savings {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      background: linear-gradient(135deg, rgba(224, 122, 95, 0.1) 0%, rgba(224, 122, 95, 0.05) 100%);
-      border: 1px solid rgba(224, 122, 95, 0.2);
+      gap: 4px;
+      padding: 4px 10px;
+      background: linear-gradient(135deg, rgba(224, 122, 95, 0.12) 0%, rgba(224, 122, 95, 0.06) 100%);
+      border: 1px solid rgba(224, 122, 95, 0.25);
       border-radius: 100px;
-      margin-bottom: 8px;
+      margin-top: 2px;
+      width: fit-content;
     }
 
     .price-savings__text {
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 11px;
+      font-weight: 700;
       color: var(--accent-coral);
-      letter-spacing: 0.02em;
-    }
-
-    .price-reframe {
-      display: block;
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--text-muted);
-      font-style: italic;
-    }
-
-    .price-billing {
-      display: block;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-faint);
-      margin-top: 6px;
-    }
-
-    .price-urgency {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--accent-coral);
-      margin-top: 10px;
-      padding: 6px 12px;
-      background: rgba(224, 122, 95, 0.08);
-      border-radius: 6px;
+      letter-spacing: 0.01em;
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
@@ -701,17 +719,17 @@
        ═══════════════════════════════════════════════════════════════════════════ */
     .offer-bullets {
       list-style: none;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .offer-bullets li {
       display: flex;
       align-items: flex-start;
-      gap: 14px;
-      padding: 14px 0;
+      gap: 10px;
+      padding: 10px 0;
       border-bottom: 1px solid rgba(232, 226, 217, 0.4);
-      font-size: 17px;
-      line-height: 1.55;
+      font-size: 15px;
+      line-height: 1.5;
       color: var(--text-body);
     }
 
@@ -726,10 +744,10 @@
 
     /* Custom checkmark - not a square, a crafted icon */
     .bullet-marker {
-      width: 22px;
-      height: 22px;
-      min-width: 22px;
-      margin-top: 2px;
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      margin-top: 1px;
       background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-coral-dark) 100%);
       border-radius: 6px;
       display: flex;
@@ -742,8 +760,8 @@
 
     .bullet-marker::after {
       content: '';
-      width: 10px;
-      height: 6px;
+      width: 8px;
+      height: 5px;
       border-left: 2px solid white;
       border-bottom: 2px solid white;
       transform: rotate(-45deg) translateY(-1px);
@@ -751,14 +769,14 @@
 
     /* Plus Line */
     .offer-card__plus {
-      font-size: 16px;
+      font-size: 13px;
       font-style: italic;
       color: var(--text-secondary);
       text-align: center;
-      margin-bottom: 24px;
-      padding: 14px 18px;
+      margin-bottom: 12px;
+      padding: 10px 14px;
       background: linear-gradient(135deg, rgba(250, 248, 245, 0.8) 0%, rgba(250, 248, 245, 0.4) 100%);
-      border-radius: 12px;
+      border-radius: 10px;
       border: 1px solid rgba(232, 226, 217, 0.4);
     }
 
@@ -770,9 +788,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       width: 100%;
-      height: 60px;
+      height: 52px;
       background: linear-gradient(180deg, var(--accent-coral) 0%, var(--accent-coral-dark) 100%);
       color: white;
       font-weight: 600;
@@ -963,17 +981,43 @@
       }
 
       .offer-card {
-        padding: 24px;
-        border-radius: 24px;
+        padding: 16px;
+        border-radius: 18px;
+      }
+
+      .price-block {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .price-col--left {
+        padding-right: 0;
+        padding-bottom: 12px;
+        border-right: none;
+        border-bottom: 1px solid rgba(232, 226, 217, 0.5);
+        text-align: center;
+      }
+
+      .price-amount {
+        justify-content: center;
+      }
+
+      .price-access {
+        justify-content: center;
+      }
+
+      .price-col--right {
+        text-align: center;
+        align-items: center;
       }
 
       .price-value {
-        font-size: 48px;
+        font-size: 36px;
       }
 
       .offer-bullets li {
-        font-size: 16px;
-        padding: 12px 0;
+        font-size: 14px;
+        padding: 8px 0;
       }
 
       .cta-button {
@@ -993,7 +1037,7 @@
     <div class="top-bar__deal">
       <div class="top-bar__deal-badge">
         <span class="top-bar__deal-price">$324/yr</span>
-        <span class="top-bar__deal-was">$801</span>
+        <span class="top-bar__deal-was">$840</span>
       </div>
     </div>
     <a href="#" class="top-bar__cta">
@@ -1069,17 +1113,24 @@
           <div class="offer-card">
 
             <div class="price-block">
-              <span class="price-label">Join for</span>
-              <div class="price-amount">
-                <span class="price-value">$27</span>
-                <span class="price-period">/mo</span>
+              <div class="price-col price-col--left">
+                <span class="price-label">Today</span>
+                <div class="price-amount">
+                  <span class="price-value">$324</span>
+                  <span class="price-period">/yr</span>
+                </div>
+                <span class="price-access">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  12 months access
+                </span>
               </div>
-              <div class="price-savings">
-                <span class="price-savings__text">Save $477 this year</span>
+              <div class="price-col price-col--right">
+                <span class="price-equiv">$27/mo equivalent</span>
+                <span class="price-daily">~$0.90/day</span>
+                <div class="price-savings">
+                  <span class="price-savings__text">Save $516 vs $70/mo</span>
+                </div>
               </div>
-              <span class="price-reframe">just $0.90/day</span>
-              <span class="price-billing">(billed annually)</span>
-              <span class="price-urgency">Price goes up as we add more</span>
             </div>
 
             <ul class="offer-bullets">
