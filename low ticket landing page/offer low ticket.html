@@ -240,72 +240,106 @@
       position: relative;
     }
 
-    /* iPhone Mockup - Card 1 */
+        /* ═══════════════════════════════════════════════════════════════════════════
+       ENHANCED DEVICE MOCKUPS - Ultra-Realistic
+       ═══════════════════════════════════════════════════════════════════════════ */
+
+    /* iPhone Mockup - Card 1: Bailey's Daily Drop */
     .mockup-phone {
-      width: 140px;
+      width: 150px;
+      perspective: 1000px;
     }
 
     .phone-bezel {
-      background: linear-gradient(145deg, #2D2A26 0%, #1a1918 100%);
-      border-radius: 20px;
-      padding: 6px;
+      background: linear-gradient(145deg, #1F1D1A 0%, #0D0C0B 100%);
+      border-radius: 28px;
+      padding: 8px;
       box-shadow:
         0 2px 4px rgba(0,0,0,0.1),
-        0 8px 16px rgba(0,0,0,0.1),
-        0 16px 32px rgba(0,0,0,0.15),
-        inset 0 1px 0 rgba(255,255,255,0.1);
+        0 8px 16px rgba(0,0,0,0.15),
+        0 20px 40px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.1),
+        inset 0 -1px 0 rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    /* Dynamic Island */
+    .phone-bezel::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 18px;
+      background: #000;
+      border-radius: 20px;
+      z-index: 10;
     }
 
     .phone-screen {
-      background: #FAF8F5;
-      border-radius: 14px;
+      background: linear-gradient(180deg, #FEFCFA 0%, #FAF8F5 100%);
+      border-radius: 20px;
       overflow: hidden;
-      padding: 0;
       position: relative;
     }
 
     .phone-status-bar {
       display: flex;
       justify-content: space-between;
-      padding: 6px 10px;
-      font-size: 9px;
+      padding: 28px 14px 8px;
+      font-size: 11px;
       font-weight: 600;
       color: #1F1D1A;
-      background: #FAF8F5;
+      background: transparent;
+    }
+
+    .status-time {
+      font-weight: 700;
     }
 
     .status-icons {
       display: flex;
       gap: 4px;
-      font-size: 7px;
+      align-items: center;
+    }
+
+    .icon-signal { font-size: 8px; letter-spacing: -1px; }
+    .icon-wifi { font-size: 9px; }
+    .icon-battery {
+      font-size: 10px;
+      position: relative;
     }
 
     .notification-card {
       background: white;
-      margin: 8px;
-      border-radius: 10px;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin: 0 10px 10px;
+      border-radius: 16px;
+      padding: 14px;
+      box-shadow:
+        0 2px 8px rgba(0,0,0,0.06),
+        0 8px 24px rgba(0,0,0,0.08);
     }
 
     .notif-header {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
+      gap: 10px;
+      margin-bottom: 10px;
     }
 
     .bailey-avatar {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #E07A5F 0%, #1D6B6B 100%);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #E07A5F 0%, #C96B52 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 700;
+      box-shadow: 0 2px 6px rgba(224, 122, 95, 0.4);
     }
 
     .notif-meta {
@@ -314,266 +348,338 @@
 
     .notif-title {
       display: block;
-      font-size: 10px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 700;
       color: #1F1D1A;
+      letter-spacing: -0.01em;
     }
 
     .notif-time {
-      font-size: 8px;
-      color: #5A544C;
+      font-size: 10px;
+      color: #8A8279;
+      font-weight: 500;
     }
 
     .notif-content {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .product-preview {
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(135deg, #E8F2F2 0%, #FEF0E8 100%);
-      border-radius: 6px;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #E8F2F2 0%, #D4E8E8 50%, #FEF0E8 100%);
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-preview::before {
+      content: '📋';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .product-info {
+      flex: 1;
     }
 
     .product-name {
-      font-size: 9px;
+      font-size: 11px;
       color: #2D2A26;
-      font-weight: 500;
+      font-weight: 600;
+      display: block;
+    }
+
+    .product-subtitle {
+      font-size: 9px;
+      color: #8A8279;
+      display: block;
+      margin-top: 2px;
     }
 
     .mockup-badge {
       position: absolute;
-      top: 40px;
-      right: 14px;
-      background: #E07A5F;
+      top: 50px;
+      right: 18px;
+      background: linear-gradient(135deg, #E07A5F 0%, #D4705A 100%);
       color: white;
       font-size: 8px;
-      font-weight: 700;
-      padding: 3px 6px;
-      border-radius: 4px;
-      letter-spacing: 0.05em;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.08em;
+      box-shadow: 0 2px 8px rgba(224, 122, 95, 0.4);
     }
 
-    /* Tablet Mockup - Card 2 */
+    /* Tablet Mockup - Card 2: 3 Paths */
     .mockup-tablet {
-      width: 180px;
+      width: 200px;
     }
 
     .tablet-bezel {
-      background: linear-gradient(145deg, #2D2A26 0%, #1a1918 100%);
-      border-radius: 16px;
-      padding: 8px;
+      background: linear-gradient(145deg, #E8E5E0 0%, #D5D2CD 100%);
+      border-radius: 18px;
+      padding: 10px;
       box-shadow:
-        0 4px 12px rgba(0,0,0,0.15),
-        inset 0 1px 0 rgba(255,255,255,0.1);
+        0 4px 12px rgba(0,0,0,0.12),
+        0 12px 32px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.8),
+        inset 0 -1px 0 rgba(0,0,0,0.1);
     }
 
     .tablet-screen {
-      background: #FAF8F5;
+      background: linear-gradient(180deg, #FEFCFA 0%, #FAF8F5 100%);
       border-radius: 8px;
-      padding: 12px;
-      min-height: 100px;
+      padding: 16px;
+      min-height: 120px;
     }
 
     .path-cards {
       display: flex;
       gap: 8px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .path-card {
       flex: 1;
-      background: #E8F2F2;
-      border-radius: 8px;
+      background: linear-gradient(180deg, #F5F3F0 0%, #EDEAE6 100%);
+      border-radius: 10px;
       padding: 10px 6px;
       text-align: center;
       border: 2px solid transparent;
-      transition: all 0.2s;
+      transition: all 0.2s ease;
     }
 
     .path-card.active {
-      background: #FEF0E8;
-      border-color: #E07A5F;
+      background: linear-gradient(180deg, #E8F2F2 0%, #D4EBEB 100%);
+      border-color: #1D6B6B;
+      box-shadow: 0 4px 12px rgba(29, 107, 107, 0.2);
     }
 
     .path-icon {
+      font-size: 18px;
       display: block;
-      font-size: 14px;
       margin-bottom: 4px;
     }
 
     .path-name {
-      font-size: 8px;
-      font-weight: 600;
-      color: #1D6B6B;
+      font-size: 9px;
+      font-weight: 700;
+      color: #2D2A26;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
     }
 
     .path-card.active .path-name {
-      color: #E07A5F;
+      color: #1D6B6B;
     }
 
     .path-progress {
-      background: #E8E2D9;
-      height: 8px;
-      border-radius: 4px;
-      position: relative;
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #F5F3F0;
+      border-radius: 20px;
+      padding: 8px 12px;
     }
 
     .progress-bar {
+      flex: 1;
+      height: 8px;
+      background: #E5E2DD;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-bar::after {
+      content: '';
       position: absolute;
       left: 0;
       top: 0;
       height: 100%;
       width: 75%;
-      background: linear-gradient(90deg, #1D6B6B 0%, #E07A5F 100%);
+      background: linear-gradient(90deg, #1D6B6B 0%, #2A8585 100%);
       border-radius: 4px;
     }
 
     .progress-text {
-      position: absolute;
-      right: 4px;
-      top: -16px;
-      font-size: 9px;
-      font-weight: 700;
-      color: #E07A5F;
+      font-size: 12px;
+      font-weight: 800;
+      color: #1D6B6B;
     }
 
-    /* iMac Mockup - Card 3 */
+    /* iMac Mockup - Card 3: $10K Blueprint */
     .mockup-imac {
-      width: 160px;
-      text-align: center;
+      width: 180px;
     }
 
     .imac-bezel {
-      background: linear-gradient(145deg, #2D2A26 0%, #1a1918 100%);
+      background: linear-gradient(180deg, #2D2A26 0%, #1F1D1A 100%);
       border-radius: 12px 12px 0 0;
-      padding: 6px 6px 12px;
+      padding: 8px 8px 20px;
       box-shadow:
-        0 4px 12px rgba(0,0,0,0.15);
+        0 4px 12px rgba(0,0,0,0.15),
+        0 12px 32px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.1);
     }
 
     .imac-screen {
-      background: #FAF8F5;
-      border-radius: 6px;
-      padding: 10px;
+      background: linear-gradient(180deg, #1a1918 0%, #0D0C0B 100%);
+      border-radius: 4px;
+      padding: 12px;
       min-height: 90px;
     }
 
-    .imac-stand {
-      width: 40px;
-      height: 20px;
-      background: linear-gradient(180deg, #3D3A36 0%, #2D2A26 100%);
-      margin: 0 auto;
-      border-radius: 0 0 4px 4px;
-    }
-
     .dashboard-ui {
-      text-align: left;
+      background: linear-gradient(180deg, #FAF8F5 0%, #F5F2EE 100%);
+      border-radius: 6px;
+      padding: 10px;
+      height: 100%;
     }
 
     .dash-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
       margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #E5E2DD;
     }
 
     .dash-title {
-      display: block;
-      font-size: 8px;
-      color: #5A544C;
+      font-size: 9px;
+      font-weight: 600;
+      color: #8A8279;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
     .dash-amount {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 18px;
+      font-weight: 800;
       color: #1D6B6B;
+      font-family: 'Satoshi', sans-serif;
     }
 
     .dash-chart {
       position: relative;
+      height: 45px;
     }
 
     .chart-bars {
       display: flex;
       align-items: flex-end;
       gap: 6px;
-      height: 40px;
+      height: 100%;
+      padding-bottom: 4px;
     }
 
     .chart-bars .bar {
       flex: 1;
-      background: #E8F2F2;
-      border-radius: 2px;
+      background: linear-gradient(180deg, #E5E2DD 0%, #D5D2CD 100%);
+      border-radius: 3px 3px 0 0;
+      transition: all 0.3s ease;
     }
 
     .chart-bars .bar.highlight {
-      background: #E07A5F;
+      background: linear-gradient(180deg, #1D6B6B 0%, #165555 100%);
+      box-shadow: 0 -4px 12px rgba(29, 107, 107, 0.3);
     }
 
     .chart-line {
       position: absolute;
-      top: 10px;
+      bottom: 0;
       left: 0;
       right: 0;
-      height: 1px;
-      border-top: 1px dashed #1D6B6B;
-      opacity: 0.5;
+      height: 2px;
+      background: #E5E2DD;
     }
 
-    /* Laptop Mockup - Card 4 */
+    .imac-stand {
+      width: 60px;
+      height: 40px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #D5D2CD 0%, #C5C2BD 100%);
+      clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .imac-stand::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 6px;
+      background: linear-gradient(180deg, #C5C2BD 0%, #B5B2AD 100%);
+      border-radius: 0 0 4px 4px;
+      margin: 0 auto;
+      transform: translateX(-10px);
+    }
+
+    /* Laptop Mockup - Card 4: Ask Bailey */
     .mockup-laptop {
-      width: 170px;
+      width: 200px;
     }
 
     .laptop-bezel {
-      background: linear-gradient(145deg, #2D2A26 0%, #1a1918 100%);
+      background: linear-gradient(180deg, #2D2A26 0%, #1F1D1A 100%);
       border-radius: 10px 10px 0 0;
-      padding: 6px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 6px 6px 0;
+      box-shadow:
+        0 -2px 8px rgba(0,0,0,0.1),
+        inset 0 1px 0 rgba(255,255,255,0.1);
     }
 
     .laptop-screen {
-      background: #FAF8F5;
-      border-radius: 4px;
+      background: #0D0C0B;
+      border-radius: 4px 4px 0 0;
       padding: 8px;
-      min-height: 80px;
-    }
-
-    .laptop-base {
-      background: linear-gradient(180deg, #3D3A36 0%, #2D2A26 100%);
-      height: 8px;
-      border-radius: 0 0 4px 4px;
-      width: 110%;
-      margin-left: -5%;
+      min-height: 95px;
     }
 
     .zoom-ui {
-      font-size: 8px;
+      background: #18171A;
+      border-radius: 6px;
+      padding: 8px;
+      height: 100%;
     }
 
     .zoom-header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 8px;
-      color: #5A544C;
     }
 
     .zoom-title {
-      font-weight: 600;
-      color: #1F1D1A;
+      font-size: 10px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .zoom-participants {
+      font-size: 8px;
+      color: #8B8B8B;
+      background: #2D2D30;
+      padding: 3px 6px;
+      border-radius: 4px;
     }
 
     .zoom-video {
-      background: #E8F2F2;
+      background: linear-gradient(135deg, #2D2D30 0%, #1F1F22 100%);
       border-radius: 6px;
       height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
+      margin-bottom: 6px;
     }
 
     .bailey-video-placeholder {
@@ -581,30 +687,40 @@
     }
 
     .bailey-initial {
-      display: block;
-      width: 28px;
-      height: 28px;
-      background: linear-gradient(135deg, #E07A5F 0%, #1D6B6B 100%);
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #E07A5F 0%, #C96B52 100%);
       border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: white;
+      font-size: 14px;
       font-weight: 700;
-      line-height: 28px;
       margin: 0 auto 4px;
     }
 
     .live-indicator {
-      font-size: 7px;
-      color: #E07A5F;
+      font-size: 8px;
       font-weight: 700;
+      color: #FF4444;
+      background: rgba(255, 68, 68, 0.15);
+      padding: 2px 6px;
+      border-radius: 4px;
+      animation: pulse-live 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-live {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
     }
 
     .zoom-chat-preview {
       display: flex;
       align-items: center;
-      gap: 4px;
-      margin-top: 6px;
-      padding: 4px 6px;
-      background: white;
+      gap: 6px;
+      background: #2D2D30;
+      padding: 4px 8px;
       border-radius: 4px;
     }
 
@@ -617,224 +733,198 @@
 
     .chat-line {
       flex: 1;
-      height: 4px;
-      background: #E8E2D9;
+      height: 3px;
+      background: linear-gradient(90deg, #3D3D40 0%, #2D2D30 100%);
       border-radius: 2px;
     }
 
-    /* Canva Mockup - Card 5 */
-    .mockup-screen.canva-style {
-      width: 170px;
+    .laptop-base {
+      background: linear-gradient(180deg, #D5D2CD 0%, #C5C2BD 100%);
+      height: 10px;
+      border-radius: 0 0 2px 2px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
       position: relative;
     }
 
-    .canva-bezel {
-      background: linear-gradient(145deg, #2D2A26 0%, #1a1918 100%);
-      border-radius: 10px;
-      padding: 6px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .canva-screen {
-      background: #FAF8F5;
-      border-radius: 4px;
-      display: flex;
-      min-height: 100px;
-      overflow: hidden;
-    }
-
-    .canva-sidebar {
-      width: 24px;
-      background: #2D2A26;
-      padding: 8px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .sidebar-icon {
-      width: 12px;
-      height: 12px;
-      background: #5A544C;
-      border-radius: 3px;
-    }
-
-    .sidebar-icon.active {
-      background: #E07A5F;
-    }
-
-    .canva-canvas {
-      flex: 1;
-      padding: 8px;
-      background: white;
-    }
-
-    .design-preview {
-      background: #FAF8F5;
-      border-radius: 4px;
-      height: 60px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .design-element {
+    .laptop-base::before {
+      content: '';
       position: absolute;
-      border-radius: 4px;
-    }
-
-    .design-element.el-1 {
-      width: 40%;
-      height: 30px;
-      background: #E07A5F;
-      top: 10px;
-      left: 10px;
-    }
-
-    .design-element.el-2 {
-      width: 50%;
-      height: 15px;
-      background: #1D6B6B;
-      bottom: 20px;
-      left: 10px;
-    }
-
-    .design-element.el-3 {
-      width: 30px;
-      height: 30px;
-      background: #E8F2F2;
-      top: 15px;
-      right: 10px;
-      border-radius: 50%;
-    }
-
-    .canva-layers {
-      width: 30px;
-      background: #F5F3F0;
-      padding: 8px 4px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .layer-item {
-      height: 14px;
-      background: white;
+      top: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 4px;
+      background: #B5B2AD;
       border-radius: 2px;
-      border: 1px solid #E8E2D9;
     }
 
-    /* Split Screen Mockup - Card 6 */
-    .mockup-split-screen {
+    /* Screen Mockup - Card 5: Steal My Bestsellers */
+    .mockup-screen {
+      width: 180px;
+      background: linear-gradient(180deg, #FAF8F5 0%, #F5F2EE 100%);
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow:
+        0 4px 12px rgba(0,0,0,0.08),
+        0 12px 32px rgba(0,0,0,0.12);
+      border: 1px solid #E5E2DD;
+    }
+
+    .canva-header {
       display: flex;
       align-items: center;
       gap: 8px;
-      width: 180px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #E5E2DD;
     }
 
-    .split-left, .split-right {
-      flex: 1;
-      background: linear-gradient(145deg, #2D2A26 0%, #1a1918 100%);
-      border-radius: 8px;
-      padding: 4px;
-    }
-
-    .pinterest-analytics, .email-stats {
-      background: #FAF8F5;
+    .canva-logo {
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(135deg, #00C4CC 0%, #7D2AE8 100%);
       border-radius: 4px;
-      padding: 8px;
-      min-height: 70px;
-    }
-
-    .pin-header, .email-header {
       display: flex;
       align-items: center;
-      gap: 4px;
-      margin-bottom: 8px;
+      justify-content: center;
+      font-size: 10px;
+      color: white;
+      font-weight: 700;
     }
 
-    .pin-icon {
-      width: 14px;
-      height: 14px;
-      background: #E60023;
-      border-radius: 50%;
+    .canva-title {
+      font-size: 10px;
+      font-weight: 600;
+      color: #2D2A26;
+    }
+
+    .bestseller-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .bestseller-item {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, #E8F2F2 0%, #D4E8E8 100%);
+      border-radius: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bestseller-item.featured {
+      background: linear-gradient(135deg, #FEF0E8 0%, #FDDDD0 100%);
+      border: 2px solid #E07A5F;
+    }
+
+    .bestseller-item.featured::after {
+      content: '⭐';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      font-size: 10px;
+    }
+
+    .top-seller-badge {
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #E07A5F 0%, #C96B52 100%);
       color: white;
+      font-size: 8px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(224, 122, 95, 0.4);
+    }
+
+    /* Split Screen Mockup - Card 6: Traffic Loop */
+    .mockup-split-screen {
+      width: 200px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .split-panel {
+      flex: 1;
+      background: #FFFFFF;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border: 1px solid #E5E2DD;
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #F0EDEA;
+    }
+
+    .panel-icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8px;
+      color: white;
+      font-weight: 700;
+    }
+
+    .panel-icon.pinterest { background: #E60023; }
+    .panel-icon.email { background: #1D6B6B; }
+
+    .panel-title {
       font-size: 8px;
       font-weight: 700;
+      color: #2D2A26;
+    }
+
+    .metric-row {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-    }
-
-    .email-icon {
-      width: 14px;
-      height: 14px;
-      background: #1D6B6B;
-      border-radius: 50%;
-      color: white;
-      font-size: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .pin-label, .email-label {
-      font-size: 8px;
-      font-weight: 600;
-      color: #1F1D1A;
-    }
-
-    .pin-graph {
-      height: 25px;
-      position: relative;
       margin-bottom: 4px;
     }
 
-    .graph-line {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #E8E2D9;
+    .metric-label {
+      font-size: 7px;
+      color: #8A8279;
     }
 
-    .graph-area {
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      right: 0;
-      height: 20px;
-      background: linear-gradient(180deg, rgba(29,107,107,0.2) 0%, rgba(29,107,107,0) 100%);
-      clip-path: polygon(0 100%, 10% 80%, 30% 85%, 50% 40%, 70% 30%, 100% 0, 100% 100%);
-    }
-
-    .pin-stat {
-      font-size: 10px;
+    .metric-value {
+      font-size: 9px;
       font-weight: 700;
       color: #1D6B6B;
     }
 
-    .email-metrics {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .metric {
-      font-size: 9px;
-      color: #2D2A26;
-      background: #E8F2F2;
-      padding: 3px 6px;
-      border-radius: 4px;
-    }
-
-    .split-connector {
+    .metric-value.highlight {
       color: #E07A5F;
-      font-size: 16px;
-      font-weight: 700;
     }
 
+    .mini-chart {
+      height: 24px;
+      display: flex;
+      align-items: flex-end;
+      gap: 2px;
+      margin-top: 6px;
+    }
+
+    .mini-bar {
+      flex: 1;
+      background: #E8F2F2;
+      border-radius: 2px;
+    }
+
+    .mini-bar.active {
+      background: linear-gradient(180deg, #1D6B6B 0%, #165555 100%);
+    }
 
     /* ═══════════════════════════════════════════════════════════════════════════
        CARDS GRID
@@ -2044,53 +2134,57 @@
   
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       TESTIMONIAL STRIP - Compact Image Strip
+       TESTIMONIAL MASONRY - Tetris-Style 2-Column Layout
        ═══════════════════════════════════════════════════════════════════════════ */
-    .testimonial-strip {
-      background: linear-gradient(135deg, #1D6B6B 0%, #165555 100%);
-      padding: 20px 0;
+    .testimonial-masonry {
+      background: linear-gradient(180deg, #1D6B6B 0%, #165555 50%, #1D6B6B 100%);
+      padding: 48px 24px;
       width: 100vw;
       margin-left: calc(-50vw + 50%);
-      overflow: hidden;
     }
 
-    .strip-container {
-      max-width: 1400px;
+    .masonry-container {
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .masonry-column {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    .testimonial-img {
-      height: 100px;
-      width: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    .testimonial-card-img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow:
+        0 4px 12px rgba(0,0,0,0.15),
+        0 8px 24px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      object-fit: contain;
+      display: block;
     }
 
-    .testimonial-img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    .testimonial-card-img:hover {
+      transform: scale(1.02) translateY(-4px);
+      box-shadow:
+        0 8px 24px rgba(0,0,0,0.2),
+        0 16px 48px rgba(0,0,0,0.15);
     }
 
-    @media (max-width: 768px) {
-      .strip-container {
-        gap: 8px;
+    /* Responsive */
+    @media (max-width: 600px) {
+      .masonry-container {
+        grid-template-columns: 1fr;
       }
-      .testimonial-img {
-        height: 70px;
+      .masonry-column {
+        gap: 12px;
       }
-    }
-
-    @media (max-width: 480px) {
-      .testimonial-img {
-        height: 55px;
+      .testimonial-masonry {
+        padding: 32px 16px;
       }
     }
 
@@ -2165,6 +2259,7 @@
                       <div class="product-preview"></div>
                       <div class="product-info">
                         <span class="product-name">Trending: Meal Planner</span>
+                        <span class="product-subtitle">AI prompt + tags included</span>
                       </div>
                     </div>
                   </div>
@@ -2302,36 +2397,28 @@
         <article class="feature-card">
           <div class="card-visual-area">
             <div class="mockup-screen canva-style">
-              <div class="canva-bezel">
-                <div class="canva-screen">
-                  <div class="canva-sidebar">
-                    <span class="sidebar-icon"></span>
-                    <span class="sidebar-icon active"></span>
-                    <span class="sidebar-icon"></span>
-                  </div>
-                  <div class="canva-canvas">
-                    <div class="design-preview">
-                      <div class="design-element el-1"></div>
-                      <div class="design-element el-2"></div>
-                      <div class="design-element el-3"></div>
-                    </div>
-                  </div>
-                  <div class="canva-layers">
-                    <span class="layer-item"></span>
-                    <span class="layer-item"></span>
-                  </div>
-                </div>
+              <div class="canva-header">
+                <div class="canva-logo">C</div>
+                <span class="canva-title">My Templates</span>
               </div>
-              <span class="mockup-badge">TOP SELLER</span>
+              <div class="bestseller-grid">
+                <div class="bestseller-item"></div>
+                <div class="bestseller-item featured"></div>
+                <div class="bestseller-item"></div>
+                <div class="bestseller-item"></div>
+                <div class="bestseller-item featured"></div>
+                <div class="bestseller-item"></div>
+              </div>
+              <span class="top-seller-badge">TOP SELLER</span>
             </div>
           </div>
         <div class="card-content">
           <span class="card-label">Tutorials</span>
           <h3 class="card-title">Steal My Bestsellers</h3>
-          <p class="card-outcome">I walk through exactly how I made my top-selling products. You build your own version.</p>
+          <p class="card-outcome">I walk through exactly how I made my top-selling products. You build your own version as you watch.</p>
           <ul class="card-bullets">
-            <li>Not generic Canva tips - these are my actual files, my actual decisions</li>
-            <li>Covers the product types still bringing in sales in my shop this month</li>
+            <li>30+ video tutorials where I screen-share my actual Canva process</li>
+            <li>Real bestsellers, not generic examples - you see what actually worked</li>
           </ul>
         </div>
         </article>
@@ -2340,32 +2427,44 @@
         <article class="feature-card">
           <div class="card-visual-area">
             <div class="mockup-split-screen">
-              <div class="split-left">
-                <div class="pinterest-analytics">
-                  <div class="pin-header">
-                    <span class="pin-icon">P</span>
-                    <span class="pin-label">Pinterest</span>
-                  </div>
-                  <div class="pin-graph">
-                    <div class="graph-line"></div>
-                    <div class="graph-area"></div>
-                  </div>
-                  <span class="pin-stat">↑ 847%</span>
+              <div class="split-panel">
+                <div class="panel-header">
+                  <div class="panel-icon pinterest">P</div>
+                  <span class="panel-title">Pinterest</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">Impressions</span>
+                  <span class="metric-value">+847%</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">Clicks</span>
+                  <span class="metric-value highlight">2.4K</span>
+                </div>
+                <div class="mini-chart">
+                  <div class="mini-bar" style="height: 40%"></div>
+                  <div class="mini-bar" style="height: 55%"></div>
+                  <div class="mini-bar" style="height: 70%"></div>
+                  <div class="mini-bar active" style="height: 100%"></div>
                 </div>
               </div>
-              <div class="split-connector">
-                <div class="connector-arrow">→</div>
-              </div>
-              <div class="split-right">
-                <div class="email-stats">
-                  <div class="email-header">
-                    <span class="email-icon">@</span>
-                    <span class="email-label">Email</span>
-                  </div>
-                  <div class="email-metrics">
-                    <span class="metric">Open: 42%</span>
-                    <span class="metric">Click: 8.2%</span>
-                  </div>
+              <div class="split-panel">
+                <div class="panel-header">
+                  <div class="panel-icon email">@</div>
+                  <span class="panel-title">Email</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">Open Rate</span>
+                  <span class="metric-value">42%</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">Click Rate</span>
+                  <span class="metric-value highlight">8.2%</span>
+                </div>
+                <div class="mini-chart">
+                  <div class="mini-bar" style="height: 60%"></div>
+                  <div class="mini-bar active" style="height: 85%"></div>
+                  <div class="mini-bar" style="height: 45%"></div>
+                  <div class="mini-bar" style="height: 75%"></div>
                 </div>
               </div>
             </div>
@@ -2373,17 +2472,17 @@
         <div class="card-content">
           <span class="card-label">Traffic</span>
           <h3 class="card-title">My Traffic Loop</h3>
-          <p class="card-outcome">The Pinterest and email setup running on autopilot in my business today - not something I taught once and moved on from.</p>
+          <p class="card-outcome">The Pinterest and email setup running on autopilot in my business today - not theory, the actual system.</p>
           <ul class="card-bullets">
-            <li>My real Pinterest approach, updated when the algorithm shifts (I notice it in my own sales first)</li>
-            <li>The simple email piece that brings buyers back without weekly newsletters</li>
+            <li>My complete Pinterest strategy that runs while I sleep</li>
+            <li>The email sequences that turn browsers into buyers</li>
           </ul>
         </div>
         </article>
 
       </div>
 
-            <!-- Also Included Section -->
+      <!-- Also Included Section -->
       <div class="also-included">
         <div class="also-header">
           <h3 class="also-title">Also Included</h3>
@@ -2507,14 +2606,20 @@
     </div>
   </section>
 
-    <!-- SECTION 3: TESTIMONIALS STRIP -->
-  <div class="testimonial-strip">
-    <div class="strip-container">
-      <img src="https://i.imgur.com/YcO5jYM.png" alt="Member testimonial" class="testimonial-img">
-      <img src="https://i.imgur.com/NfMKFk5.png" alt="Member testimonial" class="testimonial-img">
-      <img src="https://i.imgur.com/GHXVqbr.png" alt="Member testimonial" class="testimonial-img">
-      <img src="https://i.imgur.com/hnKzPUy.png" alt="Member testimonial" class="testimonial-img">
-      <img src="https://i.imgur.com/T3CiReh.png" alt="Member testimonial" class="testimonial-img">
+    <!-- SECTION 3: TESTIMONIALS - Tetris Masonry -->
+  <div class="testimonial-masonry">
+    <div class="masonry-container">
+      <!-- Column 1 -->
+      <div class="masonry-column">
+        <img src="https://i.imgur.com/YcO5jYM.png" alt="Going all in - 8000 sales" class="testimonial-card-img">
+        <img src="https://i.imgur.com/GHXVqbr.png" alt="Great day testimonial" class="testimonial-card-img">
+        <img src="https://i.imgur.com/T3CiReh.png" alt="100 Sales milestone" class="testimonial-card-img">
+      </div>
+      <!-- Column 2 -->
+      <div class="masonry-column">
+        <img src="https://i.imgur.com/NfMKFk5.png" alt="1000 sales in 5 months" class="testimonial-card-img">
+        <img src="https://i.imgur.com/hnKzPUy.png" alt="34 items ordered" class="testimonial-card-img">
+      </div>
     </div>
   </div>
 
