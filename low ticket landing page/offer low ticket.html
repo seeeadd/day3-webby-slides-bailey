@@ -1247,16 +1247,26 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       ALSO INCLUDED SECTION
+       ALSO INCLUDED SECTION - Warm Coral Theme (Distinct from Core Cards)
        ═══════════════════════════════════════════════════════════════════════════ */
     .also-included {
       margin-top: 64px;
-      padding-top: 56px;
-      border-top: 2px solid transparent;
-      background-image: linear-gradient(var(--bg-warm), var(--bg-warm)), 
-                        linear-gradient(90deg, var(--coral) 0%, rgba(224, 122, 95, 0.3) 60%, transparent 100%);
-      background-origin: border-box;
-      background-clip: padding-box, border-box;
+      padding: 48px 40px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #FDF8F6 0%, #FAF4F1 100%);
+      border: 2px solid #E8C4B8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .also-included::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #E07A5F 0%, #C96B52 50%, #E8A838 100%);
     }
 
     .also-header {
@@ -1267,14 +1277,16 @@
     .also-title {
       font-family: 'OGG', Georgia, serif;
       font-size: clamp(24px, 3vw, 32px);
-      color: var(--text-primary);
+      font-weight: 700;
+      color: #C96B52;
       margin-bottom: 8px;
+      letter-spacing: 0.02em;
     }
 
     .also-subtitle {
       font-family: 'Satoshi', sans-serif;
       font-size: 15px;
-      color: var(--text-muted);
+      color: #8B7355;
     }
 
     .also-grid {
@@ -1305,93 +1317,359 @@
       .also-grid {
         grid-template-columns: 1fr;
       }
+      .also-included {
+        padding: 32px 24px;
+      }
     }
 
-    /* Mini-card styling */
+    /* Mini-card styling - Warm Coral Theme */
     .mini-card {
-      background: var(--bg-card);
-      border-radius: 12px;
-      padding: 24px 20px;
-      border: 1px solid var(--border-light);
-      box-shadow: 
-        0 1px 2px rgba(45, 42, 38, 0.03),
-        0 4px 8px rgba(45, 42, 38, 0.05);
-      transition: 
-        transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
-        box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 0.25s ease;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 0;
+      border: 1px solid #E8C4B8;
+      box-shadow:
+        0 2px 4px rgba(192, 107, 82, 0.08),
+        0 8px 16px rgba(192, 107, 82, 0.06);
+      transition:
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.3s ease;
+      overflow: hidden;
     }
 
     .mini-card:hover {
-      transform: translateY(-4px) scale(1.02);
-      border-color: rgba(29, 107, 107, 0.3);
-      box-shadow: 
-        0 4px 8px rgba(45, 42, 38, 0.05),
-        0 8px 20px rgba(45, 42, 38, 0.08);
+      transform: translateY(-6px);
+      border-color: #C96B52;
+      box-shadow:
+        0 8px 20px rgba(192, 107, 82, 0.15),
+        0 16px 40px rgba(192, 107, 82, 0.10);
     }
 
     .mini-card:focus-within {
-      outline: 3px solid rgba(29, 107, 107, 0.5);
+      outline: 3px solid rgba(192, 107, 82, 0.5);
       outline-offset: 3px;
     }
 
-    .mini-icon {
-      flex-shrink: 0;
-      width: 48px;
-      height: 48px;
-      border-radius: 10px;
+    /* Mini-card visual area - Detailed Graphics */
+    .mini-visual {
+      height: 120px;
+      background: linear-gradient(135deg, #FDF8F6 0%, #F5EBE6 100%);
+      border-bottom: 1px solid #E8C4B8;
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
 
     .mini-content {
-      flex: 1;
+      padding: 20px;
     }
 
     .mini-title {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 4px;
+      font-family: 'OGG', Georgia, serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #2D2A26;
+      margin-bottom: 8px;
+      line-height: 1.3;
     }
 
     .mini-desc {
       font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 400;
-      color: var(--text-secondary);
-      line-height: 1.45;
+      color: #6B6158;
+      line-height: 1.5;
     }
 
-    /* Mini-card icon styles */
-    .icon-tool-stack {
-      background: linear-gradient(135deg, var(--teal-light) 0%, rgba(29, 107, 107, 0.15) 100%);
+    /* ═══════════════════════════════════════════════════════════════════════════
+       DETAILED MINI-CARD GRAPHICS
+       ═══════════════════════════════════════════════════════════════════════════ */
+
+    /* Tool Stack - App Grid with Labels */
+    .tool-stack-graphic {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      padding: 12px;
+      width: 100%;
+      max-width: 140px;
     }
 
-    .icon-vault {
-      background: linear-gradient(135deg, var(--coral-light) 0%, rgba(224, 122, 95, 0.15) 100%);
+    .tool-app {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 8px;
+      font-weight: 600;
+      color: #FFF;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
     }
 
-    .icon-summer-build {
-      background: linear-gradient(135deg, #FFF6E6 0%, #FFF0D4 100%);
+    .tool-app.canva { background: linear-gradient(135deg, #00C4CC 0%, #7D2AE8 100%); }
+    .tool-app.notion { background: linear-gradient(135deg, #000 0%, #2D2D2D 100%); }
+    .tool-app.kittl { background: linear-gradient(135deg, #FF6B35 0%, #F7C94B 100%); }
+    .tool-app.figma { background: linear-gradient(135deg, #F24E1E 0%, #A259FF 100%); }
+    .tool-app.chatgpt { background: linear-gradient(135deg, #10A37F 0%, #1A7F64 100%); }
+    .tool-app.midj { background: linear-gradient(135deg, #5865F2 0%, #3B4CC0 100%); }
+    .tool-app.used { opacity: 1; }
+    .tool-app.cancelled {
+      opacity: 0.4;
+      position: relative;
+    }
+    .tool-app.cancelled::after {
+      content: '✕';
+      position: absolute;
+      font-size: 16px;
+      color: #C96B52;
     }
 
-    .icon-podcast {
-      background: linear-gradient(135deg, #F0F0F7 0%, #E6E6F2 100%);
+    /* Vault - Folder Stack */
+    .vault-graphic {
+      position: relative;
+      width: 100px;
+      height: 80px;
     }
 
-    .icon-backroom {
-      background: linear-gradient(135deg, var(--teal-light) 0%, rgba(29, 107, 107, 0.15) 100%);
+    .vault-folder {
+      position: absolute;
+      width: 90px;
+      height: 60px;
+      border-radius: 4px 12px 8px 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    .mini-icon svg {
-      width: 26px;
-      height: 26px;
+    .vault-folder::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 8px;
+      width: 30px;
+      height: 8px;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .vault-folder.f1 {
+      background: #FFE5DC;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .vault-folder.f1::before { background: #FFD4C7; }
+
+    .vault-folder.f2 {
+      background: #FFF0DC;
+      bottom: 8px;
+      left: 5px;
+      z-index: 2;
+    }
+    .vault-folder.f2::before { background: #FFE5C7; }
+
+    .vault-folder.f3 {
+      background: #E8F2F2;
+      bottom: 16px;
+      left: 10px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .vault-folder.f3::before { background: #D1E5E5; }
+
+    .vault-count {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1D6B6B;
+    }
+
+    /* Summer Build - Shop Window */
+    .shop-window-graphic {
+      width: 100px;
+      height: 80px;
+      background: #FFFFFF;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #E8A838;
+    }
+
+    .shop-awning {
+      height: 16px;
+      background: repeating-linear-gradient(
+        90deg,
+        #E8A838 0px,
+        #E8A838 8px,
+        #FFF 8px,
+        #FFF 16px
+      );
+      border-bottom: 2px solid #D49A30;
+    }
+
+    .shop-products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      padding: 8px;
+    }
+
+    .shop-product {
+      aspect-ratio: 1;
+      border-radius: 4px;
+      background: linear-gradient(135deg, #F5F0EB 0%, #EBE5DD 100%);
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.08);
+    }
+
+    .shop-product.new {
+      background: linear-gradient(135deg, #E8F2F2 0%, #D1E5E5 100%);
+      position: relative;
+    }
+
+    .shop-product.new::after {
+      content: '+';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #1D6B6B;
+    }
+
+    /* Podcast - Waveform Player */
+    .podcast-graphic {
+      width: 110px;
+      height: 70px;
+      background: #2D2A26;
+      border-radius: 12px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .podcast-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .podcast-avatar {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #E07A5F 0%, #C96B52 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8px;
+      color: #FFF;
+      font-weight: 700;
+    }
+
+    .podcast-title {
+      font-size: 7px;
+      color: #A09890;
+      font-weight: 600;
+    }
+
+    .podcast-waveform {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      height: 24px;
+    }
+
+    .wave-bar {
+      width: 3px;
+      background: linear-gradient(180deg, #E07A5F 0%, #C96B52 100%);
+      border-radius: 2px;
+      animation: wave 1s ease-in-out infinite;
+    }
+
+    .wave-bar:nth-child(1) { height: 40%; animation-delay: 0s; }
+    .wave-bar:nth-child(2) { height: 70%; animation-delay: 0.1s; }
+    .wave-bar:nth-child(3) { height: 50%; animation-delay: 0.2s; }
+    .wave-bar:nth-child(4) { height: 90%; animation-delay: 0.3s; }
+    .wave-bar:nth-child(5) { height: 60%; animation-delay: 0.4s; }
+    .wave-bar:nth-child(6) { height: 80%; animation-delay: 0.5s; }
+    .wave-bar:nth-child(7) { height: 45%; animation-delay: 0.6s; }
+    .wave-bar:nth-child(8) { height: 65%; animation-delay: 0.7s; }
+    .wave-bar:nth-child(9) { height: 55%; animation-delay: 0.8s; }
+    .wave-bar:nth-child(10) { height: 75%; animation-delay: 0.9s; }
+
+    @keyframes wave {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(0.6); }
+    }
+
+    /* Back Room - Chat Interface */
+    .backroom-graphic {
+      width: 100px;
+      height: 80px;
+      background: #F8F7F5;
+      border-radius: 10px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .chat-bubble {
+      padding: 6px 10px;
+      border-radius: 12px;
+      font-size: 7px;
+      font-weight: 500;
+      max-width: 85%;
+    }
+
+    .chat-bubble.question {
+      background: #FFF0DC;
+      color: #8B6914;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+
+    .chat-bubble.answer {
+      background: #E8F2F2;
+      color: #1D6B6B;
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+
+    .chat-typing {
+      display: flex;
+      gap: 3px;
+      align-self: flex-start;
+      padding: 6px 10px;
+      background: #EEECEA;
+      border-radius: 12px;
+    }
+
+    .typing-dot {
+      width: 4px;
+      height: 4px;
+      background: #A09890;
+      border-radius: 50%;
+      animation: typing 1.4s ease-in-out infinite;
+    }
+
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes typing {
+      0%, 60%, 100% { transform: translateY(0); }
+      30% { transform: translateY(-4px); }
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
@@ -1764,6 +2042,58 @@
       }
     }
   
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       TESTIMONIAL STRIP - Compact Image Strip
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .testimonial-strip {
+      background: linear-gradient(135deg, #1D6B6B 0%, #165555 100%);
+      padding: 20px 0;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      overflow: hidden;
+    }
+
+    .strip-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-img {
+      height: 100px;
+      width: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      object-fit: contain;
+    }
+
+    .testimonial-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+      .strip-container {
+        gap: 8px;
+      }
+      .testimonial-img {
+        height: 70px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .testimonial-img {
+        height: 55px;
+      }
+    }
+
     /* Mobile: Stack testimonial strip */
     @media (max-width: 768px) {
       .strip-container {
@@ -2053,7 +2383,7 @@
 
       </div>
 
-      <!-- Also Included Section -->
+            <!-- Also Included Section -->
       <div class="also-included">
         <div class="also-header">
           <h3 class="also-title">Also Included</h3>
@@ -2062,16 +2392,18 @@
 
         <!-- Row 1: 3 items -->
         <div class="also-grid">
-          
+
           <!-- Tool Stack -->
           <div class="mini-card">
-            <div class="mini-icon icon-tool-stack">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#1D6B6B" stroke-width="2"/>
-                <rect x="14" y="3" width="7" height="7" rx="1.5" stroke="#1D6B6B" stroke-width="2"/>
-                <rect x="3" y="14" width="7" height="7" rx="1.5" stroke="#1D6B6B" stroke-width="2"/>
-                <rect x="14" y="14" width="7" height="7" rx="1.5" stroke="#1D6B6B" stroke-width="2"/>
-              </svg>
+            <div class="mini-visual">
+              <div class="tool-stack-graphic">
+                <div class="tool-app canva used">Canva</div>
+                <div class="tool-app notion used">Notion</div>
+                <div class="tool-app kittl used">Kittl</div>
+                <div class="tool-app figma cancelled"></div>
+                <div class="tool-app chatgpt used">GPT</div>
+                <div class="tool-app midj cancelled"></div>
+              </div>
             </div>
             <div class="mini-content">
               <h4 class="mini-title">Bailey's Tool Stack</h4>
@@ -2081,13 +2413,14 @@
 
           <!-- The Vault -->
           <div class="mini-card">
-            <div class="mini-icon icon-vault">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="6" width="20" height="14" rx="2" stroke="#E07A5F" stroke-width="2"/>
-                <path d="M2 10H22" stroke="#E07A5F" stroke-width="2"/>
-                <circle cx="12" cy="15" r="2" stroke="#E07A5F" stroke-width="2"/>
-                <path d="M8 6V4C8 2.89543 8.89543 2 10 2H14C15.1046 2 16 2.89543 16 4V6" stroke="#E07A5F" stroke-width="2"/>
-              </svg>
+            <div class="mini-visual">
+              <div class="vault-graphic">
+                <div class="vault-folder f1"></div>
+                <div class="vault-folder f2"></div>
+                <div class="vault-folder f3">
+                  <span class="vault-count">150+</span>
+                </div>
+              </div>
             </div>
             <div class="mini-content">
               <h4 class="mini-title">The Vault (150+ PLR)</h4>
@@ -2097,13 +2430,18 @@
 
           <!-- Summer Shop Build -->
           <div class="mini-card">
-            <div class="mini-icon icon-summer-build">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="6" r="4" stroke="#E8A838" stroke-width="2"/>
-                <path d="M12 2V1M18 6H19M6 6H5M16.5 2.5L17.5 1.5M7.5 2.5L6.5 1.5" stroke="#E8A838" stroke-width="2" stroke-linecap="round"/>
-                <path d="M4 22V14C4 12.8954 4.89543 12 6 12H18C19.1046 12 20 12.8954 20 14V22" stroke="#E8A838" stroke-width="2"/>
-                <path d="M9 22V18C9 17.4477 9.44772 17 10 17H14C14.5523 17 15 17.4477 15 18V22" stroke="#E8A838" stroke-width="2"/>
-              </svg>
+            <div class="mini-visual">
+              <div class="shop-window-graphic">
+                <div class="shop-awning"></div>
+                <div class="shop-products">
+                  <div class="shop-product"></div>
+                  <div class="shop-product"></div>
+                  <div class="shop-product"></div>
+                  <div class="shop-product"></div>
+                  <div class="shop-product new"></div>
+                  <div class="shop-product"></div>
+                </div>
+              </div>
             </div>
             <div class="mini-content">
               <h4 class="mini-title">Summer Shop Build</h4>
@@ -2115,16 +2453,28 @@
 
         <!-- Row 2: 2 items centered -->
         <div class="also-grid-row-2">
-          
+
           <!-- Private Podcast -->
           <div class="mini-card">
-            <div class="mini-icon icon-podcast">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 18V22" stroke="#6B6B8D" stroke-width="2" stroke-linecap="round"/>
-                <path d="M8 22H16" stroke="#6B6B8D" stroke-width="2" stroke-linecap="round"/>
-                <rect x="9" y="2" width="6" height="12" rx="3" stroke="#6B6B8D" stroke-width="2"/>
-                <path d="M5 10C5 13.866 8.13401 17 12 17C15.866 17 19 13.866 19 10" stroke="#6B6B8D" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+            <div class="mini-visual">
+              <div class="podcast-graphic">
+                <div class="podcast-header">
+                  <div class="podcast-avatar">B</div>
+                  <span class="podcast-title">Private Episode</span>
+                </div>
+                <div class="podcast-waveform">
+                  <div class="wave-bar"></div>
+                  <div class="wave-bar"></div>
+                  <div class="wave-bar"></div>
+                  <div class="wave-bar"></div>
+                  <div class="wave-bar"></div>
+                  <div class="wave-bar"></div>
+                  <div class="wave-bar"></div>
+                  <div class="wave-bar"></div>
+                  <div class="wave-bar"></div>
+                  <div class="wave-bar"></div>
+                </div>
+              </div>
             </div>
             <div class="mini-content">
               <h4 class="mini-title">The Private Podcast</h4>
@@ -2134,12 +2484,16 @@
 
           <!-- The Back Room -->
           <div class="mini-card">
-            <div class="mini-icon icon-backroom">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#1D6B6B" stroke-width="2" stroke-linecap="round"/>
-                <path d="M22 22L18 18" stroke="#1D6B6B" stroke-width="2" stroke-linecap="round"/>
-                <path d="M15 8H22M22 8V15M22 8L15 15" stroke="#1D6B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+            <div class="mini-visual">
+              <div class="backroom-graphic">
+                <div class="chat-bubble question">Is this dumb? 🤔</div>
+                <div class="chat-bubble answer">Not dumb! Try...</div>
+                <div class="chat-typing">
+                  <span class="typing-dot"></span>
+                  <span class="typing-dot"></span>
+                  <span class="typing-dot"></span>
+                </div>
+              </div>
             </div>
             <div class="mini-content">
               <h4 class="mini-title">The Back Room</h4>
@@ -2153,43 +2507,14 @@
     </div>
   </section>
 
-  <!-- SECTION 3: TESTIMONIALS -->
+    <!-- SECTION 3: TESTIMONIALS STRIP -->
   <div class="testimonial-strip">
     <div class="strip-container">
-
-      <div class="strip-stat">
-        <span class="stat-number">3,000+</span>
-        <span class="stat-label">Members</span>
-      </div>
-
-      <div class="strip-divider"></div>
-
-      <div class="strip-quote">
-        <span class="quote-text">"Hit $8,247 in my first 4 months"</span>
-        <span class="quote-attr">— Jessica R.</span>
-      </div>
-
-      <div class="strip-divider"></div>
-
-      <div class="strip-quote">
-        <span class="quote-text">"From 12 to 340 sales"</span>
-        <span class="quote-attr">— Amanda K.</span>
-      </div>
-
-      <div class="strip-divider"></div>
-
-      <div class="strip-quote">
-        <span class="quote-text">"$5K months are normal now"</span>
-        <span class="quote-attr">— Stephanie W.</span>
-      </div>
-
-      <div class="strip-divider"></div>
-
-      <div class="strip-stat">
-        <span class="stat-number">$2.4M+</span>
-        <span class="stat-label">Member Revenue</span>
-      </div>
-
+      <img src="https://i.imgur.com/YcO5jYM.png" alt="Member testimonial" class="testimonial-img">
+      <img src="https://i.imgur.com/NfMKFk5.png" alt="Member testimonial" class="testimonial-img">
+      <img src="https://i.imgur.com/GHXVqbr.png" alt="Member testimonial" class="testimonial-img">
+      <img src="https://i.imgur.com/hnKzPUy.png" alt="Member testimonial" class="testimonial-img">
+      <img src="https://i.imgur.com/T3CiReh.png" alt="Member testimonial" class="testimonial-img">
     </div>
   </div>
 
