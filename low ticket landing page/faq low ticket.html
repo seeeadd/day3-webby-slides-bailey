@@ -288,8 +288,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #1F1D1A;
+  background: #1A1816;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 
@@ -333,14 +334,27 @@ html, body {
       #2D2A26 25%,
       #2D2A26 50%,
       #1F1D1A 70%,
-      #1F1D1A 100%
+      #1A1816 100%
     );
 
   overflow: hidden;
   isolation: isolate;
+  min-height: 100vh;
 }
 
 /* Noise/grain texture overlay */
+/* Extend dark background beyond section */
+.faq-section::after {
+  content: "";
+  position: absolute;
+  bottom: -200vh;
+  left: 0;
+  right: 0;
+  height: 200vh;
+  background: #1A1816;
+  z-index: -1;
+}
+
 .faq-bg-grain {
   position: absolute;
   inset: 0;
@@ -939,7 +953,7 @@ html, body {
   width: 32px;
   height: 100%;
 
-  background: linear-gradient(145deg, #2D2A26 0%, #1F1D1A 100%);
+  background: linear-gradient(145deg, #2D2A26 0%, #1A1816 100%);
   border: 2px solid rgba(255, 255, 255, 0.12);
   border-radius: 6px 0 0 6px;
 
