@@ -2095,51 +2095,461 @@
   
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       TESTIMONIAL MASONRY - Flexbox Columns
+       TESTIMONIAL CAROUSEL - Premium Animated Design
        ═══════════════════════════════════════════════════════════════════════════ */
-    .testimonial-masonry {
-      background: linear-gradient(180deg, #1D6B6B 0%, #165555 100%);
-      padding: 48px 16px;
+
+    .testimonial-carousel-section {
+      position: relative;
+      background: linear-gradient(165deg, #0D4A4A 0%, #0B3D3D 50%, #082E2E 100%);
+      padding: 80px 0 100px;
       width: 100vw;
       margin-left: calc(-50vw + 50%);
-    }
-
-    .masonry-wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      gap: 16px;
-    }
-
-    .masonry-col {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .masonry-item {
-      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: white;
     }
 
-    .masonry-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    /* Background Micro-Decorations */
+    .testimonial-carousel-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(232, 153, 122, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
+      pointer-events: none;
     }
 
-    .masonry-item img {
+    /* Floating Decorative Elements */
+    .carousel-decorations {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .deco-star {
+      position: absolute;
+      color: rgba(212, 175, 55, 0.15);
+      font-size: 24px;
+      animation: twinkle 3s ease-in-out infinite;
+    }
+
+    .deco-star:nth-child(1) { top: 8%; left: 5%; animation-delay: 0s; font-size: 20px; }
+    .deco-star:nth-child(2) { top: 15%; right: 8%; animation-delay: 1s; font-size: 28px; }
+    .deco-star:nth-child(3) { top: 60%; left: 3%; animation-delay: 0.5s; font-size: 16px; }
+    .deco-star:nth-child(4) { top: 75%; right: 12%; animation-delay: 1.5s; font-size: 22px; }
+    .deco-star:nth-child(5) { top: 40%; left: 8%; animation-delay: 2s; font-size: 18px; }
+    .deco-star:nth-child(6) { top: 25%; right: 3%; animation-delay: 0.8s; font-size: 14px; }
+    .deco-star:nth-child(7) { bottom: 15%; left: 15%; animation-delay: 1.2s; font-size: 20px; }
+    .deco-star:nth-child(8) { bottom: 25%; right: 6%; animation-delay: 2.2s; font-size: 16px; }
+
+    .deco-dot {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: rgba(232, 153, 122, 0.2);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .deco-dot:nth-child(9) { top: 12%; left: 20%; animation-delay: 0s; }
+    .deco-dot:nth-child(10) { top: 30%; right: 25%; animation-delay: 1s; width: 8px; height: 8px; }
+    .deco-dot:nth-child(11) { top: 55%; left: 12%; animation-delay: 2s; width: 4px; height: 4px; }
+    .deco-dot:nth-child(12) { top: 80%; right: 20%; animation-delay: 3s; }
+    .deco-dot:nth-child(13) { top: 45%; right: 5%; animation-delay: 1.5s; width: 5px; height: 5px; }
+    .deco-dot:nth-child(14) { bottom: 30%; left: 6%; animation-delay: 2.5s; width: 7px; height: 7px; }
+
+    /* Sparkle lines */
+    .deco-line {
+      position: absolute;
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+      transform: rotate(-30deg);
+      animation: shimmer 4s ease-in-out infinite;
+    }
+
+    .deco-line:nth-child(15) { top: 20%; left: 25%; animation-delay: 0s; }
+    .deco-line:nth-child(16) { top: 65%; right: 15%; animation-delay: 2s; width: 40px; transform: rotate(20deg); }
+    .deco-line:nth-child(17) { bottom: 20%; left: 35%; animation-delay: 1s; width: 50px; transform: rotate(-15deg); }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      25% { transform: translateY(-10px) translateX(5px); }
+      50% { transform: translateY(-5px) translateX(-5px); }
+      75% { transform: translateY(-15px) translateX(3px); }
+    }
+
+    @keyframes shimmer {
+      0%, 100% { opacity: 0.2; transform: rotate(-30deg) scaleX(1); }
+      50% { opacity: 0.6; transform: rotate(-30deg) scaleX(1.5); }
+    }
+
+    /* Section Header */
+    .carousel-header {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .carousel-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      margin-bottom: 16px;
+    }
+
+    .carousel-eyebrow::before,
+    .carousel-eyebrow::after {
+      content: '✦';
+      font-size: 0.6rem;
+      opacity: 0.6;
+    }
+
+    .carousel-title {
+      font-family: 'OGG', Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      color: #FFFFFF;
+      margin: 0 0 16px 0;
+      line-height: 1.15;
+    }
+
+    .carousel-title .title-accent {
+      background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 50%, #D4AF37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-style: italic;
+    }
+
+    .carousel-subtitle {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .carousel-subtitle strong {
+      color: #E8997A;
+      font-weight: 600;
+    }
+
+    /* Carousel Container */
+    .carousel-track-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 20px 0;
+    }
+
+    /* Gradient Fade Edges */
+    .carousel-track-wrapper::before,
+    .carousel-track-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 120px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .carousel-track-wrapper::before {
+      left: 0;
+      background: linear-gradient(90deg, #0D4A4A 0%, transparent 100%);
+    }
+
+    .carousel-track-wrapper::after {
+      right: 0;
+      background: linear-gradient(270deg, #082E2E 0%, transparent 100%);
+    }
+
+    /* Scrolling Track */
+    .carousel-track {
+      display: flex;
+      gap: 24px;
+      animation: scroll 45s linear infinite;
+      width: max-content;
+    }
+
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Testimonial Cards */
+    .t-card {
+      flex-shrink: 0;
+      width: 340px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .t-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #D4AF37, #E8997A, #D4AF37);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .t-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(212, 175, 55, 0.2);
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(212, 175, 55, 0.1);
+    }
+
+    .t-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Card with Image */
+    .t-card--image {
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
+
+    .t-card--image img {
       width: 100%;
       height: auto;
       display: block;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 
-    @media (max-width: 600px) {
-      .masonry-wrapper {
-        flex-direction: column;
+    .t-card--image:hover {
+      background: transparent;
+      border: none;
+    }
+
+    /* Card Header */
+    .t-card__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .t-card__stars {
+      display: flex;
+      gap: 2px;
+    }
+
+    .t-card__star {
+      color: #D4AF37;
+      font-size: 14px;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    .t-card__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(232, 153, 122, 0.1));
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #D4AF37;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Card Title */
+    .t-card__title {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      margin: 0 0 12px 0;
+      line-height: 1.3;
+    }
+
+    /* Card Content */
+    .t-card__content {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Metric Highlight */
+    .t-metric {
+      display: inline;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.3), rgba(232, 153, 122, 0.2));
+      padding: 2px 8px;
+      border-radius: 4px;
+      border-left: 2px solid #D4AF37;
+    }
+
+    .t-metric--big {
+      font-size: 1.1em;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.4), rgba(232, 153, 122, 0.3));
+    }
+
+    /* Card Variants */
+    .t-card--featured {
+      background: linear-gradient(145deg, rgba(212, 175, 55, 0.08), rgba(255, 255, 255, 0.03));
+      border-color: rgba(212, 175, 55, 0.15);
+    }
+
+    .t-card--featured::after {
+      content: '✦';
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 1rem;
+      color: rgba(212, 175, 55, 0.4);
+    }
+
+    .t-card--hero {
+      width: 380px;
+      background: linear-gradient(145deg, rgba(232, 153, 122, 0.1), rgba(212, 175, 55, 0.05));
+      border-color: rgba(232, 153, 122, 0.2);
+    }
+
+    /* Second Row - Reverse Direction */
+    .carousel-track--reverse {
+      animation: scroll-reverse 50s linear infinite;
+      margin-top: 24px;
+    }
+
+    @keyframes scroll-reverse {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Bottom Stats Bar */
+    .carousel-stats {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-top: 50px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-family: 'OGG', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 400;
+      background: linear-gradient(135deg, #D4AF37 0%, #F4D03F 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .testimonial-carousel-section {
+        padding: 60px 0 80px;
+      }
+
+      .carousel-header {
+        margin-bottom: 40px;
+      }
+
+      .carousel-track-wrapper::before,
+      .carousel-track-wrapper::after {
+        width: 60px;
+      }
+
+      .t-card {
+        width: 300px;
+        padding: 24px;
+      }
+
+      .t-card--hero {
+        width: 320px;
+      }
+
+      .carousel-stats {
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .deco-star, .deco-dot, .deco-line {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .t-card {
+        width: 280px;
+        padding: 20px;
+      }
+
+      .t-card--hero {
+        width: 290px;
+      }
+
+      .carousel-stats {
+        gap: 20px;
+      }
+
+      .stat-item {
+        flex: 1;
+        min-width: 80px;
       }
     }
 
@@ -2555,30 +2965,366 @@
     </div>
   </section>
 
-    <!-- SECTION 3: TESTIMONIALS -->
-  <div class="testimonial-masonry">
-    <div class="masonry-wrapper">
-      <div class="masonry-col">
-        <div class="masonry-item">
+    <!-- SECTION 3: TESTIMONIALS - Premium Animated Carousel -->
+  <section class="testimonial-carousel-section">
+
+    <!-- Floating Decorations -->
+    <div class="carousel-decorations">
+      <span class="deco-star">✦</span>
+      <span class="deco-star">✦</span>
+      <span class="deco-star">✦</span>
+      <span class="deco-star">✦</span>
+      <span class="deco-star">✦</span>
+      <span class="deco-star">✦</span>
+      <span class="deco-star">✦</span>
+      <span class="deco-star">✦</span>
+      <span class="deco-dot"></span>
+      <span class="deco-dot"></span>
+      <span class="deco-dot"></span>
+      <span class="deco-dot"></span>
+      <span class="deco-dot"></span>
+      <span class="deco-dot"></span>
+      <span class="deco-line"></span>
+      <span class="deco-line"></span>
+      <span class="deco-line"></span>
+    </div>
+
+    <!-- Section Header -->
+    <div class="carousel-header">
+      <p class="carousel-eyebrow">Real Results From Real Sellers</p>
+      <h2 class="carousel-title">Success Stories That <span class="title-accent">Inspire</span></h2>
+      <p class="carousel-subtitle">Join <strong>thousands of sellers</strong> transforming their Etsy shops</p>
+    </div>
+
+    <!-- First Carousel Row - Scrolls Left -->
+    <div class="carousel-track-wrapper">
+      <div class="carousel-track">
+        <!-- Card Set 1 -->
+        <div class="t-card t-card--hero">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+            <span class="t-card__badge">Top Seller</span>
+          </div>
+          <h3 class="t-card__title">OMG - My October Results</h3>
+          <p class="t-card__content">Just checked my numbers and ended the month with <span class="t-metric t-metric--big">1,760 sales</span> - just in October alone! Before joining on 7/3/24, I only had 166 sales over six months. Learning from Bailey, soaking up the tips... my shop is doing so well!</p>
+        </div>
+
+        <div class="t-card t-card--image">
           <img src="https://i.imgur.com/YcO5jYM.png" alt="Going all in - 8000 sales">
         </div>
-        <div class="masonry-item">
-          <img src="https://i.imgur.com/GHXVqbr.png" alt="Great day">
+
+        <div class="t-card t-card--featured">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">Hit 4000 Sales!</h3>
+          <p class="t-card__content">Super excited to share I hit my <span class="t-metric t-metric--big">4000th sale</span> today! Some days I wanted to quit bc working full time then coming home to work on designs was exhausting but I'm seeing my hard work rewarded!</p>
         </div>
-        <div class="masonry-item">
-          <img src="https://i.imgur.com/T3CiReh.png" alt="100 Sales">
+
+        <div class="t-card">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">100 Sales in 2 Weeks!</h3>
+          <p class="t-card__content">In just the last two weeks, I've gotten another <span class="t-metric">100+ sales</span> - now at 203 total since joining. Bailey's prompts truly work!</p>
         </div>
-      </div>
-      <div class="masonry-col">
-        <div class="masonry-item">
+
+        <div class="t-card t-card--image">
           <img src="https://i.imgur.com/NfMKFk5.png" alt="1000 sales">
         </div>
-        <div class="masonry-item">
-          <img src="https://i.imgur.com/hnKzPUy.png" alt="34 items ordered">
+
+        <div class="t-card t-card--featured">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+            <span class="t-card__badge">Autopilot</span>
+          </div>
+          <h3 class="t-card__title">600+ Sales On Autopilot!</h3>
+          <p class="t-card__content">Haven't touched my store in months, yet now passed <span class="t-metric t-metric--big">600 sales</span> on autopilot! If you want to learn how - get Bailey! It simply works!!</p>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">$100 Day!</h3>
+          <p class="t-card__content">Just hit my first <span class="t-metric t-metric--big">$100 day</span> in my shop! Excited to think of how much more this could grow as we get closer to Christmas!</p>
+        </div>
+
+        <!-- Duplicate for seamless loop -->
+        <div class="t-card t-card--hero">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+            <span class="t-card__badge">Top Seller</span>
+          </div>
+          <h3 class="t-card__title">OMG - My October Results</h3>
+          <p class="t-card__content">Just checked my numbers and ended the month with <span class="t-metric t-metric--big">1,760 sales</span> - just in October alone! Before joining on 7/3/24, I only had 166 sales over six months. Learning from Bailey, soaking up the tips... my shop is doing so well!</p>
+        </div>
+
+        <div class="t-card t-card--image">
+          <img src="https://i.imgur.com/YcO5jYM.png" alt="Going all in - 8000 sales">
+        </div>
+
+        <div class="t-card t-card--featured">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">Hit 4000 Sales!</h3>
+          <p class="t-card__content">Super excited to share I hit my <span class="t-metric t-metric--big">4000th sale</span> today! Some days I wanted to quit bc working full time then coming home to work on designs was exhausting but I'm seeing my hard work rewarded!</p>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">100 Sales in 2 Weeks!</h3>
+          <p class="t-card__content">In just the last two weeks, I've gotten another <span class="t-metric">100+ sales</span> - now at 203 total since joining. Bailey's prompts truly work!</p>
+        </div>
+
+        <div class="t-card t-card--image">
+          <img src="https://i.imgur.com/NfMKFk5.png" alt="1000 sales">
+        </div>
+
+        <div class="t-card t-card--featured">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+            <span class="t-card__badge">Autopilot</span>
+          </div>
+          <h3 class="t-card__title">600+ Sales On Autopilot!</h3>
+          <p class="t-card__content">Haven't touched my store in months, yet now passed <span class="t-metric t-metric--big">600 sales</span> on autopilot! If you want to learn how - get Bailey! It simply works!!</p>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">$100 Day!</h3>
+          <p class="t-card__content">Just hit my first <span class="t-metric t-metric--big">$100 day</span> in my shop! Excited to think of how much more this could grow as we get closer to Christmas!</p>
         </div>
       </div>
     </div>
-  </div>
+
+    <!-- Second Carousel Row - Scrolls Right (Reverse) -->
+    <div class="carousel-track-wrapper">
+      <div class="carousel-track carousel-track--reverse">
+        <!-- Card Set 2 -->
+        <div class="t-card t-card--image">
+          <img src="https://i.imgur.com/GHXVqbr.png" alt="Great day - Star Seller">
+        </div>
+
+        <div class="t-card t-card--featured">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+            <span class="t-card__badge">Star Seller</span>
+          </div>
+          <h3 class="t-card__title">Great Day!</h3>
+          <p class="t-card__content">Had a couple sales before I woke up, hit a new high # of sales/day, Sept doubled August's sales, and I got a <span class="t-metric">Star Seller Badge</span> for October! First time!</p>
+        </div>
+
+        <div class="t-card t-card--image">
+          <img src="https://i.imgur.com/hnKzPUy.png" alt="34 items ordered">
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">I Was Shocked!</h3>
+          <p class="t-card__content">I just heard a cha-ching, so I glanced real quick to see what was ordered. <span class="t-metric t-metric--big">34 items!</span> What? Yes...34! A good chunk were designs from this club, so THANK YOU!</p>
+        </div>
+
+        <div class="t-card t-card--image">
+          <img src="https://i.imgur.com/T3CiReh.png" alt="100 Sales milestone">
+        </div>
+
+        <div class="t-card t-card--featured">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">500 Sales - Unbelievable!</h3>
+          <p class="t-card__content">Just hit <span class="t-metric t-metric--big">500 sales</span>! Haven't touched my shop in over a month and opened less than <span class="t-metric">4 months</span> ago. Sales on complete autopilot!</p>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">First Sale in 4 Days!</h3>
+          <p class="t-card__content">Just opened my shop late Saturday night, and got my <span class="t-metric">first sale</span>! I only have 12 designs up!! And no shop banner yet. This is amazing!!</p>
+        </div>
+
+        <!-- Duplicate for seamless loop -->
+        <div class="t-card t-card--image">
+          <img src="https://i.imgur.com/GHXVqbr.png" alt="Great day - Star Seller">
+        </div>
+
+        <div class="t-card t-card--featured">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+            <span class="t-card__badge">Star Seller</span>
+          </div>
+          <h3 class="t-card__title">Great Day!</h3>
+          <p class="t-card__content">Had a couple sales before I woke up, hit a new high # of sales/day, Sept doubled August's sales, and I got a <span class="t-metric">Star Seller Badge</span> for October! First time!</p>
+        </div>
+
+        <div class="t-card t-card--image">
+          <img src="https://i.imgur.com/hnKzPUy.png" alt="34 items ordered">
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">I Was Shocked!</h3>
+          <p class="t-card__content">I just heard a cha-ching, so I glanced real quick to see what was ordered. <span class="t-metric t-metric--big">34 items!</span> What? Yes...34! A good chunk were designs from this club, so THANK YOU!</p>
+        </div>
+
+        <div class="t-card t-card--image">
+          <img src="https://i.imgur.com/T3CiReh.png" alt="100 Sales milestone">
+        </div>
+
+        <div class="t-card t-card--featured">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">500 Sales - Unbelievable!</h3>
+          <p class="t-card__content">Just hit <span class="t-metric t-metric--big">500 sales</span>! Haven't touched my shop in over a month and opened less than <span class="t-metric">4 months</span> ago. Sales on complete autopilot!</p>
+        </div>
+
+        <div class="t-card">
+          <div class="t-card__header">
+            <div class="t-card__stars">
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+              <span class="t-card__star">★</span>
+            </div>
+          </div>
+          <h3 class="t-card__title">First Sale in 4 Days!</h3>
+          <p class="t-card__content">Just opened my shop late Saturday night, and got my <span class="t-metric">first sale</span>! I only have 12 designs up!! And no shop banner yet. This is amazing!!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="carousel-stats">
+      <div class="stat-item">
+        <div class="stat-value">40+</div>
+        <div class="stat-label">Success Stories</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">8,000+</div>
+        <div class="stat-label">Combined Sales</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">98%</div>
+        <div class="stat-label">Satisfaction</div>
+      </div>
+    </div>
+
+  </section>
 
 </body>
 </html>
