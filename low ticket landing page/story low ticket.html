@@ -728,52 +728,60 @@
       }
 
       .polaroid-stack {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-        padding: 20px;
-        position: relative;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 32px !important;
+        padding: 20px !important;
+        position: relative !important;
       }
 
-      .polaroid {
-        position: relative;
+      .polaroid-stack .polaroid {
+        position: relative !important;
         top: auto !important;
         left: auto !important;
         right: auto !important;
         bottom: auto !important;
-        width: 220px;
-        transform: rotate(0deg) !important;
+        width: 220px !important;
+        margin: 0 auto !important;
       }
 
-      .polaroid:nth-child(odd) {
+      .polaroid-stack .polaroid.polaroid-1 {
         transform: rotate(-2deg) !important;
       }
 
-      .polaroid:nth-child(even) {
+      .polaroid-stack .polaroid.polaroid-2 {
+        transform: rotate(2deg) !important;
+      }
+
+      .polaroid-stack .polaroid.polaroid-3 {
+        transform: rotate(-3deg) !important;
+      }
+
+      .polaroid-stack .polaroid.polaroid-4 {
         transform: rotate(2deg) !important;
       }
 
       /* Reposition blobs for mobile */
-      .blob-sticker {
-        width: 60px;
-        height: 60px;
-        opacity: 0.5;
+      .polaroid-stack .blob-sticker {
+        width: 60px !important;
+        height: 60px !important;
+        opacity: 0.5 !important;
       }
 
-      .blob-sticker.coral {
+      .polaroid-stack .blob-sticker.coral {
         top: 50px !important;
         left: -20px !important;
       }
 
-      .blob-sticker.teal {
+      .polaroid-stack .blob-sticker.teal {
         top: auto !important;
         bottom: 150px !important;
         right: -20px !important;
       }
 
-      .blob-sticker.gold {
-        display: none;
+      .polaroid-stack .blob-sticker.gold {
+        display: none !important;
       }
     }
 
@@ -800,8 +808,8 @@
         height: 250px;
       }
 
-      .polaroid {
-        width: 200px;
+      .polaroid-stack .polaroid {
+        width: 200px !important;
       }
 
       .polaroid-caption {
@@ -835,15 +843,15 @@
         font-size: 1.8rem !important;
       }
 
-      .blob-sticker {
-        width: 50px;
-        height: 50px;
+      .polaroid-stack .blob-sticker {
+        width: 50px !important;
+        height: 50px !important;
       }
     }
 
     @media (max-width: 400px) {
-      .polaroid {
-        width: 180px;
+      .polaroid-stack .polaroid {
+        width: 180px !important;
       }
 
       .story-hero h1 {
