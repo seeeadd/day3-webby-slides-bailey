@@ -1015,23 +1015,6 @@
       outline: 1px solid rgba(0, 0, 0, 0.03);
     }
 
-    /* Glow behind card */
-    .cta-glow {
-      position: absolute;
-      top: -60px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 400px;
-      height: 200px;
-      background: radial-gradient(ellipse at center,
-        rgba(120, 180, 180, 0.25) 0%,
-        rgba(224, 122, 95, 0.20) 50%,
-        transparent 70%
-      );
-      filter: blur(40px);
-      pointer-events: none;
-    }
-
     /* Pricing Layout */
     .cta-pricing {
       display: grid;
@@ -1078,9 +1061,11 @@
       font-size: 72px;
       font-weight: 700;
       line-height: 1;
-      color: #1F1D1A;
+      background: linear-gradient(135deg, #2D2A26 0%, #6B5D3E 40%, #8B7355 60%, #2D2A26 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       position: relative;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     }
     
     .price-value::after {
@@ -1978,7 +1963,6 @@
   <!-- CTA SECTION -->
   <div class="cta-section">
     <div class="cta-card">
-      <div class="cta-glow"></div>
       <div class="cta-content">
         <!-- Pricing Area -->
         <div class="cta-pricing">
@@ -2015,6 +1999,12 @@
             <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
+        
+        <!-- CTA Card Image -->
+        <div class="cta-card-image">
+          <img src="https://i.imgur.com/AFTdKOi.png" alt="Join Now" loading="lazy" />
+          <span class="halo-stars">✦ ✦ ✦</span>
+        </div>
 
         <!-- Trust Badges -->
         <div class="trust-badges">
@@ -2039,12 +2029,6 @@
             </svg>
             <span>Cancel anytime</span>
           </div>
-        </div>
-        
-        <!-- CTA Card Image -->
-        <div class="cta-card-image">
-          <img src="https://i.imgur.com/AFTdKOi.png" alt="Join Now" loading="lazy" />
-          <span class="halo-stars">✦ ✦ ✦</span>
         </div>
       </div>
     </div>
