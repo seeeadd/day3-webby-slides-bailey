@@ -85,7 +85,7 @@
       width: 600px;
       height: 600px;
       background: radial-gradient(ellipse at center,
-        rgba(29, 107, 107, 0.15) 0%,
+        rgba(72, 145, 145, 0.15) 0%,
         transparent 60%
       );
       pointer-events: none;
@@ -622,7 +622,7 @@
     }
 
     .card-features-paths .feature-item:nth-child(3) .feature-number {
-      background: linear-gradient(135deg, rgba(29, 107, 107, 0.35) 0%, rgba(29, 107, 107, 0.25) 100%);
+      background: linear-gradient(135deg, rgba(72, 145, 145, 0.35) 0%, rgba(72, 145, 145, 0.25) 100%);
       color: #1D6B6B;
     }
 
@@ -632,8 +632,8 @@
     .use-it-when {
       padding: 16px 20px;
       background: linear-gradient(135deg,
-        rgba(29, 107, 107, 0.15) 0%,
-        rgba(29, 107, 107, 0.01) 100%
+        rgba(72, 145, 145, 0.15) 0%,
+        rgba(72, 145, 145, 0.01) 100%
       );
       border-left: 2px solid #1D6B6B;
       border-radius: 0 6px 6px 0;
@@ -764,10 +764,10 @@
     .mockup-annotation-box {
       padding: 12px 16px;
       background: linear-gradient(135deg,
-        rgba(29, 107, 107, 0.35) 0%,
-        rgba(29, 107, 107, 0.02) 100%
+        rgba(72, 145, 145, 0.35) 0%,
+        rgba(72, 145, 145, 0.02) 100%
       );
-      border: 1px solid rgba(29, 107, 107, 0.35);
+      border: 1px solid rgba(72, 145, 145, 0.35);
       border-radius: 6px;
       font-family: 'Satoshi', sans-serif;
       font-size: 13px;
@@ -825,7 +825,7 @@
         rgba(212, 168, 83, 0.35) 30deg,
         transparent 60deg,
         transparent 120deg,
-        rgba(29, 107, 107, 0.35) 150deg,
+        rgba(72, 145, 145, 0.35) 150deg,
         transparent 180deg,
         transparent 240deg,
         rgba(224, 122, 95, 0.15) 270deg,
@@ -879,8 +879,8 @@
       transform: translate(-50%, -50%);
       background: radial-gradient(
         ellipse at center,
-        rgba(29, 107, 107, 0.40) 0%,
-        rgba(29, 107, 107, 0.25) 35%,
+        rgba(72, 145, 145, 0.40) 0%,
+        rgba(72, 145, 145, 0.25) 35%,
         rgba(212, 168, 83, 0.15) 60%,
         transparent 75%
       );
@@ -902,13 +902,13 @@
       background: conic-gradient(
         from 0deg at 50% 50%,
         transparent 0deg,
-        rgba(29, 107, 107, 0.35) 40deg,
+        rgba(72, 145, 145, 0.35) 40deg,
         transparent 80deg,
         transparent 160deg,
         rgba(212, 168, 83, 0.20) 200deg,
         transparent 240deg,
         transparent 320deg,
-        rgba(29, 107, 107, 0.15) 350deg,
+        rgba(72, 145, 145, 0.15) 350deg,
         transparent 360deg
       );
       border-radius: 50%;
@@ -933,7 +933,7 @@
       transform: translateX(-50%);
       font-size: 8px;
       letter-spacing: 12px;
-      color: rgba(29, 107, 107, 0.45);
+      color: rgba(72, 145, 145, 0.45);
       animation: starPulse 4s ease-in-out infinite;
       z-index: 3;
     }
@@ -1024,7 +1024,7 @@
       width: 400px;
       height: 200px;
       background: radial-gradient(ellipse at center,
-        rgba(29, 107, 107, 0.25) 0%,
+        rgba(72, 145, 145, 0.25) 0%,
         rgba(224, 122, 95, 0.20) 50%,
         transparent 70%
       );
@@ -1066,19 +1066,39 @@
 
     .price-currency {
       font-family: 'OGG', Georgia, serif;
-      font-size: 28px;
-      font-weight: 500;
-      color: #1F1D1A;
+      font-size: 32px;
+      font-weight: 600;
+      color: #D4A853;
       align-self: flex-start;
-      margin-top: 8px;
+      margin-top: 12px;
+      text-shadow: 0 1px 8px rgba(212, 168, 83, 0.25);
     }
 
     .price-value {
       font-family: 'OGG', Georgia, serif;
-      font-size: 64px;
-      font-weight: 500;
+      font-size: 72px;
+      font-weight: 700;
       line-height: 1;
-      color: #1F1D1A;
+      color: transparent;
+      background: linear-gradient(
+        135deg,
+        #D4A853 0%,
+        #E8C876 25%,
+        #D4A853 50%,
+        #B8963F 75%,
+        #D4A853 100%
+      );
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: shimmerPrice 3s ease-in-out infinite;
+      text-shadow: 0 2px 20px rgba(212, 168, 83, 0.3);
+      position: relative;
+    }
+    
+    @keyframes shimmerPrice {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
 
     .price-period {
@@ -1117,10 +1137,21 @@
 
     .breakdown-equivalent {
       font-family: 'OGG', Georgia, serif;
-      font-size: 22px;
-      font-weight: 500;
+      font-size: 24px;
+      font-weight: 600;
       color: #1F1D1A;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      position: relative;
+    }
+    
+    .breakdown-equivalent::after {
+      content: '·';
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(212, 168, 83, 0.5);
+      font-size: 18px;
     }
 
     .breakdown-daily {
@@ -1132,17 +1163,37 @@
 
     .breakdown-savings {
       display: inline-flex;
-      padding: 8px 16px;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
       background: linear-gradient(135deg,
-        rgba(29, 107, 107, 0.1) 0%,
-        rgba(29, 107, 107, 0.25) 100%
+        rgba(72, 145, 145, 0.15) 0%,
+        rgba(72, 145, 145, 0.08) 100%
       );
-      border: 1px solid rgba(29, 107, 107, 0.2);
-      border-radius: 100px;
+      border: 1px solid rgba(72, 145, 145, 0.25);
+      border-radius: 8px;
       font-family: 'Satoshi', sans-serif;
       font-size: 13px;
-      font-weight: 600;
-      color: #1D6B6B;
+      font-weight: 700;
+      color: #489191;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .breakdown-savings::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      animation: savingsShimmer 3s ease-in-out infinite;
+    }
+    
+    @keyframes savingsShimmer {
+      0%, 100% { left: -100%; }
+      50% { left: 100%; }
     }
 
     /* CTA Button */
@@ -1260,6 +1311,57 @@
       font-size: 13px;
       font-weight: 500;
       color: #5A544C;
+    }
+
+    /* CTA Card Image */
+    .cta-card-image {
+      position: relative;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .cta-card-image::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      height: 85%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(
+        ellipse at center,
+        rgba(212, 168, 83, 0.45) 0%,
+        rgba(212, 168, 83, 0.25) 35%,
+        rgba(224, 122, 95, 0.15) 60%,
+        transparent 75%
+      );
+      border-radius: 50%;
+      filter: blur(20px);
+      animation: haloGlow 4s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .cta-card-image img {
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .cta-card-image .halo-stars {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      color: rgba(212, 168, 83, 0.6);
+      letter-spacing: 8px;
+      animation: starPulse 3s ease-in-out infinite;
+      z-index: 2;
     }
 
     /* ==========================================
@@ -1555,7 +1657,7 @@
       </div>
       <div class="card-mockup-zone">
         <div class="card-image">
-          <img src="https://i.imgur.com/sWhuWOu.png" alt="Pinterest Profit Formula" loading="lazy" />
+          <img src="https://i.imgur.com/BPypfbQ.png" alt="Pinterest Profit Formula" loading="lazy" />
           <span class="halo-stars">✦ ✦ ✦</span>
         </div>
         <div class="mockup-annotation-box">"Free traffic, every week, on autopilot"</div>
@@ -1916,7 +2018,7 @@
 
         <!-- CTA Button -->
         <a href="#checkout" class="cta-button">
-          <span>Get instant access now</span>
+          <span>GET INSTANT ACCESS NOW</span>
           <svg class="cta-arrow" width="20" height="20" viewBox="0 0 20 20">
             <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -1945,6 +2047,12 @@
             </svg>
             <span>Cancel anytime</span>
           </div>
+        </div>
+        
+        <!-- CTA Card Image -->
+        <div class="cta-card-image">
+          <img src="https://i.imgur.com/AFTdKOi.png" alt="Join Now" loading="lazy" />
+          <span class="halo-stars">✦ ✦ ✦</span>
         </div>
       </div>
     </div>
