@@ -197,21 +197,39 @@
   --faq-font-sans: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-/* Base reset for standalone viewing */
+/* Base reset for standalone viewing - no scrollbars, no gaps */
 html, body {
   margin: 0;
   padding: 0;
   background: var(--faq-bg);
-  overflow-x: hidden;
+  overflow: hidden;
+  height: auto;
+  border: none !important;
+  outline: none !important;
+  border-bottom: none !important;
+}
+
+/* Hide all scrollbars */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.faq-section::-webkit-scrollbar {
+  display: none;
+}
+
+html, body, .faq-section {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Section container */
 .faq-section {
   position: relative;
-  padding: 80px 24px 100px;
+  padding: 80px 24px 80px;
   background: var(--faq-bg);
-  min-height: 100vh;
   box-sizing: border-box;
+  overflow: hidden;
+  border: none;
+  outline: none;
 }
 
 /* Subtle background texture */
@@ -567,7 +585,7 @@ html, body {
 /* Mobile adjustments */
 @media (max-width: 600px) {
   .faq-section {
-    padding: 48px 16px 64px;
+    padding: 48px 16px 48px;
   }
 
   .faq-badge {
