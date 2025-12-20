@@ -951,17 +951,42 @@
       transform: rotate(-45deg) translateY(-1px);
     }
 
-    /* Plus Line */
+    /* Plus Section - Bonus Products */
     .offer-card__plus {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--accent-coral);
       text-align: center;
-      margin-bottom: 16px;
-      padding: 12px 16px;
-      background: rgba(224, 122, 95, 0.1);
-      border-radius: 10px;
-      border: 1px dashed rgba(224, 122, 95, 0.4);
+      margin-bottom: 20px;
+      padding: 20px 24px;
+      background: linear-gradient(135deg, rgba(224, 122, 95, 0.08) 0%, rgba(212, 175, 55, 0.08) 100%);
+      border-radius: 16px;
+      border: 2px solid rgba(224, 122, 95, 0.2);
+    }
+
+    .offer-card__plus-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent-coral);
+      margin-bottom: 12px;
+    }
+
+    .offer-card__plus-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 16px;
+    }
+
+    .offer-card__plus-item {
+      font-family: 'OGG', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      background: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
@@ -1491,7 +1516,15 @@
               </li>
             </ul>
 
-            <p class="offer-card__plus">+ Plus the PLR vault, the build with me shop, the full tools library, and more.</p>
+            <div class="offer-card__plus">
+              <span class="offer-card__plus-label">+ Plus You Also Get</span>
+              <div class="offer-card__plus-items">
+                <span class="offer-card__plus-item">PLR Vault</span>
+                <span class="offer-card__plus-item">Build With Me Shop</span>
+                <span class="offer-card__plus-item">Full Tools Library</span>
+                <span class="offer-card__plus-item">& More</span>
+              </div>
+            </div>
 
             <a href="#" class="cta-button" id="heroCta">
               Get Instant Access Now
