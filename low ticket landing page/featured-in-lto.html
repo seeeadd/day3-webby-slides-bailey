@@ -76,6 +76,15 @@
       padding: 2.25rem 3rem;
       border: 1px solid rgba(0, 0, 0, 0.03);
       overflow: hidden;
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    .featured-card:hover {
+      border-color: rgba(212, 168, 83, 0.25);
+      box-shadow:
+        0 0 0 1px rgba(212, 168, 83, 0.15),
+        0 4px 20px rgba(212, 168, 83, 0.12),
+        0 8px 40px rgba(29, 107, 107, 0.08);
     }
 
     /* Shimmer effect */
