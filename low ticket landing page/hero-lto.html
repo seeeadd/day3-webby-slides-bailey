@@ -1135,6 +1135,22 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
+       VIDEO COLUMN
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .video-column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .vsl-banner__image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
        ANIMATIONS
        ═══════════════════════════════════════════════════════════════════════════ */
     .animate-fade-up {
@@ -1310,16 +1326,20 @@
         <!-- Two Column -->
         <div class="two-column animate-fade-up delay-4">
 
-          <!-- Video -->
-          <div class="video-wrapper">
-            <iframe
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/1142453443?h=5b44b04547"
-              frameborder="0"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              allowfullscreen>
-            </iframe>
+          <!-- Video Column -->
+          <div class="video-column">
+            <div class="video-wrapper">
+              <iframe
+                title="vimeo-player"
+                src="https://player.vimeo.com/video/1142453443?h=5b44b04547"
+                frameborder="0"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <!-- VSL Banner Image -->
+            <img src="https://i.imgur.com/Oq2F4wW.png" alt="AI Design & Grow Experience" class="vsl-banner__image">
           </div>
 
           <!-- Offer Card - The Centerpiece -->
@@ -1386,6 +1406,7 @@
         </div>
 
       </div>
+
     </div>
   </section>
 
