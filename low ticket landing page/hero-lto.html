@@ -650,6 +650,8 @@
       flex: 1;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .price-col--left {
@@ -796,15 +798,15 @@
 
     /* Plus Line */
     .offer-card__plus {
-      font-size: 13px;
-      font-style: italic;
-      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-coral);
       text-align: center;
-      margin-bottom: 12px;
-      padding: 10px 14px;
-      background: linear-gradient(135deg, rgba(250, 248, 245, 0.8) 0%, rgba(250, 248, 245, 0.4) 100%);
+      margin-bottom: 16px;
+      padding: 12px 16px;
+      background: rgba(224, 122, 95, 0.1);
       border-radius: 10px;
-      border: 1px solid rgba(232, 226, 217, 0.4);
+      border: 1px dashed rgba(224, 122, 95, 0.4);
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
@@ -1185,27 +1187,20 @@
               </li>
             </ul>
 
-            <p class="offer-card__plus">Plus the PLR vault, the build with me shop, the full tools library, and more.</p>
+            <p class="offer-card__plus">+ Plus the PLR vault, the build with me shop, the full tools library, and more.</p>
 
             <a href="#" class="cta-button" id="heroCta">
-              Start Selling Now
+              Get Instant Access Now
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
 
+            <img src="https://i.imgur.com/AFTdKOi.png" alt="Payment methods" class="offer-card__cards" style="display: block; max-width: 200px; margin: 12px auto 0; opacity: 0.8;">
+
             <div class="offer-card__microcopy">
               <p class="microcopy-line">$324/year · Instant access · Cancel anytime</p>
-              <p class="microcopy-urgency">Price goes up as we add more.</p>
-            </div>
-
-            <div class="offer-card__link">
-              <a href="#">
-                See everything included
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
+              <p class="microcopy-urgency">Price goes up very soon, before January.</p>
             </div>
           </div>
         </div>
