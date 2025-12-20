@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Featured In - AI Design & Grow Experience</title>
+  <style>
+    /* ═══════════════════════════════════════════════════════════════════════════
+       FONTS - Google Fonts fallback (for standalone preview)
+       ═══════════════════════════════════════════════════════════════════════════ */
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap');
+
+    /* Font family definitions */
+    :root {
+      --font-headline: 'OGG', 'DM Serif Display', Georgia, serif;
+      --font-body: 'Satoshi', 'Inter', -apple-system, sans-serif;
+
+      /* Design System Colors */
+      --cream: #FAF9F7;
+      --coral: #E07A5F;
+      --teal: #1D6B6B;
+      --gold: #D4A853;
+      --dark: #1F1D1A;
+      --muted: #5A544C;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       BASE RESET
+       ═══════════════════════════════════════════════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       FEATURED IN SECTION - Premium Editorial Social Proof Bar
+       ═══════════════════════════════════════════════════════════════════════════ */
+
+    .featured-section {
+      position: relative;
+      padding: 4rem 2rem 5rem;
+      background: linear-gradient(180deg, var(--cream) 0%, #F5F4F2 50%, var(--cream) 100%);
+      overflow: hidden;
+    }
+
+    .featured-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+      opacity: 0.5;
+    }
+
+    .featured-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Header with sparkles */
+    .featured-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .featured-sparkle {
+      color: var(--gold);
+      font-size: 0.75rem;
+      animation: sparkle-pulse 2s ease-in-out infinite;
+    }
+
+    .featured-sparkle:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .featured-sparkle:nth-child(3) {
+      animation-delay: 1s;
+    }
+
+    @keyframes sparkle-pulse {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    .featured-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Glassmorphism Card */
+    .featured-card {
+      position: relative;
+      background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.7) 50%,
+        rgba(255, 255, 255, 0.85) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 2.5rem 3rem;
+      border: 1px solid rgba(212, 168, 83, 0.15);
+      box-shadow:
+        0 4px 24px rgba(31, 29, 26, 0.04),
+        0 1px 3px rgba(31, 29, 26, 0.02),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      overflow: hidden;
+    }
+
+    /* Ambient glow behind card */
+    .featured-card::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 120%;
+      background: radial-gradient(ellipse, rgba(29, 107, 107, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Shimmer effect */
+    .featured-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(212, 168, 83, 0.08) 45%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(212, 168, 83, 0.08) 55%,
+        transparent 100%
+      );
+      animation: shimmer 6s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      50%, 100% { left: 100%; }
+    }
+
+    /* Border glow animation */
+    .featured-card-glow {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      bottom: -1px;
+      border-radius: 21px;
+      background: linear-gradient(135deg,
+        rgba(212, 168, 83, 0.3) 0%,
+        rgba(29, 107, 107, 0.2) 50%,
+        rgba(212, 168, 83, 0.3) 100%);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.5s ease;
+      filter: blur(8px);
+    }
+
+    .featured-card:hover .featured-card-glow {
+      opacity: 1;
+    }
+
+    /* Logo Grid */
+    .featured-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .featured-logo {
+      position: relative;
+      height: 32px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      filter: grayscale(100%) opacity(0.65);
+    }
+
+    .featured-logo:hover {
+      filter: grayscale(0%) opacity(1);
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    .featured-logo img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Floating sparkle decorations */
+    .featured-deco {
+      position: absolute;
+      color: var(--gold);
+      font-size: 0.5rem;
+      opacity: 0.4;
+      pointer-events: none;
+      animation: float-sparkle 4s ease-in-out infinite;
+    }
+
+    .featured-deco--1 {
+      top: 15%;
+      left: 5%;
+      animation-delay: 0s;
+    }
+
+    .featured-deco--2 {
+      top: 20%;
+      right: 8%;
+      animation-delay: 1.5s;
+    }
+
+    .featured-deco--3 {
+      bottom: 25%;
+      left: 10%;
+      animation-delay: 3s;
+    }
+
+    .featured-deco--4 {
+      bottom: 20%;
+      right: 5%;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes float-sparkle {
+      0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.4; }
+      50% { transform: translateY(-8px) rotate(180deg); opacity: 0.8; }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       REDUCED MOTION - Accessibility
+       ═══════════════════════════════════════════════════════════════════════════ */
+    @media (prefers-reduced-motion: reduce) {
+      .featured-card::after,
+      .featured-sparkle,
+      .featured-deco,
+      .featured-logo {
+        animation: none;
+        transition: none;
+      }
+
+      .featured-logo {
+        filter: grayscale(0%) opacity(0.8);
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       RESPONSIVE - Mobile Adjustments
+       ═══════════════════════════════════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .featured-section {
+        padding: 3rem 1.5rem 4rem;
+      }
+
+      .featured-card {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+      }
+
+      .featured-logos {
+        gap: 1.5rem 2rem;
+      }
+
+      .featured-logo {
+        height: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .featured-logos {
+        gap: 1.25rem 1.5rem;
+      }
+
+      .featured-logo {
+        height: 20px;
+      }
+
+      .featured-header {
+        gap: 0.75rem;
+      }
+
+      .featured-label {
+        font-size: 0.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       FEATURED IN SECTION - Editorial Social Proof
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <section class="featured-section">
+    <!-- Floating decorative sparkles -->
+    <span class="featured-deco featured-deco--1">✦</span>
+    <span class="featured-deco featured-deco--2">✦</span>
+    <span class="featured-deco featured-deco--3">✦</span>
+    <span class="featured-deco featured-deco--4">✦</span>
+
+    <div class="featured-inner">
+      <!-- Header with flanking sparkles -->
+      <div class="featured-header">
+        <span class="featured-sparkle">✦</span>
+        <span class="featured-label">As Seen In</span>
+        <span class="featured-sparkle">✦</span>
+      </div>
+
+      <!-- Glassmorphism Logo Card -->
+      <div class="featured-card">
+        <!-- Ambient glow layer -->
+        <div class="featured-card-glow"></div>
+
+        <!-- Logo Row -->
+        <div class="featured-logos">
+          <a href="#" class="featured-logo" aria-label="INSIDER">
+            <img src="https://i.imgur.com/wnBCDnO.png" alt="INSIDER" loading="lazy" />
+          </a>
+          <a href="#" class="featured-logo" aria-label="UpFlip">
+            <img src="https://i.imgur.com/pWAzIGN.png" alt="UpFlip" loading="lazy" />
+          </a>
+          <a href="#" class="featured-logo" aria-label="Sell Your Stuff">
+            <img src="https://i.imgur.com/bcTuezZ.png" alt="Sell Your Stuff" loading="lazy" />
+          </a>
+          <a href="#" class="featured-logo" aria-label="Kittl">
+            <img src="https://i.imgur.com/tJAzwFE.png" alt="Kittl" loading="lazy" />
+          </a>
+          <a href="#" class="featured-logo" aria-label="EverBee">
+            <img src="https://i.imgur.com/5ppDgBG.png" alt="EverBee" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
