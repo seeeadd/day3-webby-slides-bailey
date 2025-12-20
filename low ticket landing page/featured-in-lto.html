@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Featured In</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+    }
+
+    body {
+      font-family: 'Satoshi', 'Inter', sans-serif;
+      background: #FAF9F7;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       FEATURED IN - Compact Section, Large Content
+       ═══════════════════════════════════════════════════════════════════════════ */
+
+    .featured-section {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      padding: 2.5rem 1.5rem;
+      background: #FAF9F7;
+    }
+
+    .featured-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .featured-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .featured-sparkle {
+      color: #D4A853;
+      font-size: 0.65rem;
+    }
+
+    .featured-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #8A8480;
+    }
+
+    .featured-card {
+      background: rgba(255, 255, 255, 0.65);
+      border-radius: 16px;
+      padding: 2.25rem 3rem;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .featured-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3.5rem;
+    }
+
+    .featured-logo {
+      height: 44px;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    .featured-logo:hover {
+      opacity: 0.9;
+    }
+
+    .featured-logo img {
+      height: 100%;
+      width: auto;
+      display: block;
+      filter: grayscale(100%);
+    }
+
+    .featured-logo:hover img {
+      filter: grayscale(0%);
+    }
+
+    @media (max-width: 768px) {
+      .featured-section {
+        padding: 2rem 1rem;
+      }
+      .featured-card {
+        padding: 1.75rem 1.5rem;
+      }
+      .featured-logos {
+        gap: 2.5rem;
+      }
+      .featured-logo {
+        height: 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .featured-logos {
+        gap: 1.75rem;
+      }
+      .featured-logo {
+        height: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="featured-section">
+    <div class="featured-inner">
+      <div class="featured-header">
+        <span class="featured-sparkle">✦</span>
+        <span class="featured-label">As Seen In</span>
+        <span class="featured-sparkle">✦</span>
+      </div>
+
+      <div class="featured-card">
+        <div class="featured-logos">
+          <a href="#" class="featured-logo"><img src="https://i.imgur.com/bcTuezZ.png" alt="Sell Your Stuff" /></a>
+          <a href="#" class="featured-logo"><img src="https://i.imgur.com/pWAzIGN.png" alt="UpFlip" /></a>
+          <a href="#" class="featured-logo"><img src="https://i.imgur.com/tJAzwFE.png" alt="Kittl" /></a>
+          <a href="#" class="featured-logo"><img src="https://i.imgur.com/wnBCDnO.png" alt="INSIDER" /></a>
+          <a href="#" class="featured-logo"><img src="https://i.imgur.com/5ppDgBG.png" alt="EverBee" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
