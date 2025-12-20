@@ -60,7 +60,7 @@
 
     body {
       font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 500;
+      font-weight: 440;
       color: var(--text-body);
       line-height: 1.7;
       background: linear-gradient(180deg, #FAF8F5 0%, #F7F3EE 50%, #FAF8F5 100%);
@@ -291,7 +291,7 @@
       margin: 32px 0;
       line-height: 1.2;
       letter-spacing: 0;
-      font-weight: 500;
+      font-weight: 440;
       display: block;
     }
 
@@ -588,7 +588,7 @@
       font-family: 'OGG', Georgia, serif;
       font-size: 1.2rem;
       color: var(--coral);
-      font-weight: 500;
+      font-weight: 440;
     }
 
     /* Big Result Card */
@@ -718,7 +718,7 @@
     @media (max-width: 900px) {
       .story-columns {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 40px;
       }
 
       .polaroid-column {
@@ -729,10 +729,11 @@
 
       .polaroid-stack {
         display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
         padding: 20px;
+        position: relative;
       }
 
       .polaroid {
@@ -740,8 +741,39 @@
         top: auto !important;
         left: auto !important;
         right: auto !important;
-        width: 160px;
+        bottom: auto !important;
+        width: 220px;
         transform: rotate(0deg) !important;
+      }
+
+      .polaroid:nth-child(odd) {
+        transform: rotate(-2deg) !important;
+      }
+
+      .polaroid:nth-child(even) {
+        transform: rotate(2deg) !important;
+      }
+
+      /* Reposition blobs for mobile */
+      .blob-sticker {
+        width: 60px;
+        height: 60px;
+        opacity: 0.5;
+      }
+
+      .blob-sticker.coral {
+        top: 50px !important;
+        left: -20px !important;
+      }
+
+      .blob-sticker.teal {
+        top: auto !important;
+        bottom: 150px !important;
+        right: -20px !important;
+      }
+
+      .blob-sticker.gold {
+        display: none;
       }
     }
 
@@ -766,6 +798,14 @@
       .story-hero::before {
         width: 350px;
         height: 250px;
+      }
+
+      .polaroid {
+        width: 200px;
+      }
+
+      .polaroid-caption {
+        font-size: 1.2rem;
       }
 
       .pull-quote {
@@ -794,9 +834,22 @@
       .script-text {
         font-size: 1.8rem !important;
       }
+
+      .blob-sticker {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     @media (max-width: 400px) {
+      .polaroid {
+        width: 180px;
+      }
+
+      .story-hero h1 {
+        font-size: 2rem;
+      }
+
       .script-text {
         font-size: 1.8rem !important;
       }
@@ -1206,7 +1259,7 @@
     #story-cta .price-access {
       font-family: 'Satoshi', sans-serif;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 440;
       color: #E07A5F;
       display: flex;
       align-items: center;
@@ -1341,7 +1394,7 @@
     #story-cta .trust-item {
       font-family: 'Satoshi', sans-serif;
       font-size: 12px;
-      font-weight: 500;
+      font-weight: 440;
       color: #5A544C;
       display: flex;
       align-items: center;
