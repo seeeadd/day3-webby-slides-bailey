@@ -1148,71 +1148,42 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       VSL TESTIMONIAL - Glassmorphism Premium
+       VSL TESTIMONIAL - Quote First Layout
        ═══════════════════════════════════════════════════════════════════════════ */
     .vsl-testimonial {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 24px;
-      padding: 28px 32px;
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      box-shadow:
-        0 4px 24px rgba(31, 29, 26, 0.08),
-        0 1px 0 rgba(255, 255, 255, 0.9) inset,
-        0 -1px 0 rgba(0, 0, 0, 0.03) inset;
+      padding: 32px 36px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
     }
 
     .vsl-testimonial__avatar {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       object-fit: cover;
       flex-shrink: 0;
-      box-shadow:
-        0 0 0 4px rgba(255, 255, 255, 0.9),
-        0 0 0 6px var(--accent-coral),
-        0 8px 24px rgba(224, 122, 95, 0.25);
+      border: 4px solid var(--accent-coral);
+      box-shadow: 0 4px 20px rgba(224, 122, 95, 0.3);
     }
 
     .vsl-testimonial__content {
       flex: 1;
     }
 
-    .vsl-testimonial__header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .vsl-testimonial__name {
-      font-family: 'OGG', serif;
-      font-weight: 700;
-      font-size: 20px;
-      color: var(--text-primary);
-    }
-
-    .vsl-testimonial__stars {
-      display: flex;
-      gap: 3px;
-    }
-
-    .vsl-testimonial__star {
-      width: 20px;
-      height: 20px;
-      color: #F59E0B;
-    }
-
     .vsl-testimonial__quote {
       font-family: 'Satoshi', sans-serif;
-      font-size: 17px;
-      line-height: 1.65;
+      font-size: 22px;
+      font-style: italic;
+      line-height: 1.6;
       color: var(--text-body);
-      margin-bottom: 14px;
+      margin-bottom: 20px;
     }
 
     .vsl-testimonial__quote strong {
@@ -1225,24 +1196,28 @@
       font-weight: 700;
     }
 
-    .vsl-testimonial__badge {
-      display: inline-flex;
+    .vsl-testimonial__footer {
+      display: flex;
       align-items: center;
-      gap: 6px;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--accent-teal);
-      background: linear-gradient(135deg, rgba(29, 107, 107, 0.12) 0%, rgba(29, 107, 107, 0.06) 100%);
-      padding: 6px 14px;
-      border-radius: 20px;
-      border: 1px solid rgba(29, 107, 107, 0.15);
+      gap: 12px;
     }
 
-    .vsl-testimonial__badge::before {
-      content: '✓';
-      font-size: 11px;
-      font-weight: 800;
+    .vsl-testimonial__name {
+      font-family: 'OGG', serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--text-primary);
+    }
+
+    .vsl-testimonial__stars {
+      display: flex;
+      gap: 4px;
+    }
+
+    .vsl-testimonial__star {
+      width: 28px;
+      height: 28px;
+      color: #F59E0B;
     }
 
     @media (max-width: 600px) {
@@ -1252,16 +1227,16 @@
         padding: 24px;
         gap: 16px;
       }
-      .vsl-testimonial__header {
+      .vsl-testimonial__footer {
         justify-content: center;
         flex-wrap: wrap;
       }
       .vsl-testimonial__avatar {
-        width: 72px;
-        height: 72px;
+        width: 80px;
+        height: 80px;
       }
       .vsl-testimonial__quote {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
 
@@ -1460,8 +1435,11 @@
             <div class="vsl-testimonial">
               <img src="https://i.imgur.com/sZAy59g.jpeg" alt="Ashley F." class="vsl-testimonial__avatar">
               <div class="vsl-testimonial__content">
-                <div class="vsl-testimonial__header">
-                  <span class="vsl-testimonial__name">Ashley F.</span>
+                <p class="vsl-testimonial__quote">
+                  "I was <span class="highlight">EXTREMELY skeptical</span> when I joined this group, <strong>boy was I wrong!</strong> I never expected someone to be willing to give <strong>so much information</strong> and share <span class="highlight">exactly what to do.</span> Bailey, you are truly an inspiration!"
+                </p>
+                <div class="vsl-testimonial__footer">
+                  <span class="vsl-testimonial__name">- ASHLEY F.</span>
                   <div class="vsl-testimonial__stars">
                     <svg class="vsl-testimonial__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     <svg class="vsl-testimonial__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -1470,10 +1448,6 @@
                     <svg class="vsl-testimonial__star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                   </div>
                 </div>
-                <p class="vsl-testimonial__quote">
-                  "I was <span class="highlight">EXTREMELY skeptical</span> when I joined this group, <strong>boy was I wrong!</strong> I never expected someone to be willing to give <strong>so much information</strong> and share <span class="highlight">exactly what to do.</span> Bailey, you are truly an inspiration!"
-                </p>
-                <span class="vsl-testimonial__badge">1,000+ Sales</span>
               </div>
             </div>
           </div>
