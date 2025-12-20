@@ -1,0 +1,512 @@
+<!--
+  FOOTER SECTION - Premium Dark Footer
+  Bailey's Low-Ticket Membership
+  "Warm Elegance in Dark Mode"
+  Handles disclaimers elegantly, feels like a proper page close
+-->
+
+<footer class="site-footer" id="footer">
+  <!-- Subtle ambient glow background -->
+  <div class="footer-ambient">
+    <div class="footer-glow footer-glow-1"></div>
+    <div class="footer-glow footer-glow-2"></div>
+  </div>
+
+  <div class="footer-container">
+    <!-- Logo with subtle glow -->
+    <div class="footer-logo">
+      <div class="logo-ambient"></div>
+      <img
+        src="https://i.imgur.com/QK99ERH.png"
+        alt="AI Design & Grow"
+        class="footer-logo-img"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Main Disclaimer -->
+    <div class="footer-disclaimer">
+      <p class="disclaimer-main">
+        <strong>Disclaimer:</strong> RESULTS ARE NOT GUARANTEED. AI Design & Grow is education and training. Nothing on this website or in the program is financial, legal, tax, or investment advice. Any sales, revenue, or income examples are shared for illustration only and are not typical. Your results will vary based on many factors including your effort, experience, skills, time, product quality, market demand, and external platform changes. You are responsible for your own decisions, actions, and outcomes.
+      </p>
+    </div>
+
+    <!-- Platform Disclaimer -->
+    <div class="footer-platform-disclaimer">
+      <p class="disclaimer-platform">
+        This website is not part of Etsy, YouTube, Google, Facebook, Instagram, or Meta Platforms, Inc., and it is not endorsed by any of them.
+      </p>
+      <p class="disclaimer-trademarks">
+        Etsy is a trademark of Etsy, Inc. YouTube is a trademark of Google LLC. Facebook and Instagram are trademarks of Meta Platforms, Inc.
+      </p>
+    </div>
+
+    <!-- Separator -->
+    <div class="footer-separator"></div>
+
+    <!-- Footer Links -->
+    <nav class="footer-links" aria-label="Legal links">
+      <a href="#" class="footer-link">Privacy Policy</a>
+      <span class="footer-link-dot" aria-hidden="true"></span>
+      <a href="#" class="footer-link">Terms & Conditions</a>
+      <span class="footer-link-dot" aria-hidden="true"></span>
+      <a href="#" class="footer-link">Disclaimer</a>
+      <span class="footer-link-dot" aria-hidden="true"></span>
+      <a href="#" class="footer-link">Refund</a>
+    </nav>
+
+    <!-- Copyright -->
+    <p class="footer-copyright">
+      &copy; 2025 Bailey Vann / Digitally Purposed. All rights reserved.
+    </p>
+  </div>
+
+  <!-- Decorative flourish -->
+  <div class="footer-flourish" aria-hidden="true">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M12 2L13.09 8.26L19.27 9.27L14.64 13.39L15.54 19.52L12 15.77L8.46 19.52L9.36 13.39L4.73 9.27L10.91 8.26L12 2Z" fill="currentColor"/>
+    </svg>
+  </div>
+</footer>
+
+<style>
+/* ==========================================
+   FONTS - Satoshi & OGG
+   ========================================== */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://fonts.cdnfonts.com/s/85546/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OGG';
+  src: url('https://uploads-ssl.webflow.com/61e9cdd4e545b97c7a2f748a/6201c0b8dec49f7f4e1bbe5d_Ogg-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* ==========================================
+   RESET (scoped)
+   ========================================== */
+.site-footer *,
+.site-footer *::before,
+.site-footer *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================
+   FOOTER - Premium Dark Theme
+   ========================================== */
+.site-footer {
+  position: relative;
+  width: 100%;
+  padding: 72px 24px 48px;
+
+  /* Rich dark teal gradient - warm despite being dark */
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(29, 107, 107, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 80% at 50% 100%, rgba(31, 29, 26, 0.6) 0%, transparent 60%),
+    linear-gradient(180deg,
+      #1D6B6B 0%,
+      #1A5F5F 20%,
+      #175454 40%,
+      #143E3E 70%,
+      #1F1D1A 100%
+    );
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Noise texture for tactile quality */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================
+   AMBIENT GLOW - Subtle Warmth
+   ========================================== */
+.footer-ambient {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* Warm coral glow - top center */
+.footer-glow-1 {
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 300px;
+  background: radial-gradient(ellipse at center,
+    rgba(224, 122, 95, 0.08) 0%,
+    rgba(212, 168, 83, 0.04) 40%,
+    transparent 70%
+  );
+}
+
+/* Cool teal glow - bottom */
+.footer-glow-2 {
+  bottom: -30%;
+  left: 30%;
+  width: 500px;
+  height: 350px;
+  background: radial-gradient(ellipse at center,
+    rgba(29, 107, 107, 0.1) 0%,
+    transparent 60%
+  );
+}
+
+/* ==========================================
+   CONTAINER
+   ========================================== */
+.footer-container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ==========================================
+   LOGO
+   ========================================== */
+.footer-logo {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Subtle ambient glow behind logo */
+.logo-ambient {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 80px;
+  background: radial-gradient(ellipse at center,
+    rgba(250, 249, 247, 0.08) 0%,
+    rgba(212, 168, 83, 0.05) 40%,
+    transparent 70%
+  );
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+.footer-logo-img {
+  position: relative;
+  max-width: 160px;
+  height: auto;
+  filter:
+    drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3))
+    brightness(1.05);
+  transition: filter 0.3s ease;
+}
+
+.footer-logo-img:hover {
+  filter:
+    drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4))
+    brightness(1.1);
+}
+
+/* ==========================================
+   DISCLAIMERS
+   ========================================== */
+.footer-disclaimer {
+  margin-bottom: 24px;
+  max-width: 680px;
+}
+
+.disclaimer-main {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(250, 249, 247, 0.65);
+  letter-spacing: 0.01em;
+}
+
+.disclaimer-main strong {
+  color: rgba(250, 249, 247, 0.8);
+  font-weight: 600;
+}
+
+/* Platform disclaimer - more muted */
+.footer-platform-disclaimer {
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.disclaimer-platform,
+.disclaimer-trademarks {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(250, 249, 247, 0.45);
+  letter-spacing: 0.01em;
+}
+
+.disclaimer-platform {
+  margin-bottom: 8px;
+}
+
+/* ==========================================
+   SEPARATOR
+   ========================================== */
+.footer-separator {
+  width: 120px;
+  height: 1px;
+  margin-bottom: 32px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(212, 168, 83, 0.3) 20%,
+    rgba(212, 168, 83, 0.5) 50%,
+    rgba(212, 168, 83, 0.3) 80%,
+    transparent 100%
+  );
+  border-radius: 1px;
+}
+
+/* ==========================================
+   FOOTER LINKS
+   ========================================== */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 4px;
+  margin-bottom: 24px;
+}
+
+.footer-link {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(250, 249, 247, 0.7);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: relative;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 8px;
+  right: 8px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-link:hover {
+  color: #FAF9F7;
+}
+
+.footer-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.footer-link:focus-visible {
+  outline: 2px solid rgba(224, 122, 95, 0.6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Coral hover option */
+.footer-link:active {
+  color: #E07A5F;
+}
+
+.footer-link-dot {
+  width: 4px;
+  height: 4px;
+  background: rgba(250, 249, 247, 0.3);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   COPYRIGHT
+   ========================================== */
+.footer-copyright {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(250, 249, 247, 0.4);
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================
+   DECORATIVE FLOURISH
+   ========================================== */
+.footer-flourish {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(212, 168, 83, 0.2);
+  z-index: 2;
+}
+
+.footer-flourish svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 56px 24px 40px;
+  }
+
+  .footer-logo {
+    margin-bottom: 32px;
+  }
+
+  .footer-logo-img {
+    max-width: 140px;
+  }
+
+  .disclaimer-main {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .disclaimer-platform,
+  .disclaimer-trademarks {
+    font-size: 10px;
+  }
+
+  .footer-separator {
+    width: 80px;
+    margin-bottom: 28px;
+  }
+
+  .footer-links {
+    gap: 6px 2px;
+  }
+
+  .footer-link {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .footer-link-dot {
+    width: 3px;
+    height: 3px;
+  }
+
+  .footer-copyright {
+    font-size: 11px;
+  }
+
+  .footer-glow-1 {
+    width: 280px;
+    height: 200px;
+  }
+
+  .footer-glow-2 {
+    width: 350px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 48px 20px 36px;
+  }
+
+  .footer-logo {
+    margin-bottom: 28px;
+  }
+
+  .footer-logo-img {
+    max-width: 120px;
+  }
+
+  .footer-disclaimer {
+    margin-bottom: 20px;
+  }
+
+  .footer-platform-disclaimer {
+    margin-bottom: 32px;
+  }
+
+  .disclaimer-main {
+    font-size: 11px;
+  }
+
+  .disclaimer-platform,
+  .disclaimer-trademarks {
+    font-size: 9px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .footer-link-dot {
+    display: none;
+  }
+
+  .footer-link {
+    padding: 8px 16px;
+  }
+
+  .footer-flourish {
+    display: none;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+  .footer-link::after {
+    transition: none;
+  }
+
+  .footer-logo-img {
+    transition: none;
+  }
+
+  .footer-link {
+    transition: none;
+  }
+}
+</style>
