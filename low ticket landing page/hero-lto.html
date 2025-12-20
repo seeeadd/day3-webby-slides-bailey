@@ -412,37 +412,54 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 12px 20px;
-      background: var(--bg-card);
-      border: 2px solid var(--accent-coral);
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(224, 122, 95, 0.15);
+      padding: 14px 24px;
+      background: linear-gradient(180deg, #FFFDF9 0%, #FFF9F0 100%);
+      border: 3px solid #C9A227;
+      border-radius: 6px;
+      box-shadow:
+        0 4px 12px rgba(201, 162, 39, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      position: relative;
+    }
+
+    .trust-badge::before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      border: 1px solid rgba(201, 162, 39, 0.3);
+      border-radius: 3px;
+      pointer-events: none;
     }
 
     .trust-badge__label {
       font-family: 'Satoshi', sans-serif;
-      font-size: 10px;
+      font-size: 9px;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 2px;
+      color: #8B7355;
+      margin-bottom: 4px;
     }
 
     .trust-badge__title {
       font-family: 'OGG', Georgia, serif;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 700;
-      color: var(--accent-coral);
+      color: #C9A227;
       white-space: nowrap;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
     }
 
     .trust-badge__year {
       font-family: 'OGG', Georgia, serif;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--text-primary);
       line-height: 1;
+      margin-top: 2px;
     }
 
     /* Center avatars */
@@ -486,10 +503,10 @@
     }
 
     .trust-stars__star {
-      width: 28px;
-      height: 28px;
-      color: #F5B731;
-      filter: drop-shadow(0 0 6px rgba(245, 183, 49, 0.6));
+      width: 32px;
+      height: 32px;
+      color: #FFB800;
+      filter: drop-shadow(0 0 8px rgba(255, 184, 0, 0.8));
     }
 
     .trust-count {
