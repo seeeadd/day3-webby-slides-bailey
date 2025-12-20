@@ -3083,6 +3083,542 @@
       }
     }
 
+    /* ═══════════════════════════════════════════════════════════════════════════
+       🌶️ SPICY CARD UPGRADES - Make It Unforgettable
+       ═══════════════════════════════════════════════════════════════════════════ */
+
+    /* === HERO CARD TREATMENT - First Card Gets the Spotlight === */
+    .feature-card--hero {
+      grid-column: span 2;
+      background: linear-gradient(135deg, #FFFBF9 0%, #FFF6F2 50%, #FEF0E8 100%);
+      border: 2px solid rgba(224, 122, 95, 0.25);
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 32px;
+      align-items: center;
+      padding: 40px 44px;
+    }
+
+    .feature-card--hero .card-visual-area {
+      height: 220px;
+      min-height: 220px;
+    }
+
+    .feature-card--hero .card-visual-img {
+      max-height: 200px;
+    }
+
+    .feature-card--hero .card-title {
+      font-size: clamp(28px, 3.2vw, 34px);
+    }
+
+    .feature-card--hero::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      bottom: -1px;
+      border-radius: 17px;
+      background: linear-gradient(135deg, rgba(224, 122, 95, 0.4), rgba(212, 168, 83, 0.3), rgba(29, 107, 107, 0.2));
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .feature-card--hero:hover::before {
+      opacity: 1;
+    }
+
+    .feature-card--hero:hover {
+      transform: translateY(-10px);
+      box-shadow:
+        0 8px 16px rgba(224, 122, 95, 0.12),
+        0 20px 40px rgba(45, 42, 38, 0.12),
+        0 32px 64px rgba(45, 42, 38, 0.08);
+    }
+
+    @media (max-width: 900px) {
+      .feature-card--hero {
+        grid-column: span 2;
+        grid-template-columns: 1fr;
+        padding: 32px 28px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .feature-card--hero {
+        grid-column: span 1;
+      }
+    }
+
+    /* === SIGNATURE BADGE - For the Hero Card === */
+    .badge-signature {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #D4A853 0%, #C9973E 100%);
+      color: white;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(212, 168, 83, 0.35);
+      z-index: 10;
+    }
+
+    .badge-signature svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    /* === UPGRADED CARD LABELS - Pop with Icons === */
+    .card-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .card-label svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    /* Badge color variants */
+    .card-label--daily {
+      background: linear-gradient(135deg, #FFF0EB 0%, #FFE4DB 100%);
+      color: #C4614A;
+      border: 1px solid rgba(224, 122, 95, 0.2);
+    }
+
+    .card-label--paths {
+      background: linear-gradient(135deg, #E8F4F4 0%, #D9EDED 100%);
+      color: #1A5C5C;
+      border: 1px solid rgba(29, 107, 107, 0.2);
+    }
+
+    .card-label--blueprint {
+      background: linear-gradient(135deg, #FFF8F0 0%, #FFF2E6 100%);
+      color: #B8923D;
+      border: 1px solid rgba(212, 168, 83, 0.25);
+    }
+
+    .card-label--live {
+      background: linear-gradient(135deg, #F5EEF8 0%, #EDE4F3 100%);
+      color: #7B5A9E;
+      border: 1px solid rgba(123, 90, 158, 0.2);
+    }
+
+    .card-label--tutorials {
+      background: linear-gradient(135deg, #E8F4F4 0%, #D9EDED 100%);
+      color: #1A5C5C;
+      border: 1px solid rgba(29, 107, 107, 0.2);
+    }
+
+    .card-label--traffic {
+      background: linear-gradient(135deg, #FFF0EB 0%, #FFE4DB 100%);
+      color: #C4614A;
+      border: 1px solid rgba(224, 122, 95, 0.2);
+    }
+
+    /* === CORNER NUMBERING - Editorial Touch === */
+    .card-number {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-family: 'OGG', Georgia, serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(90, 84, 76, 0.35);
+      letter-spacing: 0.05em;
+      z-index: 5;
+    }
+
+    .feature-card--hero .card-number {
+      font-size: 14px;
+      color: rgba(196, 97, 74, 0.4);
+    }
+
+    /* === HAND-DRAWN ACCENTS - SVG Decorations === */
+    .hand-drawn-circle {
+      position: absolute;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .hand-drawn-circle svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .hand-drawn-circle path {
+      fill: none;
+      stroke: var(--coral);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+      opacity: 0.5;
+    }
+
+    .feature-card:hover .hand-drawn-circle path {
+      animation: drawCircle 0.8s ease-out forwards;
+    }
+
+    @keyframes drawCircle {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    /* Sparkle accents */
+    .card-sparkles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .sparkle svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .sparkle path {
+      fill: var(--gold);
+    }
+
+    .feature-card:hover .sparkle {
+      opacity: 1;
+      animation: sparkleFloat 2s ease-in-out infinite;
+    }
+
+    .sparkle:nth-child(1) { top: 15%; right: 12%; animation-delay: 0s; }
+    .sparkle:nth-child(2) { top: 25%; right: 25%; animation-delay: 0.3s; width: 8px; height: 8px; }
+    .sparkle:nth-child(3) { top: 8%; right: 20%; animation-delay: 0.6s; width: 10px; height: 10px; }
+
+    @keyframes sparkleFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(15deg); }
+    }
+
+    /* === ENHANCED HOVER STATES === */
+    .feature-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(224, 122, 95, 0.08), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .feature-card:hover::after {
+      opacity: 1;
+    }
+
+    .feature-card:hover .card-visual-img {
+      transform: scale(1.03) translateY(-4px);
+    }
+
+    .card-visual-img {
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Glow effect on hover */
+    .feature-card:hover {
+      box-shadow:
+        0 4px 8px rgba(45, 42, 38, 0.06),
+        0 12px 28px rgba(45, 42, 38, 0.1),
+        0 24px 56px rgba(45, 42, 38, 0.12),
+        0 0 60px rgba(224, 122, 95, 0.08);
+    }
+
+    /* === SECTION BACKGROUND INTEREST === */
+    .cards-grid {
+      position: relative;
+    }
+
+    .cards-grid::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 60%;
+      background: radial-gradient(ellipse, rgba(224, 122, 95, 0.04) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Floating background decorations */
+    .section-floats {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .float-element {
+      position: absolute;
+      opacity: 0.15;
+      animation: floatDrift 20s ease-in-out infinite;
+    }
+
+    .float-element--1 {
+      top: 10%;
+      left: 5%;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, var(--coral) 0%, transparent 70%);
+      animation-delay: 0s;
+    }
+
+    .float-element--2 {
+      top: 60%;
+      right: 8%;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, var(--teal) 0%, transparent 70%);
+      animation-delay: -7s;
+    }
+
+    .float-element--3 {
+      bottom: 15%;
+      left: 15%;
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+      animation-delay: -14s;
+    }
+
+    @keyframes floatDrift {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(15px, -20px); }
+      50% { transform: translate(-10px, 10px); }
+      75% { transform: translate(20px, 15px); }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       🎁 BONUS SECTION - Glass on Dark Treatment
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .also-included {
+      margin-top: 72px;
+      padding: 56px 48px;
+      border-radius: 28px;
+      background: linear-gradient(145deg, #1A4F4F 0%, #143D3D 50%, #0F2E2E 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .also-included::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(212, 168, 83, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .also-included::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 168, 83, 0.3), transparent);
+    }
+
+    .also-header {
+      text-align: center;
+      margin-bottom: 44px;
+      position: relative;
+    }
+
+    /* Bonus badge above title */
+    .bonus-super-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #D4A853 0%, #C9973E 100%);
+      color: white;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(212, 168, 83, 0.4);
+      animation: badgeGlow 3s ease-in-out infinite;
+    }
+
+    .bonus-super-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    @keyframes badgeGlow {
+      0%, 100% { box-shadow: 0 4px 20px rgba(212, 168, 83, 0.4); }
+      50% { box-shadow: 0 4px 30px rgba(212, 168, 83, 0.6), 0 0 40px rgba(212, 168, 83, 0.2); }
+    }
+
+    .also-title {
+      font-family: 'OGG', Georgia, serif;
+      font-size: clamp(28px, 3.5vw, 38px);
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .also-subtitle {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Glass Mini Cards */
+    .mini-card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mini-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    }
+
+    .mini-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(212, 168, 83, 0.3);
+      transform: translateY(-6px);
+      box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.25),
+        0 0 40px rgba(212, 168, 83, 0.1);
+    }
+
+    .mini-visual {
+      margin-bottom: 16px;
+    }
+
+    .mini-visual-img {
+      max-width: 100%;
+      max-height: 100px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+      transition: transform 0.4s ease;
+    }
+
+    .mini-card:hover .mini-visual-img {
+      transform: scale(1.05);
+    }
+
+    .mini-title {
+      font-family: 'OGG', Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .mini-desc {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.5;
+    }
+
+    /* Bonus number indicator */
+    .mini-bonus-number {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(212, 168, 83, 0.2);
+      border: 1px solid rgba(212, 168, 83, 0.4);
+      border-radius: 50%;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #D4A853;
+    }
+
+    /* Grid adjustments for dark theme */
+    .also-grid,
+    .also-grid-row-2 {
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .also-included {
+        padding: 40px 28px;
+      }
+
+      .bonus-super-badge {
+        font-size: 11px;
+        padding: 8px 16px;
+      }
+    }
+
+    /* Premium animated cards keep existing styles but override colors */
+    .premium-podcast-card,
+    .premium-backroom-card {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .premium-podcast-card:hover,
+    .premium-backroom-card:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
   </style>
 </head>
 <body>
@@ -3109,109 +3645,218 @@
 
       <!-- 6 Feature Cards Grid -->
       <div class="cards-grid">
-        
-        <!-- Card 1: Bailey's Daily Drop -->
-        <article class="feature-card">
+
+        <!-- Floating background decorations -->
+        <div class="section-floats">
+          <div class="float-element float-element--1"></div>
+          <div class="float-element float-element--2"></div>
+          <div class="float-element float-element--3"></div>
+        </div>
+
+        <!-- Card 1: Bailey's Daily Drop — HERO CARD -->
+        <article class="feature-card feature-card--hero">
+          <!-- Signature Badge -->
+          <span class="badge-signature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            Signature
+          </span>
+
+          <!-- Card Number -->
+          <span class="card-number">01</span>
+
+          <!-- Sparkles -->
+          <div class="card-sparkles">
+            <span class="sparkle">
+              <svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            </span>
+            <span class="sparkle">
+              <svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            </span>
+            <span class="sparkle">
+              <svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg>
+            </span>
+          </div>
+
           <div class="card-visual-area">
             <img src="https://i.imgur.com/tJJemoM.png" alt="Bailey's Daily Drop" class="card-visual-img" loading="lazy" />
           </div>
-        <div class="card-content">
-          <span class="card-label">Daily</span>
-          <h3 class="card-title">Bailey's Daily Drop</h3>
-          <p class="card-outcome">Every morning I post the exact product I would list next - before I list it myself.</p>
-          <ul class="card-bullets">
-            <li>The trending idea, the AI prompt I'd use, and the tags I'd copy straight into Etsy</li>
-            <li>30+ design tutorials showing how I actually made my bestsellers</li>
-          </ul>
-        </div>
+          <div class="card-content">
+            <span class="card-label card-label--daily">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              Daily
+            </span>
+            <h3 class="card-title">Bailey's Daily Drop</h3>
+            <p class="card-outcome">Every morning I post the exact product I would list next - before I list it myself.</p>
+            <ul class="card-bullets">
+              <li>The trending idea, the AI prompt I'd use, and the tags I'd copy straight into Etsy</li>
+              <li>30+ design tutorials showing how I actually made my bestsellers</li>
+            </ul>
+          </div>
         </article>
 
         <!-- Card 2: The 3 Paths I'd Take to $5K -->
         <article class="feature-card">
+          <span class="card-number">02</span>
+          <div class="card-sparkles">
+            <span class="sparkle"><svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span>
+            <span class="sparkle"><svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span>
+          </div>
           <div class="card-visual-area">
             <img src="https://i.imgur.com/X7tz03t.png" alt="The 3 Paths I'd Take to $5K" class="card-visual-img" loading="lazy" />
           </div>
-        <div class="card-content">
-          <span class="card-label">Paths</span>
-          <h3 class="card-title">The 3 Paths I'd Take to $5K</h3>
-          <p class="card-outcome">If I had to rebuild from zero, these are the three roads I'd pick from. Choose the one that fits your life.</p>
-          <ul class="card-bullets">
-            <li>Audience path, bundle path, or social path - the same decision I made when I deleted all my physical products</li>
-            <li>Weekly checkpoints so you always know what to work on next</li>
-          </ul>
-        </div>
+          <div class="card-content">
+            <span class="card-label card-label--paths">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+              Paths
+            </span>
+            <h3 class="card-title">The 3 Paths I'd Take to $5K</h3>
+            <p class="card-outcome">If I had to rebuild from zero, these are the three roads I'd pick from. Choose the one that fits your life.</p>
+            <ul class="card-bullets">
+              <li>Audience path, bundle path, or social path - the same decision I made when I deleted all my physical products</li>
+              <li>Weekly checkpoints so you always know what to work on next</li>
+            </ul>
+          </div>
         </article>
 
         <!-- Card 3: My $10K Month Blueprint -->
         <article class="feature-card">
+          <span class="card-number">03</span>
+          <div class="card-sparkles">
+            <span class="sparkle"><svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span>
+            <span class="sparkle"><svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span>
+          </div>
           <div class="card-visual-area">
             <img src="https://i.imgur.com/y3837Ma.png" alt="My $10K Month Blueprint" class="card-visual-img" loading="lazy" />
           </div>
-        <div class="card-content">
-          <span class="card-label">Blueprint</span>
-          <h3 class="card-title">My $10K Month Blueprint</h3>
-          <p class="card-outcome">The exact shop setup behind my consistent five-figure months. Not theory - you'll see the receipts.</p>
-          <ul class="card-bullets">
-            <li>How I mix hero products, bundles, and quiet earners so income stays steady</li>
-            <li>The pricing and retirement rules I follow so I'm not drowning in 400 listings</li>
-          </ul>
-        </div>
+          <div class="card-content">
+            <span class="card-label card-label--blueprint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              Blueprint
+            </span>
+            <h3 class="card-title">My $10K Month Blueprint</h3>
+            <p class="card-outcome">The exact shop setup behind my consistent five-figure months. Not theory - you'll see the receipts.</p>
+            <ul class="card-bullets">
+              <li>How I mix hero products, bundles, and quiet earners so income stays steady</li>
+              <li>The pricing and retirement rules I follow so I'm not drowning in 400 listings</li>
+            </ul>
+          </div>
         </article>
 
         <!-- Card 4: Ask Bailey (Twice a Month) -->
         <article class="feature-card">
+          <span class="card-number">04</span>
+          <div class="card-sparkles">
+            <span class="sparkle"><svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span>
+            <span class="sparkle"><svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span>
+          </div>
           <div class="card-visual-area">
             <img src="https://i.imgur.com/Vj8SxaG.png" alt="Ask Bailey (Twice a Month)" class="card-visual-img" loading="lazy" />
           </div>
-        <div class="card-content">
-          <span class="card-label">Live</span>
-          <h3 class="card-title">Ask Bailey (Twice a Month)</h3>
-          <p class="card-outcome">Bring your shop, your stuck point, your weird question. I'll tell you what I'd do if it were my shop.</p>
-          <ul class="card-bullets">
-            <li>Real feedback on your actual listings - not scripted Q&A</li>
-            <li>Replays posted if you can't make it live</li>
-          </ul>
-        </div>
+          <div class="card-content">
+            <span class="card-label card-label--live">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+              Live
+            </span>
+            <h3 class="card-title">Ask Bailey (Twice a Month)</h3>
+            <p class="card-outcome">Bring your shop, your stuck point, your weird question. I'll tell you what I'd do if it were my shop.</p>
+            <ul class="card-bullets">
+              <li>Real feedback on your actual listings - not scripted Q&A</li>
+              <li>Replays posted if you can't make it live</li>
+            </ul>
+          </div>
         </article>
 
         <!-- Card 5: Steal My Bestsellers -->
         <article class="feature-card">
+          <span class="card-number">05</span>
+          <div class="card-sparkles">
+            <span class="sparkle"><svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span>
+            <span class="sparkle"><svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span>
+          </div>
           <div class="card-visual-area">
             <img src="https://i.imgur.com/5Xe5tx3.jpeg" alt="Steal My Bestsellers" class="card-visual-img" loading="lazy" />
           </div>
-        <div class="card-content">
-          <span class="card-label">Tutorials</span>
-          <h3 class="card-title">Steal My Bestsellers</h3>
-          <p class="card-outcome">I walk through exactly how I made my top-selling products. You build your own version as you watch.</p>
-          <ul class="card-bullets">
-            <li>30+ video tutorials where I screen-share my actual Canva process</li>
-            <li>Real bestsellers, not generic examples - you see what actually worked</li>
-          </ul>
-        </div>
+          <div class="card-content">
+            <span class="card-label card-label--tutorials">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              Tutorials
+            </span>
+            <h3 class="card-title">Steal My Bestsellers</h3>
+            <p class="card-outcome">I walk through exactly how I made my top-selling products. You build your own version as you watch.</p>
+            <ul class="card-bullets">
+              <li>30+ video tutorials where I screen-share my actual Canva process</li>
+              <li>Real bestsellers, not generic examples - you see what actually worked</li>
+            </ul>
+          </div>
         </article>
 
         <!-- Card 6: My Traffic Loop -->
         <article class="feature-card">
+          <span class="card-number">06</span>
+          <div class="card-sparkles">
+            <span class="sparkle"><svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span>
+            <span class="sparkle"><svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span>
+          </div>
           <div class="card-visual-area">
             <img src="https://i.imgur.com/0pKeFR1.jpeg" alt="My Traffic Loop" class="card-visual-img" loading="lazy" />
           </div>
-        <div class="card-content">
-          <span class="card-label">Traffic</span>
-          <h3 class="card-title">My Traffic Loop</h3>
-          <p class="card-outcome">The Pinterest and email setup running on autopilot in my business today - not theory, the actual system.</p>
-          <ul class="card-bullets">
-            <li>My complete Pinterest strategy that runs while I sleep</li>
-            <li>The email sequences that turn browsers into buyers</li>
-          </ul>
-        </div>
+          <div class="card-content">
+            <span class="card-label card-label--traffic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+              Traffic
+            </span>
+            <h3 class="card-title">My Traffic Loop</h3>
+            <p class="card-outcome">The Pinterest and email setup running on autopilot in my business today - not theory, the actual system.</p>
+            <ul class="card-bullets">
+              <li>My complete Pinterest strategy that runs while I sleep</li>
+              <li>The email sequences that turn browsers into buyers</li>
+            </ul>
+          </div>
         </article>
 
       </div>
 
-      <!-- Also Included Section -->
+      <!-- Also Included Section — BONUS TREATMENT -->
       <div class="also-included">
         <div class="also-header">
-          <h3 class="also-title">Also Included</h3>
+          <!-- Glowing Bonus Badge -->
+          <span class="bonus-super-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"></path>
+              <path d="M12 12V3"></path>
+              <path d="m8 7 4-4 4 4"></path>
+              <path d="M4 12h16"></path>
+            </svg>
+            Bonuses Included
+          </span>
+          <h3 class="also-title">Plus, You Get These Extras</h3>
           <p class="also-subtitle">Everything else that makes this work</p>
         </div>
 
@@ -3220,6 +3865,7 @@
 
           <!-- Tool Stack -->
           <div class="mini-card">
+            <span class="mini-bonus-number">+1</span>
             <div class="mini-visual">
               <img src="https://i.imgur.com/Aykw7zQ.png" alt="Bailey's Tool Stack" class="mini-visual-img" loading="lazy" />
             </div>
@@ -3231,6 +3877,7 @@
 
           <!-- The Vault -->
           <div class="mini-card">
+            <span class="mini-bonus-number">+2</span>
             <div class="mini-visual">
               <img src="https://i.imgur.com/5Nbco7u.png" alt="The Vault (150+ PLR)" class="mini-visual-img" loading="lazy" />
             </div>
@@ -3242,6 +3889,7 @@
 
           <!-- Summer Shop Build -->
           <div class="mini-card">
+            <span class="mini-bonus-number">+3</span>
             <div class="mini-visual">
               <img src="https://i.imgur.com/P8g03KC.png" alt="Summer Shop Build" class="mini-visual-img" loading="lazy" />
             </div>
@@ -3258,6 +3906,7 @@
 
           <!-- Private Podcast - Premium Animated -->
           <div class="mini-card premium-podcast-card">
+            <span class="mini-bonus-number">+4</span>
             <div class="mini-visual">
               <div class="podcast-graphic-premium">
                 <!-- Glowing background orb -->
@@ -3316,6 +3965,7 @@
 
           <!-- The Back Room - Premium Animated -->
           <div class="mini-card premium-backroom-card">
+            <span class="mini-bonus-number">+5</span>
             <div class="mini-visual">
               <div class="backroom-graphic-premium">
                 <!-- Atmospheric background -->
