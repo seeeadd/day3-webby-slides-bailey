@@ -43,6 +43,8 @@
 
     body {
       font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -110,7 +112,7 @@
        SECTION HEADER WITH HERO MOCKUP
        ========================================== */
     .offer-header {
-      max-width: 1280px;
+      max-width: 1400px;
       margin: 0 auto 80px;
       position: relative;
       z-index: 2;
@@ -118,8 +120,8 @@
 
     .offer-header-content {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 40px;
       align-items: center;
     }
 
@@ -152,7 +154,7 @@
 
     @keyframes dot-pulse {
       0%, 100% { box-shadow: 0 0 8px rgba(224, 122, 95, 0.5); transform: scale(1); }
-      50% { box-shadow: 0 0 14px rgba(224, 122, 95, 0.7); transform: scale(1.15); }
+      50% { box-shadow: 0 0 14px rgba(224, 122, 95, 0.7); transform: scale(1.08); }
     }
 
     .offer-eyebrow span:last-child {
@@ -167,6 +169,7 @@
     .offer-headline {
       font-family: 'OGG', Georgia, serif;
       font-size: 52px;
+      font-size: 18px;
       font-weight: 500;
       line-height: 1.1;
       color: #1F1D1A;
@@ -195,7 +198,7 @@
     .offer-subheadline {
       font-family: 'Satoshi', sans-serif;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1.7;
       color: #5A544C;
       max-width: 480px;
@@ -203,12 +206,15 @@
 
     .subhead-emphasis {
       color: #1F1D1A;
+      font-size: 18px;
       font-weight: 500;
     }
 
     /* Hero Mockup */
     .offer-header-mockup {
       position: relative;
+      transform: scale(1.08);
+      transform-origin: center center;
     }
 
     .mockup-browser {
@@ -269,6 +275,7 @@
       padding: 8px 12px;
       font-family: 'Satoshi', sans-serif;
       font-size: 11px;
+      font-size: 18px;
       font-weight: 500;
       color: #8A8480;
       border-radius: 4px;
@@ -286,7 +293,8 @@
 
     .dashboard-welcome {
       font-family: 'OGG', serif;
-      font-size: 16px;
+      font-size: 18px;
+      font-size: 18px;
       font-weight: 500;
       color: #1F1D1A;
       margin-bottom: 16px;
@@ -320,7 +328,7 @@
 
     .module-title {
       font-family: 'Satoshi', sans-serif;
-      font-size: 13px;
+      font-size: 17px;
       font-weight: 600;
       color: #1F1D1A;
     }
@@ -341,7 +349,7 @@
 
     .annotation-text {
       font-family: 'Caveat', cursive;
-      font-size: 16px;
+      font-size: 18px;
       color: #D4A853;
       transform: rotate(3deg);
     }
@@ -542,6 +550,7 @@
     .card-title {
       font-family: 'OGG', Georgia, serif;
       font-size: 26px;
+      font-size: 18px;
       font-weight: 500;
       line-height: 1.2;
       color: #1F1D1A;
@@ -552,8 +561,8 @@
        ========================================== */
     .card-description {
       font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
-      font-weight: 400;
+      font-size: 18px;
+      font-weight: 500;
       line-height: 1.7;
       color: #5A544C;
       margin-bottom: 24px;
@@ -598,8 +607,8 @@
 
     .feature-text {
       font-family: 'Satoshi', sans-serif;
-      font-size: 15px;
-      font-weight: 400;
+      font-size: 17px;
+      font-weight: 500;
       line-height: 1.6;
       color: #5A544C;
       padding-top: 4px;
@@ -653,8 +662,8 @@
 
     .use-it-text {
       font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      font-weight: 400;
+      font-size: 18px;
+      font-weight: 500;
       font-style: italic;
       line-height: 1.5;
       color: #5A544C;
@@ -665,7 +674,7 @@
        ========================================== */
     .card-outcome {
       font-family: 'Satoshi', sans-serif;
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 600;
       line-height: 1.5;
       color: #1F1D1A;
@@ -696,13 +705,15 @@
     .stat-number {
       font-family: 'OGG', Georgia, serif;
       font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
       color: #E07A5F;
     }
 
     .stat-label {
       font-family: 'Satoshi', sans-serif;
-      font-size: 13px;
+      font-size: 17px;
+      font-size: 18px;
       font-weight: 500;
       color: #8A8480;
     }
@@ -770,7 +781,7 @@
       border: 1px solid rgba(120, 180, 180, 0.35);
       border-radius: 6px;
       font-family: 'Satoshi', sans-serif;
-      font-size: 13px;
+      font-size: 17px;
       font-style: italic;
       color: #5A544C;
       text-align: center;
@@ -1082,6 +1093,7 @@
     .price-period {
       font-family: 'Satoshi', sans-serif;
       font-size: 18px;
+      font-size: 18px;
       font-weight: 500;
       color: #8A8480;
       margin-left: 4px;
@@ -1092,7 +1104,8 @@
       align-items: center;
       gap: 8px;
       font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
+      font-size: 18px;
+      font-size: 18px;
       font-weight: 500;
       color: #1D6B6B;
     }
@@ -1134,7 +1147,7 @@
 
     .breakdown-daily {
       font-family: 'Satoshi', sans-serif;
-      font-size: 15px;
+      font-size: 17px;
       color: #8A8480;
       margin-bottom: 16px;
     }
@@ -1151,7 +1164,7 @@
       border: 1px solid rgba(120, 180, 180, 0.25);
       border-radius: 8px;
       font-family: 'Satoshi', sans-serif;
-      font-size: 13px;
+      font-size: 17px;
       font-weight: 700;
       color: #78B4B4;
       position: relative;
@@ -1286,7 +1299,8 @@
 
     .trust-badge span {
       font-family: 'Satoshi', sans-serif;
-      font-size: 13px;
+      font-size: 17px;
+      font-size: 18px;
       font-weight: 500;
       color: #5A544C;
     }
@@ -1353,7 +1367,7 @@
 
       .offer-headline { font-size: 42px; }
       .offer-subheadline { max-width: 100%; margin: 0 auto; }
-      .offer-header-mockup { max-width: 500px; margin: 0 auto; }
+      .offer-header-mockup { max-width: 650px; margin: 0 auto; transform: scale(1); }
       .offer-eyebrow { margin-left: auto; margin-right: auto; }
     }
 
