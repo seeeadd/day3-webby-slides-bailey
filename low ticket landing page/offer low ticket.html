@@ -3152,6 +3152,35 @@
       }
     }
 
+    /* === LAST CARD - Spans 2 columns to avoid lonely orphan === */
+    .feature-card--wide {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 32px;
+      align-items: center;
+      padding: 36px 40px;
+      background: linear-gradient(135deg, #FAFAFA 0%, #F5F3F0 100%);
+    }
+
+    .feature-card--wide .card-visual-area {
+      height: 180px;
+    }
+
+    @media (max-width: 900px) {
+      .feature-card--wide {
+        grid-column: span 2;
+        grid-template-columns: 1fr;
+        padding: 28px 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .feature-card--wide {
+        grid-column: span 1;
+      }
+    }
+
     /* === SIGNATURE BADGE - For the Hero Card === */
     .badge-signature {
       position: absolute;
@@ -3426,43 +3455,33 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════════════════
-       🎁 BONUS SECTION - Glass on Dark Treatment
+       🎁 BONUS SECTION - Warm Gift-Wrapped Treatment
        ═══════════════════════════════════════════════════════════════════════════ */
     .also-included {
-      margin-top: 72px;
-      padding: 56px 48px;
-      border-radius: 28px;
-      background: linear-gradient(145deg, #1A4F4F 0%, #143D3D 50%, #0F2E2E 100%);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: 80px;
+      padding: 0;
       position: relative;
-      overflow: hidden;
-    }
-
-    .also-included::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 200px;
-      background: radial-gradient(ellipse at 50% 0%, rgba(212, 168, 83, 0.12) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .also-included::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(212, 168, 83, 0.3), transparent);
+      background: transparent;
+      border: none;
     }
 
     .also-header {
       text-align: center;
-      margin-bottom: 44px;
+      margin-bottom: 48px;
       position: relative;
+    }
+
+    /* Hand-drawn underline decoration */
+    .also-header::after {
+      content: '';
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 8px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8'%3E%3Cpath d='M2 4 Q30 1, 60 5 T118 4' stroke='%23E07A5F' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
+      opacity: 0.6;
     }
 
     /* Bonus badge above title */
@@ -3470,153 +3489,193 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, #D4A853 0%, #C9973E 100%);
+      background: linear-gradient(135deg, #1D6B6B 0%, #165858 100%);
       color: white;
       font-family: 'Satoshi', sans-serif;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      padding: 10px 20px;
-      border-radius: 24px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 20px rgba(212, 168, 83, 0.4);
-      animation: badgeGlow 3s ease-in-out infinite;
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 3px 12px rgba(29, 107, 107, 0.3);
     }
 
     .bonus-super-badge svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    @keyframes badgeGlow {
-      0%, 100% { box-shadow: 0 4px 20px rgba(212, 168, 83, 0.4); }
-      50% { box-shadow: 0 4px 30px rgba(212, 168, 83, 0.6), 0 0 40px rgba(212, 168, 83, 0.2); }
+      width: 14px;
+      height: 14px;
     }
 
     .also-title {
       font-family: 'OGG', Georgia, serif;
-      font-size: clamp(28px, 3.5vw, 38px);
+      font-size: clamp(26px, 3vw, 34px);
       font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 12px;
-      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+      color: #1F1D1A;
+      margin-bottom: 8px;
     }
 
     .also-subtitle {
       font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
-      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      color: #5A544C;
     }
 
-    /* Glass Mini Cards */
+    /* Bento-style grid for bonuses */
+    .also-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .also-grid-row-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 680px;
+      margin: 20px auto 0;
+    }
+
+    /* Mini Cards - Gift Card Style */
     .mini-card {
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #FFFFFF;
+      border: 1px solid #E8E2D9;
       border-radius: 16px;
-      padding: 24px;
+      padding: 0;
       position: relative;
       overflow: hidden;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 8px rgba(45, 42, 38, 0.06);
     }
 
+    /* Gift ribbon corner */
     .mini-card::before {
-      content: '';
+      content: 'BONUS';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      top: 12px;
+      right: -32px;
+      background: linear-gradient(135deg, #D4A853 0%, #C9973E 100%);
+      color: white;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 4px 36px;
+      transform: rotate(45deg);
+      box-shadow: 0 2px 8px rgba(212, 168, 83, 0.3);
+      z-index: 10;
     }
 
     .mini-card:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(212, 168, 83, 0.3);
-      transform: translateY(-6px);
+      transform: translateY(-6px) rotate(-0.5deg);
+      border-color: rgba(224, 122, 95, 0.3);
       box-shadow:
-        0 12px 32px rgba(0, 0, 0, 0.25),
-        0 0 40px rgba(212, 168, 83, 0.1);
+        0 8px 24px rgba(45, 42, 38, 0.1),
+        0 16px 40px rgba(45, 42, 38, 0.08);
+    }
+
+    /* Stagger cards for visual interest */
+    .also-grid .mini-card:nth-child(2) {
+      transform: translateY(12px);
+    }
+
+    .also-grid .mini-card:nth-child(2):hover {
+      transform: translateY(6px) rotate(0.5deg);
     }
 
     .mini-visual {
-      margin-bottom: 16px;
+      padding: 20px 20px 12px;
+      background: linear-gradient(180deg, #FAF9F7 0%, #FFFFFF 100%);
+      border-bottom: 1px solid #F0EBE4;
     }
 
     .mini-visual-img {
       max-width: 100%;
-      max-height: 100px;
+      max-height: 120px;
+      width: auto;
+      height: auto;
       object-fit: contain;
-      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+      display: block;
+      margin: 0 auto;
       transition: transform 0.4s ease;
     }
 
     .mini-card:hover .mini-visual-img {
-      transform: scale(1.05);
+      transform: scale(1.04);
+    }
+
+    .mini-content {
+      padding: 16px 20px 20px;
     }
 
     .mini-title {
       font-family: 'OGG', Georgia, serif;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 8px;
+      color: #1F1D1A;
+      margin-bottom: 6px;
+      line-height: 1.3;
     }
 
     .mini-desc {
       font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.7);
+      font-size: 13px;
+      color: #5A544C;
       line-height: 1.5;
     }
 
-    /* Bonus number indicator */
+    /* Bonus number - hidden since we have ribbon */
     .mini-bonus-number {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 28px;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(212, 168, 83, 0.2);
-      border: 1px solid rgba(212, 168, 83, 0.4);
-      border-radius: 50%;
-      font-family: 'Satoshi', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      color: #D4A853;
+      display: none;
     }
 
-    /* Grid adjustments for dark theme */
-    .also-grid,
-    .also-grid-row-2 {
-      gap: 24px;
-    }
-
-    @media (max-width: 768px) {
-      .also-included {
-        padding: 40px 28px;
+    /* Responsive */
+    @media (max-width: 900px) {
+      .also-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
-
-      .bonus-super-badge {
-        font-size: 11px;
-        padding: 8px 16px;
+      .also-grid .mini-card:nth-child(2) {
+        transform: none;
+      }
+      .also-grid .mini-card:nth-child(3) {
+        grid-column: span 2;
+        max-width: 340px;
+        margin: 0 auto;
       }
     }
 
-    /* Premium animated cards keep existing styles but override colors */
+    @media (max-width: 600px) {
+      .also-grid {
+        grid-template-columns: 1fr;
+      }
+      .also-grid .mini-card:nth-child(3) {
+        grid-column: span 1;
+        max-width: none;
+      }
+      .also-grid-row-2 {
+        grid-template-columns: 1fr;
+        max-width: none;
+      }
+    }
+
+    /* Premium animated cards - keep light theme */
     .premium-podcast-card,
     .premium-backroom-card {
-      background: rgba(255, 255, 255, 0.08);
+      background: #FFFFFF;
     }
 
-    .premium-podcast-card:hover,
-    .premium-backroom-card:hover {
-      background: rgba(255, 255, 255, 0.12);
+    .premium-podcast-card .mini-visual,
+    .premium-backroom-card .mini-visual {
+      background: linear-gradient(180deg, #F0F7F7 0%, #FFFFFF 100%);
+      border-bottom-color: #E0EEEE;
+    }
+
+    .premium-podcast-card::before {
+      background: linear-gradient(135deg, #1D6B6B 0%, #165858 100%);
+    }
+
+    .premium-backroom-card::before {
+      background: linear-gradient(135deg, #E07A5F 0%, #D06B50 100%);
     }
 
   </style>
@@ -3814,8 +3873,8 @@
           </div>
         </article>
 
-        <!-- Card 6: My Traffic Loop -->
-        <article class="feature-card">
+        <!-- Card 6: My Traffic Loop — WIDE CARD (avoids orphan) -->
+        <article class="feature-card feature-card--wide">
           <span class="card-number">06</span>
           <div class="card-sparkles">
             <span class="sparkle"><svg viewBox="0 0 24 24"><path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/></svg></span>
@@ -3843,18 +3902,19 @@
 
       </div>
 
-      <!-- Also Included Section — BONUS TREATMENT -->
+      <!-- Also Included Section — GIFT-WRAPPED BONUSES -->
       <div class="also-included">
         <div class="also-header">
-          <!-- Glowing Bonus Badge -->
+          <!-- Teal Badge -->
           <span class="bonus-super-badge">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"></path>
-              <path d="M12 12V3"></path>
-              <path d="m8 7 4-4 4 4"></path>
-              <path d="M4 12h16"></path>
+              <path d="M20 12v10H4V12"></path>
+              <path d="M2 7h20v5H2z"></path>
+              <path d="M12 22V7"></path>
+              <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+              <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
             </svg>
-            Bonuses Included
+            Bonuses
           </span>
           <h3 class="also-title">Plus, You Get These Extras</h3>
           <p class="also-subtitle">Everything else that makes this work</p>
