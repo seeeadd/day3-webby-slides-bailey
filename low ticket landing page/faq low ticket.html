@@ -238,10 +238,12 @@ html, body, .faq-section {
   scrollbar-width: none;
 }
 
-/* Section container */
+/* Section container - full width */
 .faq-section {
   position: relative;
-  padding: 80px 24px 80px;
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 0;
   background: var(--faq-bg);
   box-sizing: border-box;
   overflow: hidden;
@@ -287,9 +289,11 @@ html, body, .faq-section {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;
+  box-sizing: border-box;
 }
 
 @media (min-width: 900px) {
