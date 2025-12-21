@@ -35,37 +35,40 @@
   padding: 0;
 }
 
-html {
+html, body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   max-width: 100%;
   width: 100%;
-  height: auto;
-  min-height: 0;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 body {
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 440;
   line-height: 1.6;
-  overflow-x: hidden;
-  max-width: 100%;
-  width: 100%;
   color: #2D2A26;
   background: #1F1D1A;
-  position: relative;
-  height: auto;
-  min-height: 0;
 }
 
-/* Ensure no extra space after footer */
-body > *:last-of-type {
+/* Ensure page ends at footer - no extra scroll */
+.sec-footer {
   margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
-.sec-footer, .sec-footer .site-footer {
+.sec-footer .site-footer {
   margin-bottom: 0 !important;
+  padding-bottom: 32px !important;
+}
+body > script {
+  display: block;
+  height: 0 !important;
+  overflow: hidden !important;
 }
 
 .sec {
@@ -8282,8 +8285,6 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
    ========================================== */
 .sec-footer {
   background: #1F1D1A;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
 }
 .site-footer *, .sec-footer .site-footer *::before, .sec-footer .site-footer *::after {
   box-sizing: border-box;
