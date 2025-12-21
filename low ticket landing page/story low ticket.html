@@ -60,6 +60,7 @@
 
     body {
       font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 440;
       color: var(--text-body);
       line-height: 1.7;
       background: linear-gradient(180deg, #FAF8F5 0%, #F7F3EE 50%, #FAF8F5 100%);
@@ -290,7 +291,7 @@
       margin: 32px 0;
       line-height: 1.2;
       letter-spacing: 0;
-      font-weight: 500;
+      font-weight: 440;
       display: block;
     }
 
@@ -587,7 +588,7 @@
       font-family: 'OGG', Georgia, serif;
       font-size: 1.2rem;
       color: var(--coral);
-      font-weight: 500;
+      font-weight: 440;
     }
 
     /* Big Result Card */
@@ -717,7 +718,7 @@
     @media (max-width: 900px) {
       .story-columns {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 40px;
       }
 
       .polaroid-column {
@@ -727,20 +728,56 @@
       }
 
       .polaroid-stack {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        padding: 20px;
+        position: relative !important;
+        display: block !important;
+        min-height: 500px !important;
+        padding: 20px !important;
       }
 
-      .polaroid {
-        position: relative;
-        top: auto !important;
-        left: auto !important;
+      /* Keep scattered layout - force absolute positioning */
+      .polaroid-stack .polaroid {
+        position: absolute !important;
+        width: 180px !important;
+        margin: 0 !important;
+      }
+
+      .polaroid-stack .polaroid.polaroid-1 {
+        top: 0 !important;
+        left: 5% !important;
         right: auto !important;
-        width: 160px;
-        transform: rotate(0deg) !important;
+        bottom: auto !important;
+        transform: rotate(-6deg) !important;
+      }
+
+      .polaroid-stack .polaroid.polaroid-2 {
+        top: 20px !important;
+        left: auto !important;
+        right: 5% !important;
+        bottom: auto !important;
+        transform: rotate(5deg) !important;
+      }
+
+      .polaroid-stack .polaroid.polaroid-3 {
+        top: 240px !important;
+        left: 8% !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: rotate(4deg) !important;
+      }
+
+      .polaroid-stack .polaroid.polaroid-4 {
+        top: 280px !important;
+        left: auto !important;
+        right: 5% !important;
+        bottom: auto !important;
+        transform: rotate(-4deg) !important;
+      }
+
+      /* Blobs */
+      .polaroid-stack .blob-sticker {
+        width: 50px !important;
+        height: 50px !important;
+        opacity: 0.6 !important;
       }
     }
 
@@ -765,6 +802,26 @@
       .story-hero::before {
         width: 350px;
         height: 250px;
+      }
+
+      .polaroid-stack {
+        min-height: 480px !important;
+      }
+
+      .polaroid-stack .polaroid {
+        width: 160px !important;
+      }
+
+      .polaroid-stack .polaroid.polaroid-3 {
+        top: 220px !important;
+      }
+
+      .polaroid-stack .polaroid.polaroid-4 {
+        top: 250px !important;
+      }
+
+      .polaroid-caption {
+        font-size: 1.1rem !important;
       }
 
       .pull-quote {
@@ -796,6 +853,26 @@
     }
 
     @media (max-width: 400px) {
+      .polaroid-stack {
+        min-height: 420px !important;
+      }
+
+      .polaroid-stack .polaroid {
+        width: 140px !important;
+      }
+
+      .polaroid-stack .polaroid.polaroid-3 {
+        top: 190px !important;
+      }
+
+      .polaroid-stack .polaroid.polaroid-4 {
+        top: 220px !important;
+      }
+
+      .story-hero h1 {
+        font-size: 2rem;
+      }
+
       .script-text {
         font-size: 1.8rem !important;
       }
@@ -1205,7 +1282,7 @@
     #story-cta .price-access {
       font-family: 'Satoshi', sans-serif;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 440;
       color: #E07A5F;
       display: flex;
       align-items: center;
@@ -1340,7 +1417,7 @@
     #story-cta .trust-item {
       font-family: 'Satoshi', sans-serif;
       font-size: 12px;
-      font-weight: 500;
+      font-weight: 440;
       color: #5A544C;
       display: flex;
       align-items: center;
