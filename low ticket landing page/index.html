@@ -42,6 +42,8 @@ html {
   overflow-x: hidden;
   max-width: 100%;
   width: 100%;
+  height: auto;
+  min-height: 0;
 }
 
 body {
@@ -54,6 +56,16 @@ body {
   color: #2D2A26;
   background: #1F1D1A;
   position: relative;
+  height: auto;
+  min-height: 0;
+}
+
+/* Ensure no extra space after footer */
+body > *:last-of-type {
+  margin-bottom: 0 !important;
+}
+.sec-footer, .sec-footer .site-footer {
+  margin-bottom: 0 !important;
 }
 
 .sec {
@@ -5502,7 +5514,6 @@ body > * {
     .sec-testimonials .testimonials-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   padding: 100px 0;
   /* Full-width dark background with warm undertones */
   background:
@@ -8271,6 +8282,8 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
    ========================================== */
 .sec-footer {
   background: #1F1D1A;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 .site-footer *, .sec-footer .site-footer *::before, .sec-footer .site-footer *::after {
   box-sizing: border-box;
