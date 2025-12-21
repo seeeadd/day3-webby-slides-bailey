@@ -245,8 +245,33 @@ body {
         width: auto;
         height: 40px;
         padding: 0 16px;
-        font-size: 13px;
+        font-size: 12px;
+        letter-spacing: 0.02em;
         border-radius: 10px;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 400px) {.sec-hero .top-bar {
+        padding: 10px 12px;
+      }.sec-hero .top-bar__logo img {
+        height: 24px;
+      }.sec-hero .top-bar__cta {
+        height: 36px;
+        padding: 0 12px;
+        font-size: 10px;
+        letter-spacing: 0.01em;
+      }
+    }
+
+    @media (max-width: 350px) {.sec-hero .top-bar {
+        padding: 8px 10px;
+      }.sec-hero .top-bar__logo img {
+        height: 22px;
+      }.sec-hero .top-bar__cta {
+        height: 34px;
+        padding: 0 10px;
+        font-size: 9px;
       }
     }
     /* ═══════════════════════════════════════════════════════════════════════════
@@ -3704,7 +3729,7 @@ body {
        ═══════════════════════════════════════════════════════════════════════════ */
 
     /* === HERO CARD TREATMENT - First Card Gets the Spotlight === */
-    .feature-card--hero {
+    .sec-offer .feature-card--hero {
       grid-column: span 2;
       background: linear-gradient(135deg, #FFFBF9 0%, #FFF6F2 50%, #FEF0E8 100%);
       border: 2px solid rgba(224, 122, 95, 0.25);
@@ -7158,9 +7183,37 @@ body {
       }.sec-stack .price-value {
         font-size: 52px;
       }.sec-stack .trust-badges {
-      margin-top: 16px;
-        flex-direction: column;
-        gap: 16px;
+        margin-top: 16px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        justify-content: center;
+      }.sec-stack .trust-badge {
+        white-space: nowrap;
+      }.sec-stack .trust-badge span {
+        font-size: 12px !important;
+      }.sec-stack .cta-button {
+        justify-content: center;
+        text-align: center;
+        padding: 18px 24px;
+        font-size: 15px;
+      }.sec-stack .cta-button span {
+        flex: 0 0 auto;
+      }
+    }
+
+    @media (max-width: 400px) {.sec-stack .cta-card {
+        padding: 24px 16px;
+      }.sec-stack .price-value {
+        font-size: 44px;
+      }.sec-stack .cta-button {
+        padding: 16px 20px;
+        font-size: 14px;
+        gap: 8px;
+      }.sec-stack .trust-badges {
+        gap: 8px 16px;
+      }.sec-stack .trust-badge span {
+        font-size: 11px !important;
       }
     }
 
@@ -8117,6 +8170,12 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
   }.sec-close .cta-button {
     width: 100%;
     padding: 16px 28px;
+    justify-content: center;
+    text-align: center;
+  }.sec-close .cta-button .button-text,
+  .sec-close .cta-button .button-sub {
+    text-align: center;
+    width: 100%;
   }
 }
 
