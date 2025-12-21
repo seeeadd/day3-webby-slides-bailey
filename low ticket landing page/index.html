@@ -834,14 +834,30 @@ body > * {
       width: 14px;
       height: 14px;
       color: #3D9970;
+    }.sec-hero .price-billing {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-top: 2px;
     }.sec-hero .price-equiv {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       font-size: 13px;
       font-weight: 600;
       color: var(--text-secondary);
     }.sec-hero .price-daily {
+      display: flex;
+      align-items: center;
+      gap: 6px;
       font-size: 12px;
       font-weight: 500;
       color: var(--text-muted);
+    }.sec-hero .price-col--right .check-icon {
+      width: 14px;
+      height: 14px;
+      color: #3D9970;
+      flex-shrink: 0;
     }
     /* Savings badge - compact pill */
     .sec-hero .price-savings {
@@ -5264,14 +5280,17 @@ body > * {
       margin-bottom: 8px;
     }.sec-story #story-cta .price-access {
       font-family: 'Satoshi', sans-serif;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 500;
       color: #E07A5F;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
       line-height: 1.4;
+    }.sec-story #story-cta .price-billing {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #5A544C;
+      margin-top: 2px;
     }
         /* Right Column - Supporting Stack */
     #story-cta .price-right {
@@ -5279,18 +5298,27 @@ body > * {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 4px;
+      gap: 6px;
       padding-left: 4px;
     }.sec-story #story-cta .price-equiv {
       font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
       color: #2D2A26;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }.sec-story #story-cta .price-daily {
       font-family: 'Satoshi', sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 400;
       color: #5A544C;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }.sec-story #story-cta .check-icon {
+      color: #3D9970;
+      flex-shrink: 0;
     }.sec-story #story-cta .price-savings {
       font-family: 'Satoshi', sans-serif;
       font-size: 13px;
@@ -6989,11 +7017,17 @@ body > * {
       align-items: center;
       gap: 8px;
       font-family: 'Satoshi', sans-serif;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 500;
       color: #1D6B6B;
       text-align: center;
       line-height: 1.4;
+    }.sec-stack .pricing-billing {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #8A8480;
+      margin-top: 4px;
     }
     /* Divider */
     .sec-stack .pricing-divider {
@@ -7009,25 +7043,27 @@ body > * {
     .sec-stack .pricing-breakdown {
       text-align: center;
     }.sec-stack .breakdown-equivalent {
-      font-family: 'OGG', Georgia, serif;
-      font-size: 24px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
       font-weight: 600;
       color: #1F1D1A;
-      margin-bottom: 6px;
-      position: relative;
-    }.sec-stack .breakdown-equivalent::after {
-      content: '·';
-      position: absolute;
-      right: -12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: rgba(212, 168, 83, 0.5);
-      font-size: 18px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }.sec-stack .breakdown-daily {
       font-family: 'Satoshi', sans-serif;
-      font-size: 17px;
+      font-size: 14px;
       color: #8A8480;
       margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }.sec-stack .check-icon {
+      color: #3D9970;
+      flex-shrink: 0;
     }.sec-stack .breakdown-savings {
       display: inline-flex;
       align-items: center;
@@ -8599,11 +8635,12 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
                   <span class="price-value">$27</span>
                   <span class="price-period">/mo</span>
                 </div>
-                <span class="price-access">12 whole months access. Billed annually.</span>
+                <span class="price-access">12 whole months access</span>
+                <span class="price-billing">Billed annually</span>
               </div>
               <div class="price-col price-col--right">
-                <span class="price-equiv">$47/mo billed monthly</span>
-                <span class="price-daily">$27/mo today when billed annually</span>
+                <span class="price-equiv"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>$47/mo billed monthly</span>
+                <span class="price-daily"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>$27/mo today when billed annually</span>
                 <div class="price-savings">
                   <span class="price-savings__text">Save $240/yr vs monthly</span>
                 </div>
@@ -9678,13 +9715,14 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
         <!-- Left column - dominant -->
         <div class="price-left">
           <div class="price-main">$27<span class="price-unit">/mo</span></div>
-          <div class="price-access">12 whole months access. Billed annually.</div>
+          <div class="price-access">12 whole months access</div>
+          <div class="price-billing">Billed annually</div>
         </div>
 
         <!-- Right column - supporting stack -->
         <div class="price-right">
-          <div class="price-equiv">$47/mo billed monthly</div>
-          <div class="price-daily">$27/mo today when billed annually</div>
+          <div class="price-equiv"><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>$47/mo billed monthly</div>
+          <div class="price-daily"><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>$27/mo today when billed annually</div>
           <div class="price-savings">Save $240/yr vs monthly</div>
         </div>
       </div>
@@ -10727,15 +10765,18 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
               <span class="price-period">/mo</span>
             </div>
             <div class="pricing-access">
-              <span>12 whole months access. Billed annually.</span>
+              <span>12 whole months access</span>
+            </div>
+            <div class="pricing-billing">
+              <span>Billed annually</span>
             </div>
           </div>
 
           <div class="pricing-divider"></div>
 
           <div class="pricing-breakdown">
-            <div class="breakdown-equivalent">$47/mo billed monthly</div>
-            <div class="breakdown-daily">$27/mo today when billed annually</div>
+            <div class="breakdown-equivalent"><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>$47/mo billed monthly</div>
+            <div class="breakdown-daily"><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>$27/mo today when billed annually</div>
             <div class="breakdown-savings">
               <span>Save $240/yr vs monthly</span>
             </div>
