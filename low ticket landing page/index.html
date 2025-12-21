@@ -35,29 +35,66 @@
   padding: 0;
 }
 
-html {
+html, body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 body {
   font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 440;
   line-height: 1.6;
-  overflow-x: hidden;
   color: #2D2A26;
-  background: #FAF8F5;
+  background: #1F1D1A;
+}
+
+/* Ensure page ends at footer - no extra scroll */
+.sec-footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.sec-footer .site-footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 32px !important;
+}
+body > script {
+  display: block;
+  height: 0 !important;
+  overflow: hidden !important;
 }
 
 .sec {
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
+  overflow-y: visible;
+  box-sizing: border-box;
 }
 
-/* Global mobile safeguards */
-@media (max-width: 480px) {
+/* Ensure all direct body children don't overflow */
+body > * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Global mobile/tablet safeguards */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  * {
+    box-sizing: border-box;
+  }
   img {
     max-width: 100%;
     height: auto;
@@ -106,20 +143,6 @@ body {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }html {
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-    }body {
-      font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--text-body);
-      background: var(--bg-cream);
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
     }.sec-hero .nowrap { white-space: nowrap; }
     /* ═══════════════════════════════════════════════════════════════════════════
        TOP BAR - GLASS MORPHISM WITH INTENTIONAL DEPTH
@@ -248,9 +271,11 @@ body {
         top: 0;
         bottom: auto;
         left: 0;
+        right: 0;
         width: 100%;
+        max-width: 100%;
         height: auto;
-        padding: 12px 16px;
+        padding: 12px 20px;
         flex-direction: row;
         justify-content: space-between;
         gap: 8px;
@@ -258,6 +283,8 @@ body {
         border-radius: 0;
         background: rgba(255, 252, 247, 0.95);
         backdrop-filter: blur(12px);
+        box-sizing: border-box;
+        overflow: hidden;
       }.sec-hero .top-bar.visible { transform: none; }.sec-hero .top-bar__logo { display: flex; flex-shrink: 0; }.sec-hero .top-bar__logo img { height: 28px; }.sec-hero .top-bar__deal { display: none; }.sec-hero .top-bar__cta {
         width: auto;
         height: 40px;
@@ -267,13 +294,17 @@ body {
         border-radius: 10px;
         white-space: nowrap;
         flex-shrink: 0;
+        margin-right: 4px;
       }
     }
 
     @media (max-width: 400px) {.sec-hero .top-bar {
         padding: 10px 12px;
         left: 0;
+        right: 0;
         transform: none;
+        max-width: 100%;
+        box-sizing: border-box;
       }.sec-hero .top-bar__logo img {
         height: 22px;
       }.sec-hero .top-bar__cta {
@@ -287,7 +318,10 @@ body {
     @media (max-width: 350px) {.sec-hero .top-bar {
         padding: 8px 8px;
         left: 0;
+        right: 0;
         transform: none;
+        max-width: 100%;
+        box-sizing: border-box;
       }.sec-hero .top-bar__logo img {
         height: 20px;
       }.sec-hero .top-bar__cta {
@@ -1215,18 +1249,15 @@ body {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }html, body {
-      width: 100%;
-    }body {
-      font-family: 'Satoshi', 'Inter', sans-serif;
-      background: #FAF9F7;
     }
     /* ═══════════════════════════════════════════════════════════════════════════
        FEATURED IN - Compact Section, .sec-featured Large Content
        ═══════════════════════════════════════════════════════════════════════════ */
+    .sec-featured {
+      background: #FAF9F7;
+    }
     .sec-featured .featured-section {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
+      width: 100%;
       padding: 2.5rem 1.5rem;
       background: #FAF9F7;
     }.sec-featured .featured-inner {
@@ -1382,23 +1413,26 @@ body {
       --bg-cream: #FAF8F5;
       --bg-warm: #F5F0E8;
       --bg-card: #FFFFFF;
-      
+
       /* Text hierarchy */
       --text-primary: #1F1D1A;
       --text-body: #2D2A26;
       --text-secondary: #5A544C;
       --text-muted: #8A847B;
-      
+
       /* Accents */
       --coral: #E07A5F;
       --coral-hover: #C96A52;
       --coral-light: rgba(224, 122, 95, 0.1);
       --teal: #1D6B6B;
       --teal-light: rgba(29, 107, 107, 0.1);
-      
+
       /* Borders */
       --border-light: #E8E2D9;
       --border-medium: #D4CEC4;
+
+      /* Section background */
+      background: #FAF8F5;
     }
         /* ═══════════════════════════════════════════════════════════════════════════
         BASE RESET & FULL-BLEED
@@ -1408,17 +1442,6 @@ body {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }html, body {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }body {
-      font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 500;
-      color: var(--text-body);
-      line-height: 1.6;
-      background: var(--bg-cream);
     }
         /* ═══════════════════════════════════════════════════════════════════════════
         INCLUDED SECTION - FULL BLEED WRAPPER
@@ -1426,8 +1449,7 @@ body {
        ═══════════════════════════════════════════════════════════════════════════ */
     #included-section {
       position: relative;
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
+      width: 100%;
       padding: 100px 0 120px;
       background: linear-gradient(180deg, 
         var(--bg-cream) 0%, 
@@ -3107,7 +3129,7 @@ body {
        RESPONSIVE ADJUSTMENTS
        ═══════════════════════════════════════════════════════════════════════════ */
     @media (max-width: 768px) {.sec-offer #included-section {
-        padding: 72px 0 88px;
+        padding: 72px 0 100px;
       }.sec-offer .section-header {
         margin-bottom: 48px;
       }.sec-offer .feature-card {
@@ -3124,8 +3146,7 @@ body {
 
     #testimonials-section {
       position: relative;
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
+      width: 100%;
       padding: 60px 0 72px;
       background: linear-gradient(180deg, var(--bg-cream) 0%, #FAF8F5 50%, var(--bg-cream) 100%);
       overflow: hidden;
@@ -3392,8 +3413,7 @@ body {
       position: relative;
       background: linear-gradient(165deg, #0D4A4A 0%, #0B3D3D 50%, #082E2E 100%);
       padding: 48px 0 56px;
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
+      width: 100%;
       overflow: hidden;
     }
     /* Background Micro-Decorations */
@@ -4041,7 +4061,8 @@ body {
        ═══════════════════════════════════════════════════════════════════════════ */
     .sec-offer .also-included {
       margin-top: 80px;
-      padding: 0;
+      margin-bottom: 60px;
+      padding: 0 0 40px 0;
       position: relative;
       background: transparent;
       border: none;
@@ -4242,7 +4263,9 @@ body {
     /* ==========================================
        BAILEY BRAND CSS VARIABLES
        ========================================== */
-
+    .sec-story {
+      background: #FAF8F5;
+    }
     .story-part1-section, .sec-story .story-part2-section {
       --coral: #E07A5F;
       --coral-dark: #C96A52;
@@ -4264,21 +4287,14 @@ body {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }body {
-      font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 440;
-      color: var(--text-body);
-      line-height: 1.7;
-      background: linear-gradient(180deg, #FAF8F5 0%, #F7F3EE 50%, #FAF8F5 100%);
     }
+    /* body styles handled globally */
     /* ==========================================
        PART 1 SECTION - TWO COLUMN LAYOUT
        ========================================== */
     .sec-story .story-part1-section {
       position: relative;
       width: 100%;
-      min-width: 100vw;
-      margin-left: calc(-50vw + 50%);
       padding: 80px 0 120px;
       background: linear-gradient(180deg, #FAF8F5 0%, #F7F3EE 50%, #FAF8F5 100%);
       overflow: hidden;
@@ -4561,8 +4577,7 @@ body {
       position: relative;
       padding: 100px 0 120px;
       background: linear-gradient(180deg, #F7F3EE 0%, #FAF8F5 50%, #F7F3EE 100%);
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
+      width: 100%;
     }.sec-story .story-part2-section::after {
       content: '';
       position: absolute;
@@ -4912,8 +4927,7 @@ body {
        ========================================== */
 
     #story-cta {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
+      width: 100%;
       padding: 48px 24px 56px;
       background:
         radial-gradient(ellipse at 20% 20%, rgba(224, 182, 195, 0.15) 0%, transparent 50%),
@@ -5463,6 +5477,10 @@ body {
    CSS CUSTOM PROPERTIES
    ═══════════════════════════════════════════════════════════════════════════ */
 .sec-testimonials {
+  /* Add gap above testimonials with cream background to match offer section */
+  padding-top: 80px;
+  background: linear-gradient(180deg, #FAF8F5 0%, #FAF8F5 80px, #1A1816 80px, #1A1816 100%);
+
   /* Background */
   --bg-dark: #1A1816;
   --bg-card: rgba(45, 42, 38, 0.6);
@@ -5499,7 +5517,6 @@ body {
     .sec-testimonials .testimonials-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   padding: 100px 0;
   /* Full-width dark background with warm undertones */
   background:
@@ -6087,20 +6104,18 @@ body {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }body {
-      font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 18px;
-      font-weight: 500;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
+    /* body styles handled globally */
     /* ==========================================
        OFFER STACK SECTION - PREMIUM BACKGROUND
        ========================================== */
+    .sec-stack {
+      background: #FAF8F5;
+    }
     .sec-stack .offer-stack-section {
       position: relative;
       width: 100%;
-      padding: 120px 48px 60px;
+      padding: 120px 48px 140px;
       background: linear-gradient(180deg,
         #FAF8F5 0%,
         #F7F3EE 30%,
@@ -6872,7 +6887,7 @@ body {
        ========================================== */
     .sec-stack .cta-section {
       max-width: 700px;
-      margin: 60px auto 0;
+      margin: 60px auto 60px;
       padding: 0 24px;
       position: relative;
       z-index: 2;
@@ -7182,7 +7197,7 @@ body {
     }
 
     @media (max-width: 900px) {.sec-stack .offer-stack-section {
-        padding: 80px 24px;
+        padding: 80px 24px 80px;
       }.sec-stack .offer-card {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -7196,7 +7211,7 @@ body {
     }
 
     @media (max-width: 600px) {.sec-stack .offer-stack-section {
-        padding: 64px 16px;
+        padding: 64px 16px 80px;
       }.sec-stack .cta-card {
         padding: 32px 24px;
       }.sec-stack .cta-pricing {
@@ -7272,6 +7287,7 @@ body {
   --faq-text-dark: #2C2825;
   --faq-text-light: #F5F0E8;
   --faq-text-muted: #8A8279;
+  background: #1A1816;
   --faq-border: rgba(212, 168, 83, 0.15);
   --faq-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
   --faq-transition: 280ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -7292,8 +7308,7 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
     .sec-faq .faq-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  padding: 80px 0;
+  padding: 80px 0 60px;
   background: var(--faq-bg);
   box-sizing: border-box;
   overflow: hidden;
@@ -7505,7 +7520,7 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
   text-align: left;
 }.sec-faq .faq-item__question {
   font-family: var(--faq-font-sans);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--faq-text-dark);
   line-height: 1.4;
@@ -7553,7 +7568,7 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
   overflow: hidden;
 }.sec-faq .faq-item__content p {
   font-family: var(--faq-font-sans);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.7;
   color: var(--faq-text-muted);
   margin: 0;
@@ -7591,10 +7606,10 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
     top: 20px;
     font-size: 12px;
   }.sec-faq .faq-item__question {
-    font-size: 15px;
+    font-size: 16px;
   }.sec-faq .faq-item__content p {
     padding: 0 44px 20px;
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
@@ -7610,6 +7625,9 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
 /* ==========================================
    RESET (scoped)
    ========================================== */
+.sec-close {
+  background: #0D2926;
+}
 .final-close *, .sec-close .final-close *::before, .sec-close .final-close *::after {
   box-sizing: border-box;
   margin: 0;
@@ -8265,6 +8283,9 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
 /* ==========================================
    RESET (scoped)
    ========================================== */
+.sec-footer {
+  background: #1F1D1A;
+}
 .site-footer *, .sec-footer .site-footer *::before, .sec-footer .site-footer *::after {
   box-sizing: border-box;
   margin: 0;
@@ -8522,7 +8543,9 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
               </iframe>
             </div>
             <!-- VSL Banner Image -->
-            <img src="https://i.imgur.com/Oq2F4wW.png" alt="AI Design & Grow Experience" class="vsl-banner__image">
+            <a href="https://digitallypurposed.thrivecart.com/ai-design-grow-experience-an-membership/" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.imgur.com/Oq2F4wW.png" alt="AI Design & Grow Experience" class="vsl-banner__image" style="cursor: pointer;">
+            </a>
 
             <!-- VSL Testimonial -->
             <div class="vsl-testimonial">
@@ -8548,7 +8571,9 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
           <!-- Offer Card - The Centerpiece -->
           <div class="offer-card">
 
-            <img src="https://i.imgur.com/ZcCA9EP.png" alt="Everything you get - complete overview" class="offer-card__overview" style="display: block; width: 100%; border-radius: 12px; margin-bottom: 20px;">
+            <a href="https://digitallypurposed.thrivecart.com/ai-design-grow-experience-an-membership/" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.imgur.com/ZcCA9EP.png" alt="Everything you get - complete overview" class="offer-card__overview" style="display: block; width: 100%; border-radius: 12px; margin-bottom: 20px; cursor: pointer;">
+            </a>
 
             <div class="price-block">
               <div class="price-col price-col--left">
@@ -10842,12 +10867,12 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
         <div class="faq-item" data-faq>
           <span class="faq-item__num">03</span>
           <button class="faq-item__btn" aria-expanded="false" type="button">
-            <span class="faq-item__question">Will I need expensive tools or design skills?</span>
+            <span class="faq-item__question">Will I need expensive tools?</span>
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
           <div class="faq-item__answer">
             <div class="faq-item__content">
-              <p>No. You can do this with free tools. Paid tools are optional if you want to move faster, but not required.</p>
+              <p>Nope. I'll show you the best low-cost options that I personally use (plus how to actually use them).</p>
             </div>
           </div>
         </div>
@@ -10889,7 +10914,7 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
           </button>
           <div class="faq-item__answer">
             <div class="faq-item__content">
-              <p>Lifetime. Once you're in, you're in. All future updates included.</p>
+              <p>As long as your membership is active. Cancel anytime and you'll keep access until the end of your current billing period (monthly = through the month, annual = through the year).</p>
             </div>
           </div>
         </div>
@@ -10903,7 +10928,7 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
           </button>
           <div class="faq-item__answer">
             <div class="faq-item__content">
-              <p>All calls are recorded. You can catch up anytime. The program is self-paced with live support.</p>
+              <p>Nothing breaks. This is built to be picked up and put down. If we do a live session, the replay goes up after, and you can still ask inside Skool when you're back.</p>
             </div>
           </div>
         </div>
@@ -10917,7 +10942,7 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
           </button>
           <div class="faq-item__answer">
             <div class="faq-item__content">
-              <p>Yes. If you complete the work and don't see results in 90 days, we'll work with you or refund you. Details in checkout.</p>
+              <p>No refunds. You get instant access to the full library the moment you join. If it's not for you, cancel anytime so you don't get charged again.</p>
             </div>
           </div>
         </div>
