@@ -7267,6 +7267,10 @@ body {
 
 /* CSS Variables for easy theming */
 .sec-faq {
+  /* Add gap above FAQ section with cream background to match stack section */
+  padding-top: 80px;
+  background: linear-gradient(180deg, #FAF8F5 0%, #FAF8F5 80px, #1A1816 80px, #1A1816 100%);
+
   --faq-bg: #1A1816;
   --faq-card-bg: #F5F0E8;
   --faq-card-bg-hover: #FAF7F2;
@@ -7297,8 +7301,7 @@ html::-webkit-scrollbar, .sec-faq body::-webkit-scrollbar, .sec-faq .faq-section
     .sec-faq .faq-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  padding: 80px 0;
+  padding: 80px 0 60px;
   background: var(--faq-bg);
   box-sizing: border-box;
   overflow: hidden;
