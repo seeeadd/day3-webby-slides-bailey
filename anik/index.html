@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One to Millions Challenge - FREE 3-Day Challenge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-dark: #0d1529;
+    --navy: #1a2744;
+    --navy-mid: #1e2d50;
+    --navy-light: #243660;
+    --yellow: #f5c518;
+    --gold: #ffd700;
+    --orange: #ff8c00;
+    --white: #ffffff;
+    --light-gray: #c8d0e0;
+    --red: #cc2222;
+    --green: #28a745;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--navy-dark);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--navy-dark);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .nav-logo .logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--yellow), var(--gold));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 900;
+    color: var(--navy-dark);
+    line-height: 1.1;
+    text-align: center;
+    padding: 4px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--yellow); }
+
+  .nav-cta {
+    background: var(--yellow);
+    color: var(--navy-dark) !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(245, 197, 24, 0.4);
+  }
+
+  .nav-cta .arrow {
+    width: 24px;
+    height: 24px;
+    background: var(--navy-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--yellow);
+    font-size: 14px;
+  }
+
+  /* ===== ANNOUNCEMENT BAR ===== */
+  .announcement-bar {
+    background: linear-gradient(90deg, var(--yellow), var(--gold));
+    color: var(--navy-dark);
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
+    padding: 50px 20px 30px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(28px, 5vw, 52px);
+    line-height: 1.2;
+    max-width: 900px;
+    margin: 0 auto 24px;
+  }
+
+  .hero h1 .highlight {
+    color: var(--yellow);
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+    text-underline-offset: 4px;
+  }
+
+  .hero .subheadline {
+    font-size: clamp(14px, 2vw, 18px);
+    color: var(--light-gray);
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* ===== SPEAKERS STRIP ===== */
+  .speakers-strip {
+    background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy-mid) 60%, var(--navy-dark) 100%);
+    padding: 40px 20px 50px;
+    text-align: center;
+  }
+
+  .speakers-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .speaker-small {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 4px;
+  }
+
+  .speaker-small .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3a5a8c, #5580b8);
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+
+  .speaker-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 12px;
+  }
+
+  .speaker-main .avatar {
+    width: 140px;
+    height: 160px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2a4a7a, #4478b8);
+    border: 3px solid rgba(255,255,255,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .speaker-main .avatar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(26,39,68,0.8), transparent);
+  }
+
+  .speaker-main .name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 10px;
+    color: var(--yellow);
+  }
+
+  .speakers-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  /* ===== CTA BOX SECTION ===== */
+  .cta-section {
+    background: var(--navy-dark);
+    padding: 50px 20px 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-box-wrapper {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .cta-box {
+    border: 3px dashed rgba(255,255,255,0.35);
+    border-radius: 20px;
+    padding: 45px 40px;
+    text-align: center;
+    background: rgba(30, 45, 80, 0.4);
+  }
+
+  .cta-box h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(22px, 3.5vw, 34px);
+    line-height: 1.3;
+    margin-bottom: 28px;
+  }
+
+  .cta-box h2 .yellow { color: var(--yellow); }
+  .cta-box h2 .orange { color: var(--orange); }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--yellow);
+    color: var(--navy-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(16px, 2.5vw, 22px);
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(245, 197, 24, 0.4);
+  }
+
+  .cta-button .btn-arrow {
+    width: 30px;
+    height: 30px;
+    background: var(--navy-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--yellow);
+    font-size: 16px;
+  }
+
+  .cta-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-top: 16px;
+    color: var(--white);
+  }
+
+  .cta-date {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--light-gray);
+  }
+
+  .cta-date strong {
+    color: var(--white);
+    text-decoration: underline;
+  }
+
+  /* Badges */
+  .badge-left {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 130px;
+  }
+
+  .badge-right {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .special-offer-badge {
+    width: 130px;
+    height: 130px;
+    position: relative;
+  }
+
+  .special-offer-badge .badge-bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #cc0000, #ff3333);
+    border-radius: 15px;
+    transform: rotate(-5deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 3px solid var(--gold);
+    box-shadow: 0 4px 20px rgba(204, 0, 0, 0.5);
+  }
+
+  .special-offer-badge .year {
+    background: var(--yellow);
+    color: var(--navy-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    padding: 2px 12px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+  }
+
+  .special-offer-badge .text-special {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    color: var(--yellow);
+    text-align: center;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .special-offer-badge .text-offer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+
+  .special-offer-badge .limited {
+    background: var(--gold);
+    color: var(--navy-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 9px;
+    padding: 2px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  .special-offer-badge .free-tag {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--green);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 9px;
+    padding: 3px 8px;
+    border-radius: 8px;
+    transform: rotate(15deg);
+  }
+
+  .free-badge {
+    width: 90px;
+    height: 90px;
+    background: radial-gradient(circle, var(--gold), #b8860b);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--yellow);
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+  }
+
+  .free-badge .pct {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--white);
+    line-height: 1;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  }
+
+  .free-badge .free-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--red);
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    line-height: 1;
+  }
+
+  /* ===== GRADIENT DIVIDER ===== */
+  .gradient-divider {
+    height: 8px;
+    background: linear-gradient(90deg, var(--navy-dark), var(--navy-light), #4a70a8, var(--navy-light), var(--navy-dark));
+    border-radius: 4px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* ===== TITANS SECTION ===== */
+  .titans-section {
+    background: var(--navy-dark);
+    padding: 70px 40px;
+  }
+
+  .titans-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .titans-text {
+    flex: 1;
+  }
+
+  .titans-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(26px, 4vw, 42px);
+    line-height: 1.25;
+  }
+
+  .titans-text h2 strong {
+    font-weight: 900;
+  }
+
+  .titans-photos {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .titan-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .titan-photo {
+    width: 130px;
+    height: 150px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2a4a7a, #4478b8);
+    border: 2px solid rgba(255,255,255,0.15);
+  }
+
+  .globe-icon {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    opacity: 0.3;
+  }
+
+  .globe-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ===== ADDITIONAL SECTIONS (matching page flow) ===== */
+  .day-agenda {
+    background: linear-gradient(180deg, var(--navy-mid), var(--navy-dark));
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .day-agenda h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(24px, 3.5vw, 38px);
+    margin-bottom: 40px;
+  }
+
+  .day-cards {
+    display: flex;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .day-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 30px;
+    flex: 1;
+    min-width: 260px;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .day-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--yellow);
+  }
+
+  .day-card .day-num {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--yellow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .day-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .day-card p {
+    font-size: 14px;
+    color: var(--light-gray);
+    line-height: 1.6;
+  }
+
+  /* ===== RESULTS SECTION ===== */
+  .results-section {
+    background: var(--navy-dark);
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .results-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(24px, 3.5vw, 38px);
+    margin-bottom: 12px;
+  }
+
+  .results-section .subtitle {
+    color: var(--light-gray);
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: left;
+  }
+
+  .testimonial-card .stars {
+    color: var(--yellow);
+    font-size: 16px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+
+  .testimonial-card p {
+    font-size: 14px;
+    color: var(--light-gray);
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+
+  .testimonial-card .author {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--yellow);
+  }
+
+  /* ===== FAQ ===== */
+  .faq-section {
+    background: linear-gradient(180deg, var(--navy-mid), var(--navy-dark));
+    padding: 60px 20px;
+  }
+
+  .faq-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(24px, 3.5vw, 38px);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 0;
+    cursor: pointer;
+  }
+
+  .faq-q {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-q .toggle {
+    color: var(--yellow);
+    font-size: 22px;
+    transition: transform 0.3s;
+  }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+    color: var(--light-gray);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 200px;
+    padding-top: 14px;
+  }
+
+  .faq-item.open .toggle {
+    transform: rotate(45deg);
+  }
+
+  /* ===== BOTTOM CTA ===== */
+  .bottom-cta {
+    background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .bottom-cta h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(24px, 4vw, 40px);
+    margin-bottom: 10px;
+  }
+
+  .bottom-cta .sub {
+    color: var(--light-gray);
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: #0a0f1e;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .footer a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+  }
+
+  /* ===== MOBILE NAV ===== */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 8px;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    transition: 0.3s;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .badge-left, .badge-right { display: none; }
+    .titans-inner { flex-direction: column; text-align: center; }
+    .titans-photos { flex: none; width: 100%; }
+  }
+
+  @media (max-width: 768px) {
+    .navbar { padding: 0 20px; }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: var(--navy-dark);
+      flex-direction: column;
+      padding: 20px;
+      gap: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-links.open { display: flex; }
+
+    .hamburger { display: flex; }
+
+    .nav-cta {
+      font-size: 13px;
+      padding: 10px 20px;
+    }
+
+    .hero { padding: 30px 16px 20px; }
+    .cta-box { padding: 30px 20px; }
+    .speakers-row { gap: 8px; }
+    .speaker-small { display: none; }
+    .titans-section { padding: 50px 20px; }
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+
+  .cta-button { animation: pulse 2.5s ease-in-out infinite; }
+  .cta-button:hover { animation: none; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo">
+    <div class="logo-icon">ONE<br>TO<br>M</div>
+    <span>ONE TO MILLIONS<br><small style="font-size:10px;font-weight:600;letter-spacing:3px;opacity:0.7;">CHALLENGE</small></span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#agenda">Agenda</a></li>
+    <li><a href="#speakers">Speakers</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#register" class="nav-cta">Register Free <span class="arrow">&rarr;</span></a>
+  <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+  LIVE 3-DAY CHALLENGE: &nbsp;February 17-19, 2026 &nbsp;|&nbsp; 100% FREE &nbsp;|&nbsp; LIVE. VIRTUAL
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>
+    <span class="highlight">FREE</span> 3-Day Challenge: Write Your High-Ticket Webinar &amp; Automate It To Run <span class="highlight">24/7</span> Using Our <span class="highlight">33 AI Prompts</span> - Scale Your Reach From <em>One</em> to <em>Millions</em>
+  </h1>
+  <p class="subheadline">
+    We Write Your Webinar With You - LIVE - Using Battle-Tested Prompts From Two Legends With $300M+ In Sales (No Prior Skills Required) So You Can Sell High-Ticket On Autopilot 24/7
+  </p>
+</section>
+
+<!-- SPEAKERS STRIP -->
+<section class="speakers-strip" id="speakers">
+  <div class="speakers-row">
+    <div class="speakers-group">
+      <div class="speaker-small"><div class="avatar"></div></div>
+      <div class="speaker-small"><div class="avatar"></div></div>
+      <div class="speaker-small"><div class="avatar"></div></div>
+    </div>
+    <div class="speaker-main">
+      <div class="avatar"></div>
+      <span class="name">Jason Fladlien</span>
+    </div>
+    <div class="speaker-main">
+      <div class="avatar"></div>
+      <span class="name">Jeff Walker</span>
+    </div>
+    <div class="speaker-main">
+      <div class="avatar"></div>
+      <span class="name">Anik Singal</span>
+    </div>
+    <div class="speakers-group">
+      <div class="speaker-small"><div class="avatar"></div></div>
+      <div class="speaker-small"><div class="avatar"></div></div>
+      <div class="speaker-small"><div class="avatar"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BOX -->
+<section class="cta-section" id="register">
+  <div class="cta-box-wrapper">
+    <!-- Left Badge -->
+    <div class="badge-left">
+      <div class="special-offer-badge">
+        <div class="badge-bg">
+          <span class="year">2026</span>
+          <span class="text-special">SPECIAL</span>
+          <span class="text-offer">OFFER</span>
+          <span class="limited">LIMITED TIME</span>
+        </div>
+        <span class="free-tag">100% FREE</span>
+      </div>
+    </div>
+
+    <!-- Right Badge -->
+    <div class="badge-right">
+      <div class="free-badge">
+        <span class="pct">100%</span>
+        <span class="free-text">FREE!</span>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h2>
+        Join the 100% FREE, 3-Day<br>
+        <span class="orange">"One to Millions"</span><br>
+        Challenge...
+      </h2>
+      <a href="#" class="cta-button">
+        CLAIM YOUR 100% FREE SEAT NOW!
+        <span class="btn-arrow">&rarr;</span>
+      </a>
+      <div class="cta-sub">FREE LIVE. VIRTUAL. INTERACTIVE.</div>
+      <div class="cta-date">
+        FREE Live Online Challenge: <strong>February 17-19, 2026</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRADIENT DIVIDER -->
+<div class="gradient-divider"></div>
+
+<!-- TITANS SECTION -->
+<section class="titans-section">
+  <div class="titans-inner">
+    <div class="titans-text">
+      <h2>Learn From <strong>The Webinar Titans</strong> Who Have Run Over 1000 Webinars Over TWO Decades...</h2>
+      <div class="globe-icon">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+          <ellipse cx="50" cy="50" rx="25" ry="45" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+          <line x1="5" y1="50" x2="95" y2="50" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="50" y1="5" x2="50" y2="95" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <ellipse cx="50" cy="30" rx="38" ry="8" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          <ellipse cx="50" cy="70" rx="38" ry="8" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+    <div class="titans-photos">
+      <div class="titan-row">
+        <div class="titan-photo"></div>
+        <div class="titan-photo"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section class="day-agenda" id="agenda">
+  <h2>Your 3-Day <span style="color:var(--yellow)">Challenge Agenda</span></h2>
+  <div class="day-cards">
+    <div class="day-card">
+      <div class="day-num">Day 1</div>
+      <h3>Write Your High-Ticket Webinar Script</h3>
+      <p>Use our proven AI prompts to craft a compelling webinar script that converts viewers into high-ticket buyers, even if you've never sold anything before.</p>
+    </div>
+    <div class="day-card">
+      <div class="day-num">Day 2</div>
+      <h3>Build Your Automated Webinar Funnel</h3>
+      <p>Set up your complete automated sales system that runs your webinar 24/7 without you needing to be present, using simple tools anyone can master.</p>
+    </div>
+    <div class="day-card">
+      <div class="day-num">Day 3</div>
+      <h3>Scale From One to Millions</h3>
+      <p>Learn the exact traffic strategies and optimization techniques the pros use to scale their automated webinars to reach millions of potential customers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results-section" id="results">
+  <h2>Real Results From <span style="color:var(--yellow)">Real People</span></h2>
+  <p class="subtitle">See what past challenge participants have accomplished</p>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"I went from zero online sales to generating $47K in my first month using the webinar script we built during the challenge."</p>
+      <div class="author">- Sarah M., Health Coach</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"The AI prompts saved me weeks of work. My automated webinar has been running for 6 months and consistently brings in revenue."</p>
+      <div class="author">- Michael T., Course Creator</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p>"I was skeptical about AI-generated content, but the quality of the webinar script blew me away. My close rate jumped 3x."</p>
+      <div class="author">- Jennifer L., Business Consultant</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <h2>Frequently Asked <span style="color:var(--yellow)">Questions</span></h2>
+  <div class="faq-list">
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Is this really 100% free? <span class="toggle">+</span></div>
+      <div class="faq-a">Yes! The 3-Day One to Millions Challenge is completely free. There's nothing to buy to participate. We'll teach you everything you need to know over three action-packed days.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Do I need any prior experience? <span class="toggle">+</span></div>
+      <div class="faq-a">No prior experience is required. Whether you're a complete beginner or an experienced marketer, our AI-powered prompts and step-by-step guidance make it easy for anyone to create a high-converting webinar.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">What if I can't attend live? <span class="toggle">+</span></div>
+      <div class="faq-a">We highly recommend attending live for the best experience and to get real-time support. However, replays will be available for a limited time after each session.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">What do I need to get started? <span class="toggle">+</span></div>
+      <div class="faq-a">All you need is a computer, internet connection, and a topic or idea you want to build a webinar around. We'll provide everything else including the AI prompts, templates, and step-by-step guidance.</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <h2>Ready to Scale From <span style="color:var(--yellow)">One to Millions?</span></h2>
+  <p class="sub">Join thousands of entrepreneurs in this free, live challenge</p>
+  <a href="#" class="cta-button" style="animation:none;">
+    CLAIM YOUR 100% FREE SEAT NOW!
+    <span class="btn-arrow">&rarr;</span>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2026 One to Millions Challenge. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>
